@@ -1,29 +1,36 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-- `scripts/`: Python utilities to fetch `book.json`, download HTML, convert to Markdown, sync assets, and validate outputs.
-- `data/<collection>/`: Source artifacts for each mirrored doc set (`book.json`, `toc_hierarchy.json`, raw HTML, and downloaded assets).
-- `build/<collection>/`: Generated Markdown and colocated assets mirroring Apple’s original folder hierarchy.
-- `PLAN.md`: Running project log; update when milestones shift.
+- `scripts/` — Python CLIs for TOC harvesting, HTML mirroring, Markdown conversion, asset syncing, and validation.
+- `data/<collection>/` — Source inputs (e.g., `book.json`, `toc_hierarchy.json`, downloaded HTML, and raw assets). Treat folders as read-only archives of Apple’s originals.
+- `build/<collection>/` — Generated Markdown plus colocated assets, preserving Apple’s directory hierarchy to keep links functional offline.
+- `PLAN.md` — Rolling roadmap and decision log; update after every meaningful milestone.
+- `apple-official-docs.md` — Backlog of official Apple automation resources to mirror next.
 
 ## Build, Test, and Development Commands
-- `python3 scripts/inventory_toc.py --book-json data/<collection>/book.json --base-url <url> --output-dir data/<collection>` – parse the table of contents and emit link manifests.
-- `python3 scripts/download_html.py --pages-file data/<collection>/html_pages.txt --base-url <url> --output-dir data/<collection>/html` – mirror chapter HTML.
-- `python3 scripts/convert_html_to_md.py --html-dir data/<collection>/html --output-dir build/<collection>` – render cleaned Markdown.
-- `python3 scripts/normalize_markdown_links.py --pages-file data/<collection>/html_pages.txt --markdown-dir build/<collection>` – rewrite intra-site links to `.md`.
-- `python3 scripts/download_assets.py ... && python3 scripts/sync_assets.py ...` – capture images and place them beside Markdown.
-- `python3 scripts/validate_markdown.py --html-dir data/<collection>/html --markdown-dir build/<collection>` – compare Markdown text to the HTML source.
+- TOC harvest: `python3 scripts/inventory_toc.py --book-json data/<collection>/book.json --base-url <url> --output-dir data/<collection>`.
+- HTML mirror: `python3 scripts/download_html.py --pages-file data/<collection>/html_pages.txt --base-url <url> --output-dir data/<collection>/html`.
+- Markdown render: `python3 scripts/convert_html_to_md.py --html-dir data/<collection>/html --output-dir build/<collection>`.
+- Link rewrite: `python3 scripts/normalize_markdown_links.py --pages-file data/<collection>/html_pages.txt --markdown-dir build/<collection>`.
+- Asset sync: run `download_assets.py` followed by `sync_assets.py` with matching arguments to copy images beside Markdown.
+- Verification: `python3 scripts/validate_markdown.py --html-dir data/<collection>/html --markdown-dir build/<collection>`.
 
 ## Coding Style & Naming Conventions
-- Python scripts follow PEP 8 defaults: 4-space indentation, snake_case functions, UPPER_SNAKE constants.
-- Prefer pathlib over os.path, argparse for CLIs, and explicit encoding (`utf-8`).
-- New collections should use hyphenated folder names matching Apple’s doc root (e.g., `applescript-language-guide`).
+- Follow PEP 8: 4-space indentation, snake_case functions, UPPER_SNAKE constants. Prefer `pathlib.Path` and `argparse` over ad-hoc utilities.
+- Collection folders should reuse Apple’s slug (e.g., `applescript-language-guide`, `mac-automation-scripting-guide`) to simplify cross-linking.
+- Keep scripts single-purpose and composable; expose arguments rather than hard-coding paths.
 
 ## Testing Guidelines
-- Use `scripts/validate_markdown.py` as the primary regression check; all newly generated Markdown must pass without unexpected diffs (table-heavy pages may require manual review notes).
-- When adding new parsing logic, craft small sample HTML fixtures under `data/tmp/` and run the script locally before mirroring live docs.
+- `validate_markdown.py` is the primary regression test; diffs must be reviewed and either resolved or annotated in `PLAN.md`.
+- When altering parsing rules, create minimal HTML fixtures under `data/tmp/` and run the full pipeline before touching live URLs.
+- For large table-heavy pages, document any acceptable discrepancies (e.g., index tables) in the PR description.
 
 ## Commit & Pull Request Guidelines
-- Commit messages follow short imperative titles (e.g., “Add AppleScript doc mirrors and tooling”) with optional details separated by blank lines.
-- For PRs, include: summary of mirrored collections or scripts touched, verification commands run (`validate_markdown`, etc.), and highlight any manual follow-up needed (assets, external links).
-- Link related issues when available; attach before/after snippets or directory listings if structure changes.
+- Commits use short, imperative subjects (“Mirror Mac Automation guide introduction”) and include details when context aids review.
+- Each PR should summarize new collections or script changes, list commands executed (mirror + validate), and note outstanding follow-ups (missing assets, manual checks).
+- Link backlog items from `apple-official-docs.md` or issues whenever applicable; attach representative directory listings or sample diffs to aid reviewers.
+
+## Agent Workflow Tips
+- Check `PLAN.md` before starting work to avoid conflicting mirror efforts.
+- Preserve the original Apple path casing; many cross-links are case-sensitive.
+- If a resource is a PDF or video rather than HTML, note it in the PR and store it under `data/<collection>/assets/` for later processing.
