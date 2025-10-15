@@ -34,3 +34,5 @@
 - Check `PLAN.md` before starting work to avoid conflicting mirror efforts.
 - Preserve the original Apple path casing; many cross-links are case-sensitive.
 - If a resource is a PDF or video rather than HTML, note it in the PR and store it under `data/<collection>/assets/` for later processing.
+- Always refresh the Snapshot in `PLAN.md` and update GitHub Issue statuses when starting or finishing a work session.
+- After noteworthy chats or milestones, append an entry to `blog/journal.md` that captures both the discussion highlights and resulting action—the blog acts as our narrative log for future posts.
