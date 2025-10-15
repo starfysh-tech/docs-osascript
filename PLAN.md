@@ -1,18 +1,25 @@
 # AppleScript Docs Archive Plan
 
 ## Snapshot (updated: 2025-10-15)
-- **Current focus**: Mirror the Mac Automation Scripting Guide and design the automated change-detection framework.
+- **Current focus**
+  - Finish mirroring priority collections (Mac Automation Scripting Guide, JXA release notes, Script Editor User Guide).
+  - Stand up the change-detection framework that keeps mirrors fresh.
+  - Prepare for a public-facing catalog and LLM-ready datasets.
 - **Next actions**
-  1. Draft the extraction workflow for the Mac Automation Scripting Guide (TOC source, assets, validation expectations).
-  2. Outline the monitoring manifest schema (`monitor/manifest.json`) and `scripts/check_updates.py`.
-  3. Sketch the GitHub Pages catalog structure (collections listing, per-page routing, search).
-- **Blockers / decisions pending**: Determine how to handle large WWDC video assets (link-out vs. local copy) and agree on the storage format for man-page exports.
+  1. Draft the extraction workflow for the Mac Automation Scripting Guide (TOC source, assets, validation expectations) and open an issue.
+  2. Outline the monitoring manifest schema (`monitor/manifest.json`) and `scripts/check_updates.py` MVP; define what constitutes “freshness.”
+  3. Sketch the GitHub Pages catalog structure (collections listing, per-page routing, basic search) with success criteria.
+- **Blockers / decisions pending**
+  - Determine how to handle large WWDC video assets (link-out vs. local copy).
+  - Decide on the storage/export format for man-page captures (plain text vs. Markdown).
+  - Confirm monitoring cadence (weekly vs. monthly) once the checker exists.
 
 ## Objectives
 - Mirror AppleScript documentation (Overview, Language Guide, and future sets) as local Markdown.
 - Keep the original Apple TOC layout intact within each collection for reliable cross-linking.
 - Maintain reproducible scripts to refresh sources and note gaps for manual cleanup (assets, PDFs, etc.).
 - Track active work in GitHub Issues with consistent labels (`to-do`, `in-progress`, `blocked`, `done`).
+- Measure success by: (a) mirror coverage (% of `apple-official-docs.md` done), (b) freshness (monitoring jobs produce actionable reports), (c) catalog usability (GitHub Pages site loads with working navigation/search), and (d) dataset readiness (plain text/JSONL exports available for local LLMs).
 
 ## Progress Log
 - 2024-10-15: Confirmed `url-to-md` runs in this environment by exporting the landing page to `test.md`.
@@ -61,6 +68,7 @@
 - **Issues**: Create one GitHub Issue per work item and label it (`to-do`, `in-progress`, `blocked`, `done`). Reference the issue number in commits/PRs.
 - **Snapshot**: Update the Snapshot section at the top of this file at the beginning or end of each work session.
 - **Reports**: Store monitoring results under `reports/` (e.g., `reports/update-status-YYYYMMDD.md`) once `scripts/check_updates.py` is in place.
+- **Metrics**: Track mirror coverage, freshness, catalog usability, and dataset readiness in the Snapshot or relevant issues so progress stays visible.
 
 ## Next Up
 1. Draft the extraction workflow for the Mac Automation Scripting Guide and open a GitHub Issue enumerating subtasks.
