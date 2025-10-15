@@ -1,0 +1,350 @@
+{
+  "version": 1,
+  "generated": "2025-10-15T00:00:00Z",
+  "collections": [
+    {
+      "id": "applescript-overview",
+      "description": "AppleScript Overview topic book",
+      "base_url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/",
+      "sources": [
+        {
+          "id": "AppleScriptX",
+          "path": "AppleScriptX.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/AppleScriptX.html",
+          "type": "html",
+          "output": "build/applescript-overview/AppleScriptX.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "Concepts_ScriptingOnOSX",
+          "path": "Concepts/ScriptingOnOSX.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/ScriptingOnOSX.html",
+          "type": "html",
+          "output": "build/applescript-overview/Concepts/ScriptingOnOSX.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "Concepts_osa",
+          "path": "Concepts/osa.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/osa.html",
+          "type": "html",
+          "output": "build/applescript-overview/Concepts/osa.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "Concepts_work_with_as",
+          "path": "Concepts/work_with_as.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/work_with_as.html",
+          "type": "html",
+          "output": "build/applescript-overview/Concepts/work_with_as.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "Concepts_scriptable_apps",
+          "path": "Concepts/scriptable_apps.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/scriptable_apps.html",
+          "type": "html",
+          "output": "build/applescript-overview/Concepts/scriptable_apps.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "Concepts_scripting_bridge",
+          "path": "Concepts/scripting_bridge.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/scripting_bridge.html",
+          "type": "html",
+          "output": "build/applescript-overview/Concepts/scripting_bridge.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "Concepts_automator",
+          "path": "Concepts/automator.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/automator.html",
+          "type": "html",
+          "output": "build/applescript-overview/Concepts/automator.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "Concepts_as_related_apps",
+          "path": "Concepts/as_related_apps.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/as_related_apps.html",
+          "type": "html",
+          "output": "build/applescript-overview/Concepts/as_related_apps.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "RevisionHistory",
+          "path": "RevisionHistory.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/RevisionHistory.html",
+          "type": "html",
+          "output": "build/applescript-overview/RevisionHistory.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        }
+      ]
+    },
+    {
+      "id": "applescript-language-guide",
+      "description": "AppleScript Language Guide reference",
+      "base_url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/",
+      "sources": [
+        {
+          "id": "introduction_ASLR_intro",
+          "path": "introduction/ASLR_intro.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/introduction/ASLR_intro.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "conceptual_ASLR_fundamentals",
+          "path": "conceptual/ASLR_fundamentals.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/conceptual/ASLR_fundamentals.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "conceptual_ASLR_lexical_conventions",
+          "path": "conceptual/ASLR_lexical_conventions.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/conceptual/ASLR_lexical_conventions.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "conceptual_ASLR_about_handlers",
+          "path": "conceptual/ASLR_about_handlers.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/conceptual/ASLR_about_handlers.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "conceptual_ASLR_script_objects",
+          "path": "conceptual/ASLR_script_objects.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_script_objects.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/conceptual/ASLR_script_objects.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "conceptual_ASLR_variables",
+          "path": "conceptual/ASLR_variables.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_variables.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/conceptual/ASLR_variables.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "conceptual_ASLR_raw_data",
+          "path": "conceptual/ASLR_raw_data.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_raw_data.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/conceptual/ASLR_raw_data.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "reference_ASLR_cmds",
+          "path": "reference/ASLR_cmds.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/reference/ASLR_cmds.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "reference_ASLR_classes",
+          "path": "reference/ASLR_classes.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/reference/ASLR_classes.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "reference_ASLR_control_statements",
+          "path": "reference/ASLR_control_statements.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/reference/ASLR_control_statements.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "reference_ASLR_operators",
+          "path": "reference/ASLR_operators.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/reference/ASLR_operators.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "reference_ASLR_handlers",
+          "path": "reference/ASLR_handlers.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_handlers.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/reference/ASLR_handlers.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "reference_ASLR_error_codes",
+          "path": "reference/ASLR_error_codes.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_error_codes.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/reference/ASLR_error_codes.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "reference_ASLR_error_xmpls",
+          "path": "reference/ASLR_error_xmpls.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_error_xmpls.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/reference/ASLR_error_xmpls.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "reference_ASLR_folder_actions",
+          "path": "reference/ASLR_folder_actions.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_folder_actions.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/reference/ASLR_folder_actions.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "reference_ASLR_keywords",
+          "path": "reference/ASLR_keywords.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_keywords.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/reference/ASLR_keywords.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "reference_ASLR_glossary",
+          "path": "reference/ASLR_glossary.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_glossary.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/reference/ASLR_glossary.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "reference_ASLR_reference_forms",
+          "path": "reference/ASLR_reference_forms.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_reference_forms.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/reference/ASLR_reference_forms.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "reference_ASLR_load_script",
+          "path": "reference/ASLR_load_script.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_load_script.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/reference/ASLR_load_script.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "reference_ASLR_unsupported_terms",
+          "path": "reference/ASLR_unsupported_terms.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_unsupported_terms.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/reference/ASLR_unsupported_terms.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "reference_ASLR_error_history",
+          "path": "revision_history/ASLR_rev_history.html",
+          "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/revision_history/ASLR_rev_history.html",
+          "type": "html",
+          "output": "build/applescript-language-guide/revision_history/ASLR_rev_history.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        }
+      ]
+    }
+  ]
+}

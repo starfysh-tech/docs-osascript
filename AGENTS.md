@@ -14,6 +14,7 @@
 - Link rewrite: `python3 scripts/normalize_markdown_links.py --pages-file data/<collection>/html_pages.txt --markdown-dir build/<collection>`.
 - Asset sync: run `download_assets.py` followed by `sync_assets.py` with matching arguments to copy images beside Markdown.
 - Verification: `python3 scripts/validate_markdown.py --html-dir data/<collection>/html --markdown-dir build/<collection>`.
+- Monitoring dry-run: `python3 scripts/check_updates.py --manifest monitor/manifest.json` (add `--save --report reports/update-status-<date>.md` when ready).
 
 ## Coding Style & Naming Conventions
 - Follow PEP 8: 4-space indentation, snake_case functions, UPPER_SNAKE constants. Prefer `pathlib.Path` and `argparse` over ad-hoc utilities.

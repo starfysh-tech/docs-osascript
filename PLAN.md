@@ -7,8 +7,8 @@
   - Prepare for a public-facing catalog and LLM-ready datasets.
 - **Next actions**
   1. Draft the extraction workflow for the Mac Automation Scripting Guide (TOC source, assets, validation expectations) and open an issue.
-  2. Outline the monitoring manifest schema (`monitor/manifest.json`) and `scripts/check_updates.py` MVP; define what constitutes “freshness.”
-  3. Sketch the GitHub Pages catalog structure (collections listing, per-page routing, basic search) with success criteria.
+  2. Finalize the monitoring manifest and `scripts/check_updates.py` MVP; document freshness thresholds.
+  3. Scaffold the GitHub Pages catalog using **MkDocs** + Material theme (decided); outline navigation/search requirements.
 - **Blockers / decisions pending**
   - Determine how to handle large WWDC video assets (link-out vs. local copy).
   - Decide on the storage/export format for man-page captures (plain text vs. Markdown).
@@ -33,6 +33,7 @@
 - 2024-10-15: Ran formatting sanity checks (H1 presence, image availability, non-breaking space scan) across Markdown outputs.
 - 2024-10-15: Built `scripts/validate_markdown.py` and verified AppleScript Overview matches source HTML exactly; Language Guide diffs limited to dense tables (manually inspected).
 - 2024-10-15: Imported `apple-official-docs.md` as the authoritative backlog of Apple automation docs to mirror.
+- 2025-10-15: Added `monitor/manifest.json` and `scripts/check_updates.py` to seed the change-detection pipeline.
 
 ## Task Board
 
@@ -69,6 +70,7 @@
 - **Snapshot**: Update the Snapshot section at the top of this file at the beginning or end of each work session.
 - **Reports**: Store monitoring results under `reports/` (e.g., `reports/update-status-YYYYMMDD.md`) once `scripts/check_updates.py` is in place.
 - **Metrics**: Track mirror coverage, freshness, catalog usability, and dataset readiness in the Snapshot or relevant issues so progress stays visible.
+- **Catalog tooling**: MkDocs + Material theme will power the GitHub Pages site; capture structural notes in repo issues/docs as the scaffold progresses.
 
 ## Next Up
 1. Draft the extraction workflow for the Mac Automation Scripting Guide and open a GitHub Issue enumerating subtasks.
