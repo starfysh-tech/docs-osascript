@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Error Numbers and Error Messages</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Guide">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40000983">
+    <meta id="document-version" name="document-version" content="5.2.0">
+    <meta id="build" name="build" content="c1e4c7a89af8f899a21cfa81fc33ba42" />
+    <meta id="chapterId" name="chapterId" content="TP40000983-CH220">
+    <meta id="date" name="date" content="2016-01-25">
+    <meta id="description" name="description" content="Defines the AppleScript scripting language. Includes many brief sample scripts.">
+    <meta id="book-title" name="book-title" content="AppleScript Language Guide">
+    <meta id="book-root" name="book-root" content="../">
+    <meta id="book-json" name="book-json" content="../book.json">
+    <meta id="devcenter" name="devcenter" content="Mac Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/mac">
+    <meta id="reflib" name="reflib" content="Documentation Archive">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages & Utilities/Other Languages}">
+    
+    
+    <meta id="copyright" name="copyright" content="Copyright 2018 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="AppleScript Language Guide: Error Numbers and Error Messages">
+    <meta id="resources-uri" name="resources-uri" content="../../../../../Resources/1282">
+    <link id="book-index-page" rel="Start" title="AppleScript Language Guide" type="text/html" href="../index.html">
+    <link id="next-page" rel="Next" type="text/html" href="ASLR_error_xmpls.html">
+    <link id="previous-page" rel="Prev" type="text/html" href="ASLR_keywords.html">
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/1282/CSS/screen.css">
+    
+    <!-- xcode_css -->
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/1282/CSS/feedback.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta id="platforms" name="platforms" content="">
+</head>    
+<body><a name="//apple_ref/doc/uid/TP40000983-CH220" title="Error Numbers and Error Messages"></a>
+    <div id="_omniture_top">
+    <!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+    <script type="text/javascript">
+    /* RSID: */
+    var s_account="awdappledeveloper"
+    </script>
+
+    <script type="text/javascript" src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
+    <script type="text/javascript">
+    s.channel="www.documentationarchive.developer"
+
+    /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+    var s_code=s.t();if(s_code)document.write(s_code)</script>
+    <!-- End SiteCatalyst code version: H.8. -->
+    </div>
+
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode unified">
+            <a id="ssi_LibraryTitle" href='../../../../../navigation/'>Documentation Archive</a>
+            <a id="ssi_AppleDeveloperConnection" href='https://developer.apple.com/'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../../../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search Documentation Archive</label>
+            
+            
+    
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>AppleScript Language Guide</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main">
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='ASLR_error_xmpls.html'>Next</a><a class='previousLink' rel='prev' href='ASLR_keywords.html'>Previous</a>
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="../index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/TP40000983-CH220-SW5" title="Error Numbers and Error Messages"></a><h1 id="pageTitle">Error Numbers and Error Messages</h1><p>This appendix describes error numbers and error messages provided by AppleScript and macOS.</p><section><a name="//apple_ref/doc/uid/TP40000983-CH220-SW1" title="AppleScript Errors"></a><h2 class="jump">AppleScript Errors</h2><p><a name="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_907"></a><a name="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_908"></a>An AppleScript error is an error that occurs when AppleScript processes script statements. Nearly all of these are of interest to users. For errors returned by an application, see the documentation for that application.</p><a name="//apple_ref/doc/uid/TP40000983-CH220-SW3" title="Table B-1AppleScript errors"></a><div class="tableholder"><table class="graybox" border = "0" cellspacing="0" cellpadding="5"><caption class="tablecaption"><strong class="caption_number">Table B-1</strong>&nbsp;&nbsp;AppleScript errors</caption><tr><th scope="col" class="TableHeading_TableRow_TableCell"><p>Error number</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>Error message</p></th></tr><tr><td  scope="row"><p>-2700</p></td><td ><p>Unknown error.</p></td></tr><tr><td  scope="row"><p>-2701</p></td><td ><p>Can’t divide &lt;number&gt; by zero.</p></td></tr><tr><td  scope="row"><p>-2702</p></td><td ><p>The result of a numeric operation was too large.</p></td></tr><tr><td  scope="row"><p>-2703</p></td><td ><p>&lt;reference&gt; can't be launched because it is not an application.</p></td></tr><tr><td  scope="row"><p>-2704</p></td><td ><p>&lt;reference&gt; isn't scriptable.</p></td></tr><tr><td  scope="row"><p>-2705</p></td><td ><p>The application has a corrupted dictionary.</p></td></tr><tr><td  scope="row"><p>-2706</p></td><td ><p>Stack overflow.</p></td></tr><tr><td  scope="row"><p>-2707</p></td><td ><p>Internal table overflow.</p></td></tr><tr><td  scope="row"><p>-2708</p></td><td ><p>Attempt to create a value larger than the allowable size.</p></td></tr><tr><td  scope="row"><p>-2709</p></td><td ><p>Can't get the event dictionary.</p></td></tr><tr><td  scope="row"><p>-2720</p></td><td ><p>Can't both consider and ignore &lt;attribute&gt;.</p></td></tr><tr><td  scope="row"><p>-2721</p></td><td ><p>Can't perform operation on text longer than 32K bytes.</p></td></tr><tr><td  scope="row"><p>-2729</p></td><td ><p>Message size too large for the 7.0 Finder.</p></td></tr><tr><td  scope="row"><p>-2740</p></td><td ><p>A &lt;language element&gt; can't go after this &lt;language element&gt;.</p></td></tr><tr><td  scope="row"><p>-2741</p></td><td ><p>Expected &lt;language element&gt; but found &lt;language element&gt;.</p></td></tr><tr><td  scope="row"><p>-2750</p></td><td ><p>The &lt;name&gt; parameter is specified more than once.</p></td></tr><tr><td  scope="row"><p>-2751</p></td><td ><p>The &lt;name&gt; property is specified more than once.</p></td></tr><tr><td  scope="row"><p>-2752</p></td><td ><p>The &lt;name&gt; handler is specified more than once.</p></td></tr><tr><td  scope="row"><p>-2753</p></td><td ><p>The variable &lt;name&gt; is not defined.</p></td></tr><tr><td  scope="row"><p>-2754</p></td><td ><p>Can't declare &lt;name&gt; as both a local and global variable.</p></td></tr><tr><td  scope="row"><p>-2755</p></td><td ><p>Exit statement was not in a repeat loop.</p></td></tr><tr><td  scope="row"><p>-2760</p></td><td ><p>Tell statements are nested too deeply.</p></td></tr><tr><td  scope="row"><p>-2761</p></td><td ><p>&lt;name&gt; is illegal as a formal parameter.</p></td></tr><tr><td  scope="row"><p>-2762</p></td><td ><p>&lt;name&gt; is not a parameter name for the event &lt;event&gt;.</p></td></tr><tr><td  scope="row"><p>-2763</p></td><td ><p>No result was returned for some argument of this expression.</p></td></tr></table></div></section><section><a name="//apple_ref/doc/uid/TP40000983-CH220-SW2" title="Operating System Errors"></a><h2 class="jump">Operating System Errors</h2><p><a name="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_909"></a><a name="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_910"></a>An operating system error is an error that occurs when AppleScript or an application requests services from the Mac OS. They are rare, and often there is nothing you can do about them in a script, other than report them. A few, such as <code>"User canceled"</code>, make sense for scripts to handle—as shown, for an example, in the Examples section for the <span class="content_text"><a href="ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW12" data-renderer-version="1">display dialog</a></span> command.</p><a name="//apple_ref/doc/uid/TP40000983-CH220-SW4" title="Table B-2Mac OS errors"></a><div class="tableholder"><table class="graybox" border = "0" cellspacing="0" cellpadding="5"><caption class="tablecaption"><strong class="caption_number">Table B-2</strong>&nbsp;&nbsp;Mac OS errors</caption><tr><th scope="col" class="TableHeading_TableRow_TableCell"><p>Error number</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>Error message</p></th></tr><tr><td  scope="row"><p>0</p></td><td ><p>No error.</p></td></tr><tr><td  scope="row"><p>-34</p></td><td ><p>Disk &lt;name&gt; full.</p></td></tr><tr><td  scope="row"><p>-35</p></td><td ><p>Disk &lt;name&gt; wasn’t found.</p></td></tr><tr><td  scope="row"><p>-37</p></td><td ><p>Bad name for file</p></td></tr><tr><td  scope="row"><p>-38</p></td><td ><p>File &lt;name&gt; wasn’t open.</p></td></tr><tr><td  scope="row"><p>-39</p></td><td ><p>End of file error.</p></td></tr><tr><td  scope="row"><p>-42</p></td><td ><p>Too many files open.</p></td></tr><tr><td  scope="row"><p>-43</p></td><td ><p>File &lt;name&gt; wasn’t found.</p></td></tr><tr><td  scope="row"><p>-44</p></td><td ><p>Disk &lt;name&gt; is write protected.</p></td></tr><tr><td  scope="row"><p>-45</p></td><td ><p>File &lt;name&gt; is locked.</p></td></tr><tr><td  scope="row"><p>-46</p></td><td ><p>Disk &lt;name&gt; is locked.</p></td></tr><tr><td  scope="row"><p>-47</p></td><td ><p>File &lt;name&gt; is busy.</p></td></tr><tr><td  scope="row"><p>-48</p></td><td ><p>Duplicate file name.</p></td></tr><tr><td  scope="row"><p>-49</p></td><td ><p>File &lt;name&gt; is already open.</p></td></tr><tr><td  scope="row"><p>-50</p></td><td ><p>Parameter error.</p></td></tr><tr><td  scope="row"><p>-51</p></td><td ><p>File reference number error.</p></td></tr><tr><td  scope="row"><p>-61</p></td><td ><p>File not open with write permission.</p></td></tr><tr><td  scope="row"><p>-108</p></td><td ><p>Out of memory.</p></td></tr><tr><td  scope="row"><p>-120</p></td><td ><p>Folder &lt;name&gt; wasn’t found.</p></td></tr><tr><td  scope="row"><p>-124</p></td><td ><p>Disk &lt;name&gt; is disconnected.</p></td></tr><tr><td  scope="row"><p>-128</p></td><td ><p>User cancelled.</p></td></tr><tr><td  scope="row"><p>-192</p></td><td ><p>A resource wasn’t found.</p></td></tr><tr><td  scope="row"><p>-600</p></td><td ><p>Application isn’t running</p></td></tr><tr><td  scope="row"><p>-601</p></td><td ><p>Not enough room to launch application with special requirements.</p></td></tr><tr><td  scope="row"><p>-602</p></td><td ><p>Application is not 32-bit clean.</p></td></tr><tr><td  scope="row"><p>-605</p></td><td ><p>More memory needed than is specified in the size resource.</p></td></tr><tr><td  scope="row"><p>-606</p></td><td ><p>Application is background-only.</p></td></tr><tr><td  scope="row"><p>-607</p></td><td ><p>Buffer is too small.</p></td></tr><tr><td  scope="row"><p>-608</p></td><td ><p>No outstanding high-level event.</p></td></tr><tr><td  scope="row"><p>-609</p></td><td ><p>Connection is invalid.</p></td></tr><tr><td  scope="row"><p>-904</p></td><td ><p>Not enough system memory to connect to remote application.</p></td></tr><tr><td  scope="row"><p>-905</p></td><td ><p>Remote access is not allowed.</p></td></tr><tr><td  scope="row"><p>-906</p></td><td ><p>&lt;name&gt; isn’t running or program linking isn’t enabled.</p></td></tr><tr><td  scope="row"><p>-915</p></td><td ><p>Can’t find remote machine.</p></td></tr><tr><td  scope="row"><p>-30720</p></td><td ><p>Invalid date and time &lt;date string&gt;.</p></td></tr></table></div></section><section><a name="//apple_ref/doc/uid/TP40000983-CH220-SW6" title="Apple Event Errors"></a><h2 class="jump">Apple Event Errors</h2><p><a name="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_911"></a><a name="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_912"></a>An Apple event error may occur when an app attempts to process an event sent by a script or a script attempts to process the reply.</p><a name="//apple_ref/doc/uid/TP40000983-CH220-SW7" title="Table B-3Apple Event Manager errors"></a><div class="tableholder"><table class="graybox" border = "0" cellspacing="0" cellpadding="5"><caption class="tablecaption"><strong class="caption_number">Table B-3</strong>&nbsp;&nbsp;Apple Event Manager errors</caption><tr><th scope="col" class="TableHeading_TableRow_TableCell"><p>Error number</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>Error message</p></th></tr><tr><td  scope="row"><p>-1700</p></td><td ><p>Bad parameter data was detected or there was a failure while performing a coercion.</p></td></tr><tr><td  scope="row"><p>-1701</p></td><td ><p>An Apple event description was not found.</p></td></tr><tr><td  scope="row"><p>-1702</p></td><td ><p>Corrupt data was detected.</p></td></tr><tr><td  scope="row"><p>-1703</p></td><td ><p>The wrong data type was detected.</p></td></tr><tr><td  scope="row"><p>-1704</p></td><td ><p>An invalid Apple event description was detected.</p></td></tr><tr><td  scope="row"><p>-1705</p></td><td ><p>The specified list item doesn’t exist.</p></td></tr><tr><td  scope="row"><p>-1706</p></td><td ><p>A newer version of Apple Event Manager is required to perform this operation.</p></td></tr><tr><td  scope="row"><p>-1707</p></td><td ><p>The event isn’t an Apple event.</p></td></tr><tr><td  scope="row"><p>-1708</p></td><td ><p>The script doesn’t understand the &lt;message&gt; message. The event was not handled.</p></td></tr><tr><td  scope="row"><p>-1709</p></td><td ><p>An invalid reply parameter was received by <code>AEResetTimer</code>.</p></td></tr><tr><td  scope="row"><p>-1710</p></td><td ><p>An invalid sending mode (something other than <code>NoReply</code>, <code>WaitReply</code>, or <code>QueueReply</code>) was detected or interaction level is unknown.</p></td></tr><tr><td  scope="row"><p>-1711</p></td><td ><p>The user canceled while waiting for an event reply.</p></td></tr><tr><td  scope="row"><p>-1712</p></td><td ><p>The Apple event has timed out.</p></td></tr><tr><td  scope="row"><p>-1713</p></td><td ><p>User interaction is not allowed.</p></td></tr><tr><td  scope="row"><p>-1714</p></td><td ><p>There is no special function for this keyword.</p></td></tr><tr><td  scope="row"><p>-1715</p></td><td ><p>A required parameter is missing.</p></td></tr><tr><td  scope="row"><p>-1716</p></td><td ><p>The target address type of an Apple event is unknown.</p></td></tr><tr><td  scope="row"><p>-1717</p></td><td ><p>Unable to find a matching event or coercion handler.</p></td></tr><tr><td  scope="row"><p>-1718</p></td><td ><p>Unable to access the contents of an event reply because the reply hasn’t been received yet.</p></td></tr><tr><td  scope="row"><p>-1719</p></td><td ><p>The specified index is invalid or out of range.</p></td></tr><tr><td  scope="row"><p>-1720</p></td><td ><p>The specified range is invalid, such as <code>3rd</code> to <code>2nd</code> or <code>1st</code> to <code>all</code>.</p></td></tr><tr><td  scope="row"><p>-1721</p></td><td ><p>The wrong number of arguments was detected.</p></td></tr><tr><td  scope="row"><p>-1723</p></td><td ><p>The accessor was not found.</p></td></tr><tr><td  scope="row"><p>-1725</p></td><td ><p>There is no such Boolean operator.</p></td></tr><tr><td  scope="row"><p>-1726</p></td><td ><p>An invalid comparison was made or an invalid logical descriptor was detected.</p></td></tr><tr><td  scope="row"><p>-1727</p></td><td ><p><code>AEResolve</code> was given a non-object parameter.</p></td></tr><tr><td  scope="row"><p>-1728</p></td><td ><p>The referenced object doesn’t exist. This is a run-time resolution error, such as when attempting to reference a third object when only two objects exist.</p></td></tr><tr><td  scope="row"><p>-1729</p></td><td ><p>An object counting procedure returned a negative value.</p></td></tr><tr><td  scope="row"><p>-1730</p></td><td ><p>Attempted to pass an empty list to an accessor.</p></td></tr><tr><td  scope="row"><p>-1731</p></td><td ><p>An unknown type of object was detected.</p></td></tr><tr><td  scope="row"><p>-10000</p></td><td ><p>The Apple event handler failed.</p></td></tr><tr><td  scope="row"><p>-10001</p></td><td ><p>A type mismatch has occurred.</p></td></tr><tr><td  scope="row"><p>-10002</p></td><td ><p>Invalid key form was detected.</p></td></tr><tr><td  scope="row"><p>-10003</p></td><td ><p>The specified object cannot be modified.</p></td></tr><tr><td  scope="row"><p>-10004</p></td><td ><p>A privilege error has occurred.</p></td></tr><tr><td  scope="row"><p>-10005</p></td><td ><p>The read operation was denied.</p></td></tr><tr><td  scope="row"><p>-10006</p></td><td ><p>The write operation was denied.</p></td></tr><tr><td  scope="row"><p>-10007</p></td><td ><p>The object index is too large.</p></td></tr><tr><td  scope="row"><p>-10008</p></td><td ><p>The specified object is not an element.</p></td></tr><tr><td  scope="row"><p>-10009</p></td><td ><p>Unable to provide the requested type.</p></td></tr><tr><td  scope="row"><p>-10010</p></td><td ><p>The Apple event handler doesn’t support the specified class.</p></td></tr><tr><td  scope="row"><p>-10011</p></td><td ><p>The event is not part of the current transaction.</p></td></tr><tr><td  scope="row"><p>-10012</p></td><td ><p>There is no such transaction.</p></td></tr><tr><td  scope="row"><p>-10013</p></td><td ><p>Nothing is selected by the user.</p></td></tr><tr><td  scope="row"><p>-10014</p></td><td ><p>The Apple event handler only handles single objects.</p></td></tr><tr><td  scope="row"><p>-10015</p></td><td ><p>The previous action can’t be undone.</p></td></tr><tr><td  scope="row"><p>-10016</p></td><td ><p>The Apple event handler does not handle remote events.</p></td></tr><tr><td  scope="row"><p>-10023</p></td><td ><p>The specified constant value is invalid for this property.</p></td></tr><tr><td  scope="row"><p>-10024</p></td><td ><p>The specified class can’t be an element of the specified container, such as when attempting to make or duplicate an object.</p></td></tr><tr><td  scope="row"><p>-10025</p></td><td ><p>An invalid combination of properties was provided, such as for the <code>set</code>, <code>make</code>, or <code>duplicate</code> command.</p></td></tr></table></div></section><section><a name="//apple_ref/doc/uid/TP40000983-CH220-SW8" title="Open Scripting Architecture Errors"></a><h2 class="jump">Open Scripting Architecture Errors</h2><p><a name="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_913"></a><a name="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_914"></a>An Open Scripting Architecture error may occur when the scripting system itself encounters an error.</p><a name="//apple_ref/doc/uid/TP40000983-CH220-SW9" title="Table B-4Open Scripting Architecture errors"></a><div class="tableholder"><table class="graybox" border = "0" cellspacing="0" cellpadding="5"><caption class="tablecaption"><strong class="caption_number">Table B-4</strong>&nbsp;&nbsp;Open Scripting Architecture errors</caption><tr><th scope="col" class="TableHeading_TableRow_TableCell"><p>Error number</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>Error message</p></th></tr><tr><td  scope="row"><p>-1750</p></td><td ><p>A scripting component error has occurred.</p></td></tr><tr><td  scope="row"><p>-1751</p></td><td ><p>An invalid script ID was detected.</p></td></tr><tr><td  scope="row"><p>-1752</p></td><td ><p>The script isn’t a supported type.</p></td></tr><tr><td  scope="row"><p>-1753</p></td><td ><p>A script error has occurred.</p></td></tr><tr><td  scope="row"><p>-1754</p></td><td ><p>A bad selector was detected.</p></td></tr><tr><td  scope="row"><p>-1756</p></td><td ><p>The source is not available.</p></td></tr><tr><td  scope="row"><p>-1757</p></td><td ><p>There is no matching dialect.</p></td></tr><tr><td  scope="row"><p>-1758</p></td><td ><p>The data format is obsolete.</p></td></tr><tr><td  scope="row"><p>-1759</p></td><td ><p>The data format is too new.</p></td></tr><tr><td  scope="row"><p>-1761</p></td><td ><p>There is a component mismatch—parameters are from two different components.</p></td></tr><tr><td  scope="row"><p>-1762</p></td><td ><p>Unable to connect to the scripting system matching the specified ID.</p></td></tr><tr><td  scope="row"><p>-1763</p></td><td ><p>Unable to store memory pointers in a saved script.</p></td></tr></table></div></section>
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='ASLR_error_xmpls.html'>Next</a><a class='previousLink' rel='prev' href='ASLR_keywords.html'>Previous</a>
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2016 Apple Inc. All Rights Reserved.  <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2016-01-25</p></div></div>
+
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="https://developer.apple.com/bugreporter/" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../../../../Resources/1282/JavaScript/lib/prototype.js"></script>
+    <script src="../../../../../Resources/1282/JavaScript/library.js"></script>
+</body>
+</html>

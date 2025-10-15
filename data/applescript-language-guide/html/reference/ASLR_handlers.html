@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Handler Reference</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Guide">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40000983">
+    <meta id="document-version" name="document-version" content="5.2.0">
+    <meta id="build" name="build" content="c1e4c7a89af8f899a21cfa81fc33ba42" />
+    <meta id="chapterId" name="chapterId" content="TP40000983-CH7g">
+    <meta id="date" name="date" content="2016-01-25">
+    <meta id="description" name="description" content="Defines the AppleScript scripting language. Includes many brief sample scripts.">
+    <meta id="book-title" name="book-title" content="AppleScript Language Guide">
+    <meta id="book-root" name="book-root" content="../">
+    <meta id="book-json" name="book-json" content="../book.json">
+    <meta id="devcenter" name="devcenter" content="Mac Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/mac">
+    <meta id="reflib" name="reflib" content="Documentation Archive">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages & Utilities/Other Languages}">
+    
+    
+    <meta id="copyright" name="copyright" content="Copyright 2018 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="AppleScript Language Guide: Handler Reference">
+    <meta id="resources-uri" name="resources-uri" content="../../../../../Resources/1282">
+    <link id="book-index-page" rel="Start" title="AppleScript Language Guide" type="text/html" href="../index.html">
+    <link id="next-page" rel="Next" type="text/html" href="ASLR_folder_actions.html">
+    <link id="previous-page" rel="Prev" type="text/html" href="ASLR_control_statements.html">
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/1282/CSS/screen.css">
+    
+    <!-- xcode_css -->
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/1282/CSS/feedback.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta id="platforms" name="platforms" content="">
+</head>    
+<body><a name="//apple_ref/doc/uid/TP40000983-CH7g" title="Handler Reference"></a>
+    <div id="_omniture_top">
+    <!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+    <script type="text/javascript">
+    /* RSID: */
+    var s_account="awdappledeveloper"
+    </script>
+
+    <script type="text/javascript" src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
+    <script type="text/javascript">
+    s.channel="www.documentationarchive.developer"
+
+    /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+    var s_code=s.t();if(s_code)document.write(s_code)</script>
+    <!-- End SiteCatalyst code version: H.8. -->
+    </div>
+
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode unified">
+            <a id="ssi_LibraryTitle" href='../../../../../navigation/'>Documentation Archive</a>
+            <a id="ssi_AppleDeveloperConnection" href='https://developer.apple.com/'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../../../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search Documentation Archive</label>
+            
+            
+    
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>AppleScript Language Guide</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main">
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='ASLR_folder_actions.html'>Next</a><a class='previousLink' rel='prev' href='ASLR_control_statements.html'>Previous</a>
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="../index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/TP40000983-CH7g-163762" title="Handler Reference"></a><h1 id="pageTitle">Handler Reference</h1>
+<p><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_926"></a>This chapter provides reference for handlers, which are defined and introduced in <span class="content_text"><a href="../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-CJBIDBJH" data-renderer-version="1">About Handlers</a></span>. It describes the types of parameters you can use with handlers and how you invoke them. It also describes the <code>continue</code> and <code>return</code> statements, which you use to control the flow of execution in handlers.</p>
+<a name="//apple_ref/doc/uid/TP40000983-CH7g-SW1" title="continue"></a><div class="content_ref_head">continue</div><p><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_927"></a>A <code>continue</code> statement causes AppleScript to invoke the handler with the same name in the parent of the current handler. If there is no such handler in the parent, AppleScript looks up the parent chain, ending with the current application.</p><p>A <code>continue</code> statement is like a handler call, in that after execution completes in the new location, it resumes with the statement after the <code>continue</code> statement.</p><h5>Syntax</h5><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="100%" scope="row"><pre><code>continue</code> <em class="variableText">handlerName</em> [ <em class="variableText">parameterList</em> ]<br/></pre></td></tr></table><h5>Placeholders</h5><dl><dt><em>handlerName</em></dt><dd class="content_text"><p>A required identifier that specifies the name of the current handler (which is also the name of the handler in which to continue execution).</p></dd><dt><em>parameterList</em></dt><dd class="content_text"><p>The list of parameters to be passed to <em>handlerName</em>.</p><p>The list must follow the same format as the parameter definitions in the handler definition for the command. For handlers with labeled parameters, this means that the parameter labels must match those in the handler definition. For handlers with positional parameters, the parameters must appear in the correct order.</p><p>You can list the parameter variables that were specified in the original command (and thus the original values) or you can list values that may differ from those of the original variables.<a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_928"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_929"></a></p></dd></dl><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_209" title="Examples"></a><h5>Examples</h5><p>You can write a handler that overrides an AppleScript command but uses a <code>continue</code> statement to pass control on to the AppleScript command if desired:</p><div class="codesample clear"><table><tr><td scope="row"><pre>on beep numTimes<span></span></pre></td></tr><tr><td scope="row"><pre>    set x to display dialog "Start beeping?" buttons {"Yes", "No"}<span></span></pre></td></tr><tr><td scope="row"><pre>    if button returned of x is "Yes" then ¬<span></span></pre></td></tr><tr><td scope="row"><pre>        continue beep numTimes -- Let AppleScript handle the beep.<span></span></pre></td></tr><tr><td scope="row"><pre>        -- In this example, nothing to do after returning from the continue.<span></span></pre></td></tr><tr><td scope="row"><pre>end beep<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>beep 3 --result: local beep handler invoked; shows dialog before beeping<span></span></pre></td></tr><tr><td scope="row"><pre>tell my parent to beep 3 -- result: AppleScript beep command invoked<span></span></pre></td></tr></table></div><p>When AppleScript encounters the statement <code>beep 3</code>, it invokes the local <code>beep</code> handler, which displays a dialog. If the user clicks Yes, the handler uses a <code>continue</code> statement to pass the <code>beep</code> command to the script’s parent (AppleScript), which handles the command by beeping. If the user clicks No, it does not continue the <code>beep</code> command, and no sound is heard.</p><p>The final statement, <code>tell my parent to beep 3</code>, shows how to directly invoke the AppleScript <code>beep</code> command, rather than the local handler.</p><p>For an example that uses a <code>continue</code> statement to exit a script handler and return control to the application’s default <code>quit</code> handler, see <span class="content_text"><a href="../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW9" data-renderer-version="1">quit Handlers</a></span>.</p><p>For additional examples, see <span class="content_text"><a href="../conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW9" data-renderer-version="1">Using the continue Statement in Script Objects</a></span>.</p><a name="//apple_ref/doc/uid/TP40000983-CH7g-163937" title="return"></a><div class="content_ref_head">return</div>
+
+<p><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_930"></a>A <code>return</code> statement exits a handler and optionally returns a specified value. Execution continues at the place in the script where the handler was called.<a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_931"></a></p>
+<h5>Syntax</h5><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="100%" scope="row"><pre>
+<code>return</code> [ <em class="variableText">expression</em> ]<br/></pre></td></tr></table>
+<h5>Placeholders</h5><dl><dt><em>expression</em></dt>
+<dd class="content_text"><p>Represents the value to return.</p></dd></dl>
+<a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_210" title="Examples"></a><h5>Examples</h5>
+<p>The following statement, inserted in the body of a handler, returns the integer <code>2</code>:</p>
+<div class="codesample clear"><table><tr><td scope="row"><pre>return 2 -- returns integer value 2<span></span></pre></td></tr></table></div>
+<p>If you include a <code>return</code> statement without an expression, AppleScript exits the handler immediately and no value is returned:</p><div class="codesample clear"><table><tr><td scope="row"><pre>return -- no value returned<span></span></pre></td></tr></table></div><p>See other sections throughout <span class="content_text"><a href="#//apple_ref/doc/uid/TP40000983-CH7g-163762" data-renderer-version="1">Handler Reference</a></span> for more examples of scripts that use the <code>return</code> statement.</p>
+<div class="api discussion"><h5>Discussion</h5>
+<p>If a handler does not include a <code>return</code> statement, AppleScript returns the value returned by the last statement. If the last statement doesn’t return a value, AppleScript returns nothing.</p>
+<p>When AppleScript has finished executing a handler (that is, when it executes a <code>return</code> statement or the last statement in the handler), it passes control to the place in the script immediately after the place where the handler was called. If a handler call is part of an expression, AppleScript uses the value returned by the handler to evaluate the expression.</p>
+<p>It is often considered good programming practice to have just one <code>return</code> statement and locate it at the end of a handler. Doing so can provide the following benefits:</p>
+<ul class="ul"><li class="li"><p>The script is easier to understand.</p></li>
+<li class="li"><p>The script is easier to debug.</p></li>
+<li class="li"><p>You can place cleanup code in one place and make sure it is executed.</p></li></ul>
+<p>In some cases, however, it may make more sense to use multiple <code>return</code> statements. For example, the <code>minimumValue</code> handler in <span class="content_text"><a href="#//apple_ref/doc/uid/TP40000983-CH7g-166812" data-renderer-version="1">Handler Syntax (Positional Parameters)</a></span> is a simple script that uses two <code>return</code> statements.</p><p>For related information, see <span class="content_text"><a href="../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW10" data-renderer-version="1">AppleScript Error Handling</a></span>.</p></div>  <a name="//apple_ref/doc/uid/TP40000983-CH7g-SW2" title="Handler Syntax (Labeled Parameters)"></a><div class="content_ref_head">Handler Syntax (Labeled Parameters)</div><p><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_932"></a>A handler is a collection of statements that can be invoked by name. This section describes the syntax for handlers that use labeled parameters.</p><p>Labeled parameters are identified by their labels and can be listed in any order.</p><h5>Syntax</h5><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="100%" scope="row"><pre>( <code>on</code> | <code>to</code> ) <em class="variableText">handlerName</em> ¬<br/>   [ [ <code>of</code> | <code>in</code> ] <em class="variableText">directParamName</em> ] ¬<br/>   [ <em class="variableText">ASLabel</em> <em class="variableText">userParamName</em> ]... ¬<br/>   [ <code>given</code> <em class="variableText">userLabel</em><code>:</code><em class="variableText">userParamName</em> [, <em class="variableText">userLabel</em><code>:</code><em class="variableText">userParamName</em> ]...]<br/>      [ <em class="variableText">statement</em> ]...<br/><code>end</code> [ <em class="variableText">handlerName</em> ]<br/></pre></td></tr></table><h5>Placeholders</h5><dl><dt><em>handlerName</em></dt><dd class="content_text"><p>An identifier that names the handler.</p></dd><dt><em>directParamName</em></dt><dd class="content_text"><p>An identifier for the direct parameter variable. If it is included, <em>directParamName</em> must be listed immediately after the command name. The word <code>of</code> or <code>in</code> before <em>directParamName</em> is required in user-defined handlers, but is optional in terminology-defined handlers (for example, those defined by applications).</p><p>If a user-defined handler includes a direct parameter, the handler must also include at least one variable parameter.</p></dd><dt><em>ASLabel</em></dt><dd class="content_text"><p>An AppleScript-defined label. The available labels are:<a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_933"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_934"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_935"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_936"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_937"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_938"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_939"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_940"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_941"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_942"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_943"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_944"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_945"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_946"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_947"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_948"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_949"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_950"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_951"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_952"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_953"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_954"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_955"></a><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_956"></a> <code>about</code>, <code>above</code>, <code>against</code>, <code>apart from</code>, <code>around</code>, <code>aside from</code>, <code>at</code>, <code>below</code>, <code>beneath</code>, <code>beside</code>, <code>between</code>, <code>by</code>, <code>for</code>, <code>from</code>, <code>instead of</code>, <code>into</code>, <code>on</code>, <code>onto</code>, <code>out of</code>, <code>over</code>, <code>since</code>, <code>thru</code> (or <code>through</code>), <code>under</code>. These are the only labels that can be used without the special label <code>given</code>.<a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_957"></a> Each label must be unique among the labels for the handler (that is, you cannot use the same label for more than one parameter).</p></dd><dt><em>userLabel</em></dt><dd class="content_text"><p>An identifier for a user-defined label, associated with a user-defined parameter. Each label must be unique.</p><p>The first <em>userLabel</em>-<em>userParamName</em> pair must follow the word <code>given</code>; any additional pairs are separated by commas.</p></dd><dt><em>userParamName</em></dt><dd class="content_text"><p>An identifier for a parameter variable.</p></dd><dt><em>statement</em></dt><dd class="content_text"><p>Any AppleScript statement. These statements can include definitions of <code>script</code> objects, each of which, like any <code>script</code> object, can contain handlers and other <code>script</code> objects. However, you cannot declare another handler within a handler, except within a <code>script</code> object.</p><p>Handlers often contain a <span class="content_text"><a href="#//apple_ref/doc/uid/TP40000983-CH7g-163937" data-renderer-version="1">return</a></span> statement.</p></dd></dl><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_211" title="Examples"></a><h5>Examples</h5><p>For examples and related conceptual information, see <span class="content_text"><a href="../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW22" data-renderer-version="1">Handlers with Labeled Parameters</a></span>.</p><div class="api discussion"><h5>Discussion</h5><p>A handler written to respond to an application command (like those in <span class="content_text"><a href="../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW14" data-renderer-version="1">Handlers in Script Applications</a></span>) need not include all of the possible parameters defined for that command. For example, an application might define a command with up to five possible parameters, but you could define a handler for that command with only two of the parameters.</p><p>If a script calls a handler with more parameters than are specified in the handler definition, the extra parameters are ignored.</p></div>  
+<a name="//apple_ref/doc/uid/TP40000983-CH7g-165917" title="Calling a Handler with Labeled Parameters"></a><div class="content_ref_head">Calling a Handler with Labeled Parameters</div>
+<p><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_958"></a>This section describes the syntax for calling a handler with labeled parameters.</p>
+<h5>Syntax</h5><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="100%" scope="row"><pre>
+<em class="variableText">handlerName</em> ¬<br/>
+ [ [ <code>of</code> | <code>in</code> ] <em class="variableText">directParam</em> ] ¬<br/>
+ [ [ <em class="variableText">ASLabel</em> <em class="variableText">paramValue</em> ...] ¬<br/>
+  | [ <code>with</code> <em class="variableText">labelForTrueParam</em> [, <em class="variableText">labelForTrueParam</em> ]... ¬<br/>
+   [ ( <code>and</code> | , ) <em class="variableText">labelForTrueParam</em> ] ] ¬<br/>
+  | [ <code>without</code> <em class="variableText">labelForFalseParam</em> [, <em class="variableText">labelForFalseParam</em> ]...] ¬<br/>
+   [ ( <code>and</code> | , ) <em class="variableText">labelForFalseParam</em> ] ] ¬<br/>
+  | [ <code>given</code> <em class="variableText">userLabel</em>:<em class="variableText">paramValue</em> [, <em class="variableText">userLabel</em>:<em class="variableText">paramValue</em> ]...]... <br/></pre></td></tr></table>
+<h5>Placeholders</h5><dl><dt><em>handlerName</em></dt>
+<dd class="content_text"><p>An identifier that names the handler.</p></dd>
+<dt><em>directParam</em></dt>
+<dd class="content_text"><p>Any valid expression. The expression for the direct parameter must be listed first if it is included at all.</p></dd>
+<dt><em>ASLabel</em></dt>
+<dd class="content_text"><p>One of the following AppleScript-defined labels used in the definition of the handler: <code>about</code>, <code>above</code>, <code>against</code>, <code>apart from,</code> <code>around</code>, <code>aside from</code>, <code>at</code>, <code>below</code>, <code>beneath</code>, <code>beside</code>, <code>between</code>, <code>by</code>, <code>for</code>, <code>from</code>, <code>instead of</code>, <code>into</code>, <code>on</code>, <code>onto</code>, <code>out of</code>, <code>over</code>, <code>since</code>, <code>thru</code> (or <code>through</code>), <code>under</code>.</p></dd>
+<dt><em>paramValue</em></dt>
+<dd class="content_text"><p>The value of a parameter, which can be any valid expression.</p></dd>
+<dt><em>labelForTrueParam</em></dt>
+<dd class="content_text"><p>The label for a Boolean parameter whose value is <code>true</code>. You use this form in <code>with</code> clauses. Because the value <code>true</code> is implied by the word <code>with</code>, you provide only the label, not the value. For an example, see the <code>findNumbers</code> handler in <span class="content_text"><a href="../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW22" data-renderer-version="1">Handlers with Labeled Parameters</a></span>. <a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_959"></a></p></dd>
+<dt><em>labelForFalseParam</em></dt>
+<dd class="content_text"><p>The label for a Boolean parameter whose value is <code>false</code>. You use this form in <code>without</code> clauses. Because the value <code>false</code> is implied by the word <code>without</code>, you provide only the label, not the value.<a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_960"></a></p></dd>
+<dt><em>paramLabel</em></dt>
+<dd class="content_text"><p>Any parameter label used in the definition of the handler that is not among the labels for <em>ASLabel</em>. You must use the special label <code>given</code> to specify these parameters. For an example, see the <code>findNumbers</code> handler below.</p></dd></dl><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_212" title="Examples"></a><h5>Examples</h5><p>For examples, see <span class="content_text"><a href="../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW22" data-renderer-version="1">Handlers with Labeled Parameters</a></span>.</p><div class="api discussion"><h5>Discussion</h5><p>When you call a handler with labeled parameters, you supply the following:</p><ol class="ol"><li class="li"><p>The handler name.</p></li><li class="li"><p>A value for the direct parameter, if the handler has one. It must directly follow the handler name.</p></li><li class="li"><p>One label-value pair for each AppleScript-defined label and parameter defined for the handler.</p></li><li class="li"><p>One label-value pair for each user-defined label and parameter defined for the handler that <em>is not</em> a boolean value.</p><p>The first pair is preceded by the word <code>given</code>; a comma precedes each additional pair. The order of the pairs does not have to match the order in the handler definition.</p></li><li class="li"><p>For each user-defined label and parameter defined for the handler that <em>is</em> a boolean value, you can either:</p><ol class="ol"><li class="ol ol"><p>Supply the label, followed by a boolean expression (as with non-boolean parameters); for example:</p><div class="codesample clear"><table><tr><td scope="row"><pre>given rounding:true<span></span></pre></td></tr></table></div></li><li class="ol ol"><p>Use a combination of <code>with</code> and <code>without</code> clauses, as shown in the following examples:</p><div class="codesample clear"><table><tr><td scope="row"><pre>with rounding, smoothing and curling<span></span></pre></td></tr><tr><td scope="row"><pre>with rounding without smoothing, curling<span></span></pre></td></tr></table></div><div class="notebox"><aside><a name="//apple_ref/doc/uid/TP40000983-CH7g-SW3" title="Note"></a><p><strong>Note:</strong>&nbsp;AppleScript automatically converts between some forms when you compile. For example, <code>given rounding:true</code> is converted to <code>with rounding</code>, and <code>with rounding, smoothing</code> is converted to <code>with rounding and smoothing</code>.</p><p></p></aside></div></li></ol></li></ol></div>  
+<a name="//apple_ref/doc/uid/TP40000983-CH7g-166812" title="Handler Syntax (Positional Parameters)"></a><div class="content_ref_head">Handler Syntax (Positional Parameters)</div>
+<p><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_961"></a>A handler is a collection of statements that can be invoked by name. This section describes the syntax for handlers that use positional parameters.</p><div class="importantbox clear"><aside><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_213" title="Important"></a><p><strong>Important:</strong>&nbsp;The parentheses that surround the parameter list in the following definition are part of the syntax.</p><p></p></aside></div>
+<h5>Syntax</h5><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="100%" scope="row"><pre>
+<code>on</code> | <code>to</code> <em class="variableText">handlerName</em> ( [ <em class="variableText">userParamName</em> [, <em class="variableText">userParamName</em> ]...] )<br/>
+   [ <em class="variableText">statement</em> ]...<br/>
+<code>end</code> [ <em class="variableText">handlerName</em> ] <br/></pre></td></tr></table>
+<h5>Placeholders</h5><dl><dt><em>handlerName</em></dt>
+<dd class="content_text"><p>An identifier that names the handler.</p></dd>
+<dt><em>userParamName</em></dt>
+<dd class="content_text"><p>An identifier for a user-defined parameter variable.</p></dd>
+<dt><em>statement</em></dt>
+<dd class="content_text"><p>Any AppleScript statement, including global or local variable declarations. For information about the scope of local and global variables, see <span class="content_text"><a href="../conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW1" data-renderer-version="1">Scope of Variables and Properties</a></span>.</p></dd></dl><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_214" title="Examples"></a><h5>Examples</h5><p>For examples and related conceptual information, see <span class="content_text"><a href="../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW13" data-renderer-version="1">Handlers with Positional Parameters</a></span>.</p><a name="//apple_ref/doc/uid/TP40000983-CH7g-166906" title="Calling a Handler with Positional Parameters"></a><div class="content_ref_head">Calling a Handler with Positional Parameters</div><p><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_962"></a>A call for a handler with positional parameters must list the parameters in the same order as they are specified in the handler definition.</p><h5>Syntax</h5><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="100%" scope="row"><pre><em class="variableText">handlerName</em><code>(</code> [ <em class="variableText">paramValue</em> [, <em class="variableText">paramValue</em> ]...] <code>)</code><br/></pre></td></tr></table><h5>Placeholders</h5><dl><dt><em>handlerName</em></dt><dd class="content_text"><p>An identifier that names the handler.</p></dd><dt><em>paramValue</em></dt><dd class="content_text"><p>The value of a parameter, which can be any valid expression. If there are two or more parameters, they must be listed in the same order in which they were specified in the handler definition.</p></dd></dl><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_215" title="Examples"></a><h5>Examples</h5><p>For examples, see <span class="content_text"><a href="../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW13" data-renderer-version="1">Handlers with Positional Parameters</a></span></p><div class="api discussion"><h5>Discussion</h5><p>When you call a handler with positional parameters, you supply the following:</p><ol class="ol"><li class="li"><p>The handler name.</p></li><li class="li"><p>An opening and closing parenthesis.</p></li><li class="li"><p>If the handler has any parameters, then you also list, within the parentheses, the following:</p><p>One value for each parameter defined for the handler. The value can be any valid expression.<a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_963"></a></p></li></ol></div>  <a name="//apple_ref/doc/uid/TP40000983-CH7g-SW4" title="Handler Syntax (Interleaved Parameters)"></a><div class="content_ref_head">Handler Syntax (Interleaved Parameters)</div><p><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_964"></a>A handler is a collection of statements that can be invoked by name. This section describes the syntax for handlers that use interleaved parameters.
+</p><h5>Syntax</h5><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="100%" scope="row"><pre><code>on</code> | <code>to</code><em class="variableText">handlerNamePart</em>:<em class="variableText">userParamName</em> [<em class="variableText">namePart</em>:<em class="variableText">userParamName</em> ]... )<br/>   [ <em class="variableText">statement</em> ]...<br/><code>end</code> [ <em class="variableText">handlerName</em> ] <br/></pre></td></tr></table><h5>Placeholders</h5><dl><dt><em>handlerNamePart</em>, <em>namePart</em></dt><dd class="content_text"><p>An identifier that, combined with the other parts, forms the handler name.</p></dd><dt><em>userParamName</em></dt><dd class="content_text"><p>An identifier for a user-defined parameter variable.</p></dd><dt><em>statement</em></dt><dd class="content_text"><p>Any AppleScript statement, including global or local variable declarations. For information about the scope of local and global variables, see <span class="content_text"><a href="../conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW1" data-renderer-version="1">Scope of Variables and Properties</a></span>.</p></dd></dl><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_216" title="Examples"></a><h5>Examples</h5><p>For examples and related conceptual information, see <span class="content_text"><a href="../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW2" data-renderer-version="1">Handlers with Interleaved Parameters</a></span>.</p><a name="//apple_ref/doc/uid/TP40000983-CH7g-SW5" title="Calling a Handler with Interleaved Parameters"></a><div class="content_ref_head">Calling a Handler with Interleaved Parameters</div><p><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_965"></a>A call for a handler with interleaved parameters must list the parameters in the same order as they are specified in the handler definition.</p><h5>Syntax</h5><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="100%" scope="row"><pre>( tell <em class="variableText">scriptObject</em> to | <em class="variableText">scriptObject</em>'s | my ) <em class="variableText">handlerNamePart</em>:<em class="variableText">paramValue</em> [ <em class="variableText">namePart</em>:<em class="variableText">paramValue</em> ]...] <br/></pre></td></tr></table><h5>Placeholders</h5><dl><dt>scriptObject</dt><dd class="content_text"><p>A script object to direct the handler call to, which can be any valid expression.</p></dd><dt><em>handlerNamePart</em>, <em>namePart</em></dt><dd class="content_text"><p>An identifier that names the handler.</p></dd><dt><em>paramValue</em></dt><dd class="content_text"><p>The value of a parameter, which can be any valid expression. If there are two or more parameters, they must be listed in the same order in which they were specified in the handler definition.</p></dd></dl><a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_217" title="Examples"></a><h5>Examples</h5><p>For examples, see <span class="content_text"><a href="../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW13" data-renderer-version="1">Handlers with Positional Parameters</a></span></p><div class="api discussion"><h5>Discussion</h5><p>When you call a handler with positional parameters, you supply the following:</p><ol class="ol"><li class="li"><p>A script object to direct the handler call to, either using <code>tell</code> <em>script</em> <code>to</code>, <em>script</em><code>'s</code>, or <code>my</code>, equivalent to <code>tell me to</code>.</p></li><li class="li"><p>The first handler name part.</p></li><li class="li"><p>A value for the first parameter.</p></li><li class="li"><p>For each additional parameter, you also list the following:</p><p>The next name part, followed by a colon and a value for that parameter. The value can be any valid expression.<a name="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_966"></a></p></li></ol></div>  
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='ASLR_folder_actions.html'>Next</a><a class='previousLink' rel='prev' href='ASLR_control_statements.html'>Previous</a>
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2016 Apple Inc. All Rights Reserved.  <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2016-01-25</p></div></div>
+
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="https://developer.apple.com/bugreporter/" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../../../../Resources/1282/JavaScript/lib/prototype.js"></script>
+    <script src="../../../../../Resources/1282/JavaScript/library.js"></script>
+</body>
+</html>

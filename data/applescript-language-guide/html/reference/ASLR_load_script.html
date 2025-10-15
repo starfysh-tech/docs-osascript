@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Libraries using Load Script</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Guide">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40000983">
+    <meta id="document-version" name="document-version" content="5.2.0">
+    <meta id="build" name="build" content="c1e4c7a89af8f899a21cfa81fc33ba42" />
+    <meta id="chapterId" name="chapterId" content="TP40000983-CH227">
+    <meta id="date" name="date" content="2016-01-25">
+    <meta id="description" name="description" content="Defines the AppleScript scripting language. Includes many brief sample scripts.">
+    <meta id="book-title" name="book-title" content="AppleScript Language Guide">
+    <meta id="book-root" name="book-root" content="../">
+    <meta id="book-json" name="book-json" content="../book.json">
+    <meta id="devcenter" name="devcenter" content="Mac Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/mac">
+    <meta id="reflib" name="reflib" content="Documentation Archive">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages & Utilities/Other Languages}">
+    
+    
+    <meta id="copyright" name="copyright" content="Copyright 2018 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="AppleScript Language Guide: Libraries using Load Script">
+    <meta id="resources-uri" name="resources-uri" content="../../../../../Resources/1282">
+    <link id="book-index-page" rel="Start" title="AppleScript Language Guide" type="text/html" href="../index.html">
+    <link id="next-page" rel="Next" type="text/html" href="ASLR_unsupported_terms.html">
+    <link id="previous-page" rel="Prev" type="text/html" href="../conceptual/ASLR_raw_data.html">
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/1282/CSS/screen.css">
+    
+    <!-- xcode_css -->
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/1282/CSS/feedback.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta id="platforms" name="platforms" content="">
+</head>    
+<body><a name="//apple_ref/doc/uid/TP40000983-CH227" title="Libraries using Load Script"></a>
+    <div id="_omniture_top">
+    <!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+    <script type="text/javascript">
+    /* RSID: */
+    var s_account="awdappledeveloper"
+    </script>
+
+    <script type="text/javascript" src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
+    <script type="text/javascript">
+    s.channel="www.documentationarchive.developer"
+
+    /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+    var s_code=s.t();if(s_code)document.write(s_code)</script>
+    <!-- End SiteCatalyst code version: H.8. -->
+    </div>
+
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode unified">
+            <a id="ssi_LibraryTitle" href='../../../../../navigation/'>Documentation Archive</a>
+            <a id="ssi_AppleDeveloperConnection" href='https://developer.apple.com/'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../../../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search Documentation Archive</label>
+            
+            
+    
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>AppleScript Language Guide</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main">
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='ASLR_unsupported_terms.html'>Next</a><a class='previousLink' rel='prev' href='../conceptual/ASLR_raw_data.html'>Previous</a>
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="../index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/TP40000983-CH227-SW1" title="Libraries using Load Script"></a><h1 id="pageTitle">Libraries using Load Script</h1><p>OS X Mavericks v10.9 (AppleScript 2.3) introduces built-in support for script libraries, which are scripts containing handlers that may be shared among many scripts. Scripts that must run on older versions of the OS can share handlers between scripts using <code>load script</code>, as described here.</p><section><a name="//apple_ref/doc/uid/TP40000983-CH227-SW2" title="Saving and Loading Libraries of Handlers"></a><h2 class="jump">Saving and Loading Libraries of Handlers</h2><p>In addition to defining and calling handlers within a script, you can access handlers from other scripts. To make a handler available to another script, save it as a compiled script, then use the <code><a href="ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW35" data-renderer-version="1">load script</a></code> command to load it in any script that needs to call the handler. You can use this technique to create libraries containing many handlers.<a name="//apple_ref/doc/uid/TP40000983-CH227-DontLinkElementID_974"></a><a name="//apple_ref/doc/uid/TP40000983-CH227-DontLinkElementID_975"></a><a name="//apple_ref/doc/uid/TP40000983-CH227-DontLinkElementID_976"></a></p><div class="notebox"><aside><a name="//apple_ref/doc/uid/TP40000983-CH227-SW3" title="Note"></a><p><strong>Note:</strong>&nbsp;The <code>load script</code> command loads the compiled script as a <code>script</code> object; for more information, see <span class="content_text"><a href="../conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-BAJJCIAA" data-renderer-version="1">Script Objects</a></span>.</p><p></p></aside></div><p>For example, the following script contains two handlers: <code>areaOfCircle</code> and <code>factorial</code>:</p><div class="codesample clear"><table><tr><td scope="row"><pre>-- This handler computes the area of a circle from its radius.<span></span></pre></td></tr><tr><td scope="row"><pre>-- (The area of a circle is equal to pi times its radius squared.)<span></span></pre></td></tr><tr><td scope="row"><pre>on areaOfCircle from radius<span></span></pre></td></tr><tr><td scope="row"><pre>    -- Make sure the parameter is a real number or an integer.<span></span></pre></td></tr><tr><td scope="row"><pre>    if class of radius is contained by {integer, real}<span></span></pre></td></tr><tr><td scope="row"><pre>        return radius * radius * pi -- pi is predefined by AppleScript.<span></span></pre></td></tr><tr><td scope="row"><pre>    else<span></span></pre></td></tr><tr><td scope="row"><pre>        error "The parameter must be a real number or an integer"<span></span></pre></td></tr><tr><td scope="row"><pre>    end if<span></span></pre></td></tr><tr><td scope="row"><pre>end areaOfCircle<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>-- This handler returns the factorial of a number.<span></span></pre></td></tr><tr><td scope="row"><pre>on factorial(x)<span></span></pre></td></tr><tr><td scope="row"><pre>    set returnVal to 1<span></span></pre></td></tr><tr><td scope="row"><pre>    if x &gt; 1 then<span></span></pre></td></tr><tr><td scope="row"><pre>        repeat with n from 2 to x<span></span></pre></td></tr><tr><td scope="row"><pre>            set returnVal to returnVal * n<span></span></pre></td></tr><tr><td scope="row"><pre>        end repeat<span></span></pre></td></tr><tr><td scope="row"><pre>    end if<span></span></pre></td></tr><tr><td scope="row"><pre>    return returnVal<span></span></pre></td></tr><tr><td scope="row"><pre>end factorial<span></span></pre></td></tr></table></div><p>In Script Editor, save the script as a compiled Script (which has extension <code>scpt</code>) or Script Bundle (extension <code>scptd</code>) and name it “NumberLib”.</p><p>After saving the script as a compiled script, other scripts can use the <code>load script</code> command to load it. For example, the following script loads the compiled script <code>NumberLib.scpt</code>, storing the resulting <code>script</code> object in the variable <code>numberLib</code>. It then makes handler calls within a <code>tell</code> statement that targets the <code>script</code> object. The compiled script must exist in the specified location for this script to work.</p><div class="codesample clear"><table><tr><td scope="row"><pre>set numberLibrary to (load script file "NumberLib.scpt")<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>tell numberLibrary<span></span></pre></td></tr><tr><td scope="row"><pre>    factorial(10)             --result: 3628800<span></span></pre></td></tr><tr><td scope="row"><pre>    areaOfCircle from 12      --result: 452.38934211693<span></span></pre></td></tr><tr><td scope="row"><pre>end tell<span></span></pre></td></tr></table></div></section>
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='ASLR_unsupported_terms.html'>Next</a><a class='previousLink' rel='prev' href='../conceptual/ASLR_raw_data.html'>Previous</a>
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2016 Apple Inc. All Rights Reserved.  <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2016-01-25</p></div></div>
+
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="https://developer.apple.com/bugreporter/" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../../../../Resources/1282/JavaScript/lib/prototype.js"></script>
+    <script src="../../../../../Resources/1282/JavaScript/library.js"></script>
+</body>
+</html>

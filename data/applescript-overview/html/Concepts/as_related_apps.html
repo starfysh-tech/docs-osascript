@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <title>AppleScript Utilities and Applications</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Guide">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/10000156i">
+    <meta id="document-version" name="document-version" content="4.2.1">
+    <meta id="build" name="build" content="c1e4c7a89af8f899a21cfa81fc33ba42" />
+    <meta id="chapterId" name="chapterId" content="TP40001570">
+    <meta id="date" name="date" content="2007-10-31">
+    <meta id="description" name="description" content="Introduces the technology for writing scripts to control applications. Useful for scripters and application developers.">
+    <meta id="book-title" name="book-title" content="AppleScript Overview">
+    <meta id="book-root" name="book-root" content="../">
+    <meta id="book-json" name="book-json" content="../book.json">
+    <meta id="devcenter" name="devcenter" content="Mac Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/mac">
+    <meta id="reflib" name="reflib" content="Documentation Archive">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages & Utilities/Other Languages}">
+    
+    
+    <meta id="copyright" name="copyright" content="Copyright 2018 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="AppleScript Overview: AppleScript Utilities and Applications">
+    <meta id="resources-uri" name="resources-uri" content="../../../../../Resources/1282">
+    <link id="book-index-page" rel="Start" title="AppleScript Overview" type="text/html" href="../index.html">
+    <link id="next-page" rel="Next" type="text/html" href="../RevisionHistory.html">
+    <link id="previous-page" rel="Prev" type="text/html" href="automator.html">
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/1282/CSS/screen.css">
+    
+    <!-- xcode_css -->
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/1282/CSS/feedback.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta id="platforms" name="platforms" content="">
+</head>    
+<body><a name="//apple_ref/doc/uid/TP40001570" title="AppleScript Utilities and Applications"></a>
+    <div id="_omniture_top">
+    <!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+    <script type="text/javascript">
+    /* RSID: */
+    var s_account="awdappledeveloper"
+    </script>
+
+    <script type="text/javascript" src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
+    <script type="text/javascript">
+    s.channel="www.documentationarchive.developer"
+
+    /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+    var s_code=s.t();if(s_code)document.write(s_code)</script>
+    <!-- End SiteCatalyst code version: H.8. -->
+    </div>
+
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode unified">
+            <a id="ssi_LibraryTitle" href='../../../../../navigation/'>Documentation Archive</a>
+            <a id="ssi_AppleDeveloperConnection" href='https://developer.apple.com/'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../../../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search Documentation Archive</label>
+            
+            
+    
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>AppleScript Overview</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main">
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='../RevisionHistory.html'>Next</a><a class='previousLink' rel='prev' href='automator.html'>Previous</a>
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="../index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/TP40001570-BABEBGCF" title="AppleScript Utilities and Applications"></a><h1 id="pageTitle">AppleScript Utilities and Applications</h1><p>Apple provides a number of utilities and applications in OS X to enhance the features of AppleScript and your scripts. You can get additional information on some items described in this section by searching in Mac Help in the Finder or by going to the <span class="content_text"><a href="http://www.macosxautomation.com/applescript/index.html" class="urlLink" rel="external">AppleScript</a></span> website.</p>
+<section><a name="//apple_ref/doc/uid/TP40001570-1148318" title="AppleScript Utility"></a><h2 class="jump">AppleScript Utility</h2>
+<p>AppleScript Utility, located in <code>/Applications/AppleScript</code>, is an application that first became available in OS X version 10.4. Starting in OS X version 10.5, this utility is itself scriptable.</p><p>AppleScript Utility helps you manage several AppleScript-related features in OS X that were formerly available separately. For example, AppleScript Utility provides an interface to:</p>
+<ul class="ul"><li class="li"><p>Select a default script editor (to be launched when you double-click a script file.</p></li>
+<li class="li"><p>Enable or disable GUI scripting (described in <span class="content_text"><a href="#//apple_ref/doc/uid/TP40001570-1149074" data-renderer-version="1">System Events and GUI Scripting</a></span>).</p><p>Prior to OS X v10.4, GUI scripting was enabled through the “Enable access for assistive devices” checkbox in the Universal Access preference pane in System Preferences.</p></li>
+<li class="li"><p>Launch the Folder Actions Setup application (described in <span class="content_text"><a href="#//apple_ref/doc/uid/TP40001570-1148133" data-renderer-version="1">Folder Actions Setup</a></span>).</p></li>
+<li class="li"><p>Specify settings for the Script menu.</p><p>The Script menu provides access to scripts for performing tasks such as the following:</p><ul class="nested">
+<li class="nested li"><p>Opening AppleScript related folders.</p></li>
+<li class="nested li"><p>Working with Apple applications such as Address Book, Mail, and Script Editor.</p></li>
+<li class="nested li"><p>Working with parts of the OS, such as ColorSync, Finder, and Folder Actions.</p></li>
+<li class="nested li"><p>Working with features such as internet services, printing, and URLs.</p></li></ul><p>In OS X version 10.3, you install and remove the Script menu with utility applications located in <code>/Applications/AppleScript</code>.</p></li></ul></section>
+<section><a name="//apple_ref/doc/uid/TP40001570-1148133" title="Folder Actions Setup"></a><a name="//apple_ref/doc/uid/TP40001570-1148133-BAJJGIBG" title="Folder Actions Setup"></a><h2 class="jump">Folder Actions Setup</h2>
+<p>Folder Actions is a feature that lets you associate scripts with folders. A script is executed when the folder to which it is attached is opened or closed, moved or resized, or has items added or removed.</p>
+<p>Folder Actions Setup, located in <code>/Applications/AppleScript</code>, is an application that first became available in OS X version 10.3. Starting in OS X version 10.5, Folder Actions Setup is itself scriptable.</p><p>This utility helps you perform tasks related to Folder Actions, including the following:</p>
+<ul class="ul"><li class="li"><p>Enable or disable Folder Actions.</p></li>
+<li class="li"><p>View the folders that currently have scripts attached and view the attached scripts.</p></li>
+<li class="li"><p>Add folders to or remove folders from the list of folders.</p></li>
+<li class="li"><p>Attach one or more scripts to a folder.</p></li>
+<li class="li"><p>Remove attached scripts from a folder.</p></li>
+<li class="li"><p>Enable or disable scripts attached to a folder.</p></li></ul></section>
+<section><a name="//apple_ref/doc/uid/TP40001570-1149074" title="System Events and GUI Scripting"></a><a name="//apple_ref/doc/uid/TP40001570-1149074-BAJEIHJA" title="System Events and GUI Scripting"></a><h2 class="jump">System Events and GUI Scripting</h2>
+<p>System Events is an agent (or faceless background application) that supplies the terminology for using a number of features in AppleScript scripts. Among these features is GUI scripting, which allows your scripts to perform some actions in applications that have no built-in scripting support. System Events, which is located in <code>/System/Library/CoreServices</code>, has been part of OS X since version 10.1 (Puma), though its features have evolved since that release.</p>
+<p>The following are some of the terminology suites supplied by System Events in OS X version 10.4 (and where noted, in version 10.5). For more information, display the application dictionary, as described in <span class="content_text"><a href="work_with_as.html#//apple_ref/doc/uid/TP40001568-1153006" data-renderer-version="1">Displaying Scripting Dictionaries</a></span>. You can also get information on many of the features supported by System Events in Mac Help (from the Help menu in OS X) and at the AppleScript <span class="content_text"><a href="http://www.macosxautomation.com/applescript/uiscripting/index.html" class="urlLink" rel="external">GUI Scripting</a></span> web page at the <span class="content_text"><a href="http://www.macosxautomation.com/applescript/index.html" class="urlLink" rel="external">AppleScript in OS X</a></span> website.</p>
+<ul class="ul">
+<li class="li"><p>Accounts suite and Login Items suite</p><p>System Events supports scripting of the System Preferences Accounts pane through the terminology in these two suites.</p></li><li class="li"><p>Audio File suite and Movie File suite</p><p>Available starting in OS X version 10.5, these suites provide terminology for accessing audio files and movie files, and the data they contain.</p></li><li class="li"><p>Desktop suite</p><p>Available starting in OS X version 10.5, this suite provides access to Desktop preferences, such as the current desktop picture or pictures folder, and the interval for changing the desktop picture.</p></li><li class="li"><p>Disk-Folder-File suite</p><p>Provides terminology to access disks, files, and folders without targeting the Finder. This can be more efficient than using the Finder, and can prevent certain kinds of conflicts.</p></li><li class="li"><p>Dock Preferences suite and Expose Preferences suite</p><p>Available starting in OS X version 10.5, these suites provide terminology for accessing Dock preferences, as well as Exposé (including Spaces) and Dashboard mouse and key preferences.</p></li>
+<li class="li"><p>Folder Actions suite</p><p>Starting with AppleScript 1.9.0 in Mac OS  version 10.2, System Events supports the Folder Actions feature, described in <span class="content_text"><a href="#//apple_ref/doc/uid/TP40001570-1148133" data-renderer-version="1">Folder Actions Setup</a></span>.</p></li><li class="li"><p>Network Preferences suite</p><p>Available starting in OS X version 10.5, this suite provides terminology for working with items such as connections and disconnections, network locations, and network services.</p></li>
+<li class="li"><p>Power suite</p><p>Provides commands for sleeping, logging out, shutting down, or restarting your computer.</p></li>
+<li class="li"><p>Property List suite</p><p>Provides terminology for reading and writing the information in property list files.</p></li>
+<li class="li"><p>Processes suite</p><p>Provides classes and commands for GUI Scripting, a feature available starting in OS X version 10.3 that allows scripters to control applications that are either not scriptable or only partially scriptable. With GUI Scripting, AppleScript scripts can select menu items, push buttons, and perform other tasks to control the interfaces of most non-Classic applications. However, as the name implies, GUI scripting works by scripting the user interface, and so tends to result in fragile scripts. For example, items in an application’s user interface may change in various ways between releases, or even between launches of the application, depending on preference settings and other factors.</p><p>This suite is called the Processes suite because in GUI scripting, the root for any script must be a process (represented by an instance of the <code>application process class</code>). The GUI Scripting architecture is based on the accessibility support in OS X, which must be enabled, in OS X v10.4, through the AppleScript Utility. Prior to OS X v10.4, GUI scripting was enabled through the “Enable access for assistive devices” checkbox in the Universal Access preference pane in System Preferences.</p><p>For more information, see the <span class="content_text"><a href="http://www.macosxautomation.com/applescript/uiscripting/index.html" class="urlLink" rel="external">GUI Scripting</a></span> web page.</p></li><li class="li"><p>QuickTime File suite</p><p>Available starting in OS X version 10.5, this suite provides terminology for working with QuickTime files, including data, annotations, and tracks.</p></li><li class="li"><p>Security suite</p><p>Available starting in OS X version 10.5, this suite provides access to Security preferences, such as automatic login and password requirements.</p></li>
+<li class="li"><p>System Events suite</p><p>This suite provides a great deal of terminology for working with parts of the OS. That includes properties for accessing certain folders (preferences folder, favorites folder, desktop pictures folder, and so on), the startup disk, and other useful items.</p></li>
+<li class="li"><p>XML suite</p><p>Provides terminology for working with information in XML files.</p></li></ul></section>
+<section><a name="//apple_ref/doc/uid/TP40001570-1147921" title="Image Events"></a><h2 class="jump">Image Events</h2>
+<p>Like System Events, Image Events is an agent (or faceless background application) that is located in <code>/System/Library/CoreServices</code>. Image Events supports the manipulation, from scripts, of images and image-related data through operations such as cropping, embedding, matching, padding, profiling, rotating, and scaling. These operations are typically used in print, web, and media publishing.</p>
+<p>Image Events has been part of OS X since version 10.4 and provides access to the built-in service called SIPS (Scriptable Image Processing Server) that became available in that OS release.</p>
+<p>You can find more information on Image Events in Mac Help (from the OS X Help menu) or at the <span class="content_text"><a href="http://www.macosxautomation.com/applescript/imageevents/index.html" class="urlLink" rel="external">Image Events</a></span> web page. You can also examine the Image Events dictionary with Script Editor, as described in <span class="content_text"><a href="work_with_as.html#//apple_ref/doc/uid/TP40001568-1153006" data-renderer-version="1">Displaying Scripting Dictionaries</a></span>. SIPS is described in <span class="content_text"><a href="http://developer.apple.com/technotes/tn/tn2035.html#TNTAG58" class="browserLink" >Technical Note TN2035 ColorSync on OS X</a></span>. You can also get some information about SIPS by typing <code>sips --help</code> in a Terminal window.</p></section><section><a name="//apple_ref/doc/uid/TP40001570-SW1" title="Database Events"></a><h2 class="jump">Database Events</h2><p>Database Events is a simple, scratchpad database implementation for use in AppleScript scripts. It allows any script applet to create and edit its own database.</p><p>You can use Database Events to create a new database with a file associated with it or to open a database file to access its database. Databases contain records, records contain fields, and fields contain a name and a value. The assignment of names and values is free form, as the scripter defines it. Databases persist in the file system, across executions of Database Events.</p><p>Database Events has been part of OS X since version 10.4. Like System Events, Database Events is an agent (or faceless background application) that is located in <code>/System/Library/CoreServices</code>.</p><p>You can examine the Database Events dictionary with Script Editor, as described in <span class="content_text"><a href="work_with_as.html#//apple_ref/doc/uid/TP40001568-1153006" data-renderer-version="1">Displaying Scripting Dictionaries</a></span>.</p></section>
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='../RevisionHistory.html'>Next</a><a class='previousLink' rel='prev' href='automator.html'>Previous</a>
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2002, 2007 Apple Inc. All Rights Reserved.  <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2007-10-31</p></div></div>
+
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="https://developer.apple.com/bugreporter/" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../../../../Resources/1282/JavaScript/lib/prototype.js"></script>
+    <script src="../../../../../Resources/1282/JavaScript/library.js"></script>
+</body>
+</html>

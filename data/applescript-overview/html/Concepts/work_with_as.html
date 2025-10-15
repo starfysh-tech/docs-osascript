@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <title>Scripting with AppleScript</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Guide">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/10000156i">
+    <meta id="document-version" name="document-version" content="4.2.1">
+    <meta id="build" name="build" content="c1e4c7a89af8f899a21cfa81fc33ba42" />
+    <meta id="chapterId" name="chapterId" content="TP40001568">
+    <meta id="date" name="date" content="2007-10-31">
+    <meta id="description" name="description" content="Introduces the technology for writing scripts to control applications. Useful for scripters and application developers.">
+    <meta id="book-title" name="book-title" content="AppleScript Overview">
+    <meta id="book-root" name="book-root" content="../">
+    <meta id="book-json" name="book-json" content="../book.json">
+    <meta id="devcenter" name="devcenter" content="Mac Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/mac">
+    <meta id="reflib" name="reflib" content="Documentation Archive">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages & Utilities/Other Languages}">
+    
+    
+    <meta id="copyright" name="copyright" content="Copyright 2018 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="AppleScript Overview: Scripting with AppleScript">
+    <meta id="resources-uri" name="resources-uri" content="../../../../../Resources/1282">
+    <link id="book-index-page" rel="Start" title="AppleScript Overview" type="text/html" href="../index.html">
+    <link id="next-page" rel="Next" type="text/html" href="scriptable_apps.html">
+    <link id="previous-page" rel="Prev" type="text/html" href="osa.html">
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/1282/CSS/screen.css">
+    
+    <!-- xcode_css -->
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/1282/CSS/feedback.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta id="platforms" name="platforms" content="">
+</head>    
+<body><a name="//apple_ref/doc/uid/TP40001568" title="Scripting with AppleScript"></a>
+    <div id="_omniture_top">
+    <!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+    <script type="text/javascript">
+    /* RSID: */
+    var s_account="awdappledeveloper"
+    </script>
+
+    <script type="text/javascript" src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
+    <script type="text/javascript">
+    s.channel="www.documentationarchive.developer"
+
+    /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+    var s_code=s.t();if(s_code)document.write(s_code)</script>
+    <!-- End SiteCatalyst code version: H.8. -->
+    </div>
+
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode unified">
+            <a id="ssi_LibraryTitle" href='../../../../../navigation/'>Documentation Archive</a>
+            <a id="ssi_AppleDeveloperConnection" href='https://developer.apple.com/'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../../../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search Documentation Archive</label>
+            
+            
+    
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>AppleScript Overview</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main">
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='scriptable_apps.html'>Next</a><a class='previousLink' rel='prev' href='osa.html'>Previous</a>
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="../index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/TP40001568-BABEBGCF" title="Scripting with AppleScript"></a><h1 id="pageTitle">Scripting with AppleScript</h1><p>The following is a brief introduction to AppleScript scripts, tools for working with them, and information on using AppleScript scripts together with other scripting systems. For related documents, see the learning paths in <em><!--a target="_self" -->Getting Started with AppleScript<!--/a--></em>.</p><section><a name="//apple_ref/doc/uid/TP40001568-1150347" title="Script Editor and AppleScript Scripts"></a><a name="//apple_ref/doc/uid/TP40001568-1150347-BCIJGDFA" title="Script Editor and AppleScript Scripts"></a><h2 class="jump">Script Editor and AppleScript Scripts</h2><p>An AppleScript script consists of one or more statements, written in a syntax described in <span class="content_text"><a href="http://developer.apple.com/documentation/AppleScript/Conceptual/AppleScriptLangGuide/index.html" class="browserLink" >AppleScript Language Guide</a></span> (and in a number of third-party books). AppleScript defines some scripting terms, while scriptable applications and parts of the Mac OS specify additional terms for scriptable features they support. Scripting terminologies generally use common English words, resulting in scripts that are easier to read. For example, the following is a valid script statement:</p><div class="codesample clear"><table><tr><td scope="row"><pre>display dialog "Welcome to AppleScript."<span></span></pre></td></tr></table></div><p>Users can compile and execute scripts with the <span class="content_text"><a href="#//apple_ref/doc/uid/TP40001568-1152365" data-renderer-version="1">Script Editor</a></span> application and can save them in various executable formats, including as stand-alone applications.</p><section><a name="//apple_ref/doc/uid/TP40001568-1150894" title="A Simple AppleScript Script"></a><h3 class="jump">A Simple AppleScript Script</h3><p><span class="content_text">Listing 1</span> shows an AppleScript script that simply returns the number of files in the <code>Applications</code> folder on the current system disk (denoted by <code>startup disk</code>, a term understood by the Finder). If the folder cannot be found, the script returns a count of zero. This script counts just files in the specified folder, not folders or the files they might contain.</p><a name="//apple_ref/doc/uid/TP40001568-1152309-BBCHJADC" title="Listing 1A script that counts the files in the Applications folder"></a><p class="codesample clear"><a name="//apple_ref/doc/uid/TP40001568-1152309" title="Listing 1A script that counts the files in the Applications folder"></a><strong class="caption_number">Listing 1</strong>&nbsp;&nbsp;A script that counts the files in the Applications folder</p><div class="codesample clear"><table><tr><td scope="row"><pre>tell application "Finder"<span></span></pre></td></tr><tr><td scope="row"><pre>    if folder "Applications" of startup disk exists then<span></span></pre></td></tr><tr><td scope="row"><pre>        return count files in folder "Applications" of startup disk<span></span></pre></td></tr><tr><td scope="row"><pre>    else<span></span></pre></td></tr><tr><td scope="row"><pre>        return 0<span></span></pre></td></tr><tr><td scope="row"><pre>    end if<span></span></pre></td></tr><tr><td scope="row"><pre>end tell<span></span></pre></td></tr></table></div><p>When a script is compiled and executed, some statements perform basic operations, such as assigning a variable or returning a value. A statement that targets a scriptable application results in an Apple event being sent to that application. The application can return information to the script in a reply Apple event.</p><p>The script in <span class="content_text">Listing 1</span> causes an Apple event to be sent to the Finder, which locates the Applications folder on the startup disk, counts the files in it, and returns that value. The <code>if...then...else</code> structure is one of several standard programming language features that AppleScript supports.</p></section><section><a name="//apple_ref/doc/uid/TP40001568-1152365" title="Script Editor"></a><a name="//apple_ref/doc/uid/TP40001568-1152365-BGBEHBHI" title="Script Editor"></a><h3 class="jump">Script Editor</h3><p>The Script Editor application is located in <code>/Applications/AppleScript</code>. It provides the ability to edit, compile, and execute scripts, display application scripting terminologies, and save scripts in a variety of formats, such as compiled scripts, applications, bundled applications, and plain text.</p><p>Script Editor can display the result of executing an AppleScript script and can display a log of the Apple events that are sent during execution of a script. In the Script Editor Preferences, you can also choose to keep a history of recent results or event logs.</p><p>Script Editor has text formatting preferences for various types of script text, such as language keywords, comments, and so on. You can also turn on or off the Script Assistant, a code completion tool that can suggest and fill in scripting terms as you type. In addition, Script Editor provides a contextual menu to insert many types of boilerplate script statements, such as conditionals, comments, and error handlers.</p><section><a name="//apple_ref/doc/uid/TP40001568-1153006" title="Displaying Scripting Dictionaries"></a><a name="//apple_ref/doc/uid/TP40001568-1153006-BBCEEIFG" title="Displaying Scripting Dictionaries"></a><h4 class="jump">Displaying Scripting Dictionaries</h4><p>You can choose File > Open Dictionary in Script Editor to examine the scripting dictionary of a scriptable application or scripting addition on your computer. Or you can drag an application icon to the Script Editor icon to display its dictionary (if it has one). You can also open scripting dictionaries in Xcode.</p><p>To display a list that includes just the scriptable applications and scripting additions provided by the Mac OS, choose Window > Library. Double-click an item in the list to display its dictionary. <span class="content_text">Figure 1</span> shows the dictionary for the Finder application in OS X version 10.5. The dictionary is labeled as “Finder.sdef”. The sdef format, along with other terminology formats, is described in <span class="content_text"><a href="scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1156165" data-renderer-version="1">Specifying Scripting Terminology</a></span>.</p><figure class="figure"><a name="//apple_ref/doc/uid/TP40001568-1153023-BBCCDDAF" title="Figure 1The Finder dictionary in Script Editor (in OS X v10.5)"></a><figcaption><a name="//apple_ref/doc/uid/TP40001568-1153023" title="Figure 1The Finder dictionary in Script Editor (in OS X v10.5)"></a><strong class="caption_number">Figure 1</strong>&nbsp;&nbsp;The Finder dictionary in Script Editor (in OS X v10.5)</figcaption><img src="../art/finder_dictionary_2x.png" alt="The Finder dictionary in Script Editor (in OS X v10.5)" width="632" height="606"></figure></section><section><a name="//apple_ref/doc/uid/TP40001568-1152927" title="Debugging and Third Party Products"></a><h4 class="jump">Debugging and Third Party Products</h4><p>Script Editor supports only simple debugging strategies, such as logging event output and inserting <code>speak</code> or <code>display dialog</code> statements within scripts. However, there are a number of third-party products for working with AppleScript, some of them quite powerful. For example, there are script editors and tools for monitoring and debugging scripts, Apple events, and scriptable applications. Some of these third-party products are listed at the <span class="content_text"><a href="http://www.macosxautomation.com/applescript/resources.html" class="urlLink" rel="external">AppleScript Resources</a></span> web page.</p><p>For information on debugging scriptable applications and Apple events, see the documents <em><a href="../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_intro/SAppsIntro.html#//apple_ref/doc/uid/TP40002164" data-renderer-version="1" target="_self">Cocoa Scripting Guide</a></em> and <em><a href="../../AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449" data-renderer-version="1" target="_self">Apple Events Programming Guide</a></em>.</p></section></section><section><a name="//apple_ref/doc/uid/TP40001568-1152119" title="Interacting with the User in Scripts"></a><h3 class="jump">Interacting with the User in Scripts</h3><p>AppleScript provides little direct support for interacting with the user in scripts. However, the Standard Additions scripting addition provides terminology for obtaining various choices from the user. For example, it includes commands for letting the user choose an application, a color, a file, a filename, and so on. It also provides the <code>display dialog</code> command, which allows you to display a dialog with various options for text labels, buttons, and text input. Scripting Additions are described in <span class="content_text"><a href="osa.html#//apple_ref/doc/uid/TP40001571-1164068" data-renderer-version="1">Extending AppleScript with Coercions, Scripting Additions, and Faceless Background Applications</a></span>.</p></section></section><section><a name="//apple_ref/doc/uid/TP40001568-1174450" title="What You Can Control with Scripts"></a><h2 class="jump">What You Can Control with Scripts</h2><p>Many applications from Apple are scriptable and you can also script some parts of the Mac OS. For example, the Finder, iTunes, QuickTime Player, and Mail are highly scriptable. For a complete list, see the <span class="content_text"><a href="http://www.macosxautomation.com/applescript/resources.html" class="urlLink" rel="external">Scriptable Applications</a></span> web page at the <span class="content_text"><a href="http://www.macosxautomation.com/applescript/index.html" class="urlLink" rel="external">AppleScript</a></span> website. For more information on scriptability provided by Apple, see <span class="content_text"><a href="as_related_apps.html#//apple_ref/doc/uid/TP40001570-BABEBGCF" data-renderer-version="1">AppleScript Utilities and Applications</a></span>.</p><div class="notebox"><aside><a name="//apple_ref/doc/uid/TP40001568-SW1" title="Note"></a><p><strong>Note:</strong>&nbsp;You can also control many Apple technologies and applications with <span class="content_text"><a href="automator.html#//apple_ref/doc/uid/TP40006469-SW1" data-renderer-version="1">Automator</a></span>, which is available starting in OS X version 10.4.</p><p></p></aside></div><p>Many third-party applications are scriptable—their advertising and packaging usually mention if they are scriptable. The documentation for a scriptable application typically lists the AppleScript terminology that the application understands. You can also determine if an application is scriptable by attempting to examine its dictionary with the Script Editor application, as described in <span class="content_text"><a href="#//apple_ref/doc/uid/TP40001568-1153006" data-renderer-version="1">Displaying Scripting Dictionaries</a></span>.</p><div class="notebox"><aside><a name="//apple_ref/doc/uid/TP40001568-SW2" title="Note"></a><p><strong>Note:</strong>&nbsp;For a list of scriptable applications from all parties, see “Scriptable Applications” at the <span class="content_text"><a href="http://macscripter.net/" class="urlLink" rel="external">MacScripter</a></span> website.</p><p></p></aside></div></section><section><a name="//apple_ref/doc/uid/TP40001568-1174475" title="Using AppleScript with Web Services"></a><h2 class="jump">Using AppleScript with Web Services</h2><p>XML-RPC and SOAP are remote procedure call protocols that support exchanging commands and information over the Internet. Starting with OS X version 10.1, AppleScript and the Apple Event Manager provide XML-RPC and SOAP support such that:</p><ul class="ul"><li class="li"><p>Scripters can make XML-RPC calls and SOAP requests from scripts.</p></li><li class="li"><p>Developers can make XML-RPC calls and SOAP requests from applications or other code by sending Apple events.</p></li></ul><p>For documentation on using AppleScript with web services, see <em><a href="../../soapXMLRPC/chapter1/soapXMLRPC_intro.html#//apple_ref/doc/uid/TP30001126" data-renderer-version="1" target="_self">XML-RPC and SOAP Programming Guide</a></em> (some examples may be out of date). For additional sources and examples, see <span class="content_text"><a href="http://www.macosxautomation.com/applescript/resources.html" class="urlLink" rel="external">Web Services</a></span>. For information on developing web content and applications for the web in OS X, see <em><a href="../../../../../referencelibrary/GettingStarted/GS_WebInternet/_index.html#//apple_ref/doc/uid/TP30001123" data-renderer-version="1" target="_self">Getting Started with Internet and Web</a></em>.</p></section><section><a name="//apple_ref/doc/uid/TP40001568-1152618" title="Using AppleScript with Other Scripting Systems"></a><a name="//apple_ref/doc/uid/TP40001568-1152618-BGBEFCAH" title="Using AppleScript with Other Scripting Systems"></a><h2 class="jump">Using AppleScript with Other Scripting Systems</h2><p>OS X supports a UNIX-like shell environment that is familiar to many developers. That support includes the Terminal application, located in <code>/Applications/Utilities</code>, which you can use to open shell windows and execute shell scripts. AppleScript provides two convenient mechanisms to interact with a shell environment: you can execute shell commands from within AppleScript scripts and you can execute AppleScript scripts as shell commands.</p><section><a name="//apple_ref/doc/uid/TP40001568-1148121" title="Executing Shell Commands From AppleScript Scripts"></a><h3 class="jump">Executing Shell Commands From AppleScript Scripts</h3><p>AppleScript provides the <code>do shell script</code> command to support executing a shell command as part of an AppleScript script. For example, the following script statement uses a <code>do shell script</code> command to change the directory to the current user’s home directory and obtain a list of the files found there. The list information is stored in the AppleScript variable <code>fileInfo</code>:</p><div class="codesample clear"><table><tr><td scope="row"><pre>set fileInfo to do shell script "cd ~; ls"<span></span></pre></td></tr></table></div><p>The <code>do shell script</code> command is primarily of use to scripters. Although applications can execute AppleScript scripts that use the <code>do shell script</code> command, they have more efficient options for executing shell commands, as described in <span class="content_text"><a href="scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1150941" data-renderer-version="1">Support for Carbon Applications</a></span> and <span class="content_text"><a href="scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1151567" data-renderer-version="1">Support for Cocoa Applications</a></span>. For more information on the <code>do shell script</code> command, see Technical Note TN2065, <span class="content_text"><a href="http://developer.apple.com/technotes/tn2002/tn2065.html" class="browserLink" >do shell script in AppleScript</a></span>.</p></section><section><a name="//apple_ref/doc/uid/TP40001568-1148189" title="Executing AppleScript Scripts as Shell Commands"></a><h3 class="jump">Executing AppleScript Scripts as Shell Commands</h3><p>To execute AppleScript scripts as shell commands in a Terminal window or shell script file, you can use the <code>osacompile</code> command and the <code>osascript</code> command (located in <code>/usr/bin</code>). The former compiles an AppleScript script, while the latter executes a plain text or a compiled AppleScript script. Man pages provide documentation for these commands. For example, type <code>man osascript</code> in a Terminal window to get information on the <code>osascript</code> command.</p><p>Starting in OS X version 10.5, there is a command-line tool to display compiled scripts as text, <code>osadecompile</code>. Again, see the man page for details.</p><p>Also starting in Mac OX X v10.5, AppleScript allows use of the # symbol as a comment-to-end-of-line token (the traditional double hyphen (--) is also still supported). This means that you can make a plain AppleScript script into a Unix executable by beginning it with the following line and giving it execute permission.</p><div class="codesample clear"><table><tr><td scope="row"><pre>#!/usr/bin/osascript<span></span></pre></td></tr></table></div><p></p></section><section><a name="//apple_ref/doc/uid/TP40001568-1148219" title="Scripting the Terminal Application"></a><h3 class="jump">Scripting the Terminal Application</h3><p>The Terminal application is itself scriptable. For example, you can use the <code>do script</code> command to execute text as a shell script or command. To see the operations Terminal supports, you can examine its scripting dictionary with Script Editor.</p></section><section><a name="//apple_ref/doc/uid/TP40001568-1149917" title="Using Other Scripting Languages"></a><h3 class="jump">Using Other Scripting Languages</h3><p>For those who have experience with various scripting languages and environments, the previous sections have probably already provided an urge to start experimenting. And you do have a lot of options for combining features from the scripting tools, languages, and environments that are most appropriate for specific kinds of tasks. For example, the following one-line shell script statement combines Perl, AppleScript, and various tools to find duplicate entries in the Address Book application.</p><div class="codesample clear"><table><tr><td scope="row"><pre>osascript -e 'tell app "Address Book" to get the name of every person' | perl -pe 's/, /\n/g' | sort | uniq -d<span></span></pre></td></tr></table></div><p>This statement uses <code>osascript</code> to execute an inline AppleScript script (<code>'tell app "Address Book" to get the name of every person'</code>) that returns the names of every address entry from the Address Book application. It pipes the output of this script through the <code>perl</code> tool, and with a series of other commands and pipes, obtains and formats a (possibly empty) list of duplicate names.</p><p>For additional information about working with AppleScript from languages such as Ruby and Python, see <span class="content_text"><a href="scripting_bridge.html#//apple_ref/doc/uid/TP40006467-SW1" data-renderer-version="1">Scripting Bridge</a></span>.</p></section></section>
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='scriptable_apps.html'>Next</a><a class='previousLink' rel='prev' href='osa.html'>Previous</a>
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2002, 2007 Apple Inc. All Rights Reserved.  <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2007-10-31</p></div></div>
+
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="https://developer.apple.com/bugreporter/" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../../../../Resources/1282/JavaScript/lib/prototype.js"></script>
+    <script src="../../../../../Resources/1282/JavaScript/library.js"></script>
+</body>
+</html>

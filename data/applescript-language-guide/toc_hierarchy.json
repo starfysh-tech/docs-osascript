@@ -1,0 +1,2115 @@
+[
+  {
+    "title": "Introduction",
+    "href": "introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983-CH208-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983-CH208-SW1",
+    "page": "introduction/ASLR_intro.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH208-SW1"
+  },
+  {
+    "title": "AppleScript Lexical Conventions",
+    "href": "conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW1",
+    "page": "conceptual/ASLR_lexical_conventions.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH214-SW1",
+    "children": [
+      {
+        "title": "Character Set",
+        "href": "conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW3",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW3",
+        "page": "conceptual/ASLR_lexical_conventions.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH214-SW3"
+      },
+      {
+        "title": "Identifiers",
+        "href": "conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW4",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW4",
+        "page": "conceptual/ASLR_lexical_conventions.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH214-SW4"
+      },
+      {
+        "title": "Keywords",
+        "href": "conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW7",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW7",
+        "page": "conceptual/ASLR_lexical_conventions.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH214-SW7"
+      },
+      {
+        "title": "Comments",
+        "href": "conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW8",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW8",
+        "page": "conceptual/ASLR_lexical_conventions.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH214-SW8"
+      },
+      {
+        "title": "The Continuation Character",
+        "href": "conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW9",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW9",
+        "page": "conceptual/ASLR_lexical_conventions.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH214-SW9"
+      },
+      {
+        "title": "Literals and Constants",
+        "href": "conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW10",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW10",
+        "page": "conceptual/ASLR_lexical_conventions.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH214-SW10",
+        "children": [
+          {
+            "title": "Boolean",
+            "href": "conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW14",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW14",
+            "page": "conceptual/ASLR_lexical_conventions.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH214-SW14"
+          },
+          {
+            "title": "Constant",
+            "href": "conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW13",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW13",
+            "page": "conceptual/ASLR_lexical_conventions.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH214-SW13"
+          },
+          {
+            "title": "List",
+            "href": "conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW15",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW15",
+            "page": "conceptual/ASLR_lexical_conventions.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH214-SW15"
+          },
+          {
+            "title": "Number",
+            "href": "conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW12",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW12",
+            "page": "conceptual/ASLR_lexical_conventions.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH214-SW12"
+          },
+          {
+            "title": "Record",
+            "href": "conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW16",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW16",
+            "page": "conceptual/ASLR_lexical_conventions.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH214-SW16"
+          },
+          {
+            "title": "Text",
+            "href": "conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW26",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW26",
+            "page": "conceptual/ASLR_lexical_conventions.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH214-SW26"
+          }
+        ]
+      },
+      {
+        "title": "Operators",
+        "href": "conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW18",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW18",
+        "page": "conceptual/ASLR_lexical_conventions.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH214-SW18"
+      },
+      {
+        "title": "Variables",
+        "href": "conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW23",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW23",
+        "page": "conceptual/ASLR_lexical_conventions.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH214-SW23"
+      },
+      {
+        "title": "Expressions",
+        "href": "conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW20",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW20",
+        "page": "conceptual/ASLR_lexical_conventions.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH214-SW20"
+      },
+      {
+        "title": "Statements",
+        "href": "conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW17",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW17",
+        "page": "conceptual/ASLR_lexical_conventions.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH214-SW17"
+      },
+      {
+        "title": "Commands",
+        "href": "conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW6",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW6",
+        "page": "conceptual/ASLR_lexical_conventions.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH214-SW6"
+      },
+      {
+        "title": "Results",
+        "href": "conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW19",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW19",
+        "page": "conceptual/ASLR_lexical_conventions.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH214-SW19"
+      },
+      {
+        "title": "Raw Codes",
+        "href": "conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW5",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW5",
+        "page": "conceptual/ASLR_lexical_conventions.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH214-SW5"
+      }
+    ]
+  },
+  {
+    "title": "AppleScript Fundamentals",
+    "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW2",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW2",
+    "page": "conceptual/ASLR_fundamentals.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW2",
+    "children": [
+      {
+        "title": "Script Editor Application",
+        "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW36",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW36",
+        "page": "conceptual/ASLR_fundamentals.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW36"
+      },
+      {
+        "title": "AppleScript and Objects",
+        "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW1",
+        "page": "conceptual/ASLR_fundamentals.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW1",
+        "children": [
+          {
+            "title": "What Is in a Script Object",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW15",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW15",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW15"
+          },
+          {
+            "title": "Properties",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW5",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW5",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW5"
+          },
+          {
+            "title": "Elements",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW14",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW14",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW14"
+          }
+        ]
+      },
+      {
+        "title": "Object Specifiers",
+        "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW7",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW7",
+        "page": "conceptual/ASLR_fundamentals.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW7",
+        "children": [
+          {
+            "title": "What Is in an Object Specifier",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW23",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW23",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW23"
+          },
+          {
+            "title": "Containers",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW24",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW24",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW24"
+          },
+          {
+            "title": "Absolute and Relative Object Specifiers",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW25",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW25",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW25"
+          },
+          {
+            "title": "Object Specifiers in Reference Objects",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW27",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW27",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW27"
+          }
+        ]
+      },
+      {
+        "title": "Coercion (Object Conversion)",
+        "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW21",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW21",
+        "page": "conceptual/ASLR_fundamentals.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW21"
+      },
+      {
+        "title": "Scripting Additions",
+        "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW3",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW3",
+        "page": "conceptual/ASLR_fundamentals.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW3"
+      },
+      {
+        "title": "Commands Overview",
+        "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW8",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW8",
+        "page": "conceptual/ASLR_fundamentals.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW8",
+        "children": [
+          {
+            "title": "Types of Commands",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW26",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW26",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW26"
+          },
+          {
+            "title": "Target",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW18",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW18",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW18"
+          },
+          {
+            "title": "Direct Parameter",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW13",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW13",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW13"
+          },
+          {
+            "title": "Parameters That Specify Locations",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-BAJHBFBA",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-BAJHBFBA",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-BAJHBFBA"
+          }
+        ]
+      },
+      {
+        "title": "AppleScript Error Handling",
+        "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW10",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW10",
+        "page": "conceptual/ASLR_fundamentals.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW10"
+      },
+      {
+        "title": "Global Constants in AppleScript",
+        "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-BAJBDEJI",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-BAJBDEJI",
+        "page": "conceptual/ASLR_fundamentals.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH218-BAJBDEJI",
+        "children": [
+          {
+            "title": "AppleScript Constant",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW38",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW38",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW38",
+            "children": [
+              {
+                "title": "pi",
+                "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW29",
+                "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW29",
+                "page": "conceptual/ASLR_fundamentals.html",
+                "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW29"
+              },
+              {
+                "title": "result",
+                "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW40",
+                "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW40",
+                "page": "conceptual/ASLR_fundamentals.html",
+                "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW40"
+              },
+              {
+                "title": "Text Constants",
+                "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW30",
+                "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW30",
+                "page": "conceptual/ASLR_fundamentals.html",
+                "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW30"
+              },
+              {
+                "title": "text item delimiters",
+                "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW22",
+                "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW22",
+                "page": "conceptual/ASLR_fundamentals.html",
+                "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW22"
+              },
+              {
+                "title": "version",
+                "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW6",
+                "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW6",
+                "page": "conceptual/ASLR_fundamentals.html",
+                "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW6"
+              }
+            ]
+          },
+          {
+            "title": "current application Constant",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW41",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW41",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW41"
+          },
+          {
+            "title": "missing value Constant",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW44",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW44",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW44"
+          },
+          {
+            "title": "true, false Constants",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW42",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW42",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW42"
+          }
+        ]
+      },
+      {
+        "title": "The it and me Keywords",
+        "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW4",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW4",
+        "page": "conceptual/ASLR_fundamentals.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW4"
+      },
+      {
+        "title": "Aliases and Files",
+        "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW28",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW28",
+        "page": "conceptual/ASLR_fundamentals.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW28",
+        "children": [
+          {
+            "title": "Specifying Paths",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW11",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW11",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW11"
+          },
+          {
+            "title": "Working With Aliases",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW33",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW33",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW33"
+          },
+          {
+            "title": "Working With Files",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW31",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW31",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW31"
+          }
+        ]
+      },
+      {
+        "title": "Remote Applications",
+        "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW9",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW9",
+        "page": "conceptual/ASLR_fundamentals.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW9",
+        "children": [
+          {
+            "title": "Enabling Remote Applications",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW34",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW34",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW34"
+          },
+          {
+            "title": "eppc-Style Specifiers",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW37",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW37",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW37"
+          },
+          {
+            "title": "Targeting Remote Applications",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW35",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW35",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW35"
+          }
+        ]
+      },
+      {
+        "title": "Debugging AppleScript Scripts",
+        "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW20",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW20",
+        "page": "conceptual/ASLR_fundamentals.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW20",
+        "children": [
+          {
+            "title": "Feedback From Your Script",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW16",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW16",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW16"
+          },
+          {
+            "title": "Logging",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW17",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW17",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW17"
+          },
+          {
+            "title": "Third Party Debuggers",
+            "href": "conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW32",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW32",
+            "page": "conceptual/ASLR_fundamentals.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH218-SW32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Variables and Properties",
+    "href": "conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW10",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW10",
+    "page": "conceptual/ASLR_variables.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH223-SW10",
+    "children": [
+      {
+        "title": "Defining Properties",
+        "href": "conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW2",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW2",
+        "page": "conceptual/ASLR_variables.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH223-SW2"
+      },
+      {
+        "title": "Declaring Variables",
+        "href": "conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW11",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW11",
+        "page": "conceptual/ASLR_variables.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH223-SW11",
+        "children": [
+          {
+            "title": "Local Variables",
+            "href": "conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW12",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW12",
+            "page": "conceptual/ASLR_variables.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH223-SW12"
+          },
+          {
+            "title": "Global Variables",
+            "href": "conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW13",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW13",
+            "page": "conceptual/ASLR_variables.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH223-SW13"
+          },
+          {
+            "title": "Using the copy and set Commands",
+            "href": "conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW7",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW7",
+            "page": "conceptual/ASLR_variables.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH223-SW7",
+            "children": [
+              {
+                "title": "Declaring Variables with the set Command",
+                "href": "conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW9",
+                "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW9",
+                "page": "conceptual/ASLR_variables.html",
+                "anchor": "//apple_ref/doc/uid/TP40000983-CH223-SW9"
+              },
+              {
+                "title": "Declaring Variables with the copy Command",
+                "href": "conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW8",
+                "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW8",
+                "page": "conceptual/ASLR_variables.html",
+                "anchor": "//apple_ref/doc/uid/TP40000983-CH223-SW8"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Scope of Variables and Properties",
+        "href": "conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW1",
+        "page": "conceptual/ASLR_variables.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH223-SW1",
+        "children": [
+          {
+            "title": "Scope of Properties and Variables Declared in a Script Object",
+            "href": "conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW3",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW3",
+            "page": "conceptual/ASLR_variables.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH223-SW3"
+          },
+          {
+            "title": "Scope of Variables Declared in a Handler",
+            "href": "conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW5",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW5",
+            "page": "conceptual/ASLR_variables.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH223-SW5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Script Objects",
+    "href": "conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-BAJJCIAA",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-BAJJCIAA",
+    "page": "conceptual/ASLR_script_objects.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH207-BAJJCIAA",
+    "children": [
+      {
+        "title": "Defining Script Objects",
+        "href": "conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW2",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW2",
+        "page": "conceptual/ASLR_script_objects.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH207-SW2"
+      },
+      {
+        "title": "Initializing Script Objects",
+        "href": "conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW4",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW4",
+        "page": "conceptual/ASLR_script_objects.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH207-SW4"
+      },
+      {
+        "title": "Sending Commands to Script Objects",
+        "href": "conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW3",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW3",
+        "page": "conceptual/ASLR_script_objects.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH207-SW3"
+      },
+      {
+        "title": "Script Libraries",
+        "href": "conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW6",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW6",
+        "page": "conceptual/ASLR_script_objects.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH207-SW6",
+        "children": [
+          {
+            "title": "Creating a Library",
+            "href": "conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW13",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW13",
+            "page": "conceptual/ASLR_script_objects.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH207-SW13",
+            "children": [
+              {
+                "title": "Defining Scripting Terminology",
+                "href": "conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW14",
+                "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW14",
+                "page": "conceptual/ASLR_script_objects.html",
+                "anchor": "//apple_ref/doc/uid/TP40000983-CH207-SW14"
+              }
+            ]
+          },
+          {
+            "title": "Using a Library",
+            "href": "conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW17",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW17",
+            "page": "conceptual/ASLR_script_objects.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH207-SW17"
+          }
+        ]
+      },
+      {
+        "title": "Inheritance in Script Objects",
+        "href": "conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW5",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW5",
+        "page": "conceptual/ASLR_script_objects.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH207-SW5",
+        "children": [
+          {
+            "title": "The AppleScript Inheritance Chain",
+            "href": "conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW15",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW15",
+            "page": "conceptual/ASLR_script_objects.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH207-SW15"
+          },
+          {
+            "title": "Defining Inheritance Through the parent Property",
+            "href": "conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW7",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW7",
+            "page": "conceptual/ASLR_script_objects.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH207-SW7"
+          },
+          {
+            "title": "Some Examples of Inheritance",
+            "href": "conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW8",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW8",
+            "page": "conceptual/ASLR_script_objects.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH207-SW8"
+          },
+          {
+            "title": "Using the continue Statement in Script Objects",
+            "href": "conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW9",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW9",
+            "page": "conceptual/ASLR_script_objects.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH207-SW9"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "About Handlers",
+    "href": "conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-CJBIDBJH",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-CJBIDBJH",
+    "page": "conceptual/ASLR_about_handlers.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH206-CJBIDBJH",
+    "children": [
+      {
+        "title": "Handler Basics",
+        "href": "conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW3",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW3",
+        "page": "conceptual/ASLR_about_handlers.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH206-SW3",
+        "children": [
+          {
+            "title": "Defining a Simple Handler",
+            "href": "conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW23",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW23",
+            "page": "conceptual/ASLR_about_handlers.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH206-SW23"
+          },
+          {
+            "title": "Handlers with Labeled Parameters",
+            "href": "conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW22",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW22",
+            "page": "conceptual/ASLR_about_handlers.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH206-SW22"
+          },
+          {
+            "title": "Handlers with Positional Parameters",
+            "href": "conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW13",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW13",
+            "page": "conceptual/ASLR_about_handlers.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH206-SW13"
+          },
+          {
+            "title": "Handlers with Patterned Positional Parameters",
+            "href": "conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW20",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW20",
+            "page": "conceptual/ASLR_about_handlers.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH206-SW20"
+          },
+          {
+            "title": "Handlers with Interleaved Parameters",
+            "href": "conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW2",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW2",
+            "page": "conceptual/ASLR_about_handlers.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH206-SW2"
+          },
+          {
+            "title": "Parameter Specifications",
+            "href": "conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW12",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW12",
+            "page": "conceptual/ASLR_about_handlers.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH206-SW12"
+          },
+          {
+            "title": "Recursive Handlers",
+            "href": "conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW11",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW11",
+            "page": "conceptual/ASLR_about_handlers.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH206-SW11"
+          },
+          {
+            "title": "Errors in Handlers",
+            "href": "conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW10",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW10",
+            "page": "conceptual/ASLR_about_handlers.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH206-SW10"
+          },
+          {
+            "title": "Passing by Reference Versus Passing by Value",
+            "href": "conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW4",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW4",
+            "page": "conceptual/ASLR_about_handlers.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH206-SW4"
+          },
+          {
+            "title": "Calling Handlers in a tell Statement",
+            "href": "conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW1",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW1",
+            "page": "conceptual/ASLR_about_handlers.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH206-SW1"
+          }
+        ]
+      },
+      {
+        "title": "Handlers in Script Applications",
+        "href": "conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW14",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW14",
+        "page": "conceptual/ASLR_about_handlers.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH206-SW14",
+        "children": [
+          {
+            "title": "run Handlers",
+            "href": "conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW15",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW15",
+            "page": "conceptual/ASLR_about_handlers.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH206-SW15"
+          },
+          {
+            "title": "open Handlers",
+            "href": "conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW16",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW16",
+            "page": "conceptual/ASLR_about_handlers.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH206-SW16"
+          },
+          {
+            "title": "idle and quit Handlers for Stay-Open Applications",
+            "href": "conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW7",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW7",
+            "page": "conceptual/ASLR_about_handlers.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH206-SW7",
+            "children": [
+              {
+                "title": "idle Handlers",
+                "href": "conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW8",
+                "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW8",
+                "page": "conceptual/ASLR_about_handlers.html",
+                "anchor": "//apple_ref/doc/uid/TP40000983-CH206-SW8"
+              },
+              {
+                "title": "quit Handlers",
+                "href": "conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW9",
+                "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW9",
+                "page": "conceptual/ASLR_about_handlers.html",
+                "anchor": "//apple_ref/doc/uid/TP40000983-CH206-SW9"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Calling a Script Application From a Script",
+        "href": "conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW17",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW17",
+        "page": "conceptual/ASLR_about_handlers.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH206-SW17"
+      }
+    ]
+  },
+  {
+    "title": "Class Reference",
+    "href": "reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-246384",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-246384",
+    "page": "reference/ASLR_classes.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH1g-246384",
+    "children": [
+      {
+        "title": "alias",
+        "href": "reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3",
+        "page": "reference/ASLR_classes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH1g-SW3"
+      },
+      {
+        "title": "application",
+        "href": "reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW2",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW2",
+        "page": "reference/ASLR_classes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH1g-SW2"
+      },
+      {
+        "title": "boolean",
+        "href": "reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG",
+        "page": "reference/ASLR_classes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG"
+      },
+      {
+        "title": "class",
+        "href": "reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCFEDGB",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCFEDGB",
+        "page": "reference/ASLR_classes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH1g-BBCFEDGB"
+      },
+      {
+        "title": "constant",
+        "href": "reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCECDHC",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCECDHC",
+        "page": "reference/ASLR_classes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH1g-BBCECDHC"
+      },
+      {
+        "title": "date",
+        "href": "reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCGECID",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCGECID",
+        "page": "reference/ASLR_classes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH1g-BBCGECID"
+      },
+      {
+        "title": "file",
+        "href": "reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW17",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW17",
+        "page": "reference/ASLR_classes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH1g-SW17"
+      },
+      {
+        "title": "integer",
+        "href": "reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ",
+        "page": "reference/ASLR_classes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ"
+      },
+      {
+        "title": "list",
+        "href": "reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE",
+        "page": "reference/ASLR_classes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE"
+      },
+      {
+        "title": "number",
+        "href": "reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCBJDGC",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCBJDGC",
+        "page": "reference/ASLR_classes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH1g-BBCBJDGC"
+      },
+      {
+        "title": "POSIX file",
+        "href": "reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW15",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW15",
+        "page": "reference/ASLR_classes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH1g-SW15"
+      },
+      {
+        "title": "real",
+        "href": "reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCJECEC",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCJECEC",
+        "page": "reference/ASLR_classes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH1g-BBCJECEC"
+      },
+      {
+        "title": "record",
+        "href": "reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCDGEAH",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCDGEAH",
+        "page": "reference/ASLR_classes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH1g-BBCDGEAH"
+      },
+      {
+        "title": "reference",
+        "href": "reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCDJJDE",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCDJJDE",
+        "page": "reference/ASLR_classes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH1g-BBCDJJDE"
+      },
+      {
+        "title": "RGB color",
+        "href": "reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW1",
+        "page": "reference/ASLR_classes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH1g-SW1"
+      },
+      {
+        "title": "script",
+        "href": "reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW5",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW5",
+        "page": "reference/ASLR_classes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH1g-SW5"
+      },
+      {
+        "title": "text",
+        "href": "reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF",
+        "page": "reference/ASLR_classes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF"
+      },
+      {
+        "title": "unit types",
+        "href": "reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW8",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW8",
+        "page": "reference/ASLR_classes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH1g-SW8"
+      }
+    ]
+  },
+  {
+    "title": "Commands Reference",
+    "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW59",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW59",
+    "page": "reference/ASLR_cmds.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW59",
+    "children": [
+      {
+        "title": "activate",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW60",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW60",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW60"
+      },
+      {
+        "title": "ASCII character",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW21",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW21",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW21"
+      },
+      {
+        "title": "ASCII number",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW22",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW22",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW22"
+      },
+      {
+        "title": "beep",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW1",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW1"
+      },
+      {
+        "title": "choose application",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW2",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW2",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW2"
+      },
+      {
+        "title": "choose color",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW3",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW3",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW3"
+      },
+      {
+        "title": "choose file",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW4",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW4",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW4"
+      },
+      {
+        "title": "choose file name",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW5",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW5",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW5"
+      },
+      {
+        "title": "choose folder",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW6",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW6",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW6"
+      },
+      {
+        "title": "choose from list",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW7",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW7",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW7"
+      },
+      {
+        "title": "choose remote application",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW8",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW8",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW8"
+      },
+      {
+        "title": "choose URL",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW9",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW9",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW9"
+      },
+      {
+        "title": "clipboard info",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW26",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW26",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW26"
+      },
+      {
+        "title": "close access",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW29",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW29",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW29"
+      },
+      {
+        "title": "copy",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW53",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW53",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW53"
+      },
+      {
+        "title": "count",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW55",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW55",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW55"
+      },
+      {
+        "title": "current date",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW39",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW39",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW39"
+      },
+      {
+        "title": "delay",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW10",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW10",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW10"
+      },
+      {
+        "title": "display alert",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW11",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW11",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW11"
+      },
+      {
+        "title": "display dialog",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW12",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW12",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW12"
+      },
+      {
+        "title": "display notification",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW224",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW224",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW224"
+      },
+      {
+        "title": "do shell script",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW40",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW40",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW40"
+      },
+      {
+        "title": "get",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW56",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW56",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW56"
+      },
+      {
+        "title": "get eof",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW30",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW30",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW30"
+      },
+      {
+        "title": "get volume settings",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW41",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW41",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW41"
+      },
+      {
+        "title": "info for",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW14",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW14",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW14"
+      },
+      {
+        "title": "launch",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW51",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW51",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW51"
+      },
+      {
+        "title": "list disks",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW15",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW15",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW15"
+      },
+      {
+        "title": "list folder",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW16",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW16",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW16"
+      },
+      {
+        "title": "load script",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW35",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW35",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW35"
+      },
+      {
+        "title": "localized string",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW23",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW23",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW23"
+      },
+      {
+        "title": "log",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW49",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW49",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW49"
+      },
+      {
+        "title": "mount volume",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW17",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW17",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW17"
+      },
+      {
+        "title": "offset",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW24",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW24",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW24"
+      },
+      {
+        "title": "open for access",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW31",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW31",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW31"
+      },
+      {
+        "title": "open location",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW54",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW54",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW54"
+      },
+      {
+        "title": "path to (application)",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW18",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW18",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW18"
+      },
+      {
+        "title": "path to (folder)",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW19",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW19",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW19"
+      },
+      {
+        "title": "path to resource",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW20",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW20",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW20"
+      },
+      {
+        "title": "random number",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW42",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW42",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW42"
+      },
+      {
+        "title": "read",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW32",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW32",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW32"
+      },
+      {
+        "title": "round",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW43",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW43",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW43"
+      },
+      {
+        "title": "run",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW57",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW57",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW57"
+      },
+      {
+        "title": "run script",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW36",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW36",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW36"
+      },
+      {
+        "title": "say",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW13",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW13",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW13"
+      },
+      {
+        "title": "scripting components",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW37",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW37",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW37"
+      },
+      {
+        "title": "set",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW52",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW52",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW52"
+      },
+      {
+        "title": "set eof",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW33",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW33",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW33"
+      },
+      {
+        "title": "set the clipboard to",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW27",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW27",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW27"
+      },
+      {
+        "title": "set volume",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW44",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW44",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW44"
+      },
+      {
+        "title": "store script",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW38",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW38",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW38"
+      },
+      {
+        "title": "summarize",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW25",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW25",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW25"
+      },
+      {
+        "title": "system attribute",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW45",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW45",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW45"
+      },
+      {
+        "title": "system info",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW46",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW46",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW46"
+      },
+      {
+        "title": "the clipboard",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW28",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW28",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW28"
+      },
+      {
+        "title": "time to GMT",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW47",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW47",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW47"
+      },
+      {
+        "title": "write",
+        "href": "reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW34",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW34",
+        "page": "reference/ASLR_cmds.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH216-SW34"
+      }
+    ]
+  },
+  {
+    "title": "Reference Forms",
+    "href": "reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-120522",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-120522",
+    "page": "reference/ASLR_reference_forms.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH4g-120522",
+    "children": [
+      {
+        "title": "Arbitrary",
+        "href": "reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BCIJEEHE",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BCIJEEHE",
+        "page": "reference/ASLR_reference_forms.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH4g-BCIJEEHE"
+      },
+      {
+        "title": "Every",
+        "href": "reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFIIH",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFIIH",
+        "page": "reference/ASLR_reference_forms.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH4g-BBCJFIIH"
+      },
+      {
+        "title": "Filter",
+        "href": "reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BAJJHEFE",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BAJJHEFE",
+        "page": "reference/ASLR_reference_forms.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH4g-BAJJHEFE"
+      },
+      {
+        "title": "ID",
+        "href": "reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCJDFIE",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCJDFIE",
+        "page": "reference/ASLR_reference_forms.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH4g-BBCJDFIE"
+      },
+      {
+        "title": "Index",
+        "href": "reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCGHGAF",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCGHGAF",
+        "page": "reference/ASLR_reference_forms.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH4g-BBCGHGAF"
+      },
+      {
+        "title": "Middle",
+        "href": "reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFDBA",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFDBA",
+        "page": "reference/ASLR_reference_forms.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH4g-BBCJFDBA"
+      },
+      {
+        "title": "Name",
+        "href": "reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCIBAAJ",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCIBAAJ",
+        "page": "reference/ASLR_reference_forms.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH4g-BBCIBAAJ"
+      },
+      {
+        "title": "Property",
+        "href": "reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCJCGDB",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCJCGDB",
+        "page": "reference/ASLR_reference_forms.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH4g-BBCJCGDB"
+      },
+      {
+        "title": "Range",
+        "href": "reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCHDJJJ",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCHDJJJ",
+        "page": "reference/ASLR_reference_forms.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH4g-BBCHDJJJ"
+      },
+      {
+        "title": "Relative",
+        "href": "reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCHGEDI",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCHGEDI",
+        "page": "reference/ASLR_reference_forms.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH4g-BBCHGEDI"
+      }
+    ]
+  },
+  {
+    "title": "Operators Reference",
+    "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124070",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124070",
+    "page": "reference/ASLR_operators.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-124070",
+    "children": [
+      {
+        "title": "& (concatenation)",
+        "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-BAJEGEEC",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-BAJEGEEC",
+        "page": "reference/ASLR_operators.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-BAJEGEEC",
+        "children": [
+          {
+            "title": "text",
+            "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-125314",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-125314",
+            "page": "reference/ASLR_operators.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-125314"
+          },
+          {
+            "title": "record",
+            "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-125417",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-125417",
+            "page": "reference/ASLR_operators.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-125417"
+          },
+          {
+            "title": "All Other Classes",
+            "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-125467",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-125467",
+            "page": "reference/ASLR_operators.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-125467"
+          }
+        ]
+      },
+      {
+        "title": "a reference to",
+        "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-SW1",
+        "page": "reference/ASLR_operators.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-SW1",
+        "children": [
+          {
+            "title": "Examples",
+            "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-SW4",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-SW4",
+            "page": "reference/ASLR_operators.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-SW4"
+          }
+        ]
+      },
+      {
+        "title": "as (coercion)",
+        "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-SW5",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-SW5",
+        "page": "reference/ASLR_operators.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-SW5",
+        "children": [
+          {
+            "title": "Examples",
+            "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-SW7",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-SW7",
+            "page": "reference/ASLR_operators.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-SW7"
+          }
+        ]
+      },
+      {
+        "title": "contains, is contained by",
+        "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-125019",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-125019",
+        "page": "reference/ASLR_operators.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-125019",
+        "children": [
+          {
+            "title": "list",
+            "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-125052",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-125052",
+            "page": "reference/ASLR_operators.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-125052"
+          },
+          {
+            "title": "record",
+            "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-125159",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-125159",
+            "page": "reference/ASLR_operators.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-125159"
+          },
+          {
+            "title": "text",
+            "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-125200",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-125200",
+            "page": "reference/ASLR_operators.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-125200"
+          }
+        ]
+      },
+      {
+        "title": "equal, is not equal to",
+        "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124095",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124095",
+        "page": "reference/ASLR_operators.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-124095",
+        "children": [
+          {
+            "title": "list",
+            "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124286",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124286",
+            "page": "reference/ASLR_operators.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-124286"
+          },
+          {
+            "title": "record",
+            "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124374",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124374",
+            "page": "reference/ASLR_operators.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-124374"
+          },
+          {
+            "title": "text",
+            "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124567",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124567",
+            "page": "reference/ASLR_operators.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-124567"
+          }
+        ]
+      },
+      {
+        "title": "greater than, less than",
+        "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124619",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124619",
+        "page": "reference/ASLR_operators.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-124619",
+        "children": [
+          {
+            "title": "date",
+            "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124652",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124652",
+            "page": "reference/ASLR_operators.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-124652"
+          },
+          {
+            "title": "integer, real",
+            "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124666",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124666",
+            "page": "reference/ASLR_operators.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-124666"
+          },
+          {
+            "title": "text",
+            "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124694",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124694",
+            "page": "reference/ASLR_operators.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-124694"
+          }
+        ]
+      },
+      {
+        "title": "starts with, ends with",
+        "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124884",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124884",
+        "page": "reference/ASLR_operators.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-124884",
+        "children": [
+          {
+            "title": "list",
+            "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124917",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124917",
+            "page": "reference/ASLR_operators.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-124917"
+          },
+          {
+            "title": "text",
+            "href": "reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124958",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124958",
+            "page": "reference/ASLR_operators.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH5g-124958"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Control Statements Reference",
+    "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-157332",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-157332",
+    "page": "reference/ASLR_control_statements.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-157332",
+    "children": [
+      {
+        "title": "considering and ignoring Statements",
+        "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-130224",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-130224",
+        "page": "reference/ASLR_control_statements.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-130224",
+        "children": [
+          {
+            "title": "considering / ignoring (text comparison)",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-159879",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-159879",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-159879"
+          },
+          {
+            "title": "considering / ignoring (application responses)",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-SW2",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-SW2",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-SW2"
+          }
+        ]
+      },
+      {
+        "title": "error Statements",
+        "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-129657",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-129657",
+        "page": "reference/ASLR_control_statements.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-129657",
+        "children": [
+          {
+            "title": "error",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-129678",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-129678",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-129678"
+          }
+        ]
+      },
+      {
+        "title": "if Statements",
+        "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-158244",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-158244",
+        "page": "reference/ASLR_control_statements.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-158244",
+        "children": [
+          {
+            "title": "if (simple)",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-126990",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-126990",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-126990"
+          },
+          {
+            "title": "if (compound)",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-127122",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-127122",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-127122"
+          }
+        ]
+      },
+      {
+        "title": "repeat Statements",
+        "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-127362",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-127362",
+        "page": "reference/ASLR_control_statements.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-127362",
+        "children": [
+          {
+            "title": "exit",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-128843",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-128843",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-128843"
+          },
+          {
+            "title": "repeat (forever)",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-127499",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-127499",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-127499"
+          },
+          {
+            "title": "repeat (number) times",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-127676",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-127676",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-127676"
+          },
+          {
+            "title": "repeat until",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-128014",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-128014",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-128014"
+          },
+          {
+            "title": "repeat while",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-127845",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-127845",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-127845"
+          },
+          {
+            "title": "repeat with loopVariable (from startValue to stopValue)",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-128207",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-128207",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-128207"
+          },
+          {
+            "title": "repeat with loopVariable (in list)",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-128481",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-128481",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-128481"
+          }
+        ]
+      },
+      {
+        "title": "tell Statements",
+        "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-158637",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-158637",
+        "page": "reference/ASLR_control_statements.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-158637",
+        "children": [
+          {
+            "title": "tell (simple)",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-157872",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-157872",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-157872"
+          },
+          {
+            "title": "tell (compound)",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-158020",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-158020",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-158020"
+          }
+        ]
+      },
+      {
+        "title": "try Statements",
+        "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-128973",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-128973",
+        "page": "reference/ASLR_control_statements.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-128973",
+        "children": [
+          {
+            "title": "try",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-129232",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-129232",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-129232"
+          }
+        ]
+      },
+      {
+        "title": "use Statements",
+        "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-SW4",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-SW4",
+        "page": "reference/ASLR_control_statements.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-SW4",
+        "children": [
+          {
+            "title": "use (AppleScript)",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-SW8",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-SW8",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-SW8"
+          },
+          {
+            "title": "use (scripting additions)",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-SW5",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-SW5",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-SW5"
+          },
+          {
+            "title": "use (application or script)",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-SW9",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-SW9",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-SW9"
+          },
+          {
+            "title": "use (framework)",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-SW6",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-SW6",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-SW6"
+          }
+        ]
+      },
+      {
+        "title": "using terms from Statements",
+        "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-SW3",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-SW3",
+        "page": "reference/ASLR_control_statements.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-SW3",
+        "children": [
+          {
+            "title": "using terms from",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-SW1",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-SW1",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-SW1"
+          }
+        ]
+      },
+      {
+        "title": "with timeout Statements",
+        "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-130992",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-130992",
+        "page": "reference/ASLR_control_statements.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-130992",
+        "children": [
+          {
+            "title": "with timeout",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-131094",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-131094",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-131094"
+          }
+        ]
+      },
+      {
+        "title": "with transaction Statements",
+        "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-131273",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-131273",
+        "page": "reference/ASLR_control_statements.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-131273",
+        "children": [
+          {
+            "title": "with transaction",
+            "href": "reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-131303",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-131303",
+            "page": "reference/ASLR_control_statements.html",
+            "anchor": "//apple_ref/doc/uid/TP40000983-CH6g-131303"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Handler Reference",
+    "href": "reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-163762",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-163762",
+    "page": "reference/ASLR_handlers.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH7g-163762",
+    "children": [
+      {
+        "title": "continue",
+        "href": "reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-SW1",
+        "page": "reference/ASLR_handlers.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH7g-SW1"
+      },
+      {
+        "title": "return",
+        "href": "reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-163937",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-163937",
+        "page": "reference/ASLR_handlers.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH7g-163937"
+      },
+      {
+        "title": "Handler Syntax (Labeled Parameters)",
+        "href": "reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-SW2",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-SW2",
+        "page": "reference/ASLR_handlers.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH7g-SW2"
+      },
+      {
+        "title": "Calling a Handler with Labeled Parameters",
+        "href": "reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-165917",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-165917",
+        "page": "reference/ASLR_handlers.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH7g-165917"
+      },
+      {
+        "title": "Handler Syntax (Positional Parameters)",
+        "href": "reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-166812",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-166812",
+        "page": "reference/ASLR_handlers.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH7g-166812"
+      },
+      {
+        "title": "Calling a Handler with Positional Parameters",
+        "href": "reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-166906",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-166906",
+        "page": "reference/ASLR_handlers.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH7g-166906"
+      },
+      {
+        "title": "Handler Syntax (Interleaved Parameters)",
+        "href": "reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-SW4",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-SW4",
+        "page": "reference/ASLR_handlers.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH7g-SW4"
+      },
+      {
+        "title": "Calling a Handler with Interleaved Parameters",
+        "href": "reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-SW5",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-SW5",
+        "page": "reference/ASLR_handlers.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH7g-SW5"
+      }
+    ]
+  },
+  {
+    "title": "Folder Actions Reference",
+    "href": "reference/ASLR_folder_actions.html#//apple_ref/doc/uid/TP40000983-CH219-SW2",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_folder_actions.html#//apple_ref/doc/uid/TP40000983-CH219-SW2",
+    "page": "reference/ASLR_folder_actions.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH219-SW2",
+    "children": [
+      {
+        "title": "adding folder items to",
+        "href": "reference/ASLR_folder_actions.html#//apple_ref/doc/uid/TP40000983-CH219-SW48",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_folder_actions.html#//apple_ref/doc/uid/TP40000983-CH219-SW48",
+        "page": "reference/ASLR_folder_actions.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH219-SW48"
+      },
+      {
+        "title": "closing folder window for",
+        "href": "reference/ASLR_folder_actions.html#//apple_ref/doc/uid/TP40000983-CH219-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_folder_actions.html#//apple_ref/doc/uid/TP40000983-CH219-SW1",
+        "page": "reference/ASLR_folder_actions.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH219-SW1"
+      },
+      {
+        "title": "moving folder window for",
+        "href": "reference/ASLR_folder_actions.html#//apple_ref/doc/uid/TP40000983-CH219-SW50",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_folder_actions.html#//apple_ref/doc/uid/TP40000983-CH219-SW50",
+        "page": "reference/ASLR_folder_actions.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH219-SW50"
+      },
+      {
+        "title": "opening folder",
+        "href": "reference/ASLR_folder_actions.html#//apple_ref/doc/uid/TP40000983-CH219-SW51",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_folder_actions.html#//apple_ref/doc/uid/TP40000983-CH219-SW51",
+        "page": "reference/ASLR_folder_actions.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH219-SW51"
+      },
+      {
+        "title": "removing folder items from",
+        "href": "reference/ASLR_folder_actions.html#//apple_ref/doc/uid/TP40000983-CH219-SW52",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_folder_actions.html#//apple_ref/doc/uid/TP40000983-CH219-SW52",
+        "page": "reference/ASLR_folder_actions.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH219-SW52"
+      }
+    ]
+  },
+  {
+    "title": "Appendix A: AppleScript Keywords",
+    "href": "reference/ASLR_keywords.html#//apple_ref/doc/uid/TP40000983-CH222-SW2",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_keywords.html#//apple_ref/doc/uid/TP40000983-CH222-SW2",
+    "page": "reference/ASLR_keywords.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH222-SW2"
+  },
+  {
+    "title": "Appendix B: Error Numbers and Error Messages",
+    "href": "reference/ASLR_error_codes.html#//apple_ref/doc/uid/TP40000983-CH220-SW5",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_error_codes.html#//apple_ref/doc/uid/TP40000983-CH220-SW5",
+    "page": "reference/ASLR_error_codes.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH220-SW5",
+    "children": [
+      {
+        "title": "AppleScript Errors",
+        "href": "reference/ASLR_error_codes.html#//apple_ref/doc/uid/TP40000983-CH220-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_error_codes.html#//apple_ref/doc/uid/TP40000983-CH220-SW1",
+        "page": "reference/ASLR_error_codes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH220-SW1"
+      },
+      {
+        "title": "Operating System Errors",
+        "href": "reference/ASLR_error_codes.html#//apple_ref/doc/uid/TP40000983-CH220-SW2",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_error_codes.html#//apple_ref/doc/uid/TP40000983-CH220-SW2",
+        "page": "reference/ASLR_error_codes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH220-SW2"
+      },
+      {
+        "title": "Apple Event Errors",
+        "href": "reference/ASLR_error_codes.html#//apple_ref/doc/uid/TP40000983-CH220-SW6",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_error_codes.html#//apple_ref/doc/uid/TP40000983-CH220-SW6",
+        "page": "reference/ASLR_error_codes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH220-SW6"
+      },
+      {
+        "title": "Open Scripting Architecture Errors",
+        "href": "reference/ASLR_error_codes.html#//apple_ref/doc/uid/TP40000983-CH220-SW8",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_error_codes.html#//apple_ref/doc/uid/TP40000983-CH220-SW8",
+        "page": "reference/ASLR_error_codes.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH220-SW8"
+      }
+    ]
+  },
+  {
+    "title": "Appendix C: Working with Errors",
+    "href": "reference/ASLR_error_xmpls.html#//apple_ref/doc/uid/TP40000983-CH221-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_error_xmpls.html#//apple_ref/doc/uid/TP40000983-CH221-SW1",
+    "page": "reference/ASLR_error_xmpls.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH221-SW1",
+    "children": [
+      {
+        "title": "Catching Errors in a Handler",
+        "href": "reference/ASLR_error_xmpls.html#//apple_ref/doc/uid/TP40000983-CH221-SW2",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_error_xmpls.html#//apple_ref/doc/uid/TP40000983-CH221-SW2",
+        "page": "reference/ASLR_error_xmpls.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH221-SW2"
+      },
+      {
+        "title": "Simplified Error Checking",
+        "href": "reference/ASLR_error_xmpls.html#//apple_ref/doc/uid/TP40000983-CH221-SW3",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_error_xmpls.html#//apple_ref/doc/uid/TP40000983-CH221-SW3",
+        "page": "reference/ASLR_error_xmpls.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH221-SW3"
+      }
+    ]
+  },
+  {
+    "title": "Appendix D: Double Angle Brackets",
+    "href": "conceptual/ASLR_raw_data.html#//apple_ref/doc/uid/TP40000983-CH225-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_raw_data.html#//apple_ref/doc/uid/TP40000983-CH225-SW1",
+    "page": "conceptual/ASLR_raw_data.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH225-SW1",
+    "children": [
+      {
+        "title": "When a Dictionary Is Not Available",
+        "href": "conceptual/ASLR_raw_data.html#//apple_ref/doc/uid/TP40000983-CH225-SW37",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_raw_data.html#//apple_ref/doc/uid/TP40000983-CH225-SW37",
+        "page": "conceptual/ASLR_raw_data.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH225-SW37"
+      },
+      {
+        "title": "When AppleScript Displays Data in Raw Format",
+        "href": "conceptual/ASLR_raw_data.html#//apple_ref/doc/uid/TP40000983-CH225-SW2",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_raw_data.html#//apple_ref/doc/uid/TP40000983-CH225-SW2",
+        "page": "conceptual/ASLR_raw_data.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH225-SW2"
+      },
+      {
+        "title": "Entering Script Information in Raw Format",
+        "href": "conceptual/ASLR_raw_data.html#//apple_ref/doc/uid/TP40000983-CH225-SW3",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_raw_data.html#//apple_ref/doc/uid/TP40000983-CH225-SW3",
+        "page": "conceptual/ASLR_raw_data.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH225-SW3"
+      },
+      {
+        "title": "Sending Raw Apple Events From a Script",
+        "href": "conceptual/ASLR_raw_data.html#//apple_ref/doc/uid/TP40000983-CH225-SW4",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_raw_data.html#//apple_ref/doc/uid/TP40000983-CH225-SW4",
+        "page": "conceptual/ASLR_raw_data.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH225-SW4"
+      }
+    ]
+  },
+  {
+    "title": "Appendix E: Libraries using Load Script",
+    "href": "reference/ASLR_load_script.html#//apple_ref/doc/uid/TP40000983-CH227-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_load_script.html#//apple_ref/doc/uid/TP40000983-CH227-SW1",
+    "page": "reference/ASLR_load_script.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH227-SW1",
+    "children": [
+      {
+        "title": "Saving and Loading Libraries of Handlers",
+        "href": "reference/ASLR_load_script.html#//apple_ref/doc/uid/TP40000983-CH227-SW2",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_load_script.html#//apple_ref/doc/uid/TP40000983-CH227-SW2",
+        "page": "reference/ASLR_load_script.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH227-SW2"
+      }
+    ]
+  },
+  {
+    "title": "Appendix F: Unsupported Terms",
+    "href": "reference/ASLR_unsupported_terms.html#//apple_ref/doc/uid/TP40000983-CH224-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_unsupported_terms.html#//apple_ref/doc/uid/TP40000983-CH224-SW1",
+    "page": "reference/ASLR_unsupported_terms.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH224-SW1",
+    "children": [
+      {
+        "title": "List of Unsupported Terms",
+        "href": "reference/ASLR_unsupported_terms.html#//apple_ref/doc/uid/TP40000983-CH224-SW2",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_unsupported_terms.html#//apple_ref/doc/uid/TP40000983-CH224-SW2",
+        "page": "reference/ASLR_unsupported_terms.html",
+        "anchor": "//apple_ref/doc/uid/TP40000983-CH224-SW2"
+      }
+    ]
+  },
+  {
+    "title": "Revision History",
+    "href": "revision_history/ASLR_rev_history.html#//apple_ref/doc/uid/TP40000983-CH212-BCIHHGJH",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/revision_history/ASLR_rev_history.html#//apple_ref/doc/uid/TP40000983-CH212-BCIHHGJH",
+    "page": "revision_history/ASLR_rev_history.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH212-BCIHHGJH"
+  },
+  {
+    "title": "Glossary",
+    "href": "reference/ASLR_glossary.html#//apple_ref/doc/uid/TP40000983-CH213-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_glossary.html#//apple_ref/doc/uid/TP40000983-CH213-SW1",
+    "page": "reference/ASLR_glossary.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-CH213-SW1"
+  },
+  {
+    "title": "Index",
+    "href": "Index/index_of_book.html#//apple_ref/doc/uid/TP40000983-Index",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/Index/index_of_book.html#//apple_ref/doc/uid/TP40000983-Index",
+    "page": "Index/index_of_book.html",
+    "anchor": "//apple_ref/doc/uid/TP40000983-Index"
+  }
+]

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Double Angle Brackets</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Guide">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40000983">
+    <meta id="document-version" name="document-version" content="5.2.0">
+    <meta id="build" name="build" content="c1e4c7a89af8f899a21cfa81fc33ba42" />
+    <meta id="chapterId" name="chapterId" content="TP40000983-CH225">
+    <meta id="date" name="date" content="2016-01-25">
+    <meta id="description" name="description" content="Defines the AppleScript scripting language. Includes many brief sample scripts.">
+    <meta id="book-title" name="book-title" content="AppleScript Language Guide">
+    <meta id="book-root" name="book-root" content="../">
+    <meta id="book-json" name="book-json" content="../book.json">
+    <meta id="devcenter" name="devcenter" content="Mac Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/mac">
+    <meta id="reflib" name="reflib" content="Documentation Archive">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages & Utilities/Other Languages}">
+    
+    
+    <meta id="copyright" name="copyright" content="Copyright 2018 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="AppleScript Language Guide: Double Angle Brackets">
+    <meta id="resources-uri" name="resources-uri" content="../../../../../Resources/1282">
+    <link id="book-index-page" rel="Start" title="AppleScript Language Guide" type="text/html" href="../index.html">
+    <link id="next-page" rel="Next" type="text/html" href="../reference/ASLR_load_script.html">
+    <link id="previous-page" rel="Prev" type="text/html" href="../reference/ASLR_error_xmpls.html">
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/1282/CSS/screen.css">
+    
+    <!-- xcode_css -->
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/1282/CSS/feedback.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta id="platforms" name="platforms" content="">
+</head>    
+<body><a name="//apple_ref/doc/uid/TP40000983-CH225" title="Double Angle Brackets"></a>
+    <div id="_omniture_top">
+    <!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+    <script type="text/javascript">
+    /* RSID: */
+    var s_account="awdappledeveloper"
+    </script>
+
+    <script type="text/javascript" src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
+    <script type="text/javascript">
+    s.channel="www.documentationarchive.developer"
+
+    /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+    var s_code=s.t();if(s_code)document.write(s_code)</script>
+    <!-- End SiteCatalyst code version: H.8. -->
+    </div>
+
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode unified">
+            <a id="ssi_LibraryTitle" href='../../../../../navigation/'>Documentation Archive</a>
+            <a id="ssi_AppleDeveloperConnection" href='https://developer.apple.com/'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../../../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search Documentation Archive</label>
+            
+            
+    
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>AppleScript Language Guide</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main">
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='../reference/ASLR_load_script.html'>Next</a><a class='previousLink' rel='prev' href='../reference/ASLR_error_xmpls.html'>Previous</a>
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="../index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/TP40000983-CH225-SW1" title="Double Angle Brackets"></a><h1 id="pageTitle">Double Angle Brackets</h1><p><a name="//apple_ref/doc/uid/TP40000983-CH225-DontLinkElementID_435"></a><a name="//apple_ref/doc/uid/TP40000983-CH225-DontLinkElementID_436"></a><a name="//apple_ref/doc/uid/TP40000983-CH225-DontLinkElementID_437"></a>When you type English language script statements in a Script Editor script window, AppleScript is able to compile the script because the English terms are described either in the terminology built into the AppleScript language or in the dictionary of an available scriptable application or scripting addition. When AppleScript compiles your script, it converts it into an internal executable format, then reformats the text to conform to settings in Script Editor’s Formatting preferences.</p><p>When you open, compile, edit, or run scripts with Script Editor, you may occasionally see terms enclosed in double angle brackets, or chevrons<a name="//apple_ref/doc/uid/TP40000983-CH225-DontLinkElementID_438"></a> («»). For example, you might see the term <code>«event sysodlog»</code> as part of a script—this is the event code representation for a <code><a href="../reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW12" data-renderer-version="1">display dialog</a></code> command. The event code representation is also known as <a name="//apple_ref/doc/uid/TP40000983-CH225-DontLinkElementID_439"></a><em class="newTerm">raw format</em>.</p><p>For compatibility with Asian national encodings, “《” and “》” are allowed as synonyms for “«” and “»” ( (Option- \ and Option-Shift- \, respectively, on a U.S. keyboard), since the latter do not exist in some Asian encodings.</p><p>The following sections provide more information about when chevrons appear in scripts.</p><section><a name="//apple_ref/doc/uid/TP40000983-CH225-SW37" title="When a Dictionary Is Not Available "></a><h2 class="jump">When a Dictionary Is Not Available </h2><a name="//apple_ref/doc/uid/TP40000983-CH225-DontLinkElementID_440"></a><p>AppleScript uses double angle brackets in a Script Editor script window when it can’t identify a term. That happens when it encounters a term that isn’t part of the AppleScript language and isn’t defined in an application or scripting addition dictionary that is available when the script is opened or compiled.</p><p>For example, if a script is compiled on one machine and later opened on another, the dictionary may not be available, or may be from an older version of the application or scripting addition that does not support the term.</p><p>This can also happen if the file <code>StandardAdditions.osax</code> is not present in <code>/System/ScriptingAdditions</code>. Then, scripting addition commands such as <code>display dialog</code> will not be present and will be replaced with chevron notation (<code>«event sysodlog»</code>) when you compile or run the script.</p></section><section><a name="//apple_ref/doc/uid/TP40000983-CH225-SW2" title="When AppleScript Displays Data in Raw Format"></a><h2 class="jump">When AppleScript Displays Data in Raw Format</h2><a name="//apple_ref/doc/uid/TP40000983-CH225-DontLinkElementID_441"></a><p>Double angle brackets can also occur in results. For example, if the value of a variable is a <code>script</code> object named <code>Joe</code>, AppleScript represents the <code>script</code> object as shown in this script:</p><div class="codesample clear"><table><tr><td scope="row"><pre>script Joe<span></span></pre></td></tr><tr><td scope="row"><pre>    property theCount : 0<span></span></pre></td></tr><tr><td scope="row"><pre>end script<span></span></pre></td></tr><tr><td scope="row"><pre> <span></span></pre></td></tr><tr><td scope="row"><pre>set scriptObjectJoe to Joe<span></span></pre></td></tr><tr><td scope="row"><pre>scriptObjectJoe<span></span></pre></td></tr><tr><td scope="row"><pre>--result: «script Joe»<span></span></pre></td></tr></table></div><p>Similarly, if Script Editor can’t display a variable’s data directly in its native format, it uses double angle brackets to enclose both the word <code>data</code> and a sequence of numerical values that represent the data. Although this may not visually resemble the original data, the data’s original format is preserved.</p><p>This may occur because an application command returns a value that does not belong to any of the normal AppleScript classes. You can store such data in variables and send them as parameters to other commands, but Script Editor cannot display the data in its native format.</p></section><section><a name="//apple_ref/doc/uid/TP40000983-CH225-SW3" title="Entering Script Information in Raw Format"></a><h2 class="jump">Entering Script Information in Raw Format</h2><p><a name="//apple_ref/doc/uid/TP40000983-CH225-DontLinkElementID_442"></a>You can enter double angle brackets, or chevrons («»), directly into a script by typing Option-Backslash and Shift-Option-Backslash. You might want to do this if you’re working on a script that needs to use terminology that isn’t available on your current machine—for example, if you’re working at home and don’t have the latest dictionary for a scriptable application you are developing, but you know the codes for a supported term.</p><p>You can also use AppleScript to display the underlying codes for a script, using the following steps:</p><ol class="ol"><li class="li"><p>Create a script using standard terms compiled against an available application or scripting addition.</p></li><li class="li"><p>Save the script as text and quit Script Editor.</p></li><li class="li"><p>Remove the application or scripting addition from the computer.</p></li><li class="li"><p>Open the script again and compile it.</p></li><li class="li"><p>When AppleScript asks you to locate the application or scripting addition, cancel the dialog.</p></li></ol><p>Script Editor can compile the script, but displays chevron format for any terms that rely on a missing dictionary.</p></section><section><a name="//apple_ref/doc/uid/TP40000983-CH225-SW4" title="Sending Raw Apple Events From a Script"></a><h2 class="jump">Sending Raw Apple Events From a Script</h2><p><a name="//apple_ref/doc/uid/TP40000983-CH225-DontLinkElementID_443"></a>The term <code>«event sysodlog»</code> is actually the raw form for an Apple event with event class <code>'syso'</code> and event ID <code>'dlog'</code> (the <code>display dialog</code> command). For a list of many of the four-character codes and their related terminology used by Apple, see <em><a href="../../../../../releasenotes/AppleScript/ASTerminology_AppleEventCodes/TermsAndCodes.html#//apple_ref/doc/uid/TP40004532" data-renderer-version="1" target="_self">AppleScript Terminology and Apple Event Codes Reference</a></em>.</p><p>You can use raw syntax to enter and execute events (even complex events with numerous parameters) when there is no dictionary to support them. However, providing detailed documentation for how to do so is beyond the scope of this guide.<a name="//apple_ref/doc/uid/TP40000983-CH225-DontLinkElementID_444"></a><a name="//apple_ref/doc/uid/TP40000983-CH225-DontLinkElementID_445"></a><a name="//apple_ref/doc/uid/TP40000983-CH225-DontLinkElementID_446"></a></p></section>
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='../reference/ASLR_load_script.html'>Next</a><a class='previousLink' rel='prev' href='../reference/ASLR_error_xmpls.html'>Previous</a>
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2016 Apple Inc. All Rights Reserved.  <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2016-01-25</p></div></div>
+
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="https://developer.apple.com/bugreporter/" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../../../../Resources/1282/JavaScript/lib/prototype.js"></script>
+    <script src="../../../../../Resources/1282/JavaScript/library.js"></script>
+</body>
+</html>

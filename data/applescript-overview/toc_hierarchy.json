@@ -1,0 +1,358 @@
+[
+  {
+    "title": "Introduction",
+    "href": "AppleScriptX.html#//apple_ref/doc/uid/10000156-BCICHGIE",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/AppleScriptX.html#//apple_ref/doc/uid/10000156-BCICHGIE",
+    "page": "AppleScriptX.html",
+    "anchor": "//apple_ref/doc/uid/10000156-BCICHGIE"
+  },
+  {
+    "title": "About AppleScript",
+    "href": "Concepts/ScriptingOnOSX.html#//apple_ref/doc/uid/20000032-BABEBGCF",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/ScriptingOnOSX.html#//apple_ref/doc/uid/20000032-BABEBGCF",
+    "page": "Concepts/ScriptingOnOSX.html",
+    "anchor": "//apple_ref/doc/uid/20000032-BABEBGCF",
+    "children": [
+      {
+        "title": "When to Use AppleScript",
+        "href": "Concepts/ScriptingOnOSX.html#//apple_ref/doc/uid/20000032-1173352-BABIFHCE",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/ScriptingOnOSX.html#//apple_ref/doc/uid/20000032-1173352-BABIFHCE",
+        "page": "Concepts/ScriptingOnOSX.html",
+        "anchor": "//apple_ref/doc/uid/20000032-1173352-BABIFHCE"
+      },
+      {
+        "title": "Limitations of AppleScript",
+        "href": "Concepts/ScriptingOnOSX.html#//apple_ref/doc/uid/20000032-1151403",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/ScriptingOnOSX.html#//apple_ref/doc/uid/20000032-1151403",
+        "page": "Concepts/ScriptingOnOSX.html",
+        "anchor": "//apple_ref/doc/uid/20000032-1151403"
+      }
+    ]
+  },
+  {
+    "title": "Open Scripting Architecture",
+    "href": "Concepts/osa.html#//apple_ref/doc/uid/TP40001571-BABEBGCF",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/osa.html#//apple_ref/doc/uid/TP40001571-BABEBGCF",
+    "page": "Concepts/osa.html",
+    "anchor": "//apple_ref/doc/uid/TP40001571-BABEBGCF",
+    "children": [
+      {
+        "title": "The Parts of the Open Scripting Architecture",
+        "href": "Concepts/osa.html#//apple_ref/doc/uid/TP40001571-1147859-BCIBHFFA",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/osa.html#//apple_ref/doc/uid/TP40001571-1147859-BCIBHFFA",
+        "page": "Concepts/osa.html",
+        "anchor": "//apple_ref/doc/uid/TP40001571-1147859-BCIBHFFA"
+      },
+      {
+        "title": "Apple Events",
+        "href": "Concepts/osa.html#//apple_ref/doc/uid/TP40001571-1155023",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/osa.html#//apple_ref/doc/uid/TP40001571-1155023",
+        "page": "Concepts/osa.html",
+        "anchor": "//apple_ref/doc/uid/TP40001571-1155023"
+      },
+      {
+        "title": "Apple Events Sent by the Mac OS",
+        "href": "Concepts/osa.html#//apple_ref/doc/uid/TP40001571-1152144-BAJFBDEI",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/osa.html#//apple_ref/doc/uid/TP40001571-1152144-BAJFBDEI",
+        "page": "Concepts/osa.html",
+        "anchor": "//apple_ref/doc/uid/TP40001571-1152144-BAJFBDEI"
+      },
+      {
+        "title": "Script Execution in the Open Scripting Architecture",
+        "href": "Concepts/osa.html#//apple_ref/doc/uid/TP40001571-1151905",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/osa.html#//apple_ref/doc/uid/TP40001571-1151905",
+        "page": "Concepts/osa.html",
+        "anchor": "//apple_ref/doc/uid/TP40001571-1151905"
+      },
+      {
+        "title": "Extending AppleScript with Coercions, Scripting Additions, and Faceless Background Applications",
+        "href": "Concepts/osa.html#//apple_ref/doc/uid/TP40001571-1164068-BCIJDFCE",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/osa.html#//apple_ref/doc/uid/TP40001571-1164068-BCIJDFCE",
+        "page": "Concepts/osa.html",
+        "anchor": "//apple_ref/doc/uid/TP40001571-1164068-BCIJDFCE",
+        "children": [
+          {
+            "title": "Coercions",
+            "href": "Concepts/osa.html#//apple_ref/doc/uid/TP40001571-1164081",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/osa.html#//apple_ref/doc/uid/TP40001571-1164081",
+            "page": "Concepts/osa.html",
+            "anchor": "//apple_ref/doc/uid/TP40001571-1164081"
+          },
+          {
+            "title": "Scripting Additions",
+            "href": "Concepts/osa.html#//apple_ref/doc/uid/TP40001571-1164142",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/osa.html#//apple_ref/doc/uid/TP40001571-1164142",
+            "page": "Concepts/osa.html",
+            "anchor": "//apple_ref/doc/uid/TP40001571-1164142"
+          },
+          {
+            "title": "Faceless Background Applications",
+            "href": "Concepts/osa.html#//apple_ref/doc/uid/TP40001571-SW1",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/osa.html#//apple_ref/doc/uid/TP40001571-SW1",
+            "page": "Concepts/osa.html",
+            "anchor": "//apple_ref/doc/uid/TP40001571-SW1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Scripting with AppleScript",
+    "href": "Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-BABEBGCF",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-BABEBGCF",
+    "page": "Concepts/work_with_as.html",
+    "anchor": "//apple_ref/doc/uid/TP40001568-BABEBGCF",
+    "children": [
+      {
+        "title": "Script Editor and AppleScript Scripts",
+        "href": "Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1150347-BCIJGDFA",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1150347-BCIJGDFA",
+        "page": "Concepts/work_with_as.html",
+        "anchor": "//apple_ref/doc/uid/TP40001568-1150347-BCIJGDFA",
+        "children": [
+          {
+            "title": "A Simple AppleScript Script",
+            "href": "Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1150894",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1150894",
+            "page": "Concepts/work_with_as.html",
+            "anchor": "//apple_ref/doc/uid/TP40001568-1150894"
+          },
+          {
+            "title": "Script Editor",
+            "href": "Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1152365-BGBEHBHI",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1152365-BGBEHBHI",
+            "page": "Concepts/work_with_as.html",
+            "anchor": "//apple_ref/doc/uid/TP40001568-1152365-BGBEHBHI",
+            "children": [
+              {
+                "title": "Displaying Scripting Dictionaries",
+                "href": "Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1153006-BBCEEIFG",
+                "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1153006-BBCEEIFG",
+                "page": "Concepts/work_with_as.html",
+                "anchor": "//apple_ref/doc/uid/TP40001568-1153006-BBCEEIFG"
+              },
+              {
+                "title": "Debugging and Third Party Products",
+                "href": "Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1152927",
+                "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1152927",
+                "page": "Concepts/work_with_as.html",
+                "anchor": "//apple_ref/doc/uid/TP40001568-1152927"
+              }
+            ]
+          },
+          {
+            "title": "Interacting with the User in Scripts",
+            "href": "Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1152119",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1152119",
+            "page": "Concepts/work_with_as.html",
+            "anchor": "//apple_ref/doc/uid/TP40001568-1152119"
+          }
+        ]
+      },
+      {
+        "title": "What You Can Control with Scripts",
+        "href": "Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1174450",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1174450",
+        "page": "Concepts/work_with_as.html",
+        "anchor": "//apple_ref/doc/uid/TP40001568-1174450"
+      },
+      {
+        "title": "Using AppleScript with Web Services",
+        "href": "Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1174475",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1174475",
+        "page": "Concepts/work_with_as.html",
+        "anchor": "//apple_ref/doc/uid/TP40001568-1174475"
+      },
+      {
+        "title": "Using AppleScript with Other Scripting Systems",
+        "href": "Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1152618-BGBEFCAH",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1152618-BGBEFCAH",
+        "page": "Concepts/work_with_as.html",
+        "anchor": "//apple_ref/doc/uid/TP40001568-1152618-BGBEFCAH",
+        "children": [
+          {
+            "title": "Executing Shell Commands From AppleScript Scripts",
+            "href": "Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1148121",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1148121",
+            "page": "Concepts/work_with_as.html",
+            "anchor": "//apple_ref/doc/uid/TP40001568-1148121"
+          },
+          {
+            "title": "Executing AppleScript Scripts as Shell Commands",
+            "href": "Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1148189",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1148189",
+            "page": "Concepts/work_with_as.html",
+            "anchor": "//apple_ref/doc/uid/TP40001568-1148189"
+          },
+          {
+            "title": "Scripting the Terminal Application",
+            "href": "Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1148219",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1148219",
+            "page": "Concepts/work_with_as.html",
+            "anchor": "//apple_ref/doc/uid/TP40001568-1148219"
+          },
+          {
+            "title": "Using Other Scripting Languages",
+            "href": "Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1149917",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-1149917",
+            "page": "Concepts/work_with_as.html",
+            "anchor": "//apple_ref/doc/uid/TP40001568-1149917"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Scriptable Applications",
+    "href": "Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-BABEBGCF",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-BABEBGCF",
+    "page": "Concepts/scriptable_apps.html",
+    "anchor": "//apple_ref/doc/uid/TP40001569-BABEBGCF",
+    "children": [
+      {
+        "title": "Specifying Scripting Terminology",
+        "href": "Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1156165",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1156165",
+        "page": "Concepts/scriptable_apps.html",
+        "anchor": "//apple_ref/doc/uid/TP40001569-1156165"
+      },
+      {
+        "title": "Determining What to Make Scriptable",
+        "href": "Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1155730-BAJEGIED",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1155730-BAJEGIED",
+        "page": "Concepts/scriptable_apps.html",
+        "anchor": "//apple_ref/doc/uid/TP40001569-1155730-BAJEGIED"
+      },
+      {
+        "title": "Registering to Receive Apple Events",
+        "href": "Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-SW2",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-SW2",
+        "page": "Concepts/scriptable_apps.html",
+        "anchor": "//apple_ref/doc/uid/TP40001569-SW2"
+      },
+      {
+        "title": "Resolving Objects in the Application",
+        "href": "Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1153769",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1153769",
+        "page": "Concepts/scriptable_apps.html",
+        "anchor": "//apple_ref/doc/uid/TP40001569-1153769"
+      },
+      {
+        "title": "Recording",
+        "href": "Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1153888-BAJICJEG",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1153888-BAJICJEG",
+        "page": "Concepts/scriptable_apps.html",
+        "anchor": "//apple_ref/doc/uid/TP40001569-1153888-BAJICJEG"
+      },
+      {
+        "title": "Creating and Sending Apple Events",
+        "href": "Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1153953",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1153953",
+        "page": "Concepts/scriptable_apps.html",
+        "anchor": "//apple_ref/doc/uid/TP40001569-1153953"
+      },
+      {
+        "title": "Executing Scripts",
+        "href": "Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1153983-BAJCGEBB",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1153983-BAJCGEBB",
+        "page": "Concepts/scriptable_apps.html",
+        "anchor": "//apple_ref/doc/uid/TP40001569-1153983-BAJCGEBB"
+      },
+      {
+        "title": "Summary of Operations in a Scriptable Application",
+        "href": "Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1155176",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1155176",
+        "page": "Concepts/scriptable_apps.html",
+        "anchor": "//apple_ref/doc/uid/TP40001569-1155176"
+      },
+      {
+        "title": "OS X Support for Creating Scriptable Applications",
+        "href": "Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-SW1",
+        "page": "Concepts/scriptable_apps.html",
+        "anchor": "//apple_ref/doc/uid/TP40001569-SW1",
+        "children": [
+          {
+            "title": "Support for Carbon Applications",
+            "href": "Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1150941-BCIBAEAI",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1150941-BCIBAEAI",
+            "page": "Concepts/scriptable_apps.html",
+            "anchor": "//apple_ref/doc/uid/TP40001569-1150941-BCIBAEAI"
+          },
+          {
+            "title": "Support for Cocoa Applications",
+            "href": "Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1151567-BCIIEGJD",
+            "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1151567-BCIIEGJD",
+            "page": "Concepts/scriptable_apps.html",
+            "anchor": "//apple_ref/doc/uid/TP40001569-1151567-BCIIEGJD"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Scripting Bridge",
+    "href": "Concepts/scripting_bridge.html#//apple_ref/doc/uid/TP40006467-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/scripting_bridge.html#//apple_ref/doc/uid/TP40006467-SW1",
+    "page": "Concepts/scripting_bridge.html",
+    "anchor": "//apple_ref/doc/uid/TP40006467-SW1"
+  },
+  {
+    "title": "Automator",
+    "href": "Concepts/automator.html#//apple_ref/doc/uid/TP40006469-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/automator.html#//apple_ref/doc/uid/TP40006469-SW1",
+    "page": "Concepts/automator.html",
+    "anchor": "//apple_ref/doc/uid/TP40006469-SW1"
+  },
+  {
+    "title": "AppleScript Utilities and Applications",
+    "href": "Concepts/as_related_apps.html#//apple_ref/doc/uid/TP40001570-BABEBGCF",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/as_related_apps.html#//apple_ref/doc/uid/TP40001570-BABEBGCF",
+    "page": "Concepts/as_related_apps.html",
+    "anchor": "//apple_ref/doc/uid/TP40001570-BABEBGCF",
+    "children": [
+      {
+        "title": "AppleScript Utility",
+        "href": "Concepts/as_related_apps.html#//apple_ref/doc/uid/TP40001570-1148318",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/as_related_apps.html#//apple_ref/doc/uid/TP40001570-1148318",
+        "page": "Concepts/as_related_apps.html",
+        "anchor": "//apple_ref/doc/uid/TP40001570-1148318"
+      },
+      {
+        "title": "Folder Actions Setup",
+        "href": "Concepts/as_related_apps.html#//apple_ref/doc/uid/TP40001570-1148133-BAJJGIBG",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/as_related_apps.html#//apple_ref/doc/uid/TP40001570-1148133-BAJJGIBG",
+        "page": "Concepts/as_related_apps.html",
+        "anchor": "//apple_ref/doc/uid/TP40001570-1148133-BAJJGIBG"
+      },
+      {
+        "title": "System Events and GUI Scripting",
+        "href": "Concepts/as_related_apps.html#//apple_ref/doc/uid/TP40001570-1149074-BAJEIHJA",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/as_related_apps.html#//apple_ref/doc/uid/TP40001570-1149074-BAJEIHJA",
+        "page": "Concepts/as_related_apps.html",
+        "anchor": "//apple_ref/doc/uid/TP40001570-1149074-BAJEIHJA"
+      },
+      {
+        "title": "Image Events",
+        "href": "Concepts/as_related_apps.html#//apple_ref/doc/uid/TP40001570-1147921",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/as_related_apps.html#//apple_ref/doc/uid/TP40001570-1147921",
+        "page": "Concepts/as_related_apps.html",
+        "anchor": "//apple_ref/doc/uid/TP40001570-1147921"
+      },
+      {
+        "title": "Database Events",
+        "href": "Concepts/as_related_apps.html#//apple_ref/doc/uid/TP40001570-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/as_related_apps.html#//apple_ref/doc/uid/TP40001570-SW1",
+        "page": "Concepts/as_related_apps.html",
+        "anchor": "//apple_ref/doc/uid/TP40001570-SW1"
+      }
+    ]
+  },
+  {
+    "title": "Revision History",
+    "href": "RevisionHistory.html#//apple_ref/doc/uid/20001726-CJBGIAGF",
+    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptX/RevisionHistory.html#//apple_ref/doc/uid/20001726-CJBGIAGF",
+    "page": "RevisionHistory.html",
+    "anchor": "//apple_ref/doc/uid/20001726-CJBGIAGF"
+  }
+]

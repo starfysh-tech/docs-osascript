@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <title>Scriptable Applications</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Guide">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/10000156i">
+    <meta id="document-version" name="document-version" content="4.2.1">
+    <meta id="build" name="build" content="c1e4c7a89af8f899a21cfa81fc33ba42" />
+    <meta id="chapterId" name="chapterId" content="TP40001569">
+    <meta id="date" name="date" content="2007-10-31">
+    <meta id="description" name="description" content="Introduces the technology for writing scripts to control applications. Useful for scripters and application developers.">
+    <meta id="book-title" name="book-title" content="AppleScript Overview">
+    <meta id="book-root" name="book-root" content="../">
+    <meta id="book-json" name="book-json" content="../book.json">
+    <meta id="devcenter" name="devcenter" content="Mac Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/mac">
+    <meta id="reflib" name="reflib" content="Documentation Archive">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages & Utilities/Other Languages}">
+    
+    
+    <meta id="copyright" name="copyright" content="Copyright 2018 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="AppleScript Overview: Scriptable Applications">
+    <meta id="resources-uri" name="resources-uri" content="../../../../../Resources/1282">
+    <link id="book-index-page" rel="Start" title="AppleScript Overview" type="text/html" href="../index.html">
+    <link id="next-page" rel="Next" type="text/html" href="scripting_bridge.html">
+    <link id="previous-page" rel="Prev" type="text/html" href="work_with_as.html">
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/1282/CSS/screen.css">
+    
+    <!-- xcode_css -->
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/1282/CSS/feedback.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta id="platforms" name="platforms" content="">
+</head>    
+<body><a name="//apple_ref/doc/uid/TP40001569" title="Scriptable Applications"></a>
+    <div id="_omniture_top">
+    <!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+    <script type="text/javascript">
+    /* RSID: */
+    var s_account="awdappledeveloper"
+    </script>
+
+    <script type="text/javascript" src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
+    <script type="text/javascript">
+    s.channel="www.documentationarchive.developer"
+
+    /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+    var s_code=s.t();if(s_code)document.write(s_code)</script>
+    <!-- End SiteCatalyst code version: H.8. -->
+    </div>
+
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode unified">
+            <a id="ssi_LibraryTitle" href='../../../../../navigation/'>Documentation Archive</a>
+            <a id="ssi_AppleDeveloperConnection" href='https://developer.apple.com/'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../../../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search Documentation Archive</label>
+            
+            
+    
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>AppleScript Overview</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main">
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='scripting_bridge.html'>Next</a><a class='previousLink' rel='prev' href='work_with_as.html'>Previous</a>
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="../index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/TP40001569-BABEBGCF" title="Scriptable Applications"></a><h1 id="pageTitle">Scriptable Applications</h1><p>A <em class="newTerm">scriptable application</em> is one that goes beyond the basics of responding to Apple events sent by the Mac OS to make its most important data and operations available to AppleScript scripts or to other applications. To do this, the application must provide both a terminology for scripters to use and the underlying Apple event code to support it. Both Carbon and Cocoa applications can be scriptable, and the Cocoa framework contains built-in support that minimizes the amount of code you have to write.</p><section><a name="//apple_ref/doc/uid/TP40001569-1156165" title="Specifying Scripting Terminology"></a><h2 class="jump">Specifying Scripting Terminology</h2><p>Scriptable applications describe the scripting terminology they support by supplying a scripting dictionary. A dictionary specifies the commands and objects an application supports, as well as other information that is used by AppleScript or the application itself, and possibly by other applications or scripts that want to take advantage of the application’s scriptability. For information on designing a scripting terminology, see Technical Note TN2106, <span class="content_text"><a href="http://developer.apple.com/technotes/tn2002/tn2106.html" class="browserLink" >Scripting Interface Guidelines</a></span>.</p><p>Users typically examine a dictionary for information on how to control an application in their scripts. You can display the dictionary for a scriptable application or scripting addition with Script Editor, as described in <span class="content_text"><a href="work_with_as.html#//apple_ref/doc/uid/TP40001568-1153006" data-renderer-version="1">Displaying Scripting Dictionaries</a></span>.</p><p>There are currently three dictionary formats:</p><ul class="ul"><li class="li"><p><em class="newTerm">sdef:</em> “sdef” is short for “scripting definition.” This XML-based format is a superset of the two formats described next and supports new and improved features. Although prior to OS X version 10.4, you could not use an sdef directly in your application, you could convert an sdef into either of the other formats with the <code>sdp</code> tool. Starting in OS X v10.4, Cocoa applications can work natively with the sdef format, as described in <span class="content_text"><a href="../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_creating_sdef/SAppsCreateSdef.html#//apple_ref/doc/uid/TP40001979" data-renderer-version="1" target="_self">Preparing a Scripting Definition File</a></span> and other chapters in <em><a href="../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_intro/SAppsIntro.html#//apple_ref/doc/uid/TP40002164" data-renderer-version="1" target="_self">Cocoa Scripting Guide</a></em>.</p><p>In OS X v10.5 (Leopard), it’s possible to create applications that provide dictionary information solely in sdef format, both for Carbon and Cocoa applications. You can read about additional refinements to sdef usage in Cocoa applications for Leopard in the Scripting section of <em><a href="../../../../../releasenotes/Foundation/RN-Foundation/index.html" target="_self">Foundation Release Notes for macOS 10.13 and iOS 11</a></em>.</p><p>For documentation on the sdef format, including a change history, see the <code>sdef</code>(5) man page. <span class="content_text"><a href="http://developer.apple.com/technotes/tn2002/tn2106.html" class="browserLink" >Scripting Interface Guidelines</a></span> also includes information on working with sdefs. For documentation on the <code>sdp</code> tool, see the man page for <code>sdp</code>(1), as well as <span class="content_text"><a href="../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_evolution/SAppsEvolution.html#//apple_ref/doc/uid/TP40002164-CH19" data-renderer-version="1" target="_self">Evolution of Cocoa Scriptability Information</a></span> in <em><a href="../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_intro/SAppsIntro.html#//apple_ref/doc/uid/TP40002164" data-renderer-version="1" target="_self">Cocoa Scripting Guide</a></em>. For an example of how to use an sdef file, see the Sketch sample application. For other examples, see the sample code projects listed in <span class="content_text"><a href="#//apple_ref/doc/uid/TP40001569-1151567" data-renderer-version="1">Support for Cocoa Applications</a></span>.</p></li><li class="li"><p><em class="newTerm">script suite:</em> This is the original format used by Cocoa applications and it is still supported for backward compatibility. A script suite contains a pair of information property list (plist) files that provide both AppleScript information and information used by the application. An application can contain multiple script suites.</p><p>For documentation, see <span class="content_text"><a href="../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_suites/SAppsSuites.html#//apple_ref/doc/uid/20001241" data-renderer-version="1" target="_self">Script Suite and Script Terminology Files</a></span> in <em><a href="../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_intro/SAppsIntro.html#//apple_ref/doc/uid/TP40002164" data-renderer-version="1" target="_self">Cocoa Scripting Guide</a></em>.</p></li><li class="li"><p><em class="newTerm">aete:</em> This is the original dictionary format, and is still used in Carbon applications. The name comes from the Resource Manager resource type in which the information is stored (<code>'aete'</code>). An aete is useful in 10.4 and earlier, in both Carbon and Cocoa applications, to provide a dictionary that scripting languages can use without launching the application.</p></li></ul></section><section><a name="//apple_ref/doc/uid/TP40001571-1155730" title="Determining What to Make Scriptable"></a><a name="//apple_ref/doc/uid/TP40001569-1155730-BAJEGIED" title="Determining What to Make Scriptable"></a><h2 class="jump">Determining What to Make Scriptable</h2><p>In designing a scriptable application, it’s a good idea to provide access to all of the application’s main features, though it may make sense to start with just a key subset. You don’t typically make your application’s user interface directly scriptable. A good design allows users to script your application’s model objects (which represent data and basic behaviors) rather than its user interface (which presents information to the user).</p><p>For example, the scripting support for a drawing application might allow a script to rotate an image, but not to perform the user interface operation of clicking a Rotate button. Some applications provide additional capabilities through their scripting interface that aren’t otherwise available.</p><p>For design information, see “Learning How to Make an Application Scriptable” in <em><!--a target="_self" -->Getting Started with AppleScript<!--/a--></em> and Technical Note TN2106, <span class="content_text"><a href="http://developer.apple.com/technotes/tn2002/tn2106.html" class="browserLink" >Scripting Interface Guidelines</a></span>.</p><p>For information on how to support printing in a scriptable application, see <em><a href="../../../../../technotes/tn2002/tn2082.html#//apple_ref/doc/uid/DTS10003113" data-renderer-version="1" target="_self">The Enhanced Print Apple Event</a></em>.</p></section><section><a name="//apple_ref/doc/uid/TP40001569-SW2" title="Registering to Receive Apple Events"></a><h2 class="jump">Registering to Receive Apple Events</h2><p>A scriptable application typically responds to a set of common commands, such as <code>get data</code>, <code>set data</code>, <code>delete</code>, and <code>save</code>, as well as to other commands that support operations specific to the application. Commands are represented in Apple events by constants defined in framework or application headers. To support a command, an application registers an event handler routine with the Apple Event Manager to handle Apple events it receives that specify that command. The Apple Event Manager dispatches received events to the handlers registered for them.</p><div class="notebox"><aside><a name="//apple_ref/doc/uid/TP40001569-SW3" title="Note"></a><p><strong>Note:</strong>&nbsp;For Cocoa applications, commands are registered automatically, so that developers rarely need to register apple event handlers directly.</p><p></p></aside></div><p>For more information on creating and registering event handlers, see <span class="content_text"><a href="../../AppleEvents/dispatch_aes_aepg/dispatch_aes_aepg.html#//apple_ref/doc/uid/TP40001449-CH204" data-renderer-version="1" target="_self">Apple Event Dispatching</a></span> and <span class="content_text"><a href="../../AppleEvents/responding_aepg/responding_aepg.html#//apple_ref/doc/uid/TP40001449-CH206" data-renderer-version="1" target="_self">Responding to Apple Events</a></span> in <em><a href="../../AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449" data-renderer-version="1" target="_self">Apple Events Programming Guide</a></em>.</p></section><section><a name="//apple_ref/doc/uid/TP40001569-1153769" title="Resolving Objects in the Application"></a><h2 class="jump">Resolving Objects in the Application</h2><p>Apple events often specify items in the application. For example, a <code>get data</code> event might ask for the text of a paragraph in an open document. A distinct item in an application that can be specified in an Apple event is known as an <em class="newTerm">Apple event object</em>. (The term object does not imply that the items must be represented internally as objects in an object-oriented programming language.) All such objects are considered to be contained in other objects, with the application itself serving as the ultimate container. For a given application, the <em class="newTerm">AppleScript object model</em> (also called the Apple event object model) specifies the classes of objects a scripter can work with in scripts, the accessible properties of those objects, and the inheritance and containment relationships for those objects.</p><p>The structures within an Apple event that identify objects are referred to as <em class="newTerm">object specifiers</em>. Finding the Apple event objects they specify is known as resolving the object specifiers. To resolve object specifiers, an application must include functions that are able to find objects within their containers. The application registers these functions with the Apple Event Manager, and works with the Apple Event Manager to call them at the appropriate time to obtain the objects they specify.</p><p>For Cocoa applications, Cocoa scripting support does much of the work of resolving object specifiers, but a scriptable application must still supply methods that can locate an object within its object model containment hierarchy.</p><p>For an example of an AppleScript object model, see <span class="content_text"><a href="../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_about_apps/SAppsAboutApps.html#//apple_ref/doc/uid/TP40001976" data-renderer-version="1" target="_self">Overview of Cocoa Support for Scriptable Applications</a></span>; for information on how Cocoa applications resolve objects, see <span class="content_text"><a href="../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_object_specifiers/SAppsObjectSpecifiers.html#//apple_ref/doc/uid/TP40002164-CH3" data-renderer-version="1" target="_self">Object Specifiers</a></span>; both are in <em><a href="../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_intro/SAppsIntro.html#//apple_ref/doc/uid/TP40002164" data-renderer-version="1" target="_self">Cocoa Scripting Guide</a></em>.</p></section><section><a name="//apple_ref/doc/uid/TP40001571-1153888" title="Recording"></a><a name="//apple_ref/doc/uid/TP40001569-1153888-BAJICJEG" title="Recording"></a><h2 class="jump">Recording</h2><p>A recordable application is one that sends Apple events to itself when a user performs actions with the application. If the user has turned on recording in the Script Editor application (with Script > Record), actions that generate Apple events are recorded into an AppleScript script.</p><p>Applications that support recording typically:</p><ul class="ul"><li class="li"><p>Factor code that implements the user interface from code that actually performs operations (a standard approach for applications that follow the model-view-controller design paradigm).</p></li><li class="li"><p>Send Apple events within the application to connect those two parts of the application. The Apple Event Manager provides a mechanism for doing this with a minimum of overhead, described in “Addressing an Apple Event for Direct Dispatching” in <span class="content_text"><a href="../../AppleEvents/create_send_aepg/create_send_aepg.html#//apple_ref/doc/uid/TP40001449-CH209" data-renderer-version="1" target="_self">Creating and Sending Apple Events</a></span> in <em><a href="../../AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449" data-renderer-version="1" target="_self">Apple Events Programming Guide</a></em>.</p></li><li class="li"><p>Make sure that any significant action or series of related actions within the application generates an Apple event.</p></li></ul><p>The Finder application in OS X is recordable. Starting in OS X version 10.5, the <span class="content_text"><a href="automator.html#//apple_ref/doc/uid/TP40006469-SW1" data-renderer-version="1">Automator</a></span> application has a separate Record mechanism that lets users record actions into an Automator workflow.</p></section><section><a name="//apple_ref/doc/uid/TP40001569-1153953" title="Creating and Sending Apple Events"></a><h2 class="jump">Creating and Sending Apple Events</h2><p>An application can create and send Apple events directly. This is usually done either to send internal Apple events, as described in <span class="content_text"><a href="#//apple_ref/doc/uid/TP40001571-1153888" data-renderer-version="1">Recording</a></span>, to obtain services from a scriptable application, or to communicate directly with another application. The Open Scripting Architecture provides various mechanisms for creating and sending Apple events.</p><p>Starting in OS X version 10.5, applications can use <span class="content_text"><a href="scripting_bridge.html#//apple_ref/doc/uid/TP40006467-SW1" data-renderer-version="1">Scripting Bridge</a></span> to obtain services from scriptable applications. Scripting Bridge lets you work efficiently in a high-level language (Objective-C) without having to handle the details of sending and receiving Apple events. (See also <span class="content_text"><a href="#//apple_ref/doc/uid/TP40001569-1151567" data-renderer-version="1">Support for Cocoa Applications</a></span> for related information.)</p><p>When you really do need to send an Apple event directly, see <span class="content_text"><a href="../../AppleEvents/building_aes_aepg/building_aes_aepg.html#//apple_ref/doc/uid/TP40001449-CH203" data-renderer-version="1" target="_self">Building an Apple Event</a></span> and <span class="content_text"><a href="../../AppleEvents/create_send_aepg/create_send_aepg.html#//apple_ref/doc/uid/TP40001449-CH209" data-renderer-version="1" target="_self">Creating and Sending Apple Events</a></span> in <em><a href="../../AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449" data-renderer-version="1" target="_self">Apple Events Programming Guide</a></em>.</p></section><section><a name="//apple_ref/doc/uid/TP40001571-1153983" title="Executing Scripts"></a><a name="//apple_ref/doc/uid/TP40001569-1153983-BAJCGEBB" title="Executing Scripts"></a><h2 class="jump">Executing Scripts</h2><p>To execute scripts, an application establishes a connection with the AppleScript scripting component. It can then:</p><ul class="ul"><li class="li"><p>Use the standard scripting component routines to manipulate scripts associated with any part of the application or its documents.</p></li><li class="li"><p>Let users record and edit scripts.</p></li><li class="li"><p>Compile and execute scripts.</p></li></ul><div class="notebox"><aside><a name="//apple_ref/doc/uid/TP40001569-SW4" title="Note"></a><p><strong>Note:</strong>&nbsp;Starting in OS X version 10.5, applications can use <span class="content_text"><a href="scripting_bridge.html#//apple_ref/doc/uid/TP40006467-SW1" data-renderer-version="1">Scripting Bridge</a></span> to obtain services from scriptable applications. This can be much more efficient than manipulating scripts.</p><p></p></aside></div><p>An application can store and execute scripts regardless of whether it is scriptable or recordable. If an application is scriptable, however, it can execute scripts that control its own behavior, thus acting as both the client application and the server application for the corresponding Apple events. For more information, see <em><!--a target="_self" -->Open Scripting Architecture Reference<!--/a--></em>.</p><p>In Cocoa, the <code>NSAppleScript</code> class, described in <em><a href="https://developer.apple.com/documentation/foundation/nsapplescript" class="urlLink" target="_self">NSAppleScript Class Reference</a></em>, provides a high-level wrapper for executing AppleScript scripts from applications. For more information, see <span class="content_text"><a href="#//apple_ref/doc/uid/TP40001569-1151567" data-renderer-version="1">Support for Cocoa Applications</a></span>.</p></section><section><a name="//apple_ref/doc/uid/TP40001569-1155176" title="Summary of Operations in a Scriptable Application"></a><h2 class="jump">Summary of Operations in a Scriptable Application</h2><p>The following list summarizes how scriptable applications interact with the Open Scripting Architecture to make their features available to scripters.</p><ul class="ul"><li class="li"><p>The Apple Event Manager defines data structures that are used to construct Apple events.</p></li><li class="li"><p>The Open Scripting Architecture (OSA) provides a data transport and event dispatching mechanism for Apple events, built on top of lower level protocols.</p></li><li class="li"><p>AppleScript defines a scripting language, described in <span class="content_text"><a href="http://developer.apple.com/documentation/AppleScript/Conceptual/AppleScriptLangGuide/index.html" class="browserLink" >AppleScript Language Guide</a></span> (and third-party books) and implemented by the AppleScript component in OS X.</p></li><li class="li"><p>There is a small set of Apple events sent by the Mac OS, such as <code>open application</code>, <code>quit</code>, and <code>open documents</code> that all applications should be able to respond to. A scriptable application responds to additional common events, such as <code>get data</code> and <code>set data</code>, as well as to its own specific commands.</p></li><li class="li"><p>A scriptable application provides a scripting terminology (or dictionary) for the operations it supports. The application can reuse some event constants defined by the OSA or use its own for custom events. (Constants defined by Apple, many of which you can reuse in your applications, are described in <em><a href="../../../../../releasenotes/AppleScript/ASTerminology_AppleEventCodes/TermsAndCodes.html#//apple_ref/doc/uid/TP40004532" data-renderer-version="1" target="_self">AppleScript Terminology and Apple Event Codes Reference</a></em>.)</p><p>The sdef file format provides a mechanism for creating one terminology definition that can be converted for use in different environments.</p></li><li class="li"><p>Developers design their applications so that key operations can be invoked in response to received Apple events.</p></li><li class="li"><p>A scriptable application works with the Apple Event Manager to:</p><ul class="nested"><li class="nested li"><p>Register handlers for Apple events it can process.</p></li><li class="nested li"><p>Extract information from received Apple events, then perform requested operations or return requested data.</p></li><li class="nested li"><p>Construct Apple events for replies or other purposes.</p></li></ul><p>Scriptable Carbon applications work with the Apple Event Manager directly, but for scriptable Cocoa applications, much of this work is handled automatically.</p></li><li class="li"><p>Scripters write AppleScript scripts that specify scriptable applications and the operations to perform.</p></li><li class="li"><p>When a script is executed, script statements that target applications are translated by the AppleScript component into Apple events that are sent to those applications.</p><p>Applications can also send Apple events directly to other applications.</p></li><li class="li"><p>An application responds to the Apple events it receives by performing operations, returning data, or both.</p></li></ul></section><section><a name="//apple_ref/doc/uid/TP40001569-SW1" title="OS X Support for Creating Scriptable Applications"></a><h2 class="jump">OS X Support for Creating Scriptable Applications</h2><p>OS X supplies a number of resources that applications can use to work with Apple events and to support scriptability, including the API provided in the following frameworks:</p><ul class="ul"><li class="li"><p>The underlying support in OS X for creating scriptable applications and working with Apple events is provided by the Open Scripting Architecture, and is described in <span class="content_text"><a href="osa.html#//apple_ref/doc/uid/TP40001571-1147859" data-renderer-version="1">The Parts of the Open Scripting Architecture</a></span>.</p></li><li class="li"><p>The <em class="newTerm">Cocoa framework</em> (<code>Cocoa.framework</code>) includes the Application Kit and Foundation frameworks, which together provide the building blocks for sophisticated Mac apps. The Cocoa framework includes a great deal of support for creating scriptable applications.</p><p>For specific Cocoa scripting documentation, see <em><a href="../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_intro/SAppsIntro.html#//apple_ref/doc/uid/TP40002164" data-renderer-version="1" target="_self">Cocoa Scripting Guide</a></em>.</p></li><li class="li"><p>Java applications are not typically scriptable, though they can be made AppleScript-aware using the mechanisms described in <span class="content_text"><a href="../../../../Java/Conceptual/Java14Development/07-NativePlatformIntegration/NativePlatformIntegration.html#//apple_ref/doc/uid/TP40001909" data-renderer-version="1" target="_self">OS X Integration for Java</a></span> in <em><a href="../../../../Java/Conceptual/Java14Development/00-Intro/JavaDevelopment.html#//apple_ref/doc/uid/TP30001142" data-renderer-version="1" target="_self">Java Development Guide for Mac</a></em>.</p></li></ul><section><a name="//apple_ref/doc/uid/TP40001569-1150941" title="Support for Carbon Applications"></a><a name="//apple_ref/doc/uid/TP40001569-1150941-BCIBAEAI" title="Support for Carbon Applications"></a><h3 class="jump">Support for Carbon Applications</h3><p>Carbon applications have traditionally worked directly with the Apple Event Manager to create, send, receive, and interpret Apple events. These topics are described in detail in <em><a href="../../AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449" data-renderer-version="1" target="_self">Apple Events Programming Guide</a></em>.</p><p>For information on making your Carbon application scriptable, see previous sections in this chapter, as well as the learning paths in <em><!--a target="_self" -->Getting Started with AppleScript<!--/a--></em>.</p><p>Carbon applications can use functions such as <code>OSACompile</code> and <code>OSAExecute</code> from <code>OpenScripting.framework</code> to compile and execute scripts. Keep in mind, however, that if you are executing a script merely to send a simple command to another application, it is more efficient to create and send an Apple event directly.</p><p>If the purpose for executing a script is just to perform a <code>do shell script</code> command, Carbon applications can do so more efficiently using one of the BSD calls <code>system(3)</code>, <code>popen(3)</code>, or <code>exec(3)</code>, which you can read about at their respective man pages.</p></section>
+<section><a name="//apple_ref/doc/uid/TP40001569-1151567" title="Support for Cocoa Applications"></a><a name="//apple_ref/doc/uid/TP40001569-1151567-BCIIEGJD" title="Support for Cocoa Applications"></a><h3 class="jump">Support for Cocoa Applications</h3>
+<p>The Foundation and Application Kit frameworks provide Cocoa applications with automated handling for certain Apple events. This includes events that may be sent by the Mac OS, such as the  <code>open application</code>, <code>open documents</code>, <code>print documents</code>, and <code>quit</code> Apple events.</p><p>In addition, Cocoa provides substantial support for creating scriptable applications. To take advantage of it, applications provide scriptability information in one of the formats described in <span class="content_text"><a href="#//apple_ref/doc/uid/TP40001569-1156165" data-renderer-version="1">Specifying Scripting Terminology</a></span>. They also create KVC-compliant accessors for scriptable properties in their scriptable classes. (Key-value coding, or KVC, is described in <em><a href="../../../../Cocoa/Conceptual/KeyValueCoding/index.html#//apple_ref/doc/uid/10000107i" data-renderer-version="2" target="_self">Key-Value Coding Programming Guide</a></em>.) Though creating a fully scriptable application is a non-trivial task, an application can support many standard AppleScript commands, such as those for getting and setting properties of application objects, with a relatively small number of additional steps.</p>
+<p>Cocoa applications can also use any of the Open Scripting Architecture APIs available to Carbon applications, and in fact, Cocoa links with the Carbon framework. For example, a Cocoa Application might call an Apple Event Manager function to send an Apple event directly (there currently is no Cocoa API to do that).</p><p>Starting in OS X version 10.5, the <span class="content_text"><a href="scripting_bridge.html#//apple_ref/doc/uid/TP40006467-SW1" data-renderer-version="1">Scripting Bridge</a></span> technology provides an efficient way for Cocoa applications to interact with scriptable applications at a high level—that is, without having to construct or parse individual Apple events.</p>
+<p>Cocoa provides the <code><a href="https://developer.apple.com/documentation/foundation/nsapplescript" class="urlLink" target="_self">NSAppleScript</a></code> class for tasks such as compiling and executing scripts. This gives applications another mechanism to control scriptable applications and take advantage of services they provide. However, you should not use <code>NSAppleScript</code> to execute a script merely to result in sending an Apple event, because it is far more expensive than using Scripting Bridge or creating and sending an Apple event directly. And if the purpose for executing a script is to perform a <code>do shell script</code> command, Cocoa applications can execute shell commands more efficiently using <code><a href="../../../../LegacyTechnologies/WebObjects/WebObjects_3.5/Reference/Frameworks/ObjC/Foundation/Classes/NSTask/Description.html#//apple_ref/occ/cl/NSTask" data-renderer-version="1" target="_self">NSTask</a></code>.</p>
+<p>The Cocoa framework also includes classes such as <code><a href="https://developer.apple.com/documentation/foundation/nsappleeventdescriptor" class="urlLink" target="_self">NSAppleEventDescriptor</a></code>, for working with underlying Apple event data structures, and <code><a href="https://developer.apple.com/documentation/foundation/nsappleeventmanager" class="urlLink" target="_self">NSAppleEventManager</a></code>, for accessing certain Apple Event Manager functions.</p>
+<p>Cocoa support for handling Apple events and creating scriptable applications is documented in <em><a href="../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_intro/SAppsIntro.html#//apple_ref/doc/uid/TP40002164" data-renderer-version="1" target="_self">Cocoa Scripting Guide</a></em>. For related information, see “Framework and Language Support” in <span class="content_text"><a href="../../AppleEvents/about_aes_aepg/about_aes_aepg.html#//apple_ref/doc/uid/TP40001449-CH202" data-renderer-version="1" target="_self">About Apple Events</a></span> in <em><a href="../../AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449" data-renderer-version="1" target="_self">Apple Events Programming Guide</a></em>. For introductory sample code, see <em><a href="../../../../../samplecode/SimpleScripting/Introduction/Intro.html#//apple_ref/doc/uid/DTS10004238" data-renderer-version="1" target="_self">SimpleScripting</a></em>, <em><a href="../../../../../samplecode/SimpleScriptingProperties/Introduction/Intro.html#//apple_ref/doc/uid/DTS10004240" data-renderer-version="1" target="_self">SimpleScriptingProperties</a></em>, <em><a href="../../../../../samplecode/SimpleScriptingObjects/Introduction/Intro.html#//apple_ref/doc/uid/DTS10004244" data-renderer-version="1" target="_self">SimpleScriptingObjects</a></em>, and <em><a href="../../../../../samplecode/SimpleScriptingVerbs/Introduction/Intro.html#//apple_ref/doc/uid/DTS10004239" data-renderer-version="1" target="_self">SimpleScriptingVerbs</a></em>. For a more complex example, see the Sketch sample application.</p></section></section>
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='scripting_bridge.html'>Next</a><a class='previousLink' rel='prev' href='work_with_as.html'>Previous</a>
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2002, 2007 Apple Inc. All Rights Reserved.  <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2007-10-31</p></div></div>
+
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="https://developer.apple.com/bugreporter/" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../../../../Resources/1282/JavaScript/lib/prototype.js"></script>
+    <script src="../../../../../Resources/1282/JavaScript/library.js"></script>
+</body>
+</html>
