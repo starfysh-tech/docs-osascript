@@ -83,14 +83,17 @@ def extract_title(markdown_source: str) -> Optional[str]:
 def build_record(
     collection: str,
     rel_path: Path,
-    markdown_source: str,
+    body: Optional[str],
     manifest_entry: Optional[ManifestEntry],
+    *,
+    binary: bool = False,
 ) -> Dict[str, Optional[str]]:
     record: Dict[str, Optional[str]] = {
         "collection": collection,
         "path": rel_path.as_posix(),
-        "title": extract_title(markdown_source),
-        "body": markdown_source,
+        "title": extract_title(body) if body else None,
+        "body": body,
+        "binary": binary,
     }
     if manifest_entry:
         record.update(
@@ -152,6 +155,18 @@ def export_collection(
             plain_text = markdown_to_plain_text(markdown_source)
             write_plain_text(plain_dir, collection, rel_path, plain_text, record)
 
+            exported += 1
+
+        # add binary artifacts tracked in manifest (e.g., PDFs)
+        for output_path, entry in manifest_map.items():
+            if not output_path.endswith(('.pdf', '.zip')):
+                continue
+            parts = Path(output_path)
+            if parts.parts[1] != collection:
+                continue
+            rel = Path(*parts.parts[2:])
+            record = build_record(collection, rel, None, entry, binary=True)
+            jsonl_file.write(json.dumps(record, ensure_ascii=False) + "\n")
             exported += 1
 
     return {"documents": exported}

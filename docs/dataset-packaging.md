@@ -10,14 +10,15 @@ Outline how to transform the mirrored Apple automation docs under `build/` into 
 
 ## Target Outputs
 1. **Plain Text Corpus**
-   - One `.txt` per Markdown file mirroring the relative path (`build/<collection>/Foo/Bar.md` → `dataset/plain/<collection>/Foo/Bar.txt`).
-   - Normalization: strip Markdown formatting while preserving headings, lists, and inline code markers where meaningful.
-   - Metadata sidecar (YAML or JSON) per file capturing collection ID, relative source path, original URL, and sha256 from `monitor/manifest.json` when available.
+- One `.txt` per Markdown file mirroring the relative path (`build/<collection>/Foo/Bar.md` → `dataset/plain/<collection>/Foo/Bar.txt`).
+- Normalization: strip Markdown formatting while preserving headings, lists, and inline code markers where meaningful.
+- Metadata sidecar (YAML or JSON) per file capturing collection ID, relative source path, original URL, and sha256 from `monitor/manifest.json` when available.
 
 2. **JSONL Corpus**
-   - Records keyed by `{"collection": ..., "path": ..., "title": ..., "body": ...}`.
-   - `body` retains Markdown (or lightly cleaned text) to maintain structure for downstream chunking.
-   - Optional enrichment: section hierarchy from `toc_hierarchy.json`, anchor list, and detected code blocks.
+- Records keyed by `{"collection": ..., "path": ..., "title": ..., "body": ...}`.
+- `body` retains Markdown (or lightly cleaned text) to maintain structure for downstream chunking.
+- Optional enrichment: section hierarchy from `toc_hierarchy.json`, anchor list, and detected code blocks.
+- Binary artifacts (PDFs, ZIPs, etc.) appear as metadata-only rows with `"body": null` and `"binary": true` so downstream consumers can decide how to handle them. Their checksums/URLs are still captured in the record for integrity tracking.
 
 ## Processing Steps
 1. **Discovery**

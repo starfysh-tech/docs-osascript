@@ -43,6 +43,8 @@
 - 2025-10-16: Added Script Editor-specific conversion tests, taught the pipeline to parse Apple Support layouts, mirrored the Script Editor User Guide (Markdown + assets), refreshed link normalization, and wired the collection into navigation + monitoring.
 - 2025-10-16: Authored `docs/dataset-packaging.md` capturing the plain text / JSONL export plan and updated the validator to recognize fenced code blocks so monitoring spot checks remain reliable.
 - 2025-10-16: Implemented `scripts/export_dataset.py` with tests to generate plain-text + JSONL corpora (per-collection outputs, metadata sidecars, dataset manifest).
+- 2025-10-16: Archived the Apple Events Programming Guide PDF (downloaded via new `download_file.py`), added metadata/manifest/nav entries, and taught the dataset exporter to emit metadata-only records for binary assets.
+- 2025-10-16: Ran `scripts/check_updates.py --save --report` post-expansion; report stored at `reports/update-status-20251016.md` with all sources unchanged.
 
 ## Task Board
 
@@ -56,6 +58,7 @@
 | ✅ | Mirror the Mac Automation Scripting Guide collection (see `apple-official-docs.md`). |
 | ✅ | Mirror JavaScript for Automation release notes + WWDC resources. |
 | ✅ | Capture Script Editor User Guide for offline use. |
+| ✅ | Mirror Apple Events Programming Guide (archived PDF). |
 | ⬜️ | Implement change detection (`monitor/manifest.json` + `scripts/check_updates.py`). |
 | ⬜️ | Publish GitHub Pages catalog sourced from `build/`. |
 | ⬜️ | Generate LLM-ready datasets (plain text + JSONL chunks, optional embeddings). |
@@ -87,6 +90,6 @@
 - **Link normalization**: After regenerating Markdown, run `python3 scripts/normalize_markdown_links.py --markdown-dir build --pages-file …` so cross-collection links drop missing anchors and off-repo references point to `https://developer.apple.com/library/archive/`.
 
 ## Next Up
-1. Outline the dataset packaging plan for the mirrored corpus (plain text + JSONL) and log initial decisions.
-2. Run `python3 scripts/check_updates.py --manifest monitor/manifest.json --save --report reports/update-status-YYYYMMDD.md` with the Script Editor pages included.
-3. Select the next backlog doc set (see `apple-official-docs.md`) and scope any conversion/validation fixtures it will need.
+1. Assess the next archived automation PDF (e.g., AppleScript Scripting Additions Guide) and repeat the capture/metadata process.
+2. Execute `python3 scripts/export_dataset.py` across all collections and review `dataset/manifest.json` before publishing datasets.
+3. Schedule the next monitoring check (reports/update-status-YYYYMMDD.md) for the upcoming Monday cadence.

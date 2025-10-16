@@ -30,7 +30,17 @@ def test_export_dataset_creates_plain_text_and_jsonl(tmp_path: Path, monkeypatch
                         "sha256": "abc123",
                         "etag": "etag",
                         "last_modified": "Wed, 01 Jan 2025 00:00:00 GMT",
-                    }
+                    },
+                    {
+                        "id": "ExamplePDF",
+                        "path": "Example.pdf",
+                        "url": "https://example.test/Example.pdf",
+                        "type": "pdf",
+                        "output": "build/sample/docs/Example.pdf",
+                        "sha256": "deadbeef",
+                        "etag": None,
+                        "last_modified": None,
+                    },
                 ],
             }
         ],
@@ -71,9 +81,8 @@ def test_export_dataset_creates_plain_text_and_jsonl(tmp_path: Path, monkeypatch
 
     jsonl_file = jsonl_dir / "sample.jsonl"
     records = [json.loads(line) for line in jsonl_file.read_text(encoding="utf-8").splitlines()]
-    assert records[0]["collection"] == "sample"
-    assert records[0]["path"] == "docs/Example.md"
-    assert records[0]["sha256"] == "abc123"
+    assert any(r["path"] == "docs/Example.md" and r["binary"] is False for r in records)
+    assert any(r["path"] == "docs/Example.pdf" and r["binary"] is True for r in records)
 
     dataset_meta = json.loads(dataset_manifest.read_text(encoding="utf-8"))
-    assert dataset_meta["collections"]["sample"]["documents"] == 1
+    assert dataset_meta["collections"]["sample"]["documents"] == 2

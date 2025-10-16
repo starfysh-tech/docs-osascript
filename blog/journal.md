@@ -54,3 +54,6 @@ While that was running, I drafted `docs/dataset-packaging.md` so the dataset wor
 
 ## 2025-10-16 — Dataset Export Prototype
 Followed the plan from `docs/dataset-packaging.md` and built `scripts/export_dataset.py`. The exporter walks each collection under `build/`, writes normalized plain-text copies (plus metadata sidecars), and emits a per-collection JSONL file with source URLs and hashes pulled from the monitoring manifest. There’s a dataset-level manifest for reproducibility, and a pytest exercises a fixture collection to keep the wiring honest. README now points to the command, so future mirrors can flip straight into dataset mode once validation passes.
+
+## 2025-10-16 — Apple Events Programming Guide
+Rounded out the backlog with the archived Apple Events Programming Guide. Added a tiny `download_file.py` helper, pulled the PDF into `data/` (and mirrored it under `build/`), captured metadata, and wired the doc into `monitor/manifest.json` plus MkDocs navigation. The dataset exporter learned how to emit metadata-only JSONL rows for binaries, so PDFs show up in the corpus without pretending to be text. Issue #4 tracks future PDFs, but this one’s already sitting beside the rest of the catalog.

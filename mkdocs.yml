@@ -143,8 +143,9 @@ nav:
     - Access scripts using the Script menu: script-editor-user-guide/access-scripts-using-the-script-menu-scpedt27975/2.11/mac/26.md
     - Set line wrapping: script-editor-user-guide/set-line-wrapping-scpedt1132/2.11/mac/26.md
   - Control apps with scripts:
-    - View an app’s scripting dictionary: script-editor-user-guide/view-an-apps-scripting-dictionary-scpedt1126/2.11/mac/26.md
+    - "View an app\u2019s scripting dictionary": script-editor-user-guide/view-an-apps-scripting-dictionary-scpedt1126/2.11/mac/26.md
     - Add or remove apps from the scripting dictionary: script-editor-user-guide/add-remove-apps-scripting-dictionary-scpedt11560/2.11/mac/26.md
     - Automate Script Editor tasks: script-editor-user-guide/automate-script-editor-tasks-scpedt1125/2.11/mac/26.md
   - Keyboard shortcuts: script-editor-user-guide/keyboard-shortcuts-scrptedshtcut/2.11/mac/26.md
   - Copyright and trademarks: script-editor-user-guide/copyright-and-trademarks-apd2185d6ee5/2.11/mac/26.md
+- Apple Events Programming Guide (PDF): apple-events-programming-guide/apple-events-programming-guide.pdf

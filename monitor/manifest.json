@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2025-10-16T16:54:54+00:00",
+  "generated": "2025-10-16T19:08:41+00:00",
   "collections": [
     {
       "id": "applescript-overview",
@@ -16,7 +16,7 @@
           "sha256": "a687ed8c3425e9e7731b4a77de81025f9cd4d13365c52a0ac66357ebf89b0e1b",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:54:54+00:00",
+          "last_checked": "2025-10-16T19:08:41+00:00",
           "collection_id": "applescript-overview"
         },
         {
@@ -28,7 +28,7 @@
           "sha256": "5fca43d70aeb2dc7aa176f4460b98a5cdbdafc01034b06111fca964a55a6b92b",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:54:54+00:00",
+          "last_checked": "2025-10-16T19:08:41+00:00",
           "collection_id": "applescript-overview"
         },
         {
@@ -40,7 +40,7 @@
           "sha256": "a4f9f92c4e48fb36d8af301da4069db571fba098741e211db431787d1133b0e7",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:54:54+00:00",
+          "last_checked": "2025-10-16T19:08:41+00:00",
           "collection_id": "applescript-overview"
         },
         {
@@ -52,7 +52,7 @@
           "sha256": "0ecddf7bb2f139c8987a10539c2ed19c9be0e638fe5fb4dddb1b78535b58414b",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:54:55+00:00",
+          "last_checked": "2025-10-16T19:08:41+00:00",
           "collection_id": "applescript-overview"
         },
         {
@@ -64,7 +64,7 @@
           "sha256": "3c28701cf48bd096c25a2a4ab4a9c4d58a567053c1c0b3b5f5bb8ce9ac1ca543",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:54:55+00:00",
+          "last_checked": "2025-10-16T19:08:41+00:00",
           "collection_id": "applescript-overview"
         },
         {
@@ -76,7 +76,7 @@
           "sha256": "60c2e42733ee7f6dee99ed606ea5f2eb4c62d7aed7a1f6c49a89bdc16254d2cc",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:54:55+00:00",
+          "last_checked": "2025-10-16T19:08:41+00:00",
           "collection_id": "applescript-overview"
         },
         {
@@ -88,7 +88,7 @@
           "sha256": "fa2ea7078fcb1ef98cdfd4d5671824f33f71731ab3a9acdc17a216a53a3aea15",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:54:56+00:00",
+          "last_checked": "2025-10-16T19:08:41+00:00",
           "collection_id": "applescript-overview"
         },
         {
@@ -100,7 +100,7 @@
           "sha256": "6bf18f84fcc153e1e0dde63e5b8c3a2bf5cb56db9913d4da9f38b4c62c0a2c98",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:54:56+00:00",
+          "last_checked": "2025-10-16T19:08:41+00:00",
           "collection_id": "applescript-overview"
         },
         {
@@ -112,7 +112,7 @@
           "sha256": "fc44cdfb4fc1151a284a26f9dc913c8a2f2c6c005b25dd0ac7557c5bd8f5648b",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:54:56+00:00",
+          "last_checked": "2025-10-16T19:08:41+00:00",
           "collection_id": "applescript-overview"
         }
       ]
@@ -131,7 +131,7 @@
           "sha256": "7cd77ae45650ddaa36bde9d67be1e7ff6acae06080872d751ea21d1f0cf94469",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:54:56+00:00",
+          "last_checked": "2025-10-16T19:08:41+00:00",
           "collection_id": "applescript-language-guide"
         },
         {
@@ -143,7 +143,7 @@
           "sha256": "7519ccc42d3643b80260140723a10ed4b04372986328c5faaad1427f2abec811",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:54:57+00:00",
+          "last_checked": "2025-10-16T19:08:41+00:00",
           "collection_id": "applescript-language-guide"
         },
         {
@@ -155,7 +155,7 @@
           "sha256": "f298a0a6ab4cad2e5d8e9ca9e62e7504760841ea71e5b918356084f2afd88c88",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:54:57+00:00",
+          "last_checked": "2025-10-16T19:08:42+00:00",
           "collection_id": "applescript-language-guide"
         },
         {
@@ -167,7 +167,7 @@
           "sha256": "010b31a85da0326b0a7c8e3f0d5d5ceb15e1226bb424c3942dafd13de60c3757",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:54:57+00:00",
+          "last_checked": "2025-10-16T19:08:42+00:00",
           "collection_id": "applescript-language-guide"
         },
         {
@@ -179,7 +179,7 @@
           "sha256": "ef5d34bf93fda2cbbc5d79f8a8e952fd04f803d525d137afc1b69db03453e505",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:54:58+00:00",
+          "last_checked": "2025-10-16T19:08:42+00:00",
           "collection_id": "applescript-language-guide"
         },
         {
@@ -191,7 +191,7 @@
           "sha256": "10018ec74a43e4dde7434b1d4af0a66aa8bd5e03a1ea23447ede7b5ff22ac8eb",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:54:58+00:00",
+          "last_checked": "2025-10-16T19:08:42+00:00",
           "collection_id": "applescript-language-guide"
         },
         {
@@ -203,7 +203,7 @@
           "sha256": "18b0305dbe4f0a49b47c656676f4bc9129f09d9e552bcf8a80740b805bd76504",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:54:58+00:00",
+          "last_checked": "2025-10-16T19:08:42+00:00",
           "collection_id": "applescript-language-guide"
         },
         {
@@ -215,7 +215,7 @@
           "sha256": "a5df61079b60abdec2659c151efcac56f015a66b47f12fb5eadffbc0e8c83b1d",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:54:59+00:00",
+          "last_checked": "2025-10-16T19:08:42+00:00",
           "collection_id": "applescript-language-guide"
         },
         {
@@ -227,7 +227,7 @@
           "sha256": "ee18e86312e424b8163e9ddfd6b4c2b0c577d16690159fbd5e4d39cfb4ec66ac",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:54:59+00:00",
+          "last_checked": "2025-10-16T19:08:42+00:00",
           "collection_id": "applescript-language-guide"
         },
         {
@@ -239,7 +239,7 @@
           "sha256": "13199efe6f8d2eede9ce927030b04525cb54401af1467fa37d08b4c24c281fa9",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:00+00:00",
+          "last_checked": "2025-10-16T19:08:42+00:00",
           "collection_id": "applescript-language-guide"
         },
         {
@@ -251,7 +251,7 @@
           "sha256": "abb5c094f99671ba4c4b19f3352713e73685f6ea2e79227f7c0e27cc78a89f15",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:00+00:00",
+          "last_checked": "2025-10-16T19:08:42+00:00",
           "collection_id": "applescript-language-guide"
         },
         {
@@ -263,7 +263,7 @@
           "sha256": "8dd8b8cca687a1175c675e2223bb8b842198b1c1a2bcefd131ea833f4b0fbb39",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:01+00:00",
+          "last_checked": "2025-10-16T19:08:42+00:00",
           "collection_id": "applescript-language-guide"
         },
         {
@@ -275,7 +275,7 @@
           "sha256": "418d30cd4500d458c8c433d6a8e86bf1b0da7b0976bd79e1b51adb0d3abb5bfb",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:01+00:00",
+          "last_checked": "2025-10-16T19:08:42+00:00",
           "collection_id": "applescript-language-guide"
         },
         {
@@ -287,7 +287,7 @@
           "sha256": "4c5c1272c48e8cdc3049d63767d963b534e01884bc4e775b7f8fbb87021d3aaa",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:01+00:00",
+          "last_checked": "2025-10-16T19:08:42+00:00",
           "collection_id": "applescript-language-guide"
         },
         {
@@ -299,7 +299,7 @@
           "sha256": "1af6c0a40e60da744c781aaea1662c391ffb5f6a512461d7594e25465c177bfd",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:01+00:00",
+          "last_checked": "2025-10-16T19:08:43+00:00",
           "collection_id": "applescript-language-guide"
         },
         {
@@ -311,7 +311,7 @@
           "sha256": "f6303fb5ac5951573d068fd3f4dc3f1b5c4b4e10c0bb81e09eb3f4013d060d2e",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:02+00:00",
+          "last_checked": "2025-10-16T19:08:43+00:00",
           "collection_id": "applescript-language-guide"
         },
         {
@@ -323,7 +323,7 @@
           "sha256": "0002b6d36a75c0f6557bef4347eb8f2db290214770c1bbb47eeae2784de748ca",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:02+00:00",
+          "last_checked": "2025-10-16T19:08:43+00:00",
           "collection_id": "applescript-language-guide"
         },
         {
@@ -335,7 +335,7 @@
           "sha256": "acfd577d4cd99a9585c46cd6719287de403b21aa9c9faa434f4972d64437e009",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:02+00:00",
+          "last_checked": "2025-10-16T19:08:43+00:00",
           "collection_id": "applescript-language-guide"
         },
         {
@@ -347,7 +347,7 @@
           "sha256": "ddab2511a74911c5b79d65cf3d2323bf87605021c5b658ac89ce24f69f8c962b",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:02+00:00",
+          "last_checked": "2025-10-16T19:08:43+00:00",
           "collection_id": "applescript-language-guide"
         },
         {
@@ -359,7 +359,7 @@
           "sha256": "b773c14784a9c32568f1990276f741204786331663df08b4c786ba1e35f33cf0",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:03+00:00",
+          "last_checked": "2025-10-16T19:08:43+00:00",
           "collection_id": "applescript-language-guide"
         },
         {
@@ -371,7 +371,7 @@
           "sha256": "7da2a53bdac84b1b317b74532f3a9531f113ea6312d115d79c8a6254554aade0",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:03+00:00",
+          "last_checked": "2025-10-16T19:08:43+00:00",
           "collection_id": "applescript-language-guide"
         }
       ]
@@ -390,7 +390,7 @@
           "sha256": "0382b9e3df03a7c98a9b4ec731013c4ca738a6b96fb7fe37b4004d0396fa14ca",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:03+00:00",
+          "last_checked": "2025-10-16T19:08:43+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -402,7 +402,7 @@
           "sha256": "68b0f3aa2cc46b5ff5fe0c6fe502d79ebc074ad54105f1d4cdfc74ac4f5566bf",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:04+00:00",
+          "last_checked": "2025-10-16T19:08:43+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -414,7 +414,7 @@
           "sha256": "8863194851867d0ae17c4e576065c67a50f41ff0f96a81dc3ded91c1557b1999",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:04+00:00",
+          "last_checked": "2025-10-16T19:08:43+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -426,7 +426,7 @@
           "sha256": "c68c529e6292522be24951207bc6af1725d2417f7da4be30c292faef8732b15e",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:05+00:00",
+          "last_checked": "2025-10-16T19:08:44+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -438,7 +438,7 @@
           "sha256": "5889d75c235fc53f951384f761cddfa3fe4d17d751648531e554c9e0e52afd7c",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:05+00:00",
+          "last_checked": "2025-10-16T19:08:44+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -450,7 +450,7 @@
           "sha256": "25f50fe997370e6073ffffa160d1380e71dbc02b483854fd1a1e2e68fb658d06",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:06+00:00",
+          "last_checked": "2025-10-16T19:08:44+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -462,7 +462,7 @@
           "sha256": "ad657fefa1f759ba8d6bebd8099fac9a96b6a0412c7a438592a2fa3e44346e1b",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:06+00:00",
+          "last_checked": "2025-10-16T19:08:44+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -474,7 +474,7 @@
           "sha256": "dd33216f2c15a9ea13a2ab38f47650b0d8fa27807a68ac635719f5bb5e22c5de",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:06+00:00",
+          "last_checked": "2025-10-16T19:08:45+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -486,7 +486,7 @@
           "sha256": "d65f05019a0919ddd5ed936bbc2ec69a83b7c59e94ed58a20263ceeef90dc4f1",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:06+00:00",
+          "last_checked": "2025-10-16T19:08:45+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -498,7 +498,7 @@
           "sha256": "7d2cfbf5cdf442968462e352f36fed426b6fa30c537c7ed836f4022f04e9d32c",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:07+00:00",
+          "last_checked": "2025-10-16T19:08:45+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -510,7 +510,7 @@
           "sha256": "3f656fd4e0fa48637b392da2992392581f577a58653520c6f928a8df5caf90cb",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:07+00:00",
+          "last_checked": "2025-10-16T19:08:46+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -522,7 +522,7 @@
           "sha256": "9801b37c30486680fe3f2e24d2b0a373e301d6c13bc82f63fade0a7da751fd34",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:08+00:00",
+          "last_checked": "2025-10-16T19:08:46+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -534,7 +534,7 @@
           "sha256": "e12b9c984fe9c9241afd81266fdb82780beeca93b585b2e2cb0add27b1b52c3d",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:08+00:00",
+          "last_checked": "2025-10-16T19:08:46+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -546,7 +546,7 @@
           "sha256": "aa871de6a7cefb63692223e83ef6c89b09e2ab35c0e1633410e12ff4cf7457c6",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:08+00:00",
+          "last_checked": "2025-10-16T19:08:46+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -558,7 +558,7 @@
           "sha256": "4304da5a84a7c3b704402ec87fe3cbb313bf2ad946c2261d8fa099bae61d677e",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:08+00:00",
+          "last_checked": "2025-10-16T19:08:47+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -570,7 +570,7 @@
           "sha256": "693f936abc7212c4b00053399723a090abf15d107f43d5f3277958802c7b8718",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:09+00:00",
+          "last_checked": "2025-10-16T19:08:47+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -582,7 +582,7 @@
           "sha256": "d25c2deb0811f0ecaa137f96444620e1f1e5750273d23c7daebd94e9bfb36e1e",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:09+00:00",
+          "last_checked": "2025-10-16T19:08:47+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -594,7 +594,7 @@
           "sha256": "2d7f5edd344a4d89f11613fde40b51eec460bbf97da213f669d3739701681ac2",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:09+00:00",
+          "last_checked": "2025-10-16T19:08:48+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -606,7 +606,7 @@
           "sha256": "60c967c41819bcb6a82d566b550ac15ea9633dc8504bc3300426025036a2ee16",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:10+00:00",
+          "last_checked": "2025-10-16T19:08:48+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -618,7 +618,7 @@
           "sha256": "9ace12c4bae7d4b47c2ddaba2bbe92449ee00e6d96992efc00372f310de9475b",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:10+00:00",
+          "last_checked": "2025-10-16T19:08:48+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -630,7 +630,7 @@
           "sha256": "7d31bc9444f9b08cff8e7067d03c8d07448b812b8f76ce6d229798b189d0097c",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:10+00:00",
+          "last_checked": "2025-10-16T19:08:48+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -642,7 +642,7 @@
           "sha256": "f8b6fabd1c9e989872b6228cf61f49b7e9ec481144a6b2be19709459e5224688",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:11+00:00",
+          "last_checked": "2025-10-16T19:08:49+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -654,7 +654,7 @@
           "sha256": "cbfb7b6e82dae3464575d0ca295f7c23086d2afb6f87094960ab16a78960d540",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:11+00:00",
+          "last_checked": "2025-10-16T19:08:49+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -666,7 +666,7 @@
           "sha256": "ddf6fc1ff65c1468dd13646d3eb7e3cfc59674f3e0eff104c2fec972acbafb22",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:11+00:00",
+          "last_checked": "2025-10-16T19:08:50+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -678,7 +678,7 @@
           "sha256": "27384f0bef3676e238145c021d8e679259bc099f8be696d750c4cf5acbac8eec",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:12+00:00",
+          "last_checked": "2025-10-16T19:08:50+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -690,7 +690,7 @@
           "sha256": "f3a840d8185bbdf3e05df86bdf97b7050c4b2ab17d2e7bbbd648a8b7553f2a09",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:12+00:00",
+          "last_checked": "2025-10-16T19:08:50+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -702,7 +702,7 @@
           "sha256": "762ac8d4b56d0af280e73929e474613cae6068bf748e12b64d0eb5a126e3ee8d",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:12+00:00",
+          "last_checked": "2025-10-16T19:08:51+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -714,7 +714,7 @@
           "sha256": "99c39515508fa9b9da1e12fbf9ee0fcd936a9e396825185333e5c21602e041c8",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:12+00:00",
+          "last_checked": "2025-10-16T19:08:51+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -726,7 +726,7 @@
           "sha256": "5f5f77c973135d0db7c3518ca5efaa32d7f383be51e984eb9577907f4ed81982",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:13+00:00",
+          "last_checked": "2025-10-16T19:08:51+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -738,7 +738,7 @@
           "sha256": "3f5549bdd2159702c5740efa02b30eebe2a52187e3a8c266b8fb000e36fe40ab",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:13+00:00",
+          "last_checked": "2025-10-16T19:08:52+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -750,7 +750,7 @@
           "sha256": "4e1c00f745862b4256d8cf4923c0bb1878c2f4585162de1cad0397803305b3a3",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:13+00:00",
+          "last_checked": "2025-10-16T19:08:52+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -762,7 +762,7 @@
           "sha256": "cd6be19114cd32fd4552d9642f4195328666672a0fbd5f003da3107f00079f11",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:14+00:00",
+          "last_checked": "2025-10-16T19:08:52+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -774,7 +774,7 @@
           "sha256": "1e766a22efdd6a3c9d91473ac0d8e1a806f2324b061fd006ba35ff23355f5262",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:14+00:00",
+          "last_checked": "2025-10-16T19:08:53+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -786,7 +786,7 @@
           "sha256": "88133199cae24ae4e6b843434e981dc696b9be73f226523bdc1139ab2d10ec6e",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:14+00:00",
+          "last_checked": "2025-10-16T19:08:53+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -798,7 +798,7 @@
           "sha256": "91ad49e588a254683e66ac14f31dc1496a58ccab51cd9d91b0a06674e14b9536",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:15+00:00",
+          "last_checked": "2025-10-16T19:08:53+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -810,7 +810,7 @@
           "sha256": "e4ad4bdf4f9cf1dfd2567a704280fbf8ed79d94700a6931bbd63eeaf572f8f8c",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:15+00:00",
+          "last_checked": "2025-10-16T19:08:54+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -822,7 +822,7 @@
           "sha256": "a1528466b05ef16c330a4a8dbe511052b4337a7921d2d8540c607aeaa532b813",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:15+00:00",
+          "last_checked": "2025-10-16T19:08:54+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -834,7 +834,7 @@
           "sha256": "85a9ec93a23177202e3822ef1b3e44987301ec9bad709b98fb2c7797adf33db6",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:15+00:00",
+          "last_checked": "2025-10-16T19:08:54+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -846,7 +846,7 @@
           "sha256": "fcb98fc55de201b19de0f579feea951a1aaa7ee699289f7ce1e9ee9f969afbf2",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:16+00:00",
+          "last_checked": "2025-10-16T19:08:55+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -858,7 +858,7 @@
           "sha256": "1aa62879d04f8541c0580f9a60a74b35e719b1d356cd145d08c83180c6482894",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:16+00:00",
+          "last_checked": "2025-10-16T19:08:55+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -870,7 +870,7 @@
           "sha256": "366bc58964b4c60040cdf7f7249f6d083bb38bb97a855b3ca67a9f70682999ce",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:16+00:00",
+          "last_checked": "2025-10-16T19:08:55+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -882,7 +882,7 @@
           "sha256": "abda40a5e7f420b034039ff43b9485de0afcb982832dd4c3894fc0d839c99f65",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:17+00:00",
+          "last_checked": "2025-10-16T19:08:56+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -894,7 +894,7 @@
           "sha256": "9c9104969aac1783d6b6c755e3ea8902749f25e1215eca0d2ee34bd224a3c559",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:17+00:00",
+          "last_checked": "2025-10-16T19:08:56+00:00",
           "collection_id": "mac-automation-scripting-guide"
         },
         {
@@ -906,7 +906,7 @@
           "sha256": "907fdd55c69c521ebb267152d9a9bb4f86785c68fb73dba1bbcda2fa67e56166",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:17+00:00",
+          "last_checked": "2025-10-16T19:08:56+00:00",
           "collection_id": "mac-automation-scripting-guide"
         }
       ]
@@ -925,7 +925,7 @@
           "sha256": "83c1151e4877138e56853797098edac51ee7ea92726f5cccc5e2a77839a043a1",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:18+00:00",
+          "last_checked": "2025-10-16T19:08:56+00:00",
           "collection_id": "jxa-release-notes"
         },
         {
@@ -937,7 +937,7 @@
           "sha256": "47ba05fada225b77f9efbb0b266fb486db5a5dbb00587d51db7ac08ac7e13687",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:18+00:00",
+          "last_checked": "2025-10-16T19:08:57+00:00",
           "collection_id": "jxa-release-notes"
         },
         {
@@ -949,7 +949,7 @@
           "sha256": "42acf873226deca86bdc46fb8d1842c90d843448a6dc227872da2863fa7a5a94",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:18+00:00",
+          "last_checked": "2025-10-16T19:08:57+00:00",
           "collection_id": "jxa-release-notes"
         },
         {
@@ -961,7 +961,7 @@
           "sha256": "b01cd49092e50f98fc093434b7baf00ee9c7261ff475ac0f642b59a688c5b91d",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:19+00:00",
+          "last_checked": "2025-10-16T19:08:57+00:00",
           "collection_id": "jxa-release-notes"
         },
         {
@@ -973,7 +973,7 @@
           "sha256": "3760ce4722011178485739ee80df38fd54e5bd20d305c1844aad23e680933417",
           "etag": "\"95cc3e5dcf5f08487a2f2041734516be\"",
           "last_modified": "Wed, 13 Dec 2023 08:01:53 GMT",
-          "last_checked": "2025-10-16T16:55:19+00:00",
+          "last_checked": "2025-10-16T19:08:58+00:00",
           "collection_id": "jxa-release-notes"
         }
       ]
@@ -992,7 +992,7 @@
           "sha256": "95bb64205ce28871531531433ee064496d4f79d143bafd9a4aad41df4acd6e2e",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:19+00:00",
+          "last_checked": "2025-10-16T19:08:58+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1004,7 +1004,7 @@
           "sha256": "17a6b7c54fa6bb87595d50d05cfd371d6eb80985b22b7402ad537a509473af99",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:19+00:00",
+          "last_checked": "2025-10-16T19:08:58+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1016,7 +1016,7 @@
           "sha256": "45e1fc6e910adeffb6b40f84fbf3fbdd4d8973237bf5113154eecd880d49f9cf",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:19+00:00",
+          "last_checked": "2025-10-16T19:08:59+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1028,7 +1028,7 @@
           "sha256": "466b46d8673364d4c5d99688fa9213595359c7f02751cf5ab2f927e981027778",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:19+00:00",
+          "last_checked": "2025-10-16T19:08:59+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1040,7 +1040,7 @@
           "sha256": "6a07cec6719f8369c21d64422bbea3ebc382f25f02586ebba22381715680dec7",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:20+00:00",
+          "last_checked": "2025-10-16T19:08:59+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1052,7 +1052,7 @@
           "sha256": "fcd6a189313424fb71eec45441905c553d8aa619ad620f4436e5098f060551f8",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:20+00:00",
+          "last_checked": "2025-10-16T19:08:59+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1064,7 +1064,7 @@
           "sha256": "a5e3b58600c04b3feca5b18324a178744b0a0ae508f80a27b5ea6a30866fa141",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:20+00:00",
+          "last_checked": "2025-10-16T19:09:00+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1076,7 +1076,7 @@
           "sha256": "67e8d7409ade5a321694bef290314406719cb612dbbb8791cfd8d920d26fea8d",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:20+00:00",
+          "last_checked": "2025-10-16T19:09:00+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1088,7 +1088,7 @@
           "sha256": "32720e414f434813729a55a8282891080e703a35de32fef731b570792496319e",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:20+00:00",
+          "last_checked": "2025-10-16T19:09:01+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1100,7 +1100,7 @@
           "sha256": "8568877375b563c3a58e1498a5fab51bb6ceb4352e9f1bc112beeeb51926cd15",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:20+00:00",
+          "last_checked": "2025-10-16T19:09:01+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1112,7 +1112,7 @@
           "sha256": "06f188a8ae67dff75e07f4b960dfa0f45269f3a9c4533e08c5b5b087a4990641",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:20+00:00",
+          "last_checked": "2025-10-16T19:09:01+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1124,7 +1124,7 @@
           "sha256": "22fdcbf7a1ad8332d11343f35b79fb8d1608155ca1aedccaaa7c35a795dc3472",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:20+00:00",
+          "last_checked": "2025-10-16T19:09:02+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1136,7 +1136,7 @@
           "sha256": "0766e919774a70e742fce806c7fe66337e001078ae83a4e30b4c2de21ed1d95b",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:21+00:00",
+          "last_checked": "2025-10-16T19:09:02+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1148,7 +1148,7 @@
           "sha256": "d86a39046c95f6ba8890337ebf75045e2a6086364930278c289f556da507cf5d",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:21+00:00",
+          "last_checked": "2025-10-16T19:09:02+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1160,7 +1160,7 @@
           "sha256": "b2145fac5ed337213b38c2cbb29968112e7df21161bb34a72f16528b2fe09b92",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:21+00:00",
+          "last_checked": "2025-10-16T19:09:03+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1172,7 +1172,7 @@
           "sha256": "1b031bbf89e9ba4669656463796c6e13fa01437158fc8863b15d355b93068108",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:21+00:00",
+          "last_checked": "2025-10-16T19:09:03+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1184,7 +1184,7 @@
           "sha256": "664d2a21fb5b59ef60dd95140d3388defba86064e347098a0d8ee2bd6bd26dc7",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:21+00:00",
+          "last_checked": "2025-10-16T19:09:03+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1196,7 +1196,7 @@
           "sha256": "ecb914a64686aa0ee166e83ea7184d8e645470dc668e1366181dae951612abf9",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:21+00:00",
+          "last_checked": "2025-10-16T19:09:04+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1208,7 +1208,7 @@
           "sha256": "1774a969f4a3250c463c10c8a30e48887c64752ab79f2681a7ffea5c4c5408b2",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:21+00:00",
+          "last_checked": "2025-10-16T19:09:04+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1220,7 +1220,7 @@
           "sha256": "f901f956ada3671de808ec72531b603edaa8b4a0e1162d2e36139f1ec9cfeebc",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:22+00:00",
+          "last_checked": "2025-10-16T19:09:04+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1232,7 +1232,7 @@
           "sha256": "7576dc90c0959d4c280e85c0f5fa2d22ad8bf10c17761b952cea79c2d79e0514",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:22+00:00",
+          "last_checked": "2025-10-16T19:09:05+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1244,7 +1244,7 @@
           "sha256": "7df21f76215f02bf4132be95a74e59432c7197c342c40f0b715eaf7cafa25369",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:22+00:00",
+          "last_checked": "2025-10-16T19:09:05+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1256,7 +1256,7 @@
           "sha256": "1cbe5695388a6cb98e65c843b2989838d91bdb1bc7b293ac8731bff2f38b6b4d",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:22+00:00",
+          "last_checked": "2025-10-16T19:09:05+00:00",
           "collection_id": "script-editor-user-guide"
         },
         {
@@ -1268,8 +1268,27 @@
           "sha256": "bfd0b82828454eb369b0370c4e77ff84d623456ffb85ba062636a93439934fca",
           "etag": null,
           "last_modified": null,
-          "last_checked": "2025-10-16T16:55:22+00:00",
+          "last_checked": "2025-10-16T19:09:06+00:00",
           "collection_id": "script-editor-user-guide"
+        }
+      ]
+    },
+    {
+      "id": "apple-events-programming-guide",
+      "description": "Apple Events Programming Guide (archived PDF)",
+      "base_url": "https://applescriptlibrary.wordpress.com/wp-content/uploads/2013/11/",
+      "sources": [
+        {
+          "id": "apple-events-programming-guide",
+          "path": "apple-events-programming-guide.pdf",
+          "url": "https://applescriptlibrary.wordpress.com/wp-content/uploads/2013/11/apple-events-programming-guide.pdf",
+          "type": "pdf",
+          "output": "build/apple-events-programming-guide/apple-events-programming-guide.pdf",
+          "sha256": "313a1934b2f8964c7f0778d0426d41f9c11bd76a728657f7e334ee809dbea7cd",
+          "etag": null,
+          "last_modified": "Mon, 25 Nov 2013 17:21:29 GMT",
+          "last_checked": "2025-10-16T19:09:06+00:00",
+          "collection_id": "apple-events-programming-guide"
         }
       ]
     }
