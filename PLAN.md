@@ -42,6 +42,7 @@
 - 2025-10-16: Converted unresolved cross-collection anchors to page-level links and rewrote unknown relative paths to the Apple archive domain; MkDocs now builds without warnings.
 - 2025-10-16: Added Script Editor-specific conversion tests, taught the pipeline to parse Apple Support layouts, mirrored the Script Editor User Guide (Markdown + assets), refreshed link normalization, and wired the collection into navigation + monitoring.
 - 2025-10-16: Authored `docs/dataset-packaging.md` capturing the plain text / JSONL export plan and updated the validator to recognize fenced code blocks so monitoring spot checks remain reliable.
+- 2025-10-16: Implemented `scripts/export_dataset.py` with tests to generate plain-text + JSONL corpora (per-collection outputs, metadata sidecars, dataset manifest).
 
 ## Task Board
 
