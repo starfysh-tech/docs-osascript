@@ -1,0 +1,364 @@
+[
+  {
+    "title": "Introduction",
+    "href": "Articles/Introduction.html#//apple_ref/doc/uid/TP40014508-CH111-SW1",
+    "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/Introduction.html#//apple_ref/doc/uid/TP40014508-CH111-SW1",
+    "page": "Articles/Introduction.html",
+    "anchor": "//apple_ref/doc/uid/TP40014508-CH111-SW1"
+  },
+  {
+    "title": "OS X 10.11 Release Notes",
+    "href": "Articles/OSX10-11.html#//apple_ref/doc/uid/TP40014508-CH110-SW1",
+    "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-11.html#//apple_ref/doc/uid/TP40014508-CH110-SW1",
+    "page": "Articles/OSX10-11.html",
+    "anchor": "//apple_ref/doc/uid/TP40014508-CH110-SW1",
+    "children": [
+      {
+        "title": "Debugging",
+        "href": "Articles/OSX10-11.html#//apple_ref/doc/uid/TP40014508-CH110-SW2",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-11.html#//apple_ref/doc/uid/TP40014508-CH110-SW2",
+        "page": "Articles/OSX10-11.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH110-SW2",
+        "children": [
+          {
+            "title": "Set Up Safari",
+            "href": "Articles/OSX10-11.html#//apple_ref/doc/uid/TP40014508-CH110-SW3",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-11.html#//apple_ref/doc/uid/TP40014508-CH110-SW3",
+            "page": "Articles/OSX10-11.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH110-SW3"
+          },
+          {
+            "title": "Run Scripts",
+            "href": "Articles/OSX10-11.html#//apple_ref/doc/uid/TP40014508-CH110-SW6",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-11.html#//apple_ref/doc/uid/TP40014508-CH110-SW6",
+            "page": "Articles/OSX10-11.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH110-SW6"
+          }
+        ]
+      },
+      {
+        "title": "Strict Flags",
+        "href": "Articles/OSX10-11.html#//apple_ref/doc/uid/TP40014508-CH110-SW8",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-11.html#//apple_ref/doc/uid/TP40014508-CH110-SW8",
+        "page": "Articles/OSX10-11.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH110-SW8"
+      },
+      {
+        "title": "Exposed Application Properties",
+        "href": "Articles/OSX10-11.html#//apple_ref/doc/uid/TP40014508-CH110-SW9",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-11.html#//apple_ref/doc/uid/TP40014508-CH110-SW9",
+        "page": "Articles/OSX10-11.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH110-SW9"
+      },
+      {
+        "title": "Script Libraries",
+        "href": "Articles/OSX10-11.html#//apple_ref/doc/uid/TP40014508-CH110-SW10",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-11.html#//apple_ref/doc/uid/TP40014508-CH110-SW10",
+        "page": "Articles/OSX10-11.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH110-SW10",
+        "children": [
+          {
+            "title": "New Search Mechanisms",
+            "href": "Articles/OSX10-11.html#//apple_ref/doc/uid/TP40014508-CH110-SW11",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-11.html#//apple_ref/doc/uid/TP40014508-CH110-SW11",
+            "page": "Articles/OSX10-11.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH110-SW11"
+          },
+          {
+            "title": "Catchable Custom Errors",
+            "href": "Articles/OSX10-11.html#//apple_ref/doc/uid/TP40014508-CH110-SW12",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-11.html#//apple_ref/doc/uid/TP40014508-CH110-SW12",
+            "page": "Articles/OSX10-11.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH110-SW12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OS X 10.10 Release Notes",
+    "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW1",
+    "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW1",
+    "page": "Articles/OSX10-10.html",
+    "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW1",
+    "children": [
+      {
+        "title": "Global Properties",
+        "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW2",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW2",
+        "page": "Articles/OSX10-10.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW2",
+        "children": [
+          {
+            "title": "Open Scripting Architecture (OSA) Component",
+            "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW3",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW3",
+            "page": "Articles/OSX10-10.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW3"
+          },
+          {
+            "title": "Scripting Dictionaries",
+            "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW4",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW4",
+            "page": "Articles/OSX10-10.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW4"
+          },
+          {
+            "title": "Object Specifiers",
+            "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW5",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW5",
+            "page": "Articles/OSX10-10.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW5"
+          }
+        ]
+      },
+      {
+        "title": "Accessing Applications",
+        "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW6",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW6",
+        "page": "Articles/OSX10-10.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW6"
+      },
+      {
+        "title": "Syntax Examples",
+        "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW7",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW7",
+        "page": "Articles/OSX10-10.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW7"
+      },
+      {
+        "title": "Getting and Setting Properties",
+        "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW8",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW8",
+        "page": "Articles/OSX10-10.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW8"
+      },
+      {
+        "title": "Element Arrays",
+        "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW9",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW9",
+        "page": "Articles/OSX10-10.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW9"
+      },
+      {
+        "title": "Filtering Arrays",
+        "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW10",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW10",
+        "page": "Articles/OSX10-10.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW10"
+      },
+      {
+        "title": "Calling Commands",
+        "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW11",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW11",
+        "page": "Articles/OSX10-10.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW11"
+      },
+      {
+        "title": "Creating Objects",
+        "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW12",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW12",
+        "page": "Articles/OSX10-10.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW12"
+      },
+      {
+        "title": "Scripting Additions",
+        "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW13",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW13",
+        "page": "Articles/OSX10-10.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW13"
+      },
+      {
+        "title": "Strict Flags",
+        "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW34",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW34",
+        "page": "Articles/OSX10-10.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW34"
+      },
+      {
+        "title": "Passing Event Modifiers",
+        "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW36",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW36",
+        "page": "Articles/OSX10-10.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW36"
+      },
+      {
+        "title": "ObjectSpecifier",
+        "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW33",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW33",
+        "page": "Articles/OSX10-10.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW33"
+      },
+      {
+        "title": "Paths",
+        "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW31",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW31",
+        "page": "Articles/OSX10-10.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW31"
+      },
+      {
+        "title": "Progress",
+        "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW35",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW35",
+        "page": "Articles/OSX10-10.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW35"
+      },
+      {
+        "title": "Libraries",
+        "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW14",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW14",
+        "page": "Articles/OSX10-10.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW14"
+      },
+      {
+        "title": "Applets",
+        "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW15",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW15",
+        "page": "Articles/OSX10-10.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW15"
+      },
+      {
+        "title": "UI Automation",
+        "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW16",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW16",
+        "page": "Articles/OSX10-10.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW16"
+      },
+      {
+        "title": "Objective-C Bridge",
+        "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW17",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW17",
+        "page": "Articles/OSX10-10.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW17",
+        "children": [
+          {
+            "title": "Frameworks",
+            "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW18",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW18",
+            "page": "Articles/OSX10-10.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW18"
+          },
+          {
+            "title": "Data Types",
+            "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW19",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW19",
+            "page": "Articles/OSX10-10.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW19"
+          },
+          {
+            "title": "Instantiating Classes and Invoking Methods",
+            "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW20",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW20",
+            "page": "Articles/OSX10-10.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW20"
+          },
+          {
+            "title": "Accessing ObjC Properties",
+            "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW21",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW21",
+            "page": "Articles/OSX10-10.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW21"
+          },
+          {
+            "title": "Wrapping and Unwrapping",
+            "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW22",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW22",
+            "page": "Articles/OSX10-10.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW22"
+          },
+          {
+            "title": "Constants and Enumerations",
+            "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW23",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW23",
+            "page": "Articles/OSX10-10.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW23"
+          },
+          {
+            "title": "Functions",
+            "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW24",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW24",
+            "page": "Articles/OSX10-10.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW24"
+          },
+          {
+            "title": "Variadics",
+            "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW51",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW51",
+            "page": "Articles/OSX10-10.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW51"
+          },
+          {
+            "title": "Structs",
+            "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW25",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW25",
+            "page": "Articles/OSX10-10.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW25"
+          },
+          {
+            "title": "Nil",
+            "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW26",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW26",
+            "page": "Articles/OSX10-10.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW26"
+          },
+          {
+            "title": "Implicit Pass-by-Reference",
+            "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW27",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW27",
+            "page": "Articles/OSX10-10.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW27"
+          },
+          {
+            "title": "Explicit Pass-by-Reference",
+            "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW28",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW28",
+            "page": "Articles/OSX10-10.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW28"
+          },
+          {
+            "title": "Ref",
+            "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW52",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW52",
+            "page": "Articles/OSX10-10.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW52"
+          },
+          {
+            "title": "Function Binding",
+            "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW29",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW29",
+            "page": "Articles/OSX10-10.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW29"
+          },
+          {
+            "title": "Types",
+            "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW32",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW32",
+            "page": "Articles/OSX10-10.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW32"
+          },
+          {
+            "title": "Subclassing",
+            "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW30",
+            "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW30",
+            "page": "Articles/OSX10-10.html",
+            "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW30"
+          }
+        ]
+      },
+      {
+        "title": "Automation.getDisplayString()",
+        "href": "Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW54",
+        "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW54",
+        "page": "Articles/OSX10-10.html",
+        "anchor": "//apple_ref/doc/uid/TP40014508-CH109-SW54"
+      }
+    ]
+  },
+  {
+    "title": "Revision History",
+    "href": "Articles/RevisionHistory.html#//apple_ref/doc/uid/TP40014508-CH112-SW1",
+    "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/RevisionHistory.html#//apple_ref/doc/uid/TP40014508-CH112-SW1",
+    "page": "Articles/RevisionHistory.html",
+    "anchor": "//apple_ref/doc/uid/TP40014508-CH112-SW1"
+  }
+]

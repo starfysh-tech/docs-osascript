@@ -17,11 +17,14 @@ def iter_html_files(html_root: Path) -> Iterable[Path]:
             yield path
 
 
+WWDC_NOTE_TEXT = "See also WWDC 2014 Session 306 resources for the companion PDF and streaming video referenced by this release."
+
 SKIP_LINES = {
     "Next",
     "Previous",
     "PDF",
     "Companion File",
+    WWDC_NOTE_TEXT,
 }
 
 
@@ -93,7 +96,10 @@ def article_text(html_path: Path) -> str:
 def markdown_text(md_path: Path) -> str:
     html = markdown.markdown(md_path.read_text(encoding="utf-8"), extensions=["tables"])
     soup = BeautifulSoup(html, "html.parser")
-    return canonicalize_text(soup.get_text(separator="\n"))
+    text = canonicalize_text(soup.get_text(separator="\n"))
+    if WWDC_NOTE_TEXT in text:
+        text = text.replace(WWDC_NOTE_TEXT, "")
+    return " ".join(text.split())
 
 
 def diff_text(html_txt: str, md_txt: str, context: int = 3) -> str | None:

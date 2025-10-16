@@ -1,19 +1,18 @@
 # AppleScript Docs Archive Plan
 
-## Snapshot (updated: 2025-10-15)
+## Snapshot (updated: 2025-10-16)
 - **Current focus**
   - Finish mirroring priority collections (Mac Automation Scripting Guide, JXA release notes, Script Editor User Guide).
   - Stand up the change-detection framework that keeps mirrors fresh.
   - Prepare for a public-facing catalog and LLM-ready datasets.
 - **Next actions**
-  1. Create the JXA release-notes mirroring plan (identify pages, assets) and open an issue.
-  2. Define monitoring thresholds + schedule (what counts as “changed”, alert cadence) and capture in an issue.
-  3. Begin the MkDocs (Material) scaffold for the GitHub Pages catalog; draft navigation + search requirements.
+  1. Wrap issue #1 (JXA release notes + WWDC resources): document manual additions, finalize validation notes, and commit.
+  2. Begin the MkDocs (Material) scaffold and capture navigation/search requirements.
+  3. Outline dataset packaging (plain text + JSONL export strategy) once the catalog scaffold exists.
 - **Blockers / decisions pending**
   - Determine how to handle large WWDC video assets (link-out vs. local copy).
   - Decide on the storage/export format for man-page captures (plain text vs. Markdown).
-  - Confirm monitoring cadence (weekly vs. monthly) once the checker exists.
-
+  
 ## Objectives
 - Mirror AppleScript documentation (Overview, Language Guide, and future sets) as local Markdown.
 - Keep the original Apple TOC layout intact within each collection for reliable cross-linking.
@@ -35,6 +34,8 @@
 - 2024-10-15: Imported `apple-official-docs.md` as the authoritative backlog of Apple automation docs to mirror.
 - 2025-10-15: Added `monitor/manifest.json` and `scripts/check_updates.py` to seed the change-detection pipeline.
 - 2025-10-15: Mirrored the Mac Automation Scripting Guide (`data/mac-automation-scripting-guide/`, `build/mac-automation-scripting-guide/`) and enhanced conversion/validation to handle complex code listings.
+- 2025-10-16: Defined monitoring thresholds/cadence (weekly Monday 09:00 UTC checks), noted WWDC video helper script approach (download on demand), and captured initial report in `reports/update-status-YYYYMMDD.md`.
+- 2025-10-16: Added pytest coverage for inline code + definition list conversions, mirrored the JXA release notes, archived the Session 306 PDF, and linked to a curated WWDC resources note (note injection now automated during conversion with matching validator suppression).
 
 ## Task Board
 
@@ -56,7 +57,6 @@
 - Which additional AppleScript doc sets (e.g., Apple Events Programming Guide) should be pulled next?
 - Should PDFs/assets be stored alongside each doc or centralized under `assets/`?
 - Do we want to capture linked non-AppleScript materials that live outside the mirrored paths?
-- What cadence should the monitoring job run (weekly vs. monthly)?
 - Where should large binary artifacts (WWDC video, high-res PDFs) live if mirrored locally?
 
 ## Backlog Reference
@@ -72,8 +72,10 @@
 - **Reports**: Store monitoring results under `reports/` (e.g., `reports/update-status-YYYYMMDD.md`) once `scripts/check_updates.py` is in place.
 - **Metrics**: Track mirror coverage, freshness, catalog usability, and dataset readiness in the Snapshot or relevant issues so progress stays visible.
 - **Catalog tooling**: MkDocs + Material theme will power the GitHub Pages site; capture structural notes in repo issues/docs as the scaffold progresses.
+- **Monitoring cadence**: Run `python3 scripts/check_updates.py --manifest monitor/manifest.json --save --report reports/update-status-YYYYMMDD.md` every Monday at 09:00 UTC (and before major releases). Exit code `3` (changed) ⇒ re-run the mirror pipeline; exit code `2` (error) ⇒ investigate (HTTP issue, network outage).
+  - The WWDC Session 306 pointer and supporting note are generated automatically when converting the JXA release notes set.
 
 ## Next Up
-1. Open the GitHub issue for mirroring the JXA release notes + WWDC resources (list pages/assets, clarify video handling).
-2. Document monitoring thresholds + schedule (issue + README/PLAN) and outline automation for reports/alerts.
-3. Draft the MkDocs/Material catalog structure (navigation, search expectations) before wiring up GitHub Pages.
+1. Execute issue #1 (mirror JXA release notes + WWDC resources) with tests, pipeline run, and monitoring update.
+2. Draft the MkDocs/Material catalog structure (navigation + search expectations) before wiring up GitHub Pages.
+3. Outline dataset packaging (plain text + JSONL export strategy) once the catalog scaffold exists.

@@ -34,3 +34,8 @@ Today’s push was all about scale. The Mac Automation Scripting Guide came onli
 Conversation-wise, we zoomed out like a staff developer: clarified the “why” (offline corpus, freshness, catalog, LLM datasets), set measurable success criteria, and picked **MkDocs (Material)** as the GitHub Pages tooling. Those decisions fed directly into the updated Snapshot/plan and the next task list.
 
 Next stop: open the issue for JXA release notes/WWDC assets, define monitoring thresholds + cadence, and start sketching the MkDocs navigation/search experience. The project now feels like a marching order instead of a pile of one-offs.
+
+## 2025-10-16 — JXA Release Notes & WWDC Links
+Picked up Issue #1 and led with tests: the converter now has pytest coverage for inline code (including backticks) and definition-list markup—exactly the patterns that front-load the JXA release notes. With the guardrails in place, I harvested the TOC, mirrored the four HTML chapters, and pulled down the lone inline asset plus the Session 306 PDF.
+
+Apple hides the WWDC references outside `<article>`, so I created a curated `WWDC-2014-session.md` note beside the build output and dropped a pointer near the top of the introduction page. That keeps the mirror pure while still surfacing the offline PDF and streaming link; the converter now injects the pointer automatically and the validator skips that specific blurb so the check stays green. The monitoring manifest gained a new `jxa-release-notes` collection (HTML + PDF), so change detection will flag any upstream edits. Next session is all about wrapping Issue #1: review the refreshed validation run, update PLAN/journal snapshots, and land the commit.

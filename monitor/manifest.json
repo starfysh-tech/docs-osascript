@@ -836,6 +836,68 @@
           "last_checked": null
         }
       ]
+    },
+    {
+      "id": "jxa-release-notes",
+      "description": "JavaScript for Automation release notes",
+      "base_url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/",
+      "sources": [
+        {
+          "id": "Introduction",
+          "path": "Articles/Introduction.html",
+          "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/Introduction.html",
+          "type": "html",
+          "output": "build/jxa-release-notes/Articles/Introduction.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "OSX10-10",
+          "path": "Articles/OSX10-10.html",
+          "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html",
+          "type": "html",
+          "output": "build/jxa-release-notes/Articles/OSX10-10.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "OSX10-11",
+          "path": "Articles/OSX10-11.html",
+          "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-11.html",
+          "type": "html",
+          "output": "build/jxa-release-notes/Articles/OSX10-11.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "RevisionHistory",
+          "path": "Articles/RevisionHistory.html",
+          "url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/RevisionHistory.html",
+          "type": "html",
+          "output": "build/jxa-release-notes/Articles/RevisionHistory.md",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        },
+        {
+          "id": "Session306PDF",
+          "path": "306_javascript_for_automation.pdf",
+          "url": "https://devstreaming-cdn.apple.com/videos/wwdc/2014/306xxjtg7uz13v0/306/306_javascript_for_automation.pdf",
+          "type": "pdf",
+          "output": "build/jxa-release-notes/306_javascript_for_automation.pdf",
+          "sha256": null,
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        }
+      ]
     }
   ]
 }

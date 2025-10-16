@@ -15,6 +15,7 @@
 - Asset sync: run `download_assets.py` followed by `sync_assets.py` with matching arguments to copy images beside Markdown.
 - Verification: `python3 scripts/validate_markdown.py --html-dir data/<collection>/html --markdown-dir build/<collection>`.
 - Monitoring dry-run: `python3 scripts/check_updates.py --manifest monitor/manifest.json` (add `--save --report reports/update-status-<date>.md` when ready).
+- Weekly monitoring check (Monday 09:00 UTC): `python3 scripts/check_updates.py --manifest monitor/manifest.json --save --report reports/update-status-YYYYMMDD.md`. Review the report: `changed` ⇒ re-run the mirror pipeline soon; `error` ⇒ investigate (HTTP issue, network outage, redirect).
 
 ## Coding Style & Naming Conventions
 - Follow PEP 8: 4-space indentation, snake_case functions, UPPER_SNAKE constants. Prefer `pathlib.Path` and `argparse` over ad-hoc utilities.
@@ -35,6 +36,11 @@
 - Commits use short, imperative subjects (“Mirror Mac Automation guide introduction”) and include details when context aids review.
 - Each PR should summarize new collections or script changes, list commands executed (mirror + validate), and note outstanding follow-ups (missing assets, manual checks).
 - Link backlog items from `apple-official-docs.md` or issues whenever applicable; attach representative directory listings or sample diffs to aid reviewers.
+
+## Schedule & Monitoring
+- Run `scripts/check_updates.py` every Monday 09:00 UTC (or before major releases) with `--save --report`. Store reports under `reports/` using `update-status-YYYYMMDD.md`.
+- Treat exit code `3` (changed) as a blocking task: re-run the relevant mirror pipeline within 24 hours.
+- Treat exit code `2` (error) as a follow-up: inspect the URL, retry with network access, or note in PLAN.md if Apple removes the page.
 
 ## Agent Workflow Tips
 - Check `PLAN.md` before starting work to avoid conflicting mirror efforts.
