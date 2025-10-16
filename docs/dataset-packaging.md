@@ -43,6 +43,14 @@ Outline how to transform the mirrored Apple automation docs under `build/` into 
 - Integrate into workflow after link normalization and validation.
 - Treat `dataset/` as build output: run the exporter on demand, then bundle the results (zip/tar + manifest) for release distribution rather than committing the directory to git.
 
+## Release Checklist
+1. `rm -rf dataset && python3 scripts/export_dataset.py` to regenerate the full corpus.
+2. Inspect `dataset/manifest.json` to confirm document counts and timestamp.
+3. Package the output: `tar -czf dataset-YYYYMMDD.tar.gz -C dataset .`
+4. Remove the temporary `dataset/` folder.
+5. Tag the repo (e.g., `git tag dataset-YYYYMMDD`) and push the tag.
+6. Create a GitHub release at that tag and upload the tarball with a short summary (contents + counts).
+
 ## Open Questions
 - Should JSONL records be single-page (`body`=whole doc) or chunked for LLM training (e.g., 1k token segments)?
 - How to handle tables/inline images in plain text exports (text-only vs. structured representation)?

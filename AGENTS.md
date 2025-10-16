@@ -10,7 +10,7 @@
 ## Build, Test, and Development Commands
 - After regenerating Markdown, run `python3 scripts/normalize_markdown_links.py --markdown-dir build --pages-file ...` (include all collection `html_pages.txt`) to keep cross-collection links and anchors accurate.
 - Regenerate the MkDocs navigation whenever new build output is introduced via `python3 scripts/generate_mkdocs_nav.py` before running `mkdocs build`.
-- Produce datasets from mirrored content with `python3 scripts/export_dataset.py --collections <slug>` (omit `--collections` to export everything); treat the outputs as build artifacts and package them separately if distributing.
+- Produce datasets from mirrored content with `python3 scripts/export_dataset.py --collections <slug>` (omit `--collections` to export everything); treat the outputs as build artifacts and follow the release checklist in `docs/dataset-packaging.md` when distributing.
 - Fetch archived binaries with `python3 scripts/download_file.py --url <source> --output data/<collection>/assets/<filename>`.
 
 - TOC harvest: `python3 scripts/inventory_toc.py --book-json data/<collection>/book.json --base-url <url> --output-dir data/<collection>`.
@@ -20,8 +20,7 @@
 - Asset sync: run `download_assets.py` followed by `sync_assets.py` with matching arguments to copy images beside Markdown.
 - Standalone resource fetch: `python3 scripts/download_file.py --url <source> --output data/<collection>/assets/<name>`.
 - Verification: `python3 scripts/validate_markdown.py --html-dir data/<collection>/html --markdown-dir build/<collection>`.
-- Monitoring dry-run: `python3 scripts/check_updates.py --manifest monitor/manifest.json` (add `--save --report reports/update-status-<date>.md` when ready).
-- Weekly monitoring check (Monday 09:00 UTC): `python3 scripts/check_updates.py --manifest monitor/manifest.json --save --report reports/update-status-YYYYMMDD.md`. Review the report: `changed` ⇒ re-run the mirror pipeline soon; `error` ⇒ investigate (HTTP issue, network outage, redirect).
+- Monitoring (on-demand): run `python3 scripts/check_updates.py --manifest monitor/manifest.json --save --report reports/update-status-YYYYMMDD.md` when you need to confirm upstream freshness. Review the report: `changed` ⇒ re-run the mirror pipeline soon; `error` ⇒ investigate (HTTP issue, network outage, redirect).
 
 ## Coding Style & Naming Conventions
 - Follow PEP 8: 4-space indentation, snake_case functions, UPPER_SNAKE constants. Prefer `pathlib.Path` and `argparse` over ad-hoc utilities.
