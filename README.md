@@ -77,3 +77,4 @@ For scriptable doc sets with large index tables (e.g., AppleScript Language Guid
 - Export plain text + JSONL datasets with `python3 scripts/export_dataset.py --collections <collection>` (defaults to all collections) — see `docs/dataset-packaging.md` for details; treat `dataset/` as build output and package separately for releases (see the release checklist there).
 - Fetch standalone resources (PDFs, ZIPs, etc.) with `python3 scripts/download_file.py --url <source> --output data/<collection>/assets/<filename>`.
 - Dataset export planning lives in `docs/dataset-packaging.md`; follow it when producing plain text or JSONL corpora.
+- Manual cleanups / pending decisions are tracked in `docs/manual-followups.md`.

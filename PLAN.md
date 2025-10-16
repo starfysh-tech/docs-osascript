@@ -47,6 +47,7 @@
 - 2025-10-16: Ran `scripts/check_updates.py --save --report` post-expansion; report stored at `reports/update-status-20251016.md` with all sources unchanged.
 - 2025-10-16: Captured the AppleScript Scripting Additions Guide PDF (assets + metadata), updated nav/manifest, and verified dataset exporter emits the binary placeholder record.
 - 2025-10-16: Captured the Introduction to Scripting PDF (Classic Mac OS), storing metadata, navigation, and monitoring entries to align with other archived assets.
+- 2025-10-16: Documented outstanding manual follow-ups in `docs/manual-followups.md` (assets, publishing, QA checks).
 
 ## Task Board
 
@@ -56,7 +57,7 @@
 | ✅ | Automate page retrieval & HTML→Markdown conversion with reusable scripts. |
 | ✅ | Keep Markdown outputs aligned with original Apple doc paths per collection. |
 | ✅ | Post-process Markdown (handle external assets, review remaining HTML links) and spot-check formatting. |
-| ⬜️ | Document any gaps or manual follow-ups required. |
+| ✅ | Document any gaps or manual follow-ups required. |
 | ✅ | Mirror the Mac Automation Scripting Guide collection (see `apple-official-docs.md`). |
 | ✅ | Mirror JavaScript for Automation release notes + WWDC resources. |
 | ✅ | Capture Script Editor User Guide for offline use. |
