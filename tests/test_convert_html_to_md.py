@@ -179,3 +179,63 @@ def test_missing_anchor_is_removed(tmp_path) -> None:
     updated = md_path.read_text(encoding="utf-8")
     assert "Doc.md" in updated
     assert "#//apple_ref" not in updated
+
+
+def test_support_topic_conversion(tmp_path) -> None:
+    html_root = tmp_path / "html" / "script-editor-user-guide"
+    target_dir = html_root / "choose-a-script-language-scpedt1079"
+    target_dir.mkdir(parents=True, exist_ok=True)
+    html_path = target_dir / "mac.html"
+    html_path.write_text(
+        """<!DOCTYPE html>
+<html>
+  <body id="scpedt1079" class="ac-gn-current-support AppleTopic apd-topic">
+    <div id="article-section-wrapper">
+      <div id="article-section">
+        <div class="AppleTopic apd-topic dark-mode-enabled book book-content">
+          <div>
+            <body id="scpedt1079" class="AppleTopic apd-topic dark-mode-enabled" data-istaskopen="true">
+              <figure class="topicIcon">
+                <img src="icons/topic.png" alt="">
+              </figure>
+              <h1>Choose a script language in Script Editor on Mac</h1>
+              <p>Write scripts in multiple languages.</p>
+              <p><a href="x-help-action://openApp?bundleId=com.apple.ScriptEditor2" class="URL">Open Script Editor for me</a></p>
+              <div id="task-one" class="Task">
+                <h2 class="Name">Choose your scripting language</h2>
+                <div class="TaskBody" role="region">
+                  <ul>
+                    <li><p>Click the Script Language pop-up menu.</p></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="LinkUniversal">
+                <strong>See also</strong>
+                <a href="https://support.apple.com/guide/script-editor/change-script-editor-settings-scpedt1081/mac" class="xRef AppleTopic">
+                  Change Script Editor settings on Mac
+                </a>
+              </div>
+            </body>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+""",
+        encoding="utf-8",
+    )
+
+    markdown = run_conversion(
+        tmp_path,
+        html_path,
+        html_root=html_root,
+    )
+
+    assert "# Choose a script language in Script Editor on Mac" in markdown
+    assert "## Choose your scripting language" in markdown
+    assert "* Click the Script Language pop-up menu." in markdown
+    assert "Open Script Editor for me" in markdown
+    assert "**See also**" in markdown
+    assert "Change Script Editor settings on Mac" in markdown
+    assert "![](" not in markdown

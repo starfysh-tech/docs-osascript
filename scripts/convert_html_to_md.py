@@ -69,6 +69,35 @@ def iter_html_files(directory: Path) -> Iterable[Path]:
 ANCHOR_PLACEHOLDER_PREFIX = "@@ANCHOR@@"
 
 
+def find_main_content(soup: BeautifulSoup) -> Tag:
+    article = soup.find("article", id="contents")
+    if article:
+        return article
+    article = soup.find("article", class_="chapter")
+    if article:
+        return article
+    article = soup.find("article")
+    if article:
+        return article
+
+    support_container = soup.select_one("#article-section .book-content")
+    if support_container:
+        support_body = support_container.find(
+            "body",
+            class_=lambda value: value and "apd-topic" in value.split(),
+        )
+        if support_body and support_body.parent and support_body.parent.name not in {"html", "[document]"}:
+            return support_body
+        return support_container
+
+    support_bodies = soup.find_all("body", class_=lambda value: value and "apd-topic" in value.split())
+    for candidate in support_bodies:
+        if candidate.parent and candidate.parent.name not in {"html", "[document]"}:
+            return candidate
+
+    raise RuntimeError("Could not locate main article content.")
+
+
 def clean_article(soup: BeautifulSoup, article: Tag) -> None:
     for selector in [
         ".pageNavigationLinks",
@@ -133,6 +162,16 @@ def clean_article(soup: BeautifulSoup, article: Tag) -> None:
         new_pre.append(code_tag)
         sample.replace_with(new_pre)
 
+    for icon in article.select("figure.topicIcon"):
+        icon.decompose()
+
+    for universal in article.select("div.LinkUniversal"):
+        universal.name = "p"
+        universal.attrs.pop("class", None)
+        link = universal.find("a")
+        if link and (not link.previous_sibling or link.previous_sibling.string is None):
+            link.insert_before(soup.new_string(" "))
+
 def inject_special_note(markdown: str) -> str:
     if WWDC_NOTE in markdown:
         return markdown
@@ -156,14 +195,10 @@ def convert_file(
 ) -> Path:
     html = html_path.read_text(encoding="utf-8", errors="ignore")
     soup = BeautifulSoup(html, "html.parser")
-    article = soup.find("article", id="contents")
-    if not article:
-        article = soup.find("article", class_="chapter")
-    if not article:
-        article = soup.find("article")
-    if not article:
-        raise RuntimeError(f"Could not locate main article content in {html_path}")
-
+    try:
+        article = find_main_content(soup)
+    except RuntimeError as exc:
+        raise RuntimeError(f"Could not locate main article content in {html_path}") from exc
     clean_article(soup, article)
 
     markdown = converter.convert_soup(article)

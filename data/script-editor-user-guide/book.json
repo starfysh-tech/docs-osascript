@@ -1,0 +1,116 @@
+{
+  "title": "Script Editor User Guide",
+  "sections": [
+    {
+      "title": "Welcome",
+      "href": "welcome/mac"
+    },
+    {
+      "title": "About Script Editor",
+      "href": "about-script-editor-scpedt6935/2.11/mac/26"
+    },
+    {
+      "title": "Create and edit scripts",
+      "sections": [
+        {
+          "title": "Choose a script language",
+          "href": "choose-a-script-language-scpedt1079/2.11/mac/26"
+        },
+        {
+          "title": "Edit scripts",
+          "href": "edit-scripts-scpedt1010/2.11/mac/26"
+        },
+        {
+          "title": "Add commands using the shortcut menu",
+          "href": "add-commands-using-the-shortcut-menu-apscrpt1084/2.11/mac/26"
+        },
+        {
+          "title": "Find text in a script",
+          "href": "find-text-in-a-script-scpedt1073/2.11/mac/26"
+        },
+        {
+          "title": "View script results",
+          "href": "view-script-results-scpedt1123/2.11/mac/26"
+        },
+        {
+          "title": "Record actions",
+          "href": "record-actions-scpedt1009/2.11/mac/26"
+        },
+        {
+          "title": "Save a compiled script",
+          "href": "save-a-compiled-script-scpedt1071/2.11/mac/26"
+        },
+        {
+          "title": "Run a script",
+          "href": "run-a-script-scpedt1069/2.11/mac/26"
+        },
+        {
+          "title": "Speak text",
+          "href": "speak-text-scpedt1127/2.11/mac/26"
+        },
+        {
+          "title": "Skip forward to an element using the navigation bar",
+          "href": "skip-element-navigation-bar--scpedt1124/2.11/mac/26"
+        }
+      ]
+    },
+    {
+      "title": "More about Script Editor and scripts",
+      "sections": [
+        {
+          "title": "Set up the Log History",
+          "href": "set-up-the-log-history-scpedt1137/2.11/mac/26"
+        },
+        {
+          "title": "Track events",
+          "href": "track-events-scpedt1134/2.11/mac/26"
+        },
+        {
+          "title": "Save a script as an app",
+          "href": "save-a-script-as-an-app-scpedt1072/2.11/mac/26"
+        },
+        {
+          "title": "Identify script file types",
+          "href": "identify-script-file-types-scpedt1025/2.11/mac/26"
+        },
+        {
+          "title": "Change Script Editor settings",
+          "href": "change-script-editor-settings-scpedt1081/2.11/mac/26"
+        },
+        {
+          "title": "Access scripts using the Script menu",
+          "href": "access-scripts-using-the-script-menu-scpedt27975/2.11/mac/26"
+        },
+        {
+          "title": "Set line wrapping",
+          "href": "set-line-wrapping-scpedt1132/2.11/mac/26"
+        }
+      ]
+    },
+    {
+      "title": "Control apps with scripts",
+      "sections": [
+        {
+          "title": "View an app’s scripting dictionary",
+          "href": "view-an-apps-scripting-dictionary-scpedt1126/2.11/mac/26"
+        },
+        {
+          "title": "Add or remove apps from the scripting dictionary",
+          "href": "add-remove-apps-scripting-dictionary-scpedt11560/2.11/mac/26"
+        },
+        {
+          "title": "Automate Script Editor tasks",
+          "href": "automate-script-editor-tasks-scpedt1125/2.11/mac/26"
+        }
+      ]
+    },
+    {
+      "title": "Keyboard shortcuts",
+      "href": "keyboard-shortcuts-scrptedshtcut/2.11/mac/26"
+    },
+    {
+      "title": "Copyright and trademarks",
+      "href": "copyright-and-trademarks-apd2185d6ee5/2.11/mac/26"
+    }
+  ]
+}

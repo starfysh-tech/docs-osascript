@@ -16,6 +16,7 @@ COLLECTIONS: List[Dict[str, str]] = [
     {"id": "applescript-language-guide", "title": "AppleScript Language Guide"},
     {"id": "mac-automation-scripting-guide", "title": "Mac Automation Scripting Guide"},
     {"id": "jxa-release-notes", "title": "JXA Release Notes"},
+    {"id": "script-editor-user-guide", "title": "Script Editor User Guide"},
 ]
 
 

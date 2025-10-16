@@ -1,0 +1,197 @@
+[
+  {
+    "title": "Welcome",
+    "href": "welcome/mac",
+    "url": "https://support.apple.com/guide/script-editor/welcome/mac",
+    "page": "welcome/mac",
+    "anchor": null
+  },
+  {
+    "title": "About Script Editor",
+    "href": "about-script-editor-scpedt6935/2.11/mac/26",
+    "url": "https://support.apple.com/guide/script-editor/about-script-editor-scpedt6935/2.11/mac/26",
+    "page": "about-script-editor-scpedt6935/2.11/mac/26",
+    "anchor": null
+  },
+  {
+    "title": "Create and edit scripts",
+    "href": "",
+    "url": "https://support.apple.com/guide/script-editor/",
+    "page": null,
+    "anchor": null,
+    "children": [
+      {
+        "title": "Choose a script language",
+        "href": "choose-a-script-language-scpedt1079/2.11/mac/26",
+        "url": "https://support.apple.com/guide/script-editor/choose-a-script-language-scpedt1079/2.11/mac/26",
+        "page": "choose-a-script-language-scpedt1079/2.11/mac/26",
+        "anchor": null
+      },
+      {
+        "title": "Edit scripts",
+        "href": "edit-scripts-scpedt1010/2.11/mac/26",
+        "url": "https://support.apple.com/guide/script-editor/edit-scripts-scpedt1010/2.11/mac/26",
+        "page": "edit-scripts-scpedt1010/2.11/mac/26",
+        "anchor": null
+      },
+      {
+        "title": "Add commands using the shortcut menu",
+        "href": "add-commands-using-the-shortcut-menu-apscrpt1084/2.11/mac/26",
+        "url": "https://support.apple.com/guide/script-editor/add-commands-using-the-shortcut-menu-apscrpt1084/2.11/mac/26",
+        "page": "add-commands-using-the-shortcut-menu-apscrpt1084/2.11/mac/26",
+        "anchor": null
+      },
+      {
+        "title": "Find text in a script",
+        "href": "find-text-in-a-script-scpedt1073/2.11/mac/26",
+        "url": "https://support.apple.com/guide/script-editor/find-text-in-a-script-scpedt1073/2.11/mac/26",
+        "page": "find-text-in-a-script-scpedt1073/2.11/mac/26",
+        "anchor": null
+      },
+      {
+        "title": "View script results",
+        "href": "view-script-results-scpedt1123/2.11/mac/26",
+        "url": "https://support.apple.com/guide/script-editor/view-script-results-scpedt1123/2.11/mac/26",
+        "page": "view-script-results-scpedt1123/2.11/mac/26",
+        "anchor": null
+      },
+      {
+        "title": "Record actions",
+        "href": "record-actions-scpedt1009/2.11/mac/26",
+        "url": "https://support.apple.com/guide/script-editor/record-actions-scpedt1009/2.11/mac/26",
+        "page": "record-actions-scpedt1009/2.11/mac/26",
+        "anchor": null
+      },
+      {
+        "title": "Save a compiled script",
+        "href": "save-a-compiled-script-scpedt1071/2.11/mac/26",
+        "url": "https://support.apple.com/guide/script-editor/save-a-compiled-script-scpedt1071/2.11/mac/26",
+        "page": "save-a-compiled-script-scpedt1071/2.11/mac/26",
+        "anchor": null
+      },
+      {
+        "title": "Run a script",
+        "href": "run-a-script-scpedt1069/2.11/mac/26",
+        "url": "https://support.apple.com/guide/script-editor/run-a-script-scpedt1069/2.11/mac/26",
+        "page": "run-a-script-scpedt1069/2.11/mac/26",
+        "anchor": null
+      },
+      {
+        "title": "Speak text",
+        "href": "speak-text-scpedt1127/2.11/mac/26",
+        "url": "https://support.apple.com/guide/script-editor/speak-text-scpedt1127/2.11/mac/26",
+        "page": "speak-text-scpedt1127/2.11/mac/26",
+        "anchor": null
+      },
+      {
+        "title": "Skip forward to an element using the navigation bar",
+        "href": "skip-element-navigation-bar--scpedt1124/2.11/mac/26",
+        "url": "https://support.apple.com/guide/script-editor/skip-element-navigation-bar--scpedt1124/2.11/mac/26",
+        "page": "skip-element-navigation-bar--scpedt1124/2.11/mac/26",
+        "anchor": null
+      }
+    ]
+  },
+  {
+    "title": "More about Script Editor and scripts",
+    "href": "",
+    "url": "https://support.apple.com/guide/script-editor/",
+    "page": null,
+    "anchor": null,
+    "children": [
+      {
+        "title": "Set up the Log History",
+        "href": "set-up-the-log-history-scpedt1137/2.11/mac/26",
+        "url": "https://support.apple.com/guide/script-editor/set-up-the-log-history-scpedt1137/2.11/mac/26",
+        "page": "set-up-the-log-history-scpedt1137/2.11/mac/26",
+        "anchor": null
+      },
+      {
+        "title": "Track events",
+        "href": "track-events-scpedt1134/2.11/mac/26",
+        "url": "https://support.apple.com/guide/script-editor/track-events-scpedt1134/2.11/mac/26",
+        "page": "track-events-scpedt1134/2.11/mac/26",
+        "anchor": null
+      },
+      {
+        "title": "Save a script as an app",
+        "href": "save-a-script-as-an-app-scpedt1072/2.11/mac/26",
+        "url": "https://support.apple.com/guide/script-editor/save-a-script-as-an-app-scpedt1072/2.11/mac/26",
+        "page": "save-a-script-as-an-app-scpedt1072/2.11/mac/26",
+        "anchor": null
+      },
+      {
+        "title": "Identify script file types",
+        "href": "identify-script-file-types-scpedt1025/2.11/mac/26",
+        "url": "https://support.apple.com/guide/script-editor/identify-script-file-types-scpedt1025/2.11/mac/26",
+        "page": "identify-script-file-types-scpedt1025/2.11/mac/26",
+        "anchor": null
+      },
+      {
+        "title": "Change Script Editor settings",
+        "href": "change-script-editor-settings-scpedt1081/2.11/mac/26",
+        "url": "https://support.apple.com/guide/script-editor/change-script-editor-settings-scpedt1081/2.11/mac/26",
+        "page": "change-script-editor-settings-scpedt1081/2.11/mac/26",
+        "anchor": null
+      },
+      {
+        "title": "Access scripts using the Script menu",
+        "href": "access-scripts-using-the-script-menu-scpedt27975/2.11/mac/26",
+        "url": "https://support.apple.com/guide/script-editor/access-scripts-using-the-script-menu-scpedt27975/2.11/mac/26",
+        "page": "access-scripts-using-the-script-menu-scpedt27975/2.11/mac/26",
+        "anchor": null
+      },
+      {
+        "title": "Set line wrapping",
+        "href": "set-line-wrapping-scpedt1132/2.11/mac/26",
+        "url": "https://support.apple.com/guide/script-editor/set-line-wrapping-scpedt1132/2.11/mac/26",
+        "page": "set-line-wrapping-scpedt1132/2.11/mac/26",
+        "anchor": null
+      }
+    ]
+  },
+  {
+    "title": "Control apps with scripts",
+    "href": "",
+    "url": "https://support.apple.com/guide/script-editor/",
+    "page": null,
+    "anchor": null,
+    "children": [
+      {
+        "title": "View an app\u2019s scripting dictionary",
+        "href": "view-an-apps-scripting-dictionary-scpedt1126/2.11/mac/26",
+        "url": "https://support.apple.com/guide/script-editor/view-an-apps-scripting-dictionary-scpedt1126/2.11/mac/26",
+        "page": "view-an-apps-scripting-dictionary-scpedt1126/2.11/mac/26",
+        "anchor": null
+      },
+      {
+        "title": "Add or remove apps from the scripting dictionary",
+        "href": "add-remove-apps-scripting-dictionary-scpedt11560/2.11/mac/26",
+        "url": "https://support.apple.com/guide/script-editor/add-remove-apps-scripting-dictionary-scpedt11560/2.11/mac/26",
+        "page": "add-remove-apps-scripting-dictionary-scpedt11560/2.11/mac/26",
+        "anchor": null
+      },
+      {
+        "title": "Automate Script Editor tasks",
+        "href": "automate-script-editor-tasks-scpedt1125/2.11/mac/26",
+        "url": "https://support.apple.com/guide/script-editor/automate-script-editor-tasks-scpedt1125/2.11/mac/26",
+        "page": "automate-script-editor-tasks-scpedt1125/2.11/mac/26",
+        "anchor": null
+      }
+    ]
+  },
+  {
+    "title": "Keyboard shortcuts",
+    "href": "keyboard-shortcuts-scrptedshtcut/2.11/mac/26",
+    "url": "https://support.apple.com/guide/script-editor/keyboard-shortcuts-scrptedshtcut/2.11/mac/26",
+    "page": "keyboard-shortcuts-scrptedshtcut/2.11/mac/26",
+    "anchor": null
+  },
+  {
+    "title": "Copyright and trademarks",
+    "href": "copyright-and-trademarks-apd2185d6ee5/2.11/mac/26",
+    "url": "https://support.apple.com/guide/script-editor/copyright-and-trademarks-apd2185d6ee5/2.11/mac/26",
+    "page": "copyright-and-trademarks-apd2185d6ee5/2.11/mac/26",
+    "anchor": null
+  }
+]

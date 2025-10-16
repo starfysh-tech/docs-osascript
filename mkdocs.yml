@@ -120,3 +120,31 @@ nav:
   - Revision History: jxa-release-notes/Articles/RevisionHistory.md
   - Additional Resources:
     - WWDC 2014 Session 306 Resources: jxa-release-notes/WWDC-2014-session.md
+- Script Editor User Guide:
+  - Welcome: script-editor-user-guide/welcome/mac.md
+  - About Script Editor: script-editor-user-guide/about-script-editor-scpedt6935/2.11/mac/26.md
+  - Create and edit scripts:
+    - Choose a script language: script-editor-user-guide/choose-a-script-language-scpedt1079/2.11/mac/26.md
+    - Edit scripts: script-editor-user-guide/edit-scripts-scpedt1010/2.11/mac/26.md
+    - Add commands using the shortcut menu: script-editor-user-guide/add-commands-using-the-shortcut-menu-apscrpt1084/2.11/mac/26.md
+    - Find text in a script: script-editor-user-guide/find-text-in-a-script-scpedt1073/2.11/mac/26.md
+    - View script results: script-editor-user-guide/view-script-results-scpedt1123/2.11/mac/26.md
+    - Record actions: script-editor-user-guide/record-actions-scpedt1009/2.11/mac/26.md
+    - Save a compiled script: script-editor-user-guide/save-a-compiled-script-scpedt1071/2.11/mac/26.md
+    - Run a script: script-editor-user-guide/run-a-script-scpedt1069/2.11/mac/26.md
+    - Speak text: script-editor-user-guide/speak-text-scpedt1127/2.11/mac/26.md
+    - Skip forward to an element using the navigation bar: script-editor-user-guide/skip-element-navigation-bar--scpedt1124/2.11/mac/26.md
+  - More about Script Editor and scripts:
+    - Set up the Log History: script-editor-user-guide/set-up-the-log-history-scpedt1137/2.11/mac/26.md
+    - Track events: script-editor-user-guide/track-events-scpedt1134/2.11/mac/26.md
+    - Save a script as an app: script-editor-user-guide/save-a-script-as-an-app-scpedt1072/2.11/mac/26.md
+    - Identify script file types: script-editor-user-guide/identify-script-file-types-scpedt1025/2.11/mac/26.md
+    - Change Script Editor settings: script-editor-user-guide/change-script-editor-settings-scpedt1081/2.11/mac/26.md
+    - Access scripts using the Script menu: script-editor-user-guide/access-scripts-using-the-script-menu-scpedt27975/2.11/mac/26.md
+    - Set line wrapping: script-editor-user-guide/set-line-wrapping-scpedt1132/2.11/mac/26.md
+  - Control apps with scripts:
+    - View an app’s scripting dictionary: script-editor-user-guide/view-an-apps-scripting-dictionary-scpedt1126/2.11/mac/26.md
+    - Add or remove apps from the scripting dictionary: script-editor-user-guide/add-remove-apps-scripting-dictionary-scpedt11560/2.11/mac/26.md
+    - Automate Script Editor tasks: script-editor-user-guide/automate-script-editor-tasks-scpedt1125/2.11/mac/26.md
+  - Keyboard shortcuts: script-editor-user-guide/keyboard-shortcuts-scrptedshtcut/2.11/mac/26.md
+  - Copyright and trademarks: script-editor-user-guide/copyright-and-trademarks-apd2185d6ee5/2.11/mac/26.md

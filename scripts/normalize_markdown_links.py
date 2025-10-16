@@ -6,6 +6,7 @@ import posixpath
 import re
 from pathlib import Path
 from typing import Dict, Iterable, List, Set, Tuple
+from urllib.parse import urljoin
 
 LINK_RE = re.compile(r"(?P<prefix>!?\[[^\]]*\])\((?P<url>[^)\s]+)\)")
 
@@ -102,7 +103,12 @@ def rewrite_links(
                 rel_target = f"{rel_target}#{anchor}"
             return f"{prefix}({rel_target})"
 
-        fallback = f"https://developer.apple.com/library/archive/{normalized}"
+        root, _, remainder = normalized.partition("/")
+        if root == "script-editor-user-guide":
+            base = "https://support.apple.com/guide/script-editor/"
+            fallback = urljoin(base, remainder or "")
+        else:
+            fallback = f"https://developer.apple.com/library/archive/{normalized}"
         if anchor:
             fallback = f"{fallback}#{anchor}"
         return f"{prefix}({fallback})"

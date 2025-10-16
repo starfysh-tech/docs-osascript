@@ -8,6 +8,9 @@
 - `apple-official-docs.md` — Backlog of official Apple automation resources to mirror next.
 
 ## Build, Test, and Development Commands
+- After regenerating Markdown, run `python3 scripts/normalize_markdown_links.py --markdown-dir build --pages-file ...` (include all collection `html_pages.txt`) to keep cross-collection links and anchors accurate.
+- Regenerate the MkDocs navigation whenever new build output is introduced via `python3 scripts/generate_mkdocs_nav.py` before running `mkdocs build`.
+
 - TOC harvest: `python3 scripts/inventory_toc.py --book-json data/<collection>/book.json --base-url <url> --output-dir data/<collection>`.
 - HTML mirror: `python3 scripts/download_html.py --pages-file data/<collection>/html_pages.txt --base-url <url> --output-dir data/<collection>/html`.
 - Markdown render: `python3 scripts/convert_html_to_md.py --html-dir data/<collection>/html --output-dir build/<collection>`.

@@ -2,13 +2,13 @@
 
 ## Snapshot (updated: 2025-10-16)
 - **Current focus**
-  - Finish mirroring priority collections (Mac Automation Scripting Guide, JXA release notes, Script Editor User Guide).
-  - Stand up the change-detection framework that keeps mirrors fresh.
-  - Prepare for a public-facing catalog and LLM-ready datasets.
+  - Harden coverage across mirrored collections (Script Editor User Guide now live alongside the developer docs).
+  - Outline dataset export mechanics (plain text + JSONL) so the corpus serves downstream LLM experiments.
+  - Keep the monitoring tooling current as new collections land.
 - **Next actions**
-  1. Execute issue #2 (MkDocs + Material scaffold) — capture navigation/search requirements and wire the site shell to `build/`.
-  2. Outline dataset packaging (plain text + JSONL export strategy) once the catalog scaffold exists.
-  3. Mirror the Script Editor User Guide to round out the core collections.
+  1. Draft the dataset packaging plan (scope inputs, chunking rules, automation entry points).
+  2. Run the next change-detection dry run with the expanded manifest and capture a `reports/update-status-YYYYMMDD.md`.
+  3. Choose the next backlog doc set and sketch the conversion fixtures it will need.
 - **Blockers / decisions pending**
   - Determine how to handle large WWDC video assets (link-out vs. local copy).
   - Decide on the storage/export format for man-page captures (plain text vs. Markdown).
@@ -37,9 +37,11 @@
 - 2025-10-16: Defined monitoring thresholds/cadence (weekly Monday 09:00 UTC checks), noted WWDC video helper script approach (download on demand), and captured initial report in `reports/update-status-YYYYMMDD.md`.
 - 2025-10-16: Added pytest coverage for inline code + definition list conversions, mirrored the JXA release notes, archived the Session 306 PDF, and linked to a curated WWDC resources note (note injection now automated during conversion with matching validator suppression).
 - 2025-10-16: Scoped MkDocs + Material scaffold (issue #2); MKDocs nav will surface each mirrored collection landing page plus a custom index, powered by `build/` as `docs_dir`.
-- 2025-10-16: Built `scripts/generate_mkdocs_nav.py` to auto-generate the MkDocs navigation from `toc_hierarchy.json` and pull in extra Markdown (e.g., WWDC resources); remaining MkDocs warnings stem from Apple anchors targeting external docs.
+- 2025-10-16: Built `scripts/generate_mkdocs_nav.py` to auto-generate the MkDocs navigation from `toc_hierarchy.json` and pull in extra Markdown (e.g., WWDC resources); MkDocs warnings are cleared after adding explicit index anchors.
 - 2025-10-16: Preserved Apple `//apple_ref` anchors during conversion and expanded link normalization to rewrite cross-collection references; internal links now resolve across mirrored sets.
 - 2025-10-16: Converted unresolved cross-collection anchors to page-level links and rewrote unknown relative paths to the Apple archive domain; MkDocs now builds without warnings.
+- 2025-10-16: Added Script Editor-specific conversion tests, taught the pipeline to parse Apple Support layouts, mirrored the Script Editor User Guide (Markdown + assets), refreshed link normalization, and wired the collection into navigation + monitoring.
+- 2025-10-16: Authored `docs/dataset-packaging.md` capturing the plain text / JSONL export plan and updated the validator to recognize fenced code blocks so monitoring spot checks remain reliable.
 
 ## Task Board
 
@@ -52,7 +54,7 @@
 | ⬜️ | Document any gaps or manual follow-ups required. |
 | ✅ | Mirror the Mac Automation Scripting Guide collection (see `apple-official-docs.md`). |
 | ✅ | Mirror JavaScript for Automation release notes + WWDC resources. |
-| ⬜️ | Capture Script Editor User Guide for offline use. |
+| ✅ | Capture Script Editor User Guide for offline use. |
 | ⬜️ | Implement change detection (`monitor/manifest.json` + `scripts/check_updates.py`). |
 | ⬜️ | Publish GitHub Pages catalog sourced from `build/`. |
 | ⬜️ | Generate LLM-ready datasets (plain text + JSONL chunks, optional embeddings). |
@@ -84,6 +86,6 @@
 - **Link normalization**: After regenerating Markdown, run `python3 scripts/normalize_markdown_links.py --markdown-dir build --pages-file …` so cross-collection links drop missing anchors and off-repo references point to `https://developer.apple.com/library/archive/`.
 
 ## Next Up
-1. Execute issue #1 (mirror JXA release notes + WWDC resources) with tests, pipeline run, and monitoring update.
-2. Draft the MkDocs/Material catalog structure (navigation + search expectations) before wiring up GitHub Pages.
-3. Outline dataset packaging (plain text + JSONL export strategy) once the catalog scaffold exists.
+1. Outline the dataset packaging plan for the mirrored corpus (plain text + JSONL) and log initial decisions.
+2. Run `python3 scripts/check_updates.py --manifest monitor/manifest.json --save --report reports/update-status-YYYYMMDD.md` with the Script Editor pages included.
+3. Select the next backlog doc set (see `apple-official-docs.md`) and scope any conversion/validation fixtures it will need.
