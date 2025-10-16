@@ -1,0 +1,34 @@
+site_name: Apple Automation Archive
+site_description: Offline mirrors of Apple's AppleScript and automation documentation.
+site_url: https://starfysh-tech.github.io/docs-osascript/
+repo_name: starfysh-tech/docs-osascript
+repo_url: https://github.com/starfysh-tech/docs-osascript
+docs_dir: build
+use_directory_urls: false
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - search.share
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+nav:
+  - Home: index.md
+  - Collections:
+      - AppleScript Overview: applescript-overview/AppleScriptX.md
+      - AppleScript Language Guide: applescript-language-guide/introduction/ASLR_intro.md
+      - Mac Automation Scripting Guide: mac-automation-scripting-guide/index.md
+      - JXA Release Notes: jxa-release-notes/Articles/Introduction.md

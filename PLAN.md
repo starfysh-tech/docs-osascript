@@ -6,9 +6,9 @@
   - Stand up the change-detection framework that keeps mirrors fresh.
   - Prepare for a public-facing catalog and LLM-ready datasets.
 - **Next actions**
-  1. Wrap issue #1 (JXA release notes + WWDC resources): document manual additions, finalize validation notes, and commit.
-  2. Begin the MkDocs (Material) scaffold and capture navigation/search requirements.
-  3. Outline dataset packaging (plain text + JSONL export strategy) once the catalog scaffold exists.
+  1. Execute issue #2 (MkDocs + Material scaffold) — capture navigation/search requirements and wire the site shell to `build/`.
+  2. Outline dataset packaging (plain text + JSONL export strategy) once the catalog scaffold exists.
+  3. Mirror the Script Editor User Guide to round out the core collections.
 - **Blockers / decisions pending**
   - Determine how to handle large WWDC video assets (link-out vs. local copy).
   - Decide on the storage/export format for man-page captures (plain text vs. Markdown).
@@ -36,6 +36,7 @@
 - 2025-10-15: Mirrored the Mac Automation Scripting Guide (`data/mac-automation-scripting-guide/`, `build/mac-automation-scripting-guide/`) and enhanced conversion/validation to handle complex code listings.
 - 2025-10-16: Defined monitoring thresholds/cadence (weekly Monday 09:00 UTC checks), noted WWDC video helper script approach (download on demand), and captured initial report in `reports/update-status-YYYYMMDD.md`.
 - 2025-10-16: Added pytest coverage for inline code + definition list conversions, mirrored the JXA release notes, archived the Session 306 PDF, and linked to a curated WWDC resources note (note injection now automated during conversion with matching validator suppression).
+- 2025-10-16: Scoped MkDocs + Material scaffold (issue #2); MKDocs nav will surface each mirrored collection landing page plus a custom index, powered by `build/` as `docs_dir`.
 
 ## Task Board
 
@@ -47,7 +48,7 @@
 | ✅ | Post-process Markdown (handle external assets, review remaining HTML links) and spot-check formatting. |
 | ⬜️ | Document any gaps or manual follow-ups required. |
 | ✅ | Mirror the Mac Automation Scripting Guide collection (see `apple-official-docs.md`). |
-| ⬜️ | Mirror JavaScript for Automation release notes + WWDC resources. |
+| ✅ | Mirror JavaScript for Automation release notes + WWDC resources. |
 | ⬜️ | Capture Script Editor User Guide for offline use. |
 | ⬜️ | Implement change detection (`monitor/manifest.json` + `scripts/check_updates.py`). |
 | ⬜️ | Publish GitHub Pages catalog sourced from `build/`. |
@@ -74,6 +75,7 @@
 - **Catalog tooling**: MkDocs + Material theme will power the GitHub Pages site; capture structural notes in repo issues/docs as the scaffold progresses.
 - **Monitoring cadence**: Run `python3 scripts/check_updates.py --manifest monitor/manifest.json --save --report reports/update-status-YYYYMMDD.md` every Monday at 09:00 UTC (and before major releases). Exit code `3` (changed) ⇒ re-run the mirror pipeline; exit code `2` (error) ⇒ investigate (HTTP issue, network outage).
   - The WWDC Session 306 pointer and supporting note are generated automatically when converting the JXA release notes set.
+- **MkDocs scaffold (issue #2)**: Use `build/` as `docs_dir`, create a lightweight `index.md` landing page, and expose each collection via its primary landing Markdown (`AppleScriptX.md`, `ASLR_intro.md`, `index.md`, `Articles/Introduction.md`). Future enhancements: richer nav hierarchy, search tuning, theme customization.
 
 ## Next Up
 1. Execute issue #1 (mirror JXA release notes + WWDC resources) with tests, pipeline run, and monitoring update.
