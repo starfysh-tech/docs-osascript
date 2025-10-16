@@ -48,6 +48,7 @@
 - 2025-10-16: Captured the AppleScript Scripting Additions Guide PDF (assets + metadata), updated nav/manifest, and verified dataset exporter emits the binary placeholder record.
 - 2025-10-16: Captured the Introduction to Scripting PDF (Classic Mac OS), storing metadata, navigation, and monitoring entries to align with other archived assets.
 - 2025-10-16: Added GitHub Actions workflow (`.github/workflows/pages.yml`) to publish the MkDocs site to GitHub Pages automatically.
+- 2025-10-16: Updated the MkDocs landing page to link against local mirrors/archived PDFs and added `scripts/validate_site_links.py` for quick link checks.
 - 2025-10-16: Documented outstanding manual follow-ups in `docs/manual-followups.md` (assets, publishing, QA checks).
 
 ## Task Board
