@@ -12,6 +12,12 @@ from markdownify import MarkdownConverter
 class DocsMarkdownConverter(MarkdownConverter):
     """Custom converter with consistent heading and list styles."""
 
+    def convert_code(self, el, text, parent_tags):  # type: ignore[override]
+        ticks = "`"
+        if "`" in text:
+            return f"`` {text} ``"
+        return f"{ticks}{text}{ticks}"
+
 
 def make_converter() -> DocsMarkdownConverter:
     return DocsMarkdownConverter(heading_style="ATX", bullets="*")
@@ -29,6 +35,7 @@ def clean_article(soup: BeautifulSoup, article: Tag) -> None:
         "#pediaWindow",
         ".jumpNav",
         ".feedback",
+        "#next_previous",
     ]:
         for el in article.select(selector):
             el.decompose()
@@ -44,6 +51,21 @@ def clean_article(soup: BeautifulSoup, article: Tag) -> None:
         for aside in blockquote.find_all("aside"):
             aside.unwrap()
         box.replace_with(blockquote)
+
+    # Convert .note blocks (common in Mac Automation docs)
+    for note in article.select("div.note"):
+        blockquote = soup.new_tag("blockquote")
+        aside = note.find("aside")
+        source = aside if aside else note
+        title = source.find(class_="aside-title")
+        if title:
+            strong = soup.new_tag("strong")
+            strong.string = title.get_text(strip=True)
+            blockquote.append(strong)
+            title.decompose()
+        for child in list(source.contents):
+            blockquote.append(child.extract())
+        note.replace_with(blockquote)
 
     # Remove anchor placeholders with no visible text and no href
     for anchor in list(article.find_all("a")):
@@ -61,11 +83,18 @@ def convert_file(html_path: Path, converter: DocsMarkdownConverter, html_root: P
     soup = BeautifulSoup(html, "html.parser")
     article = soup.find("article", id="contents")
     if not article:
+        article = soup.find("article", class_="chapter")
+    if not article:
+        article = soup.find("article")
+    if not article:
         raise RuntimeError(f"Could not locate main article content in {html_path}")
 
     clean_article(soup, article)
 
     markdown = converter.convert_soup(article)
+    markdown = markdown.replace("| * ", "| ")
+    markdown = markdown.replace(" * |", " |")
+    markdown = markdown.replace(". * ", ". ")
     markdown = markdown.replace("\xa0", " ").strip() + "\n"
 
     relative = html_path.relative_to(html_root)

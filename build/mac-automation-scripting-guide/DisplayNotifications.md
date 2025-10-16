@@ -1,0 +1,43 @@
+## Displaying Notifications
+
+Notification Center offers another opportunity for providing feedback during script execution. Use the Standard Additions scripting addition’s `display notification` command to show notifications, such as status updates as files are processed. Notifications are shown as alerts or banners, depending on the user’s settings in System Preferences > Notifications. See Figure 24-1 and Figure 24-2.
+
+**Figure 24-1**A banner notification
+![image: ../Art/notification-banner_2x.png](Art/notification-banner_2x.png)
+
+
+**Figure 24-2**An alert notification
+![image: ../Art/notification-alert_2x.png](Art/notification-alert_2x.png)
+
+To show a notification, provide the `display notification` command with a string to display. Optionally, provide values for the `with title`, `subtitle`, and `sound name` parameters to provide additional information and an audible alert when the notification appears, as shown in Listing 24-1 and Listing 24-2.
+
+**APPLESCRIPT**
+
+[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=display%20notification%20%22All%20graphics%20have%20been%20converted.%22%20with%20title%20%22My%20Graphic%20Processing%20Script%22%20subtitle%20%22Processing%20is%20complete.%22%20sound%20name%20%22Frog%22)
+
+**Listing 24-1**AppleScript: Displaying a notification
+
+1. `display notification "All graphics have been converted." with title "My Graphic Processing Script" subtitle "Processing is complete." sound name "Frog"`
+
+**JAVASCRIPT**
+
+[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0A%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Aapp.displayNotification%28%22All%20graphics%20have%20been%20converted.%22%2C%20%7B%0A%20%20%20%20withTitle%3A%20%22My%20Graphic%20Processing%20Script%22%2C%0A%20%20%20%20subtitle%3A%20%22Processing%20is%20complete.%22%2C%0A%20%20%20%20soundName%3A%20%22Frog%22%0A%7D%29)
+
+**Listing 24-2**JavaScript: Displaying a notification
+
+1. `var app = Application.currentApplication()`
+2. ` `
+3. `app.includeStandardAdditions = true`
+4. ` `
+5. `app.displayNotification("All graphics have been converted.", {`
+6. ` withTitle: "My Graphic Processing Script",`
+7. ` subtitle: "Processing is complete.",`
+8. ` soundName: "Frog"`
+9. `})`
+
+> **Note**
+>
+>
+> After using a script to display a notification, the script or Script Editor (if the script is run from within Script Editor) is added to the list of notifying apps in System Preferences > Notifications. There, you can configure options, such as whether to display notifications as alerts or banners.
+>
+> Clicking the Show button in an alert-style notification opens the app that displayed the notification. For a script app, the action of opening the app again triggers the `run` handler of the script, potentially causing the script to begin processing a second time. Keep this in mind, and add code to your script to handle this scenario, if appropriate.

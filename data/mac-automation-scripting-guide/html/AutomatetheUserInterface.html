@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+  <title>Mac Automation Scripting Guide: Automating the User Interface</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1282/CSS/style-1.6.3.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1282/CSS/feedback-1.6.3.css" />
+  <meta charset='utf-8'> 
+<meta id="j-version" name="j-version" content="" />
+<meta id="build" name="build" content="c1e4c7a89af8f899a21cfa81fc33ba42" />
+<meta id="document-version" name="document-version" content="1.1.0" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages &amp; Utilities}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40016239" />
+<meta id="chapterId" name="chapterId" content="TP40016239-CH69">
+<meta id="book-title" name="book-title" content="Mac Automation Scripting Guide" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2016-06-13" />
+<meta id="description" name="description" content="New document." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+<meta id="resources-uri" name="resources-uri" content="../../../../Resources/1282">
+<link id="book-index-page" rel="Start" title="" type="text/html" href="./index.html">
+<!-- , next_chapter: next_chapter, previous_chapter: previous_chapter -->
+<link id="next-page" rel="Next" type="text/html" href="">
+<link id="previous-page" rel="Prev" type="text/html" href="">
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta id="platforms" name="platforms" content="OS X">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/">Documentation Archive
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/1282/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="https://developer.apple.com">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">Mac Automation Scripting Guide</span>
+    </p>
+    <form id="search" class="hideInXcode" method="get" action="/search/index.php" accept-charset="utf-8" autocomplete="off">
+  <input type="search" id="ssi_SearchField" placeholder="Search Documentation Archive" name="q" autocomplete="off" tabindex="2" />
+</form>
+
+      
+   
+   
+
+
+
+    <img id="shortstack" src="../../../../Resources/1282/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav id="navigator" class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH2-SW1"
+            class="part-name">
+            <a href="index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH56-SW1">Mac Scripting Essentials</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH56-SW1">About Mac Scripting</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="HowMacScriptingWorks.html#//apple_ref/doc/uid/TP40016239-CH73-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH73-SW1">How Mac Scripting Works</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TypesofScripts.html#//apple_ref/doc/uid/TP40016239-CH72-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH72-SW1">Types of Scripts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="AboutthisGuide.html#//apple_ref/doc/uid/TP40016239-CH71-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH71-SW1">About this Guide</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH10-SW1"
+            class="part-name">
+            <a href="GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH5-SW1">Starting Scripting</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH5-SW1">Getting to Know Script Editor</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CreateaScript.html#//apple_ref/doc/uid/TP40016239-CH12-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH12-SW1">Creating a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SaveaScript.html#//apple_ref/doc/uid/TP40016239-CH13-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH13-SW1">Saving a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RunaScript.html#//apple_ref/doc/uid/TP40016239-CH14-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH14-SW1">Running a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH70-SW1">Configuring Scripting Preferences</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH9-SW1"
+            class="part-name">
+            <a href="AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH75-SW2" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH75-SW2">Accessing Scripting Terminology</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH75-SW2" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH75-SW2">About Scripting Terminology</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="OpenaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH76-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH76-SW1">Opening a Scripting Dictionary</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH77-SW1">Navigating a Scripting Dictionary</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH74-SW1"
+            class="part-name">
+            <a href="UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH52-SW1">Modularizing Code</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH52-SW1">Using Handlers/Functions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UseScriptLibraries.html#//apple_ref/doc/uid/TP40016239-CH36-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH36-SW1">Using Script Libraries</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH57-SW1"
+            class="part-name">
+            <a href="ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH34-SW1">Working with Files and Folders</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH34-SW1">Referencing Files and Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ReadandWriteFiles.html#//apple_ref/doc/uid/TP40016239-CH58-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH58-SW1">Reading and Writing Files</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ProcessDroppedFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH53-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH53-SW1">Processing Dropped Files and Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH39-SW1">Watching Folders</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH59-SW1"
+            class="part-name">
+            <a href="ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW1">Working with Text, Numbers, and Lists</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW1">Manipulating Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH47-SW1">Manipulating Numbers</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH48-SW1">Manipulating Lists of Items</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH60-SW1"
+            class="part-name">
+            <a href="DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH15-SW1">Interacting with Users</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH15-SW1">Displaying Dialogs and Alerts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforText.html#//apple_ref/doc/uid/TP40016239-CH80-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH80-SW1">Prompting for Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DisplayNotifications.html#//apple_ref/doc/uid/TP40016239-CH61-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH61-SW1">Displaying Notifications</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SpeakText.html#//apple_ref/doc/uid/TP40016239-CH62-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH62-SW1">Speaking Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH81-SW1">Prompting for Files or Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaFileName.html#//apple_ref/doc/uid/TP40016239-CH82-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH82-SW1">Prompting for a File Name</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaChoicefromaList.html#//apple_ref/doc/uid/TP40016239-CH83-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH83-SW1">Prompting for a Choice from a List</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaColor.html#//apple_ref/doc/uid/TP40016239-CH86-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH86-SW1">Prompting for a Color</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DisplayProgress.html#//apple_ref/doc/uid/TP40016239-CH37-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH37-SW1">Displaying Progress</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH63-SW1"
+            class="part-name">
+            <a href="ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH49-SW1">Working with HTML and URLs</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH49-SW1">Converting RGB to HTML Color</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="EncodeandDecodeText.html#//apple_ref/doc/uid/TP40016239-CH51-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH51-SW1">Encoding and Decoding Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ParseHTML.html#//apple_ref/doc/uid/TP40016239-CH50-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH50-SW1">Parsing HTML</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RemoveMarkupfromHTML.html#//apple_ref/doc/uid/TP40016239-CH64-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH64-SW1">Removing HTML Markup from Text</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH65-SW1"
+            class="part-name">
+            <a href="WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH66-SW1">Working with Data</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH66-SW1">Working with Property List Files</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WorkwithXML.html#//apple_ref/doc/uid/TP40016239-CH67-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH67-SW1">Working with XML</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH35-SW1"
+            class="part-name nav-part-active open-part">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH69-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH69-SW1">Performing Common Scripting Tasks</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter nav-current-chapter">
+              	<a href="#//apple_ref/doc/uid/TP40016239-CH69-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH69-SW1">Automating the User Interface</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH20-SW1">Manipulating Images</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CallCommandLineUtilities.html#//apple_ref/doc/uid/TP40016239-CH43-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH43-SW1">Calling Command-Line Tools</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH68-SW1"
+            class="part-name">
+            <a href="MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH46-SW1">Extending Apps and Processes</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH46-SW1">Making a Systemwide Service</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH7-SW1">Using the Systemwide Script Menu</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UseDictationtoRunScripts.html#//apple_ref/doc/uid/TP40016239-CH87-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH87-SW1">Using Dictation to Run Scripts</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH78-SW1"
+            class="part-name">
+            <a href="AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH79-SW1">Appendixes</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH79-SW1">Objective-C to AppleScript Quick Translation Guide</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="revision-history"
+            class="part-name">
+          <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Revision History</a>
+          <ul class="nav-chapters">
+            <li class="nav-chapter">
+              <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Document Revision History</a>
+            </li>
+          </ul>
+        </li>
+    </ul>
+</nav>
+
+      <menu id="bashful" type="toolbar">
+  <div class="shield"></div>
+  <menuitem id="jump_to" class="menu-bar-item closed">
+  <span>On This Page</span>
+  <div class="chevron">
+    <div class="chevy chevron-left"></div>
+    <div class="chevy chevron-right"></div>
+  </div>
+  <menu type="list" class="details">
+      <ul class="list-bullet">
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH69-SW12">Enabling User Interface Scripting</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH69-SW15">Targeting an App</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH69-SW16">Clicking a Button</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH69-SW17">Choosing a Menu Item</a>
+          </li>
+      </ul>
+  </menu>
+</menuitem>
+
+</menu>
+<div class="pixel-line"></div>
+<div class="rubber-band-gap"></div>
+<article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40016239-CH69"></a><a name="//apple_ref/doc/uid/TP40016239-CH69-SW1"></a>
+      <a name="//apple_ref/doc/uid/TP40016239-CH35"></a><a name="//apple_ref/doc/uid/TP40016239-CH35-SW1"></a>
+
+  <h2 class='chapter-name'>Automating the User Interface</h2>
+
+
+  
+  	<section class="section">
+  		<p class="para">
+  
+</p>
+<p class="para">
+  Unfortunately, not every Mac app has scripting support, and those that do may not always have scripting support for every task you want to automate. You can often work around such limitations, however, by writing a user interface script, commonly called a UI or GUI script. A user interface script simulates user interaction, such as mouse clicks and keystrokes, allowing the script to select menu items, push buttons, enter text into text fields, and more.
+</p>
+
+		</section> 
+
+
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH69-SW12"></a>
+  <h3 class="section-name" tabindex="0">Enabling User Interface Scripting</h3>
+  <p class="para">
+  User interface scripting relies upon the OS X accessibility frameworks that provide alternative methods of querying and controlling the interfaces of apps and the system. By default, accessibility control of apps is disabled. For security and privacy reasons, the user must manually enable it on an app-by-app (including script apps) basis.
+</p><section class="task">
+  <a name="//apple_ref/doc/uid/TP40016239-CH69-SW13"></a>
+  <div class='task-name'><strong class="inline-head">To enable accessibility control for an app</strong></div>
+  <ol class="sequential-steps list-number">
+  <li class="step"><div class='action'>
+	<p class="para">
+  Launch System Preferences and click Security &amp; Privacy.
+</p>
+</div></li><li class="step"><div class='action'>
+	<p class="para">
+  Click the Privacy tab.
+</p>
+</div></li><li class="step"><div class='action'>
+	<p class="para">
+  Click Accessibility.
+</p>
+</div></li><li class="step"><div class='action'>
+	<p class="para">
+  Click the Add button (+).
+</p>
+</div></li><li class="step"><div class='action'>
+	<p class="para">
+  Choose an app and click Open.
+</p>
+</div></li><li class="step"><div class='action'>
+	<p class="para">
+  Select the checkbox to the left of the app.
+</p>
+</div><div class='elaborations'>
+	<figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="Art/systempreferences_security_accessibility_2x.png" alt="image: ../Art/systempreferences_security_accessibility_2x.png" width="500" height="422" />
+</figure>
+</div></li>
+</ol>
+</section><p class="para">
+  When running an app that requires accessibility control for the first time, the system prompts you to enable it. See <span class="x-name-no-link">Figure 37-1</span>.
+</p><figure class="figure">
+  <a name="//apple_ref/doc/uid/TP40016239-CH69-SW2"></a>
+  <span class="caption"><strong class="caption-number">Figure 37-1</strong>An accessibility control prompt</span>
+  <img src="Art/accessibility_alert1_2x.png" alt="image: ../Art/accessibility_alert1_2x.png" width="500" height="252" />
+</figure><p class="para">
+  Attempting to run an app that has not been given permission to use accessibility features results in an error. See <span class="x-name-no-link">Figure 37-2</span>.
+</p><figure class="figure">
+  <a name="//apple_ref/doc/uid/TP40016239-CH69-SW3"></a>
+  <span class="caption"><strong class="caption-number">Figure 37-2</strong>An accessibility control error</span>
+  <img src="Art/accessibility_alert2_2x.png" alt="image: ../Art/accessibility_alert2_2x.png" width="500" height="251" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH69-SW14"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">To run a user interface script in Script Editor, you must enable accessibility for Script Editor.
+    	</p>
+    <p class="para">
+  Admin credentials are required to perform enable user interface scripting.
+</p>
+
+  </aside>
+</div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH69-SW15"></a>
+  <h3 class="section-name" tabindex="0">Targeting an App</h3>
+  <p class="para">
+  User interface scripting terminology is found in the Processes Suite of the System Events scripting dictionary. This suite includes terminology for interacting with most types of user interface elements, including windows, buttons, checkboxes, menus, radio buttons, text fields, and more. In System Events, the <code class="code-voice">process</code> class represents a running app. <span class="x-name-no-link">Listing 37-1</span> shows how to target an app using this class.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=tell%20application%20%22System%20Events%22%0A%20%20%20%20tell%20process%20%22Safari%22%0A%20%20%20%20%20%20%20%20--%20Perform%20user%20interface%20scripting%20tasks%0A%20%20%20%20end%20tell%0Aend%20tell">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH69-SW4"></a>
+    <span class="caption"><strong class="caption-number">Listing 37-1</strong>AppleScript: Targeting an app for user interface scripting</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">tell application &quot;System Events&quot;</code></li>
+            <li><code class="code-voice">    tell process &quot;Safari&quot;</code></li>
+            <li><code class="code-voice">        -- Perform user interface scripting tasks</code></li>
+            <li><code class="code-voice">    end tell</code></li>
+            <li><code class="code-voice">end tell</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  To control the user interface of an app, you must first inspect the app and determine its element hierarchy. This can be done by querying the app. For example, <span class="x-name-no-link">Listing 37-2</span> asks Safari for a list of menus in the menu bar.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=tell%20application%20%22System%20Events%22%0A%20%20%20%20tell%20process%20%22Safari%22%0A%20%20%20%20%20%20%20%20name%20of%20every%20menu%20of%20menu%20bar%201%0A%20%20%20%20end%20tell%0Aend%20tell%0A--%3E%20Result%3A%20%7B%22Apple%22%2C%20%22Safari%22%2C%20%22File%22%2C%20%22Edit%22%2C%20%22View%22%2C%20%22History%22%2C%20%22Bookmarks%22%2C%20%22Develop%22%2C%20%22Window%22%2C%20%22Help%22%7D">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH69-SW5"></a>
+    <span class="caption"><strong class="caption-number">Listing 37-2</strong>AppleScript: Querying an app for user interface element information</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">tell application &quot;System Events&quot;</code></li>
+            <li><code class="code-voice">    tell process &quot;Safari&quot;</code></li>
+            <li><code class="code-voice">        name of every menu of menu bar 1</code></li>
+            <li><code class="code-voice">    end tell</code></li>
+            <li><code class="code-voice">end tell</code></li>
+            <li><code class="code-voice">--&gt; Result: {&quot;Apple&quot;, &quot;Safari&quot;, &quot;File&quot;, &quot;Edit&quot;, &quot;View&quot;, &quot;History&quot;, &quot;Bookmarks&quot;, &quot;Develop&quot;, &quot;Window&quot;, &quot;Help&quot;}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  Accessibility Inspector (<span class="x-name-no-link">Figure 37-3</span>) makes it even easier to identify user interface element information. This app is included with Xcode. To use it, open Xcode and select Xcode &gt; Open Developer Tool &gt; Accessibility Inspector.
+</p><figure class="figure">
+  <a name="//apple_ref/doc/uid/TP40016239-CH69-SW6"></a>
+  <span class="caption"><strong class="caption-number">Figure 37-3</strong>Accessibility Inspector</span>
+  <img src="Art/accessibilityinspector_2x.png" alt="image: ../Art/accessibilityinspector_2x.png" width="280" height="527" />
+</figure><p class="para">
+  Once you know how an element fits into an interface, you  target it within that hierarchy. For example, <code class="code-voice">button X of window Y of process Z</code>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH69-SW16"></a>
+  <h3 class="section-name" tabindex="0">Clicking a Button</h3>
+  <p class="para">
+  Use the <code class="code-voice">click</code> command to click a button. <span class="x-name-no-link">Listing 37-3</span> clicks a button in the Safari toolbar to toggle the sidebar between open and closed.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=tell%20application%20%22System%20Events%22%0A%20%20%20%20tell%20process%20%22Safari%22%0A%20%20%20%20%20%20%20%20tell%20toolbar%20of%20window%201%0A%20%20%20%20%20%20%20%20%20%20%20%20click%20%28first%20button%20where%20its%20accessibility%20description%20%3D%20%22Sidebar%22%29%0A%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20end%20tell%0Aend%20tell%0A--%3E%20Result%3A%20%7Bbutton%201%20of%20toolbar%201%20of%20window%20%22AppleScript%3A%20Graphic%20User%20Interface%20%28GUI%29%20Scripting%22%20of%20application%20process%20%22Safari%22%20of%20application%20%22System%20Events%22%7D">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH69-SW7"></a>
+    <span class="caption"><strong class="caption-number">Listing 37-3</strong>AppleScript: Clicking a button</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">tell application &quot;System Events&quot;</code></li>
+            <li><code class="code-voice">    tell process &quot;Safari&quot;</code></li>
+            <li><code class="code-voice">        tell toolbar of window 1</code></li>
+            <li><code class="code-voice">            click (first button where its accessibility description = &quot;Sidebar&quot;)</code></li>
+            <li><code class="code-voice">        end tell</code></li>
+            <li><code class="code-voice">    end tell</code></li>
+            <li><code class="code-voice">end tell</code></li>
+            <li><code class="code-voice">--&gt; Result: {button 1 of toolbar 1 of window &quot;AppleScript: Graphic User Interface (GUI) Scripting&quot; of application process &quot;Safari&quot; of application &quot;System Events&quot;}</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH69-SW17"></a>
+  <h3 class="section-name" tabindex="0">Choosing a Menu Item</h3>
+  <p class="para">
+  Menu items can have a fairly deep hierarchy within the interface of an app. A menu item generally resides within a menu, which resides within a menu bar. In scripting, they must be addressed as such. <span class="x-name-no-link">Listing 37-4</span> selects the Pin Tab menu item in the Window menu of Safari.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=tell%20application%20%22System%20Events%22%0A%20%20%20%20tell%20process%20%22Safari%22%0A%20%20%20%20%20%20%20%20set%20frontmost%20to%20true%0A%20%20%20%20%20%20%20%20click%20menu%20item%20%22Pin%20Tab%22%20of%20menu%20%22Window%22%20of%20menu%20bar%201%0A%20%20%20%20end%20tell%0Aend%20tell%0A--%3E%20Result%3A%20menu%20item%20%22Pin%20Tab%22%20of%20menu%20%22Window%22%20of%20menu%20bar%20item%20%22Window%22%20of%20menu%20bar%201%20of%20application%20process%20%22Safari%22%20of%20application%20%22System%20Events%22">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH69-SW8"></a>
+    <span class="caption"><strong class="caption-number">Listing 37-4</strong>AppleScript: Choosing a menu item</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">tell application &quot;System Events&quot;</code></li>
+            <li><code class="code-voice">    tell process &quot;Safari&quot;</code></li>
+            <li><code class="code-voice">        set frontmost to true</code></li>
+            <li><code class="code-voice">        click menu item &quot;Pin Tab&quot; of menu &quot;Window&quot; of menu bar 1</code></li>
+            <li><code class="code-voice">    end tell</code></li>
+            <li><code class="code-voice">end tell</code></li>
+            <li><code class="code-voice">--&gt; Result: menu item &quot;Pin Tab&quot; of menu &quot;Window&quot; of menu bar item &quot;Window&quot; of menu bar 1 of application process &quot;Safari&quot; of application &quot;System Events&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH69-SW18"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">Scripting the user interface of an app can be tedious and repetitious. To streamline the process, consider creating handlers to perform common functions. For example, <span class="x-name-no-link">Listing 37-5</span> shows a handler that can be used to choose any menu item of any menu in any running app.
+    	</p>
+    <p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20chooseMenuItem%28theAppName%2C%20theMenuName%2C%20theMenuItemName%29%0A%20%20%20%20try%0A%20%20%20%20%20%20%20%20--%20Bring%20the%20target%20app%20to%20the%20front%0A%20%20%20%20%20%20%20%20tell%20application%20theAppName%0A%20%20%20%20%20%20%20%20%20%20%20%20activate%0A%20%20%20%20%20%20%20%20end%20tell%0A%0A%20%20%20%20%20%20%20%20--%20Target%20the%20app%0A%20%20%20%20%20%20%20%20tell%20application%20%22System%20Events%22%0A%20%20%20%20%20%20%20%20%20%20%20%20tell%20process%20theAppName%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20--%20Target%20the%20menu%20bar%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20tell%20menu%20bar%201%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20--%20Target%20the%20menu%20by%20name%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20tell%20menu%20bar%20item%20theMenuName%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20tell%20menu%20theMenuName%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20--%20Click%20the%20menu%20item%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20click%20menu%20item%20theMenuItemName%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20%20%20%20%20return%20true%0A%20%20%20%20on%20error%0A%20%20%20%20%20%20%20%20return%20false%0A%20%20%20%20end%20try%0Aend%20chooseMenuItem">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH69-SW9"></a>
+    <span class="caption"><strong class="caption-number">Listing 37-5</strong>AppleScript: A handler that chooses a menu item</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on chooseMenuItem(theAppName, theMenuName, theMenuItemName)</code></li>
+            <li><code class="code-voice">    try</code></li>
+            <li><code class="code-voice">        -- Bring the target app to the front</code></li>
+            <li><code class="code-voice">        tell application theAppName</code></li>
+            <li><code class="code-voice">            activate</code></li>
+            <li><code class="code-voice">        end tell</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Target the app</code></li>
+            <li><code class="code-voice">        tell application &quot;System Events&quot;</code></li>
+            <li><code class="code-voice">            tell process theAppName</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">                -- Target the menu bar</code></li>
+            <li><code class="code-voice">                tell menu bar 1</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">                    -- Target the menu by name</code></li>
+            <li><code class="code-voice">                    tell menu bar item theMenuName</code></li>
+            <li><code class="code-voice">                        tell menu theMenuName</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">                            -- Click the menu item</code></li>
+            <li><code class="code-voice">                            click menu item theMenuItemName</code></li>
+            <li><code class="code-voice">                        end tell</code></li>
+            <li><code class="code-voice">                    end tell</code></li>
+            <li><code class="code-voice">                end tell</code></li>
+            <li><code class="code-voice">            end tell</code></li>
+            <li><code class="code-voice">        end tell</code></li>
+            <li><code class="code-voice">        return true</code></li>
+            <li><code class="code-voice">    on error</code></li>
+            <li><code class="code-voice">        return false</code></li>
+            <li><code class="code-voice">    end try</code></li>
+            <li><code class="code-voice">end chooseMenuItem</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  <span class="x-name-no-link">Listing 37-6</span> calls the handler in <span class="x-name-no-link">Listing 37-5</span> to select the Pin Tab menu item in the Window menu of Safari.
+</p>
+<p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=chooseMenuItem%28%22Safari%22%2C%20%22Window%22%2C%20%22Pin%20Tab%22%29">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH69-SW10"></a>
+    <span class="caption"><strong class="caption-number">Listing 37-6</strong>AppleScript: Calling a handler to choose a menu item</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">chooseMenuItem(&quot;Safari&quot;, &quot;Window&quot;, &quot;Pin Tab&quot;)</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+
+  </aside>
+</div>
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH69-SW19"></a>
+  <h3 class="section-name" tabindex="0">Choosing a Submenu Item</h3>
+  <p class="para">
+  Some menus contain other menus. In these cases, it may be necessary to select a menu item in a submenu of a menu. <span class="x-name-no-link">Listing 37-7</span> demonstrates how this would be done by selecting a submenu item in Safari.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=tell%20application%20%22System%20Events%22%0A%20%20%20%20tell%20process%20%22Safari%22%0A%20%20%20%20%20%20%20%20set%20frontmost%20to%20true%0A%20%20%20%20%20%20%20%20click%20menu%20item%20%22Email%20This%20Page%22%20of%20menu%20of%20menu%20item%20%22Share%22%20of%20menu%20%22File%22%20of%20menu%20bar%201%0A%20%20%20%20end%20tell%0Aend%20tell%0A--%3E%20Result%3A%20%7Bmenu%20item%20%22Email%20This%20Page%22%20of%20menu%20%22Share%22%20of%20menu%20item%20%22Share%22%20of%20menu%20%22File%22%20of%20menu%20bar%20item%20%22File%22%20of%20menu%20bar%201%20of%20application%20process%20%22Safari%22%20of%20application%20%22System%20Events%22%7D">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH69-SW11"></a>
+    <span class="caption"><strong class="caption-number">Listing 37-7</strong>AppleScript: Selecting a submenu item</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">tell application &quot;System Events&quot;</code></li>
+            <li><code class="code-voice">    tell process &quot;Safari&quot;</code></li>
+            <li><code class="code-voice">        set frontmost to true</code></li>
+            <li><code class="code-voice">        click menu item &quot;Email This Page&quot; of menu of menu item &quot;Share&quot; of menu &quot;File&quot; of menu bar 1</code></li>
+            <li><code class="code-voice">    end tell</code></li>
+            <li><code class="code-voice">end tell</code></li>
+            <li><code class="code-voice">--&gt; Result: {menu item &quot;Email This Page&quot; of menu &quot;Share&quot; of menu item &quot;Share&quot; of menu &quot;File&quot; of menu bar item &quot;File&quot; of menu bar 1 of application process &quot;Safari&quot; of application &quot;System Events&quot;}</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="WorkwithXML.html#//apple_ref/doc/uid/TP40016239-CH67-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH67-SW1">Working with XML</a></p>
+  			<p class="next-link"><a href="ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH20-SW1">Manipulating Images</a></p>
+
+    <p class="copyright">Copyright &#x00a9; 2018 Apple Inc. All rights reserved. 
+  <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a> | 
+  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a> | 
+  <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Updated: 2016-06-13</a>
+</p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <script src="../../../../Resources/1282/JavaScript/devpubs-1.6.3.js" type="text/javascript" charset="utf-8"></script>
+  <div id="_omniture_top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="awdappledeveloper"
+</script>
+
+<script type="text/javascript" src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
+<script type="text/javascript">
+s.channel="www.documentationarchive.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="https://developer.apple.com/bugreporter/" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+</html>

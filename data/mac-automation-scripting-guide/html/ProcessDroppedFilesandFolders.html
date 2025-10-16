@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+  <title>Mac Automation Scripting Guide: Processing Dropped Files and Folders</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1282/CSS/style-1.6.3.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1282/CSS/feedback-1.6.3.css" />
+  <meta charset='utf-8'> 
+<meta id="j-version" name="j-version" content="" />
+<meta id="build" name="build" content="c1e4c7a89af8f899a21cfa81fc33ba42" />
+<meta id="document-version" name="document-version" content="1.1.0" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages &amp; Utilities}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40016239" />
+<meta id="chapterId" name="chapterId" content="TP40016239-CH53">
+<meta id="book-title" name="book-title" content="Mac Automation Scripting Guide" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2016-06-13" />
+<meta id="description" name="description" content="New document." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+<meta id="resources-uri" name="resources-uri" content="../../../../Resources/1282">
+<link id="book-index-page" rel="Start" title="" type="text/html" href="./index.html">
+<!-- , next_chapter: next_chapter, previous_chapter: previous_chapter -->
+<link id="next-page" rel="Next" type="text/html" href="">
+<link id="previous-page" rel="Prev" type="text/html" href="">
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta id="platforms" name="platforms" content="OS X">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/">Documentation Archive
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/1282/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="https://developer.apple.com">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">Mac Automation Scripting Guide</span>
+    </p>
+    <form id="search" class="hideInXcode" method="get" action="/search/index.php" accept-charset="utf-8" autocomplete="off">
+  <input type="search" id="ssi_SearchField" placeholder="Search Documentation Archive" name="q" autocomplete="off" tabindex="2" />
+</form>
+
+      
+   
+   
+
+
+
+    <img id="shortstack" src="../../../../Resources/1282/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav id="navigator" class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH2-SW1"
+            class="part-name">
+            <a href="index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH56-SW1">Mac Scripting Essentials</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH56-SW1">About Mac Scripting</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="HowMacScriptingWorks.html#//apple_ref/doc/uid/TP40016239-CH73-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH73-SW1">How Mac Scripting Works</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TypesofScripts.html#//apple_ref/doc/uid/TP40016239-CH72-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH72-SW1">Types of Scripts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="AboutthisGuide.html#//apple_ref/doc/uid/TP40016239-CH71-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH71-SW1">About this Guide</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH10-SW1"
+            class="part-name">
+            <a href="GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH5-SW1">Starting Scripting</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH5-SW1">Getting to Know Script Editor</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CreateaScript.html#//apple_ref/doc/uid/TP40016239-CH12-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH12-SW1">Creating a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SaveaScript.html#//apple_ref/doc/uid/TP40016239-CH13-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH13-SW1">Saving a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RunaScript.html#//apple_ref/doc/uid/TP40016239-CH14-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH14-SW1">Running a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH70-SW1">Configuring Scripting Preferences</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH9-SW1"
+            class="part-name">
+            <a href="AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH75-SW2" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH75-SW2">Accessing Scripting Terminology</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH75-SW2" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH75-SW2">About Scripting Terminology</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="OpenaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH76-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH76-SW1">Opening a Scripting Dictionary</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH77-SW1">Navigating a Scripting Dictionary</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH74-SW1"
+            class="part-name">
+            <a href="UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH52-SW1">Modularizing Code</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH52-SW1">Using Handlers/Functions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UseScriptLibraries.html#//apple_ref/doc/uid/TP40016239-CH36-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH36-SW1">Using Script Libraries</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH57-SW1"
+            class="part-name nav-part-active open-part">
+            <a href="ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH34-SW1">Working with Files and Folders</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH34-SW1">Referencing Files and Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ReadandWriteFiles.html#//apple_ref/doc/uid/TP40016239-CH58-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH58-SW1">Reading and Writing Files</a>
+              </li>
+              <li class="nav-chapter nav-current-chapter">
+              	<a href="#//apple_ref/doc/uid/TP40016239-CH53-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH53-SW1">Processing Dropped Files and Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH39-SW1">Watching Folders</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH59-SW1"
+            class="part-name">
+            <a href="ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW1">Working with Text, Numbers, and Lists</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW1">Manipulating Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH47-SW1">Manipulating Numbers</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH48-SW1">Manipulating Lists of Items</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH60-SW1"
+            class="part-name">
+            <a href="DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH15-SW1">Interacting with Users</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH15-SW1">Displaying Dialogs and Alerts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforText.html#//apple_ref/doc/uid/TP40016239-CH80-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH80-SW1">Prompting for Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DisplayNotifications.html#//apple_ref/doc/uid/TP40016239-CH61-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH61-SW1">Displaying Notifications</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SpeakText.html#//apple_ref/doc/uid/TP40016239-CH62-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH62-SW1">Speaking Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH81-SW1">Prompting for Files or Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaFileName.html#//apple_ref/doc/uid/TP40016239-CH82-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH82-SW1">Prompting for a File Name</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaChoicefromaList.html#//apple_ref/doc/uid/TP40016239-CH83-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH83-SW1">Prompting for a Choice from a List</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaColor.html#//apple_ref/doc/uid/TP40016239-CH86-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH86-SW1">Prompting for a Color</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DisplayProgress.html#//apple_ref/doc/uid/TP40016239-CH37-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH37-SW1">Displaying Progress</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH63-SW1"
+            class="part-name">
+            <a href="ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH49-SW1">Working with HTML and URLs</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH49-SW1">Converting RGB to HTML Color</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="EncodeandDecodeText.html#//apple_ref/doc/uid/TP40016239-CH51-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH51-SW1">Encoding and Decoding Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ParseHTML.html#//apple_ref/doc/uid/TP40016239-CH50-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH50-SW1">Parsing HTML</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RemoveMarkupfromHTML.html#//apple_ref/doc/uid/TP40016239-CH64-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH64-SW1">Removing HTML Markup from Text</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH65-SW1"
+            class="part-name">
+            <a href="WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH66-SW1">Working with Data</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH66-SW1">Working with Property List Files</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WorkwithXML.html#//apple_ref/doc/uid/TP40016239-CH67-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH67-SW1">Working with XML</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH35-SW1"
+            class="part-name">
+            <a href="AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH69-SW1">Performing Common Scripting Tasks</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH69-SW1">Automating the User Interface</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH20-SW1">Manipulating Images</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CallCommandLineUtilities.html#//apple_ref/doc/uid/TP40016239-CH43-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH43-SW1">Calling Command-Line Tools</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH68-SW1"
+            class="part-name">
+            <a href="MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH46-SW1">Extending Apps and Processes</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH46-SW1">Making a Systemwide Service</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH7-SW1">Using the Systemwide Script Menu</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UseDictationtoRunScripts.html#//apple_ref/doc/uid/TP40016239-CH87-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH87-SW1">Using Dictation to Run Scripts</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH78-SW1"
+            class="part-name">
+            <a href="AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH79-SW1">Appendixes</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH79-SW1">Objective-C to AppleScript Quick Translation Guide</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="revision-history"
+            class="part-name">
+          <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Revision History</a>
+          <ul class="nav-chapters">
+            <li class="nav-chapter">
+              <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Document Revision History</a>
+            </li>
+          </ul>
+        </li>
+    </ul>
+</nav>
+
+      <menu id="bashful" type="toolbar">
+  <div class="shield"></div>
+  <menuitem id="jump_to" class="menu-bar-item closed">
+  <span>On This Page</span>
+  <div class="chevron">
+    <div class="chevy chevron-left"></div>
+    <div class="chevy chevron-right"></div>
+  </div>
+  <menu type="list" class="details">
+      <ul class="list-bullet">
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH53-SW6">Creating an AppleScript Droplet from a Script Editor Template</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH53-SW8">Creating a Droplet to Process Files</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH53-SW10">Creating a Droplet to Process Files and Folders</a>
+          </li>
+      </ul>
+  </menu>
+</menuitem>
+
+</menu>
+<div class="pixel-line"></div>
+<div class="rubber-band-gap"></div>
+<article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40016239-CH53"></a><a name="//apple_ref/doc/uid/TP40016239-CH53-SW1"></a>
+
+  <h2 class='chapter-name'>Processing Dropped Files and Folders</h2>
+
+
+  
+  	<section class="section">
+  		<p class="para">
+  Droplets are applets configured to process dropped files and folders. A droplet is distinguishable from a normal applet because its icon includes a downward pointing arrow, as shown in <span class="x-name-no-link">Figure 17-1</span>.
+</p>
+<figure class="figure">
+  <a name="//apple_ref/doc/uid/TP40016239-CH53-SW2"></a>
+  <span class="caption"><strong class="caption-number">Figure 17-1</strong>A script droplet icon</span>
+  <img src="Art/icon_droplet_2x.png" alt="image: ../Art/icon_droplet_2x.png" width="128" height="128" />
+</figure>
+<p class="para">
+  To create an AppleScript droplet, include an <code class="code-voice">open</code> event handler in your script and save the script as an application. To create a JavaScript droplet, include an <code class="code-voice">openDocuments</code> function in your script and save the script as an application. The presence of this handler or function automatically renders the saved application as a droplet, allowing it to accept dropped files and folders in the Finder. The <code class="code-voice">open</code> handler and <code class="code-voice">openDocuments</code> function accept a single parameter—a list of dropped files or folders—which are passed to the handler when the script is activated by dropping something onto it. In AppleScript, these dropped files and folders are <code class="code-voice">alias</code> objects. In JavaScript, they’re <code class="code-voice">Path</code> objects. For more information about these types of objects, see <span class="x-name"><a href="ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH34-SW1">Referencing Files and Folders</a></span>.
+</p>
+<p class="para">
+  An AppleScript <code class="code-voice">open</code> handler is formatted as shown in <span class="x-name-no-link">Listing 17-1</span>.
+</p>
+<p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20open%20theDroppedItems%0A%20%20%20%20--%20Process%20the%20dropped%20items%20here%0Aend%20open">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH53-SW3"></a>
+    <span class="caption"><strong class="caption-number">Listing 17-1</strong>AppleScript: Structure of an <code class="code-voice">open</code> handler</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on open theDroppedItems</code></li>
+            <li><code class="code-voice">    -- Process the dropped items here</code></li>
+            <li><code class="code-voice">end open</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  A JavaScript <code class="code-voice">openDocuments</code> function is formatted as shown in <span class="x-name-no-link">Listing 17-2</span>.
+</p>
+<p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20openDocuments%28droppedItems%29%20%7B%0A%20%20%20%20%2F%2F%20Process%20the%20dropped%20items%20here%0A%7D">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH53-SW12"></a>
+    <span class="caption"><strong class="caption-number">Listing 17-2</strong>JavaScript: Structure of an <code class="code-voice">openDocuments</code> function</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function openDocuments(droppedItems) {</code></li>
+            <li><code class="code-voice">    // Process the dropped items here</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  Typically, a droplet loops through items dropped onto it, processing them individually, as in <span class="x-name-no-link">Listing 17-3</span> and <span class="x-name-no-link">Listing 17-4</span>.
+</p>
+<p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20open%20theDroppedItems%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20length%20of%20theDroppedItems%0A%20%20%20%20%20%20%20%20set%20theCurrentDroppedItem%20to%20item%20a%20of%20theDroppedItems%0A%20%20%20%20%20%20%20%20--%20Process%20each%20dropped%20item%20here%0A%20%20%20%20end%20repeat%0Aend%20open">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH53-SW4"></a>
+    <span class="caption"><strong class="caption-number">Listing 17-3</strong>AppleScript: An <code class="code-voice">open</code> handler that loops through dropped items</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on open theDroppedItems</code></li>
+            <li><code class="code-voice">    repeat with a from 1 to length of theDroppedItems</code></li>
+            <li><code class="code-voice">        set theCurrentDroppedItem to item a of theDroppedItems</code></li>
+            <li><code class="code-voice">        -- Process each dropped item here</code></li>
+            <li><code class="code-voice">    end repeat</code></li>
+            <li><code class="code-voice">end open</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20openDocuments%28droppedItems%29%20%7B%0A%20%20%20%20for%20%28var%20item%20of%20droppedItems%29%20%7B%0A%20%20%20%20%20%20%20%20%2F%2F%20Process%20each%20dropped%20item%20here%0A%20%20%20%20%7D%0A%7D">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH53-SW14"></a>
+    <span class="caption"><strong class="caption-number">Listing 17-4</strong>JavaScript: An <code class="code-voice">openDocuments</code> function that loops through dropped items</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function openDocuments(droppedItems) {</code></li>
+            <li><code class="code-voice">    for (var item of droppedItems) {</code></li>
+            <li><code class="code-voice">        // Process each dropped item here</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  To run a droplet, drop files or folders onto it in the Finder. To test a droplet in Script Editor, add the following line(s) of code to the root level—the <code class="code-voice">run</code> handler portion—of the script. <span class="x-name-no-link">Listing 17-5</span> and <span class="x-name-no-link">Listing 17-6</span> prompt you to select a file and then passes it to the <code class="code-voice">open</code> handler or <code class="code-voice">openDocuments</code> function.
+</p>
+<p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=open%20%7Bchoose%20file%7D">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH53-SW5"></a>
+    <span class="caption"><strong class="caption-number">Listing 17-5</strong>AppleScript: Calling the <code class="code-voice">open</code> handler to test a droplet within Script Editor</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">open {choose file}</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0Avar%20file%20%3D%20app.chooseFile%28%29%0AopenDocuments%28%5Bfile%5D%29">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH53-SW15"></a>
+    <span class="caption"><strong class="caption-number">Listing 17-6</strong>JavaScript: Calling the <code class="code-voice">openDocuments</code> handler to test a droplet within Script Editor</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var app = Application.currentApplication()</code></li>
+            <li><code class="code-voice">app.includeStandardAdditions = true</code></li>
+            <li><code class="code-voice">var file = app.chooseFile()</code></li>
+            <li><code class="code-voice">openDocuments([file])</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+
+		</section> 
+
+
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH53-SW6"></a>
+  <h3 class="section-name" tabindex="0">Creating an AppleScript Droplet from a Script Editor Template</h3>
+  <p class="para">
+  Script Editor includes several preconfigured AppleScript droplet templates, which solve the majority of droplet use cases.
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH53-SW13"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">Script Editor does not include JavaScript templates at this time.
+    	</p>
+    
+  </aside>
+</div><section class="task">
+  <a name="//apple_ref/doc/uid/TP40016239-CH53-SW7"></a>
+  <div class='task-name'><strong class="inline-head">To create a droplet from a Script Editor template</strong></div>
+  <ol class="sequential-steps list-number">
+  <li class="step"><div class='action'>
+	<p class="para">
+  Launch Script Editor from <code class="code-voice">/Applications/Utilities/</code>.
+</p>
+</div></li><li class="step"><div class='action'>
+	<p class="para">
+  Select File &gt; New from Template &gt; Droplets.
+</p>
+</div></li><li class="step"><div class='action'>
+	<p class="para">
+  Choose a droplet template.
+</p>
+</div><div class='elaborations'>
+	<p class="para">
+  Options include:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <strong class="inline-head">Droplet with Settable Properties</strong>—This template processes dropped files based on file type, extension, or type identifier. It also demonstrates how to include a user-configurable setting, which affects the behavior of the script.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">Recursive File Processing Droplet</strong>—This template processes dropped files based on file type, extension, or type identifier. It is configured to detect files within dropped folders and their subfolders.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">Recursive Image File Processing Droplet</strong>—This template processes image files matching specific file types, extensions, or type identifiers. It is configured to detect images within dropped folders and their subfolders.
+</p>
+</li>
+</ul><p class="para">
+  All of these templates are designed to serve as starting points for creating a droplet, and can be customized, as needed.
+</p>
+</div></li>
+</ol>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH53-SW8"></a>
+  <h3 class="section-name" tabindex="0">Creating a Droplet to Process Files</h3>
+  <p class="para">
+  In <span class="x-name-no-link">Listing 17-7</span> and <span class="x-name-no-link">Listing 17-8</span>, the <code class="code-voice">open</code> handler  and <code class="code-voice">openDocuments</code> function process dropped files based on file type, extension, or type identifier. The file types, extensions, and type identifiers supported by the handler are configurable in properties at the top of the script. If a dropped file matches the criteria you configure, then the file is passed to the <code class="code-voice">processItem()</code> handler, where you can add custom file processing code. These examples are not configured to process dropped folders.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=property%20theFileTypesToProcess%20%3A%20%7B%7D%20--%20For%20example%3A%20%7B%22PICT%22%2C%20%22JPEG%22%2C%20%22TIFF%22%2C%20%22GIFf%22%7D%0Aproperty%20theExtensionsToProcess%20%3A%20%7B%7D%20--%20For%20example%3A%20%7B%22txt%22%2C%20%22text%22%2C%20%22jpg%22%2C%20%22jpeg%22%7D%2C%20NOT%3A%20%7B%22.txt%22%2C%20%22.text%22%2C%20%22.jpg%22%2C%20%22.jpeg%22%7D%0Aproperty%20theTypeIdentifiersToProcess%20%3A%20%7B%7D%20--%20For%20example%3A%20%7B%22public.jpeg%22%2C%20%22public.tiff%22%2C%20%22public.png%22%7D%0A%0Aon%20open%20theDroppedItems%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theDroppedItems%0A%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20item%20a%20of%20theDroppedItems%0A%20%20%20%20%20%20%20%20tell%20application%20%22System%20Events%22%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theExtension%20to%20name%20extension%20of%20theCurrentItem%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theFileType%20to%20file%20type%20of%20theCurrentItem%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theTypeIdentifier%20to%20type%20identifier%20of%20theCurrentItem%0A%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20%20%20%20%20if%20%28%28theFileTypesToProcess%20contains%20theFileType%29%20or%20%28theExtensionsToProcess%20contains%20theExtension%29%20or%20%28theTypeIdentifiersToProcess%20contains%20theTypeIdentifier%29%29%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20processItem%28theCurrentItem%29%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0Aend%20open%0A%0Aon%20processItem%28theItem%29%0A%20%20%20%20--%20NOTE%3A%20The%20variable%20theItem%20is%20a%20file%20reference%20in%20AppleScript%20alias%20format%0A%20%20%20%20--%20Add%20item%20processing%20code%20here%0Aend%20processItem">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH53-SW9"></a>
+    <span class="caption"><strong class="caption-number">Listing 17-7</strong>Handler that processes dropped files matching specific file types, extensions, or type identifiers</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">property theFileTypesToProcess : {} -- For example: {&quot;PICT&quot;, &quot;JPEG&quot;, &quot;TIFF&quot;, &quot;GIFf&quot;}</code></li>
+            <li><code class="code-voice">property theExtensionsToProcess : {} -- For example: {&quot;txt&quot;, &quot;text&quot;, &quot;jpg&quot;, &quot;jpeg&quot;}, NOT: {&quot;.txt&quot;, &quot;.text&quot;, &quot;.jpg&quot;, &quot;.jpeg&quot;}</code></li>
+            <li><code class="code-voice">property theTypeIdentifiersToProcess : {} -- For example: {&quot;public.jpeg&quot;, &quot;public.tiff&quot;, &quot;public.png&quot;}</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">on open theDroppedItems</code></li>
+            <li><code class="code-voice">    repeat with a from 1 to count of theDroppedItems</code></li>
+            <li><code class="code-voice">        set theCurrentItem to item a of theDroppedItems</code></li>
+            <li><code class="code-voice">        tell application &quot;System Events&quot;</code></li>
+            <li><code class="code-voice">            set theExtension to name extension of theCurrentItem</code></li>
+            <li><code class="code-voice">            set theFileType to file type of theCurrentItem</code></li>
+            <li><code class="code-voice">            set theTypeIdentifier to type identifier of theCurrentItem</code></li>
+            <li><code class="code-voice">        end tell</code></li>
+            <li><code class="code-voice">        if ((theFileTypesToProcess contains theFileType) or (theExtensionsToProcess contains theExtension) or (theTypeIdentifiersToProcess contains theTypeIdentifier)) then</code></li>
+            <li><code class="code-voice">            processItem(theCurrentItem)</code></li>
+            <li><code class="code-voice">        end if</code></li>
+            <li><code class="code-voice">    end repeat</code></li>
+            <li><code class="code-voice">end open</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">on processItem(theItem)</code></li>
+            <li><code class="code-voice">    -- NOTE: The variable theItem is a file reference in AppleScript alias format</code></li>
+            <li><code class="code-voice">    -- Add item processing code here</code></li>
+            <li><code class="code-voice">end processItem</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20SystemEvents%20%3D%20Application%28%22System%20Events%22%29%0Avar%20fileTypesToProcess%20%3D%20%5B%5D%20%2F%2F%20For%20example%3A%20%7B%22PICT%22%2C%20%22JPEG%22%2C%20%22TIFF%22%2C%20%22GIFf%22%7D%0Avar%20extensionsToProcess%20%3D%20%5B%5D%20%2F%2F%20For%20example%3A%20%7B%22txt%22%2C%20%22text%22%2C%20%22jpg%22%2C%20%22jpeg%22%7D%2C%20NOT%3A%20%7B%22.txt%22%2C%20%22.text%22%2C%20%22.jpg%22%2C%20%22.jpeg%22%7D%0Avar%20typeIdentifiersToProcess%20%3D%20%5B%5D%20%2F%2F%20For%20example%3A%20%7B%22public.jpeg%22%2C%20%22public.tiff%22%2C%20%22public.png%22%7D%0A%0Afunction%20openDocuments%28droppedItems%29%20%7B%0A%20%20%20%20for%20%28var%20item%20of%20droppedItems%29%20%7B%0A%20%20%20%20%20%20%20%20var%20alias%20%3D%20SystemEvents.aliases.byName%28item.toString%28%29%29%0A%20%20%20%20%20%20%20%20var%20extension%20%3D%20alias.nameExtension%28%29%0A%20%20%20%20%20%20%20%20var%20fileType%20%3D%20alias.fileType%28%29%0A%20%20%20%20%20%20%20%20var%20typeIdentifier%20%3D%20alias.typeIdentifier%28%29%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28fileTypesToProcess.includes%28fileType%29%20%7C%7C%20extensionsToProcess.includes%28extension%29%20%7C%7C%20typeIdentifiersToProcess.includes%28typeIdentifier%29%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20processItem%28item%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D%0A%0Afunction%20processItem%28item%29%20%7B%0A%20%20%20%20%2F%2F%20NOTE%3A%20The%20variable%20item%20is%20an%20instance%20of%20the%20Path%20object%0A%20%20%20%20%2F%2F%20Add%20item%20processing%20code%20here%0A%7D">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH53-SW16"></a>
+    <span class="caption"><strong class="caption-number">Listing 17-8</strong>Function that processes dropped files matching specific file types, extensions, or type identifiers</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var SystemEvents = Application(&quot;System Events&quot;)</code></li>
+            <li><code class="code-voice">var fileTypesToProcess = [] // For example: {&quot;PICT&quot;, &quot;JPEG&quot;, &quot;TIFF&quot;, &quot;GIFf&quot;}</code></li>
+            <li><code class="code-voice">var extensionsToProcess = [] // For example: {&quot;txt&quot;, &quot;text&quot;, &quot;jpg&quot;, &quot;jpeg&quot;}, NOT: {&quot;.txt&quot;, &quot;.text&quot;, &quot;.jpg&quot;, &quot;.jpeg&quot;}</code></li>
+            <li><code class="code-voice">var typeIdentifiersToProcess = [] // For example: {&quot;public.jpeg&quot;, &quot;public.tiff&quot;, &quot;public.png&quot;}</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">function openDocuments(droppedItems) {</code></li>
+            <li><code class="code-voice">    for (var item of droppedItems) {</code></li>
+            <li><code class="code-voice">        var alias = SystemEvents.aliases.byName(item.toString())</code></li>
+            <li><code class="code-voice">        var extension = alias.nameExtension()</code></li>
+            <li><code class="code-voice">        var fileType = alias.fileType()</code></li>
+            <li><code class="code-voice">        var typeIdentifier = alias.typeIdentifier()</code></li>
+            <li><code class="code-voice">            if (fileTypesToProcess.includes(fileType) || extensionsToProcess.includes(extension) || typeIdentifiersToProcess.includes(typeIdentifier)) {</code></li>
+            <li><code class="code-voice">            processItem(item)</code></li>
+            <li><code class="code-voice">        }</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">}</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">function processItem(item) {</code></li>
+            <li><code class="code-voice">    // NOTE: The variable item is an instance of the Path object</code></li>
+            <li><code class="code-voice">    // Add item processing code here</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH53-SW10"></a>
+  <h3 class="section-name" tabindex="0">Creating a Droplet to Process Files and Folders</h3>
+  <p class="para">
+  In <span class="x-name-no-link">Listing 17-9</span> and <span class="x-name-no-link">Listing 17-10</span>, the <code class="code-voice">open</code> handler and <code class="code-voice">openDocuments</code> function loop through any dropped files and folders.
+</p><p class="para">
+  For each dropped file, the script calls the <code class="code-voice">processFile()</code> handler, which determines whether the file matches specific file types, extensions, and type identifiers. The file types, extensions, and type identifiers supported by the handler are configurable in properties at the top of the script. If there’s a match, then any custom file processing code you add runs.
+</p><p class="para">
+  The script passes each dropped folder to the <code class="code-voice">processFolder()</code>, which retrieves a list of files and subfolders within the dropped folder. The <code class="code-voice">processFolder()</code> handler recursively calls itself to process any additional subfolders. It calls the <code class="code-voice">processFile()</code> handler to process any detected files. If necessary, you can add custom folder processing code to the <code class="code-voice">processFolder()</code> handler.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=property%20theFileTypesToProcess%20%3A%20%7B%7D%20--%20I.e.%20%7B%22PICT%22%2C%20%22JPEG%22%2C%20%22TIFF%22%2C%20%22GIFf%22%7D%0Aproperty%20theExtensionsToProcess%20%3A%20%7B%7D%20--%20I.e.%20%7B%22txt%22%2C%20%22text%22%2C%20%22jpg%22%2C%20%22jpeg%22%7D%2C%20NOT%3A%20%7B%22.txt%22%2C%20%22.text%22%2C%20%22.jpg%22%2C%20%22.jpeg%22%7D%0Aproperty%20theTypeIdentifiersToProcess%20%3A%20%7B%7D%20--%20I.e.%20%7B%22public.jpeg%22%2C%20%22public.tiff%22%2C%20%22public.png%22%7D%0A%0Aon%20open%20theDroppedItems%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theDroppedItems%0A%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20item%20a%20of%20theDroppedItems%0A%20%20%20%20%20%20%20%20tell%20application%20%22Finder%22%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20isFolder%20to%20folder%20%28theCurrentItem%20as%20string%29%20exists%0A%20%20%20%20%20%20%20%20end%20tell%0A%0A%20%20%20%20%20%20%20--%20Process%20a%20dropped%20folder%0A%20%20%20%20%20%20%20if%20isFolder%20%3D%20true%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20processFolder%28theCurrentItem%29%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20--%20Process%20a%20dropped%20file%0A%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20processFile%28theCurrentItem%29%0A%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0Aend%20open%0A%0Aon%20processFolder%28theFolder%29%0A%20%20%20%20--%20NOTE%3A%20The%20variable%20theFolder%20is%20a%20folder%20reference%20in%20AppleScript%20alias%20format%0A%20%20%20%20--%20Retrieve%20a%20list%20of%20any%20visible%20items%20in%20the%20folder%0A%20%20%20%20set%20theFolderItems%20to%20list%20folder%20theFolder%20without%20invisibles%0A%0A%20%20%20%20--%20Loop%20through%20the%20visible%20folder%20items%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theFolderItems%0A%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20%28%28theFolder%20as%20string%29%20%26%20%28item%20a%20of%20theFolderItems%29%29%20as%20alias%0A%20%20%20%20%20%20%20%20open%20%7BtheCurrentItem%7D%0A%20%20%20%20end%20repeat%0A%20%20%20%20--%20Add%20additional%20folder%20processing%20code%20here%0Aend%20processFolder%0A%0Aon%20processFile%28theItem%29%0A%20%20%20%20--%20NOTE%3A%20variable%20theItem%20is%20a%20file%20reference%20in%20AppleScript%20alias%20format%0A%20%20%20%20tell%20application%20%22System%20Events%22%0A%20%20%20%20%20%20%20%20set%20theExtension%20to%20name%20extension%20of%20theItem%0A%20%20%20%20%20%20%20%20set%20theFileType%20to%20file%20type%20of%20theItem%0A%20%20%20%20%20%20%20%20set%20theTypeIdentifier%20to%20type%20identifier%20of%20theItem%0A%20%20%20%20end%20tell%0A%20%20%20%20if%20%28%28theFileTypesToProcess%20contains%20theFileType%29%20or%20%28theExtensionsToProcess%20contains%20theExtension%29%20or%20%28theTypeIdentifiersToProcess%20contains%20theTypeIdentifier%29%29%20then%0A%20%20%20%20%20%20%20%20--%20Add%20file%20processing%20code%20here%0A%20%20%20%20%20%20%20%20display%20dialog%20theItem%20as%20string%0A%20%20%20%20end%20if%0Aend%20processFile">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH53-SW11"></a>
+    <span class="caption"><strong class="caption-number">Listing 17-9</strong>Handler that processes dropped folders and files</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">property theFileTypesToProcess : {} -- I.e. {&quot;PICT&quot;, &quot;JPEG&quot;, &quot;TIFF&quot;, &quot;GIFf&quot;}</code></li>
+            <li><code class="code-voice">property theExtensionsToProcess : {} -- I.e. {&quot;txt&quot;, &quot;text&quot;, &quot;jpg&quot;, &quot;jpeg&quot;}, NOT: {&quot;.txt&quot;, &quot;.text&quot;, &quot;.jpg&quot;, &quot;.jpeg&quot;}</code></li>
+            <li><code class="code-voice">property theTypeIdentifiersToProcess : {} -- I.e. {&quot;public.jpeg&quot;, &quot;public.tiff&quot;, &quot;public.png&quot;}</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">on open theDroppedItems</code></li>
+            <li><code class="code-voice">    repeat with a from 1 to count of theDroppedItems</code></li>
+            <li><code class="code-voice">        set theCurrentItem to item a of theDroppedItems</code></li>
+            <li><code class="code-voice">        tell application &quot;Finder&quot;</code></li>
+            <li><code class="code-voice">            set isFolder to folder (theCurrentItem as string) exists</code></li>
+            <li><code class="code-voice">        end tell</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">       -- Process a dropped folder</code></li>
+            <li><code class="code-voice">       if isFolder = true then</code></li>
+            <li><code class="code-voice">            processFolder(theCurrentItem)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">            -- Process a dropped file</code></li>
+            <li><code class="code-voice">       else</code></li>
+            <li><code class="code-voice">            processFile(theCurrentItem)</code></li>
+            <li><code class="code-voice">       end if</code></li>
+            <li><code class="code-voice">    end repeat</code></li>
+            <li><code class="code-voice">end open</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">on processFolder(theFolder)</code></li>
+            <li><code class="code-voice">    -- NOTE: The variable theFolder is a folder reference in AppleScript alias format</code></li>
+            <li><code class="code-voice">    -- Retrieve a list of any visible items in the folder</code></li>
+            <li><code class="code-voice">    set theFolderItems to list folder theFolder without invisibles</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Loop through the visible folder items</code></li>
+            <li><code class="code-voice">    repeat with a from 1 to count of theFolderItems</code></li>
+            <li><code class="code-voice">        set theCurrentItem to ((theFolder as string) &amp; (item a of theFolderItems)) as alias</code></li>
+            <li><code class="code-voice">        open {theCurrentItem}</code></li>
+            <li><code class="code-voice">    end repeat</code></li>
+            <li><code class="code-voice">    -- Add additional folder processing code here</code></li>
+            <li><code class="code-voice">end processFolder</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">on processFile(theItem)</code></li>
+            <li><code class="code-voice">    -- NOTE: variable theItem is a file reference in AppleScript alias format</code></li>
+            <li><code class="code-voice">    tell application &quot;System Events&quot;</code></li>
+            <li><code class="code-voice">        set theExtension to name extension of theItem</code></li>
+            <li><code class="code-voice">        set theFileType to file type of theItem</code></li>
+            <li><code class="code-voice">        set theTypeIdentifier to type identifier of theItem</code></li>
+            <li><code class="code-voice">    end tell</code></li>
+            <li><code class="code-voice">    if ((theFileTypesToProcess contains theFileType) or (theExtensionsToProcess contains theExtension) or (theTypeIdentifiersToProcess contains theTypeIdentifier)) then</code></li>
+            <li><code class="code-voice">        -- Add file processing code here</code></li>
+            <li><code class="code-voice">        display dialog theItem as string</code></li>
+            <li><code class="code-voice">    end if</code></li>
+            <li><code class="code-voice">end processFile</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20SystemEvents%20%3D%20Application%28%22System%20Events%22%29%0Avar%20fileManager%20%3D%20%24.NSFileManager.defaultManager%0Avar%20currentApp%20%3D%20Application.currentApplication%28%29%0AcurrentApp.includeStandardAdditions%20%3D%20true%0A%0Avar%20fileTypesToProcess%20%3D%20%5B%5D%20%2F%2F%20For%20example%3A%20%7B%22PICT%22%2C%20%22JPEG%22%2C%20%22TIFF%22%2C%20%22GIFf%22%7D%0Avar%20extensionsToProcess%20%3D%20%5B%5D%20%2F%2F%20For%20example%3A%20%7B%22txt%22%2C%20%22text%22%2C%20%22jpg%22%2C%20%22jpeg%22%7D%2C%20NOT%3A%20%7B%22.txt%22%2C%20%22.text%22%2C%20%22.jpg%22%2C%20%22.jpeg%22%7D%0Avar%20typeIdentifiersToProcess%20%3D%20%5B%5D%20%2F%2F%20For%20example%3A%20%7B%22public.jpeg%22%2C%20%22public.tiff%22%2C%20%22public.png%22%7D%0A%0Afunction%20openDocuments%28droppedItems%29%20%7B%0A%20%20%20%20for%20%28var%20item%20of%20droppedItems%29%20%7B%0A%20%20%20%20%20%20%20%20var%20isDir%20%3D%20Ref%28%29%0A%20%20%20%20%20%20%20%20if%20%28fileManager.fileExistsAtPathIsDirectory%28item.toString%28%29%2C%20isDir%29%20%26%26%20isDir%5B0%5D%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20processFolder%28item%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20processFile%28item%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D%0A%0Afunction%20processFolder%28folder%29%20%7B%0A%20%20%20%20%2F%2F%20NOTE%3A%20The%20variable%20folder%20is%20an%20instance%20of%20the%20Path%20object%0A%20%20%20%20var%20folderString%20%3D%20folder.toString%28%29%0A%0A%20%20%20%20%2F%2F%20Retrieve%20a%20list%20of%20any%20visible%20items%20in%20the%20folder%0A%20%20%20%20var%20folderItems%20%3D%20currentApp.listFolder%28folder%2C%20%7B%20invisibles%3A%20false%20%7D%29%0A%0A%20%20%20%20%2F%2F%20Loop%20through%20the%20visible%20folder%20items%0A%20%20%20%20for%20%28var%20item%20of%20folderItems%29%20%7B%0A%20%20%20%20%20%20%20%20var%20currentItem%20%3D%20%60%24%7BfolderString%7D%2F%24%7Bitem%7D%60%0A%20%20%20%20%20%20%20%20openDocuments%28%5BcurrentItem%5D%29%0A%20%20%20%20%7D%0A%20%20%20%20%2F%2F%20Add%20additional%20folder%20processing%20code%20here%0A%7D%0A%0Afunction%20processFile%28file%29%20%7B%0A%20%20%20%20%2F%2F%20NOTE%3A%20The%20variable%20file%20is%20an%20instance%20of%20the%20Path%20object%0A%20%20%20%20var%20fileString%20%3D%20file.toString%28%29%0A%20%20%20%20var%20alias%20%3D%20SystemEvents.aliases.byName%28fileString%29%0A%20%20%20%20var%20extension%20%3D%20alias.nameExtension%28%29%0A%20%20%20%20var%20fileType%20%3D%20alias.fileType%28%29%0A%20%20%20%20var%20typeIdentifier%20%3D%20alias.typeIdentifier%28%29%0A%20%20%20%20if%20%28fileTypesToProcess.includes%28fileType%29%20%7C%7C%20extensionsToProcess.includes%28extension%29%20%7C%7C%20typeIdentifiersToProcess.includes%28typeIdentifier%29%29%20%7B%0A%20%20%20%20%20%20%20%20%2F%2F%20Add%20file%20processing%20code%20here%0A%20%20%20%20%7D%0A%7D%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH53-SW17"></a>
+    <span class="caption"><strong class="caption-number">Listing 17-10</strong>Function that processes dropped folders and files</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var SystemEvents = Application(&quot;System Events&quot;)</code></li>
+            <li><code class="code-voice">var fileManager = $.NSFileManager.defaultManager</code></li>
+            <li><code class="code-voice">var currentApp = Application.currentApplication()</code></li>
+            <li><code class="code-voice">currentApp.includeStandardAdditions = true</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">var fileTypesToProcess = [] // For example: {&quot;PICT&quot;, &quot;JPEG&quot;, &quot;TIFF&quot;, &quot;GIFf&quot;}</code></li>
+            <li><code class="code-voice">var extensionsToProcess = [] // For example: {&quot;txt&quot;, &quot;text&quot;, &quot;jpg&quot;, &quot;jpeg&quot;}, NOT: {&quot;.txt&quot;, &quot;.text&quot;, &quot;.jpg&quot;, &quot;.jpeg&quot;}</code></li>
+            <li><code class="code-voice">var typeIdentifiersToProcess = [] // For example: {&quot;public.jpeg&quot;, &quot;public.tiff&quot;, &quot;public.png&quot;}</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">function openDocuments(droppedItems) {</code></li>
+            <li><code class="code-voice">    for (var item of droppedItems) {</code></li>
+            <li><code class="code-voice">        var isDir = Ref()</code></li>
+            <li><code class="code-voice">        if (fileManager.fileExistsAtPathIsDirectory(item.toString(), isDir) &amp;&amp; isDir[0]) {</code></li>
+            <li><code class="code-voice">            processFolder(item)</code></li>
+            <li><code class="code-voice">        }</code></li>
+            <li><code class="code-voice">        else {</code></li>
+            <li><code class="code-voice">            processFile(item)</code></li>
+            <li><code class="code-voice">        }</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">}</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">function processFolder(folder) {</code></li>
+            <li><code class="code-voice">    // NOTE: The variable folder is an instance of the Path object</code></li>
+            <li><code class="code-voice">    var folderString = folder.toString()</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    // Retrieve a list of any visible items in the folder</code></li>
+            <li><code class="code-voice">    var folderItems = currentApp.listFolder(folder, { invisibles: false })</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    // Loop through the visible folder items</code></li>
+            <li><code class="code-voice">    for (var item of folderItems) {</code></li>
+            <li><code class="code-voice">        var currentItem = `${folderString}/${item}`</code></li>
+            <li><code class="code-voice">        openDocuments([currentItem])</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">    // Add additional folder processing code here</code></li>
+            <li><code class="code-voice">}</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">function processFile(file) {</code></li>
+            <li><code class="code-voice">    // NOTE: The variable file is an instance of the Path object</code></li>
+            <li><code class="code-voice">    var fileString = file.toString()</code></li>
+            <li><code class="code-voice">    var alias = SystemEvents.aliases.byName(fileString)</code></li>
+            <li><code class="code-voice">    var extension = alias.nameExtension()</code></li>
+            <li><code class="code-voice">    var fileType = alias.fileType()</code></li>
+            <li><code class="code-voice">    var typeIdentifier = alias.typeIdentifier()</code></li>
+            <li><code class="code-voice">    if (fileTypesToProcess.includes(fileType) || extensionsToProcess.includes(extension) || typeIdentifiersToProcess.includes(typeIdentifier)) {</code></li>
+            <li><code class="code-voice">        // Add file processing code here</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="ReadandWriteFiles.html#//apple_ref/doc/uid/TP40016239-CH58-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH58-SW1">Reading and Writing Files</a></p>
+  			<p class="next-link"><a href="WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH39-SW1">Watching Folders</a></p>
+
+    <p class="copyright">Copyright &#x00a9; 2018 Apple Inc. All rights reserved. 
+  <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a> | 
+  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a> | 
+  <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Updated: 2016-06-13</a>
+</p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <script src="../../../../Resources/1282/JavaScript/devpubs-1.6.3.js" type="text/javascript" charset="utf-8"></script>
+  <div id="_omniture_top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="awdappledeveloper"
+</script>
+
+<script type="text/javascript" src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
+<script type="text/javascript">
+s.channel="www.documentationarchive.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="https://developer.apple.com/bugreporter/" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+</html>

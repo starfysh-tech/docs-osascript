@@ -1,0 +1,1570 @@
+[
+  {
+    "title": "Part I: Mac Scripting Essentials",
+    "href": "index.html#//apple_ref/doc/uid/TP40016239-CH2-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/index.html#//apple_ref/doc/uid/TP40016239-CH2-SW1",
+    "page": "index.html",
+    "anchor": "//apple_ref/doc/uid/TP40016239-CH2-SW1",
+    "children": [
+      {
+        "title": "About Mac Scripting",
+        "href": "index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1",
+        "page": "index.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH56-SW1",
+        "children": [
+          {
+            "title": "AppleScript",
+            "href": "index.html#//apple_ref/doc/uid/TP40016239-CH56-SW3",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/index.html#//apple_ref/doc/uid/TP40016239-CH56-SW3",
+            "page": "index.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH56-SW3"
+          },
+          {
+            "title": "JavaScript",
+            "href": "index.html#//apple_ref/doc/uid/TP40016239-CH56-SW4",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/index.html#//apple_ref/doc/uid/TP40016239-CH56-SW4",
+            "page": "index.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH56-SW4"
+          }
+        ]
+      },
+      {
+        "title": "How Mac Scripting Works",
+        "href": "HowMacScriptingWorks.html#//apple_ref/doc/uid/TP40016239-CH73-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/HowMacScriptingWorks.html#//apple_ref/doc/uid/TP40016239-CH73-SW1",
+        "page": "HowMacScriptingWorks.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH73-SW1",
+        "children": [
+          {
+            "title": "Extending the Reach of Scripting",
+            "href": "HowMacScriptingWorks.html#//apple_ref/doc/uid/TP40016239-CH73-SW3",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/HowMacScriptingWorks.html#//apple_ref/doc/uid/TP40016239-CH73-SW3",
+            "page": "HowMacScriptingWorks.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH73-SW3"
+          },
+          {
+            "title": "Objective-C Bridging",
+            "href": "HowMacScriptingWorks.html#//apple_ref/doc/uid/TP40016239-CH73-SW4",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/HowMacScriptingWorks.html#//apple_ref/doc/uid/TP40016239-CH73-SW4",
+            "page": "HowMacScriptingWorks.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH73-SW4"
+          }
+        ]
+      },
+      {
+        "title": "Types of Scripts",
+        "href": "TypesofScripts.html#//apple_ref/doc/uid/TP40016239-CH72-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/TypesofScripts.html#//apple_ref/doc/uid/TP40016239-CH72-SW1",
+        "page": "TypesofScripts.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH72-SW1"
+      },
+      {
+        "title": "About this Guide",
+        "href": "AboutthisGuide.html#//apple_ref/doc/uid/TP40016239-CH71-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/AboutthisGuide.html#//apple_ref/doc/uid/TP40016239-CH71-SW1",
+        "page": "AboutthisGuide.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH71-SW1",
+        "children": [
+          {
+            "title": "Opening Examples in Script Editor",
+            "href": "AboutthisGuide.html#//apple_ref/doc/uid/TP40016239-CH71-SW4",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/AboutthisGuide.html#//apple_ref/doc/uid/TP40016239-CH71-SW4",
+            "page": "AboutthisGuide.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH71-SW4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Part II: Starting Scripting",
+    "href": "GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH10-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH10-SW1",
+    "page": "GettoKnowScriptEditor.html",
+    "anchor": "//apple_ref/doc/uid/TP40016239-CH10-SW1",
+    "children": [
+      {
+        "title": "Getting to Know Script Editor",
+        "href": "GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW1",
+        "page": "GettoKnowScriptEditor.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH5-SW1",
+        "children": [
+          {
+            "title": "Navigating Script Editor Documents",
+            "href": "GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW3",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW3",
+            "page": "GettoKnowScriptEditor.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH5-SW3"
+          },
+          {
+            "title": "Targeting a Scripting Language",
+            "href": "GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW4",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW4",
+            "page": "GettoKnowScriptEditor.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH5-SW4"
+          },
+          {
+            "title": "Viewing Script Events and Results",
+            "href": "GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW6",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW6",
+            "page": "GettoKnowScriptEditor.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH5-SW6",
+            "children": [
+              {
+                "title": "Viewing the Script Result",
+                "href": "GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW7",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW7",
+                "page": "GettoKnowScriptEditor.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH5-SW7"
+              },
+              {
+                "title": "Viewing the Script Log",
+                "href": "GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW8",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW8",
+                "page": "GettoKnowScriptEditor.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH5-SW8"
+              },
+              {
+                "title": "Viewing the Log History",
+                "href": "GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW9",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW9",
+                "page": "GettoKnowScriptEditor.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH5-SW9"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Creating a Script",
+        "href": "CreateaScript.html#//apple_ref/doc/uid/TP40016239-CH12-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/CreateaScript.html#//apple_ref/doc/uid/TP40016239-CH12-SW1",
+        "page": "CreateaScript.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH12-SW1",
+        "children": [
+          {
+            "title": "Using an AppleScript Template",
+            "href": "CreateaScript.html#//apple_ref/doc/uid/TP40016239-CH12-SW2",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/CreateaScript.html#//apple_ref/doc/uid/TP40016239-CH12-SW2",
+            "page": "CreateaScript.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH12-SW2"
+          }
+        ]
+      },
+      {
+        "title": "Saving a Script",
+        "href": "SaveaScript.html#//apple_ref/doc/uid/TP40016239-CH13-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/SaveaScript.html#//apple_ref/doc/uid/TP40016239-CH13-SW1",
+        "page": "SaveaScript.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH13-SW1",
+        "children": [
+          {
+            "title": "Saving a Script or Script Bundle",
+            "href": "SaveaScript.html#//apple_ref/doc/uid/TP40016239-CH13-SW2",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/SaveaScript.html#//apple_ref/doc/uid/TP40016239-CH13-SW2",
+            "page": "SaveaScript.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH13-SW2"
+          },
+          {
+            "title": "Saving a Script Application",
+            "href": "SaveaScript.html#//apple_ref/doc/uid/TP40016239-CH13-SW3",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/SaveaScript.html#//apple_ref/doc/uid/TP40016239-CH13-SW3",
+            "page": "SaveaScript.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH13-SW3"
+          },
+          {
+            "title": "Protecting a Script\u2019s Source Code",
+            "href": "SaveaScript.html#//apple_ref/doc/uid/TP40016239-CH13-SW5",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/SaveaScript.html#//apple_ref/doc/uid/TP40016239-CH13-SW5",
+            "page": "SaveaScript.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH13-SW5"
+          },
+          {
+            "title": "Code Signing a Script",
+            "href": "SaveaScript.html#//apple_ref/doc/uid/TP40016239-CH13-SW12",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/SaveaScript.html#//apple_ref/doc/uid/TP40016239-CH13-SW12",
+            "page": "SaveaScript.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH13-SW12"
+          }
+        ]
+      },
+      {
+        "title": "Running a Script",
+        "href": "RunaScript.html#//apple_ref/doc/uid/TP40016239-CH14-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/RunaScript.html#//apple_ref/doc/uid/TP40016239-CH14-SW1",
+        "page": "RunaScript.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH14-SW1",
+        "children": [
+          {
+            "title": "Running a Script in Script Editor",
+            "href": "RunaScript.html#//apple_ref/doc/uid/TP40016239-CH14-SW2",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/RunaScript.html#//apple_ref/doc/uid/TP40016239-CH14-SW2",
+            "page": "RunaScript.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH14-SW2"
+          },
+          {
+            "title": "Running a Script Application",
+            "href": "RunaScript.html#//apple_ref/doc/uid/TP40016239-CH14-SW4",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/RunaScript.html#//apple_ref/doc/uid/TP40016239-CH14-SW4",
+            "page": "RunaScript.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH14-SW4"
+          }
+        ]
+      },
+      {
+        "title": "Configuring Scripting Preferences",
+        "href": "ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW1",
+        "page": "ConfigureScriptingPreferences.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH70-SW1",
+        "children": [
+          {
+            "title": "General Preferences",
+            "href": "ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW10",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW10",
+            "page": "ConfigureScriptingPreferences.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH70-SW10"
+          },
+          {
+            "title": "Editing Preferences",
+            "href": "ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW12",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW12",
+            "page": "ConfigureScriptingPreferences.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH70-SW12"
+          },
+          {
+            "title": "Formatting Preferences",
+            "href": "ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW11",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW11",
+            "page": "ConfigureScriptingPreferences.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH70-SW11"
+          },
+          {
+            "title": "History Preferences",
+            "href": "ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW13",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW13",
+            "page": "ConfigureScriptingPreferences.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH70-SW13"
+          },
+          {
+            "title": "Plug-ins Preferences",
+            "href": "ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW14",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW14",
+            "page": "ConfigureScriptingPreferences.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH70-SW14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Part III: Accessing Scripting Terminology",
+    "href": "AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH9-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH9-SW1",
+    "page": "AboutScriptingTerminology.html",
+    "anchor": "//apple_ref/doc/uid/TP40016239-CH9-SW1",
+    "children": [
+      {
+        "title": "About Scripting Terminology",
+        "href": "AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH75-SW2",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH75-SW2",
+        "page": "AboutScriptingTerminology.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH75-SW2"
+      },
+      {
+        "title": "Opening a Scripting Dictionary",
+        "href": "OpenaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH76-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/OpenaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH76-SW1",
+        "page": "OpenaScriptingDictionary.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH76-SW1"
+      },
+      {
+        "title": "Navigating a Scripting Dictionary",
+        "href": "NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW1",
+        "page": "NavigateaScriptingDictionary.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH77-SW1",
+        "children": [
+          {
+            "title": "Types of Terminology",
+            "href": "NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW13",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW13",
+            "page": "NavigateaScriptingDictionary.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH77-SW13"
+          },
+          {
+            "title": "Key Concepts",
+            "href": "NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW14",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW14",
+            "page": "NavigateaScriptingDictionary.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH77-SW14",
+            "children": [
+              {
+                "title": "Inheritance",
+                "href": "NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW15",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW15",
+                "page": "NavigateaScriptingDictionary.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH77-SW15"
+              },
+              {
+                "title": "Containment",
+                "href": "NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW16",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW16",
+                "page": "NavigateaScriptingDictionary.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH77-SW16"
+              }
+            ]
+          },
+          {
+            "title": "Anatomy of a Command Definition",
+            "href": "NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW17",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW17",
+            "page": "NavigateaScriptingDictionary.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH77-SW17"
+          },
+          {
+            "title": "Anatomy of a Class Definition",
+            "href": "NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW18",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW18",
+            "page": "NavigateaScriptingDictionary.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH77-SW18"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Part IV: Modularizing Code",
+    "href": "UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH74-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH74-SW1",
+    "page": "UseHandlersFunctions.html",
+    "anchor": "//apple_ref/doc/uid/TP40016239-CH74-SW1",
+    "children": [
+      {
+        "title": "Using Handlers/Functions",
+        "href": "UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1",
+        "page": "UseHandlersFunctions.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH52-SW1",
+        "children": [
+          {
+            "title": "AppleScript Handlers",
+            "href": "UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW4",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW4",
+            "page": "UseHandlersFunctions.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH52-SW4",
+            "children": [
+              {
+                "title": "AppleScript Handlers with Positional Parameters",
+                "href": "UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW6",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW6",
+                "page": "UseHandlersFunctions.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH52-SW6"
+              },
+              {
+                "title": "AppleScript Handlers with Interleaved Parameters",
+                "href": "UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW14",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW14",
+                "page": "UseHandlersFunctions.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH52-SW14"
+              },
+              {
+                "title": "AppleScript Handlers with Labeled Parameters",
+                "href": "UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW37",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW37",
+                "page": "UseHandlersFunctions.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH52-SW37"
+              }
+            ]
+          },
+          {
+            "title": "JavaScript Functions",
+            "href": "UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW15",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW15",
+            "page": "UseHandlersFunctions.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH52-SW15",
+            "children": [
+              {
+                "title": "Using Parameters",
+                "href": "UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW38",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW38",
+                "page": "UseHandlersFunctions.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH52-SW38"
+              }
+            ]
+          },
+          {
+            "title": "Exiting Handlers and Returning a Result",
+            "href": "UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW16",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW16",
+            "page": "UseHandlersFunctions.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH52-SW16"
+          },
+          {
+            "title": "Event Handlers",
+            "href": "UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW17",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW17",
+            "page": "UseHandlersFunctions.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH52-SW17",
+            "children": [
+              {
+                "title": "Script Event Handlers",
+                "href": "UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW40",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW40",
+                "page": "UseHandlersFunctions.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH52-SW40",
+                "children": [
+                  {
+                    "title": "Run Handlers",
+                    "href": "UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW41",
+                    "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW41",
+                    "page": "UseHandlersFunctions.html",
+                    "anchor": "//apple_ref/doc/uid/TP40016239-CH52-SW41"
+                  },
+                  {
+                    "title": "Quit Handlers",
+                    "href": "UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW42",
+                    "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW42",
+                    "page": "UseHandlersFunctions.html",
+                    "anchor": "//apple_ref/doc/uid/TP40016239-CH52-SW42"
+                  },
+                  {
+                    "title": "Open Handlers",
+                    "href": "UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW43",
+                    "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW43",
+                    "page": "UseHandlersFunctions.html",
+                    "anchor": "//apple_ref/doc/uid/TP40016239-CH52-SW43"
+                  },
+                  {
+                    "title": "Idle Handlers",
+                    "href": "UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW44",
+                    "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW44",
+                    "page": "UseHandlersFunctions.html",
+                    "anchor": "//apple_ref/doc/uid/TP40016239-CH52-SW44"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Using Script Libraries",
+        "href": "UseScriptLibraries.html#//apple_ref/doc/uid/TP40016239-CH36-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseScriptLibraries.html#//apple_ref/doc/uid/TP40016239-CH36-SW1",
+        "page": "UseScriptLibraries.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH36-SW1",
+        "children": [
+          {
+            "title": "Writing Script Libraries",
+            "href": "UseScriptLibraries.html#//apple_ref/doc/uid/TP40016239-CH36-SW2",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseScriptLibraries.html#//apple_ref/doc/uid/TP40016239-CH36-SW2",
+            "page": "UseScriptLibraries.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH36-SW2"
+          },
+          {
+            "title": "Using Script Libraries",
+            "href": "UseScriptLibraries.html#//apple_ref/doc/uid/TP40016239-CH36-SW3",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseScriptLibraries.html#//apple_ref/doc/uid/TP40016239-CH36-SW3",
+            "page": "UseScriptLibraries.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH36-SW3"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Part V: Working with Files and Folders",
+    "href": "ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH57-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH57-SW1",
+    "page": "ReferenceFilesandFolders.html",
+    "anchor": "//apple_ref/doc/uid/TP40016239-CH57-SW1",
+    "children": [
+      {
+        "title": "Referencing Files and Folders",
+        "href": "ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW1",
+        "page": "ReferenceFilesandFolders.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH34-SW1",
+        "children": [
+          {
+            "title": "Referencing Files and Folders in AppleScript",
+            "href": "ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW39",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW39",
+            "page": "ReferenceFilesandFolders.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH34-SW39",
+            "children": [
+              {
+                "title": "Alias Objects",
+                "href": "ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW3",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW3",
+                "page": "ReferenceFilesandFolders.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH34-SW3"
+              },
+              {
+                "title": "File Objects",
+                "href": "ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW7",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW7",
+                "page": "ReferenceFilesandFolders.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH34-SW7"
+              },
+              {
+                "title": "POSIX File Objects",
+                "href": "ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW11",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW11",
+                "page": "ReferenceFilesandFolders.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH34-SW11"
+              },
+              {
+                "title": "App-Specific References to Files and Folders",
+                "href": "ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW15",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW15",
+                "page": "ReferenceFilesandFolders.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH34-SW15"
+              },
+              {
+                "title": "Converting Between Path Formats",
+                "href": "ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW19",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW19",
+                "page": "ReferenceFilesandFolders.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH34-SW19"
+              },
+              {
+                "title": "Using Conversion Handlers",
+                "href": "ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW27",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW27",
+                "page": "ReferenceFilesandFolders.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH34-SW27",
+                "children": [
+                  {
+                    "title": "Converting a Path to an Aliases",
+                    "href": "ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW28",
+                    "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW28",
+                    "page": "ReferenceFilesandFolders.html",
+                    "anchor": "//apple_ref/doc/uid/TP40016239-CH34-SW28"
+                  },
+                  {
+                    "title": "Converting a Path to a String",
+                    "href": "ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW31",
+                    "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW31",
+                    "page": "ReferenceFilesandFolders.html",
+                    "anchor": "//apple_ref/doc/uid/TP40016239-CH34-SW31"
+                  },
+                  {
+                    "title": "Converting a Path to a POSIX Path String",
+                    "href": "ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW34",
+                    "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW34",
+                    "page": "ReferenceFilesandFolders.html",
+                    "anchor": "//apple_ref/doc/uid/TP40016239-CH34-SW34"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Referencing Files and Folders in JavaScript",
+            "href": "ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW40",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW40",
+            "page": "ReferenceFilesandFolders.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH34-SW40"
+          }
+        ]
+      },
+      {
+        "title": "Reading and Writing Files",
+        "href": "ReadandWriteFiles.html#//apple_ref/doc/uid/TP40016239-CH58-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ReadandWriteFiles.html#//apple_ref/doc/uid/TP40016239-CH58-SW1",
+        "page": "ReadandWriteFiles.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH58-SW1",
+        "children": [
+          {
+            "title": "Writing to a File",
+            "href": "ReadandWriteFiles.html#//apple_ref/doc/uid/TP40016239-CH58-SW3",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ReadandWriteFiles.html#//apple_ref/doc/uid/TP40016239-CH58-SW3",
+            "page": "ReadandWriteFiles.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH58-SW3"
+          },
+          {
+            "title": "Reading a File",
+            "href": "ReadandWriteFiles.html#//apple_ref/doc/uid/TP40016239-CH58-SW2",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ReadandWriteFiles.html#//apple_ref/doc/uid/TP40016239-CH58-SW2",
+            "page": "ReadandWriteFiles.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH58-SW2",
+            "children": [
+              {
+                "title": "Reading and Splitting a File",
+                "href": "ReadandWriteFiles.html#//apple_ref/doc/uid/TP40016239-CH58-SW10",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ReadandWriteFiles.html#//apple_ref/doc/uid/TP40016239-CH58-SW10",
+                "page": "ReadandWriteFiles.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH58-SW10"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Processing Dropped Files and Folders",
+        "href": "ProcessDroppedFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH53-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ProcessDroppedFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH53-SW1",
+        "page": "ProcessDroppedFilesandFolders.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH53-SW1",
+        "children": [
+          {
+            "title": "Creating an AppleScript Droplet from a Script Editor Template",
+            "href": "ProcessDroppedFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH53-SW6",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ProcessDroppedFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH53-SW6",
+            "page": "ProcessDroppedFilesandFolders.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH53-SW6"
+          },
+          {
+            "title": "Creating a Droplet to Process Files",
+            "href": "ProcessDroppedFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH53-SW8",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ProcessDroppedFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH53-SW8",
+            "page": "ProcessDroppedFilesandFolders.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH53-SW8"
+          },
+          {
+            "title": "Creating a Droplet to Process Files and Folders",
+            "href": "ProcessDroppedFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH53-SW10",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ProcessDroppedFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH53-SW10",
+            "page": "ProcessDroppedFilesandFolders.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH53-SW10"
+          }
+        ]
+      },
+      {
+        "title": "Watching Folders",
+        "href": "WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW1",
+        "page": "WatchFolders.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH39-SW1",
+        "children": [
+          {
+            "title": "Using Folder Actions to Watch Folders",
+            "href": "WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW5",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW5",
+            "page": "WatchFolders.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH39-SW5",
+            "children": [
+              {
+                "title": "Write a Folder Action Script",
+                "href": "WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW3",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW3",
+                "page": "WatchFolders.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH39-SW3"
+              },
+              {
+                "title": "Attaching a Folder Action Script to a Folder",
+                "href": "WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW4",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW4",
+                "page": "WatchFolders.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH39-SW4"
+              }
+            ]
+          },
+          {
+            "title": "Watching Folders Using an Idle Loop and a Stay Open Script App",
+            "href": "WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW6",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW6",
+            "page": "WatchFolders.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH39-SW6"
+          },
+          {
+            "title": "Folder Watching Best Practices",
+            "href": "WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW14",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW14",
+            "page": "WatchFolders.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH39-SW14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Part VI: Working with Text, Numbers, and Lists",
+    "href": "ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH59-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH59-SW1",
+    "page": "ManipulateText.html",
+    "anchor": "//apple_ref/doc/uid/TP40016239-CH59-SW1",
+    "children": [
+      {
+        "title": "Manipulating Text",
+        "href": "ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW1",
+        "page": "ManipulateText.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH33-SW1",
+        "children": [
+          {
+            "title": "Changing the Case of Text",
+            "href": "ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW3",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW3",
+            "page": "ManipulateText.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH33-SW3"
+          },
+          {
+            "title": "Finding and Replacing Text in a String",
+            "href": "ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW4",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW4",
+            "page": "ManipulateText.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH33-SW4"
+          },
+          {
+            "title": "Getting the Characters of a String",
+            "href": "ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW16",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW16",
+            "page": "ManipulateText.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH33-SW16"
+          },
+          {
+            "title": "Getting the Length of String",
+            "href": "ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW18",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW18",
+            "page": "ManipulateText.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH33-SW18"
+          },
+          {
+            "title": "Getting the Paragraphs of a String",
+            "href": "ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW20",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW20",
+            "page": "ManipulateText.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH33-SW20"
+          },
+          {
+            "title": "Getting the Position of Text in a String",
+            "href": "ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW22",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW22",
+            "page": "ManipulateText.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH33-SW22"
+          },
+          {
+            "title": "Splitting Text",
+            "href": "ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW6",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW6",
+            "page": "ManipulateText.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH33-SW6"
+          },
+          {
+            "title": "Trimming Text",
+            "href": "ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW2",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW2",
+            "page": "ManipulateText.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH33-SW2",
+            "children": [
+              {
+                "title": "Trimming Paragraphs of Text",
+                "href": "ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW32",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW32",
+                "page": "ManipulateText.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH33-SW32"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Manipulating Numbers",
+        "href": "ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW1",
+        "page": "ManipulateNumbers.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH47-SW1",
+        "children": [
+          {
+            "title": "Converting a Number to a String",
+            "href": "ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW3",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW3",
+            "page": "ManipulateNumbers.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH47-SW3",
+            "children": [
+              {
+                "title": "Converting a Long Number to a String",
+                "href": "ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW5",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW5",
+                "page": "ManipulateNumbers.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH47-SW5"
+              }
+            ]
+          },
+          {
+            "title": "Adding a Descriptive Suffix to a Number",
+            "href": "ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW18",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW18",
+            "page": "ManipulateNumbers.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH47-SW18"
+          },
+          {
+            "title": "Adding Leading Zeros to a Number",
+            "href": "ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW22",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW22",
+            "page": "ManipulateNumbers.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH47-SW22"
+          },
+          {
+            "title": "Comma-Delimiting a Number",
+            "href": "ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW8",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW8",
+            "page": "ManipulateNumbers.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH47-SW8"
+          },
+          {
+            "title": "Determining if a Number is an Odd Number",
+            "href": "ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW11",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW11",
+            "page": "ManipulateNumbers.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH47-SW11"
+          },
+          {
+            "title": "Rounding and Truncating a Number",
+            "href": "ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW15",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW15",
+            "page": "ManipulateNumbers.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH47-SW15"
+          }
+        ]
+      },
+      {
+        "title": "Manipulating Lists of Items",
+        "href": "ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW1",
+        "page": "ManipulateListsofItems.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH48-SW1",
+        "children": [
+          {
+            "title": "Looping through a List",
+            "href": "ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW51",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW51",
+            "page": "ManipulateListsofItems.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH48-SW51"
+          },
+          {
+            "title": "Converting a List to a String",
+            "href": "ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW11",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW11",
+            "page": "ManipulateListsofItems.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH48-SW11"
+          },
+          {
+            "title": "Counting the Items in a List",
+            "href": "ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW17",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW17",
+            "page": "ManipulateListsofItems.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH48-SW17"
+          },
+          {
+            "title": "Counting the Occurrences of an Item in a List",
+            "href": "ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW4",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW4",
+            "page": "ManipulateListsofItems.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH48-SW4"
+          },
+          {
+            "title": "Determining if a List Contains a Specific Item",
+            "href": "ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW2",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW2",
+            "page": "ManipulateListsofItems.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH48-SW2"
+          },
+          {
+            "title": "Determining the Position of an Item in a List",
+            "href": "ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW3",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW3",
+            "page": "ManipulateListsofItems.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH48-SW3",
+            "children": [
+              {
+                "title": "Determining Multiple Positions of an Item in a List",
+                "href": "ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW24",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW24",
+                "page": "ManipulateListsofItems.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH48-SW24"
+              }
+            ]
+          },
+          {
+            "title": "Finding the Highest Numeric Value in a List",
+            "href": "ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW8",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW8",
+            "page": "ManipulateListsofItems.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH48-SW8"
+          },
+          {
+            "title": "Finding the Lowest Numeric Value in a List",
+            "href": "ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW9",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW9",
+            "page": "ManipulateListsofItems.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH48-SW9"
+          },
+          {
+            "title": "Inserting Items into a List",
+            "href": "ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW5",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW5",
+            "page": "ManipulateListsofItems.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH48-SW5"
+          },
+          {
+            "title": "Replacing Items in a List",
+            "href": "ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW6",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW6",
+            "page": "ManipulateListsofItems.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH48-SW6"
+          },
+          {
+            "title": "Sorting a List",
+            "href": "ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW10",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW10",
+            "page": "ManipulateListsofItems.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH48-SW10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Part VII: Interacting with Users",
+    "href": "DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH60-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH60-SW1",
+    "page": "DisplayDialogsandAlerts.html",
+    "anchor": "//apple_ref/doc/uid/TP40016239-CH60-SW1",
+    "children": [
+      {
+        "title": "Displaying Dialogs and Alerts",
+        "href": "DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1",
+        "page": "DisplayDialogsandAlerts.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH15-SW1",
+        "children": [
+          {
+            "title": "Displaying a Dialog",
+            "href": "DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW2",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW2",
+            "page": "DisplayDialogsandAlerts.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH15-SW2",
+            "children": [
+              {
+                "title": "Customizing Dialog Buttons",
+                "href": "DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW5",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW5",
+                "page": "DisplayDialogsandAlerts.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH15-SW5"
+              },
+              {
+                "title": "Adding an Icon to a Dialog",
+                "href": "DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW6",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW6",
+                "page": "DisplayDialogsandAlerts.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH15-SW6"
+              },
+              {
+                "title": "Automatically Dismissing a Dialog",
+                "href": "DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW7",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW7",
+                "page": "DisplayDialogsandAlerts.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH15-SW7"
+              }
+            ]
+          },
+          {
+            "title": "Displaying an Alert",
+            "href": "DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW3",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW3",
+            "page": "DisplayDialogsandAlerts.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH15-SW3"
+          }
+        ]
+      },
+      {
+        "title": "Prompting for Text",
+        "href": "PromptforText.html#//apple_ref/doc/uid/TP40016239-CH80-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/PromptforText.html#//apple_ref/doc/uid/TP40016239-CH80-SW1",
+        "page": "PromptforText.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH80-SW1",
+        "children": [
+          {
+            "title": "Prompting for Hidden Text",
+            "href": "PromptforText.html#//apple_ref/doc/uid/TP40016239-CH80-SW9",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/PromptforText.html#//apple_ref/doc/uid/TP40016239-CH80-SW9",
+            "page": "PromptforText.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH80-SW9"
+          }
+        ]
+      },
+      {
+        "title": "Displaying Notifications",
+        "href": "DisplayNotifications.html#//apple_ref/doc/uid/TP40016239-CH61-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/DisplayNotifications.html#//apple_ref/doc/uid/TP40016239-CH61-SW1",
+        "page": "DisplayNotifications.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH61-SW1"
+      },
+      {
+        "title": "Speaking Text",
+        "href": "SpeakText.html#//apple_ref/doc/uid/TP40016239-CH62-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/SpeakText.html#//apple_ref/doc/uid/TP40016239-CH62-SW1",
+        "page": "SpeakText.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH62-SW1",
+        "children": [
+          {
+            "title": "Saving Text as an Audio File",
+            "href": "SpeakText.html#//apple_ref/doc/uid/TP40016239-CH62-SW10",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/SpeakText.html#//apple_ref/doc/uid/TP40016239-CH62-SW10",
+            "page": "SpeakText.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH62-SW10"
+          },
+          {
+            "title": "Speaking Text While Displaying a Dialog",
+            "href": "SpeakText.html#//apple_ref/doc/uid/TP40016239-CH62-SW11",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/SpeakText.html#//apple_ref/doc/uid/TP40016239-CH62-SW11",
+            "page": "SpeakText.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH62-SW11"
+          }
+        ]
+      },
+      {
+        "title": "Prompting for Files or Folders",
+        "href": "PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW1",
+        "page": "PromptforaFileorFolder.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH81-SW1",
+        "children": [
+          {
+            "title": "Prompting for a File",
+            "href": "PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW16",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW16",
+            "page": "PromptforaFileorFolder.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH81-SW16",
+            "children": [
+              {
+                "title": "Prompting for a Specific Type of File",
+                "href": "PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW17",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW17",
+                "page": "PromptforaFileorFolder.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH81-SW17"
+              },
+              {
+                "title": "Prompting for Multiple Files",
+                "href": "PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW18",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW18",
+                "page": "PromptforaFileorFolder.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH81-SW18"
+              }
+            ]
+          },
+          {
+            "title": "Prompting for a Folder",
+            "href": "PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW2",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW2",
+            "page": "PromptforaFileorFolder.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH81-SW2",
+            "children": [
+              {
+                "title": "Prompting for Multiple Folders",
+                "href": "PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW19",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW19",
+                "page": "PromptforaFileorFolder.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH81-SW19"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Prompting for a File Name",
+        "href": "PromptforaFileName.html#//apple_ref/doc/uid/TP40016239-CH82-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/PromptforaFileName.html#//apple_ref/doc/uid/TP40016239-CH82-SW1",
+        "page": "PromptforaFileName.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH82-SW1"
+      },
+      {
+        "title": "Prompting for a Choice from a List",
+        "href": "PromptforaChoicefromaList.html#//apple_ref/doc/uid/TP40016239-CH83-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/PromptforaChoicefromaList.html#//apple_ref/doc/uid/TP40016239-CH83-SW1",
+        "page": "PromptforaChoicefromaList.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH83-SW1"
+      },
+      {
+        "title": "Prompting for a Color",
+        "href": "PromptforaColor.html#//apple_ref/doc/uid/TP40016239-CH86-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/PromptforaColor.html#//apple_ref/doc/uid/TP40016239-CH86-SW1",
+        "page": "PromptforaColor.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH86-SW1"
+      },
+      {
+        "title": "Displaying Progress",
+        "href": "DisplayProgress.html#//apple_ref/doc/uid/TP40016239-CH37-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/DisplayProgress.html#//apple_ref/doc/uid/TP40016239-CH37-SW1",
+        "page": "DisplayProgress.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH37-SW1"
+      }
+    ]
+  },
+  {
+    "title": "Part VIII: Working with HTML and URLs",
+    "href": "ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH63-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH63-SW1",
+    "page": "ConvertRGBtoHTMLColor.html",
+    "anchor": "//apple_ref/doc/uid/TP40016239-CH63-SW1",
+    "children": [
+      {
+        "title": "Converting RGB to HTML Color",
+        "href": "ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1",
+        "page": "ConvertRGBtoHTMLColor.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH49-SW1"
+      },
+      {
+        "title": "Encoding and Decoding Text",
+        "href": "EncodeandDecodeText.html#//apple_ref/doc/uid/TP40016239-CH51-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/EncodeandDecodeText.html#//apple_ref/doc/uid/TP40016239-CH51-SW1",
+        "page": "EncodeandDecodeText.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH51-SW1",
+        "children": [
+          {
+            "title": "Encoding Characters",
+            "href": "EncodeandDecodeText.html#//apple_ref/doc/uid/TP40016239-CH51-SW2",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/EncodeandDecodeText.html#//apple_ref/doc/uid/TP40016239-CH51-SW2",
+            "page": "EncodeandDecodeText.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH51-SW2"
+          },
+          {
+            "title": "Encoding Text",
+            "href": "EncodeandDecodeText.html#//apple_ref/doc/uid/TP40016239-CH51-SW3",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/EncodeandDecodeText.html#//apple_ref/doc/uid/TP40016239-CH51-SW3",
+            "page": "EncodeandDecodeText.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH51-SW3"
+          },
+          {
+            "title": "Decoding Text",
+            "href": "EncodeandDecodeText.html#//apple_ref/doc/uid/TP40016239-CH51-SW4",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/EncodeandDecodeText.html#//apple_ref/doc/uid/TP40016239-CH51-SW4",
+            "page": "EncodeandDecodeText.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH51-SW4"
+          }
+        ]
+      },
+      {
+        "title": "Parsing HTML",
+        "href": "ParseHTML.html#//apple_ref/doc/uid/TP40016239-CH50-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ParseHTML.html#//apple_ref/doc/uid/TP40016239-CH50-SW1",
+        "page": "ParseHTML.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH50-SW1",
+        "children": [
+          {
+            "title": "Parsing an HTML File",
+            "href": "ParseHTML.html#//apple_ref/doc/uid/TP40016239-CH50-SW6",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ParseHTML.html#//apple_ref/doc/uid/TP40016239-CH50-SW6",
+            "page": "ParseHTML.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH50-SW6"
+          },
+          {
+            "title": "Parsing an HTML Tag",
+            "href": "ParseHTML.html#//apple_ref/doc/uid/TP40016239-CH50-SW8",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ParseHTML.html#//apple_ref/doc/uid/TP40016239-CH50-SW8",
+            "page": "ParseHTML.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH50-SW8"
+          }
+        ]
+      },
+      {
+        "title": "Removing HTML Markup from Text",
+        "href": "RemoveMarkupfromHTML.html#//apple_ref/doc/uid/TP40016239-CH64-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/RemoveMarkupfromHTML.html#//apple_ref/doc/uid/TP40016239-CH64-SW1",
+        "page": "RemoveMarkupfromHTML.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH64-SW1"
+      }
+    ]
+  },
+  {
+    "title": "Part IX: Working with Data",
+    "href": "WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH65-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH65-SW1",
+    "page": "WorkwithPropertyListFiles.html",
+    "anchor": "//apple_ref/doc/uid/TP40016239-CH65-SW1",
+    "children": [
+      {
+        "title": "Working with Property List Files",
+        "href": "WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW1",
+        "page": "WorkwithPropertyListFiles.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH66-SW1",
+        "children": [
+          {
+            "title": "Creating a New Property List File",
+            "href": "WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW7",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW7",
+            "page": "WorkwithPropertyListFiles.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH66-SW7"
+          },
+          {
+            "title": "Reading a Property List Key Value",
+            "href": "WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW8",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW8",
+            "page": "WorkwithPropertyListFiles.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH66-SW8"
+          },
+          {
+            "title": "Changing a Property List Key Value",
+            "href": "WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW9",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW9",
+            "page": "WorkwithPropertyListFiles.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH66-SW9"
+          },
+          {
+            "title": "Adding a New Property List Item",
+            "href": "WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW10",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW10",
+            "page": "WorkwithPropertyListFiles.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH66-SW10"
+          }
+        ]
+      },
+      {
+        "title": "Working with XML",
+        "href": "WorkwithXML.html#//apple_ref/doc/uid/TP40016239-CH67-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/WorkwithXML.html#//apple_ref/doc/uid/TP40016239-CH67-SW1",
+        "page": "WorkwithXML.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH67-SW1"
+      }
+    ]
+  },
+  {
+    "title": "Part X: Performing Common Scripting Tasks",
+    "href": "AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH35-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH35-SW1",
+    "page": "AutomatetheUserInterface.html",
+    "anchor": "//apple_ref/doc/uid/TP40016239-CH35-SW1",
+    "children": [
+      {
+        "title": "Automating the User Interface",
+        "href": "AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW1",
+        "page": "AutomatetheUserInterface.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH69-SW1",
+        "children": [
+          {
+            "title": "Enabling User Interface Scripting",
+            "href": "AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW12",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW12",
+            "page": "AutomatetheUserInterface.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH69-SW12"
+          },
+          {
+            "title": "Targeting an App",
+            "href": "AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW15",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW15",
+            "page": "AutomatetheUserInterface.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH69-SW15"
+          },
+          {
+            "title": "Clicking a Button",
+            "href": "AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW16",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW16",
+            "page": "AutomatetheUserInterface.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH69-SW16"
+          },
+          {
+            "title": "Choosing a Menu Item",
+            "href": "AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW17",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW17",
+            "page": "AutomatetheUserInterface.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH69-SW17",
+            "children": [
+              {
+                "title": "Choosing a Submenu Item",
+                "href": "AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW19",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW19",
+                "page": "AutomatetheUserInterface.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH69-SW19"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Manipulating Images",
+        "href": "ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW1",
+        "page": "ManipulateImages.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH20-SW1",
+        "children": [
+          {
+            "title": "The Image Events Workflow",
+            "href": "ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW11",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW11",
+            "page": "ManipulateImages.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH20-SW11"
+          },
+          {
+            "title": "Opening an Image",
+            "href": "ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW12",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW12",
+            "page": "ManipulateImages.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH20-SW12"
+          },
+          {
+            "title": "Reading Image Properties",
+            "href": "ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW14",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW14",
+            "page": "ManipulateImages.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH20-SW14"
+          },
+          {
+            "title": "Flipping an Image",
+            "href": "ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW15",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW15",
+            "page": "ManipulateImages.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH20-SW15"
+          },
+          {
+            "title": "Rotating an Image",
+            "href": "ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW16",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW16",
+            "page": "ManipulateImages.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH20-SW16"
+          },
+          {
+            "title": "Scaling an Image",
+            "href": "ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW17",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW17",
+            "page": "ManipulateImages.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH20-SW17"
+          },
+          {
+            "title": "Cropping an Image",
+            "href": "ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW18",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW18",
+            "page": "ManipulateImages.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH20-SW18"
+          },
+          {
+            "title": "Padding an Image",
+            "href": "ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW19",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW19",
+            "page": "ManipulateImages.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH20-SW19"
+          },
+          {
+            "title": "Converting an Image from One Type to Another",
+            "href": "ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW21",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW21",
+            "page": "ManipulateImages.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH20-SW21"
+          }
+        ]
+      },
+      {
+        "title": "Calling Command-Line Tools",
+        "href": "CallCommandLineUtilities.html#//apple_ref/doc/uid/TP40016239-CH43-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/CallCommandLineUtilities.html#//apple_ref/doc/uid/TP40016239-CH43-SW1",
+        "page": "CallCommandLineUtilities.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH43-SW1",
+        "children": [
+          {
+            "title": "Executing Commands",
+            "href": "CallCommandLineUtilities.html#//apple_ref/doc/uid/TP40016239-CH43-SW7",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/CallCommandLineUtilities.html#//apple_ref/doc/uid/TP40016239-CH43-SW7",
+            "page": "CallCommandLineUtilities.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH43-SW7",
+            "children": [
+              {
+                "title": "Quoting Strings",
+                "href": "CallCommandLineUtilities.html#//apple_ref/doc/uid/TP40016239-CH43-SW8",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/CallCommandLineUtilities.html#//apple_ref/doc/uid/TP40016239-CH43-SW8",
+                "page": "CallCommandLineUtilities.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH43-SW8"
+              }
+            ]
+          },
+          {
+            "title": "More Information",
+            "href": "CallCommandLineUtilities.html#//apple_ref/doc/uid/TP40016239-CH43-SW9",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/CallCommandLineUtilities.html#//apple_ref/doc/uid/TP40016239-CH43-SW9",
+            "page": "CallCommandLineUtilities.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH43-SW9"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Part XI: Extending Apps and Processes",
+    "href": "MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH68-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH68-SW1",
+    "page": "MakeaSystem-WideService.html",
+    "anchor": "//apple_ref/doc/uid/TP40016239-CH68-SW1",
+    "children": [
+      {
+        "title": "Making a Systemwide Service",
+        "href": "MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW1",
+        "page": "MakeaSystem-WideService.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH46-SW1",
+        "children": [
+          {
+            "title": "Making a Script Available as a Service",
+            "href": "MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW9",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW9",
+            "page": "MakeaSystem-WideService.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH46-SW9",
+            "children": [
+              {
+                "title": "Example Service Workflow Scripts",
+                "href": "MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW12",
+                "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW12",
+                "page": "MakeaSystem-WideService.html",
+                "anchor": "//apple_ref/doc/uid/TP40016239-CH46-SW12"
+              }
+            ]
+          },
+          {
+            "title": "Triggering Service Workflows",
+            "href": "MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW13",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW13",
+            "page": "MakeaSystem-WideService.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH46-SW13"
+          }
+        ]
+      },
+      {
+        "title": "Using the Systemwide Script Menu",
+        "href": "UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW1",
+        "page": "UsetheSystem-WideScriptMenu.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH7-SW1",
+        "children": [
+          {
+            "title": "Enabling the Script Menu",
+            "href": "UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW6",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW6",
+            "page": "UsetheSystem-WideScriptMenu.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH7-SW6"
+          },
+          {
+            "title": "Adding User-Level Scripts to the Script Menu",
+            "href": "UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW8",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW8",
+            "page": "UsetheSystem-WideScriptMenu.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH7-SW8"
+          },
+          {
+            "title": "Adding Computer-Level Scripts to the Script Menu",
+            "href": "UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW9",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW9",
+            "page": "UsetheSystem-WideScriptMenu.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH7-SW9"
+          },
+          {
+            "title": "Adding Application-Specific Scripts to the Script Menu",
+            "href": "UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW10",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW10",
+            "page": "UsetheSystem-WideScriptMenu.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH7-SW10"
+          },
+          {
+            "title": "Running Scripts in the Script Menu",
+            "href": "UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW11",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW11",
+            "page": "UsetheSystem-WideScriptMenu.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH7-SW11"
+          }
+        ]
+      },
+      {
+        "title": "Using Dictation to Run Scripts",
+        "href": "UseDictationtoRunScripts.html#//apple_ref/doc/uid/TP40016239-CH87-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseDictationtoRunScripts.html#//apple_ref/doc/uid/TP40016239-CH87-SW1",
+        "page": "UseDictationtoRunScripts.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH87-SW1",
+        "children": [
+          {
+            "title": "Enabling Dictation Commands",
+            "href": "UseDictationtoRunScripts.html#//apple_ref/doc/uid/TP40016239-CH87-SW4",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseDictationtoRunScripts.html#//apple_ref/doc/uid/TP40016239-CH87-SW4",
+            "page": "UseDictationtoRunScripts.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH87-SW4"
+          },
+          {
+            "title": "Creating a Dictation Command Script",
+            "href": "UseDictationtoRunScripts.html#//apple_ref/doc/uid/TP40016239-CH87-SW6",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseDictationtoRunScripts.html#//apple_ref/doc/uid/TP40016239-CH87-SW6",
+            "page": "UseDictationtoRunScripts.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH87-SW6"
+          },
+          {
+            "title": "Running a Dictation Command Script",
+            "href": "UseDictationtoRunScripts.html#//apple_ref/doc/uid/TP40016239-CH87-SW8",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseDictationtoRunScripts.html#//apple_ref/doc/uid/TP40016239-CH87-SW8",
+            "page": "UseDictationtoRunScripts.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH87-SW8"
+          },
+          {
+            "title": "Creating a Dictation Command Automator Workflow",
+            "href": "UseDictationtoRunScripts.html#//apple_ref/doc/uid/TP40016239-CH87-SW2",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/UseDictationtoRunScripts.html#//apple_ref/doc/uid/TP40016239-CH87-SW2",
+            "page": "UseDictationtoRunScripts.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH87-SW2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Part XII: Appendixes",
+    "href": "AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH78-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH78-SW1",
+    "page": "AppendixA-AppleScriptObjCQuickTranslationGuide.html",
+    "anchor": "//apple_ref/doc/uid/TP40016239-CH78-SW1",
+    "children": [
+      {
+        "title": "Objective-C to AppleScript Quick Translation Guide",
+        "href": "AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW1",
+        "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW1",
+        "page": "AppendixA-AppleScriptObjCQuickTranslationGuide.html",
+        "anchor": "//apple_ref/doc/uid/TP40016239-CH79-SW1",
+        "children": [
+          {
+            "title": "Resolving Terminology Conflicts in AppleScriptObjC",
+            "href": "AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW7",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW7",
+            "page": "AppendixA-AppleScriptObjCQuickTranslationGuide.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH79-SW7"
+          },
+          {
+            "title": "Importing Frameworks",
+            "href": "AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW8",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW8",
+            "page": "AppendixA-AppleScriptObjCQuickTranslationGuide.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH79-SW8"
+          },
+          {
+            "title": "Accessing Scripting Additions",
+            "href": "AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW9",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW9",
+            "page": "AppendixA-AppleScriptObjCQuickTranslationGuide.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH79-SW9"
+          },
+          {
+            "title": "Classes and Constants",
+            "href": "AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW10",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW10",
+            "page": "AppendixA-AppleScriptObjCQuickTranslationGuide.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH79-SW10"
+          },
+          {
+            "title": "Resources",
+            "href": "AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW16",
+            "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW16",
+            "page": "AppendixA-AppleScriptObjCQuickTranslationGuide.html",
+            "anchor": "//apple_ref/doc/uid/TP40016239-CH79-SW16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Revision History",
+    "href": "RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1",
+    "url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1",
+    "page": "RevisionHistory.html",
+    "anchor": "//apple_ref/doc/uid/TP40016239-CH99-SW1"
+  }
+]

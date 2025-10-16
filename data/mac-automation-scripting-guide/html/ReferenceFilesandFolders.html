@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+  <title>Mac Automation Scripting Guide: Referencing Files and Folders</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1282/CSS/style-1.6.3.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1282/CSS/feedback-1.6.3.css" />
+  <meta charset='utf-8'> 
+<meta id="j-version" name="j-version" content="" />
+<meta id="build" name="build" content="c1e4c7a89af8f899a21cfa81fc33ba42" />
+<meta id="document-version" name="document-version" content="1.1.0" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages &amp; Utilities}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40016239" />
+<meta id="chapterId" name="chapterId" content="TP40016239-CH34">
+<meta id="book-title" name="book-title" content="Mac Automation Scripting Guide" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2016-06-13" />
+<meta id="description" name="description" content="New document." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+<meta id="resources-uri" name="resources-uri" content="../../../../Resources/1282">
+<link id="book-index-page" rel="Start" title="" type="text/html" href="./index.html">
+<!-- , next_chapter: next_chapter, previous_chapter: previous_chapter -->
+<link id="next-page" rel="Next" type="text/html" href="">
+<link id="previous-page" rel="Prev" type="text/html" href="">
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta id="platforms" name="platforms" content="OS X">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/">Documentation Archive
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/1282/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="https://developer.apple.com">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">Mac Automation Scripting Guide</span>
+    </p>
+    <form id="search" class="hideInXcode" method="get" action="/search/index.php" accept-charset="utf-8" autocomplete="off">
+  <input type="search" id="ssi_SearchField" placeholder="Search Documentation Archive" name="q" autocomplete="off" tabindex="2" />
+</form>
+
+      
+   
+   
+
+
+
+    <img id="shortstack" src="../../../../Resources/1282/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav id="navigator" class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH2-SW1"
+            class="part-name">
+            <a href="index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH56-SW1">Mac Scripting Essentials</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH56-SW1">About Mac Scripting</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="HowMacScriptingWorks.html#//apple_ref/doc/uid/TP40016239-CH73-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH73-SW1">How Mac Scripting Works</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TypesofScripts.html#//apple_ref/doc/uid/TP40016239-CH72-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH72-SW1">Types of Scripts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="AboutthisGuide.html#//apple_ref/doc/uid/TP40016239-CH71-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH71-SW1">About this Guide</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH10-SW1"
+            class="part-name">
+            <a href="GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH5-SW1">Starting Scripting</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH5-SW1">Getting to Know Script Editor</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CreateaScript.html#//apple_ref/doc/uid/TP40016239-CH12-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH12-SW1">Creating a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SaveaScript.html#//apple_ref/doc/uid/TP40016239-CH13-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH13-SW1">Saving a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RunaScript.html#//apple_ref/doc/uid/TP40016239-CH14-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH14-SW1">Running a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH70-SW1">Configuring Scripting Preferences</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH9-SW1"
+            class="part-name">
+            <a href="AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH75-SW2" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH75-SW2">Accessing Scripting Terminology</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH75-SW2" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH75-SW2">About Scripting Terminology</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="OpenaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH76-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH76-SW1">Opening a Scripting Dictionary</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH77-SW1">Navigating a Scripting Dictionary</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH74-SW1"
+            class="part-name">
+            <a href="UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH52-SW1">Modularizing Code</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH52-SW1">Using Handlers/Functions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UseScriptLibraries.html#//apple_ref/doc/uid/TP40016239-CH36-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH36-SW1">Using Script Libraries</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH57-SW1"
+            class="part-name nav-part-active open-part">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH34-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH34-SW1">Working with Files and Folders</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter nav-current-chapter">
+              	<a href="#//apple_ref/doc/uid/TP40016239-CH34-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH34-SW1">Referencing Files and Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ReadandWriteFiles.html#//apple_ref/doc/uid/TP40016239-CH58-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH58-SW1">Reading and Writing Files</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ProcessDroppedFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH53-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH53-SW1">Processing Dropped Files and Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH39-SW1">Watching Folders</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH59-SW1"
+            class="part-name">
+            <a href="ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW1">Working with Text, Numbers, and Lists</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW1">Manipulating Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH47-SW1">Manipulating Numbers</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH48-SW1">Manipulating Lists of Items</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH60-SW1"
+            class="part-name">
+            <a href="DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH15-SW1">Interacting with Users</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH15-SW1">Displaying Dialogs and Alerts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforText.html#//apple_ref/doc/uid/TP40016239-CH80-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH80-SW1">Prompting for Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DisplayNotifications.html#//apple_ref/doc/uid/TP40016239-CH61-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH61-SW1">Displaying Notifications</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SpeakText.html#//apple_ref/doc/uid/TP40016239-CH62-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH62-SW1">Speaking Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH81-SW1">Prompting for Files or Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaFileName.html#//apple_ref/doc/uid/TP40016239-CH82-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH82-SW1">Prompting for a File Name</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaChoicefromaList.html#//apple_ref/doc/uid/TP40016239-CH83-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH83-SW1">Prompting for a Choice from a List</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaColor.html#//apple_ref/doc/uid/TP40016239-CH86-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH86-SW1">Prompting for a Color</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DisplayProgress.html#//apple_ref/doc/uid/TP40016239-CH37-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH37-SW1">Displaying Progress</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH63-SW1"
+            class="part-name">
+            <a href="ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH49-SW1">Working with HTML and URLs</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH49-SW1">Converting RGB to HTML Color</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="EncodeandDecodeText.html#//apple_ref/doc/uid/TP40016239-CH51-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH51-SW1">Encoding and Decoding Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ParseHTML.html#//apple_ref/doc/uid/TP40016239-CH50-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH50-SW1">Parsing HTML</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RemoveMarkupfromHTML.html#//apple_ref/doc/uid/TP40016239-CH64-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH64-SW1">Removing HTML Markup from Text</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH65-SW1"
+            class="part-name">
+            <a href="WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH66-SW1">Working with Data</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH66-SW1">Working with Property List Files</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WorkwithXML.html#//apple_ref/doc/uid/TP40016239-CH67-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH67-SW1">Working with XML</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH35-SW1"
+            class="part-name">
+            <a href="AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH69-SW1">Performing Common Scripting Tasks</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH69-SW1">Automating the User Interface</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH20-SW1">Manipulating Images</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CallCommandLineUtilities.html#//apple_ref/doc/uid/TP40016239-CH43-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH43-SW1">Calling Command-Line Tools</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH68-SW1"
+            class="part-name">
+            <a href="MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH46-SW1">Extending Apps and Processes</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH46-SW1">Making a Systemwide Service</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH7-SW1">Using the Systemwide Script Menu</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UseDictationtoRunScripts.html#//apple_ref/doc/uid/TP40016239-CH87-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH87-SW1">Using Dictation to Run Scripts</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH78-SW1"
+            class="part-name">
+            <a href="AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH79-SW1">Appendixes</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH79-SW1">Objective-C to AppleScript Quick Translation Guide</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="revision-history"
+            class="part-name">
+          <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Revision History</a>
+          <ul class="nav-chapters">
+            <li class="nav-chapter">
+              <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Document Revision History</a>
+            </li>
+          </ul>
+        </li>
+    </ul>
+</nav>
+
+      <menu id="bashful" type="toolbar">
+  <div class="shield"></div>
+  <menuitem id="jump_to" class="menu-bar-item closed">
+  <span>On This Page</span>
+  <div class="chevron">
+    <div class="chevy chevron-left"></div>
+    <div class="chevy chevron-right"></div>
+  </div>
+  <menu type="list" class="details">
+      <ul class="list-bullet">
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH34-SW39">Referencing Files and Folders in AppleScript</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH34-SW40">Referencing Files and Folders in JavaScript</a>
+          </li>
+      </ul>
+  </menu>
+</menuitem>
+
+</menu>
+<div class="pixel-line"></div>
+<div class="rubber-band-gap"></div>
+<article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34"></a><a name="//apple_ref/doc/uid/TP40016239-CH34-SW1"></a>
+      <a name="//apple_ref/doc/uid/TP40016239-CH57"></a><a name="//apple_ref/doc/uid/TP40016239-CH57-SW1"></a>
+
+  <h2 class='chapter-name'>Referencing Files and Folders</h2>
+
+
+  
+
+
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW39"></a>
+  <h3 class="section-name" tabindex="0">Referencing Files and Folders in AppleScript</h3>
+  <p class="para">
+  In AppleScript, file and folder paths are typically represented using <code class="code-voice">alias</code>, <code class="code-voice">file</code>, and <code class="code-voice">POSIX file</code> objects.
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW2"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">Additional information about working with file and folder paths in AppleScript can be found in <a href="../../../AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW28" data-renderer-version="1" target="_self">Aliases and Files</a> in <em class="u-book"><a href="../../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983" data-renderer-version="1" target="_self">AppleScript Language Guide</a></em>.
+    	</p>
+    
+  </aside>
+</div>
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW3"></a>
+  <h3 class="section-name" tabindex="0">Alias Objects</h3>
+  <p class="para">
+  An <code class="code-voice">alias</code> object dynamically points to an existing item in the file system. Since an alias is dynamic, it continues pointing to the item even if the item is renamed or moved, the same way an alias file works when you manually create one in the Finder. With an AppleScript alias, the original item must exist at run time or an error will occur.
+</p><p class="para">
+  An <code class="code-voice">alias</code> object is displayed as a colon-delimited path preceded by an <code class="code-voice">alias</code> specifier, in the format shown in <span class="x-name-no-link">Listing 15-1</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=alias%20%22VolumeName%3AFolderName%3ASubfolderName%3AFileName%22">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW4"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-1</strong>AppleScript: Structure of an alias object</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">alias &quot;VolumeName:FolderName:SubfolderName:FileName&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 15-2</span> shows an example of an <code class="code-voice">alias</code> object that references the Desktop folder.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3A%22">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW5"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-2</strong>AppleScript: Example of an alias reference to a folder</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">alias &quot;Macintosh HD:Users:yourUserName:Desktop:&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 15-3</span> is an example of an <code class="code-voice">alias</code> object that references an existing file on the Desktop.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW6"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-3</strong>AppleScript: Example of an alias reference to a file</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">alias &quot;Macintosh HD:Users:yourUserName:Desktop:My File.txt&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  To create an alias, add the alias specifier prefix to a colon-delimited path string, as shown in <span class="x-name-no-link">Listing 15-4</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20thePath%20to%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3A%22">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW10"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-4</strong>AppleScript: Creating an alias from a colon-delimited path string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set thePath to alias &quot;Macintosh HD:Users:yourUserName:Desktop:&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  Many commands accept an alias as a parameter and/or return an alias as a result. In <span class="x-name-no-link">Listing 15-5</span>, the <code class="code-voice">choose file</code> command accepts a folder <code class="code-voice">alias</code> object in its <code class="code-voice">default location</code> parameter. The command then returns an <code class="code-voice">alias</code> object that points to the chosen file.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theDefaultFolder%20to%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3A%22%0Achoose%20file%20default%20location%20theDefaultFolder">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW18"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-5</strong>AppleScript: Example of a command that accepts an alias parameter and returns an alias result</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theDefaultFolder to alias &quot;Macintosh HD:Users:yourUserName:Desktop:&quot;</code></li>
+            <li><code class="code-voice">choose file default location theDefaultFolder</code></li>
+            <li><code class="code-voice">--&gt; Result: alias &quot;Macintosh HD:Users:yourUserName:Desktop:My File.txt&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW7"></a>
+  <h3 class="section-name" tabindex="0">File Objects</h3>
+  <p class="para">
+  A <code class="code-voice">file</code> object is a static reference to an item at a specific location in the file system. It’s not dynamic, and can even refer to an item that doesn’t exist yet. For example, a <code class="code-voice">save</code> command may accept a file reference when saving to a new file.
+</p><p class="para">
+  A <code class="code-voice">file</code> object is displayed as a colon-delimited path preceded by a <code class="code-voice">file</code> specifier, in the format shown in <span class="x-name-no-link">Listing 15-6</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=file%20%22VolumeName%3AFolderName%3ASubfolderName%3AFileName%22">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW8"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-6</strong>AppleScript: Structure of a file object</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">file &quot;VolumeName:FolderName:SubfolderName:FileName&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 15-7</span> shows an example of a <code class="code-voice">file</code> object that references a file that may or may not exist on the Desktop.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=file%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW9"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-7</strong>AppleScript: Example of a file reference to a file</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">file &quot;Macintosh HD:Users:yourUserName:Desktop:My File.txt&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  Unlike the way an <code class="code-voice">alias</code> object works, you can’t create a <code class="code-voice">file</code> object simply by prefixing a path string with the <code class="code-voice">file</code> specifier. For example, <span class="x-name-no-link">Listing 15-7</span> errors when run within a script.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theFile%20to%20file%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW20"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-8</strong>AppleScript: Example of incorrect usage of a file object specifier</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theFile to file &quot;Macintosh HD:Users:yourUserName:Desktop:My File.txt&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  Instead, you must prefix the path with the <code class="code-voice">file</code> specifier at the time the file is targeted by a command, as shown in <span class="x-name-no-link">Listing 15-8</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theFile%20to%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22%0Aread%20file%20theFile">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW21"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-9</strong>AppleScript: Example of correct usage of a file object specifier</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theFile to &quot;Macintosh HD:Users:yourUserName:Desktop:My File.txt&quot;</code></li>
+            <li><code class="code-voice">read file theFile</code></li>
+        </ol>
+      </div>
+  </div>
+</section><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW22"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">A <code class="code-voice">file</code> object can refer to either a file or a folder, despite the <code class="code-voice">file</code> specifier prefix.
+    	</p>
+    
+  </aside>
+</div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW11"></a>
+  <h3 class="section-name" tabindex="0">POSIX File Objects</h3>
+  <p class="para">
+  Some scriptable apps are designed to work with POSIX-style paths, rather than AppleScript <code class="code-voice">alias</code> and <code class="code-voice">file</code> objects. Like a <code class="code-voice">file</code> object, a <code class="code-voice">POSIX file</code> object is not dynamic and can also refer to an item that doesn’t exist yet.
+</p><p class="para">
+  A <code class="code-voice">POSIX file</code> object is displayed as a slash-delimited path preceded by a <code class="code-voice">POSIX file</code> specifier, in the format shown in <span class="x-name-no-link">Listing 15-10</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=POSIX%20file%20%22%2FFolderName%2FSubfolderName%2FFileName%22">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW12"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-10</strong>AppleScript: Structure of a POSIX file object</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">POSIX file &quot;/FolderName/SubfolderName/FileName&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 15-11</span> is an example of a <code class="code-voice">POSIX file</code> object that references a file that may or may not exist on the Desktop.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=POSIX%20file%20%22%2FUsers%2FyourUserName%2FDesktop%2FMy%20File.txt%22">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW13"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-11</strong>AppleScript: Example of a POSIX file reference to a file</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">POSIX file &quot;/Users/yourUserName/Desktop/My File.txt&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW14"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">A <code class="code-voice">POSIX file</code> object can refer to either a file or a folder, despite the <code class="code-voice">POSIX file</code> specifier prefix.
+    	</p>
+    <p class="para">
+  In a POSIX path, the startup disk’s name is omitted and represented by a leading slash. Other disks are referenced in relation to the <code class="code-voice">Volumes</code> directory of the startup disk, for example: <code class="code-voice">/Volumes/DiskName/FolderName/SubFolderName/FileName</code>.
+</p>
+
+  </aside>
+</div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW15"></a>
+  <h3 class="section-name" tabindex="0">App-Specific References to Files and Folders</h3>
+  <p class="para">
+  Some apps, such as the Finder and System Events, have their own syntax for referring to files and folders. <span class="x-name-no-link">Listing 15-12</span> shows how a Finder file reference appears.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=document%20file%20%22My%20File.txt%22%20of%20folder%20%22Desktop%22%20of%20folder%20%22yourUserName%22%20of%20folder%20%22Users%22%20of%20startup%20disk%20of%20application%20%22Finder%22">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW16"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-12</strong>AppleScript: Example of a reference to a file in the Finder</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">document file &quot;My File.txt&quot; of folder &quot;Desktop&quot; of folder &quot;yourUserName&quot; of folder &quot;Users&quot; of startup disk of application &quot;Finder&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 15-13</span> shows how a System Events folder reference appears.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=folder%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3A%22%20of%20application%20%22System%20Events%22">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW17"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-13</strong>AppleScript: Example of a reference to a folder in System Events</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">folder &quot;Macintosh HD:Users:yourUserName:Desktop:&quot; of application &quot;System Events&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  Since this terminology is app-specific, it doesn’t work in other apps. For example, you can’t write a script that tries to import a Finder reference to an audio file into iTunes because iTunes doesn’t understand Finder file references. In this case, you must coerce the Finder file reference to something iTunes can understand, like an alias. See <span class="x-name"><a href="#//apple_ref/doc/uid/TP40016239-CH34-SW19" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH34-SW19">Converting Between Path Formats</a></span> below. In most cases, apps with their own path syntax also support standard AppleScript path types.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW19"></a>
+  <h3 class="section-name" tabindex="0">Converting Between Path Formats</h3>
+  <p class="para">
+  Since different situations may result in paths appearing in different formats, you may need to regularly convert one path format to another. Sometimes, this can be done by using the <code class="code-voice">as</code> coercion operator, as shown in <span class="x-name-no-link">Listing 15-14</span>, <span class="x-name-no-link">Listing 15-15</span>, <span class="x-name-no-link">Listing 15-16</span>, and <span class="x-name-no-link">Listing 15-17</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theFilePath%20to%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22%0Aset%20theFilePath%20to%20theFilePath%20as%20alias">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW23"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-14</strong>AppleScript: Coercing a string to an alias</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theFilePath to &quot;Macintosh HD:Users:yourUserName:Desktop:My File.txt&quot;</code></li>
+            <li><code class="code-voice">set theFilePath to theFilePath as alias</code></li>
+            <li><code class="code-voice">--&gt; Result: alias &quot;Macintosh HD:Users:yourUserName:Desktop:My File.txt&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theFilePath%20to%20choose%20file%0A--%3E%20Result%3A%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22%0A%0Aset%20theFilePath%20to%20theFilePath%20as%20string%0A--%3E%20Result%3A%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW24"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-15</strong>AppleScript: Coercing an alias to a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theFilePath to choose file</code></li>
+            <li><code class="code-voice">--&gt; Result: alias &quot;Macintosh HD:Users:yourUserName:Desktop:My File.txt&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">set theFilePath to theFilePath as string</code></li>
+            <li><code class="code-voice">--&gt; Result: &quot;Macintosh HD:Users:yourUserName:Desktop:My File.txt&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theFilePath%20to%20POSIX%20file%20%22%2FUsers%2FyourUserName%2FDesktop%2FMy%20File.txt%22%0Aset%20theFilePath%20to%20theFilePath%20as%20alias%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW25"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-16</strong>AppleScript: Coercing a POSIX file to an alias</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theFilePath to POSIX file &quot;/Users/yourUserName/Desktop/My File.txt&quot;</code></li>
+            <li><code class="code-voice">set theFilePath to theFilePath as alias</code></li>
+            <li><code class="code-voice">--&gt; Result: alias &quot;Macintosh HD:Users:yourUserName:Desktop:My File.txt&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=tell%20application%20%22Finder%22%0A%20%20%20%20set%20theFilePath%20to%20file%20%22My%20File.txt%22%20of%20desktop%0Aend%20tell%0A--%3E%20Result%3A%20document%20file%20%22My%20File.txt%22%20of%20folder%20%22Desktop%22%20of%20folder%20%22yourUserName%22%20of%20folder%20%22Users%22%20of%20startup%20disk%20of%20application%20%22Finder%22%0A%0Aset%20theFilePath%20to%20theFilePath%20as%20alias%0A--%3E%20Result%3A%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW37"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-17</strong>AppleScript: Coercing a Finder file reference to an alias</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">tell application &quot;Finder&quot;</code></li>
+            <li><code class="code-voice">    set theFilePath to file &quot;My File.txt&quot; of desktop</code></li>
+            <li><code class="code-voice">end tell</code></li>
+            <li><code class="code-voice">--&gt; Result: document file &quot;My File.txt&quot; of folder &quot;Desktop&quot; of folder &quot;yourUserName&quot; of folder &quot;Users&quot; of startup disk of application &quot;Finder&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">set theFilePath to theFilePath as alias</code></li>
+            <li><code class="code-voice">--&gt; Result: alias &quot;Macintosh HD:Users:yourUserName:Desktop:My File.txt&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  Converting from a string or alias to a POSIX path can’t be done through coercion. Instead, you must access the <code class="code-voice">POSIX path</code> property of the path to convert, as shown in <span class="x-name-no-link">Listing 15-18</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theFilePath%20to%20choose%20file%0A--%3E%20Result%3A%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22%0A%0Aset%20theFilePath%20to%20POSIX%20path%20of%20theFilePath%0A--%3E%20Result%3A%20%22%2FUsers%2FyourUserName%2FDesktop%2FMy%20File.txt%22">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW26"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-18</strong>AppleScript: Converting an alias to a POSIX path string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theFilePath to choose file</code></li>
+            <li><code class="code-voice">--&gt; Result: alias &quot;Macintosh HD:Users:yourUserName:Desktop:My File.txt&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">set theFilePath to POSIX path of theFilePath</code></li>
+            <li><code class="code-voice">--&gt; Result: &quot;/Users/yourUserName/Desktop/My File.txt&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW27"></a>
+  <h3 class="section-name" tabindex="0">Using Conversion Handlers</h3>
+  <p class="para">
+  Running paths through a conversion handler is a good way to ensure the format you expect.
+</p>
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW28"></a>
+  <h3 class="section-name" tabindex="0">Converting a Path to an Aliases</h3>
+  <p class="para">
+  The handler in <span class="x-name-no-link">Listing 15-19</span> converts strings, <code class="code-voice">path</code> objects, <code class="code-voice">POSIX file</code> objects, Finder paths, and System Events paths to <code class="code-voice">alias</code> format.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20convertPathToAlias%28thePath%29%0A%20%20%20%20tell%20application%20%22System%20Events%22%0A%20%20%20%20%20%20%20%20try%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20%28path%20of%20disk%20item%20%28thePath%20as%20string%29%29%20as%20alias%0A%20%20%20%20%20%20%20%20on%20error%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20%28path%20of%20disk%20item%20%28path%20of%20thePath%29%20as%20string%29%20as%20alias%0A%20%20%20%20%20%20%20%20end%20try%0A%20%20%20%20end%20tell%0Aend%20convertPathToAlias">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW29"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-19</strong>AppleScript: Handler that converts a path to an AppleScript alias</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on convertPathToAlias(thePath)</code></li>
+            <li><code class="code-voice">    tell application &quot;System Events&quot;</code></li>
+            <li><code class="code-voice">        try</code></li>
+            <li><code class="code-voice">            return (path of disk item (thePath as string)) as alias</code></li>
+            <li><code class="code-voice">        on error</code></li>
+            <li><code class="code-voice">            return (path of disk item (path of thePath) as string) as alias</code></li>
+            <li><code class="code-voice">        end try</code></li>
+            <li><code class="code-voice">    end tell</code></li>
+            <li><code class="code-voice">end convertPathToAlias</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 15-19</span> shows how to call the handler in <span class="x-name-no-link">Listing 15-19</span> to convert a POSIX-style path string to an alias.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20thePath%20to%20%22%2FUsers%2FyourUserName%2FDesktop%2FMy%20File.txt%22%0Aset%20thePath%20to%20convertPathToAlias%28thePath%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW30"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-20</strong>AppleScript: Calling a handler to convert a path to an AppleScript alias</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set thePath to &quot;/Users/yourUserName/Desktop/My File.txt&quot;</code></li>
+            <li><code class="code-voice">set thePath to convertPathToAlias(thePath)</code></li>
+            <li><code class="code-voice">--&gt; Result: alias &quot;Macintosh HD:Users:yourUserName:Desktop:My File.txt&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW31"></a>
+  <h3 class="section-name" tabindex="0">Converting a Path to a String</h3>
+  <p class="para">
+  The handler in <span class="x-name-no-link">Listing 15-21</span> converts a path to string format.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20convertPathToString%28thePath%29%0A%20%20%20%20tell%20application%20%22System%20Events%22%0A%20%20%20%20%20%20%20%20try%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20path%20of%20disk%20item%20%28thePath%20as%20string%29%0A%20%20%20%20%20%20%20%20on%20error%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20path%20of%20thePath%0A%20%20%20%20%20%20%20%20end%20try%0A%20%20%20%20end%20tell%0Aend%20convertPathToString">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW32"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-21</strong>AppleScript: Handler that converts a path to an a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on convertPathToString(thePath)</code></li>
+            <li><code class="code-voice">    tell application &quot;System Events&quot;</code></li>
+            <li><code class="code-voice">        try</code></li>
+            <li><code class="code-voice">            return path of disk item (thePath as string)</code></li>
+            <li><code class="code-voice">        on error</code></li>
+            <li><code class="code-voice">            return path of thePath</code></li>
+            <li><code class="code-voice">        end try</code></li>
+            <li><code class="code-voice">    end tell</code></li>
+            <li><code class="code-voice">end convertPathToString</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 15-22</span> shows how to call the handler in <span class="x-name-no-link">Listing 15-21</span> to convert an alias to a path string.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20thePath%20to%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22%0Aset%20thePath%20to%20convertPathToString%28thePath%29%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW33"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-22</strong>AppleScript: Calling a handler to convert an AppleScript alias to a path string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set thePath to alias &quot;Macintosh HD:Users:yourUserName:Desktop:My File.txt&quot;</code></li>
+            <li><code class="code-voice">set thePath to convertPathToString(thePath)</code></li>
+            <li><code class="code-voice">--&gt; Result: &quot;Macintosh HD:Users:yourUserName:Desktop:My File.txt&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW34"></a>
+  <h3 class="section-name" tabindex="0">Converting a Path to a POSIX Path String</h3>
+  <p class="para">
+  The handler in <span class="x-name-no-link">Listing 15-23</span> converts a path to POSIX path string format.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20convertPathToPOSIXString%28thePath%29%0A%20%20%20%20tell%20application%20%22System%20Events%22%0A%20%20%20%20%20%20%20%20try%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20thePath%20to%20path%20of%20disk%20item%20%28thePath%20as%20string%29%0A%20%20%20%20%20%20%20%20on%20error%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20thePath%20to%20path%20of%20thePath%0A%20%20%20%20%20%20%20%20end%20try%0A%20%20%20%20end%20tell%0A%20%20%20%20return%20POSIX%20path%20of%20thePath%0Aend%20convertPathToPOSIXString">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW35"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-23</strong>AppleScript: Handler that converts a path to an a POSIX path string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on convertPathToPOSIXString(thePath)</code></li>
+            <li><code class="code-voice">    tell application &quot;System Events&quot;</code></li>
+            <li><code class="code-voice">        try</code></li>
+            <li><code class="code-voice">            set thePath to path of disk item (thePath as string)</code></li>
+            <li><code class="code-voice">        on error</code></li>
+            <li><code class="code-voice">            set thePath to path of thePath</code></li>
+            <li><code class="code-voice">        end try</code></li>
+            <li><code class="code-voice">    end tell</code></li>
+            <li><code class="code-voice">    return POSIX path of thePath</code></li>
+            <li><code class="code-voice">end convertPathToPOSIXString</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 15-24</span> shows how to call the handler in <span class="x-name-no-link">Listing 15-23</span> to convert an alias to a path string.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20thePath%20to%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22%0Aset%20thePath%20to%20convertPathToPOSIXString%28thePath%29%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW36"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-24</strong>AppleScript: Calling a handler to convert an AppleScript alias to a POSIX path string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set thePath to alias &quot;Macintosh HD:Users:yourUserName:Desktop:My File.txt&quot;</code></li>
+            <li><code class="code-voice">set thePath to convertPathToPOSIXString(thePath)</code></li>
+            <li><code class="code-voice">--&gt; Result: &quot;/Users/yourUserName/Desktop/My File.txt&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+
+</section>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW40"></a>
+  <h3 class="section-name" tabindex="0">Referencing Files and Folders in JavaScript</h3>
+  <p class="para">
+  In JavaScript, file and folder paths are represented using <code class="code-voice">Path</code> objects.
+</p><p class="para">
+  To create a path, pass a POSIX-style string to the <code class="code-voice">Path</code> object, as shown in <span class="x-name-no-link">Listing 15-25</span>.
+</p><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW38"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-25</strong>JavaScript: Creating a <code class="code-voice">Path</code> object</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">Path(&quot;/FolderName/SubfolderName/FileName&quot;)</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  To convert a path to a string, call the <code class="code-voice">toString()</code> method on the path, as shown in <span class="x-name-no-link">Listing 15-26</span>.
+</p><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20path%20%3D%20Path%28%22%2FUsers%2FyourUserName%2FDesktop%2FMy%20File.txt%22%29%0Avar%20string%20%3D%20path.toString%28%29%0Astring">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH34-SW41"></a>
+    <span class="caption"><strong class="caption-number">Listing 15-26</strong>JavaScript: Converting a <code class="code-voice">Path</code> object to a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var path = Path(&quot;/Users/yourUserName/Desktop/My File.txt&quot;)</code></li>
+            <li><code class="code-voice">var string = path.toString()</code></li>
+            <li><code class="code-voice">string</code></li>
+            <li><code class="code-voice">// Result: &quot;/Users/yourUserName/Desktop/My File.txt&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="UseScriptLibraries.html#//apple_ref/doc/uid/TP40016239-CH36-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH36-SW1">Using Script Libraries</a></p>
+  			<p class="next-link"><a href="ReadandWriteFiles.html#//apple_ref/doc/uid/TP40016239-CH58-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH58-SW1">Reading and Writing Files</a></p>
+
+    <p class="copyright">Copyright &#x00a9; 2018 Apple Inc. All rights reserved. 
+  <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a> | 
+  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a> | 
+  <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Updated: 2016-06-13</a>
+</p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <script src="../../../../Resources/1282/JavaScript/devpubs-1.6.3.js" type="text/javascript" charset="utf-8"></script>
+  <div id="_omniture_top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="awdappledeveloper"
+</script>
+
+<script type="text/javascript" src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
+<script type="text/javascript">
+s.channel="www.documentationarchive.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="https://developer.apple.com/bugreporter/" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+</html>

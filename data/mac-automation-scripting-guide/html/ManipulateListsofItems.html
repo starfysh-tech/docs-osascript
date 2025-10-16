@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+  <title>Mac Automation Scripting Guide: Manipulating Lists of Items</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1282/CSS/style-1.6.3.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1282/CSS/feedback-1.6.3.css" />
+  <meta charset='utf-8'> 
+<meta id="j-version" name="j-version" content="" />
+<meta id="build" name="build" content="c1e4c7a89af8f899a21cfa81fc33ba42" />
+<meta id="document-version" name="document-version" content="1.1.0" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages &amp; Utilities}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40016239" />
+<meta id="chapterId" name="chapterId" content="TP40016239-CH48">
+<meta id="book-title" name="book-title" content="Mac Automation Scripting Guide" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2016-06-13" />
+<meta id="description" name="description" content="New document." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+<meta id="resources-uri" name="resources-uri" content="../../../../Resources/1282">
+<link id="book-index-page" rel="Start" title="" type="text/html" href="./index.html">
+<!-- , next_chapter: next_chapter, previous_chapter: previous_chapter -->
+<link id="next-page" rel="Next" type="text/html" href="">
+<link id="previous-page" rel="Prev" type="text/html" href="">
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta id="platforms" name="platforms" content="OS X">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/">Documentation Archive
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/1282/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="https://developer.apple.com">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">Mac Automation Scripting Guide</span>
+    </p>
+    <form id="search" class="hideInXcode" method="get" action="/search/index.php" accept-charset="utf-8" autocomplete="off">
+  <input type="search" id="ssi_SearchField" placeholder="Search Documentation Archive" name="q" autocomplete="off" tabindex="2" />
+</form>
+
+      
+   
+   
+
+
+
+    <img id="shortstack" src="../../../../Resources/1282/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav id="navigator" class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH2-SW1"
+            class="part-name">
+            <a href="index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH56-SW1">Mac Scripting Essentials</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH56-SW1">About Mac Scripting</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="HowMacScriptingWorks.html#//apple_ref/doc/uid/TP40016239-CH73-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH73-SW1">How Mac Scripting Works</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TypesofScripts.html#//apple_ref/doc/uid/TP40016239-CH72-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH72-SW1">Types of Scripts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="AboutthisGuide.html#//apple_ref/doc/uid/TP40016239-CH71-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH71-SW1">About this Guide</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH10-SW1"
+            class="part-name">
+            <a href="GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH5-SW1">Starting Scripting</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH5-SW1">Getting to Know Script Editor</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CreateaScript.html#//apple_ref/doc/uid/TP40016239-CH12-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH12-SW1">Creating a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SaveaScript.html#//apple_ref/doc/uid/TP40016239-CH13-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH13-SW1">Saving a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RunaScript.html#//apple_ref/doc/uid/TP40016239-CH14-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH14-SW1">Running a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH70-SW1">Configuring Scripting Preferences</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH9-SW1"
+            class="part-name">
+            <a href="AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH75-SW2" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH75-SW2">Accessing Scripting Terminology</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH75-SW2" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH75-SW2">About Scripting Terminology</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="OpenaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH76-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH76-SW1">Opening a Scripting Dictionary</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH77-SW1">Navigating a Scripting Dictionary</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH74-SW1"
+            class="part-name">
+            <a href="UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH52-SW1">Modularizing Code</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH52-SW1">Using Handlers/Functions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UseScriptLibraries.html#//apple_ref/doc/uid/TP40016239-CH36-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH36-SW1">Using Script Libraries</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH57-SW1"
+            class="part-name">
+            <a href="ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH34-SW1">Working with Files and Folders</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH34-SW1">Referencing Files and Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ReadandWriteFiles.html#//apple_ref/doc/uid/TP40016239-CH58-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH58-SW1">Reading and Writing Files</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ProcessDroppedFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH53-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH53-SW1">Processing Dropped Files and Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH39-SW1">Watching Folders</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH59-SW1"
+            class="part-name nav-part-active open-part">
+            <a href="ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW1">Working with Text, Numbers, and Lists</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW1">Manipulating Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH47-SW1">Manipulating Numbers</a>
+              </li>
+              <li class="nav-chapter nav-current-chapter">
+              	<a href="#//apple_ref/doc/uid/TP40016239-CH48-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH48-SW1">Manipulating Lists of Items</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH60-SW1"
+            class="part-name">
+            <a href="DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH15-SW1">Interacting with Users</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH15-SW1">Displaying Dialogs and Alerts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforText.html#//apple_ref/doc/uid/TP40016239-CH80-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH80-SW1">Prompting for Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DisplayNotifications.html#//apple_ref/doc/uid/TP40016239-CH61-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH61-SW1">Displaying Notifications</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SpeakText.html#//apple_ref/doc/uid/TP40016239-CH62-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH62-SW1">Speaking Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH81-SW1">Prompting for Files or Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaFileName.html#//apple_ref/doc/uid/TP40016239-CH82-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH82-SW1">Prompting for a File Name</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaChoicefromaList.html#//apple_ref/doc/uid/TP40016239-CH83-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH83-SW1">Prompting for a Choice from a List</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaColor.html#//apple_ref/doc/uid/TP40016239-CH86-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH86-SW1">Prompting for a Color</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DisplayProgress.html#//apple_ref/doc/uid/TP40016239-CH37-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH37-SW1">Displaying Progress</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH63-SW1"
+            class="part-name">
+            <a href="ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH49-SW1">Working with HTML and URLs</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH49-SW1">Converting RGB to HTML Color</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="EncodeandDecodeText.html#//apple_ref/doc/uid/TP40016239-CH51-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH51-SW1">Encoding and Decoding Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ParseHTML.html#//apple_ref/doc/uid/TP40016239-CH50-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH50-SW1">Parsing HTML</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RemoveMarkupfromHTML.html#//apple_ref/doc/uid/TP40016239-CH64-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH64-SW1">Removing HTML Markup from Text</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH65-SW1"
+            class="part-name">
+            <a href="WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH66-SW1">Working with Data</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH66-SW1">Working with Property List Files</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WorkwithXML.html#//apple_ref/doc/uid/TP40016239-CH67-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH67-SW1">Working with XML</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH35-SW1"
+            class="part-name">
+            <a href="AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH69-SW1">Performing Common Scripting Tasks</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH69-SW1">Automating the User Interface</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH20-SW1">Manipulating Images</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CallCommandLineUtilities.html#//apple_ref/doc/uid/TP40016239-CH43-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH43-SW1">Calling Command-Line Tools</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH68-SW1"
+            class="part-name">
+            <a href="MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH46-SW1">Extending Apps and Processes</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH46-SW1">Making a Systemwide Service</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH7-SW1">Using the Systemwide Script Menu</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UseDictationtoRunScripts.html#//apple_ref/doc/uid/TP40016239-CH87-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH87-SW1">Using Dictation to Run Scripts</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH78-SW1"
+            class="part-name">
+            <a href="AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH79-SW1">Appendixes</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH79-SW1">Objective-C to AppleScript Quick Translation Guide</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="revision-history"
+            class="part-name">
+          <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Revision History</a>
+          <ul class="nav-chapters">
+            <li class="nav-chapter">
+              <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Document Revision History</a>
+            </li>
+          </ul>
+        </li>
+    </ul>
+</nav>
+
+      <menu id="bashful" type="toolbar">
+  <div class="shield"></div>
+  <menuitem id="jump_to" class="menu-bar-item closed">
+  <span>On This Page</span>
+  <div class="chevron">
+    <div class="chevy chevron-left"></div>
+    <div class="chevy chevron-right"></div>
+  </div>
+  <menu type="list" class="details">
+      <ul class="list-bullet">
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH48-SW51">Looping through a List</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH48-SW11">Converting a List to a String</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH48-SW17">Counting the Items in a List</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH48-SW4">Counting the Occurrences of an Item in a List</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH48-SW2">Determining if a List Contains a Specific Item</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH48-SW3">Determining the Position of an Item in a List</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH48-SW8">Finding the Highest Numeric Value in a List</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH48-SW9">Finding the Lowest Numeric Value in a List</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH48-SW5">Inserting Items into a List</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH48-SW6">Replacing Items in a List</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH48-SW10">Sorting a List</a>
+          </li>
+      </ul>
+  </menu>
+</menuitem>
+
+</menu>
+<div class="pixel-line"></div>
+<div class="rubber-band-gap"></div>
+<article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48"></a><a name="//apple_ref/doc/uid/TP40016239-CH48-SW1"></a>
+
+  <h2 class='chapter-name'>Manipulating Lists of Items</h2>
+
+
+  
+  	<section class="section">
+  		<p class="para">
+  In scripting, a list—typically referred to as an array in JavaScript—is a an ordered collection of values that’s stored in a single object. A script can loop through the items of a list in order to process the items individually. There are many other tasks scripts commonly performed with lists, such as joining and sorting, which usually require custom scripting.
+</p>
+<div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW50"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">For general information about working with lists in AppleScript, see the <a href="../../../AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE" data-renderer-version="1" target="_self">list</a> class reference documentation in <em class="u-book"><a href="../../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983" data-renderer-version="1" target="_self">AppleScript Language Guide</a></em>.
+    	</p>
+    <p class="para">
+  In JavaScript, the <code class="code-voice">Array</code> object provides a range of processing functions. Information about this object can be found <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">here</a>.
+</p>
+
+  </aside>
+</div>
+
+		</section> 
+
+
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW51"></a>
+  <h3 class="section-name" tabindex="0">Looping through a List</h3>
+  <p class="para">
+  <span class="x-name-no-link">Listing 21-1</span> and <span class="x-name-no-link">Listing 21-2</span> show how to incrementally loop through a list. In these examples, a variable—<code class="code-voice">a</code> in AppleScript and <code class="code-voice">i</code> in JavaScript—represents an integer value from <code class="code-voice">1</code> through the number of items in the list. Each loop causes this variable value to increase, and you can use the increment variable to target a specific list item.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0Arepeat%20with%20a%20from%201%20to%20length%20of%20theList%0A%20%20%20%20set%20theCurrentListItem%20to%20item%20a%20of%20theList%0A%20%20%20%20--%20Process%20the%20current%20list%20item%0A%20%20%20%20display%20dialog%20theCurrentListItem%20%26%20%22%20is%20item%20%22%20%26%20a%20%26%20%22%20in%20the%20list.%22%0Aend%20repeat">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW52"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-1</strong>AppleScript: Incrementally looping through items in a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theList to {&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;}</code></li>
+            <li><code class="code-voice">repeat with a from 1 to length of theList</code></li>
+            <li><code class="code-voice">    set theCurrentListItem to item a of theList</code></li>
+            <li><code class="code-voice">    -- Process the current list item</code></li>
+            <li><code class="code-voice">    display dialog theCurrentListItem &amp; &quot; is item &quot; &amp; a &amp; &quot; in the list.&quot;</code></li>
+            <li><code class="code-voice">end repeat</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Avar%20arrayLength%20%3D%20array.length%0A%0Afor%20%28var%20i%20%3D%200%3B%20i%20%3C%20arrayLength%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20var%20currentArrayItem%20%3D%20array%5Bi%5D%0A%20%20%20%20%2F%2F%20Process%20the%20current%20array%20item%0A%20%20%20%20app.displayDialog%28%60%24%7BcurrentArrayItem%7D%20is%20item%20%24%7Bi%20%2B%201%7D%20in%20the%20array.%60%29%0A%7D">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW61"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-2</strong>JavaScript: Incrementally looping through items in an array</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var app = Application.currentApplication()</code></li>
+            <li><code class="code-voice">app.includeStandardAdditions = true</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">var array = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;]</code></li>
+            <li><code class="code-voice">var arrayLength = array.length</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">for (var i = 0; i &lt; arrayLength; i++) {</code></li>
+            <li><code class="code-voice">    var currentArrayItem = array[i]</code></li>
+            <li><code class="code-voice">    // Process the current array item</code></li>
+            <li><code class="code-voice">    app.displayDialog(`${currentArrayItem} is item ${i + 1} in the array.`)</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  A script can also loop through a list of items more directly by dynamically assigning a list item to a variable. In <span class="x-name-no-link">Listing 21-3</span> and <span class="x-name-no-link">Listing 21-4</span>, a variable—<code class="code-voice">theCurrentListItem</code> in AppleScript and <code class="code-voice">currentArrayItem</code> in JavaScript—represents the item matching the current loop.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0Arepeat%20with%20theCurrentListItem%20in%20theList%0A%20%20%20%20--%20Process%20the%20current%20list%20item%0A%20%20%20%20display%20dialog%20theCurrentListItem%20%26%20%22%20is%20an%20item%20in%20the%20list.%22%0Aend%20repeat">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW62"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-3</strong>AppleScript: Directly looping through items in a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theList to {&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;}</code></li>
+            <li><code class="code-voice">repeat with theCurrentListItem in theList</code></li>
+            <li><code class="code-voice">    -- Process the current list item</code></li>
+            <li><code class="code-voice">    display dialog theCurrentListItem &amp; &quot; is an item in the list.&quot;</code></li>
+            <li><code class="code-voice">end repeat</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Avar%20arrayLength%20%3D%20array.length%0Afor%20%28var%20currentArrayItem%20of%20array%29%20%7B%0A%20%20%20%20%2F%2F%20Process%20the%20current%20array%20item%0A%20%20%20%20app.displayDialog%28%60%24%7BcurrentArrayItem%7D%20is%20an%20item%20in%20the%20array.%60%29%0A%7D">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW63"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-4</strong>JavaScript: Directly looping through items in an array</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var app = Application.currentApplication()</code></li>
+            <li><code class="code-voice">app.includeStandardAdditions = true</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">var array = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;]</code></li>
+            <li><code class="code-voice">var arrayLength = array.length</code></li>
+            <li><code class="code-voice">for (var currentArrayItem of array) {</code></li>
+            <li><code class="code-voice">    // Process the current array item</code></li>
+            <li><code class="code-voice">    app.displayDialog(`${currentArrayItem} is an item in the array.`)</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW53"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">For more information about looping through list items in AppleScript, see <a href="../../../AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g" data-renderer-version="1" target="_self">Control Statements Reference</a> in <em class="u-book"><a href="../../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983" data-renderer-version="1" target="_self">AppleScript Language Guide</a></em>.
+    	</p>
+    
+  </aside>
+</div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW11"></a>
+  <h3 class="section-name" tabindex="0">Converting a List to a String</h3>
+  <p class="para">
+  The handler in <span class="x-name-no-link">Listing 21-5</span> joins a list of strings together in AppleScript, separating them by a specific delimiter.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20convertListToString%28theList%2C%20theDelimiter%29%0A%20%20%20%20set%20AppleScript%27s%20text%20item%20delimiters%20to%20theDelimiter%0A%20%20%20%20set%20theString%20to%20theList%20as%20string%0A%20%20%20%20set%20AppleScript%27s%20text%20item%20delimiters%20to%20%22%22%0A%20%20%20%20return%20theString%0Aend%20convertListToString">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW7"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-5</strong>AppleScript: Handler that converts a list of strings into a single string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on convertListToString(theList, theDelimiter)</code></li>
+            <li><code class="code-voice">    set AppleScript&#39;s text item delimiters to theDelimiter</code></li>
+            <li><code class="code-voice">    set theString to theList as string</code></li>
+            <li><code class="code-voice">    set AppleScript&#39;s text item delimiters to &quot;&quot;</code></li>
+            <li><code class="code-voice">    return theString</code></li>
+            <li><code class="code-voice">end convertListToString</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 21-6</span> shows how to call the handler in <span class="x-name-no-link">Listing 21-5</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theList%20to%20%7B%22The%22%2C%20%22quick%22%2C%20%22brown%22%2C%20%22fox%22%2C%20%22jumps%22%2C%20%22over%22%2C%20%22a%22%2C%20%22lazy%22%2C%20%22dog.%22%7D%0AconvertListToString%28theList%2C%20space%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW12"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-6</strong>AppleScript: Calling a handler to convert a list of strings into a single string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theList to {&quot;The&quot;, &quot;quick&quot;, &quot;brown&quot;, &quot;fox&quot;, &quot;jumps&quot;, &quot;over&quot;, &quot;a&quot;, &quot;lazy&quot;, &quot;dog.&quot;}</code></li>
+            <li><code class="code-voice">convertListToString(theList, space)</code></li>
+            <li><code class="code-voice">--&gt; Result: &quot;The quick brown fox jumps over a lazy dog.&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  In JavaScript, custom scripting isn’t required to perform this operation. The <code class="code-voice">Array</code> object has a <code class="code-voice">join()</code> method, which can be called to merge a list of items together, as shown in <span class="x-name-no-link">Listing 21-7</span>.
+</p><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20array%20%3D%20%5B%22The%22%2C%20%22quick%22%2C%20%22brown%22%2C%20%22fox%22%2C%20%22jumps%22%2C%20%22over%22%2C%20%22a%22%2C%20%22lazy%22%2C%20%22dog.%22%5D%0Avar%20array.join%28%22%20%22%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW54"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-7</strong>JavaScript: Calling a function to convert an array of strings into a single string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var array = [&quot;The&quot;, &quot;quick&quot;, &quot;brown&quot;, &quot;fox&quot;, &quot;jumps&quot;, &quot;over&quot;, &quot;a&quot;, &quot;lazy&quot;, &quot;dog.&quot;]</code></li>
+            <li><code class="code-voice">var array.join(&quot; &quot;)</code></li>
+            <li><code class="code-voice">// Result: &quot;The quick brown fox jumps over a lazy dog.&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW13"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">See <span class="x-name"><a href="ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW6" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW6">Splitting Text</a></span> to learn how to break text apart, based on a specific delimiter.
+    	</p>
+    <p class="para">
+  When you use AppleScriptObjC or JavaScriptObjC, you can use methods of the <code class="code-voice u-api"><a href="../../../LegacyTechnologies/WebObjects/WebObjects_3.5/Reference/Frameworks/ObjC/Foundation/Classes/NSArrayClassCluster/Description.html#//apple_ref/occ/cl/NSArray" data-renderer-version="1">NSArray</a></code> class to convert a list of strings into a single string. The handlers in <span class="x-name-no-link">Listing 21-8</span> and <span class="x-name-no-link">Listing 21-9</span> demonstrate how to do this.
+</p>
+<p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20convertListToString%28theList%2C%20theDelimiter%29%0A%20%20%20%20set%20theArray%20to%20arrayWithArray_%28theList%29%20of%20NSArray%20of%20current%20application%0A%20%20%20%20set%20theString%20to%20componentsJoinedByString_%28theDelimiter%29%20of%20theArray%0A%20%20%20%20return%20%28theString%20as%20string%29%0Aend%20convertListToString">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW14"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-8</strong>AppleScriptObjC: Handler that converts a list of strings into a single string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on convertListToString(theList, theDelimiter)</code></li>
+            <li><code class="code-voice">    set theArray to arrayWithArray_(theList) of NSArray of current application</code></li>
+            <li><code class="code-voice">    set theString to componentsJoinedByString_(theDelimiter) of theArray</code></li>
+            <li><code class="code-voice">    return (theString as string)</code></li>
+            <li><code class="code-voice">end convertListToString</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20convertArrayToString%28array%2C%20delimiter%29%20%7B%0A%20%20%20%20array%20%3D%20%24%28array%29%0A%20%20%20%20array%20%3D%20array.componentsJoinedByString%28delimiter%29%0A%20%20%20%20return%20array.js%0A%7D">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW55"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-9</strong>JavaScriptObjC: Function that converts an array of strings into a single string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function convertArrayToString(array, delimiter) {</code></li>
+            <li><code class="code-voice">    array = $(array)</code></li>
+            <li><code class="code-voice">    array = array.componentsJoinedByString(delimiter)</code></li>
+            <li><code class="code-voice">    return array.js</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+
+  </aside>
+</div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW17"></a>
+  <h3 class="section-name" tabindex="0">Counting the Items in a List</h3>
+  <p class="para">
+  <span class="x-name-no-link">Listing 21-10</span> and <span class="x-name-no-link">Listing 21-11</span> show how to get the number of items in a list.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theList%20to%20%7B%22Apple%20Watch%22%2C%20%22iMac%22%2C%20%22iPhone%22%2C%20%22MacBook%20Pro%22%7D%0Alength%20of%20theList">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW18"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-10</strong>AppleScript: Get the count of the items in a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theList to {&quot;Apple Watch&quot;, &quot;iMac&quot;, &quot;iPhone&quot;, &quot;MacBook Pro&quot;}</code></li>
+            <li><code class="code-voice">length of theList</code></li>
+            <li><code class="code-voice">--&gt; Result: 4</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20array%20%3D%20%5B%22Apple%20Watch%22%2C%20%22iMac%22%2C%20%22iPhone%22%2C%20%22MacBook%20Pro%22%5D%0Aarray.length">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW56"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-11</strong>JavaScript: Get the count of the items in an array</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var array = [&quot;Apple Watch&quot;, &quot;iMac&quot;, &quot;iPhone&quot;, &quot;MacBook Pro&quot;]</code></li>
+            <li><code class="code-voice">array.length</code></li>
+            <li><code class="code-voice">// Result: 4</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW4"></a>
+  <h3 class="section-name" tabindex="0">Counting the Occurrences of an Item in a List</h3>
+  <p class="para">
+  The handlers in <span class="x-name-no-link">Listing 21-12</span> and <span class="x-name-no-link">Listing 21-13</span> count how many times an item appears in a list.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20countInstancesOfItemInList%28theList%2C%20theItem%29%0A%20%20%20%20set%20theCount%20to%200%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theList%0A%20%20%20%20%20%20%20%20if%20item%20a%20of%20theList%20is%20theItem%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theCount%20to%20theCount%20%2B%201%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%20theCount%0Aend%20countInstancesOfItemInList">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW15"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-12</strong>AppleScript: Handler that counts the number of times an item appears in a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on countInstancesOfItemInList(theList, theItem)</code></li>
+            <li><code class="code-voice">    set theCount to 0</code></li>
+            <li><code class="code-voice">    repeat with a from 1 to count of theList</code></li>
+            <li><code class="code-voice">        if item a of theList is theItem then</code></li>
+            <li><code class="code-voice">            set theCount to theCount + 1</code></li>
+            <li><code class="code-voice">        end if</code></li>
+            <li><code class="code-voice">    end repeat</code></li>
+            <li><code class="code-voice">    return theCount</code></li>
+            <li><code class="code-voice">end countInstancesOfItemInList</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20countInstancesOfItemInArray%28array%2C%20item%29%20%7B%0A%20%20%20%20var%20count%20%3D%200%0A%20%20%20%20for%20%28var%20element%20of%20array%29%20%7B%0A%20%20%20%20%20%20%20%20if%20%28element%20%3D%3D%3D%20item%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20count%2B%2B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20return%20count%0A%7D">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW57"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-13</strong>JavaScript: Function that counts the number of times an item appears in an array</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function countInstancesOfItemInArray(array, item) {</code></li>
+            <li><code class="code-voice">    var count = 0</code></li>
+            <li><code class="code-voice">    for (var element of array) {</code></li>
+            <li><code class="code-voice">        if (element === item) {</code></li>
+            <li><code class="code-voice">            count++</code></li>
+            <li><code class="code-voice">        }</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">    return count</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 21-14</span> and <span class="x-name-no-link">Listing 21-15</span> show how to call the handlers in <span class="x-name-no-link">Listing 21-12</span> and <span class="x-name-no-link">Listing 21-13</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Jen%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%7D%0AcountInstancesOfItemInList%28theList%2C%20%22Jen%22%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW16"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-14</strong>AppleScript: Calling a handler to count the number of times an item appears in a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theList to {&quot;Sal&quot;, &quot;Jen&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;, &quot;Jen&quot;}</code></li>
+            <li><code class="code-voice">countInstancesOfItemInList(theList, &quot;Jen&quot;)</code></li>
+            <li><code class="code-voice">--&gt; Result: 2</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Jen%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%5D%0AcountInstancesOfItemInArray%28array%2C%20%22Jen%22%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW58"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-15</strong>JavaScript: Calling a function to count the number of times an item appears in an array</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var array = [&quot;Sal&quot;, &quot;Jen&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;, &quot;Jen&quot;]</code></li>
+            <li><code class="code-voice">countInstancesOfItemInArray(array, &quot;Jen&quot;)</code></li>
+            <li><code class="code-voice">// Result: 2</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW2"></a>
+  <h3 class="section-name" tabindex="0">Determining if a List Contains a Specific Item</h3>
+  <p class="para">
+  <span class="x-name-no-link">Listing 21-16</span> and <span class="x-name-no-link">Listing 21-17</span> return a <code class="code-voice">true</code> or <code class="code-voice">false</code> value, indicating the presence of an item in a list.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AtheList%20contains%20%22Lizzie%22">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW19"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-16</strong>AppleScript: Check for the existence of an item in a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theList to {&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;}</code></li>
+            <li><code class="code-voice">theList contains &quot;Lizzie&quot;</code></li>
+            <li><code class="code-voice">--&gt; false</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray.includes%28%22Lizzie%22%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW59"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-17</strong>JavaScript: Check for the existence of an item in an array</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var array = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;]</code></li>
+            <li><code class="code-voice">array.includes(&quot;Lizzie&quot;)</code></li>
+            <li><code class="code-voice">// Result: false</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 21-18</span> and <span class="x-name-no-link">Listing 21-19</span> demonstrate how to add an item to a list only if the list doesn’t already contain the item.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0Aif%20theList%20does%20not%20contain%20%22Jen%22%20then%0A%20%20%20%20set%20end%20of%20theList%20to%20%22Jen%22%0Aend%20if%0Areturn%20theList">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW20"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-18</strong>AppleScript: Add an item to a list only if the list doesn’t contain the item</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theList to {&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;}</code></li>
+            <li><code class="code-voice">if theList does not contain &quot;Jen&quot; then</code></li>
+            <li><code class="code-voice">    set end of theList to &quot;Jen&quot;</code></li>
+            <li><code class="code-voice">end if</code></li>
+            <li><code class="code-voice">return theList</code></li>
+            <li><code class="code-voice">--&gt; Result: {&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;, &quot;Jen&quot;}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aif%20%28!array.includes%28%22Jen%22%29%29%20%7B%0A%20%20%20%20array.push%28%22Jen%22%29%0A%7D%0Aarray">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW60"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-19</strong>JavaScript: Add an item to an array only if the array doesn’t contain the item</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var array = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;]</code></li>
+            <li><code class="code-voice">if (!array.includes(&quot;Jen&quot;)) {</code></li>
+            <li><code class="code-voice">    array.push(&quot;Jen&quot;)</code></li>
+            <li><code class="code-voice">}</code></li>
+            <li><code class="code-voice">array</code></li>
+            <li><code class="code-voice">// Result: [&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;, &quot;Jen&quot;]</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW3"></a>
+  <h3 class="section-name" tabindex="0">Determining the Position of an Item in a List</h3>
+  <p class="para">
+  The handler in <span class="x-name-no-link">Listing 21-20</span> determines the position of an item the first time it appears in a list.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20getPositionOfItemInList%28theItem%2C%20theList%29%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theList%0A%20%20%20%20%20%20%20%20if%20item%20a%20of%20theList%20is%20theItem%20then%20return%20a%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%200%0Aend%20getPositionOfItemInList">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW21"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-20</strong>AppleScript: Handler that determines the position of an item in a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on getPositionOfItemInList(theItem, theList)</code></li>
+            <li><code class="code-voice">    repeat with a from 1 to count of theList</code></li>
+            <li><code class="code-voice">        if item a of theList is theItem then return a</code></li>
+            <li><code class="code-voice">    end repeat</code></li>
+            <li><code class="code-voice">    return 0</code></li>
+            <li><code class="code-voice">end getPositionOfItemInList</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 21-21</span> shows how to call the handler in <span class="x-name-no-link">Listing 21-20</span>. In AppleScript, list item positions start at <code class="code-voice">1</code>—the first item in a list has a position of <code class="code-voice">1</code>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%2C%20%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%7D%0AgetPositionOfItemInList%28%22Maddie%22%2C%20theList%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW22"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-21</strong>AppleScript: Calling a handler to determine the position of an item in a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theList to {&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;, &quot;Jen&quot;, &quot;Lizzie&quot;, &quot;Maddie&quot;, &quot;Lillie&quot;}</code></li>
+            <li><code class="code-voice">getPositionOfItemInList(&quot;Maddie&quot;, theList)</code></li>
+            <li><code class="code-voice">--&gt; Result: 7</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  In JavaScript, the <code class="code-voice">indexOf()</code> method of the <code class="code-voice">Array</code> object can be called to determine the position of an item in an array, as shown in <span class="x-name-no-link">Listing 21-22</span>. In JavaScript, array item positions start at <code class="code-voice">0</code>—the first item in an array has an index of <code class="code-voice">0</code>.
+</p><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%2C%20%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%5D%0Aarray.indexOf%28%22Maddie%22%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW64"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-22</strong>JavaScript: Determine the position of an item in an array</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var array = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;, &quot;Jen&quot;, &quot;Lizzie&quot;, &quot;Maddie&quot;, &quot;Lillie]</code></li>
+            <li><code class="code-voice">array.indexOf(&quot;Maddie&quot;)</code></li>
+            <li><code class="code-voice">// Result: 6</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  The <code class="code-voice">getPositionOfItemInList()</code> AppleScript handler and <code class="code-voice">indexOf()</code> JavaScript method can be used to cross-reference data between corresponding lists. In <span class="x-name-no-link">Listing 21-23</span> and <span class="x-name-no-link">Listing 21-24</span>, a person is located in a list by name. Next, the person’s phone extension is located in a corresponding list.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theNames%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%2C%20%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%7D%0Aset%20theExtensions%20to%20%7B%22x1111%22%2C%20%22x2222%22%2C%20%22x3333%22%2C%20%22x4444%22%2C%20%22x5555%22%2C%20%22x6666%22%2C%20%22x7777%22%2C%20%22x8888%22%7D%7D%0Aset%20thePerson%20to%20choose%20from%20list%20theNames%20with%20prompt%20%22Choose%20a%20person%3A%22%0Aif%20thePerson%20is%20false%20then%20error%20number%20-128%0Aset%20theExtension%20to%20item%20%28getPositionOfItemInList%28%28thePerson%20as%20string%29%2C%20theNames%29%29%20of%20theExtensions%0Adisplay%20dialog%20%22The%20phone%20extension%20for%20%22%20%26%20thePerson%20%26%20%22%20is%20%22%20%26%20theExtension%20%26%20%22.%22">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW23"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-23</strong>AppleScript: Using cross-referencing to locate an item in a list based on the position of an item in another list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theNames to {&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;, &quot;Jen&quot;, &quot;Lizzie&quot;, &quot;Maddie&quot;, &quot;Lillie&quot;}</code></li>
+            <li><code class="code-voice">set theExtensions to {&quot;x1111&quot;, &quot;x2222&quot;, &quot;x3333&quot;, &quot;x4444&quot;, &quot;x5555&quot;, &quot;x6666&quot;, &quot;x7777&quot;, &quot;x8888&quot;}}</code></li>
+            <li><code class="code-voice">set thePerson to choose from list theNames with prompt &quot;Choose a person:&quot;</code></li>
+            <li><code class="code-voice">if thePerson is false then error number -128</code></li>
+            <li><code class="code-voice">set theExtension to item (getPositionOfItemInList((thePerson as string), theNames)) of theExtensions</code></li>
+            <li><code class="code-voice">display dialog &quot;The phone extension for &quot; &amp; thePerson &amp; &quot; is &quot; &amp; theExtension &amp; &quot;.&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20names%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%2C%20%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%5D%0Avar%20extensions%20%3D%20%5B%22x1111%22%2C%20%22x2222%22%2C%20%22x3333%22%2C%20%22x4444%22%2C%20%22x5555%22%2C%20%22x6666%22%2C%20%22x7777%22%2C%20%22x8888%22%5D%0Avar%20people%20%3D%20app.chooseFromList%28names%2C%20%7BwithPrompt%3A%20%22Choose%20a%20person%3A%22%7D%29%0Aif%20%28!people%29%20%7B%0A%20%20%20%20throw%20new%20Error%28-128%29%0A%7D%0Avar%20person%20%3D%20people%5B0%5D%0Avar%20index%20%3D%20names.indexOf%28person%29%0Aconsole.log%28index%29%0Avar%20extension%20%3D%20extensions%5Bindex%5D%0Aapp.displayDialog%28%60The%20phone%20extension%20for%20%24%7Bperson%7D%20is%20%24%7Bextension%7D.%60%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW65"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-24</strong>JavaScript: Using cross-referencing to locate an item in an array based on the position of an item in another array</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var app = Application.currentApplication()</code></li>
+            <li><code class="code-voice">app.includeStandardAdditions = true</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">var names = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;, &quot;Jen&quot;, &quot;Lizzie&quot;, &quot;Maddie&quot;, &quot;Lillie&quot;]</code></li>
+            <li><code class="code-voice">var extensions = [&quot;x1111&quot;, &quot;x2222&quot;, &quot;x3333&quot;, &quot;x4444&quot;, &quot;x5555&quot;, &quot;x6666&quot;, &quot;x7777&quot;, &quot;x8888&quot;]</code></li>
+            <li><code class="code-voice">var people = app.chooseFromList(names, {withPrompt: &quot;Choose a person:&quot;})</code></li>
+            <li><code class="code-voice">if (!people) {</code></li>
+            <li><code class="code-voice">    throw new Error(-128)</code></li>
+            <li><code class="code-voice">}</code></li>
+            <li><code class="code-voice">var person = people[0]</code></li>
+            <li><code class="code-voice">var index = names.indexOf(person)</code></li>
+            <li><code class="code-voice">console.log(index)</code></li>
+            <li><code class="code-voice">var extension = extensions[index]</code></li>
+            <li><code class="code-voice">app.displayDialog(`The phone extension for ${person} is ${extension}.`)</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW24"></a>
+  <h3 class="section-name" tabindex="0">Determining Multiple Positions of an Item in a List</h3>
+  <p class="para">
+  The handlers in <span class="x-name-no-link">Listing 21-25</span> and <span class="x-name-no-link">Listing 21-26</span> determine every position of an item in a list.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20getPositionsOfItemInList%28theItem%2C%20theList%2C%20listFirstPositionOnly%29%0A%20%20%20%20set%20thePositions%20to%20%7B%7D%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20length%20of%20theList%0A%20%20%20%20%20%20%20%20if%20item%20a%20of%20theList%20is%20theItem%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20listFirstPositionOnly%20%3D%20true%20then%20return%20a%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20end%20of%20thePositions%20to%20a%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0A%20%20%20%20if%20listFirstPositionOnly%20is%20true%20and%20thePositions%20%3D%20%7B%7D%20then%20return%200%0A%20%20%20%20return%20thePositions%0Aend%20getPositionsOfItemInList">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW25"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-25</strong>AppleScript: Handler that determines every position of an item in a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on getPositionsOfItemInList(theItem, theList, listFirstPositionOnly)</code></li>
+            <li><code class="code-voice">    set thePositions to {}</code></li>
+            <li><code class="code-voice">    repeat with a from 1 to length of theList</code></li>
+            <li><code class="code-voice">        if item a of theList is theItem then</code></li>
+            <li><code class="code-voice">            if listFirstPositionOnly = true then return a</code></li>
+            <li><code class="code-voice">            set end of thePositions to a</code></li>
+            <li><code class="code-voice">        end if</code></li>
+            <li><code class="code-voice">    end repeat</code></li>
+            <li><code class="code-voice">    if listFirstPositionOnly is true and thePositions = {} then return 0</code></li>
+            <li><code class="code-voice">    return thePositions</code></li>
+            <li><code class="code-voice">end getPositionsOfItemInList</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20getPositionsOfItemInArray%28item%2C%20array%2C%20firstPositionOnly%29%20%7B%0A%20%20%20%20if%20%28firstPositionOnly%29%20%7B%0A%20%20%20%20%20%20%20%20return%20array.indexOf%28item%29%0A%20%20%20%20%7D%0A%20%20%20%20var%20indexes%20%3D%20%5B%5D%0A%20%20%20%20for%20%28var%20index%20%3D%200%3B%20index%20%3C%20array.length%3B%20index%2B%2B%29%20%7B%0A%20%20%20%20%20%20%20%20var%20element%20%3D%20array%5Bindex%5D%0A%20%20%20%20%20%20%20%20if%20%28element%20%3D%3D%3D%20item%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20indexes.push%28index%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20return%20indexes%0A%7D%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW66"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-26</strong>JavaScript: Function that determines every position of an item in an array</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function getPositionsOfItemInArray(item, array, firstPositionOnly) {</code></li>
+            <li><code class="code-voice">    if (firstPositionOnly) {</code></li>
+            <li><code class="code-voice">        return array.indexOf(item)</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">    var indexes = []</code></li>
+            <li><code class="code-voice">    for (var index = 0; index &lt; array.length; index++) {</code></li>
+            <li><code class="code-voice">        var element = array[index]</code></li>
+            <li><code class="code-voice">        if (element === item) {</code></li>
+            <li><code class="code-voice">            indexes.push(index)</code></li>
+            <li><code class="code-voice">        }</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">    return indexes</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 21-27</span> and <span class="x-name-no-link">Listing 21-28</span> show how to call the handlers in <span class="x-name-no-link">Listing 21-25</span> and <span class="x-name-no-link">Listing 21-26</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22Jen%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Jen%22%2C%20%22Lillie%22%7D%0AgetPositionsOfItemInList%28%22Jen%22%2C%20theList%2C%20false%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW26"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-27</strong>AppleScript: Calling a handler to determine every position of an item in a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theList to {&quot;Sal&quot;, &quot;Ben&quot;, &quot;Jen&quot;, &quot;David&quot;, &quot;Chris&quot;, &quot;Lizzie&quot;, &quot;Maddie&quot;, &quot;Jen&quot;, &quot;Lillie&quot;}</code></li>
+            <li><code class="code-voice">getPositionsOfItemInList(&quot;Jen&quot;, theList, false)</code></li>
+            <li><code class="code-voice">--&gt; Result: {3, 8}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22Jen%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Jen%22%2C%20%22Lillie%22%5D%0AgetPositionsOfItemInArray%28%22Jen%22%2C%20array%2C%20false%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW67"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-28</strong>JavaScript: Calling a function to determine every position of an item in an array</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var array = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;Jen&quot;, &quot;David&quot;, &quot;Chris&quot;, &quot;Lizzie&quot;, &quot;Maddie&quot;, &quot;Jen&quot;, &quot;Lillie&quot;]</code></li>
+            <li><code class="code-voice">getPositionsOfItemInArray(&quot;Jen&quot;, array, false)</code></li>
+            <li><code class="code-voice">// Result: [2, 7]</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW8"></a>
+  <h3 class="section-name" tabindex="0">Finding the Highest Numeric Value in a List</h3>
+  <p class="para">
+  The handlers in <span class="x-name-no-link">Listing 21-29</span> and <span class="x-name-no-link">Listing 21-30</span> determine the highest numeric value in a list of items. The passed list can contain non-numeric data as well as lists within lists.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20getHighestNumberInList%28theList%29%0A%20%20%20%20set%20theHighestNumber%20to%20false%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theList%0A%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20item%20a%20of%20theList%0A%20%20%20%20%20%20%20%20set%20theClass%20to%20class%20of%20theCurrentItem%0A%20%20%20%20%20%20%20%20if%20theClass%20is%20in%20%7Binteger%2C%20real%7D%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20theHighestNumber%20is%20%22%22%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theHighestNumber%20to%20theCurrentItem%0A%20%20%20%20%20%20%20%20%20%20%20%20else%20if%20theCurrentItem%20is%20greater%20than%20theHighestNumber%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theHighestNumber%20to%20item%20a%20of%20theList%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20else%20if%20theClass%20is%20list%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theHighValue%20to%20getHighestNumberInList%28theCurrentItem%29%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20theHighValue%20is%20greater%20than%20theHighestNumber%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theHighestNumber%20to%20theHighValue%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%20theHighestNumber%0Aend%20getHighestNumberInList">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW27"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-29</strong>AppleScript: Handler that determines the highest numeric value in a list of items</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on getHighestNumberInList(theList)</code></li>
+            <li><code class="code-voice">    set theHighestNumber to false</code></li>
+            <li><code class="code-voice">    repeat with a from 1 to count of theList</code></li>
+            <li><code class="code-voice">        set theCurrentItem to item a of theList</code></li>
+            <li><code class="code-voice">        set theClass to class of theCurrentItem</code></li>
+            <li><code class="code-voice">        if theClass is in {integer, real} then</code></li>
+            <li><code class="code-voice">            if theHighestNumber is &quot;&quot; then</code></li>
+            <li><code class="code-voice">                set theHighestNumber to theCurrentItem</code></li>
+            <li><code class="code-voice">            else if theCurrentItem is greater than theHighestNumber then</code></li>
+            <li><code class="code-voice">                set theHighestNumber to item a of theList</code></li>
+            <li><code class="code-voice">            end if</code></li>
+            <li><code class="code-voice">        else if theClass is list then</code></li>
+            <li><code class="code-voice">            set theHighValue to getHighestNumberInList(theCurrentItem)</code></li>
+            <li><code class="code-voice">            if theHighValue is greater than theHighestNumber then</code></li>
+            <li><code class="code-voice">                set theHighestNumber to theHighValue</code></li>
+            <li><code class="code-voice">            end if</code></li>
+            <li><code class="code-voice">        end if</code></li>
+            <li><code class="code-voice">    end repeat</code></li>
+            <li><code class="code-voice">    return theHighestNumber</code></li>
+            <li><code class="code-voice">end getHighestNumberInList</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20getHighestNumberInList%28list%29%20%7B%0A%20%20%20%20var%20highestNumber%20%3D%20undefined%0A%20%20%20%20for%20%28var%20item%20of%20list%29%20%7B%0A%20%20%20%20%20%20%20%20var%20number%20%3D%20undefined%0A%20%20%20%20%20%20%20%20if%20%28item.constructor%20%3D%3D%3D%20Number%29%20%7B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20number%20%3D%20item%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20else%20if%20%28item.constructor%20%3D%3D%3D%20Array%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20number%20%3D%20getHighestNumberInList%28item%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20if%20%28number%20!%3D%20undefined%20%26%26%20%28highestNumber%20%3D%3D%3D%20undefined%20%7C%7C%20number%20%3E%20highestNumber%29%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20highestNumber%20%3D%20number%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20return%20highestNumber%0A%7D">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW82"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-30</strong>JavaScript: Function that determines the highest numeric value in a list of items</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function getHighestNumberInList(list) {</code></li>
+            <li><code class="code-voice">    var highestNumber = undefined</code></li>
+            <li><code class="code-voice">    for (var item of list) {</code></li>
+            <li><code class="code-voice">        var number = undefined</code></li>
+            <li><code class="code-voice">        if (item.constructor === Number) {</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">            number = item</code></li>
+            <li><code class="code-voice">        }</code></li>
+            <li><code class="code-voice">        else if (item.constructor === Array) {</code></li>
+            <li><code class="code-voice">            number = getHighestNumberInList(item)</code></li>
+            <li><code class="code-voice">        }</code></li>
+            <li><code class="code-voice">        if (number != undefined &amp;&amp; (highestNumber === undefined || number &gt; highestNumber)) {</code></li>
+            <li><code class="code-voice">            highestNumber = number</code></li>
+            <li><code class="code-voice">        }</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">    return highestNumber</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 21-31</span> and <span class="x-name-no-link">Listing 21-32</span> show how to call the handlers in <span class="x-name-no-link">Listing 21-29</span> and <span class="x-name-no-link">Listing 21-30</span> for a list containing a mixture of numbers and strings.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=getHighestNumberInList%28%7B-3.25%2C%2023%2C%202345%2C%20%22sid%22%2C%203%2C%2067%7D%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW28"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-31</strong>AppleScript: Calling a handler to determine the highest numeric value in a list of numbers and strings</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">getHighestNumberInList({-3.25, 23, 2345, &quot;sid&quot;, 3, 67})</code></li>
+            <li><code class="code-voice">--&gt; Result: 2345</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=getHighestNumberInList%28%5B-3.25%2C%2023%2C%202345%2C%20%22sid%22%2C%203%2C%2067%5D%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW83"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-32</strong>JavaScript: Calling a function to determine the highest numeric value in a list of numbers and strings</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">getHighestNumberInList([-3.25, 23, 2345, &quot;sid&quot;, 3, 67])</code></li>
+            <li><code class="code-voice">// Result: 2345</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 21-33</span> and <span class="x-name-no-link">Listing 21-34</span> show how to call the handlers in <span class="x-name-no-link">Listing 21-29</span> and <span class="x-name-no-link">Listing 21-30</span> for a list containing a mixture of numbers, strings, booleans, and lists.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=getHighestNumberInList%28%7B-3.25%2C%2023%2C%20%7B23%2C%2078695%2C%20%22bob%22%7D%2C%202345%2C%20true%2C%20%22sid%22%2C%203%2C%2067%7D%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW29"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-33</strong>AppleScript: Calling a handler to determine the highest numeric value in a list of different value types</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">getHighestNumberInList({-3.25, 23, {23, 78695, &quot;bob&quot;}, 2345, true, &quot;sid&quot;, 3, 67})</code></li>
+            <li><code class="code-voice">--&gt; Result: 78695</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=getHighestNumberInList%28%5B-3.25%2C%2023%2C%20%5B23%2C%2078695%2C%20%22bob%22%5D%2C%202345%2C%20true%2C%20%22sid%22%2C%203%2C%2067%5D%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW84"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-34</strong>JavaScript: Calling a function to determine the highest numeric value in a list of different value types</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">getHighestNumberInList([-3.25, 23, [23, 78695, &quot;bob&quot;], 2345, true, &quot;sid&quot;, 3, 67])</code></li>
+            <li><code class="code-voice">// Result: 78695</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 21-35</span> and <span class="x-name-no-link">Listing 21-36</span> show how to call the handlers in <span class="x-name-no-link">Listing 21-29</span> and <span class="x-name-no-link">Listing 21-30</span> for a list containing only strings.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=getHighestNumberInList%28%7B%22this%22%2C%20%22list%22%2C%20%22contains%22%2C%20%22only%22%2C%20%22text%22%7D%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW30"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-35</strong>AppleScript: Calling a handler to determine the highest numeric value in a list of strings</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">getHighestNumberInList({&quot;this&quot;, &quot;list&quot;, &quot;contains&quot;, &quot;only&quot;, &quot;text&quot;})</code></li>
+            <li><code class="code-voice">--&gt; Result: false</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=getHighestNumberInList%28%5B%22this%22%2C%20%22list%22%2C%20%22contains%22%2C%20%22only%22%2C%20%22text%22%5D%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW85"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-36</strong>JavaScript: Calling a function to determine the highest numeric value in a list of strings</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">getHighestNumberInList([&quot;this&quot;, &quot;list&quot;, &quot;contains&quot;, &quot;only&quot;, &quot;text&quot;])</code></li>
+            <li><code class="code-voice">// Result: undefined</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW9"></a>
+  <h3 class="section-name" tabindex="0">Finding the Lowest Numeric Value in a List</h3>
+  <p class="para">
+  The handlers in <span class="x-name-no-link">Listing 21-37</span> and <span class="x-name-no-link">Listing 21-38</span> determines the lowest numeric value in a list of items. The passed list can contain non-numeric data as well as lists within lists.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20getLowestNumberInList%28theList%29%0A%20%20%20%20set%20theLowestNumber%20to%20false%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theList%0A%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20item%20a%20of%20theList%0A%20%20%20%20%20%20%20%20set%20theClass%20to%20class%20of%20theCurrentItem%0A%20%20%20%20%20%20%20%20if%20theClass%20is%20in%20%7Binteger%2C%20real%7D%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20theLowestNumber%20is%20%22%22%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowestNumber%20to%20theCurrentItem%0A%20%20%20%20%20%20%20%20%20%20%20%20else%20if%20theCurrentItem%20is%20less%20than%20theLowestNumber%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowestNumber%20to%20item%20a%20of%20theList%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20else%20if%20theClass%20is%20list%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowValue%20to%20getLowestNumberInList%28theCurrentItem%29%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20theLowValue%20is%20less%20than%20theLowestNumber%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowestNumber%20to%20theLowValue%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%20theLowestNumber%0Aend%20getLowestNumberInList">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW31"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-37</strong>AppleScript: Handler that determines the lowest numeric value in a list of items</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on getLowestNumberInList(theList)</code></li>
+            <li><code class="code-voice">    set theLowestNumber to false</code></li>
+            <li><code class="code-voice">    repeat with a from 1 to count of theList</code></li>
+            <li><code class="code-voice">        set theCurrentItem to item a of theList</code></li>
+            <li><code class="code-voice">        set theClass to class of theCurrentItem</code></li>
+            <li><code class="code-voice">        if theClass is in {integer, real} then</code></li>
+            <li><code class="code-voice">            if theLowestNumber is &quot;&quot; then</code></li>
+            <li><code class="code-voice">                set theLowestNumber to theCurrentItem</code></li>
+            <li><code class="code-voice">            else if theCurrentItem is less than theLowestNumber then</code></li>
+            <li><code class="code-voice">                set theLowestNumber to item a of theList</code></li>
+            <li><code class="code-voice">            end if</code></li>
+            <li><code class="code-voice">        else if theClass is list then</code></li>
+            <li><code class="code-voice">            set theLowValue to getLowestNumberInList(theCurrentItem)</code></li>
+            <li><code class="code-voice">            if theLowValue is less than theLowestNumber then</code></li>
+            <li><code class="code-voice">                set theLowestNumber to theLowValue</code></li>
+            <li><code class="code-voice">            end if</code></li>
+            <li><code class="code-voice">        end if</code></li>
+            <li><code class="code-voice">    end repeat</code></li>
+            <li><code class="code-voice">    return theLowestNumber</code></li>
+            <li><code class="code-voice">end getLowestNumberInList</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20getLowestNumberInList%28list%29%20%7B%0A%20%20%20%20var%20lowestNumber%20%3D%20undefined%0A%20%20%20%20for%20%28var%20item%20of%20list%29%20%7B%0A%20%20%20%20%20%20%20%20var%20number%20%3D%20undefined%0A%20%20%20%20%20%20%20%20if%20%28item.constructor%20%3D%3D%3D%20Number%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20number%20%3D%20item%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20else%20if%20%28item.constructor%20%3D%3D%3D%20Array%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20number%20%3D%20getLowestNumberInList%28item%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20if%20%28number%20!%3D%20undefined%20%26%26%20%28lowestNumber%20%3D%3D%3D%20undefined%20%7C%7C%20number%20%3C%20lowestNumber%29%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20lowestNumber%20%3D%20number%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20return%20lowestNumber%0A%7D%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW86"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-38</strong>JavaScript: Function that determines the lowest numeric value in a list of items</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function getLowestNumberInList(list) {</code></li>
+            <li><code class="code-voice">    var lowestNumber = undefined</code></li>
+            <li><code class="code-voice">    for (var item of list) {</code></li>
+            <li><code class="code-voice">        var number = undefined</code></li>
+            <li><code class="code-voice">        if (item.constructor === Number) {</code></li>
+            <li><code class="code-voice">            number = item</code></li>
+            <li><code class="code-voice">        }</code></li>
+            <li><code class="code-voice">        else if (item.constructor === Array) {</code></li>
+            <li><code class="code-voice">            number = getLowestNumberInList(item)</code></li>
+            <li><code class="code-voice">        }</code></li>
+            <li><code class="code-voice">        if (number != undefined &amp;&amp; (lowestNumber === undefined || number &lt; lowestNumber)) {</code></li>
+            <li><code class="code-voice">            lowestNumber = number</code></li>
+            <li><code class="code-voice">        }</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">    return lowestNumber</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 21-39</span> and <span class="x-name-no-link">Listing 21-40</span> show how to call the handlers in <span class="x-name-no-link">Listing 21-37</span> and <span class="x-name-no-link">Listing 21-38</span> for a list containing a mixture of numbers and strings.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=getLowestNumberInList%28%7B-3.25%2C%2023%2C%202345%2C%20%22sid%22%2C%203%2C%2067%7D%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW32"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-39</strong>AppleScript: Calling a handler to determine the lowest numeric value in a list of numbers and strings</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">getLowestNumberInList({-3.25, 23, 2345, &quot;sid&quot;, 3, 67})</code></li>
+            <li><code class="code-voice">--&gt; Result: -3.25</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=getLowestNumberInList%28%5B-3.25%2C%2023%2C%202345%2C%20%22sid%22%2C%203%2C%2067%5D%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW87"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-40</strong>JavaScript: Calling a function to determine the lowest numeric value in a list of strings</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">getLowestNumberInList([-3.25, 23, 2345, &quot;sid&quot;, 3, 67])</code></li>
+            <li><code class="code-voice">// Result: -3.25</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 21-41</span> and <span class="x-name-no-link">Listing 21-42</span> show how to call the handlers in <span class="x-name-no-link">Listing 21-37</span> and <span class="x-name-no-link">Listing 21-38</span> for a list containing a mixture of numbers, strings, booleans, and lists.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=getLowestNumberInList%28%7B-3.25%2C%2023%2C%20%7B-22%2C%2078695%2C%20%22Sal%22%7D%2C%202345%2C%20true%2C%20%22sid%22%2C%203%2C%2067%7D%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW33"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-41</strong>AppleScript: Calling a handler to determine the lowest numeric value in a list of different value types</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">getLowestNumberInList({-3.25, 23, {-22, 78695, &quot;Sal&quot;}, 2345, true, &quot;sid&quot;, 3, 67})</code></li>
+            <li><code class="code-voice">--&gt; Result: -22</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=getLowestNumberInList%28%5B-3.25%2C%2023%2C%20%5B-22%2C%2078695%2C%20%22bob%22%5D%2C%202345%2C%20true%2C%20%22sid%22%2C%203%2C%2067%5D%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW88"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-42</strong>JavaScript: Calling a function to determine the lowest numeric value in a list of different value types</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">getLowestNumberInList([-3.25, 23, [-22, 78695, &quot;bob&quot;], 2345, true, &quot;sid&quot;, 3, 67])</code></li>
+            <li><code class="code-voice">// Result: -22</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 21-43</span> and <span class="x-name-no-link">Listing 21-44</span> show how to call the handlers in <span class="x-name-no-link">Listing 21-37</span> and <span class="x-name-no-link">Listing 21-38</span> for a list containing only strings.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=getLowestNumberInList%28%7B%22this%22%2C%20%22list%22%2C%20%22contains%22%2C%20%22only%22%2C%20%22text%22%7D%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW34"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-43</strong>AppleScript: Calling a handler to determine the lowest numeric value in a list of strings</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">getLowestNumberInList({&quot;this&quot;, &quot;list&quot;, &quot;contains&quot;, &quot;only&quot;, &quot;text&quot;})</code></li>
+            <li><code class="code-voice">--&gt; Result: false</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=getLowestNumberInList%28%5B%22this%22%2C%20%22list%22%2C%20%22contains%22%2C%20%22only%22%2C%20%22text%22%5D%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW89"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-44</strong>JavaScript: Calling a function to determine the lowest numeric value in a list of strings</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">getLowestNumberInList([&quot;this&quot;, &quot;list&quot;, &quot;contains&quot;, &quot;only&quot;, &quot;text&quot;])</code></li>
+            <li><code class="code-voice">// Result: undefined</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW5"></a>
+  <h3 class="section-name" tabindex="0">Inserting Items into a List</h3>
+  <p class="para">
+  The handlers in <span class="x-name-no-link">Listing 21-45</span> and <span class="x-name-no-link">Listing 21-46</span> insert an item into a list. Provide the item to insert, the list, and the position where the item should be inserted. Note that position can be specified in relation to the end of the list by using a negative number.
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW68"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">In JavaScript, the <code class="code-voice">Array</code> class has built-in methods—<code class="code-voice">unshift</code> (inserts at the beginning), <code class="code-voice">splice</code> (inserts at a specific position), and <code class="code-voice">push</code> (inserts at the end)—for inserting items into a list, requiring less custom scripting than is necessary in AppleScript.
+    	</p>
+    
+  </aside>
+</div><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20insertItemInList%28theItem%2C%20theList%2C%20thePosition%29%0A%20%20%20%20set%20theListCount%20to%20length%20of%20theList%0A%20%20%20%20if%20thePosition%20is%200%20then%0A%20%20%20%20%20%20%20%20return%20false%0A%20%20%20%20else%20if%20thePosition%20is%20less%20than%200%20then%0A%20%20%20%20%20%20%20%20if%20%28thePosition%20*%20-1%29%20is%20greater%20than%20theListCount%20%2B%201%20then%20return%20false%0A%20%20%20%20else%0A%20%20%20%20%20%20%20%20if%20thePosition%20is%20greater%20than%20theListCount%20%2B%201%20then%20return%20false%0A%20%20%20%20end%20if%0A%20%20%20%20if%20thePosition%20is%20less%20than%200%20then%0A%20%20%20%20%20%20%20%20if%20%28thePosition%20*%20-1%29%20is%20theListCount%20%2B%201%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20beginning%20of%20theList%20to%20theItem%0A%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theList%20to%20reverse%20of%20theList%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20thePosition%20to%20%28thePosition%20*%20-1%29%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20thePosition%20is%201%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20beginning%20of%20theList%20to%20theItem%0A%20%20%20%20%20%20%20%20%20%20%20%20else%20if%20thePosition%20is%20%28theListCount%20%2B%201%29%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20end%20of%20theList%20to%20theItem%0A%20%20%20%20%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theList%20to%20%28items%201%20thru%20%28thePosition%20-%201%29%20of%20theList%29%20%26%20theItem%20%26%20%28items%20thePosition%20thru%20-1%20of%20theList%29%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theList%20to%20reverse%20of%20theList%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20else%0A%20%20%20%20%20%20%20%20if%20thePosition%20is%201%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20beginning%20of%20theList%20to%20theItem%0A%20%20%20%20%20%20%20%20else%20if%20thePosition%20is%20%28theListCount%20%2B%201%29%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20end%20of%20theList%20to%20theItem%0A%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theList%20to%20%28items%201%20thru%20%28thePosition%20-%201%29%20of%20theList%29%20%26%20theItem%20%26%20%28items%20thePosition%20thru%20-1%20of%20theList%29%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20if%0A%20%20%20%20return%20theList%0Aend%20insertItemInList">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW35"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-45</strong>AppleScript: Handler that inserts an item into a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on insertItemInList(theItem, theList, thePosition)</code></li>
+            <li><code class="code-voice">    set theListCount to length of theList</code></li>
+            <li><code class="code-voice">    if thePosition is 0 then</code></li>
+            <li><code class="code-voice">        return false</code></li>
+            <li><code class="code-voice">    else if thePosition is less than 0 then</code></li>
+            <li><code class="code-voice">        if (thePosition * -1) is greater than theListCount + 1 then return false</code></li>
+            <li><code class="code-voice">    else</code></li>
+            <li><code class="code-voice">        if thePosition is greater than theListCount + 1 then return false</code></li>
+            <li><code class="code-voice">    end if</code></li>
+            <li><code class="code-voice">    if thePosition is less than 0 then</code></li>
+            <li><code class="code-voice">        if (thePosition * -1) is theListCount + 1 then</code></li>
+            <li><code class="code-voice">            set beginning of theList to theItem</code></li>
+            <li><code class="code-voice">        else</code></li>
+            <li><code class="code-voice">            set theList to reverse of theList</code></li>
+            <li><code class="code-voice">            set thePosition to (thePosition * -1)</code></li>
+            <li><code class="code-voice">            if thePosition is 1 then</code></li>
+            <li><code class="code-voice">                set beginning of theList to theItem</code></li>
+            <li><code class="code-voice">            else if thePosition is (theListCount + 1) then</code></li>
+            <li><code class="code-voice">                set end of theList to theItem</code></li>
+            <li><code class="code-voice">            else</code></li>
+            <li><code class="code-voice">                set theList to (items 1 thru (thePosition - 1) of theList) &amp; theItem &amp; (items thePosition thru -1 of theList)</code></li>
+            <li><code class="code-voice">            end if</code></li>
+            <li><code class="code-voice">            set theList to reverse of theList</code></li>
+            <li><code class="code-voice">        end if</code></li>
+            <li><code class="code-voice">    else</code></li>
+            <li><code class="code-voice">        if thePosition is 1 then</code></li>
+            <li><code class="code-voice">            set beginning of theList to theItem</code></li>
+            <li><code class="code-voice">        else if thePosition is (theListCount + 1) then</code></li>
+            <li><code class="code-voice">            set end of theList to theItem</code></li>
+            <li><code class="code-voice">        else</code></li>
+            <li><code class="code-voice">            set theList to (items 1 thru (thePosition - 1) of theList) &amp; theItem &amp; (items thePosition thru -1 of theList)</code></li>
+            <li><code class="code-voice">        end if</code></li>
+            <li><code class="code-voice">    end if</code></li>
+            <li><code class="code-voice">    return theList</code></li>
+            <li><code class="code-voice">end insertItemInList</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20insertItemInArray%28item%2C%20array%2C%20position%29%20%7B%0A%20%20%20%20var%20arrayCount%20%3D%20array.length%0A%20%20%20%20if%20%28Math.abs%28position%29%20%3E%20arrayCount%29%20%7B%0A%20%20%20%20%20%20%20%20return%20false%0A%20%20%20%20%7D%0A%20%20%20else%20if%20%28position%20%3D%3D%3D%200%29%20%7B%0A%20%20%20%20%20%20%20%20array.unshift%28item%29%0A%20%20%20%20%7D%0A%20%20%20%20else%20if%20%28position%20%3C%20arrayCount%29%20%7B%0A%20%20%20%20%20%20%20%20array.splice%28position%2C%200%2C%20item%29%0A%20%20%20%20%7D%0A%20%20%20%20else%20%7B%0A%20%20%20%20%20%20%20%20array.push%28item%29%0A%20%20%20%20%7D%0A%20%20%20%20return%20array%0A%7D">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW69"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-46</strong>JavaScript: Function that inserts an item into an array</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function insertItemInArray(item, array, position) {</code></li>
+            <li><code class="code-voice">    var arrayCount = array.length</code></li>
+            <li><code class="code-voice">    if (Math.abs(position) &gt; arrayCount) {</code></li>
+            <li><code class="code-voice">        return false</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">   else if (position === 0) {</code></li>
+            <li><code class="code-voice">        array.unshift(item)</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">    else if (position &lt; arrayCount) {</code></li>
+            <li><code class="code-voice">        array.splice(position, 0, item)</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">    else {</code></li>
+            <li><code class="code-voice">        array.push(item)</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">    return array</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 21-47</span> and <span class="x-name-no-link">Listing 21-48</span> show how to call the handlers in <span class="x-name-no-link">Listing 21-45</span> and <span class="x-name-no-link">Listing 21-46</span> to insert a single item into a list at a specific position.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AinsertItemInList%28%22Jen%22%2C%20theList%2C%203%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW36"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-47</strong>AppleScript: Calling a handler to insert a single item at a specific position in a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theList to {&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;}</code></li>
+            <li><code class="code-voice">insertItemInList(&quot;Jen&quot;, theList, 3)</code></li>
+            <li><code class="code-voice">--&gt; Result: {&quot;Sal&quot;, &quot;Ben&quot;, &quot;Jen&quot;, &quot;David&quot;, &quot;Chris&quot;}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray%20%3D%20insertItemInArray%28%22Jen%22%2C%20array%2C%202%29%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW70"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-48</strong>JavaScript: Calling a function to insert a single item at a specific position in an array</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var array = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;]</code></li>
+            <li><code class="code-voice">array = insertItemInArray(&quot;Jen&quot;, array, 2)</code></li>
+            <li><code class="code-voice">// Result = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;Jen&quot;, &quot;David&quot;, &quot;Chris&quot;]</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 21-49</span> and <span class="x-name-no-link">Listing 21-50</span> show how to call the handlers in <span class="x-name-no-link">Listing 21-45</span> and <span class="x-name-no-link">Listing 21-46</span> to insert multiple items into a list at a specific position.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AinsertItemInList%28%7B%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%7D%2C%20theList%2C%203%29%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW37"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-49</strong>AppleScript: Calling a handler to insert multiple items at a specific position in a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theList to {&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;}</code></li>
+            <li><code class="code-voice">insertItemInList({&quot;Lizzie&quot;, &quot;Maddie&quot;, &quot;Lillie&quot;}, theList, 3)</code></li>
+            <li><code class="code-voice">--&gt; Result: {&quot;Sal&quot;, &quot;Ben&quot;, &quot;Lizzie&quot;, &quot;Maddie&quot;, &quot;Lillie&quot;, &quot;David&quot;, &quot;Chris&quot;}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Avar%20items%20%3D%20%5B%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%5D%0Afor%20%28var%20item%20of%20items%29%20%7B%0A%20%20%20%20array%20%3D%20insertItemInArray%28item%2C%20array%2C%202%29%0A%7D">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW71"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-50</strong>JavaScript: Calling a function to insert multiple items at a specific position in an array</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var array = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;]</code></li>
+            <li><code class="code-voice">var items = [&quot;Lizzie&quot;, &quot;Maddie&quot;, &quot;Lillie&quot;]</code></li>
+            <li><code class="code-voice">for (var item of items) {</code></li>
+            <li><code class="code-voice">    array = insertItemInArray(item, array, 2)</code></li>
+            <li><code class="code-voice">}</code></li>
+            <li><code class="code-voice">// Result = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;Lillie&quot;, &quot;Maddie&quot;, &quot;Lizzie&quot;, &quot;David&quot;, &quot;Chris&quot;]</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 21-51</span> and <span class="x-name-no-link">Listing 21-52</span> show how to call the handlers in <span class="x-name-no-link">Listing 21-45</span> and <span class="x-name-no-link">Listing 21-46</span> to insert a list into a list at a specific position.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AinsertItemInList%28%7B%7B%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%7D%7D%2C%20theList%2C%203%29%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW38"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-51</strong>AppleScript: Calling a handler to insert a list at a specific position in a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theList to {&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;}</code></li>
+            <li><code class="code-voice">insertItemInList({{&quot;Lizzie&quot;, &quot;Maddie&quot;, &quot;Lillie&quot;}}, theList, 3)</code></li>
+            <li><code class="code-voice">--&gt; Result: {&quot;Sal&quot;, &quot;Ben&quot;, {&quot;Lizzie&quot;, &quot;Maddie&quot;, &quot;Lillie&quot;}, &quot;David&quot;, &quot;Chris&quot;}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray%20%3D%20insertItemInArray%28%5B%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%5D%2C%20array%2C%202%29%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW72"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-52</strong>JavaScript: Calling a function to insert a list at a specific position in an array</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var array = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;]</code></li>
+            <li><code class="code-voice">array = insertItemInArray([&quot;Lizzie&quot;, &quot;Maddie&quot;, &quot;Lillie&quot;], array, 2)</code></li>
+            <li><code class="code-voice">// Result = [&quot;Sal&quot;, &quot;Ben&quot;, [&quot;Lizzie&quot;, &quot;Maddie&quot;, &quot;Lillie&quot;], &quot;David&quot;, &quot;Chris&quot;]</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 21-53</span> and <span class="x-name-no-link">Listing 21-54</span> show how to call the handlers in <span class="x-name-no-link">Listing 21-45</span> and <span class="x-name-no-link">Listing 21-46</span> to insert a single item at the end of a list.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AinsertItemInList%28%22Jen%22%2C%20theList%2C%20-1%29%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW39"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-53</strong>AppleScript: Calling a handler to insert a single item at the end of a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theList to {&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;}</code></li>
+            <li><code class="code-voice">insertItemInList(&quot;Jen&quot;, theList, -1)</code></li>
+            <li><code class="code-voice">--&gt; {&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;, &quot;Jen&quot;}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray%20%3D%20insertItemInArray%28%22Jen%22%2C%20array%2C%20array.length%29%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW73"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-54</strong>JavaScript: Calling a function to insert a single item at the end of an array</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var array = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;]</code></li>
+            <li><code class="code-voice">array = insertItemInArray(&quot;Jen&quot;, array, array.length)</code></li>
+            <li><code class="code-voice">// Result = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;, &quot;Jen&quot;]</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 21-55</span> and <span class="x-name-no-link">Listing 21-56</span> show how to call the handlers in <span class="x-name-no-link">Listing 21-45</span> and <span class="x-name-no-link">Listing 21-46</span> to insert a single item at the second-to-last position in a list.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AinsertItemInList%28%22Wanda%22%2C%20theList%2C%20-2%29%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW40"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-55</strong>AppleScript: Calling a handler to insert a single item at the second-to-last position in a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theList to {&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;}</code></li>
+            <li><code class="code-voice">insertItemInList(&quot;Wanda&quot;, theList, -2)</code></li>
+            <li><code class="code-voice">--&gt; {&quot;Sal&quot;, &quot;Sue&quot;, &quot;Bob&quot;, &quot;Wanda&quot;, &quot;Carl&quot;}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray%20%3D%20insertItemInArray%28%22Jen%22%2C%20array%2C%20-1%29%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW74"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-56</strong>JavaScript: Calling a function to insert a single item at the second-to-last position of an array</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var array = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;]</code></li>
+            <li><code class="code-voice">array = insertItemInArray(&quot;Jen&quot;, array, -1)</code></li>
+            <li><code class="code-voice">// Result = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Jen&quot;, &quot;Chris&quot;]</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 21-57</span> and <span class="x-name-no-link">Listing 21-58</span> show how to call the handlers in <span class="x-name-no-link">Listing 21-45</span> and <span class="x-name-no-link">Listing 21-46</span> to insert a single item at a nonexistent position in a list.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AinsertItemInList%28%22Jen%22%2C%20theList%2C%2015%29%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW41"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-57</strong>AppleScript: Calling a handler to insert a single item at a position that doesn’t exist in a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theList to {&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;}</code></li>
+            <li><code class="code-voice">insertItemInList(&quot;Jen&quot;, theList, 15)</code></li>
+            <li><code class="code-voice">--&gt; Result: false</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray%20%3D%20insertItemInArray%28%22Jen%22%2C%20array%2C%2014%29%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW75"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-58</strong>JavaScript: Calling a function to insert a single item at a position that doesn’t exist in an array</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var array = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;]</code></li>
+            <li><code class="code-voice">array = insertItemInArray(&quot;Jen&quot;, array, 14)</code></li>
+            <li><code class="code-voice">// Result = false</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW6"></a>
+  <h3 class="section-name" tabindex="0">Replacing Items in a List</h3>
+  <p class="para">
+  You can replace an item in a list using the syntax shown in <span class="x-name-no-link">Listing 21-59</span> and <span class="x-name-no-link">Listing 21-60</span> if you know the position of the item you want to replace.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0Aset%20item%203%20of%20theList%20to%20%22Wanda%22%0Areturn%20theList">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW42"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-59</strong>AppleScript: Replacing a specific item in a list based on position</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theList to {&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;}</code></li>
+            <li><code class="code-voice">set item 3 of theList to &quot;Wanda&quot;</code></li>
+            <li><code class="code-voice">return theList</code></li>
+            <li><code class="code-voice">--&gt; Result: {&quot;Sal&quot;, &quot;Sue&quot;, &quot;Wanda&quot;, &quot;Carl&quot;}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray%5B2%5D%20%3D%20%22Wanda%22%0Aarray">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW78"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-60</strong>JavaScript: Replacing a specific item in an array based on position</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var array = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;]</code></li>
+            <li><code class="code-voice">array[2] = &quot;Wanda&quot;</code></li>
+            <li><code class="code-voice">array</code></li>
+            <li><code class="code-voice">// Result: [&quot;Sal&quot;, &quot;Ben&quot;, &quot;Wanda&quot;, &quot;Chris&quot;]</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  The handlers in <span class="x-name-no-link">Listing 21-61</span> and <span class="x-name-no-link">Listing 21-62</span> can be used to replace an item in a list when you don’t know its position. Provide the item you want to replace, the list, the replacement item, and specify whether to replace all instances of the item, or just the first one.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20replaceItemInList%28theItem%2C%20theList%2C%20theReplacementItem%2C%20replaceAll%29%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20the%20count%20of%20theList%0A%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20item%20a%20of%20theList%0A%20%20%20%20%20%20%20%20if%20theCurrentItem%20is%20theItem%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20item%20a%20of%20theList%20to%20theReplacementItem%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20replaceAll%20is%20false%20then%20return%20theList%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%20theList%0Aend%20replaceItemInList">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW43"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-61</strong>AppleScript: Handler that replaces items in a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on replaceItemInList(theItem, theList, theReplacementItem, replaceAll)</code></li>
+            <li><code class="code-voice">    repeat with a from 1 to the count of theList</code></li>
+            <li><code class="code-voice">        set theCurrentItem to item a of theList</code></li>
+            <li><code class="code-voice">        if theCurrentItem is theItem then</code></li>
+            <li><code class="code-voice">            set item a of theList to theReplacementItem</code></li>
+            <li><code class="code-voice">            if replaceAll is false then return theList</code></li>
+            <li><code class="code-voice">        end if</code></li>
+            <li><code class="code-voice">    end repeat</code></li>
+            <li><code class="code-voice">    return theList</code></li>
+            <li><code class="code-voice">end replaceItemInList</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20replaceItemInArray%28item%2C%20array%2C%20replacementItem%2C%20replaceAll%29%20%7B%0A%20%20%20%20var%20arrayLength%20%3D%20array.length%0A%20%20%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20arrayLength%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20%20%20%20%20var%20currentArrayItem%20%3D%20array%5Bi%5D%0A%20%20%20%20%20%20%20%20if%20%28currentArrayItem%20%3D%3D%3D%20item%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20array.splice%28i%2C%201%2C%20replacementItem%29%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28!replaceAll%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20break%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20return%20array%0A%7D">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW79"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-62</strong>JavaScript: Function that replaces items in an array</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function replaceItemInArray(item, array, replacementItem, replaceAll) {</code></li>
+            <li><code class="code-voice">    var arrayLength = array.length</code></li>
+            <li><code class="code-voice">    for (var i = 0; i &lt; arrayLength; i++) {</code></li>
+            <li><code class="code-voice">        var currentArrayItem = array[i]</code></li>
+            <li><code class="code-voice">        if (currentArrayItem === item) {</code></li>
+            <li><code class="code-voice">            array.splice(i, 1, replacementItem)</code></li>
+            <li><code class="code-voice">            if (!replaceAll) {</code></li>
+            <li><code class="code-voice">                break</code></li>
+            <li><code class="code-voice">            }</code></li>
+            <li><code class="code-voice">        }</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">    return array</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 21-63</span> and <span class="x-name-no-link">Listing 21-64</span> show how to call the handlers in <span class="x-name-no-link">Listing 21-61</span> and <span class="x-name-no-link">Listing 21-62</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Jen%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%7D%0AreplaceItemInList%28%22Jen%22%2C%20theList%2C%20%22Lizzie%22%2C%20true%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW44"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-63</strong>AppleScript: Calling a handler to replace items in a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theList to {&quot;Sal&quot;, &quot;Jen&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;, &quot;Jen&quot;}</code></li>
+            <li><code class="code-voice">replaceItemInList(&quot;Jen&quot;, theList, &quot;Lizzie&quot;, true)</code></li>
+            <li><code class="code-voice">--&gt; {&quot;Sal&quot;, &quot;Lizzie&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;, &quot;Lizzie&quot;}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Jen%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%5D%0AreplaceItemInArray%28%22Jen%22%2C%20array%2C%20%22Lizzie%22%2C%20true%29%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW80"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-64</strong>JavaScript: Calling a function to replace items in an array</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var array = [&quot;Sal&quot;, &quot;Jen&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;, &quot;Jen&quot;]</code></li>
+            <li><code class="code-voice">replaceItemInArray(&quot;Jen&quot;, array, &quot;Lizzie&quot;, true)</code></li>
+            <li><code class="code-voice">// Result: [&quot;Sal&quot;, &quot;Lizzie&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;, &quot;Lizzie&quot;]</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW10"></a>
+  <h3 class="section-name" tabindex="0">Sorting a List</h3>
+  <p class="para">
+  The handler in <span class="x-name-no-link">Listing 21-65</span> sorts a list of strings or numbers in AppleScript.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20sortList%28theList%29%0A%20%20%20%20set%20theIndexList%20to%20%7B%7D%0A%20%20%20%20set%20theSortedList%20to%20%7B%7D%0A%20%20%20%20repeat%20%28length%20of%20theList%29%20times%0A%20%20%20%20%20%20%20%20set%20theLowItem%20to%20%22%22%0A%20%20%20%20%20%20%20%20repeat%20with%20a%20from%201%20to%20%28length%20of%20theList%29%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20a%20is%20not%20in%20theIndexList%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20item%20a%20of%20theList%20as%20text%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20theLowItem%20is%20%22%22%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowItem%20to%20theCurrentItem%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowItemIndex%20to%20a%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20else%20if%20theCurrentItem%20comes%20before%20theLowItem%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowItem%20to%20theCurrentItem%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowItemIndex%20to%20a%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20end%20repeat%0A%20%20%20%20%20%20%20%20set%20end%20of%20theSortedList%20to%20theLowItem%0A%20%20%20%20%20%20%20%20set%20end%20of%20theIndexList%20to%20theLowItemIndex%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%20theSortedList%0Aend%20sortList">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW45"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-65</strong>AppleScript: Handler that sorts a list of strings</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on sortList(theList)</code></li>
+            <li><code class="code-voice">    set theIndexList to {}</code></li>
+            <li><code class="code-voice">    set theSortedList to {}</code></li>
+            <li><code class="code-voice">    repeat (length of theList) times</code></li>
+            <li><code class="code-voice">        set theLowItem to &quot;&quot;</code></li>
+            <li><code class="code-voice">        repeat with a from 1 to (length of theList)</code></li>
+            <li><code class="code-voice">            if a is not in theIndexList then</code></li>
+            <li><code class="code-voice">                set theCurrentItem to item a of theList as text</code></li>
+            <li><code class="code-voice">                if theLowItem is &quot;&quot; then</code></li>
+            <li><code class="code-voice">                    set theLowItem to theCurrentItem</code></li>
+            <li><code class="code-voice">                    set theLowItemIndex to a</code></li>
+            <li><code class="code-voice">                else if theCurrentItem comes before theLowItem then</code></li>
+            <li><code class="code-voice">                    set theLowItem to theCurrentItem</code></li>
+            <li><code class="code-voice">                    set theLowItemIndex to a</code></li>
+            <li><code class="code-voice">                end if</code></li>
+            <li><code class="code-voice">            end if</code></li>
+            <li><code class="code-voice">        end repeat</code></li>
+            <li><code class="code-voice">        set end of theSortedList to theLowItem</code></li>
+            <li><code class="code-voice">        set end of theIndexList to theLowItemIndex</code></li>
+            <li><code class="code-voice">    end repeat</code></li>
+            <li><code class="code-voice">    return theSortedList</code></li>
+            <li><code class="code-voice">end sortList</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 21-66</span> shows how to call the handler in <span class="x-name-no-link">Listing 21-65</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AsortList%28theList%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW46"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-66</strong>AppleScript: Calling a handler to sort a list of strings</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theList to {&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;}</code></li>
+            <li><code class="code-voice">sortList(theList)</code></li>
+            <li><code class="code-voice">--&gt; Result: {&quot;Ben&quot;, &quot;Chris&quot;, &quot;David&quot;, &quot;Sal&quot;}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  To perform a reverse (descending) sort, use the reverse command, as shown in <span class="x-name-no-link">Listing 21-67</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0Areverse%20of%20sortList%28theList%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW47"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-67</strong>AppleScript: Calling a handler to sort a list of strings in reverse order</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theList to {&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;}</code></li>
+            <li><code class="code-voice">reverse of sortList(theList)</code></li>
+            <li><code class="code-voice">--&gt; Result: {&quot;Sal&quot;, &quot;David&quot;, &quot;Chris&quot;, &quot;Ben&quot;}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  In JavaScript, the <code class="code-voice">Array</code> object has a <code class="code-voice">sort</code> method, which sorts the array’s items. See <span class="x-name-no-link">Listing 21-68</span>.
+</p><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray.sort%28%29%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW76"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-68</strong>JavaScript: Sorting an array of strings</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var array = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;]</code></li>
+            <li><code class="code-voice">array.sort()</code></li>
+            <li><code class="code-voice">// Result: [&quot;Ben&quot;, &quot;Chris&quot;, &quot;David&quot;, &quot;Sal&quot;]</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  As in AppleScript, a sorted JavaScript array can be reversed, as shown in <span class="x-name-no-link">Listing 21-69</span>.
+</p><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray.sort%28%29%0Aarray.reverse%28%29%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW77"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-69</strong>JavaScript: Sorting an array of strings in reverse order</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var array = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;David&quot;, &quot;Chris&quot;]</code></li>
+            <li><code class="code-voice">array.sort()</code></li>
+            <li><code class="code-voice">array.reverse()</code></li>
+            <li><code class="code-voice">// Result: [&quot;Sal&quot;, &quot;David&quot;, &quot;Chris&quot;, &quot;Ben&quot;]</code></li>
+        </ol>
+      </div>
+  </div>
+</section><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW48"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">When you use AppleScriptObjC or JavaScriptObjC, you can use methods of the <code class="code-voice u-api"><a href="../../../LegacyTechnologies/WebObjects/WebObjects_3.5/Reference/Frameworks/ObjC/Foundation/Classes/NSArrayClassCluster/Description.html#//apple_ref/occ/cl/NSArray" data-renderer-version="1">NSArray</a></code> class to convert a list of strings into a single string. The handlers in <span class="x-name-no-link">Listing 21-70</span> and <span class="x-name-no-link">Listing 21-71</span> demonstrate how to do this.
+    	</p>
+    <p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20sortList%28theList%29%0A%20%20%20%20set%20theArray%20to%20arrayWithArray_%28theList%29%20of%20NSArray%20of%20current%20application%0A%20%20%20%20set%20theSortedList%20to%20sortedArrayUsingSelector_%28%22localizedStandardCompare%3A%22%29%20of%20theArray%0A%20%20%20%20return%20%28theSortedList%20as%20list%29%0Aend%20sortList">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW49"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-70</strong>AppleScriptObjC: Handler that sorts a list of strings</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on sortList(theList)</code></li>
+            <li><code class="code-voice">    set theArray to arrayWithArray_(theList) of NSArray of current application</code></li>
+            <li><code class="code-voice">    set theSortedList to sortedArrayUsingSelector_(&quot;localizedStandardCompare:&quot;) of theArray</code></li>
+            <li><code class="code-voice">    return (theSortedList as list)</code></li>
+            <li><code class="code-voice">end sortList</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20sortArray%28array%29%20%7B%0A%20%20%20%20array%20%3D%20%24%28array%29%0A%20%20%20%20var%20sortedArray%20%3D%20array.sortedArrayUsingSelector%28%22localizedStandardCompare%3A%22%29%0A%20%20%20%20return%20ObjC.deepUnwrap%28sortedArray%29%0A%7D">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH48-SW81"></a>
+    <span class="caption"><strong class="caption-number">Listing 21-71</strong>JavaScriptObjC: Function that sorts an array of strings</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function sortArray(array) {</code></li>
+            <li><code class="code-voice">    array = $(array)</code></li>
+            <li><code class="code-voice">    var sortedArray = array.sortedArrayUsingSelector(&quot;localizedStandardCompare:&quot;)</code></li>
+            <li><code class="code-voice">    return ObjC.deepUnwrap(sortedArray)</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+
+  </aside>
+</div>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH47-SW1">Manipulating Numbers</a></p>
+  			<p class="next-link"><a href="DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH15-SW1">Displaying Dialogs and Alerts</a></p>
+
+    <p class="copyright">Copyright &#x00a9; 2018 Apple Inc. All rights reserved. 
+  <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a> | 
+  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a> | 
+  <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Updated: 2016-06-13</a>
+</p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <script src="../../../../Resources/1282/JavaScript/devpubs-1.6.3.js" type="text/javascript" charset="utf-8"></script>
+  <div id="_omniture_top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="awdappledeveloper"
+</script>
+
+<script type="text/javascript" src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
+<script type="text/javascript">
+s.channel="www.documentationarchive.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="https://developer.apple.com/bugreporter/" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+</html>

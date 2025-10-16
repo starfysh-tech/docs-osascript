@@ -35,6 +35,15 @@ def canonicalize_text(text: str) -> str:
             continue
         if line in {"*", "|"}:
             continue
+        if line[0].isdigit():
+            parts = line.split(".", 1)
+            if len(parts) == 2 and parts[0].isdigit():
+                line = parts[1].strip()
+        stripped = line.lstrip()
+        if stripped.startswith(('* ', '- ', '• ')):
+            line = stripped[2:].strip()
+        if line.lower().startswith("image:"):
+            continue
         if line.startswith("|"):
             segments = [seg.strip() for seg in line.split("|") if seg.strip()]
             result.extend(" ".join(seg.split()) for seg in segments if seg)
@@ -49,7 +58,14 @@ def canonicalize_text(text: str) -> str:
         flattened.replace(" )", ")")
         .replace("( ", "(")
         .replace(" : ", " ")
+        .replace(" .", ".")
+        .replace(" ,", ",")
+        .replace(" ;", ";")
+        .replace(" ?", "?")
+        .replace(" !", "!")
     )
+    flattened = flattened.replace(":", "")
+    flattened = flattened.replace("`", "")
     return " ".join(flattened.split())
 
 
@@ -57,7 +73,20 @@ def article_text(html_path: Path) -> str:
     soup = BeautifulSoup(html_path.read_text(encoding="utf-8", errors="ignore"), "html.parser")
     article = soup.find("article", id="contents")
     if not article:
+        article = soup.find("article", class_="chapter")
+    if not article:
+        article = soup.find("article")
+    if not article:
         raise RuntimeError(f"Could not locate article#contents in {html_path}")
+    for selector in [
+        "#next_previous",
+        ".pageNavigationLinks",
+        "#pediaWindow",
+        ".jumpNav",
+        ".feedback",
+    ]:
+        for el in article.select(selector):
+            el.decompose()
     return canonicalize_text(article.get_text(separator="\n"))
 
 

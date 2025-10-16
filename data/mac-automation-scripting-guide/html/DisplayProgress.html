@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+  <title>Mac Automation Scripting Guide: Displaying Progress</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1282/CSS/style-1.6.3.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1282/CSS/feedback-1.6.3.css" />
+  <meta charset='utf-8'> 
+<meta id="j-version" name="j-version" content="" />
+<meta id="build" name="build" content="c1e4c7a89af8f899a21cfa81fc33ba42" />
+<meta id="document-version" name="document-version" content="1.1.0" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages &amp; Utilities}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40016239" />
+<meta id="chapterId" name="chapterId" content="TP40016239-CH37">
+<meta id="book-title" name="book-title" content="Mac Automation Scripting Guide" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2016-06-13" />
+<meta id="description" name="description" content="New document." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+<meta id="resources-uri" name="resources-uri" content="../../../../Resources/1282">
+<link id="book-index-page" rel="Start" title="" type="text/html" href="./index.html">
+<!-- , next_chapter: next_chapter, previous_chapter: previous_chapter -->
+<link id="next-page" rel="Next" type="text/html" href="">
+<link id="previous-page" rel="Prev" type="text/html" href="">
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta id="platforms" name="platforms" content="OS X">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/">Documentation Archive
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/1282/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="https://developer.apple.com">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">Mac Automation Scripting Guide</span>
+    </p>
+    <form id="search" class="hideInXcode" method="get" action="/search/index.php" accept-charset="utf-8" autocomplete="off">
+  <input type="search" id="ssi_SearchField" placeholder="Search Documentation Archive" name="q" autocomplete="off" tabindex="2" />
+</form>
+
+      
+   
+   
+
+
+
+    <img id="shortstack" src="../../../../Resources/1282/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav id="navigator" class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH2-SW1"
+            class="part-name">
+            <a href="index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH56-SW1">Mac Scripting Essentials</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH56-SW1">About Mac Scripting</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="HowMacScriptingWorks.html#//apple_ref/doc/uid/TP40016239-CH73-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH73-SW1">How Mac Scripting Works</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TypesofScripts.html#//apple_ref/doc/uid/TP40016239-CH72-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH72-SW1">Types of Scripts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="AboutthisGuide.html#//apple_ref/doc/uid/TP40016239-CH71-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH71-SW1">About this Guide</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH10-SW1"
+            class="part-name">
+            <a href="GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH5-SW1">Starting Scripting</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH5-SW1">Getting to Know Script Editor</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CreateaScript.html#//apple_ref/doc/uid/TP40016239-CH12-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH12-SW1">Creating a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SaveaScript.html#//apple_ref/doc/uid/TP40016239-CH13-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH13-SW1">Saving a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RunaScript.html#//apple_ref/doc/uid/TP40016239-CH14-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH14-SW1">Running a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH70-SW1">Configuring Scripting Preferences</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH9-SW1"
+            class="part-name">
+            <a href="AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH75-SW2" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH75-SW2">Accessing Scripting Terminology</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH75-SW2" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH75-SW2">About Scripting Terminology</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="OpenaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH76-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH76-SW1">Opening a Scripting Dictionary</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH77-SW1">Navigating a Scripting Dictionary</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH74-SW1"
+            class="part-name">
+            <a href="UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH52-SW1">Modularizing Code</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH52-SW1">Using Handlers/Functions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UseScriptLibraries.html#//apple_ref/doc/uid/TP40016239-CH36-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH36-SW1">Using Script Libraries</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH57-SW1"
+            class="part-name">
+            <a href="ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH34-SW1">Working with Files and Folders</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH34-SW1">Referencing Files and Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ReadandWriteFiles.html#//apple_ref/doc/uid/TP40016239-CH58-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH58-SW1">Reading and Writing Files</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ProcessDroppedFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH53-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH53-SW1">Processing Dropped Files and Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH39-SW1">Watching Folders</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH59-SW1"
+            class="part-name">
+            <a href="ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW1">Working with Text, Numbers, and Lists</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW1">Manipulating Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH47-SW1">Manipulating Numbers</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH48-SW1">Manipulating Lists of Items</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH60-SW1"
+            class="part-name nav-part-active open-part">
+            <a href="DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH15-SW1">Interacting with Users</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH15-SW1">Displaying Dialogs and Alerts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforText.html#//apple_ref/doc/uid/TP40016239-CH80-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH80-SW1">Prompting for Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DisplayNotifications.html#//apple_ref/doc/uid/TP40016239-CH61-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH61-SW1">Displaying Notifications</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SpeakText.html#//apple_ref/doc/uid/TP40016239-CH62-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH62-SW1">Speaking Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH81-SW1">Prompting for Files or Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaFileName.html#//apple_ref/doc/uid/TP40016239-CH82-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH82-SW1">Prompting for a File Name</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaChoicefromaList.html#//apple_ref/doc/uid/TP40016239-CH83-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH83-SW1">Prompting for a Choice from a List</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaColor.html#//apple_ref/doc/uid/TP40016239-CH86-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH86-SW1">Prompting for a Color</a>
+              </li>
+              <li class="nav-chapter nav-current-chapter">
+              	<a href="#//apple_ref/doc/uid/TP40016239-CH37-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH37-SW1">Displaying Progress</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH63-SW1"
+            class="part-name">
+            <a href="ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH49-SW1">Working with HTML and URLs</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH49-SW1">Converting RGB to HTML Color</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="EncodeandDecodeText.html#//apple_ref/doc/uid/TP40016239-CH51-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH51-SW1">Encoding and Decoding Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ParseHTML.html#//apple_ref/doc/uid/TP40016239-CH50-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH50-SW1">Parsing HTML</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RemoveMarkupfromHTML.html#//apple_ref/doc/uid/TP40016239-CH64-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH64-SW1">Removing HTML Markup from Text</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH65-SW1"
+            class="part-name">
+            <a href="WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH66-SW1">Working with Data</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH66-SW1">Working with Property List Files</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WorkwithXML.html#//apple_ref/doc/uid/TP40016239-CH67-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH67-SW1">Working with XML</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH35-SW1"
+            class="part-name">
+            <a href="AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH69-SW1">Performing Common Scripting Tasks</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH69-SW1">Automating the User Interface</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH20-SW1">Manipulating Images</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CallCommandLineUtilities.html#//apple_ref/doc/uid/TP40016239-CH43-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH43-SW1">Calling Command-Line Tools</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH68-SW1"
+            class="part-name">
+            <a href="MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH46-SW1">Extending Apps and Processes</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH46-SW1">Making a Systemwide Service</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH7-SW1">Using the Systemwide Script Menu</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UseDictationtoRunScripts.html#//apple_ref/doc/uid/TP40016239-CH87-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH87-SW1">Using Dictation to Run Scripts</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH78-SW1"
+            class="part-name">
+            <a href="AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH79-SW1">Appendixes</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH79-SW1">Objective-C to AppleScript Quick Translation Guide</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="revision-history"
+            class="part-name">
+          <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Revision History</a>
+          <ul class="nav-chapters">
+            <li class="nav-chapter">
+              <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Document Revision History</a>
+            </li>
+          </ul>
+        </li>
+    </ul>
+</nav>
+
+      <menu id="bashful" type="toolbar">
+  <div class="shield"></div>
+  
+</menu>
+<div class="pixel-line"></div>
+<div class="rubber-band-gap"></div>
+<article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40016239-CH37"></a><a name="//apple_ref/doc/uid/TP40016239-CH37-SW1"></a>
+
+  <h2 class='chapter-name'>Displaying Progress</h2>
+
+
+  
+  	<section class="section">
+  		<p class="para">
+  Many scripts perform large and time-consuming processing operations. All too often, they do this invisibly; they simply run and the user has no idea how long processing will take. A more user-friendly approach is to provide progress information during script operation. At a basic level, this can be done by displaying periodic dialogs or notifications. See <span class="x-name"><a href="DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH15-SW1">Displaying Dialogs and Alerts</a></span> and <span class="x-name"><a href="DisplayNotifications.html#//apple_ref/doc/uid/TP40016239-CH61-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH61-SW1">Displaying Notifications</a></span>. At a complex level, this can be done by designing a fully-custom interface that provides processing feedback.
+</p>
+<p class="para">
+  AppleScript and JavaScript can also report progress graphically and textually. For script apps, this progress reporting takes the form of a dialog window containing a progress bar, descriptive text, and a Stop button. See <span class="x-name-no-link">Figure 30-1</span>.
+</p>
+<figure class="figure">
+  <a name="//apple_ref/doc/uid/TP40016239-CH37-SW2"></a>
+  <span class="caption"><strong class="caption-number">Figure 30-1</strong>A script progress dialog</span>
+  <img src="Art/progress_dialog_2x.png" alt="image: ../Art/progress_dialog_2x.png" width="412" height="192" />
+</figure>
+<p class="para">
+  For scripts running in Script Editor, this progress reporting appears at the bottom of the script window. See <span class="x-name-no-link">Figure 30-2</span>.
+</p>
+<figure class="figure">
+  <a name="//apple_ref/doc/uid/TP40016239-CH37-SW3"></a>
+  <span class="caption"><strong class="caption-number">Figure 30-2</strong>Progress displayed in Script Editor</span>
+  <img src="Art/scripteditor_progress_2x.png" alt="image: ../Art/scripteditor_progress_2x.png" width="680" height="211" />
+</figure>
+<p class="para">
+  For scripts running from the systemwide script menu, this progress reporting appears in the menu bar, beneath a temporarily displayed gear icon. See <span class="x-name-no-link">Figure 30-3</span>.
+</p>
+<figure class="figure">
+  <a name="//apple_ref/doc/uid/TP40016239-CH37-SW4"></a>
+  <span class="caption"><strong class="caption-number">Figure 30-3</strong>Progress of a script menu script</span>
+  <img src="Art/scriptmenu_progress_2x.png" alt="image: ../Art/scriptmenu_progress_2x.png" width="355" height="100" />
+</figure>
+<p class="para">
+  AppleScript has several language-level properties and JavaScript has a <code class="code-voice">Progress</code> object with properties that are used to produce this type of progress reporting. See <span class="x-name-no-link">Table 30-1</span>.
+</p>
+<div class="tableholder">
+  <a name="//apple_ref/doc/uid/TP40016239-CH37-SW5"></a>
+  <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+    <caption class="tablecaption"><strong class="caption-number">Table 30-1</strong>Progress properties in AppleScript and JavaScript</caption>
+    <thead>
+        <tr>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  AppleScript Property
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  JavaScript Property
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Value Type
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Description
+</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">progress total steps</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">Progress.totalUnitCount</code>
+</p></td>
+            <td><p class="para">
+  Integer
+</p></td>
+            <td><p class="para">
+  Configures the total number of steps to be reported in the progress. For example, if the script will process 5 images, then the value for <code class="code-voice">progress total steps</code> would be <code class="code-voice">5</code>.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">progress completed steps</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">Progress.completedUnitCount</code>
+</p></td>
+            <td><p class="para">
+  Integer
+</p></td>
+            <td><p class="para">
+  Configures the number of steps completed so far. For example, if the script has processed 3 of 5 images, then the value of <code class="code-voice">progress completed steps</code> would be <code class="code-voice">3</code>.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">progress description</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">Progress.description</code>
+</p></td>
+            <td><p class="para">
+  Integer
+</p></td>
+            <td><p class="para">
+  Text to display when reporting progress. Use this is an opportunity to let the user know what’s happening. For example, it could indicate that images are being processed.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">progress additional description</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">Progress.additionalDescription</code>
+</p></td>
+            <td><p class="para">
+  Integer
+</p></td>
+            <td><p class="para">
+  Additional text to display when reporting progress. Use this is an opportunity to provide even more detailed information about what’s happening. For example, it could indicate the specific task being performed, and how much more processing is remaining.
+</p></td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+<p class="para">
+  <span class="x-name-no-link">Listing 30-1</span> and <span class="x-name-no-link">Listing 30-2</span> demonstrate how these properties can be used to provide progress information while processing a set of images.
+</p>
+<p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theImages%20to%20choose%20file%20with%20prompt%20%22Please%20select%20some%20images%20to%20process%3A%22%20of%20type%20%7B%22public.image%22%7D%20with%20multiple%20selections%20allowed%0A%0A--%20Update%20the%20initial%20progress%20information%0Aset%20theImageCount%20to%20length%20of%20theImages%0Aset%20progress%20total%20steps%20to%20theImageCount%0Aset%20progress%20completed%20steps%20to%200%0Aset%20progress%20description%20to%20%22Processing%20Images...%22%0Aset%20progress%20additional%20description%20to%20%22Preparing%20to%20process.%22%0A%0Arepeat%20with%20a%20from%201%20to%20length%20of%20theImages%0A%0A%20%20%20%20--%20Update%20the%20progress%20detail%0A%20%20%20%20set%20progress%20additional%20description%20to%20%22Processing%20image%20%22%20%26%20a%20%26%20%22%20of%20%22%20%26%20theImageCount%0A%0A%20%20%20%20--%20Process%20the%20image%0A%0A%20%20%20%20--%20Increment%20the%20progress%0A%20%20%20%20set%20progress%20completed%20steps%20to%20a%0A%0A%20%20%20%20--%20Pause%20for%20demonstration%20purposes%2C%20so%20progress%20can%20be%20seen%0A%20%20%20%20delay%201%0Aend%20repeat%0A%0A--%20Reset%20the%20progress%20information%0Aset%20progress%20total%20steps%20to%200%0Aset%20progress%20completed%20steps%20to%200%0Aset%20progress%20description%20to%20%22%22%0Aset%20progress%20additional%20description%20to%20%22%22">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH37-SW6"></a>
+    <span class="caption"><strong class="caption-number">Listing 30-1</strong>AppleScript: Display progress while processing images</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theImages to choose file with prompt &quot;Please select some images to process:&quot; of type {&quot;public.image&quot;} with multiple selections allowed</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">-- Update the initial progress information</code></li>
+            <li><code class="code-voice">set theImageCount to length of theImages</code></li>
+            <li><code class="code-voice">set progress total steps to theImageCount</code></li>
+            <li><code class="code-voice">set progress completed steps to 0</code></li>
+            <li><code class="code-voice">set progress description to &quot;Processing Images...&quot;</code></li>
+            <li><code class="code-voice">set progress additional description to &quot;Preparing to process.&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">repeat with a from 1 to length of theImages</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Update the progress detail</code></li>
+            <li><code class="code-voice">    set progress additional description to &quot;Processing image &quot; &amp; a &amp; &quot; of &quot; &amp; theImageCount</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Process the image</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Increment the progress</code></li>
+            <li><code class="code-voice">    set progress completed steps to a</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Pause for demonstration purposes, so progress can be seen</code></li>
+            <li><code class="code-voice">    delay 1</code></li>
+            <li><code class="code-voice">end repeat</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">-- Reset the progress information</code></li>
+            <li><code class="code-voice">set progress total steps to 0</code></li>
+            <li><code class="code-voice">set progress completed steps to 0</code></li>
+            <li><code class="code-voice">set progress description to &quot;&quot;</code></li>
+            <li><code class="code-voice">set progress additional description to &quot;&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20images%20%3D%20app.chooseFile%28%7B%0A%20%20%20%20withPrompt%3A%20%22Please%20select%20some%20images%20to%20process%3A%22%2C%0A%20%20%20%20ofType%3A%20%5B%22public.image%22%5D%2C%0A%20%20%20%20multipleSelectionsAllowed%3A%20true%0A%7D%29%0A%0A%2F%2F%20Update%20the%20initial%20progress%20information%0Avar%20imageCount%20%3D%20images.length%0AProgress.totalUnitCount%20%3D%20imageCount%0AProgress.completedUnitCount%20%3D%200%0AProgress.description%20%3D%20%22Processing%20Images...%22%0AProgress.additionalDescription%20%3D%20%22Preparing%20to%20process.%22%0A%0Afor%20%28i%20%3D%200%3B%20i%20%3C%20imageCount%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20%2F%2F%20Update%20the%20progress%20detail%0A%20%20%20%20Progress.additionalDescription%20%3D%20%22Processing%20image%20%22%20%2B%20i%20%2B%20%22%20of%20%22%20%2B%20imageCount%0A%0A%20%20%20%20%2F%2F%20Process%20the%20image%0A%0A%20%20%20%20%2F%2F%20Increment%20the%20progress%0A%20%20%20%20Progress.completedUnitCount%20%3D%20i%0A%0A%20%20%20%20%2F%2F%20Pause%20for%20demonstration%20purposes%2C%20so%20progress%20can%20be%20seen%0A%20%20%20%20delay%281%29%0A%7D">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH37-SW7"></a>
+    <span class="caption"><strong class="caption-number">Listing 30-2</strong>JavaScript: Display progress while processing images</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var app = Application.currentApplication()</code></li>
+            <li><code class="code-voice">app.includeStandardAdditions = true</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">var images = app.chooseFile({</code></li>
+            <li><code class="code-voice">    withPrompt: &quot;Please select some images to process:&quot;,</code></li>
+            <li><code class="code-voice">    ofType: [&quot;public.image&quot;],</code></li>
+            <li><code class="code-voice">    multipleSelectionsAllowed: true</code></li>
+            <li><code class="code-voice">})</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">// Update the initial progress information</code></li>
+            <li><code class="code-voice">var imageCount = images.length</code></li>
+            <li><code class="code-voice">Progress.totalUnitCount = imageCount</code></li>
+            <li><code class="code-voice">Progress.completedUnitCount = 0</code></li>
+            <li><code class="code-voice">Progress.description = &quot;Processing Images...&quot;</code></li>
+            <li><code class="code-voice">Progress.additionalDescription = &quot;Preparing to process.&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">for (i = 0; i &lt; imageCount; i++) {</code></li>
+            <li><code class="code-voice">    // Update the progress detail</code></li>
+            <li><code class="code-voice">    Progress.additionalDescription = &quot;Processing image &quot; + i + &quot; of &quot; + imageCount</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    // Process the image</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    // Increment the progress</code></li>
+            <li><code class="code-voice">    Progress.completedUnitCount = i</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    // Pause for demonstration purposes, so progress can be seen</code></li>
+            <li><code class="code-voice">    delay(1)</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  Clicking the Stop button in a progress dialog results in a user cancelled error.
+</p>
+<p class="para">
+  For additional information, see <a href="../../../../releasenotes/AppleScript/RN-AppleScript/RN-10_10/RN-10_10.html#//apple_ref/doc/uid/TP40000982-CH110-SW8" data-renderer-version="1" target="_self">Progress Reporting</a> in <em class="u-book"><a href="../../../../releasenotes/AppleScript/RN-AppleScript/Introduction/Introduction.html#//apple_ref/doc/uid/TP40000982" data-renderer-version="1" target="_self">AppleScript Release Notes</a></em> and <a href="../../../../releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW35" data-renderer-version="1" target="_self">Progress</a> in <em class="u-book"><a href="../../../../releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/Introduction.html#//apple_ref/doc/uid/TP40014508" data-renderer-version="1" target="_self">JavaScript for Automation Release Notes</a></em>.
+</p>
+<div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH37-SW8"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">There’s no need to call a dedicated command to actually display progress information. The act of setting values for the progress properties mentioned above automatically results in progress information being displayed in a dialog, Script Editor, or the menu bar.
+    	</p>
+    
+  </aside>
+</div>
+
+		</section> 
+
+
+  
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="PromptforaColor.html#//apple_ref/doc/uid/TP40016239-CH86-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH86-SW1">Prompting for a Color</a></p>
+  			<p class="next-link"><a href="ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH49-SW1">Converting RGB to HTML Color</a></p>
+
+    <p class="copyright">Copyright &#x00a9; 2018 Apple Inc. All rights reserved. 
+  <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a> | 
+  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a> | 
+  <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Updated: 2016-06-13</a>
+</p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <script src="../../../../Resources/1282/JavaScript/devpubs-1.6.3.js" type="text/javascript" charset="utf-8"></script>
+  <div id="_omniture_top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="awdappledeveloper"
+</script>
+
+<script type="text/javascript" src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
+<script type="text/javascript">
+s.channel="www.documentationarchive.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="https://developer.apple.com/bugreporter/" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+</html>

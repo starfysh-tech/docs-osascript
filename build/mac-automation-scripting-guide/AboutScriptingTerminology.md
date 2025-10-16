@@ -1,0 +1,21 @@
+## About Scripting Terminology
+
+AppleScript and JavaScript possess core language commands, classes, and properties that make scripting possible. For AppleScript, core terminology is documented in *[AppleScript Language Guide](../../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983)*. For JavaScript, see *[JavaScript for Automation Release Notes](../../../../releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/Introduction.html#//apple_ref/doc/uid/TP40014508)* and [Mozilla’s official JavaScript documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript).
+
+Each scriptable app introduces additional terminology that extends the core language. For example, Mail introduces terminology for creating and sending email messages. iTunes introduces terminology for working with music and playlists. In order to write a script that controls an app, you need to familiarize yourself with that app’s terminology.
+
+The terminology for an app is found in its *scripting dictionary*, an `.sdef` file stored in the app bundle. The dictionary describes the commands, classes, and properties an app supports. This information is used by the scripting components of the operating system, the app itself, and any other apps or scripts that interact with the app through scripting. It also serves as a reference, which you can consult in Script Editor for guidance as you write a script. See Figure 10-1.
+
+**Figure 10-1**Example of a scripting dictionary in Script Editor
+![image: ../Art/script-editor_dictionary_2x.png](Art/script-editor_dictionary_2x.png)
+
+Not every OS X app supports scripting, but many apps do, including Mail, Address Book, Calendar, iTunes, and Messages. To determine if a particular app is scriptable, see if it has a scripting dictionary. See [Opening a Scripting Dictionary](OpenaScriptingDictionary.md#//apple_ref/doc/uid/TP40016239-CH76-SW1).
+
+Scripting terminology can vary extensively from app to app. While some apps may have extensive scripting support, others may have very limited scripting support. If an app doesn’t meet your scripting needs, reach out to the app developer and request improved support in a future version. To request scripting enhancements for Apple apps, submit a [bug report](http://bugreport.apple.com) that specifies the app and communicates your specific needs.
+
+Also, keep in mind that scripting terminology can change from one version of an app or OS X to the next. Always test essential scripts when upgrading to a new app or system version.
+
+> **Note**
+>
+>
+> OS X also supports scripting additions, packages of terminology that extend the core AppleScript language. In fact, OS X comes with Standard Additions, a scripting addition that implements a range of commonly performed functions, such as displaying alerts and dialogs, speaking text, and reading and writing files. Scripting additions are installed in `/System/ScriptingAdditions/`, `/Library/ScriptingAdditions/`, or `~/Library/ScriptingAdditions/`, and have dictionaries just like scriptable apps.

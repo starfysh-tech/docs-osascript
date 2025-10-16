@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+  <title>Mac Automation Scripting Guide: Manipulating Images</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1282/CSS/style-1.6.3.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1282/CSS/feedback-1.6.3.css" />
+  <meta charset='utf-8'> 
+<meta id="j-version" name="j-version" content="" />
+<meta id="build" name="build" content="c1e4c7a89af8f899a21cfa81fc33ba42" />
+<meta id="document-version" name="document-version" content="1.1.0" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages &amp; Utilities}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40016239" />
+<meta id="chapterId" name="chapterId" content="TP40016239-CH20">
+<meta id="book-title" name="book-title" content="Mac Automation Scripting Guide" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2016-06-13" />
+<meta id="description" name="description" content="New document." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+<meta id="resources-uri" name="resources-uri" content="../../../../Resources/1282">
+<link id="book-index-page" rel="Start" title="" type="text/html" href="./index.html">
+<!-- , next_chapter: next_chapter, previous_chapter: previous_chapter -->
+<link id="next-page" rel="Next" type="text/html" href="">
+<link id="previous-page" rel="Prev" type="text/html" href="">
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta id="platforms" name="platforms" content="OS X">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/">Documentation Archive
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/1282/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="https://developer.apple.com">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">Mac Automation Scripting Guide</span>
+    </p>
+    <form id="search" class="hideInXcode" method="get" action="/search/index.php" accept-charset="utf-8" autocomplete="off">
+  <input type="search" id="ssi_SearchField" placeholder="Search Documentation Archive" name="q" autocomplete="off" tabindex="2" />
+</form>
+
+      
+   
+   
+
+
+
+    <img id="shortstack" src="../../../../Resources/1282/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav id="navigator" class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH2-SW1"
+            class="part-name">
+            <a href="index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH56-SW1">Mac Scripting Essentials</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH56-SW1">About Mac Scripting</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="HowMacScriptingWorks.html#//apple_ref/doc/uid/TP40016239-CH73-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH73-SW1">How Mac Scripting Works</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TypesofScripts.html#//apple_ref/doc/uid/TP40016239-CH72-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH72-SW1">Types of Scripts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="AboutthisGuide.html#//apple_ref/doc/uid/TP40016239-CH71-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH71-SW1">About this Guide</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH10-SW1"
+            class="part-name">
+            <a href="GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH5-SW1">Starting Scripting</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH5-SW1">Getting to Know Script Editor</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CreateaScript.html#//apple_ref/doc/uid/TP40016239-CH12-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH12-SW1">Creating a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SaveaScript.html#//apple_ref/doc/uid/TP40016239-CH13-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH13-SW1">Saving a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RunaScript.html#//apple_ref/doc/uid/TP40016239-CH14-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH14-SW1">Running a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH70-SW1">Configuring Scripting Preferences</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH9-SW1"
+            class="part-name">
+            <a href="AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH75-SW2" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH75-SW2">Accessing Scripting Terminology</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH75-SW2" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH75-SW2">About Scripting Terminology</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="OpenaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH76-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH76-SW1">Opening a Scripting Dictionary</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH77-SW1">Navigating a Scripting Dictionary</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH74-SW1"
+            class="part-name">
+            <a href="UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH52-SW1">Modularizing Code</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH52-SW1">Using Handlers/Functions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UseScriptLibraries.html#//apple_ref/doc/uid/TP40016239-CH36-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH36-SW1">Using Script Libraries</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH57-SW1"
+            class="part-name">
+            <a href="ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH34-SW1">Working with Files and Folders</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH34-SW1">Referencing Files and Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ReadandWriteFiles.html#//apple_ref/doc/uid/TP40016239-CH58-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH58-SW1">Reading and Writing Files</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ProcessDroppedFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH53-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH53-SW1">Processing Dropped Files and Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH39-SW1">Watching Folders</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH59-SW1"
+            class="part-name">
+            <a href="ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW1">Working with Text, Numbers, and Lists</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW1">Manipulating Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH47-SW1">Manipulating Numbers</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH48-SW1">Manipulating Lists of Items</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH60-SW1"
+            class="part-name">
+            <a href="DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH15-SW1">Interacting with Users</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH15-SW1">Displaying Dialogs and Alerts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforText.html#//apple_ref/doc/uid/TP40016239-CH80-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH80-SW1">Prompting for Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DisplayNotifications.html#//apple_ref/doc/uid/TP40016239-CH61-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH61-SW1">Displaying Notifications</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SpeakText.html#//apple_ref/doc/uid/TP40016239-CH62-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH62-SW1">Speaking Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH81-SW1">Prompting for Files or Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaFileName.html#//apple_ref/doc/uid/TP40016239-CH82-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH82-SW1">Prompting for a File Name</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaChoicefromaList.html#//apple_ref/doc/uid/TP40016239-CH83-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH83-SW1">Prompting for a Choice from a List</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaColor.html#//apple_ref/doc/uid/TP40016239-CH86-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH86-SW1">Prompting for a Color</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DisplayProgress.html#//apple_ref/doc/uid/TP40016239-CH37-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH37-SW1">Displaying Progress</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH63-SW1"
+            class="part-name">
+            <a href="ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH49-SW1">Working with HTML and URLs</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH49-SW1">Converting RGB to HTML Color</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="EncodeandDecodeText.html#//apple_ref/doc/uid/TP40016239-CH51-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH51-SW1">Encoding and Decoding Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ParseHTML.html#//apple_ref/doc/uid/TP40016239-CH50-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH50-SW1">Parsing HTML</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RemoveMarkupfromHTML.html#//apple_ref/doc/uid/TP40016239-CH64-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH64-SW1">Removing HTML Markup from Text</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH65-SW1"
+            class="part-name">
+            <a href="WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH66-SW1">Working with Data</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH66-SW1">Working with Property List Files</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WorkwithXML.html#//apple_ref/doc/uid/TP40016239-CH67-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH67-SW1">Working with XML</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH35-SW1"
+            class="part-name nav-part-active open-part">
+            <a href="AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH69-SW1">Performing Common Scripting Tasks</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH69-SW1">Automating the User Interface</a>
+              </li>
+              <li class="nav-chapter nav-current-chapter">
+              	<a href="#//apple_ref/doc/uid/TP40016239-CH20-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH20-SW1">Manipulating Images</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CallCommandLineUtilities.html#//apple_ref/doc/uid/TP40016239-CH43-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH43-SW1">Calling Command-Line Tools</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH68-SW1"
+            class="part-name">
+            <a href="MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH46-SW1">Extending Apps and Processes</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH46-SW1">Making a Systemwide Service</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH7-SW1">Using the Systemwide Script Menu</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UseDictationtoRunScripts.html#//apple_ref/doc/uid/TP40016239-CH87-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH87-SW1">Using Dictation to Run Scripts</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH78-SW1"
+            class="part-name">
+            <a href="AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH79-SW1">Appendixes</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH79-SW1">Objective-C to AppleScript Quick Translation Guide</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="revision-history"
+            class="part-name">
+          <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Revision History</a>
+          <ul class="nav-chapters">
+            <li class="nav-chapter">
+              <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Document Revision History</a>
+            </li>
+          </ul>
+        </li>
+    </ul>
+</nav>
+
+      <menu id="bashful" type="toolbar">
+  <div class="shield"></div>
+  <menuitem id="jump_to" class="menu-bar-item closed">
+  <span>On This Page</span>
+  <div class="chevron">
+    <div class="chevy chevron-left"></div>
+    <div class="chevy chevron-right"></div>
+  </div>
+  <menu type="list" class="details">
+      <ul class="list-bullet">
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH20-SW11">The Image Events Workflow</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH20-SW12">Opening an Image</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH20-SW14">Reading Image Properties</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH20-SW15">Flipping an Image</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH20-SW16">Rotating an Image</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH20-SW17">Scaling an Image</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH20-SW18">Cropping an Image</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH20-SW19">Padding an Image</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH20-SW21">Converting an Image from One Type to Another</a>
+          </li>
+      </ul>
+  </menu>
+</menuitem>
+
+</menu>
+<div class="pixel-line"></div>
+<div class="rubber-band-gap"></div>
+<article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20"></a><a name="//apple_ref/doc/uid/TP40016239-CH20-SW1"></a>
+
+  <h2 class='chapter-name'>Manipulating Images</h2>
+
+
+  
+  	<section class="section">
+  		<p class="para">
+  
+</p>
+<p class="para">
+  Image Events is a scriptable background app in OS X that can be used to automate the manipulation of images without the need for a fully-featured image editor. You can use Image Events to:
+</p>
+<ul class="list-bullet">
+  <li class="item"><p class="para">
+  Read image properties
+</p>
+</li><li class="item"><p class="para">
+  Flip and rotate images
+</p>
+</li><li class="item"><p class="para">
+  Crop and add padding to images
+</p>
+</li><li class="item"><p class="para">
+  Resize images
+</p>
+</li><li class="item"><p class="para">
+  Convert images from one type to another
+</p>
+</li>
+</ul>
+<p class="para">
+  The Image Events app is located in <code class="code-voice">/System/Library/CoreServices/</code>. You can access its dictionary from the Library palette in Script Editor. See <span class="x-name"><a href="OpenaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH76-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH76-SW1">Opening a Scripting Dictionary</a></span>.
+</p>
+<div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-SW10"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">Image Events can read and save most standard image formats, including <code class="code-voice">.bmp</code>, <code class="code-voice">.jpg</code>, <code class="code-voice">.png</code>, <code class="code-voice">.psd</code>, and <code class="code-voice">.tif</code>. Image Events can read <code class="code-voice">.pdf</code> files, but cannot save them.
+    	</p>
+    
+  </aside>
+</div>
+
+		</section> 
+
+
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-SW11"></a>
+  <h3 class="section-name" tabindex="0">The Image Events Workflow</h3>
+  <p class="para">
+  To manipulate an image with Image Events, a script typically performs the following sequential steps:
+</p><ol class="list-number">
+  <li class="item"><p class="para">
+  Open the Image Events app.
+</p>
+</li><li class="item"><p class="para">
+  Open an image file.
+</p>
+</li><li class="item"><p class="para">
+  Access image properties or manipulate the image.
+</p>
+</li><li class="item"><p class="para">
+  Save the modified image as a new image file or overwriting the original image file.
+</p>
+</li><li class="item"><p class="para">
+  Close the image.
+</p>
+</li>
+</ol>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-SW12"></a>
+  <h3 class="section-name" tabindex="0">Opening an Image</h3>
+  <p class="para">
+  An image must be opened before Image Events can interact with it. To open an image, use the <code class="code-voice">open</code> command and provide the image’s path, as shown in <span class="x-name-no-link">Listing 38-1</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=--%20Prompt%20for%20an%20image%0Aset%20theImageFile%20to%20choose%20file%20of%20type%20%22public.image%22%20with%20prompt%20%22%22%0A%0A--%20Launch%20Image%20Events%20and%20open%20the%20image%0Atell%20application%20%22Image%20Events%22%0A%20%20%20%20launch%0A%20%20%20%20open%20theImageFile%0Aend%20tell%0A--%3E%20Result%3A%20image%20%22My%20Image.png%22%20of%20application%20%22Image%20Events%22">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-SW2"></a>
+    <span class="caption"><strong class="caption-number">Listing 38-1</strong>AppleScript: Opening an image with Image Events</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">-- Prompt for an image</code></li>
+            <li><code class="code-voice">set theImageFile to choose file of type &quot;public.image&quot; with prompt &quot;&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">-- Launch Image Events and open the image</code></li>
+            <li><code class="code-voice">tell application &quot;Image Events&quot;</code></li>
+            <li><code class="code-voice">    launch</code></li>
+            <li><code class="code-voice">    open theImageFile</code></li>
+            <li><code class="code-voice">end tell</code></li>
+            <li><code class="code-voice">--&gt; Result: image &quot;My Image.png&quot; of application &quot;Image Events&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  The result of the open command is an <code class="code-voice">image</code> object, the newly opened image. Since Image Events is a background app, opening an image produces no visible changes onscreen—you won’t actually <em>see</em> the opened image.
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-SW13"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">When working with Image Events, use the <code class="code-voice">launch</code> command to make sure it’s running rather than the <code class="code-voice">activate</code> command, which is reserved for apps with interfaces.
+    	</p>
+    
+  </aside>
+</div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-SW14"></a>
+  <h3 class="section-name" tabindex="0">Reading Image Properties</h3>
+  <p class="para">
+  Like all scriptable objects, images have attributes that define them, such as dimensions, color space, and resolution. The <code class="code-voice">image</code> class in the Image Events scripting dictionary contains a variety of properties for key attributes. <span class="x-name-no-link">Listing 38-2</span> shows how to access some of these properties. First, it retrieves a record of available properties for a selected image. Next, it retrieves some individual properties.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=--%20Prompt%20for%20an%20image%0Aset%20theImageFile%20to%20choose%20file%20of%20type%20%22public.image%22%20with%20prompt%20%22%22%0A%0A--%20Launch%20Image%20Events%0Atell%20application%20%22Image%20Events%22%0A%20%20%20%20launch%0A%0A%20%20%20%20--%20Open%20the%20image%0A%20%20%20%20set%20theImage%20to%20open%20theImageFile%0A%0A%20%20%20%20--%20Read%20the%20image%27s%20properties%0A%20%20%20%20tell%20theImage%0A%20%20%20%20%20%20%20%20properties%0A%20%20%20%20%20%20%20%20--%3E%20%7Bcolor%20space%3ARGB%2C%20image%20file%3Afile%20%22Macintosh%20HD%3AUsers%3AYourUserName%3ADesktop%3AMy%20Image.png%22%20of%20application%20%22Image%20Events%22%2C%20bit%20depth%3Amillions%20of%20colors%2C%20dimensions%3A%7B293%2C%20252%7D%2C%20location%3Afolder%20%22Macintosh%20HD%3AUsers%3AYourUserName%3ADesktop%3A%22%20of%20application%20%22Image%20Events%22%2C%20embedded%20profile%3Aprofile%20%22Thunderbolt%20Display%22%20of%20image%20%22My%20Image.png%22%20of%20application%20%22Image%20Events%22%2C%20file%20type%3APNG%2C%20class%3Aimage%2C%20name%3A%22My%20Image.png%22%2C%20resolution%3A%7B72.0%2C%2072.0%7D%7D%0A%0A%20%20%20%20%20%20%20%20--%20Read%20the%20image%27s%20resolution%0A%20%20%20%20%20%20%20resolution%0A%20%20%20%20%20%20%20%20--%3E%20%7B72.0%2C%2072.0%7D%0A%0A%20%20%20%20%20%20%20%20--%20Read%20the%20image%27s%20type%0A%20%20%20%20%20%20%20file%20type%0A%20%20%20%20%20%20%20%20--%3E%20PNG%0A%0A%20%20%20%20%20%20%20%20--%20Read%20the%20name%20of%20the%20image%27s%20embedded%20profile%0A%20%20%20%20%20%20%20name%20of%20embedded%20profile%0A%20%20%20%20%20%20%20%20--%3E%20%22Thunderbolt%20Display%22%0A%20%20%20%20end%20tell%0Aend%20tell">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-SW3"></a>
+    <span class="caption"><strong class="caption-number">Listing 38-2</strong>AppleScript: Retrieving properties from an image</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">-- Prompt for an image</code></li>
+            <li><code class="code-voice">set theImageFile to choose file of type &quot;public.image&quot; with prompt &quot;&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">-- Launch Image Events</code></li>
+            <li><code class="code-voice">tell application &quot;Image Events&quot;</code></li>
+            <li><code class="code-voice">    launch</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Open the image</code></li>
+            <li><code class="code-voice">    set theImage to open theImageFile</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Read the image&#39;s properties</code></li>
+            <li><code class="code-voice">    tell theImage</code></li>
+            <li><code class="code-voice">        properties</code></li>
+            <li><code class="code-voice">        --&gt; {color space:RGB, image file:file &quot;Macintosh HD:Users:YourUserName:Desktop:My Image.png&quot; of application &quot;Image Events&quot;, bit depth:millions of colors, dimensions:{293, 252}, location:folder &quot;Macintosh HD:Users:YourUserName:Desktop:&quot; of application &quot;Image Events&quot;, embedded profile:profile &quot;Thunderbolt Display&quot; of image &quot;My Image.png&quot; of application &quot;Image Events&quot;, file type:PNG, class:image, name:&quot;My Image.png&quot;, resolution:{72.0, 72.0}}</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Read the image&#39;s resolution</code></li>
+            <li><code class="code-voice">       resolution</code></li>
+            <li><code class="code-voice">        --&gt; {72.0, 72.0}</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Read the image&#39;s type</code></li>
+            <li><code class="code-voice">       file type</code></li>
+            <li><code class="code-voice">        --&gt; PNG</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Read the name of the image&#39;s embedded profile</code></li>
+            <li><code class="code-voice">       name of embedded profile</code></li>
+            <li><code class="code-voice">        --&gt; &quot;Thunderbolt Display&quot;</code></li>
+            <li><code class="code-voice">    end tell</code></li>
+            <li><code class="code-voice">end tell</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-SW15"></a>
+  <h3 class="section-name" tabindex="0">Flipping an Image</h3>
+  <p class="para">
+  The <code class="code-voice">flip</code> command reverses the axis of an image. It has two options for the required parameter: <code class="code-voice">horizontal</code> for changing the axis of the image on a horizontal plane, and <code class="code-voice">vertical</code> for changing the axis of the image on a vertical plane. <span class="x-name-no-link">Listing 38-3</span> flips an image both horizontally and vertically.
+</p><div class="important clear">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-DontLinkElementID_3"></a>
+  <aside class="aside">
+    <p class="aside-title">Important
+    </p>
+    <p class="para">The script in <span class="x-name-no-link">Listing 38-3</span> saves a chosen image as a new file with a prefix of <code class="code-voice">temp-</code>. If another file exists with this same name, it is overwritten.
+    </p>
+    
+  </aside>
+</div><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=--%20Prompt%20for%20an%20image%0Aset%20theImageFile%20to%20choose%20file%20of%20type%20%22public.image%22%20with%20prompt%20%22%22%0A%0A--%20Locate%20an%20output%20folder%0Aset%20theOutputFolder%20to%20%28path%20to%20desktop%20folder%20as%20string%29%0A%0A--%20Launch%20Image%20Events%0Atell%20application%20%22Image%20Events%22%0A%20%20%20%20launch%0A%0A%20%20%20%20--%20Open%20the%20image%0A%20%20%20%20set%20theImage%20to%20open%20theImageFile%0A%20%20%20%20tell%20theImage%0A%0A%20%20%20%20%20%20%20%20--%20Determine%20a%20save%20name%20for%20the%20image%0A%20%20%20%20%20%20%20%20set%20theName%20to%20name%0A%20%20%20%20%20%20%20%20set%20theSaveName%20to%20%22temp-%22%20%26%20theName%0A%0A%20%20%20%20%20%20%20%20--%20Flip%20the%20image%20horizontally%0A%20%20%20%20%20%20%20%20flip%20with%20horizontal%0A%0A%20%20%20%20%20%20%20%20--%20Flip%20the%20image%20vertically%0A%20%20%20%20%20%20%20%20flip%20with%20vertical%0A%0A%20%20%20%20%20%20%20%20--%20Save%20the%20image%20to%20the%20output%20folder%2C%20using%20the%20save%20name%0A%20%20%20%20%20%20%20%20save%20as%20file%20type%20in%20%28theOutputFolder%20%26%20theSaveName%29%0A%0A%20%20%20%20%20%20%20%20--%20Close%20the%20image%0A%20%20%20%20%20%20%20%20close%0A%20%20%20%20end%20tell%0Aend%20tell">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-SW4"></a>
+    <span class="caption"><strong class="caption-number">Listing 38-3</strong>AppleScript: Flipping an image</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">-- Prompt for an image</code></li>
+            <li><code class="code-voice">set theImageFile to choose file of type &quot;public.image&quot; with prompt &quot;&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">-- Locate an output folder</code></li>
+            <li><code class="code-voice">set theOutputFolder to (path to desktop folder as string)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">-- Launch Image Events</code></li>
+            <li><code class="code-voice">tell application &quot;Image Events&quot;</code></li>
+            <li><code class="code-voice">    launch</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Open the image</code></li>
+            <li><code class="code-voice">    set theImage to open theImageFile</code></li>
+            <li><code class="code-voice">    tell theImage</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Determine a save name for the image</code></li>
+            <li><code class="code-voice">        set theName to name</code></li>
+            <li><code class="code-voice">        set theSaveName to &quot;temp-&quot; &amp; theName</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Flip the image horizontally</code></li>
+            <li><code class="code-voice">        flip with horizontal</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Flip the image vertically</code></li>
+            <li><code class="code-voice">        flip with vertical</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Save the image to the output folder, using the save name</code></li>
+            <li><code class="code-voice">        save as file type in (theOutputFolder &amp; theSaveName)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Close the image</code></li>
+            <li><code class="code-voice">        close</code></li>
+            <li><code class="code-voice">    end tell</code></li>
+            <li><code class="code-voice">end tell</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-SW16"></a>
+  <h3 class="section-name" tabindex="0">Rotating an Image</h3>
+  <p class="para">
+  The <code class="code-voice">rotate</code> command rotates an image around its center point. To rotate an image clockwise, provide the command’s <code class="code-voice">to angle</code> parameter with an integer value between <code class="code-voice">1</code> to <code class="code-voice">359</code> (see <span class="x-name-no-link">Listing 38-4</span>). To rotate an image counter-clockwise, provide a negative value, such as <code class="code-voice">-90</code>.
+</p><div class="important clear">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-DontLinkElementID_4"></a>
+  <aside class="aside">
+    <p class="aside-title">Important
+    </p>
+    <p class="para">The script in <span class="x-name-no-link">Listing 38-4</span> saves a chosen image as a new file with a prefix of <code class="code-voice">temp-</code>. If another file exists with this same name, it is overwritten.
+    </p>
+    
+  </aside>
+</div><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=--%20Prompt%20for%20an%20image%0Aset%20theImageFile%20to%20choose%20file%20of%20type%20%22public.image%22%20with%20prompt%20%22%22%0A%0A--%20Locate%20an%20output%20folder%0Aset%20theOutputFolder%20to%20%28path%20to%20desktop%20folder%20as%20string%29%0A%0A--%20Launch%20Image%20Events%0Atell%20application%20%22Image%20Events%22%0A%20%20%20%20launch%0A%0A%20%20%20%20--%20Open%20the%20image%0A%20%20%20%20set%20theImage%20to%20open%20theImageFile%0A%20%20%20%20tell%20theImage%0A%0A%20%20%20%20%20%20%20%20--%20Determine%20a%20save%20name%20for%20the%20image%0A%20%20%20%20%20%20%20%20set%20theName%20to%20name%0A%20%20%20%20%20%20%20%20set%20theSaveName%20to%20%22temp-%22%20%26%20theName%0A%0A%20%20%20%20%20%20%20%20--%20Rotate%20an%20image%2045%20degrees%0A%20%20%20%20%20%20%20%20rotate%20to%20angle%2045%0A%0A%20%20%20%20%20%20%20%20--%20Save%20the%20image%20to%20the%20output%20folder%2C%20using%20the%20save%20name%0A%20%20%20%20%20%20%20%20save%20as%20file%20type%20in%20%28theOutputFolder%20%26%20theSaveName%29%0A%0A%20%20%20%20%20%20%20%20--%20Close%20the%20image%0A%20%20%20%20%20%20%20%20close%0A%20%20%20%20end%20tell%0Aend%20tell">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-SW8"></a>
+    <span class="caption"><strong class="caption-number">Listing 38-4</strong>AppleScript: Rotating an image</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">-- Prompt for an image</code></li>
+            <li><code class="code-voice">set theImageFile to choose file of type &quot;public.image&quot; with prompt &quot;&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">-- Locate an output folder</code></li>
+            <li><code class="code-voice">set theOutputFolder to (path to desktop folder as string)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">-- Launch Image Events</code></li>
+            <li><code class="code-voice">tell application &quot;Image Events&quot;</code></li>
+            <li><code class="code-voice">    launch</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Open the image</code></li>
+            <li><code class="code-voice">    set theImage to open theImageFile</code></li>
+            <li><code class="code-voice">    tell theImage</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Determine a save name for the image</code></li>
+            <li><code class="code-voice">        set theName to name</code></li>
+            <li><code class="code-voice">        set theSaveName to &quot;temp-&quot; &amp; theName</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Rotate an image 45 degrees</code></li>
+            <li><code class="code-voice">        rotate to angle 45</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Save the image to the output folder, using the save name</code></li>
+            <li><code class="code-voice">        save as file type in (theOutputFolder &amp; theSaveName)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Close the image</code></li>
+            <li><code class="code-voice">        close</code></li>
+            <li><code class="code-voice">    end tell</code></li>
+            <li><code class="code-voice">end tell</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-SW17"></a>
+  <h3 class="section-name" tabindex="0">Scaling an Image</h3>
+  <p class="para">
+  Scaling an image proportionally increases or decreases its dimensions. The <code class="code-voice">scale</code> command can resize images in one of two ways:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  To scale an image by percentage, provide a decimal value for the <code class="code-voice">by factor</code> parameter.  The value <code class="code-voice">1</code> is equivalent to 100%. The value <code class="code-voice">.5</code> is 50%. The value <code class="code-voice">1.5</code> is 150% and so on.
+</p>
+<p class="para">
+  Use the following formula to determine the scaling factor:
+</p>
+<p class="para">
+  <code class="code-voice">«percentage» * .01</code>
+</p>
+</li><li class="item"><p class="para">
+  To scale an image to a specific size, provide an integer value for the <code class="code-voice">to size</code> parameter. This value indicates the maximum number of pixels for the resized image on its longest side.
+</p>
+</li>
+</ul><p class="para">
+  Scaling doesn’t change the resolution of an image. For example, a 72 dpi image that has been scaled to 50% of its original dimensions still has a resolution of 72 dpi.
+</p><p class="para">
+  <span class="x-name-no-link">Listing 38-5</span> demonstrates how to resize an image. It can scale by percentage or pixels, depending on the value of a Boolean variable.
+</p><div class="important clear">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-DontLinkElementID_5"></a>
+  <aside class="aside">
+    <p class="aside-title">Important
+    </p>
+    <p class="para">The script in <span class="x-name-no-link">Listing 38-5</span> saves a chosen image as a new file with a prefix of <code class="code-voice">temp-</code>. If another file exists with this same name, it is overwritten.
+    </p>
+    
+  </aside>
+</div><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=--%20Prompt%20for%20an%20image%0Aset%20theImageFile%20to%20choose%20file%20of%20type%20%22public.image%22%20with%20prompt%20%22%22%0A%0A--%20Locate%20an%20output%20folder%0Aset%20theOutputFolder%20to%20%28path%20to%20desktop%20folder%20as%20string%29%0A%0A--%20To%20scale%20by%20percentage%2C%20set%20this%20value%20to%20true.%20To%20scale%20to%20a%20specific%20size%2C%20set%20it%20to%20false.%0Aset%20scaleByPercentage%20to%20true%0A%0A--%20Launch%20Image%20Events%0Atell%20application%20%22Image%20Events%22%0A%20%20%20%20launch%0A%0A%20%20%20%20--%20Open%20the%20image%0A%20%20%20%20set%20theImage%20to%20open%20theImageFile%0A%20%20%20%20tell%20theImage%0A%0A%20%20%20%20%20%20%20%20--%20Determine%20a%20save%20name%20for%20the%20image%0A%20%20%20%20%20%20%20%20set%20theName%20to%20name%0A%20%20%20%20%20%20%20%20set%20theSaveName%20to%20%22temp-%22%20%26%20theName%0A%0A%20%20%20%20%20%20%20%20--%20Scale%20the%20image%20by%2050%25%0A%20%20%20%20%20%20%20%20if%20scaleByPercentage%20%3D%20true%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20scale%20by%20factor%200.5%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20--%20Scale%20the%20image%20to%20100px%20on%20its%20longese%20side%0A%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20scale%20to%20size%20100%0A%20%20%20%20%20%20%20%20end%20if%0A%0A%20%20%20%20%20%20%20%20--%20Save%20the%20image%20to%20the%20output%20folder%2C%20using%20the%20save%20name%0A%20%20%20%20%20%20%20%20save%20as%20file%20type%20in%20%28theOutputFolder%20%26%20theSaveName%29%0A%0A%20%20%20%20%20%20%20%20--%20Close%20the%20image%0A%20%20%20%20%20%20%20%20close%0A%20%20%20%20end%20tell%0Aend%20tell">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-SW7"></a>
+    <span class="caption"><strong class="caption-number">Listing 38-5</strong>AppleScript: Scaling an image</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">-- Prompt for an image</code></li>
+            <li><code class="code-voice">set theImageFile to choose file of type &quot;public.image&quot; with prompt &quot;&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">-- Locate an output folder</code></li>
+            <li><code class="code-voice">set theOutputFolder to (path to desktop folder as string)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">-- To scale by percentage, set this value to true. To scale to a specific size, set it to false.</code></li>
+            <li><code class="code-voice">set scaleByPercentage to true</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">-- Launch Image Events</code></li>
+            <li><code class="code-voice">tell application &quot;Image Events&quot;</code></li>
+            <li><code class="code-voice">    launch</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Open the image</code></li>
+            <li><code class="code-voice">    set theImage to open theImageFile</code></li>
+            <li><code class="code-voice">    tell theImage</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Determine a save name for the image</code></li>
+            <li><code class="code-voice">        set theName to name</code></li>
+            <li><code class="code-voice">        set theSaveName to &quot;temp-&quot; &amp; theName</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Scale the image by 50%</code></li>
+            <li><code class="code-voice">        if scaleByPercentage = true then</code></li>
+            <li><code class="code-voice">            scale by factor 0.5</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">            -- Scale the image to 100px on its longese side</code></li>
+            <li><code class="code-voice">        else</code></li>
+            <li><code class="code-voice">            scale to size 100</code></li>
+            <li><code class="code-voice">        end if</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Save the image to the output folder, using the save name</code></li>
+            <li><code class="code-voice">        save as file type in (theOutputFolder &amp; theSaveName)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Close the image</code></li>
+            <li><code class="code-voice">        close</code></li>
+            <li><code class="code-voice">    end tell</code></li>
+            <li><code class="code-voice">end tell</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-SW18"></a>
+  <h3 class="section-name" tabindex="0">Cropping an Image</h3>
+  <p class="para">
+  Cropping an image removes pixels around all of its sides, centering the remaining area. The <code class="code-voice">to dimensions</code> required parameter takes a list of two integers: the new width and height, in pixels. In <span class="x-name-no-link">Listing 38-6</span>, an image is cropped to 100 by 100 pixels.
+</p><div class="important clear">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-DontLinkElementID_6"></a>
+  <aside class="aside">
+    <p class="aside-title">Important
+    </p>
+    <p class="para">The script in <span class="x-name-no-link">Listing 38-6</span> saves a chosen image as a new file with a prefix of <code class="code-voice">temp-</code>. If another file exists with this same name, it is overwritten.
+    </p>
+    
+  </aside>
+</div><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=--%20Prompt%20for%20an%20image%0Aset%20theImageFile%20to%20choose%20file%20of%20type%20%22public.image%22%20with%20prompt%20%22%22%0A%0A--%20Locate%20an%20output%20folder%0Aset%20theOutputFolder%20to%20%28path%20to%20desktop%20folder%20as%20string%29%0A%0A--%20Launch%20Image%20Events%0Atell%20application%20%22Image%20Events%22%0A%20%20%20%20launch%0A%0A%20%20%20%20--%20Open%20the%20image%0A%20%20%20%20set%20theImage%20to%20open%20theImageFile%0A%20%20%20%20tell%20theImage%0A%0A%20%20%20%20%20%20%20%20--%20Determine%20a%20save%20name%20for%20the%20image%0A%20%20%20%20%20%20%20%20set%20theName%20to%20name%0A%20%20%20%20%20%20%20%20set%20theSaveName%20to%20%22temp-%22%20%26%20theName%0A%0A%20%20%20%20%20%20%20%20--%20Crop%20the%20image%20to%20100px%20by%20100px%0A%20%20%20%20%20%20%20%20crop%20to%20dimensions%20%7B100%2C%20100%7D%0A%0A%20%20%20%20%20%20%20%20--%20Save%20the%20image%20to%20the%20output%20folder%2C%20using%20the%20save%20name%0A%20%20%20%20%20%20%20%20save%20as%20file%20type%20in%20%28theOutputFolder%20%26%20theSaveName%29%0A%0A%20%20%20%20%20%20%20%20--%20Close%20the%20image%0A%20%20%20%20%20%20%20%20close%0A%20%20%20%20end%20tell%0Aend%20tell">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-SW6"></a>
+    <span class="caption"><strong class="caption-number">Listing 38-6</strong>AppleScript: Cropping an image</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">-- Prompt for an image</code></li>
+            <li><code class="code-voice">set theImageFile to choose file of type &quot;public.image&quot; with prompt &quot;&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">-- Locate an output folder</code></li>
+            <li><code class="code-voice">set theOutputFolder to (path to desktop folder as string)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">-- Launch Image Events</code></li>
+            <li><code class="code-voice">tell application &quot;Image Events&quot;</code></li>
+            <li><code class="code-voice">    launch</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Open the image</code></li>
+            <li><code class="code-voice">    set theImage to open theImageFile</code></li>
+            <li><code class="code-voice">    tell theImage</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Determine a save name for the image</code></li>
+            <li><code class="code-voice">        set theName to name</code></li>
+            <li><code class="code-voice">        set theSaveName to &quot;temp-&quot; &amp; theName</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Crop the image to 100px by 100px</code></li>
+            <li><code class="code-voice">        crop to dimensions {100, 100}</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Save the image to the output folder, using the save name</code></li>
+            <li><code class="code-voice">        save as file type in (theOutputFolder &amp; theSaveName)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Close the image</code></li>
+            <li><code class="code-voice">        close</code></li>
+            <li><code class="code-voice">    end tell</code></li>
+            <li><code class="code-voice">end tell</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-SW19"></a>
+  <h3 class="section-name" tabindex="0">Padding an Image</h3>
+  <p class="para">
+  Padding an image adds space around its sides. It’s essentially the reverse of cropping an image, although negative padding an image produces cropping. The <code class="code-voice">to dimensions</code> required parameter takes a list of two integers: the new width and height, in pixels. The optional <code class="code-voice">with pad color</code> parameter can be used to specify the color of the padding. In <span class="x-name-no-link">Listing 38-7</span>, 20 pixels of padding is added around an image.
+</p><div class="important clear">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-DontLinkElementID_7"></a>
+  <aside class="aside">
+    <p class="aside-title">Important
+    </p>
+    <p class="para">The script in <span class="x-name-no-link">Listing 38-7</span> saves a chosen image as a new file with a prefix of <code class="code-voice">temp-</code>. If another file exists with this same name, it is overwritten.
+    </p>
+    
+  </aside>
+</div><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=--%20Prompt%20for%20an%20image%0Aset%20theImageFile%20to%20choose%20file%20of%20type%20%22public.image%22%20with%20prompt%20%22%22%0A%0A--%20Prompt%20for%20a%20color%0Aset%20theColor%20to%20choose%20color%0A%0A--%20Locate%20an%20output%20folder%0Aset%20theOutputFolder%20to%20%28path%20to%20desktop%20folder%20as%20string%29%0A%0A--%20Launch%20Image%20Events%0Atell%20application%20%22Image%20Events%22%0A%20%20%20%20launch%0A%0A%20%20%20%20--%20Open%20the%20image%0A%20%20%20%20set%20theImage%20to%20open%20theImageFile%0A%20%20%20%20tell%20theImage%0A%0A%20%20%20%20%20%20%20%20--%20Determine%20a%20save%20name%20for%20the%20image%0A%20%20%20%20%20%20%20%20set%20theName%20to%20name%0A%20%20%20%20%20%20%20%20set%20theSaveName%20to%20%22temp-%22%20%26%20theName%0A%0A%20%20%20%20%20%20%20%20--%20Get%20the%20current%20dimensions%20of%20the%20image%0A%20%20%20%20%20%20%20%20set%20%7BtheWidth%2C%20theHeight%7D%20to%20dimensions%0A%0A%20%20%20%20%20%20%20%20--%20Pad%20the%20image%20by%2020%20pixels%20on%20all%20sides%0A%20%20%20%20%20%20%20%20pad%20to%20dimensions%20%7BtheWidth%20%2B%2020%2C%20theHeight%20%2B%2020%7D%20with%20pad%20color%20theColor%0A%0A%20%20%20%20%20%20%20%20--%20Save%20the%20image%20to%20the%20output%20folder%2C%20using%20the%20save%20name%0A%20%20%20%20%20%20%20%20save%20as%20file%20type%20in%20%28theOutputFolder%20%26%20theSaveName%29%0A%0A%20%20%20%20%20%20%20%20--%20Close%20the%20image%0A%20%20%20%20%20%20%20%20close%0A%20%20%20%20end%20tell%0Aend%20tell">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-SW5"></a>
+    <span class="caption"><strong class="caption-number">Listing 38-7</strong>AppleScript: Padding an image</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">-- Prompt for an image</code></li>
+            <li><code class="code-voice">set theImageFile to choose file of type &quot;public.image&quot; with prompt &quot;&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">-- Prompt for a color</code></li>
+            <li><code class="code-voice">set theColor to choose color</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">-- Locate an output folder</code></li>
+            <li><code class="code-voice">set theOutputFolder to (path to desktop folder as string)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">-- Launch Image Events</code></li>
+            <li><code class="code-voice">tell application &quot;Image Events&quot;</code></li>
+            <li><code class="code-voice">    launch</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Open the image</code></li>
+            <li><code class="code-voice">    set theImage to open theImageFile</code></li>
+            <li><code class="code-voice">    tell theImage</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Determine a save name for the image</code></li>
+            <li><code class="code-voice">        set theName to name</code></li>
+            <li><code class="code-voice">        set theSaveName to &quot;temp-&quot; &amp; theName</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Get the current dimensions of the image</code></li>
+            <li><code class="code-voice">        set {theWidth, theHeight} to dimensions</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Pad the image by 20 pixels on all sides</code></li>
+            <li><code class="code-voice">        pad to dimensions {theWidth + 20, theHeight + 20} with pad color theColor</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Save the image to the output folder, using the save name</code></li>
+            <li><code class="code-voice">        save as file type in (theOutputFolder &amp; theSaveName)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Close the image</code></li>
+            <li><code class="code-voice">        close</code></li>
+            <li><code class="code-voice">    end tell</code></li>
+            <li><code class="code-voice">end tell</code></li>
+        </ol>
+      </div>
+  </div>
+</section><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-SW20"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">Images containing transparency result in transparent padding, regardless of whether a color is specified.
+    	</p>
+    
+  </aside>
+</div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-SW21"></a>
+  <h3 class="section-name" tabindex="0">Converting an Image from One Type to Another</h3>
+  <p class="para">
+  To convert an image from one type to another, open it and save it in another format. <span class="x-name-no-link">Listing 38-8</span> saves a chosen image in <code class="code-voice">.jpg</code>, <code class="code-voice">.psd</code>, and <code class="code-voice">.tif</code> format.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=--%20Prompt%20for%20an%20image%0Aset%20theImageFile%20to%20choose%20file%20of%20type%20%22public.image%22%20with%20prompt%20%22%22%0A%0A--%20Locate%20an%20output%20folder%0Aset%20theOutputFolder%20to%20%28path%20to%20desktop%20folder%20as%20string%29%0A%0A--%20Launch%20Image%20Events%0Atell%20application%20%22Image%20Events%22%0A%20%20%20%20launch%0A%0A%20%20%20%20--%20Open%20the%20image%0A%20%20%20%20set%20theImage%20to%20open%20theImageFile%0A%20%20%20%20tell%20theImage%0A%0A%20%20%20%20%20%20%20%20--%20Save%20the%20image%20as%20a%20.jpg%0A%20%20%20%20%20%20%20%20save%20as%20JPEG%20in%20%28theOutputFolder%20%26%20%22temp-conversion-output.jpg%22%29%0A%0A%20%20%20%20%20%20%20%20--%20Save%20the%20image%20as%20a%20.psd%0A%20%20%20%20%20%20%20%20save%20as%20PSD%20in%20%28theOutputFolder%20%26%20%22temp-conversion-output.psd%22%29%0A%0A%20%20%20%20%20%20%20%20--%20Save%20the%20image%20as%20a%20.tif%0A%20%20%20%20%20%20%20%20save%20as%20TIFF%20in%20%28theOutputFolder%20%26%20%22temp-conversion-output.tif%22%29%0A%0A%20%20%20%20%20%20%20%20--%20Close%20the%20image%0A%20%20%20%20%20%20%20%20close%0A%20%20%20%20end%20tell%0Aend%20tell">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH20-SW9"></a>
+    <span class="caption"><strong class="caption-number">Listing 38-8</strong>AppleScript: Converting an image from one type to another</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">-- Prompt for an image</code></li>
+            <li><code class="code-voice">set theImageFile to choose file of type &quot;public.image&quot; with prompt &quot;&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">-- Locate an output folder</code></li>
+            <li><code class="code-voice">set theOutputFolder to (path to desktop folder as string)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">-- Launch Image Events</code></li>
+            <li><code class="code-voice">tell application &quot;Image Events&quot;</code></li>
+            <li><code class="code-voice">    launch</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Open the image</code></li>
+            <li><code class="code-voice">    set theImage to open theImageFile</code></li>
+            <li><code class="code-voice">    tell theImage</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Save the image as a .jpg</code></li>
+            <li><code class="code-voice">        save as JPEG in (theOutputFolder &amp; &quot;temp-conversion-output.jpg&quot;)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Save the image as a .psd</code></li>
+            <li><code class="code-voice">        save as PSD in (theOutputFolder &amp; &quot;temp-conversion-output.psd&quot;)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Save the image as a .tif</code></li>
+            <li><code class="code-voice">        save as TIFF in (theOutputFolder &amp; &quot;temp-conversion-output.tif&quot;)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Close the image</code></li>
+            <li><code class="code-voice">        close</code></li>
+            <li><code class="code-voice">    end tell</code></li>
+            <li><code class="code-voice">end tell</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH69-SW1">Automating the User Interface</a></p>
+  			<p class="next-link"><a href="CallCommandLineUtilities.html#//apple_ref/doc/uid/TP40016239-CH43-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH43-SW1">Calling Command-Line Tools</a></p>
+
+    <p class="copyright">Copyright &#x00a9; 2018 Apple Inc. All rights reserved. 
+  <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a> | 
+  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a> | 
+  <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Updated: 2016-06-13</a>
+</p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <script src="../../../../Resources/1282/JavaScript/devpubs-1.6.3.js" type="text/javascript" charset="utf-8"></script>
+  <div id="_omniture_top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="awdappledeveloper"
+</script>
+
+<script type="text/javascript" src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
+<script type="text/javascript">
+s.channel="www.documentationarchive.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="https://developer.apple.com/bugreporter/" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+</html>

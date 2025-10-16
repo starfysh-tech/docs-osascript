@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+  <title>Mac Automation Scripting Guide: Navigating a Scripting Dictionary</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1282/CSS/style-1.6.3.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1282/CSS/feedback-1.6.3.css" />
+  <meta charset='utf-8'> 
+<meta id="j-version" name="j-version" content="" />
+<meta id="build" name="build" content="c1e4c7a89af8f899a21cfa81fc33ba42" />
+<meta id="document-version" name="document-version" content="1.1.0" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages &amp; Utilities}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40016239" />
+<meta id="chapterId" name="chapterId" content="TP40016239-CH77">
+<meta id="book-title" name="book-title" content="Mac Automation Scripting Guide" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2016-06-13" />
+<meta id="description" name="description" content="New document." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+<meta id="resources-uri" name="resources-uri" content="../../../../Resources/1282">
+<link id="book-index-page" rel="Start" title="" type="text/html" href="./index.html">
+<!-- , next_chapter: next_chapter, previous_chapter: previous_chapter -->
+<link id="next-page" rel="Next" type="text/html" href="">
+<link id="previous-page" rel="Prev" type="text/html" href="">
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta id="platforms" name="platforms" content="OS X">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/">Documentation Archive
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/1282/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="https://developer.apple.com">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">Mac Automation Scripting Guide</span>
+    </p>
+    <form id="search" class="hideInXcode" method="get" action="/search/index.php" accept-charset="utf-8" autocomplete="off">
+  <input type="search" id="ssi_SearchField" placeholder="Search Documentation Archive" name="q" autocomplete="off" tabindex="2" />
+</form>
+
+      
+   
+   
+
+
+
+    <img id="shortstack" src="../../../../Resources/1282/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav id="navigator" class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH2-SW1"
+            class="part-name">
+            <a href="index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH56-SW1">Mac Scripting Essentials</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH56-SW1">About Mac Scripting</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="HowMacScriptingWorks.html#//apple_ref/doc/uid/TP40016239-CH73-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH73-SW1">How Mac Scripting Works</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TypesofScripts.html#//apple_ref/doc/uid/TP40016239-CH72-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH72-SW1">Types of Scripts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="AboutthisGuide.html#//apple_ref/doc/uid/TP40016239-CH71-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH71-SW1">About this Guide</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH10-SW1"
+            class="part-name">
+            <a href="GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH5-SW1">Starting Scripting</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH5-SW1">Getting to Know Script Editor</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CreateaScript.html#//apple_ref/doc/uid/TP40016239-CH12-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH12-SW1">Creating a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SaveaScript.html#//apple_ref/doc/uid/TP40016239-CH13-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH13-SW1">Saving a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RunaScript.html#//apple_ref/doc/uid/TP40016239-CH14-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH14-SW1">Running a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH70-SW1">Configuring Scripting Preferences</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH9-SW1"
+            class="part-name nav-part-active open-part">
+            <a href="AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH75-SW2" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH75-SW2">Accessing Scripting Terminology</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH75-SW2" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH75-SW2">About Scripting Terminology</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="OpenaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH76-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH76-SW1">Opening a Scripting Dictionary</a>
+              </li>
+              <li class="nav-chapter nav-current-chapter">
+              	<a href="#//apple_ref/doc/uid/TP40016239-CH77-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH77-SW1">Navigating a Scripting Dictionary</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH74-SW1"
+            class="part-name">
+            <a href="UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH52-SW1">Modularizing Code</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH52-SW1">Using Handlers/Functions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UseScriptLibraries.html#//apple_ref/doc/uid/TP40016239-CH36-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH36-SW1">Using Script Libraries</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH57-SW1"
+            class="part-name">
+            <a href="ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH34-SW1">Working with Files and Folders</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH34-SW1">Referencing Files and Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ReadandWriteFiles.html#//apple_ref/doc/uid/TP40016239-CH58-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH58-SW1">Reading and Writing Files</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ProcessDroppedFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH53-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH53-SW1">Processing Dropped Files and Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH39-SW1">Watching Folders</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH59-SW1"
+            class="part-name">
+            <a href="ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW1">Working with Text, Numbers, and Lists</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW1">Manipulating Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH47-SW1">Manipulating Numbers</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH48-SW1">Manipulating Lists of Items</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH60-SW1"
+            class="part-name">
+            <a href="DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH15-SW1">Interacting with Users</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH15-SW1">Displaying Dialogs and Alerts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforText.html#//apple_ref/doc/uid/TP40016239-CH80-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH80-SW1">Prompting for Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DisplayNotifications.html#//apple_ref/doc/uid/TP40016239-CH61-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH61-SW1">Displaying Notifications</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SpeakText.html#//apple_ref/doc/uid/TP40016239-CH62-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH62-SW1">Speaking Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH81-SW1">Prompting for Files or Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaFileName.html#//apple_ref/doc/uid/TP40016239-CH82-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH82-SW1">Prompting for a File Name</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaChoicefromaList.html#//apple_ref/doc/uid/TP40016239-CH83-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH83-SW1">Prompting for a Choice from a List</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaColor.html#//apple_ref/doc/uid/TP40016239-CH86-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH86-SW1">Prompting for a Color</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DisplayProgress.html#//apple_ref/doc/uid/TP40016239-CH37-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH37-SW1">Displaying Progress</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH63-SW1"
+            class="part-name">
+            <a href="ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH49-SW1">Working with HTML and URLs</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH49-SW1">Converting RGB to HTML Color</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="EncodeandDecodeText.html#//apple_ref/doc/uid/TP40016239-CH51-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH51-SW1">Encoding and Decoding Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ParseHTML.html#//apple_ref/doc/uid/TP40016239-CH50-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH50-SW1">Parsing HTML</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RemoveMarkupfromHTML.html#//apple_ref/doc/uid/TP40016239-CH64-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH64-SW1">Removing HTML Markup from Text</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH65-SW1"
+            class="part-name">
+            <a href="WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH66-SW1">Working with Data</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH66-SW1">Working with Property List Files</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WorkwithXML.html#//apple_ref/doc/uid/TP40016239-CH67-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH67-SW1">Working with XML</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH35-SW1"
+            class="part-name">
+            <a href="AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH69-SW1">Performing Common Scripting Tasks</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH69-SW1">Automating the User Interface</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH20-SW1">Manipulating Images</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CallCommandLineUtilities.html#//apple_ref/doc/uid/TP40016239-CH43-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH43-SW1">Calling Command-Line Tools</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH68-SW1"
+            class="part-name">
+            <a href="MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH46-SW1">Extending Apps and Processes</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH46-SW1">Making a Systemwide Service</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH7-SW1">Using the Systemwide Script Menu</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UseDictationtoRunScripts.html#//apple_ref/doc/uid/TP40016239-CH87-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH87-SW1">Using Dictation to Run Scripts</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH78-SW1"
+            class="part-name">
+            <a href="AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH79-SW1">Appendixes</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH79-SW1">Objective-C to AppleScript Quick Translation Guide</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="revision-history"
+            class="part-name">
+          <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Revision History</a>
+          <ul class="nav-chapters">
+            <li class="nav-chapter">
+              <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Document Revision History</a>
+            </li>
+          </ul>
+        </li>
+    </ul>
+</nav>
+
+      <menu id="bashful" type="toolbar">
+  <div class="shield"></div>
+  <menuitem id="jump_to" class="menu-bar-item closed">
+  <span>On This Page</span>
+  <div class="chevron">
+    <div class="chevy chevron-left"></div>
+    <div class="chevy chevron-right"></div>
+  </div>
+  <menu type="list" class="details">
+      <ul class="list-bullet">
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH77-SW13">Types of Terminology</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH77-SW14">Key Concepts</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH77-SW17">Anatomy of a Command Definition</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH77-SW18">Anatomy of a Class Definition</a>
+          </li>
+      </ul>
+  </menu>
+</menuitem>
+
+</menu>
+<div class="pixel-line"></div>
+<div class="rubber-band-gap"></div>
+<article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40016239-CH77"></a><a name="//apple_ref/doc/uid/TP40016239-CH77-SW1"></a>
+
+  <h2 class='chapter-name'>Navigating a Scripting Dictionary</h2>
+
+
+  
+  	<section class="section">
+  		<p class="para">
+  A scripting dictionary window in Script Editor contains three primary areas. See <span class="x-name-no-link">Figure 12-1</span>.
+</p>
+<figure class="figure">
+  <a name="//apple_ref/doc/uid/TP40016239-CH77-SW2"></a>
+  <span class="caption"><strong class="caption-number">Figure 12-1</strong>Primary elements of a scripting dictionary window in Script Editor</span>
+  <img src="Art/script-editor_dictionary-callouts_2x.png" alt="image: ../Art/script-editor_dictionary-callouts_2x.png" width="608" height="438" />
+</figure>
+<ul class="list-bullet">
+  <li class="item"><p class="para">
+  <strong class="inline-head">Toolbar.</strong> Options for toggling between terminology views, setting the scripting language, entering search terms, and more.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">Navigation pane.</strong> Columns of scripting terminology.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">Detail pane.</strong> Definitions for any terminology selected in the navigation pane.
+</p>
+</li>
+</ul>
+
+		</section> 
+
+
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH77-SW13"></a>
+  <h3 class="section-name" tabindex="0">Types of Terminology</h3>
+  <p class="para">
+  The navigation pane of a dictionary includes the types of terms described in <span class="x-name-no-link">Table 12-1</span>.
+</p><div class="tableholder">
+  <a name="//apple_ref/doc/uid/TP40016239-CH77-SW3"></a>
+  <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+    <caption class="tablecaption"><strong class="caption-number">Table 12-1</strong>Types of scripting terminology</caption>
+    <thead>
+        <tr>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Type
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Icon
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Description
+</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row"><p class="para">
+  Suite
+</p></td>
+            <td><p class="para">
+  <img class="inline-graphic" src="Art/osa_suite_2x.png" alt="image: ../Art/osa_suite_2x.png" width="32" height="32" />
+</p></td>
+            <td><p class="para">
+  A <em>suite</em> is a grouping of related commands and classes. Apps often have a Standard Suite, which includes terminology supported by most scriptable apps, such as an <code class="code-voice">open</code> command, a <code class="code-voice">quit</code> command, and an <code class="code-voice">application</code> class.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Command
+</p></td>
+            <td><p class="para">
+  <img class="inline-graphic" src="Art/osa_command_2x.png" alt="image: ../Art/osa_command_2x.png" width="32" height="32" />
+</p></td>
+            <td><p class="para">
+  A <em>command</em> is an instruction that can be sent to an app or object in order to initiate some action. For example, <code class="code-voice">delete</code>, <code class="code-voice">make</code>, <code class="code-voice">print</code> are commands that are found in many scriptable apps. Many commands have <em>parameters</em> that specify the target object and control the behavior of the command.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Class
+</p></td>
+            <td><p class="para">
+  <img class="inline-graphic" src="Art/osa_class_2x.png" alt="image: ../Art/osa_class_2x.png" width="32" height="32" />
+</p><p class="para">
+   
+</p><p class="para">
+  <img class="inline-graphic" src="Art/osa_element_2x.png" alt="image: ../Art/osa_element_2x.png" width="32" height="32" />
+</p></td>
+            <td><p class="para">
+  A <em>class</em> is an object within an app, or an app itself. Mail, for example, has an <code class="code-voice">application</code> class, a <code class="code-voice">message</code> class, and a <code class="code-voice">signature</code> class, among others. Objects within an app sometimes contain other objects as <em>elements</em>. For example, in Mail, a <code class="code-voice">mailbox</code> objects can contain <code class="code-voice">message</code> objects as elements.
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Property
+</p></td>
+            <td><p class="para">
+  <img class="inline-graphic" src="Art/osa_property_2x.png" alt="image: ../Art/osa_property_2x.png" width="32" height="32" />
+</p></td>
+            <td><p class="para">
+  A <em>property</em> is an attribute of a class. For example, the <code class="code-voice">message</code> class in Mail has many properties, including <code class="code-voice">date received</code>, <code class="code-voice">read status</code>, and <code class="code-voice">subject</code>. Some properties are read-only, while others are readable and writable.
+</p></td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH77-SW14"></a>
+  <h3 class="section-name" tabindex="0">Key Concepts</h3>
+  <p class="para">
+  It’s important to understand the concepts of <em>inheritance</em> and <em>containment</em> when navigating a scripting dictionary.
+</p>
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH77-SW15"></a>
+  <h3 class="section-name" tabindex="0">Inheritance</h3>
+  <p class="para">
+  In a scriptable app, different classes often implement the same properties. For example, in Finder, the <code class="code-voice">file</code> and <code class="code-voice">folder</code> classes both have <code class="code-voice">creation date</code>, <code class="code-voice">modification date</code>, and <code class="code-voice">name</code> properties. Rather than defining these same properties multiple times throughout the scripting dictionary, Finder implements a generic <code class="code-voice">item</code> class. Since files and folders are considered types of Finder items, these classes inherit the properties of the <code class="code-voice">item</code> class. In other words, any properties of the <code class="code-voice">item</code> class also apply to the <code class="code-voice">file</code> and <code class="code-voice">folder</code> classes. There are many other items in Finder that also inherit these same properties, including the <code class="code-voice">disk</code>, <code class="code-voice">package</code>, and <code class="code-voice">alias file</code> classes.
+</p><p class="para">
+  A class that inherits the properties of other classes can also implement its own properties. In Finder, the <code class="code-voice">file</code> class implements a number of file-specific properties, including <code class="code-voice">file type</code> and <code class="code-voice">version</code>. The <code class="code-voice">alias file</code> class implements an <code class="code-voice">original item</code> property.
+</p><p class="para">
+  In some cases, a class inherits properties from multiple classes. In Finder, an alias is a type of file, which is a type of item. Therefore, the <code class="code-voice">alias file</code> class inherits the properties of both the <code class="code-voice">file</code> and <code class="code-voice">item</code> classes, as shown in <span class="x-name-no-link">Figure 12-2</span>.
+</p><figure class="figure">
+  <a name="//apple_ref/doc/uid/TP40016239-CH77-SW4"></a>
+  <span class="caption"><strong class="caption-number">Figure 12-2</strong>In scripting, classes can inherit the properties of other classes</span>
+  <img src="Art/Inheritance_2x.png" alt="image: ../Art/Inheritance_2x.png" width="575" height="271" />
+</figure>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH77-SW16"></a>
+  <h3 class="section-name" tabindex="0">Containment</h3>
+  <p class="para">
+  Classes of a scriptable app reside within a certain containment hierarchy. The application is at the top level, with other classes nested beneath. Finder, for example, contains disks, folders, files, and other objects. While files don’t contain elements, folders and disks can contain other folders and files. See <span class="x-name-no-link">Figure 12-3</span>. Mail is another example—the application contains accounts, which can contain mailboxes, which can contain other mailboxes and messages.
+</p><figure class="figure">
+  <a name="//apple_ref/doc/uid/TP40016239-CH77-SW5"></a>
+  <span class="caption"><strong class="caption-number">Figure 12-3</strong>In scripting, classes can contain other classes as elements</span>
+  <img src="Art/Containment_2x.png" alt="image: ../Art/Containment_2x.png" width="411" height="213" />
+</figure><p class="para">
+  When referencing a class, you must do so very specifically according to its containment hierarchy in order to provide the scripting system with context. To reference a file in Finder, you would specify where the file resides in the folder hierarchy. See <span class="x-name-no-link">Listing 12-1</span> and <span class="x-name-no-link">Listing 12-2</span>. To reference a message in Mail, you would specify where the message resides in the mailbox and account hierarchy.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;name=Reference%20a%20File%20by%20Containment%20Hierarchy%20in%20Finder&amp;script=tell%20application%20%22Finder%22%0D%20%20%20%20modification%20date%20of%20file%20%22My%20File.txt%22%20of%20folder%20%22Documents%22%20of%20folder%20%22YourUserName%22%20of%20folder%20%22Users%22%20of%20startup%20disk%0Dend%20tell%0D--%3E%20Result%3A%20date%20%22Monday%2C%20September%2028%2C%202015%20at%2010%3A10%3A17%20AM%22%0D">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH77-SW6"></a>
+    <span class="caption"><strong class="caption-number">Listing 12-1</strong>AppleScript: Referencing a file by containment hierarchy in Finder</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">tell application &quot;Finder&quot;</code></li>
+            <li><code class="code-voice">    modification date of file &quot;My File.txt&quot; of folder &quot;Documents&quot; of folder &quot;YourUserName&quot; of folder &quot;Users&quot; of startup disk</code></li>
+            <li><code class="code-voice">end tell</code></li>
+            <li><code class="code-voice">--&gt; Result: date &quot;Monday, September 28, 2015 at 10:10:17 AM&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;name=Reference%20a%20File%20by%20Containment%20Hierarchy%20in%20Finder&amp;script=var%20Finder%20%3D%20Application%28%22Finder%22%29%0DFinder.startupDisk.folders%5B%22Users%22%5D.folders%5B%22YourUserName%22%5D.folders%5B%22Documents%22%5D.files%5B%22My%20File.txt%22%5D.modificationDate%28%29%0D%2F%2F%20Result%3A%20Mon%20Sep%2028%202015%2017%3A10%3A17%20GMT-0700%20%28PDT%29%0D">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH77-SW7"></a>
+    <span class="caption"><strong class="caption-number">Listing 12-2</strong>JavaScript: Referencing a file by containment hierarchy in Finder</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var Finder = Application(&quot;Finder&quot;)</code></li>
+            <li><code class="code-voice">Finder.startupDisk.folders[&quot;Users&quot;].folders[&quot;YourUserName&quot;].folders[&quot;Documents&quot;].files[&quot;My File.txt&quot;].modificationDate()</code></li>
+            <li><code class="code-voice">// Result: Mon Sep 28 2015 17:10:17 GMT-0700 (PDT)</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH77-SW17"></a>
+  <h3 class="section-name" tabindex="0">Anatomy of a Command Definition</h3>
+  <p class="para">
+  The definition of a command in a scripting dictionary is a recipe for using the command, as shown in <span class="x-name-no-link">Figure 12-4</span>, <span class="x-name-no-link">Listing 12-3</span>, and <span class="x-name-no-link">Listing 12-4</span>.
+</p><figure class="figure">
+  <a name="//apple_ref/doc/uid/TP40016239-CH77-SW8"></a>
+  <span class="caption"><strong class="caption-number">Figure 12-4</strong>Definition for the move command in the Finder scripting dictionary</span>
+  <img src="Art/dictionary_move_command_2x.png" alt="image: ../Art/dictionary_move_command_2x.png" width="652" height="235" />
+</figure><p class="para">
+  A command definition includes the following elements:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <strong class="inline-head">Command name.</strong> The name of the command.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">Direct parameter.</strong> An object to be targeted by the command. For the <code class="code-voice">move</code> command in Finder, this is the object to be moved. If a command definition doesn’t specify a direct parameter, then the target object is the application. A direct parameter immediately follows the command.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">Labeled parameters.</strong> Control some aspect of the command’s behavior and are required or optional. Optional parameters are surrounded by brackets. Since these parameters are identified by label, they can be placed in any order when you write your script. The command definition denotes the value type for each labeled parameter. For example, the optional <code class="code-voice">replacing</code> parameter for the <code class="code-voice">move</code> command in Finder takes a boolean value.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">Result.</strong> The result of the command, if any. Often, this is a reference to a newly created or modified object. For the <code class="code-voice">move</code> command in Finder, it’s a reference to the moved object.
+</p>
+</li>
+</ul><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;name=Example%20Usage%20of%20the%20Move%20Command%20in%20Finder&amp;script=tell%20application%20%22Finder%22%0D%20%20%20%20move%20folder%20someFolder%20to%20someOtherFolder%20replacing%20true%0Dend%20tell%0D">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH77-SW9"></a>
+    <span class="caption"><strong class="caption-number">Listing 12-3</strong>AppleScript: Example usage of the move command in Finder</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">tell application &quot;Finder&quot;</code></li>
+            <li><code class="code-voice">    move folder someFolder to someOtherFolder replacing true</code></li>
+            <li><code class="code-voice">end tell</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;name=Example%20Usage%20of%20the%20Move%20Command%20in%20Finder&amp;script=var%20Finder%20%3D%20Application%28%22Finder%22%29%0DFinder.move%28someFolder%2C%20%7B%0D%20%20to%3A%20someOtherFolder%2C%0D%20%20replacing%3A%20true%0D%7D%29%0D">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH77-SW10"></a>
+    <span class="caption"><strong class="caption-number">Listing 12-4</strong>JavaScript: Example usage of the move command in Finder</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var Finder = Application(&quot;Finder&quot;)</code></li>
+            <li><code class="code-voice">Finder.move(someFolder, {</code></li>
+            <li><code class="code-voice">  to: someOtherFolder,</code></li>
+            <li><code class="code-voice">  replacing: true</code></li>
+            <li><code class="code-voice">})</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH77-SW18"></a>
+  <h3 class="section-name" tabindex="0">Anatomy of a Class Definition</h3>
+  <p class="para">
+  A class definition describes a class, as shown in <span class="x-name-no-link">Figure 12-5</span>.
+</p><figure class="figure">
+  <a name="//apple_ref/doc/uid/TP40016239-CH77-SW12"></a>
+  <span class="caption"><strong class="caption-number">Figure 12-5</strong>Definition for the mailbox class in the Mail scripting dictionary</span>
+  <img src="Art/dictionary_mailbox_class_2x.png" alt="image: ../Art/dictionary_mailbox_class_2x.png" width="600" height="172" />
+</figure><p class="para">
+  A class definition includes the following elements:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <strong class="inline-head">Class name.</strong> The name of the class.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">Inheritance details.</strong> A list of other classes from which properties are inherited, if any. Each class is a hyperlink—clicking it takes you to the definition for the corresponding class.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">Containment details.</strong> A list of contained classes, if any. May also list other classes containing the class, if any.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">Properties.</strong> Any properties for the class, along with their data types. Read-only properties include an <code class="code-voice">r/o</code> indicator.
+</p>
+</li>
+</ul><p class="para">
+  To view inherited properties, as well as containing classes in the Script Editor dictionary viewer, select Show inherited items in Preferences &gt; General. See <span class="x-name-no-link">Figure 12-6</span>.
+</p><figure class="figure">
+  <a name="//apple_ref/doc/uid/TP40016239-CH77-SW11"></a>
+  <span class="caption"><strong class="caption-number">Figure 12-6</strong>Enabling inherited item dictionary details in Script Editor</span>
+  <img src="Art/script-editor_preferences_window_showinheriteditems_2x.png" alt="image: ../Art/script-editor_preferences_window_showinheriteditems_2x.png" width="500" height="409" />
+</figure>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="OpenaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH76-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH76-SW1">Opening a Scripting Dictionary</a></p>
+  			<p class="next-link"><a href="UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH52-SW1">Using Handlers/Functions</a></p>
+
+    <p class="copyright">Copyright &#x00a9; 2018 Apple Inc. All rights reserved. 
+  <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a> | 
+  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a> | 
+  <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Updated: 2016-06-13</a>
+</p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <script src="../../../../Resources/1282/JavaScript/devpubs-1.6.3.js" type="text/javascript" charset="utf-8"></script>
+  <div id="_omniture_top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="awdappledeveloper"
+</script>
+
+<script type="text/javascript" src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
+<script type="text/javascript">
+s.channel="www.documentationarchive.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="https://developer.apple.com/bugreporter/" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+</html>

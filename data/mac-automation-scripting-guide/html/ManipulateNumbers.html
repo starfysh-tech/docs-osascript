@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+  <title>Mac Automation Scripting Guide: Manipulating Numbers</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1282/CSS/style-1.6.3.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1282/CSS/feedback-1.6.3.css" />
+  <meta charset='utf-8'> 
+<meta id="j-version" name="j-version" content="" />
+<meta id="build" name="build" content="c1e4c7a89af8f899a21cfa81fc33ba42" />
+<meta id="document-version" name="document-version" content="1.1.0" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages &amp; Utilities}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40016239" />
+<meta id="chapterId" name="chapterId" content="TP40016239-CH47">
+<meta id="book-title" name="book-title" content="Mac Automation Scripting Guide" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2016-06-13" />
+<meta id="description" name="description" content="New document." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+<meta id="resources-uri" name="resources-uri" content="../../../../Resources/1282">
+<link id="book-index-page" rel="Start" title="" type="text/html" href="./index.html">
+<!-- , next_chapter: next_chapter, previous_chapter: previous_chapter -->
+<link id="next-page" rel="Next" type="text/html" href="">
+<link id="previous-page" rel="Prev" type="text/html" href="">
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta id="platforms" name="platforms" content="OS X">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/">Documentation Archive
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/1282/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="https://developer.apple.com">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">Mac Automation Scripting Guide</span>
+    </p>
+    <form id="search" class="hideInXcode" method="get" action="/search/index.php" accept-charset="utf-8" autocomplete="off">
+  <input type="search" id="ssi_SearchField" placeholder="Search Documentation Archive" name="q" autocomplete="off" tabindex="2" />
+</form>
+
+      
+   
+   
+
+
+
+    <img id="shortstack" src="../../../../Resources/1282/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav id="navigator" class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH2-SW1"
+            class="part-name">
+            <a href="index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH56-SW1">Mac Scripting Essentials</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH56-SW1">About Mac Scripting</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="HowMacScriptingWorks.html#//apple_ref/doc/uid/TP40016239-CH73-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH73-SW1">How Mac Scripting Works</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TypesofScripts.html#//apple_ref/doc/uid/TP40016239-CH72-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH72-SW1">Types of Scripts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="AboutthisGuide.html#//apple_ref/doc/uid/TP40016239-CH71-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH71-SW1">About this Guide</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH10-SW1"
+            class="part-name">
+            <a href="GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH5-SW1">Starting Scripting</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH5-SW1">Getting to Know Script Editor</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CreateaScript.html#//apple_ref/doc/uid/TP40016239-CH12-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH12-SW1">Creating a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SaveaScript.html#//apple_ref/doc/uid/TP40016239-CH13-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH13-SW1">Saving a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RunaScript.html#//apple_ref/doc/uid/TP40016239-CH14-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH14-SW1">Running a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH70-SW1">Configuring Scripting Preferences</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH9-SW1"
+            class="part-name">
+            <a href="AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH75-SW2" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH75-SW2">Accessing Scripting Terminology</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH75-SW2" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH75-SW2">About Scripting Terminology</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="OpenaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH76-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH76-SW1">Opening a Scripting Dictionary</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH77-SW1">Navigating a Scripting Dictionary</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH74-SW1"
+            class="part-name">
+            <a href="UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH52-SW1">Modularizing Code</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH52-SW1">Using Handlers/Functions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UseScriptLibraries.html#//apple_ref/doc/uid/TP40016239-CH36-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH36-SW1">Using Script Libraries</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH57-SW1"
+            class="part-name">
+            <a href="ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH34-SW1">Working with Files and Folders</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH34-SW1">Referencing Files and Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ReadandWriteFiles.html#//apple_ref/doc/uid/TP40016239-CH58-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH58-SW1">Reading and Writing Files</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ProcessDroppedFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH53-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH53-SW1">Processing Dropped Files and Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH39-SW1">Watching Folders</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH59-SW1"
+            class="part-name nav-part-active open-part">
+            <a href="ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW1">Working with Text, Numbers, and Lists</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW1">Manipulating Text</a>
+              </li>
+              <li class="nav-chapter nav-current-chapter">
+              	<a href="#//apple_ref/doc/uid/TP40016239-CH47-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH47-SW1">Manipulating Numbers</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH48-SW1">Manipulating Lists of Items</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH60-SW1"
+            class="part-name">
+            <a href="DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH15-SW1">Interacting with Users</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH15-SW1">Displaying Dialogs and Alerts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforText.html#//apple_ref/doc/uid/TP40016239-CH80-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH80-SW1">Prompting for Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DisplayNotifications.html#//apple_ref/doc/uid/TP40016239-CH61-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH61-SW1">Displaying Notifications</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SpeakText.html#//apple_ref/doc/uid/TP40016239-CH62-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH62-SW1">Speaking Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH81-SW1">Prompting for Files or Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaFileName.html#//apple_ref/doc/uid/TP40016239-CH82-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH82-SW1">Prompting for a File Name</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaChoicefromaList.html#//apple_ref/doc/uid/TP40016239-CH83-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH83-SW1">Prompting for a Choice from a List</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaColor.html#//apple_ref/doc/uid/TP40016239-CH86-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH86-SW1">Prompting for a Color</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DisplayProgress.html#//apple_ref/doc/uid/TP40016239-CH37-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH37-SW1">Displaying Progress</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH63-SW1"
+            class="part-name">
+            <a href="ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH49-SW1">Working with HTML and URLs</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH49-SW1">Converting RGB to HTML Color</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="EncodeandDecodeText.html#//apple_ref/doc/uid/TP40016239-CH51-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH51-SW1">Encoding and Decoding Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ParseHTML.html#//apple_ref/doc/uid/TP40016239-CH50-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH50-SW1">Parsing HTML</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RemoveMarkupfromHTML.html#//apple_ref/doc/uid/TP40016239-CH64-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH64-SW1">Removing HTML Markup from Text</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH65-SW1"
+            class="part-name">
+            <a href="WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH66-SW1">Working with Data</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH66-SW1">Working with Property List Files</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WorkwithXML.html#//apple_ref/doc/uid/TP40016239-CH67-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH67-SW1">Working with XML</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH35-SW1"
+            class="part-name">
+            <a href="AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH69-SW1">Performing Common Scripting Tasks</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH69-SW1">Automating the User Interface</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH20-SW1">Manipulating Images</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CallCommandLineUtilities.html#//apple_ref/doc/uid/TP40016239-CH43-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH43-SW1">Calling Command-Line Tools</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH68-SW1"
+            class="part-name">
+            <a href="MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH46-SW1">Extending Apps and Processes</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH46-SW1">Making a Systemwide Service</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH7-SW1">Using the Systemwide Script Menu</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UseDictationtoRunScripts.html#//apple_ref/doc/uid/TP40016239-CH87-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH87-SW1">Using Dictation to Run Scripts</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH78-SW1"
+            class="part-name">
+            <a href="AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH79-SW1">Appendixes</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH79-SW1">Objective-C to AppleScript Quick Translation Guide</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="revision-history"
+            class="part-name">
+          <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Revision History</a>
+          <ul class="nav-chapters">
+            <li class="nav-chapter">
+              <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Document Revision History</a>
+            </li>
+          </ul>
+        </li>
+    </ul>
+</nav>
+
+      <menu id="bashful" type="toolbar">
+  <div class="shield"></div>
+  <menuitem id="jump_to" class="menu-bar-item closed">
+  <span>On This Page</span>
+  <div class="chevron">
+    <div class="chevy chevron-left"></div>
+    <div class="chevy chevron-right"></div>
+  </div>
+  <menu type="list" class="details">
+      <ul class="list-bullet">
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH47-SW3">Converting a Number to a String</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH47-SW18">Adding a Descriptive Suffix to a Number</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH47-SW22">Adding Leading Zeros to a Number</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH47-SW8">Comma-Delimiting a Number</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH47-SW11">Determining if a Number is an Odd Number</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH47-SW15">Rounding and Truncating a Number</a>
+          </li>
+      </ul>
+  </menu>
+</menuitem>
+
+</menu>
+<div class="pixel-line"></div>
+<div class="rubber-band-gap"></div>
+<article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47"></a><a name="//apple_ref/doc/uid/TP40016239-CH47-SW1"></a>
+
+  <h2 class='chapter-name'>Manipulating Numbers</h2>
+
+
+  
+  	<section class="section">
+  		<p class="para">
+  
+</p>
+<p class="para">
+  Working with and manipulating numbers is an important and regular occurrence in scripting. Basic mathematic operations—such as addition, subtraction, multiplication, and division—are language-level features, but some other commonly performed operations require custom scripting.
+</p>
+<div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW2"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">AppleScript’s language-level mathematical operators are listed in <a href="../../../AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g" data-renderer-version="1" target="_self">Operators Reference</a> in <em class="u-book"><a href="../../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983" data-renderer-version="1" target="_self">AppleScript Language Guide</a></em>.
+    	</p>
+    <p class="para">
+  JavaScript’s language-level arithmetic operators can be found <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators">here</a>. JavaScript also includes a built-in <code class="code-voice">Math</code> object, which provides a variety of properties and methods for performing common mathematical operations. Information about this object can be found <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">here</a>. Several of the JavaScript examples in this chapter call the <code class="code-voice">Math.abs()</code> method to get the absolute value of a number. AppleScript does not have an equivalent method.
+</p>
+
+  </aside>
+</div>
+
+		</section> 
+
+
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW3"></a>
+  <h3 class="section-name" tabindex="0">Converting a Number to a String</h3>
+  <p class="para">
+  Scripts often need to convert numbers to string format to display information to the user or populate a document. In AppleScript, this conversion can be accomplished most of the time simply by using the coercion operator <code class="code-voice">as</code>, as shown in <span class="x-name-no-link">Listing 20-1</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=12%20as%20string">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW4"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-1</strong>AppleScript: Coercing a number to a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">12 as string</code></li>
+            <li><code class="code-voice">--&gt; Result: &quot;12&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  In JavaScript, the same conversion can be accomplished by calling the <code class="code-voice">toString()</code> method, as shown in <span class="x-name-no-link">Listing 20-2</span>.
+</p><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=num%20%3D%2012%0Anum.toString%28%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW32"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-2</strong>JavaScript: Coercing a number to a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">num = 12</code></li>
+            <li><code class="code-voice">num.toString()</code></li>
+            <li><code class="code-voice">// Result: &quot;12&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW5"></a>
+  <h3 class="section-name" tabindex="0">Converting a Long Number to a String</h3>
+  <p class="para">
+  
+</p><p class="para">
+  In AppleScript, long numeric values are displayed in scientific notation. For example, <code class="code-voice">1234000000</code> is displayed by a script as <code class="code-voice">1.234E+9</code>. When this value is coerced to a string, it becomes: <code class="code-voice">&quot;1.234E+9&quot;</code>. The handler in <span class="x-name-no-link">Listing 20-3</span> converts a number, regardless of length, to a string of numeric characters instead of a numeric string in scientific notation.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20convertNumberToString%28theNumber%29%0A%20%20%20%20set%20theNumberString%20to%20theNumber%20as%20string%0A%20%20%20%20set%20theOffset%20to%20offset%20of%20%22E%22%20in%20theNumberString%0A%20%20%20%20if%20theOffset%20%3D%200%20then%20return%20theNumberString%0A%20%20%20%20set%20thePrefix%20to%20text%201%20thru%20%28theOffset%20-%201%29%20of%20theNumberString%0A%20%20%20%20set%20theConvertedNumberPrefix%20to%20%22%22%0A%20%20%20%20if%20thePrefix%20begins%20with%20%22-%22%20then%0A%20%20%20%20%20%20%20%20set%20theConvertedNumberPrefix%20to%20%22-%22%0A%20%20%20%20%20%20%20%20if%20thePrefix%20%3D%20%22-%22%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20thePrefix%20to%20%22%22%0A%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20thePrefix%20to%20text%202%20thru%20-1%20of%20thePrefix%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20if%0A%20%20%20%20set%20theDecimalAdjustment%20to%20%28text%20%28theOffset%20%2B%201%29%20thru%20-1%20of%20theNumberString%29%20as%20number%0A%20%20%20%20set%20isNegativeDecimalAdjustment%20to%20theDecimalAdjustment%20is%20less%20than%200%0A%20%20%20%20if%20isNegativeDecimalAdjustment%20then%0A%20%20%20%20%20%20%20%20set%20thePrefix%20to%20%28reverse%20of%20%28characters%20of%20thePrefix%29%29%20as%20string%0A%20%20%20%20%20%20%20%20set%20theDecimalAdjustment%20to%20-theDecimalAdjustment%0A%20%20%20%20end%20if%0A%20%20%20%20set%20theDecimalOffset%20to%20offset%20of%20%22.%22%20in%20thePrefix%0A%20%20%20%20if%20theDecimalOffset%20%3D%200%20then%0A%20%20%20%20%20%20%20%20set%20theFirstPart%20to%20%22%22%0A%20%20%20%20else%0A%20%20%20%20%20%20%20%20set%20theFirstPart%20to%20text%201%20thru%20%28theDecimalOffset%20-%201%29%20of%20thePrefix%0A%20%20%20%20end%20if%0A%20%20%20%20set%20theSecondPart%20to%20text%20%28theDecimalOffset%20%2B%201%29%20thru%20-1%20of%20thePrefix%0A%20%20%20%20set%20theConvertedNumber%20to%20theFirstPart%0A%20%20%20%20set%20theRepeatCount%20to%20theDecimalAdjustment%0A%20%20%20%20if%20%28length%20of%20theSecondPart%29%20is%20greater%20than%20theRepeatCount%20then%20set%20theRepeatCount%20to%20length%20of%20theSecondPart%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20theRepeatCount%0A%20%20%20%20%20%20%20%20try%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theConvertedNumber%20to%20theConvertedNumber%20%26%20character%20a%20of%20theSecondPart%0A%20%20%20%20%20%20%20%20on%20error%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theConvertedNumber%20to%20theConvertedNumber%20%26%20%220%22%0A%20%20%20%20%20%20%20%20end%20try%0A%20%20%20%20%20%20%20%20if%20a%20%3D%20theDecimalAdjustment%20and%20a%20is%20not%20equal%20to%20%28length%20of%20theSecondPart%29%20then%20set%20theConvertedNumber%20to%20theConvertedNumber%20%26%20%22.%22%0A%20%20%20%20end%20repeat%0A%20%20%20%20if%20theConvertedNumber%20ends%20with%20%22.%22%20then%20set%20theConvertedNumber%20to%20theConvertedNumber%20%26%20%220%22%0A%20%20%20%20if%20isNegativeDecimalAdjustment%20then%20set%20theConvertedNumber%20to%20%28reverse%20of%20%28characters%20of%20theConvertedNumber%29%29%20as%20string%0A%20%20%20%20return%20theConvertedNumberPrefix%20%26%20theConvertedNumber%0Aend%20convertNumberToString">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW6"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-3</strong>AppleScript: Handler that converts a number to a string, regardless of length</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on convertNumberToString(theNumber)</code></li>
+            <li><code class="code-voice">    set theNumberString to theNumber as string</code></li>
+            <li><code class="code-voice">    set theOffset to offset of &quot;E&quot; in theNumberString</code></li>
+            <li><code class="code-voice">    if theOffset = 0 then return theNumberString</code></li>
+            <li><code class="code-voice">    set thePrefix to text 1 thru (theOffset - 1) of theNumberString</code></li>
+            <li><code class="code-voice">    set theConvertedNumberPrefix to &quot;&quot;</code></li>
+            <li><code class="code-voice">    if thePrefix begins with &quot;-&quot; then</code></li>
+            <li><code class="code-voice">        set theConvertedNumberPrefix to &quot;-&quot;</code></li>
+            <li><code class="code-voice">        if thePrefix = &quot;-&quot; then</code></li>
+            <li><code class="code-voice">            set thePrefix to &quot;&quot;</code></li>
+            <li><code class="code-voice">        else</code></li>
+            <li><code class="code-voice">            set thePrefix to text 2 thru -1 of thePrefix</code></li>
+            <li><code class="code-voice">        end if</code></li>
+            <li><code class="code-voice">    end if</code></li>
+            <li><code class="code-voice">    set theDecimalAdjustment to (text (theOffset + 1) thru -1 of theNumberString) as number</code></li>
+            <li><code class="code-voice">    set isNegativeDecimalAdjustment to theDecimalAdjustment is less than 0</code></li>
+            <li><code class="code-voice">    if isNegativeDecimalAdjustment then</code></li>
+            <li><code class="code-voice">        set thePrefix to (reverse of (characters of thePrefix)) as string</code></li>
+            <li><code class="code-voice">        set theDecimalAdjustment to -theDecimalAdjustment</code></li>
+            <li><code class="code-voice">    end if</code></li>
+            <li><code class="code-voice">    set theDecimalOffset to offset of &quot;.&quot; in thePrefix</code></li>
+            <li><code class="code-voice">    if theDecimalOffset = 0 then</code></li>
+            <li><code class="code-voice">        set theFirstPart to &quot;&quot;</code></li>
+            <li><code class="code-voice">    else</code></li>
+            <li><code class="code-voice">        set theFirstPart to text 1 thru (theDecimalOffset - 1) of thePrefix</code></li>
+            <li><code class="code-voice">    end if</code></li>
+            <li><code class="code-voice">    set theSecondPart to text (theDecimalOffset + 1) thru -1 of thePrefix</code></li>
+            <li><code class="code-voice">    set theConvertedNumber to theFirstPart</code></li>
+            <li><code class="code-voice">    set theRepeatCount to theDecimalAdjustment</code></li>
+            <li><code class="code-voice">    if (length of theSecondPart) is greater than theRepeatCount then set theRepeatCount to length of theSecondPart</code></li>
+            <li><code class="code-voice">    repeat with a from 1 to theRepeatCount</code></li>
+            <li><code class="code-voice">        try</code></li>
+            <li><code class="code-voice">            set theConvertedNumber to theConvertedNumber &amp; character a of theSecondPart</code></li>
+            <li><code class="code-voice">        on error</code></li>
+            <li><code class="code-voice">            set theConvertedNumber to theConvertedNumber &amp; &quot;0&quot;</code></li>
+            <li><code class="code-voice">        end try</code></li>
+            <li><code class="code-voice">        if a = theDecimalAdjustment and a is not equal to (length of theSecondPart) then set theConvertedNumber to theConvertedNumber &amp; &quot;.&quot;</code></li>
+            <li><code class="code-voice">    end repeat     if theConvertedNumber ends with &quot;.&quot; then set theConvertedNumber to theConvertedNumber &amp; &quot;0&quot;</code></li>
+            <li><code class="code-voice">    if isNegativeDecimalAdjustment then set theConvertedNumber to (reverse of (characters of theConvertedNumber)) as string</code></li>
+            <li><code class="code-voice">    return theConvertedNumberPrefix &amp; theConvertedNumber</code></li>
+            <li><code class="code-voice">end convertNumberToString</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 20-3</span> shows how to call the handler in <span class="x-name-no-link">Listing 20-3</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=convertNumberToString%288.72124243234E%2B11%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW7"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-4</strong>AppleScript: Calling a handler to convert a long number to a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">convertNumberToString(8.72124243234E+11)</code></li>
+            <li><code class="code-voice">--&gt; Result: &quot;872124243234&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW18"></a>
+  <h3 class="section-name" tabindex="0">Adding a Descriptive Suffix to a Number</h3>
+  <p class="para">
+  The handlers <span class="x-name-no-link">Listing 20-5</span> and <span class="x-name-no-link">Listing 20-6</span> convert a number to a string and appends a suffix of <code class="code-voice">&quot;st&quot;</code>, <code class="code-voice">&quot;nd&quot;</code>, <code class="code-voice">&quot;rd&quot;</code>, or <code class="code-voice">&quot;th&quot;</code>, resulting in strings such as <code class="code-voice">&quot;1st&quot;</code>, <code class="code-voice">&quot;2nd&quot;</code>, <code class="code-voice">&quot;3rd&quot;</code>, and <code class="code-voice">&quot;4th&quot;</code>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20addDescriptiveSuffixToNumber%28theNumber%29%0A%20%20%20%20--%20Determine%20the%20suffix%20to%20add%2C%20based%20on%20the%20last%20two%20digits%0A%20%20%20%20set%20theLastDigit%20to%20theNumber%20mod%2010%0A%20%20%20%20set%20theLastTwoDigits%20to%20theNumber%20mod%20100%0A%20%20%20%20set%20theSuffix%20to%20%22th%22%0A%20%20%20%20if%20%7B1%2C%20-1%7D%20contains%20theLastDigit%20and%20%7B11%2C%20-11%7D%20does%20not%20contain%20theLastTwoDigits%20then%0A%20%20%20%20%20%20%20%20set%20theSuffix%20to%20%22st%22%0A%20%20%20%20else%20if%20%7B2%2C%20-2%7D%20contains%20theLastDigit%20and%20%7B12%2C%20-12%7D%20does%20not%20contain%20theLastTwoDigits%20then%0A%20%20%20%20%20%20%20%20set%20theSuffix%20to%20%22nd%22%0A%20%20%20%20else%20if%20%7B3%2C%20-3%7D%20contains%20theLastDigit%20and%20%7B13%2C%20-13%7D%20does%20not%20contain%20theLastTwoDigits%20then%0A%20%20%20%20%20%20%20%20set%20theSuffix%20to%20%22rd%22%0A%20%20%20%20end%20if%0A%0A%20%20%20%20--%20Return%20the%20number%20and%20suffix%0A%20%20%20%20return%20%28theNumber%20as%20string%29%20%26%20theSuffix%0Aend%20addDescriptiveSuffixToNumber">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW19"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-5</strong>AppleScript: Handler that adds a descriptive suffix to a number</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on addDescriptiveSuffixToNumber(theNumber)</code></li>
+            <li><code class="code-voice">    -- Determine the suffix to add, based on the last two digits</code></li>
+            <li><code class="code-voice">    set theLastDigit to theNumber mod 10</code></li>
+            <li><code class="code-voice">    set theLastTwoDigits to theNumber mod 100</code></li>
+            <li><code class="code-voice">    set theSuffix to &quot;th&quot;</code></li>
+            <li><code class="code-voice">    if {1, -1} contains theLastDigit and {11, -11} does not contain theLastTwoDigits then</code></li>
+            <li><code class="code-voice">        set theSuffix to &quot;st&quot;</code></li>
+            <li><code class="code-voice">    else if {2, -2} contains theLastDigit and {12, -12} does not contain theLastTwoDigits then</code></li>
+            <li><code class="code-voice">        set theSuffix to &quot;nd&quot;</code></li>
+            <li><code class="code-voice">    else if {3, -3} contains theLastDigit and {13, -13} does not contain theLastTwoDigits then</code></li>
+            <li><code class="code-voice">        set theSuffix to &quot;rd&quot;</code></li>
+            <li><code class="code-voice">    end if</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Return the number and suffix</code></li>
+            <li><code class="code-voice">    return (theNumber as string) &amp; theSuffix</code></li>
+            <li><code class="code-voice">end addDescriptiveSuffixToNumber</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20addDescriptiveSuffixToNumber%28num%29%20%7B%0A%20%20%20%20%2F%2F%20Convert%20the%20number%20to%20absolute%20value%0A%20%20%20%20var%20integer%20%3D%20Math.abs%28num%29%0A%0A%20%20%20%20%2F%2F%20Determine%20the%20suffix%20to%20add%2C%20based%20on%20the%20last%20two%20digits%0A%20%20%20%20var%20suffix%20%3D%20%22th%22%0A%20%20%20%20var%20lastDigit%20%3D%20integer%20%25%2010%0A%20%20%20%20var%20lastTwoDigits%20%3D%20integer%20%25%20100%0A%20%20%20%20if%20%28lastDigit%20%3D%3D%3D%201%20%26%26%20lastTwoDigits%20!%3D%3D%2011%29%20%7B%0A%20%20%20%20%20%20%20%20suffix%20%3D%20%22st%22%0A%20%20%20%20%7D%0A%20%20%20%20else%20if%20%28lastDigit%20%3D%3D%3D%202%20%26%26%20lastTwoDigits%20!%3D%3D%2012%29%20%7B%0A%20%20%20%20%20%20%20%20suffix%20%3D%20%22nd%22%0A%20%20%20%20%7D%0A%20%20%20%20else%20if%20%28lastDigit%20%3D%3D%3D%203%20%26%26%20lastTwoDigits%20!%3D%3D%2013%29%20%7B%0A%20%20%20%20%20%20%20%20suffix%20%3D%20%22rd%22%0A%20%20%20%20%7D%0A%0A%20%20%20%20%2F%2F%20Return%20the%20number%20and%20suffix%0A%20%20%20%20return%20num.toString%28%29%20%2B%20suffix%0A%7D%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW24"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-6</strong>JavaScript: Function that adds a descriptive suffix to a number</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function addDescriptiveSuffixToNumber(num) {</code></li>
+            <li><code class="code-voice">    // Convert the number to absolute value</code></li>
+            <li><code class="code-voice">    var integer = Math.abs(num)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    // Determine the suffix to add, based on the last two digits</code></li>
+            <li><code class="code-voice">    var suffix = &quot;th&quot;</code></li>
+            <li><code class="code-voice">    var lastDigit = integer % 10</code></li>
+            <li><code class="code-voice">    var lastTwoDigits = integer % 100</code></li>
+            <li><code class="code-voice">    if (lastDigit === 1 &amp;&amp; lastTwoDigits !== 11) {</code></li>
+            <li><code class="code-voice">        suffix = &quot;st&quot;</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">    else if (lastDigit === 2 &amp;&amp; lastTwoDigits !== 12) {</code></li>
+            <li><code class="code-voice">        suffix = &quot;nd&quot;</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">    else if (lastDigit === 3 &amp;&amp; lastTwoDigits !== 13) {</code></li>
+            <li><code class="code-voice">        suffix = &quot;rd&quot;</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    // Return the number and suffix</code></li>
+            <li><code class="code-voice">    return num.toString() + suffix</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 20-7</span> and <span class="x-name-no-link">Listing 20-8</span> show how to test the handlers in <span class="x-name-no-link">Listing 20-5</span> and <span class="x-name-no-link">Listing 20-6</span> by looping through a range of positive and negative numbers.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theTestResults%20to%20%22%22%0Arepeat%20with%20a%20from%20-10%20to%2010%0A%20%20%20%20set%20theTestResults%20to%20theTestResults%20%26%20addDescriptiveSuffixToNumber%28a%29%0A%20%20%20%20if%20a%20is%20less%20than%2010%20then%20set%20theTestResults%20to%20theTestResults%20%26%20%22%2C%20%22%0Aend%20repeat%0AtheTestResults">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW20"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-7</strong>AppleScript: Testing a handler that adds a descriptive suffix to a number</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theTestResults to &quot;&quot;</code></li>
+            <li><code class="code-voice">repeat with a from -10 to 10</code></li>
+            <li><code class="code-voice">    set theTestResults to theTestResults &amp; addDescriptiveSuffixToNumber(a)</code></li>
+            <li><code class="code-voice">    if a is less than 10 then set theTestResults to theTestResults &amp; &quot;, &quot;</code></li>
+            <li><code class="code-voice">end repeat</code></li>
+            <li><code class="code-voice">theTestResults</code></li>
+            <li><code class="code-voice">--&gt; Result: &quot;-10th, -9th, -8th, -7th, -6th, -5th, -4th, -3rd, -2nd, -1st, 0, 1st, 2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20testResults%20%3D%20%22%22%0Afor%20%28var%20i%20%3D%20-10%3B%20i%20%3C%3D%2010%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20testResults%20%2B%3D%20addDescriptiveSuffixToNumber%28i%29%0A%20%20%20%20if%20%28i%20%3C%2010%29%20%7B%0A%20%20%20%20%20%20%20%20testResults%20%2B%3D%20%22%2C%20%22%0A%20%20%20%20%7D%0A%7D%0AtestResults">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW25"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-8</strong>JavaScript: Testing a function that adds a descriptive suffix to a number</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var testResults = &quot;&quot;</code></li>
+            <li><code class="code-voice">for (var i = -10; i &lt;= 10; i++) {</code></li>
+            <li><code class="code-voice">    testResults += addDescriptiveSuffixToNumber(i)</code></li>
+            <li><code class="code-voice">    if (i &lt; 10) {</code></li>
+            <li><code class="code-voice">        testResults += &quot;, &quot;</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">}</code></li>
+            <li><code class="code-voice">testResults</code></li>
+            <li><code class="code-voice">// Result: &quot;-10th, -9th, -8th, -7th, -6th, -5th, -4th, -3rd, -2nd, -1st, 0th, 1st, 2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 20-9</span> and <span class="x-name-no-link">Listing 20-10</span> show how to call the handlers in <span class="x-name-no-link">Listing 20-5</span> and <span class="x-name-no-link">Listing 20-6</span> to identify positions of items in a list.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20thePersonList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22Chris%22%2C%20%22David%22%7D%0Aset%20theListLength%20to%20length%20of%20thePersonList%0Arepeat%20with%20a%20from%201%20to%20theListLength%0A%20%20%20%20set%20theSuffixedNumber%20to%20addDescriptiveSuffixToNumber%28a%29%0A%20%20%20%20set%20thePerson%20to%20item%20a%20of%20thePersonList%0A%20%20%20%20display%20dialog%20%22The%20%22%20%26%20theSuffixedNumber%20%26%20%22%20person%20in%20list%20is%20%22%20%26%20thePerson%20%26%20%22.%22%0Aend%20repeat">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW21"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-9</strong>AppleScript: Example script that calls a handler to identify the descriptive numeric position of items in a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set thePersonList to {&quot;Sal&quot;, &quot;Ben&quot;, &quot;Chris&quot;, &quot;David&quot;}</code></li>
+            <li><code class="code-voice">set theListLength to length of thePersonList</code></li>
+            <li><code class="code-voice">repeat with a from 1 to theListLength</code></li>
+            <li><code class="code-voice">    set theSuffixedNumber to addDescriptiveSuffixToNumber(a)</code></li>
+            <li><code class="code-voice">    set thePerson to item a of thePersonList</code></li>
+            <li><code class="code-voice">    display dialog &quot;The &quot; &amp; theSuffixedNumber &amp; &quot; person in list is &quot; &amp; thePerson &amp; &quot;.&quot;</code></li>
+            <li><code class="code-voice">end repeat</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20personList%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22Chris%22%2C%20%22David%22%5D%0Avar%20listLength%20%3D%20personList.length%0Afor%20%28var%20i%20%3D%200%3B%20i%20%3C%20listLength%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20var%20suffixedNum%20%3D%20addDescriptiveSuffixToNumber%28i%20%2B%201%29%0A%20%20%20%20var%20person%20%3D%20personList%5Bi%5D%0A%20%20%20%20app.displayDialog%28%60The%20%24%7BsuffixedNum%7D%20person%20in%20list%20is%20%24%7Bperson%7D.%60%29%0A%7D">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW27"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-10</strong>JavaScript: Example script that calls a function to identify the descriptive numeric position of items in a list</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var app = Application.currentApplication()</code></li>
+            <li><code class="code-voice">app.includeStandardAdditions = true</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">var personList = [&quot;Sal&quot;, &quot;Ben&quot;, &quot;Chris&quot;, &quot;David&quot;]</code></li>
+            <li><code class="code-voice">var listLength = personList.length</code></li>
+            <li><code class="code-voice">for (var i = 0; i &lt; listLength; i++) {</code></li>
+            <li><code class="code-voice">    var suffixedNum = addDescriptiveSuffixToNumber(i + 1)</code></li>
+            <li><code class="code-voice">    var person = personList[i]</code></li>
+            <li><code class="code-voice">    app.displayDialog(`The ${suffixedNum} person in list is ${person}.`)</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW22"></a>
+  <h3 class="section-name" tabindex="0">Adding Leading Zeros to a Number</h3>
+  <p class="para">
+  The handlers in <span class="x-name-no-link">Listing 20-11</span> and <span class="x-name-no-link">Listing 20-12</span> convert a number to a string and prepends it with leading zeros until it reaches a certain length. They accept two parameters—the number to add leading zeros to and the maximum number of leading zeros to add. For example, if the maximum number of leading zeros is set to <code class="code-voice">2</code>, the results range from <code class="code-voice">001</code> to <code class="code-voice">999</code>. If the maximum number of leading zeros is <code class="code-voice">3</code>, the results range from <code class="code-voice">0001</code> to <code class="code-voice">9999</code>, and so on.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20addLeadingZerosToNumber%28theNumber%2C%20theMaxLeadingZeroCount%29%0A%20%20%20%20--%20Determine%20if%20the%20number%20is%20negative%0A%20%20%20%20set%20isNegative%20to%20theNumber%20is%20less%20than%200%0A%0A%20%20%20%20--%20Determine%20when%20the%20maximum%20number%20of%20digits%20will%20be%20reached%0A%20%20%20%20set%20theThreshold%20to%20%2810%20%5E%20theMaxLeadingZeroCount%29%20as%20integer%0A%0A%20%20%20%20--%20If%20the%20number%20is%20shorter%20than%20the%20maximum%20number%20of%20digits%0A%20%20%20%20if%20theNumber%20is%20less%20than%20theThreshold%20then%0A%20%20%20%20%20%20%20%20--%20If%20the%20number%20is%20negative%2C%20convert%20it%20to%20positive%0A%20%20%20%20%20%20%20%20if%20isNegative%20%3D%20true%20then%20set%20theNumber%20to%20-theNumber%0A%0A%20%20%20%20%20%20%20%20--%20Add%20the%20zeros%20to%20the%20number%0A%20%20%20%20%20%20%20%20set%20theLeadingZeros%20to%20%22%22%0A%20%20%20%20%20%20%20%20set%20theDigitCount%20to%20length%20of%20%28%28theNumber%20div%201%29%20as%20string%29%0A%20%20%20%20%20%20%20%20set%20theCharacterCount%20to%20%28theMaxLeadingZeroCount%20%2B%201%29%20-%20theDigitCount%0A%20%20%20%20%20%20%20%20repeat%20theCharacterCount%20times%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theLeadingZeros%20to%20%28theLeadingZeros%20%26%20%220%22%29%20as%20string%0A%20%20%20%20%20%20%20%20end%20repeat%0A%0A%20%20%20%20%20%20%20%20--%20Make%20the%20number%20negative%2C%20if%20it%20was%20previously%20negative%0A%20%20%20%20%20%20%20%20if%20isNegative%20%3D%20true%20then%20set%20theLeadingZeros%20to%20%22-%22%20%26%20theLeadingZeros%0A%0A%20%20%20%20%20%20%20%20--%20Return%20the%20prefixed%20number%0A%20%20%20%20%20%20%20%20return%20%28theLeadingZeros%20%26%20%28theNumber%20as%20text%29%29%20as%20string%0A%0A%20%20%20%20%20%20--%20If%20the%20number%20is%20greater%20than%20or%20equal%20to%20the%20maximum%20number%20of%20digits%0A%20%20%20%20else%0A%20%20%20%20%20%20%20%20--%20Return%20the%20original%20number%0A%20%20%20%20%20%20%20%20return%20theNumber%20as%20text%0A%20%20%20%20end%20if%0Aend%20addLeadingZerosToNumber">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW23"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-11</strong>AppleScript: Handler that adds leading zeros to a number</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on addLeadingZerosToNumber(theNumber, theMaxLeadingZeroCount)</code></li>
+            <li><code class="code-voice">    -- Determine if the number is negative</code></li>
+            <li><code class="code-voice">    set isNegative to theNumber is less than 0</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Determine when the maximum number of digits will be reached</code></li>
+            <li><code class="code-voice">    set theThreshold to (10 ^ theMaxLeadingZeroCount) as integer</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- If the number is shorter than the maximum number of digits</code></li>
+            <li><code class="code-voice">    if theNumber is less than theThreshold then</code></li>
+            <li><code class="code-voice">        -- If the number is negative, convert it to positive</code></li>
+            <li><code class="code-voice">        if isNegative = true then set theNumber to -theNumber</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Add the zeros to the number</code></li>
+            <li><code class="code-voice">        set theLeadingZeros to &quot;&quot;</code></li>
+            <li><code class="code-voice">        set theDigitCount to length of ((theNumber div 1) as string)</code></li>
+            <li><code class="code-voice">        set theCharacterCount to (theMaxLeadingZeroCount + 1) - theDigitCount</code></li>
+            <li><code class="code-voice">        repeat theCharacterCount times</code></li>
+            <li><code class="code-voice">            set theLeadingZeros to (theLeadingZeros &amp; &quot;0&quot;) as string</code></li>
+            <li><code class="code-voice">        end repeat</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Make the number negative, if it was previously negative</code></li>
+            <li><code class="code-voice">        if isNegative = true then set theLeadingZeros to &quot;-&quot; &amp; theLeadingZeros</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        -- Return the prefixed number</code></li>
+            <li><code class="code-voice">        return (theLeadingZeros &amp; (theNumber as text)) as string</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">      -- If the number is greater than or equal to the maximum number of digits</code></li>
+            <li><code class="code-voice">    else</code></li>
+            <li><code class="code-voice">        -- Return the original number</code></li>
+            <li><code class="code-voice">        return theNumber as text</code></li>
+            <li><code class="code-voice">    end if</code></li>
+            <li><code class="code-voice">end addLeadingZerosToNumber</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20addLeadingZerosToNumber%28num%2C%20maxLeadingZeroCount%29%20%7B%0A%20%20%20%20var%20leadingZeros%20%3D%20%22%22%0A%0A%20%20%20%20%2F%2F%20Convert%20the%20number%20to%20absolute%20value%0A%20%20%20%20var%20absNum%20%3D%20Math.abs%28num%29%0A%0A%20%20%20%20%2F%2F%20Determine%20when%20the%20maximum%20number%20of%20digits%20will%20be%20reached%0A%20%20%20%20var%20threshold%20%3D%20Math.pow%2810%2C%20maxLeadingZeroCount%29%0A%0A%20%20%20%20%2F%2F%20If%20the%20number%20is%20shorter%20than%20the%20maximum%20number%20of%20digits%0A%20%20%20%20if%20%28absNum%20%3C%20threshold%29%20%7B%0A%20%20%20%20%20%20%20%20%2F%2F%20Prepare%20a%20leading%20zeros%20string%0A%20%20%20%20%20%20%20%20var%20digitCount%20%3D%20Math.trunc%28absNum%29.toString%28%29.length%0A%20%20%20%20%20%20%20%20var%20charCount%20%3D%20maxLeadingZeroCount%20%2B%201%20-%20digitCount%0A%20%20%20%20%20%20%20%20for%20%28var%20i%20%3D%200%20%3B%20i%20%3C%20charCount%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20leadingZeros%20%2B%3D%20%220%22%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%0A%20%20%20%20%2F%2F%20Add%20the%20zeros%20to%20the%20number%0A%20%20%20%20var%20result%20%3D%20%60%24%7BleadingZeros%7D%24%7BabsNum%7D%60%0A%0A%20%20%20%20%2F%2F%20Make%20the%20number%20negative%2C%20if%20it%20was%20previously%20negative%0A%20%20%20%20if%20%28num%20%3C%200%29%20%7B%0A%20%20%20%20%20%20%20%20result%20%3D%20%60-%24%7Bresult%7D%60%0A%20%20%20%20%7D%0A%20%20%20%20%2F%2F%20Return%20the%20prefixed%20number%0A%20%20%20%20return%20result%0A%7D%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW28"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-12</strong>JavaScript: Function that adds leading zeros to a number</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function addLeadingZerosToNumber(num, maxLeadingZeroCount) {</code></li>
+            <li><code class="code-voice">    var leadingZeros = &quot;&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    // Convert the number to absolute value</code></li>
+            <li><code class="code-voice">    var absNum = Math.abs(num)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    // Determine when the maximum number of digits will be reached</code></li>
+            <li><code class="code-voice">    var threshold = Math.pow(10, maxLeadingZeroCount)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    // If the number is shorter than the maximum number of digits</code></li>
+            <li><code class="code-voice">    if (absNum &lt; threshold) {</code></li>
+            <li><code class="code-voice">        // Prepare a leading zeros string</code></li>
+            <li><code class="code-voice">        var digitCount = Math.trunc(absNum).toString().length</code></li>
+            <li><code class="code-voice">        var charCount = maxLeadingZeroCount + 1 - digitCount</code></li>
+            <li><code class="code-voice">        for (var i = 0 ; i &lt; charCount; i++) {</code></li>
+            <li><code class="code-voice">            leadingZeros += &quot;0&quot;</code></li>
+            <li><code class="code-voice">        }</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    // Add the zeros to the number</code></li>
+            <li><code class="code-voice">    var result = `${leadingZeros}${absNum}`</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    // Make the number negative, if it was previously negative</code></li>
+            <li><code class="code-voice">    if (num &lt; 0) {</code></li>
+            <li><code class="code-voice">        result = `-${result}`</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">    // Return the prefixed number</code></li>
+            <li><code class="code-voice">    return result</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 20-13</span> and <span class="x-name-no-link">Listing 20-14</span> show how to call the handlers in <span class="x-name-no-link">Listing 20-11</span> and <span class="x-name-no-link">Listing 20-12</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=addLeadingZerosToNumber%289%2C%203%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW26"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-13</strong>AppleScript: Calling a handler to add leading zeros to a number</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">addLeadingZerosToNumber(9, 3)</code></li>
+            <li><code class="code-voice">--&gt; Result: &quot;0009&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=addLeadingZerosToNumber%289%2C%203%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW29"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-14</strong>JavaScript: Calling a function to add leading zeros to a number</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">addLeadingZerosToNumber(9, 3)</code></li>
+            <li><code class="code-voice">// Result: &quot;0009&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW8"></a>
+  <h3 class="section-name" tabindex="0">Comma-Delimiting a Number</h3>
+  <p class="para">
+  The handlers <span class="x-name-no-link">Listing 20-15</span> and <span class="x-name-no-link">Listing 20-16</span> comma-delimit a numeric value and converts it to a string.
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW30"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">These handlers call the <code class="code-voice">convertNumberToString()</code> handler. See <span class="x-name"><a href="#//apple_ref/doc/uid/TP40016239-CH47-SW6" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH47-SW6">Listing 20-3</a></span>.
+    	</p>
+    <p class="para">
+  
+</p>
+
+  </aside>
+</div><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20convertNumberToCommaDelimitedString%28theNumber%29%0A%20%20%20%20--%20Convert%20the%20number%20to%20a%20string%0A%20%20%20%20set%20theNumber%20to%20convertNumberToString%28theNumber%29%0A%0A%20%20%20%20--%20Determine%20the%20length%20of%20the%20number%0A%20%20%20%20set%20theNumberLength%20to%20length%20of%20theNumber%0A%0A%20%20%20%20--%20Reverse%20the%20number%20so%20a%20comma%20can%20be%20added%20every%203%20digits%0A%20%20%20%20set%20theNumber%20to%20%28reverse%20of%20every%20character%20of%20theNumber%29%20as%20string%0A%0A%20%20%20%20--%20Loop%20through%20the%20number%27s%20digits%2C%20add%20commas%2C%20and%20put%20the%20numbers%20back%20in%20the%20correct%20order%0A%20%20%20%20set%20theConvertedNumber%20to%20%22%22%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20theNumberLength%0A%20%20%20%20%20%20%20%20if%20a%20is%20theNumberLength%20or%20%28a%20mod%203%29%20is%20not%200%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theConvertedNumber%20to%20%28character%20a%20of%20theNumber%20%26%20theConvertedNumber%29%20as%20string%0A%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theConvertedNumber%20to%20%28%22%2C%22%20%26%20character%20a%20of%20theNumber%20%26%20theConvertedNumber%29%20as%20string%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0A%0A%20%20%20%20--%20Return%20the%20comma%20delimited%20number%0A%20%20%20%20return%20theConvertedNumber%0Aend%20convertNumberToCommaDelimitedString">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW9"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-15</strong>AppleScript: Handler that comma-delimits a number</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on convertNumberToCommaDelimitedString(theNumber)</code></li>
+            <li><code class="code-voice">    -- Convert the number to a string</code></li>
+            <li><code class="code-voice">    set theNumber to convertNumberToString(theNumber)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Determine the length of the number</code></li>
+            <li><code class="code-voice">    set theNumberLength to length of theNumber</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Reverse the number so a comma can be added every 3 digits</code></li>
+            <li><code class="code-voice">    set theNumber to (reverse of every character of theNumber) as string</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Loop through the number&#39;s digits, add commas, and put the numbers back in the correct order</code></li>
+            <li><code class="code-voice">    set theConvertedNumber to &quot;&quot;</code></li>
+            <li><code class="code-voice">    repeat with a from 1 to theNumberLength</code></li>
+            <li><code class="code-voice">        if a is theNumberLength or (a mod 3) is not 0 then</code></li>
+            <li><code class="code-voice">            set theConvertedNumber to (character a of theNumber &amp; theConvertedNumber) as string</code></li>
+            <li><code class="code-voice">        else</code></li>
+            <li><code class="code-voice">            set theConvertedNumber to (&quot;,&quot; &amp; character a of theNumber &amp; theConvertedNumber) as string</code></li>
+            <li><code class="code-voice">        end if</code></li>
+            <li><code class="code-voice">    end repeat</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Return the comma delimited number</code></li>
+            <li><code class="code-voice">    return theConvertedNumber</code></li>
+            <li><code class="code-voice">end convertNumberToCommaDelimitedString</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20convertNumberToCommaDelimitedString%28num%29%20%7B%0A%20%20%20%20%2F%2F%20Convert%20the%20number%20to%20a%20string%0A%20%20%20%20var%20numString%20%3D%20num.toString%28%29%0A%20%20%20%20if%20%28numString.indexOf%28%22e%22%29%20!%3D%20-%201%29%20%7B%0A%20%20%20%20%20%20%20%20numString%20%3D%20convertNumberToString%28numString%29%0A%20%20%20%20%7D%0A%0A%20%20%20%20%2F%2F%20Reverse%20the%20number%20so%20a%20comma%20can%20be%20added%20every%203%20digits%0A%20%20%20%20numString%20%3D%20numString.split%28%22%22%29.reverse%28%29.join%28%22%22%29%0A%20%20%20%20var%20numStringWithCommas%20%3D%20%22%22%0A%0A%20%20%20%20%2F%2F%20Determine%20the%20length%20of%20the%20number%0A%20%20%20%20var%20numStringLength%20%3D%20numString.length%0A%0A%20%20%20%20%2F%2F%20Loop%20through%20the%20number%27s%20digits%2C%20add%20commas%2C%20and%20put%20the%20numbers%20back%20in%20the%20correct%20order%0A%20%20%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20numStringLength%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20%20%20%20%20var%20toPrepend%20%3D%20numString%5Bi%5D%0A%20%20%20%20%20%20%20%20if%20%28i%20!%3D%20numStringLength%20-%201%20%26%26%20%28%28i%20%2B%201%29%20%25%203%29%20%3D%3D%200%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20toPrepend%20%3D%20%22%2C%22%20%2B%20toPrepend%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20numStringWithCommas%20%3D%20toPrepend%20%2B%20numStringWithCommas%0A%20%20%20%20%7D%0A%0A%20%20%20%20%2F%2F%20Return%20the%20comma%20delimited%20number%0A%20%20%20%20return%20numStringWithCommas%0A%7D">Open in Script Editor</a>
+</p><p class="para">
+  
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW31"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-16</strong>JavaScript: Function that comma-delimits a number</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function convertNumberToCommaDelimitedString(num) {</code></li>
+            <li><code class="code-voice">    // Convert the number to a string</code></li>
+            <li><code class="code-voice">    var numString = num.toString()</code></li>
+            <li><code class="code-voice">    if (numString.indexOf(&quot;e&quot;) != - 1) {</code></li>
+            <li><code class="code-voice">        numString = convertNumberToString(numString)</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    // Reverse the number so a comma can be added every 3 digits</code></li>
+            <li><code class="code-voice">    numString = numString.split(&quot;&quot;).reverse().join(&quot;&quot;)</code></li>
+            <li><code class="code-voice">    var numStringWithCommas = &quot;&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    // Determine the length of the number</code></li>
+            <li><code class="code-voice">    var numStringLength = numString.length</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    // Loop through the number&#39;s digits, add commas, and put the numbers back in the correct order</code></li>
+            <li><code class="code-voice">    for (var i = 0; i &lt; numStringLength; i++) {</code></li>
+            <li><code class="code-voice">        var toPrepend = numString[i]</code></li>
+            <li><code class="code-voice">        if (i != numStringLength - 1 &amp;&amp; ((i + 1) % 3) == 0) {</code></li>
+            <li><code class="code-voice">            toPrepend = &quot;,&quot; + toPrepend</code></li>
+            <li><code class="code-voice">        }</code></li>
+            <li><code class="code-voice">        numStringWithCommas = toPrepend + numStringWithCommas</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    // Return the comma delimited number</code></li>
+            <li><code class="code-voice">    return numStringWithCommas</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 20-17</span> and <span class="x-name-no-link">Listing 20-18</span> shows how to call the handlers in <span class="x-name-no-link">Listing 20-15</span> and <span class="x-name-no-link">Listing 20-16</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=convertNumberToCommaDelimitedString%28872124243234%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW10"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-17</strong>AppleScript: Calling a handler to comma-delimit a number</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">convertNumberToCommaDelimitedString(872124243234)</code></li>
+            <li><code class="code-voice">--&gt; Result: &quot;872,124,243,234&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=convertNumberToCommaDelimitedString%28872124243234%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW33"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-18</strong>JavaScript: Calling a function to comma-delimit a number</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">convertNumberToCommaDelimitedString(872124243234)</code></li>
+            <li><code class="code-voice">// Result: &quot;872,124,243,234&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW34"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">When you use AppleScriptObjC or JavaScriptObjC, you can use methods of the <code class="code-voice u-api"><a href="../../../LegacyTechnologies/WebObjects/WebObjects_3.5/Reference/Frameworks/ObjC/Foundation/Classes/NSNumberFormatter/Description.html#//apple_ref/occ/cl/NSNumberFormatter" data-renderer-version="1">NSNumberFormatter</a></code> to format numbers in different ways.
+    	</p>
+    <p class="para">
+  The handlers in <span class="x-name-no-link">Listing 20-19</span> and <span class="x-name-no-link">Listing 20-20</span> convert a number to a string by returning a comma-delimited, rounded, localized decimal value. For example: (<code class="code-voice">3.64525432506E+5</code> at 0 places converts to <code class="code-voice">&quot;364525&quot;</code>, <code class="code-voice">3.64525432506E+5</code> at 3 places converts to <code class="code-voice">&quot;364525.433&quot;</code>, and <code class="code-voice">0.2375</code> at 2 places converts <code class="code-voice">&quot;0.24&quot;</code>.
+</p>
+<p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=use%20framework%20%22Foundation%22%0A%0Aon%20convertNumberToDecimalString%28theNumber%2C%20theNumberOfDecimalPlaces%29%0A%20%20%20%20if%20theNumberOfDecimalPlaces%20is%20greater%20than%200%20then%0A%20%20%20%20%20%20%20%20set%20theDecimalIndicators%20to%20%22.%22%0A%20%20%20%20%20%20%20%20repeat%20theNumberOfDecimalPlaces%20times%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theDecimalIndicators%20to%20theDecimalIndicators%20%26%20%22%23%22%0A%20%20%20%20%20%20%20%20end%20repeat%0A%20%20%20%20else%0A%20%20%20%20%20%20%20%20set%20theDecimalIndicators%20to%20%22%22%0A%20%20%20%20end%20if%0A%20%20%20%20set%20theFormatter%20to%20init%28%29%20of%20alloc%28%29%20of%20NSNumberFormatter%20of%20current%20application%0A%20%20%20%20setFormat_%28%220%22%20%26%20theDecimalIndicators%29%20of%20theFormatter%0A%20%20%20%20set%20theFormattedNumber%20to%20stringFromNumber_%28theNumber%29%20of%20theFormatter%0A%20%20%20%20return%20%28theFormattedNumber%20as%20string%29%0Aend%20convertNumberToDecimalString%0A">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW35"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-19</strong>AppleScriptObjC: Handler that converts a number to a comma-delimited, rounded, localized decimal value</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">use framework &quot;Foundation&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">on convertNumberToDecimalString(theNumber, theNumberOfDecimalPlaces)</code></li>
+            <li><code class="code-voice">    if theNumberOfDecimalPlaces is greater than 0 then</code></li>
+            <li><code class="code-voice">        set theDecimalIndicators to &quot;.&quot;</code></li>
+            <li><code class="code-voice">        repeat theNumberOfDecimalPlaces times</code></li>
+            <li><code class="code-voice">            set theDecimalIndicators to theDecimalIndicators &amp; &quot;#&quot;</code></li>
+            <li><code class="code-voice">        end repeat</code></li>
+            <li><code class="code-voice">    else</code></li>
+            <li><code class="code-voice">        set theDecimalIndicators to &quot;&quot;</code></li>
+            <li><code class="code-voice">    end if</code></li>
+            <li><code class="code-voice">    set theFormatter to init() of alloc() of NSNumberFormatter of current application</code></li>
+            <li><code class="code-voice">    setFormat_(&quot;0&quot; &amp; theDecimalIndicators) of theFormatter</code></li>
+            <li><code class="code-voice">    set theFormattedNumber to stringFromNumber_(theNumber) of theFormatter</code></li>
+            <li><code class="code-voice">    return (theFormattedNumber as string)</code></li>
+            <li><code class="code-voice">end convertNumberToDecimalString</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20convertNumberToDecimalString%28number%2C%20numberOfDecimalPlaces%29%20%7B%0A%20%20%20%20var%20decimalIndicators%20%3D%20%22%22%0A%20%20%20%20if%20%28numberOfDecimalPlaces%20%3E%200%29%20%7B%0A%20%20%20%20%20%20%20%20decimalIndicators%20%3D%20%22.%22%0A%20%20%20%20%20%20%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20numberOfDecimalPlaces%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20decimalIndicators%20%2B%3D%20%22%23%22%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20var%20formatter%20%3D%20%24.NSNumberFormatter.new%0A%20%20%20%20formatter.format%20%3D%20%600%24%7BdecimalIndicators%7D%60%0A%20%20%20%20var%20formattedNumber%20%3D%20formatter.stringFromNumber%28number%29%0A%20%20%20%20return%20formattedNumber.js%0A%7D%0A">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW44"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-20</strong>JavaScriptObjC: Function that converts a number to a comma-delimited, rounded, localized decimal value</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function convertNumberToDecimalString(number, numberOfDecimalPlaces) {</code></li>
+            <li><code class="code-voice">    var decimalIndicators = &quot;&quot;</code></li>
+            <li><code class="code-voice">    if (numberOfDecimalPlaces &gt; 0) {</code></li>
+            <li><code class="code-voice">        decimalIndicators = &quot;.&quot;</code></li>
+            <li><code class="code-voice">        for (var i = 0; i &lt; numberOfDecimalPlaces; i++) {</code></li>
+            <li><code class="code-voice">            decimalIndicators += &quot;#&quot;</code></li>
+            <li><code class="code-voice">        }</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">    var formatter = $.NSNumberFormatter.new</code></li>
+            <li><code class="code-voice">    formatter.format = `0${decimalIndicators}`</code></li>
+            <li><code class="code-voice">    var formattedNumber = formatter.stringFromNumber(number)</code></li>
+            <li><code class="code-voice">    return formattedNumber.js</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  The handlers in <span class="x-name-no-link">Listing 20-21</span> and <span class="x-name-no-link">Listing 20-22</span> convert a number to a string by returning a comma-delimited, rounded, localized percentage value. For example: <code class="code-voice">0.2345</code> to <code class="code-voice">&quot;23%&quot;</code> or <code class="code-voice">0.2375</code> to <code class="code-voice">&quot;24%&quot;</code>.
+</p>
+<p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=use%20framework%20%22Foundation%22%0A%0Aon%20convertNumberToPercentageString%28theNumber%29%0A%20%20%20%20set%20theStyle%20to%20NSNumberFormatterPercentStyle%20of%20current%20application%0A%20%20%20%20set%20theFormattedNumber%20to%20localizedStringFromNumber_numberStyle_%28theNumber%2C%20theStyle%29%20of%20NSNumberFormatter%20of%20current%20application%0A%20%20%20%20return%20%28theFormattedNumber%20as%20string%29%0Aend%20convertNumberToPercentageString">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW36"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-21</strong>AppleScriptObjC: Handler that converts a number to a comma-delimited, rounded, localized percentage value</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">use framework &quot;Foundation&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">on convertNumberToPercentageString(theNumber)</code></li>
+            <li><code class="code-voice">    set theStyle to NSNumberFormatterPercentStyle of current application</code></li>
+            <li><code class="code-voice">    set theFormattedNumber to localizedStringFromNumber_numberStyle_(theNumber, theStyle) of NSNumberFormatter of current application</code></li>
+            <li><code class="code-voice">    return (theFormattedNumber as string)</code></li>
+            <li><code class="code-voice">end convertNumberToPercentageString</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20convertNumberToPercentageString%28number%29%20%7B%0A%20%20%20%20var%20style%20%3D%20%24.NSNumberFormatterPercentStyle%0A%20%20%20%20var%20formattedNumber%20%3D%20%24.NSNumberFormatter.localizedStringFromNumberNumberStyle%28number%2C%20style%29%0A%20%20%20%20return%20formattedNumber.js%0A%7D">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW45"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-22</strong>JavaScriptObjC: Function that converts a number to a comma-delimited, rounded, localized percentage value</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function convertNumberToPercentageString(number) {</code></li>
+            <li><code class="code-voice">    var style = $.NSNumberFormatterPercentStyle</code></li>
+            <li><code class="code-voice">    var formattedNumber = $.NSNumberFormatter.localizedStringFromNumberNumberStyle(number, style)</code></li>
+            <li><code class="code-voice">    return formattedNumber.js</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  The handlers in <span class="x-name-no-link">Listing 20-23</span> and <span class="x-name-no-link">Listing 20-24</span> convert a number to a string by returning a comma-delimited, rounded, localized currency value. For example: <code class="code-voice">9128</code> to <code class="code-voice">&quot;$9,128.00&quot;</code> or <code class="code-voice">9978.2485</code> to <code class="code-voice">&quot;$9,978.25&quot;</code>.
+</p>
+<p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=use%20framework%20%22Foundation%22%0A%0Aon%20convertNumberToCurrencyString%28theNumber%29%0A%20%20%20%20set%20theStyle%20to%20NSNumberFormatterCurrencyStyle%20of%20current%20application%0A%20%20%20%20set%20theFormattedNumber%20to%20localizedStringFromNumber_numberStyle_%28theNumber%2C%20theStyle%29%20of%20NSNumberFormatter%20of%20current%20application%0A%20%20%20%20return%20%28theFormattedNumber%20as%20string%29%0Aend%20convertNumberToCurrencyString">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW37"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-23</strong>AppleScriptObjC: Handler that converts a number to a comma-delimited, rounded, localized currency value</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">use framework &quot;Foundation&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">on convertNumberToCurrencyString(theNumber)</code></li>
+            <li><code class="code-voice">    set theStyle to NSNumberFormatterCurrencyStyle of current application</code></li>
+            <li><code class="code-voice">    set theFormattedNumber to localizedStringFromNumber_numberStyle_(theNumber, theStyle) of NSNumberFormatter of current application</code></li>
+            <li><code class="code-voice">    return (theFormattedNumber as string)</code></li>
+            <li><code class="code-voice">end convertNumberToCurrencyString</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20convertNumberToCurrencyString%28number%29%20%7B%0A%20%20%20%20var%20style%20%3D%20%24.NSNumberFormatterCurrencyStyle%0A%20%20%20%20var%20formattedNumber%20%3D%20%24.NSNumberFormatter.localizedStringFromNumberNumberStyle%28number%2C%20style%29%0A%20%20%20%20return%20formattedNumber.js%0A%7D">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW46"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-24</strong>JavaScriptObjC: Function that converts a number to a comma-delimited, rounded, localized currency value</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function convertNumberToCurrencyString(number) {</code></li>
+            <li><code class="code-voice">    var style = $.NSNumberFormatterCurrencyStyle</code></li>
+            <li><code class="code-voice">    var formattedNumber = $.NSNumberFormatter.localizedStringFromNumberNumberStyle(number, style)</code></li>
+            <li><code class="code-voice">    return formattedNumber.js</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  The handlers in <span class="x-name-no-link">Listing 20-25</span> and <span class="x-name-no-link">Listing 20-26</span> convert a number to a string by returning a string of a numeric value in words. For example: <code class="code-voice">23</code> to “twenty-three&quot;, <code class="code-voice">23.75</code> to <code class="code-voice">&quot;twenty-three point seven five&quot;</code>.
+</p>
+<p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=use%20framework%20%22Foundation%22%0A%0Aon%20convertNumberToWords%28theNumber%29%0A%20%20%20%20set%20theStyle%20to%20NSNumberFormatterSpellOutStyle%20of%20current%20application%0A%20%20%20%20set%20theFormattedNumber%20to%20localizedStringFromNumber_numberStyle_%28theNumber%2C%20theStyle%29%20of%20NSNumberFormatter%20of%20current%20application%0A%20%20%20%20return%20%28theFormattedNumber%20as%20string%29%0Aend%20convertNumberToWords">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW38"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-25</strong>AppleScriptObjC: Handler that converts a number to a string of numeric values in words</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">use framework &quot;Foundation&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">on convertNumberToWords(theNumber)</code></li>
+            <li><code class="code-voice">    set theStyle to NSNumberFormatterSpellOutStyle of current application</code></li>
+            <li><code class="code-voice">    set theFormattedNumber to localizedStringFromNumber_numberStyle_(theNumber, theStyle) of NSNumberFormatter of current application</code></li>
+            <li><code class="code-voice">    return (theFormattedNumber as string)</code></li>
+            <li><code class="code-voice">end convertNumberToWords</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20convertNumberToWords%28number%29%20%7B%0A%20%20%20%20var%20style%20%3D%20%24.NSNumberFormatterSpellOutStyle%0A%20%20%20%20var%20formattedNumber%20%3D%20%24.NSNumberFormatter.localizedStringFromNumberNumberStyle%28number%2C%20style%29%0A%20%20%20%20return%20formattedNumber.js%0A%7D">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW47"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-26</strong>JavaScriptObjC: Function that converts a number to a string of numeric values in words</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function convertNumberToWords(number) {</code></li>
+            <li><code class="code-voice">    var style = $.NSNumberFormatterSpellOutStyle</code></li>
+            <li><code class="code-voice">    var formattedNumber = $.NSNumberFormatter.localizedStringFromNumberNumberStyle(number, style)</code></li>
+            <li><code class="code-voice">    return formattedNumber.js</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  In JavaScript, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a> can also be used to convert a number to a comma-delimited string even more efficiently, as shown in <span class="x-name-no-link">Listing 20-27</span>.
+</p>
+<p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20convertNumberToCommaDelimitedString%28num%29%20%7B%0A%20%20%20%20var%20numPieces%20%3D%20num.toString%28%29.split%28%22.%22%29%0A%20%20%20%20%20%20%20numPieces%5B0%5D%20%3D%20numPieces%5B0%5D.replace%28%2F%5CB%28%3F%3D%28%5Cd%7B3%7D%29%2B%28%3F!%5Cd%29%29%2Fg%2C%20%22%2C%22%29%3B%0A%20%20%20%20return%20numPieces.join%28%22.%22%29%0A%7D">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW39"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-27</strong>JavaScript: Method that uses regular expressions to comma-delimit a number</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function convertNumberToCommaDelimitedString(num) {</code></li>
+            <li><code class="code-voice">    var numPieces = num.toString().split(&quot;.&quot;)</code></li>
+            <li><code class="code-voice">       numPieces[0] = numPieces[0].replace(/\B(?=(\d{3})+(?!\d))/g, &quot;,&quot;);</code></li>
+            <li><code class="code-voice">    return numPieces.join(&quot;.&quot;)</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+
+  </aside>
+</div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW11"></a>
+  <h3 class="section-name" tabindex="0">Determining if a Number is an Odd Number</h3>
+  <p class="para">
+  The handlers in <span class="x-name-no-link">Listing 20-28</span> and <span class="x-name-no-link">Listing 20-29</span> determine whether a whole number is even or odd. A returned value of <code class="code-voice">false</code> indicates the passed number is even; a returned value of <code class="code-voice">true</code> indicates the passed number is odd.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20isNumberOdd%28theNumber%29%0A%20%20%20%20if%20theNumber%20mod%202%20is%20not%200%20then%0A%20%20%20%20%20%20%20%20return%20true%0A%20%20%20%20else%0A%20%20%20%20%20%20%20%20return%20false%0A%20%20%20%20end%20if%0Aend%20isNumberOdd">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW12"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-28</strong>AppleScript: Handler that determines whether a number is odd</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on isNumberOdd(theNumber)</code></li>
+            <li><code class="code-voice">    if theNumber mod 2 is not 0 then</code></li>
+            <li><code class="code-voice">        return true</code></li>
+            <li><code class="code-voice">    else</code></li>
+            <li><code class="code-voice">        return false</code></li>
+            <li><code class="code-voice">    end if</code></li>
+            <li><code class="code-voice">end isNumberOdd</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20isNumberOdd%28num%29%20%7B%0A%20%20%20%20return%20num%20%25%202%20!%3D%3D%200%0A%7D%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW40"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-29</strong>JavaScript: Method that determines whether a number is odd</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function isNumberOdd(num) {</code></li>
+            <li><code class="code-voice">    return num % 2 !== 0</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 20-30</span> and <span class="x-name-no-link">Listing 20-31</span> show how to call the handlers in <span class="x-name-no-link">Listing 20-28</span> and <span class="x-name-no-link">Listing 20-29</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=isNumberOdd%283%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW13"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-30</strong>AppleScript: Calling a handler to determine whether a number is odd</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">isNumberOdd(3)</code></li>
+            <li><code class="code-voice">--&gt; Result: true</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=isNumberOdd%283%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW41"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-31</strong>JavaScript: Calling a method to determine whether a number is odd</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">isNumberOdd(3)</code></li>
+            <li><code class="code-voice">// Result: true</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 20-32</span> and <span class="x-name-no-link">Listing 20-33</span> show how to call the handlers in <span class="x-name-no-link">Listing 20-28</span> and <span class="x-name-no-link">Listing 20-29</span> by prompting the user to enter an even number.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=repeat%0A%20%20%20%20display%20dialog%20%22Enter%20an%20even%20integer%3A%22%20default%20answer%20%22%22%0A%20%20%20%20try%0A%20%20%20%20%20%20%20%20if%20text%20returned%20of%20result%20is%20not%20%22%22%20then%20set%20theNumberProvided%20to%20text%20returned%20of%20result%20as%20integer%0A%20%20%20%20%20%20%20%20if%20isNumberOdd%28theNumberProvided%29%20is%20false%20then%20exit%20repeat%0A%20%20%20%20end%20try%0Aend%20repeat">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW14"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-32</strong>AppleScript: Example script that calls a handler to determine whether a user-entered number is odd</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">repeat</code></li>
+            <li><code class="code-voice">    display dialog &quot;Enter an even integer:&quot; default answer &quot;&quot;</code></li>
+            <li><code class="code-voice">    try</code></li>
+            <li><code class="code-voice">        if text returned of result is not &quot;&quot; then set theNumberProvided to text returned of result as integer</code></li>
+            <li><code class="code-voice">        if isNumberOdd(theNumberProvided) is false then exit repeat</code></li>
+            <li><code class="code-voice">    end try</code></li>
+            <li><code class="code-voice">end repeat</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Awhile%20%28true%29%20%7B%0A%20%20%20%20var%20result%20%3D%20app.displayDialog%28%22Enter%20an%20even%20integer%3A%22%2C%20%7BdefaultAnswer%3A%20%22%22%7D%29%0A%20%20%20%20var%20text%20%3D%20result.textReturned%0A%20%20%20%20if%20%28text%20!%3D%3D%20%22%22%29%20%7B%0A%20%20%20%20%20%20%20%20var%20num%20%3D%20Number%28text%29%0A%20%20%20%20%20%20%20%20if%20%28!isNumberOdd%28num%29%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20break%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW42"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-33</strong>JavaScript: Example script that calls a method to determine whether a user-entered number is odd</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var app = Application.currentApplication()</code></li>
+            <li><code class="code-voice">app.includeStandardAdditions = true</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">while (true) {</code></li>
+            <li><code class="code-voice">    var result = app.displayDialog(&quot;Enter an even integer:&quot;, {defaultAnswer: &quot;&quot;})</code></li>
+            <li><code class="code-voice">    var text = result.textReturned</code></li>
+            <li><code class="code-voice">    if (text !== &quot;&quot;) {</code></li>
+            <li><code class="code-voice">        var num = Number(text)</code></li>
+            <li><code class="code-voice">        if (!isNumberOdd(num)) {</code></li>
+            <li><code class="code-voice">            break</code></li>
+            <li><code class="code-voice">        }</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW15"></a>
+  <h3 class="section-name" tabindex="0">Rounding and Truncating a Number</h3>
+  <p class="para">
+  The handlers in <span class="x-name-no-link">Listing 20-34</span> and <span class="x-name-no-link">Listing 20-35</span> round and truncate a numeric value, and convert it to a string. Provide a numeric value and indicate a number of decimal places.
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW43"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">These handlers call the <code class="code-voice">convertNumberToString()</code> handler. See <span class="x-name"><a href="#//apple_ref/doc/uid/TP40016239-CH47-SW6" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH47-SW6">Listing 20-3</a></span>.
+    	</p>
+    
+  </aside>
+</div><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20roundAndTruncateNumber%28theNumber%2C%20numberOfDecimalPlaces%29%0A%20%20%20%20if%20numberOfDecimalPlaces%20is%200%20then%0A%20%20%20%20%20%20%20%20set%20theNumber%20to%20theNumber%20%2B%200.5%0A%20%20%20%20%20%20%20%20return%20convertNumberToString%28theNumber%20div%201%29%0A%20%20%20%20end%20if%0A%0A%20%20%20%20set%20theRoundingValue%20to%20%225%22%0A%20%20%20%20repeat%20numberOfDecimalPlaces%20times%0A%20%20%20%20%20%20%20%20set%20theRoundingValue%20to%20%220%22%20%26%20theRoundingValue%0A%20%20%20%20end%20repeat%0A%20%20%20%20set%20theRoundingValue%20to%20%28%22.%22%20%26%20theRoundingValue%29%20as%20number%0A%0A%20%20%20%20set%20theNumber%20to%20theNumber%20%2B%20theRoundingValue%0A%0A%20%20%20%20set%20theModValue%20to%20%221%22%0A%20%20%20%20repeat%20numberOfDecimalPlaces%20-%201%20times%0A%20%20%20%20%20%20%20%20set%20theModValue%20to%20%220%22%20%26%20theModValue%0A%20%20%20%20end%20repeat%0A%20%20%20%20set%20theModValue%20to%20%28%22.%22%20%26%20theModValue%29%20as%20number%0A%0A%20%20%20%20set%20theSecondPart%20to%20%28theNumber%20mod%201%29%20div%20theModValue%0A%20%20%20%20if%20length%20of%20%28theSecondPart%20as%20text%29%20is%20less%20than%20numberOfDecimalPlaces%20then%0A%20%20%20%20%20%20%20%20repeat%20numberOfDecimalPlaces%20-%20%28the%20length%20of%20%28theSecondPart%20as%20text%29%29%20times%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theSecondPart%20to%20%28%220%22%20%26%20theSecondPart%29%20as%20string%0A%20%20%20%20%20%20%20%20end%20repeat%0A%20%20%20%20end%20if%0A%0A%20%20%20%20set%20theFirstPart%20to%20theNumber%20div%201%0A%20%20%20%20set%20theFirstPart%20to%20convertNumberToString%28theFirstPart%29%0A%20%20%20%20set%20theNumber%20to%20%28theFirstPart%20%26%20%22.%22%20%26%20theSecondPart%29%0A%0A%20%20%20%20return%20theNumber%0Aend%20roundAndTruncateNumber">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW16"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-34</strong>AppleScript: Handler for rounding and truncating a number</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on roundAndTruncateNumber(theNumber, numberOfDecimalPlaces)</code></li>
+            <li><code class="code-voice">    if numberOfDecimalPlaces is 0 then</code></li>
+            <li><code class="code-voice">        set theNumber to theNumber + 0.5</code></li>
+            <li><code class="code-voice">        return convertNumberToString(theNumber div 1)</code></li>
+            <li><code class="code-voice">    end if</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    set theRoundingValue to &quot;5&quot;</code></li>
+            <li><code class="code-voice">    repeat numberOfDecimalPlaces times</code></li>
+            <li><code class="code-voice">        set theRoundingValue to &quot;0&quot; &amp; theRoundingValue</code></li>
+            <li><code class="code-voice">    end repeat</code></li>
+            <li><code class="code-voice">    set theRoundingValue to (&quot;.&quot; &amp; theRoundingValue) as number</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    set theNumber to theNumber + theRoundingValue</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    set theModValue to &quot;1&quot;</code></li>
+            <li><code class="code-voice">    repeat numberOfDecimalPlaces - 1 times</code></li>
+            <li><code class="code-voice">        set theModValue to &quot;0&quot; &amp; theModValue</code></li>
+            <li><code class="code-voice">    end repeat</code></li>
+            <li><code class="code-voice">    set theModValue to (&quot;.&quot; &amp; theModValue) as number</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    set theSecondPart to (theNumber mod 1) div theModValue</code></li>
+            <li><code class="code-voice">    if length of (theSecondPart as text) is less than numberOfDecimalPlaces then</code></li>
+            <li><code class="code-voice">        repeat numberOfDecimalPlaces - (the length of (theSecondPart as text)) times</code></li>
+            <li><code class="code-voice">            set theSecondPart to (&quot;0&quot; &amp; theSecondPart) as string</code></li>
+            <li><code class="code-voice">        end repeat</code></li>
+            <li><code class="code-voice">    end if</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    set theFirstPart to theNumber div 1</code></li>
+            <li><code class="code-voice">    set theFirstPart to convertNumberToString(theFirstPart)</code></li>
+            <li><code class="code-voice">    set theNumber to (theFirstPart &amp; &quot;.&quot; &amp; theSecondPart)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    return theNumber</code></li>
+            <li><code class="code-voice">end roundAndTruncateNumber</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20roundAndTruncateNumber%28num%2C%20numDecimalPlaces%29%20%7B%0A%20%20%20%20if%20%28numDecimalPlaces%20%3D%3D%3D%200%29%20%7B%0A%20%20%20%20%20%20%20%20num%20%3D%20num%20%2B%200.5%0A%20%20%20%20%20%20%20%20return%20convertNumberToString%28num%20%2F%201%29%0A%20%20%20%20%7D%0A%0A%20%20%20%20var%20roundingValue%20%3D%20%225%22%0A%20%20%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20numDecimalPlaces%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20%20%20%20%20roundingValue%20%3D%20%220%22%20%2B%20roundingValue%0A%20%20%20%20%7D%0A%0A%20%20%20%20roundingValue%20%3D%20Number%28%220.%22%20%2B%20roundingValue%29%0A%20%20%20%20num%20%2B%3D%20roundingValue%0A%0A%20%20%20%20var%20modValue%20%3D%20%221%22%0A%0A%20%20%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20numDecimalPlaces%20-%201%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20%20%20%20%20modValue%20%3D%20%220%22%20%2B%20modValue%0A%20%20%20%20%7D%0A%0A%20%20%20%20modValue%20%3D%20Number%28%220.%22%20%2B%20modValue%29%0A%0A%20%20%20%20var%20secondPart%20%3D%20Math.floor%28%28num%20%25%201%29%20%2F%20modValue%29%0A%20%20%20%20var%20secondPartStringLength%20%3D%20secondPart.toString%28%29.length%0A%0A%20%20%20%20if%20%28secondPartStringLength%20%3C%20numDecimalPlaces%29%20%7B%0A%0A%20%20%20%20%20%20%20%20var%20count%20%3D%20numDecimalPlaces%20-%20secondPartStringLength%0A%0A%20%20%20%20%20%20%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20count%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20secondPart%20%3D%20%220%22%20%2B%20secondPart%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%0A%20%20%20%20var%20firstPart%20%3D%20Math.floor%28num%29%0A%20%20%20%20firstPart%20%3D%20convertNumberToString%28firstPart%29%0A%0A%20%20%20%20return%20%60%24%7BfirstPart%7D.%24%7BsecondPart%7D%60%0A%7D">Open in Script Editor</a>
+</p><p class="para">
+  
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW48"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-35</strong>JavaScript: Function for rounding and truncating a number</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function roundAndTruncateNumber(num, numDecimalPlaces) {</code></li>
+            <li><code class="code-voice">    if (numDecimalPlaces === 0) {</code></li>
+            <li><code class="code-voice">        num = num + 0.5</code></li>
+            <li><code class="code-voice">        return convertNumberToString(num / 1)</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    var roundingValue = &quot;5&quot;</code></li>
+            <li><code class="code-voice">    for (var i = 0; i &lt; numDecimalPlaces; i++) {</code></li>
+            <li><code class="code-voice">        roundingValue = &quot;0&quot; + roundingValue</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    roundingValue = Number(&quot;0.&quot; + roundingValue)</code></li>
+            <li><code class="code-voice">    num += roundingValue</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    var modValue = &quot;1&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    for (var i = 0; i &lt; numDecimalPlaces - 1; i++) {</code></li>
+            <li><code class="code-voice">        modValue = &quot;0&quot; + modValue</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    modValue = Number(&quot;0.&quot; + modValue)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    var secondPart = Math.floor((num % 1) / modValue)</code></li>
+            <li><code class="code-voice">    var secondPartStringLength = secondPart.toString().length</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    if (secondPartStringLength &lt; numDecimalPlaces) {</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        var count = numDecimalPlaces - secondPartStringLength</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">        for (var i = 0; i &lt; count; i++) {</code></li>
+            <li><code class="code-voice">            secondPart = &quot;0&quot; + secondPart</code></li>
+            <li><code class="code-voice">        }</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    var firstPart = Math.floor(num)</code></li>
+            <li><code class="code-voice">    firstPart = convertNumberToString(firstPart)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    return `${firstPart}.${secondPart}`</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 20-36</span> shows how to call the handler in <span class="x-name-no-link">Listing 20-34</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=roundAndTruncateNumber%281.04575%2C%203%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH47-SW17"></a>
+    <span class="caption"><strong class="caption-number">Listing 20-36</strong>AppleScript: Calling a handler to round and truncate a number</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">roundAndTruncateNumber(1.04575, 3)</code></li>
+            <li><code class="code-voice">    --&gt; Result: &quot;1.046&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  
+</p>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW1">Manipulating Text</a></p>
+  			<p class="next-link"><a href="ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH48-SW1">Manipulating Lists of Items</a></p>
+
+    <p class="copyright">Copyright &#x00a9; 2018 Apple Inc. All rights reserved. 
+  <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a> | 
+  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a> | 
+  <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Updated: 2016-06-13</a>
+</p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <script src="../../../../Resources/1282/JavaScript/devpubs-1.6.3.js" type="text/javascript" charset="utf-8"></script>
+  <div id="_omniture_top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="awdappledeveloper"
+</script>
+
+<script type="text/javascript" src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
+<script type="text/javascript">
+s.channel="www.documentationarchive.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="https://developer.apple.com/bugreporter/" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+</html>

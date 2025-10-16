@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+  <title>Mac Automation Scripting Guide: Manipulating Text</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1282/CSS/style-1.6.3.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1282/CSS/feedback-1.6.3.css" />
+  <meta charset='utf-8'> 
+<meta id="j-version" name="j-version" content="" />
+<meta id="build" name="build" content="c1e4c7a89af8f899a21cfa81fc33ba42" />
+<meta id="document-version" name="document-version" content="1.1.0" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages &amp; Utilities}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40016239" />
+<meta id="chapterId" name="chapterId" content="TP40016239-CH33">
+<meta id="book-title" name="book-title" content="Mac Automation Scripting Guide" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2016-06-13" />
+<meta id="description" name="description" content="New document." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+<meta id="resources-uri" name="resources-uri" content="../../../../Resources/1282">
+<link id="book-index-page" rel="Start" title="" type="text/html" href="./index.html">
+<!-- , next_chapter: next_chapter, previous_chapter: previous_chapter -->
+<link id="next-page" rel="Next" type="text/html" href="">
+<link id="previous-page" rel="Prev" type="text/html" href="">
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta id="platforms" name="platforms" content="OS X">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/">Documentation Archive
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/1282/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="https://developer.apple.com">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">Mac Automation Scripting Guide</span>
+    </p>
+    <form id="search" class="hideInXcode" method="get" action="/search/index.php" accept-charset="utf-8" autocomplete="off">
+  <input type="search" id="ssi_SearchField" placeholder="Search Documentation Archive" name="q" autocomplete="off" tabindex="2" />
+</form>
+
+      
+   
+   
+
+
+
+    <img id="shortstack" src="../../../../Resources/1282/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav id="navigator" class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH2-SW1"
+            class="part-name">
+            <a href="index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH56-SW1">Mac Scripting Essentials</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#//apple_ref/doc/uid/TP40016239-CH56-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH56-SW1">About Mac Scripting</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="HowMacScriptingWorks.html#//apple_ref/doc/uid/TP40016239-CH73-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH73-SW1">How Mac Scripting Works</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="TypesofScripts.html#//apple_ref/doc/uid/TP40016239-CH72-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH72-SW1">Types of Scripts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="AboutthisGuide.html#//apple_ref/doc/uid/TP40016239-CH71-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH71-SW1">About this Guide</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH10-SW1"
+            class="part-name">
+            <a href="GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH5-SW1">Starting Scripting</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH5-SW1">Getting to Know Script Editor</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CreateaScript.html#//apple_ref/doc/uid/TP40016239-CH12-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH12-SW1">Creating a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SaveaScript.html#//apple_ref/doc/uid/TP40016239-CH13-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH13-SW1">Saving a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RunaScript.html#//apple_ref/doc/uid/TP40016239-CH14-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH14-SW1">Running a Script</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ConfigureScriptingPreferences.html#//apple_ref/doc/uid/TP40016239-CH70-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH70-SW1">Configuring Scripting Preferences</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH9-SW1"
+            class="part-name">
+            <a href="AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH75-SW2" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH75-SW2">Accessing Scripting Terminology</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AboutScriptingTerminology.html#//apple_ref/doc/uid/TP40016239-CH75-SW2" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH75-SW2">About Scripting Terminology</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="OpenaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH76-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH76-SW1">Opening a Scripting Dictionary</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="NavigateaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH77-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH77-SW1">Navigating a Scripting Dictionary</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH74-SW1"
+            class="part-name">
+            <a href="UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH52-SW1">Modularizing Code</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="UseHandlersFunctions.html#//apple_ref/doc/uid/TP40016239-CH52-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH52-SW1">Using Handlers/Functions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UseScriptLibraries.html#//apple_ref/doc/uid/TP40016239-CH36-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH36-SW1">Using Script Libraries</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH57-SW1"
+            class="part-name">
+            <a href="ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH34-SW1">Working with Files and Folders</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH34-SW1">Referencing Files and Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ReadandWriteFiles.html#//apple_ref/doc/uid/TP40016239-CH58-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH58-SW1">Reading and Writing Files</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ProcessDroppedFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH53-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH53-SW1">Processing Dropped Files and Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH39-SW1">Watching Folders</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH59-SW1"
+            class="part-name nav-part-active open-part">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH33-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW1">Working with Text, Numbers, and Lists</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter nav-current-chapter">
+              	<a href="#//apple_ref/doc/uid/TP40016239-CH33-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW1">Manipulating Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH47-SW1">Manipulating Numbers</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH48-SW1">Manipulating Lists of Items</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH60-SW1"
+            class="part-name">
+            <a href="DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH15-SW1">Interacting with Users</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="DisplayDialogsandAlerts.html#//apple_ref/doc/uid/TP40016239-CH15-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH15-SW1">Displaying Dialogs and Alerts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforText.html#//apple_ref/doc/uid/TP40016239-CH80-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH80-SW1">Prompting for Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DisplayNotifications.html#//apple_ref/doc/uid/TP40016239-CH61-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH61-SW1">Displaying Notifications</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SpeakText.html#//apple_ref/doc/uid/TP40016239-CH62-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH62-SW1">Speaking Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaFileorFolder.html#//apple_ref/doc/uid/TP40016239-CH81-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH81-SW1">Prompting for Files or Folders</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaFileName.html#//apple_ref/doc/uid/TP40016239-CH82-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH82-SW1">Prompting for a File Name</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaChoicefromaList.html#//apple_ref/doc/uid/TP40016239-CH83-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH83-SW1">Prompting for a Choice from a List</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="PromptforaColor.html#//apple_ref/doc/uid/TP40016239-CH86-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH86-SW1">Prompting for a Color</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DisplayProgress.html#//apple_ref/doc/uid/TP40016239-CH37-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH37-SW1">Displaying Progress</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH63-SW1"
+            class="part-name">
+            <a href="ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH49-SW1">Working with HTML and URLs</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="ConvertRGBtoHTMLColor.html#//apple_ref/doc/uid/TP40016239-CH49-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH49-SW1">Converting RGB to HTML Color</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="EncodeandDecodeText.html#//apple_ref/doc/uid/TP40016239-CH51-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH51-SW1">Encoding and Decoding Text</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ParseHTML.html#//apple_ref/doc/uid/TP40016239-CH50-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH50-SW1">Parsing HTML</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RemoveMarkupfromHTML.html#//apple_ref/doc/uid/TP40016239-CH64-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH64-SW1">Removing HTML Markup from Text</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH65-SW1"
+            class="part-name">
+            <a href="WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH66-SW1">Working with Data</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="WorkwithPropertyListFiles.html#//apple_ref/doc/uid/TP40016239-CH66-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH66-SW1">Working with Property List Files</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="WorkwithXML.html#//apple_ref/doc/uid/TP40016239-CH67-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH67-SW1">Working with XML</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH35-SW1"
+            class="part-name">
+            <a href="AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH69-SW1">Performing Common Scripting Tasks</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AutomatetheUserInterface.html#//apple_ref/doc/uid/TP40016239-CH69-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH69-SW1">Automating the User Interface</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ManipulateImages.html#//apple_ref/doc/uid/TP40016239-CH20-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH20-SW1">Manipulating Images</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CallCommandLineUtilities.html#//apple_ref/doc/uid/TP40016239-CH43-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH43-SW1">Calling Command-Line Tools</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH68-SW1"
+            class="part-name">
+            <a href="MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH46-SW1">Extending Apps and Processes</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="MakeaSystem-WideService.html#//apple_ref/doc/uid/TP40016239-CH46-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH46-SW1">Making a Systemwide Service</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UsetheSystem-WideScriptMenu.html#//apple_ref/doc/uid/TP40016239-CH7-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH7-SW1">Using the Systemwide Script Menu</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="UseDictationtoRunScripts.html#//apple_ref/doc/uid/TP40016239-CH87-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH87-SW1">Using Dictation to Run Scripts</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40016239-CH78-SW1"
+            class="part-name">
+            <a href="AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH79-SW1">Appendixes</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="AppendixA-AppleScriptObjCQuickTranslationGuide.html#//apple_ref/doc/uid/TP40016239-CH79-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH79-SW1">Objective-C to AppleScript Quick Translation Guide</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="revision-history"
+            class="part-name">
+          <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Revision History</a>
+          <ul class="nav-chapters">
+            <li class="nav-chapter">
+              <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Document Revision History</a>
+            </li>
+          </ul>
+        </li>
+    </ul>
+</nav>
+
+      <menu id="bashful" type="toolbar">
+  <div class="shield"></div>
+  <menuitem id="jump_to" class="menu-bar-item closed">
+  <span>On This Page</span>
+  <div class="chevron">
+    <div class="chevy chevron-left"></div>
+    <div class="chevy chevron-right"></div>
+  </div>
+  <menu type="list" class="details">
+      <ul class="list-bullet">
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH33-SW3">Changing the Case of Text</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH33-SW4">Finding and Replacing Text in a String</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH33-SW16">Getting the Characters of a String</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH33-SW18">Getting the Length of String</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH33-SW20">Getting the Paragraphs of a String</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH33-SW22">Getting the Position of Text in a String</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH33-SW6">Splitting Text</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/TP40016239-CH33-SW2">Trimming Text</a>
+          </li>
+      </ul>
+  </menu>
+</menuitem>
+
+</menu>
+<div class="pixel-line"></div>
+<div class="rubber-band-gap"></div>
+<article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33"></a><a name="//apple_ref/doc/uid/TP40016239-CH33-SW1"></a>
+      <a name="//apple_ref/doc/uid/TP40016239-CH59"></a><a name="//apple_ref/doc/uid/TP40016239-CH59-SW1"></a>
+
+  <h2 class='chapter-name'>Manipulating Text</h2>
+
+
+  
+  	<section class="section">
+  		<p class="para">
+  Manipulating text is one of the most common tasks performed in scripts. AppleScript and JavaScript both possess some basic text manipulation functions and properties that allow you to concatenate text, get the length of a string, and more. Overall, JavaScript has a much wider-range of built-in language-level text manipulation functions. Custom scripting is usually required to manipulate text with AppleScript.
+</p>
+<div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW34"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">For general information about working with text in AppleScript, see the <a href="../../../AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF" data-renderer-version="1" target="_self">text</a> class reference documentation in <em class="u-book"><a href="../../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983" data-renderer-version="1" target="_self">AppleScript Language Guide</a></em>.
+    	</p>
+    <p class="para">
+  In JavaScript, the <code class="code-voice">String</code> object provides a range of text processing functions. Information about this object can be found <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">here</a>. JavaScript also provides a <code class="code-voice">RegExp</code> constructor, which can be used for pattern matching. Information about this constructor can be found <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp">here</a>.
+</p>
+
+  </aside>
+</div>
+
+		</section> 
+
+
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW3"></a>
+  <h3 class="section-name" tabindex="0">Changing the Case of Text</h3>
+  <p class="para">
+  The handlers in <span class="x-name-no-link">Listing 19-1</span> and <span class="x-name-no-link">Listing 19-2</span> convert text to uppercase or lowercase. To use these handlers, provide some source text and a case to apply—<code class="code-voice">upper</code> or <code class="code-voice">lower</code>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20changeCaseOfText%28theText%2C%20theCaseToSwitchTo%29%0A%20%20%20%20if%20theCaseToSwitchTo%20contains%20%22lower%22%20then%0A%20%20%20%20%20%20%20%20set%20theComparisonCharacters%20to%20%22ABCDEFGHIJKLMNOPQRSTUVWXYZ%22%0A%20%20%20%20%20%20%20%20set%20theSourceCharacters%20to%20%22abcdefghijklmnopqrstuvwxyz%22%0A%20%20%20%20else%20if%20theCaseToSwitchTo%20contains%20%22upper%22%20then%0A%20%20%20%20%20%20%20%20set%20theComparisonCharacters%20to%20%22abcdefghijklmnopqrstuvwxyz%22%0A%20%20%20%20%20%20%20%20set%20theSourceCharacters%20to%20%22ABCDEFGHIJKLMNOPQRSTUVWXYZ%22%0A%20%20%20%20else%0A%20%20%20%20%20%20%20%20return%20theText%0A%20%20%20%20end%20if%0A%20%20%20%20set%20theAlteredText%20to%20%22%22%0A%20%20%20%20repeat%20with%20aCharacter%20in%20theText%0A%20%20%20%20%20%20%20%20set%20theOffset%20to%20offset%20of%20aCharacter%20in%20theComparisonCharacters%0A%20%20%20%20%20%20%20%20if%20theOffset%20is%20not%200%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theAlteredText%20to%20%28theAlteredText%20%26%20character%20theOffset%20of%20theSourceCharacters%29%20as%20string%0A%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theAlteredText%20to%20%28theAlteredText%20%26%20aCharacter%29%20as%20string%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%20theAlteredText%0Aend%20changeCaseOfText">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW7"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-1</strong>AppleScript: Handler that converts text to uppercase or lowercase</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on changeCaseOfText(theText, theCaseToSwitchTo)</code></li>
+            <li><code class="code-voice">    if theCaseToSwitchTo contains &quot;lower&quot; then</code></li>
+            <li><code class="code-voice">        set theComparisonCharacters to &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code></li>
+            <li><code class="code-voice">        set theSourceCharacters to &quot;abcdefghijklmnopqrstuvwxyz&quot;</code></li>
+            <li><code class="code-voice">    else if theCaseToSwitchTo contains &quot;upper&quot; then</code></li>
+            <li><code class="code-voice">        set theComparisonCharacters to &quot;abcdefghijklmnopqrstuvwxyz&quot;</code></li>
+            <li><code class="code-voice">        set theSourceCharacters to &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code></li>
+            <li><code class="code-voice">    else</code></li>
+            <li><code class="code-voice">        return theText</code></li>
+            <li><code class="code-voice">    end if</code></li>
+            <li><code class="code-voice">    set theAlteredText to &quot;&quot;</code></li>
+            <li><code class="code-voice">    repeat with aCharacter in theText</code></li>
+            <li><code class="code-voice">        set theOffset to offset of aCharacter in theComparisonCharacters</code></li>
+            <li><code class="code-voice">        if theOffset is not 0 then</code></li>
+            <li><code class="code-voice">            set theAlteredText to (theAlteredText &amp; character theOffset of theSourceCharacters) as string</code></li>
+            <li><code class="code-voice">        else</code></li>
+            <li><code class="code-voice">            set theAlteredText to (theAlteredText &amp; aCharacter) as string</code></li>
+            <li><code class="code-voice">        end if</code></li>
+            <li><code class="code-voice">    end repeat</code></li>
+            <li><code class="code-voice">    return theAlteredText</code></li>
+            <li><code class="code-voice">end changeCaseOfText</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20changeCaseOfText%28text%2C%20caseToSwitchTo%29%20%7B%0A%20%20%20%20var%20alteredText%20%3D%20text%0A%20%20%20%20if%20%28caseToSwitchTo%20%3D%3D%3D%20%22lower%22%29%20%7B%0A%20%20%20%20%20%20%20%20alteredText%20%3D%20alteredText.toLowerCase%28%29%0A%20%20%20%20%7D%0A%20%20%20%20else%20if%20%28caseToSwitchTo%20%3D%3D%3D%20%22upper%22%29%20%7B%0A%20%20%20%20%20%20%20%20alteredText%20%3D%20alteredText.toUpperCase%28%29%0A%20%20%20%20%7D%0A%20%20%20%20return%20alteredText%0A%7D">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW36"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-2</strong>JavaScript: Function that converts text to uppercase or lowercase</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function changeCaseOfText(text, caseToSwitchTo) {</code></li>
+            <li><code class="code-voice">    var alteredText = text</code></li>
+            <li><code class="code-voice">    if (caseToSwitchTo === &quot;lower&quot;) {</code></li>
+            <li><code class="code-voice">        alteredText = alteredText.toLowerCase()</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">    else if (caseToSwitchTo === &quot;upper&quot;) {</code></li>
+            <li><code class="code-voice">        alteredText = alteredText.toUpperCase()</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">    return alteredText</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 19-3</span> and <span class="x-name-no-link">Listing 19-4</span> show how to call the handlers in <span class="x-name-no-link">Listing 19-1</span> and <span class="x-name-no-link">Listing 19-2</span> to convert text to uppercase.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=changeCaseOfText%28%22scripting%20is%20awesome!%22%2C%20%22upper%22%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW8"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-3</strong>AppleScript: Calling a handler to convert text to uppercase</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">changeCaseOfText(&quot;scripting is awesome!&quot;, &quot;upper&quot;)</code></li>
+            <li><code class="code-voice">--&gt; Result: &quot;SCRIPTING IS AWESOME!&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=changeCaseOfText%28%22scripting%20is%20awesome!%22%2C%20%22upper%22%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW37"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-4</strong>JavaScript: Calling a function to convert text to uppercase</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">changeCaseOfText(&quot;scripting is awesome!&quot;, &quot;upper&quot;)</code></li>
+            <li><code class="code-voice">// Result: &quot;SCRIPTING IS AWESOME!&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 19-5</span> and <span class="x-name-no-link">Listing 19-6</span> show how to call the handlers in <span class="x-name-no-link">Listing 19-1</span> and <span class="x-name-no-link">Listing 19-2</span> to convert text to lowercase.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=changeCaseOfText%28%22DOING%20REPETITIVE%20WORK%20IS%20BORING%22%2C%20%22lower%22%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW9"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-5</strong>AppleScript: Calling a handler to convert text to lowercase</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">changeCaseOfText(&quot;DOING REPETITIVE WORK IS BORING&quot;, &quot;lower&quot;)</code></li>
+            <li><code class="code-voice">--&gt; Result: &quot;doing repetitive work is boring&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=changeCaseOfText%28%22DOING%20REPETITIVE%20WORK%20IS%20BORING%22%2C%20%22lower%22%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW38"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-6</strong>JavaScript: Calling a function to convert text to lowercase</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">changeCaseOfText(&quot;DOING REPETITIVE WORK IS BORING&quot;, &quot;lower&quot;)</code></li>
+            <li><code class="code-voice">// Result: &quot;doing repetitive work is boring&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW10"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">When you use AppleScriptObjC or JavaScriptObjC, you can use methods of the <code class="code-voice u-api"><a href="../../../LegacyTechnologies/WebObjects/WebObjects_3.5/Reference/Frameworks/ObjC/Foundation/Classes/NSStringClassCluster/Description.html#//apple_ref/occ/cl/NSString" data-renderer-version="1">NSString</a></code> class to change the case of text. <span class="x-name-no-link">Listing 19-7</span> and <span class="x-name-no-link">Listing 19-8</span> demonstrate how to do this.
+    	</p>
+    <p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=use%20framework%20%22Foundation%22%0A%0Aon%20changeCaseOfText%28theText%2C%20theCase%29%0A%20%20%20%20--%20Create%20an%20NSString%20object%20from%20the%20passed%20text%0A%20%20%20%20set%20theText%20to%20stringWithString_%28theText%29%20of%20NSString%20of%20current%20application%0A%0A%20%20%20%20--%20Apply%20the%20appropriate%20transformation%20to%20the%20NSString%20object%0A%20%20%20%20if%20theCase%20contains%20%22lower%22%20then%0A%20%20%20%20%20%20%20%20set%20theNewText%20to%20lowercaseString%28%29%20of%20theText%0A%20%20%20%20else%20if%20theCase%20contains%20%22upper%22%20then%0A%20%20%20%20%20%20%20%20set%20theNewText%20to%20uppercaseString%28%29%20of%20theText%0A%20%20%20%20else%0A%20%20%20%20%20%20%20%20set%20theNewText%20to%20capitalizedString%28%29%20of%20theText%0A%20%20%20%20end%20if%0A%0A%20%20%20%20--%20Convert%20the%20NSString%20to%20an%20AppleScript%20string%0A%20%20%20%20return%20%28theNewText%20as%20string%29%0Aend%20changeCaseOfText">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW11"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-7</strong>AppleScriptObjC: Handler for changing text to uppercase or lowercase</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">use framework &quot;Foundation&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">on changeCaseOfText(theText, theCase)</code></li>
+            <li><code class="code-voice">    -- Create an NSString object from the passed text</code></li>
+            <li><code class="code-voice">    set theText to stringWithString_(theText) of NSString of current application</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Apply the appropriate transformation to the NSString object</code></li>
+            <li><code class="code-voice">    if theCase contains &quot;lower&quot; then</code></li>
+            <li><code class="code-voice">        set theNewText to lowercaseString() of theText</code></li>
+            <li><code class="code-voice">    else if theCase contains &quot;upper&quot; then</code></li>
+            <li><code class="code-voice">        set theNewText to uppercaseString() of theText</code></li>
+            <li><code class="code-voice">    else</code></li>
+            <li><code class="code-voice">        set theNewText to capitalizedString() of theText</code></li>
+            <li><code class="code-voice">    end if</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    -- Convert the NSString to an AppleScript string</code></li>
+            <li><code class="code-voice">    return (theNewText as string)</code></li>
+            <li><code class="code-voice">end changeCaseOfText</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20changeCaseOfText%28text%2C%20caseToSwitchTo%29%20%7B%0A%20%20%20%20%2F%2F%20Convert%20the%20passed%20text%20to%20an%20NSString%20object%0A%20%20%20%20var%20alteredText%20%3D%20%24%28text%29%0A%0A%20%20%20%20%2F%2F%20Apply%20the%20appropriate%20transformation%20to%20the%20NSString%20object%0A%20%20%20%20if%20%28caseToSwitchTo%20%3D%3D%3D%20%22lower%22%29%20%7B%0A%20%20%20%20%20%20%20%20alteredText%20%3D%20alteredText.lowercaseString%0A%20%20%20%20%7D%0A%20%20%20%20else%20if%20%28caseToSwitchTo%20%3D%3D%3D%20%22upper%22%29%20%7B%0A%20%20%20%20%20%20%20%20alteredText%20%3D%20alteredText.uppercaseString%0A%20%20%20%20%7D%0A%0A%20%20%20%20%2F%2F%20Convert%20the%20NSString%20to%20an%20AppleScript%20string%0A%20%20%20%20return%20alteredText.js%0A%7D">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW39"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-8</strong>JavaScriptObjC: Function for changing text to uppercase or lowercase</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function changeCaseOfText(text, caseToSwitchTo) {</code></li>
+            <li><code class="code-voice">    // Convert the passed text to an NSString object</code></li>
+            <li><code class="code-voice">    var alteredText = $(text)</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    // Apply the appropriate transformation to the NSString object</code></li>
+            <li><code class="code-voice">    if (caseToSwitchTo === &quot;lower&quot;) {</code></li>
+            <li><code class="code-voice">        alteredText = alteredText.lowercaseString</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">    else if (caseToSwitchTo === &quot;upper&quot;) {</code></li>
+            <li><code class="code-voice">        alteredText = alteredText.uppercaseString</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">    // Convert the NSString to an AppleScript string</code></li>
+            <li><code class="code-voice">    return alteredText.js</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+
+  </aside>
+</div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW4"></a>
+  <h3 class="section-name" tabindex="0">Finding and Replacing Text in a String</h3>
+  <p class="para">
+  The handler in <span class="x-name-no-link">Listing 19-9</span> can be used to find and replace text in a string. To use it, provide some source text, a string to find, and a replacement string. This handler replaces any found instances of the specified search string.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20findAndReplaceInText%28theText%2C%20theSearchString%2C%20theReplacementString%29%0A%20%20%20%20set%20AppleScript%27s%20text%20item%20delimiters%20to%20theSearchString%0A%20%20%20%20set%20theTextItems%20to%20every%20text%20item%20of%20theText%0A%20%20%20%20set%20AppleScript%27s%20text%20item%20delimiters%20to%20theReplacementString%0A%20%20%20%20set%20theText%20to%20theTextItems%20as%20string%0A%20%20%20%20set%20AppleScript%27s%20text%20item%20delimiters%20to%20%22%22%0A%20%20%20%20return%20theText%0Aend%20findAndReplaceInText">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW12"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-9</strong>AppleScript: Handler that finds and replaces text in a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on findAndReplaceInText(theText, theSearchString, theReplacementString)</code></li>
+            <li><code class="code-voice">    set AppleScript&#39;s text item delimiters to theSearchString</code></li>
+            <li><code class="code-voice">    set theTextItems to every text item of theText</code></li>
+            <li><code class="code-voice">    set AppleScript&#39;s text item delimiters to theReplacementString</code></li>
+            <li><code class="code-voice">    set theText to theTextItems as string</code></li>
+            <li><code class="code-voice">    set AppleScript&#39;s text item delimiters to &quot;&quot;</code></li>
+            <li><code class="code-voice">    return theText</code></li>
+            <li><code class="code-voice">end findAndReplaceInText</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 19-10</span> shows how to call the handler in <span class="x-name-no-link">Listing 19-9</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theText%20to%20%22On%20Tuesday%2C%20I%20told%20you%20to%20have%20the%20report%20ready%20by%20next%20Tuesday.%22%0Aset%20theText%20to%20findAndReplaceInText%28theText%2C%20%22Tuesday%22%2C%20%22Friday%22%29%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW13"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-10</strong>AppleScript: Calling a handler to find and replace text in a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theText to &quot;On Tuesday, I told you to have the report ready by next Tuesday.&quot;</code></li>
+            <li><code class="code-voice">set theText to findAndReplaceInText(theText, &quot;Tuesday&quot;, &quot;Friday&quot;)</code></li>
+            <li><code class="code-voice">--&gt; Result: &quot;On Friday, I told you to have the report ready by next Friday.&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  In JavaScript, the <code class="code-voice">String</code> object’s <code class="code-voice">replace()</code> method is used to find and replace text in a string, as shown in <span class="x-name-no-link">Listing 19-11</span>. Unlike the previous AppleScript example, this function replaces only the first occurrence of the found text.
+</p><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20text%20%3D%20%22On%20Tuesday%2C%20I%20told%20you%20to%20have%20the%20report%20ready%20by%20next%20Tuesday.%22%0Atext%20%3D%20text.replace%28%22Tuesday%22%2C%20%22Friday%22%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW40"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-11</strong>JavaScript: Finding and replacing the first occurrence of text in a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var text = &quot;On Tuesday, I told you to have the report ready by next Tuesday.&quot;</code></li>
+            <li><code class="code-voice">text = text.replace(&quot;Tuesday&quot;, &quot;Friday&quot;)</code></li>
+            <li><code class="code-voice">// Result: &quot;On Friday, I told you to have the report ready by next Tuesday.&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  The <code class="code-voice">replace()</code> method can be combined with a regular expression to replace every occurrence of the found text, as shown in <span class="x-name-no-link">Listing 19-12</span>.
+</p><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20text%20%3D%20%22On%20Tuesday%2C%20I%20told%20you%20to%20have%20the%20report%20ready%20by%20next%20Tuesday.%22%0Atext%20%3D%20text.replace%28%2FTuesday%2Fg%2C%20%22Friday%22%29%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW41"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-12</strong>JavaScript: Finding and replacing every occurrence of text in a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var text = &quot;On Tuesday, I told you to have the report ready by next Tuesday.&quot;</code></li>
+            <li><code class="code-voice">text = text.replace(/Tuesday/g, &quot;Friday&quot;)</code></li>
+            <li><code class="code-voice">// Result: &quot;On Friday, I told you to have the report ready by next Friday.&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW14"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">When you use AppleScriptObjC or JavaScriptObjC, you can use methods of the <code class="code-voice u-api"><a href="../../../LegacyTechnologies/WebObjects/WebObjects_3.5/Reference/Frameworks/ObjC/Foundation/Classes/NSStringClassCluster/Description.html#//apple_ref/occ/cl/NSString" data-renderer-version="1">NSString</a></code> class to perform a find and replace in text. The handlers in <span class="x-name-no-link">Listing 19-13</span> and <span class="x-name-no-link">Listing 19-14</span> demonstrate how to do this.
+    	</p>
+    <p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=use%20framework%20%22Foundation%22%0A%0Aon%20findAndReplaceInText%28theText%2C%20theSearchString%2C%20theReplacementString%29%0A%20%20%20%20--%20Create%20an%20NSString%20object%20from%20the%20passed%20AppleScript%20string%0A%20%20%20%20set%20theText%20to%20stringWithString_%28theText%29%20of%20NSString%20of%20current%20application%0A%20%20%20%20--%20Call%20an%20NSString%20replacement%20method%20on%20the%20newly%20created%20NSString%20object%0A%20%20%20%20set%20theText%20to%20stringByReplacingOccurrencesOfString_withString_%28theSearchString%2C%20theReplacementString%29%20of%20theText%0A%20%20%20%20--%20Convert%20from%20an%20NSString%20to%20an%20AppleScript%20string%0A%20%20%20%20return%20%28theText%20as%20string%29%0Aend%20findAndReplaceInText">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW15"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-13</strong>AppleScriptObjC: Handler that finds and replaces every occurrence of text in a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">use framework &quot;Foundation&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">on findAndReplaceInText(theText, theSearchString, theReplacementString)</code></li>
+            <li><code class="code-voice">    -- Create an NSString object from the passed AppleScript string</code></li>
+            <li><code class="code-voice">    set theText to stringWithString_(theText) of NSString of current application</code></li>
+            <li><code class="code-voice">    -- Call an NSString replacement method on the newly created NSString object</code></li>
+            <li><code class="code-voice">    set theText to stringByReplacingOccurrencesOfString_withString_(theSearchString, theReplacementString) of theText</code></li>
+            <li><code class="code-voice">    -- Convert from an NSString to an AppleScript string</code></li>
+            <li><code class="code-voice">    return (theText as string)</code></li>
+            <li><code class="code-voice">end findAndReplaceInText</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20findAndReplaceInText%28text%2C%20searchString%2C%20replacementString%29%20%7B%0A%20%20%20%20%2F%2F%20Create%20an%20NSString%20object%20from%20the%20passed%20string%0A%20%20%20%20var%20alteredText%20%3D%20%24%28text%29%0A%20%20%20%20%2F%2F%20Call%20an%20NSString%20replacement%20method%20on%20the%20newly%20created%20NSString%20object%0A%20%20%20%20alteredText%20%3D%20alteredText.stringByReplacingOccurrencesOfStringWithString%28searchString%2C%20replacementString%29%0A%20%20%20%20%2F%2F%20Convert%20from%20an%20NSString%20to%20a%20JavaScript%20string%0A%20%20%20%20return%20alteredText.js%0A%7D">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW42"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-14</strong>JavaScriptObjC: Function that finds and replaces every occurrence of text in a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function findAndReplaceInText(text, searchString, replacementString) {</code></li>
+            <li><code class="code-voice">    // Create an NSString object from the passed string</code></li>
+            <li><code class="code-voice">    var alteredText = $(text)</code></li>
+            <li><code class="code-voice">    // Call an NSString replacement method on the newly created NSString object</code></li>
+            <li><code class="code-voice">    alteredText = alteredText.stringByReplacingOccurrencesOfStringWithString(searchString, replacementString)</code></li>
+            <li><code class="code-voice">    // Convert from an NSString to a JavaScript string</code></li>
+            <li><code class="code-voice">    return alteredText.js</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+
+  </aside>
+</div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW16"></a>
+  <h3 class="section-name" tabindex="0">Getting the Characters of a String</h3>
+  <p class="para">
+  <span class="x-name-no-link">Listing 19-15</span> and <span class="x-name-no-link">Listing 19-16</span> show how to get a list of characters in a string.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theText%20to%20%22The%20quick%20brown%20fox%20jumps%20over%20a%20lazy%20dog.%22%0Acharacters%20of%20theText">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW17"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-15</strong>AppleScript: Get the characters of a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theText to &quot;The quick brown fox jumps over a lazy dog.&quot;</code></li>
+            <li><code class="code-voice">characters of theText</code></li>
+            <li><code class="code-voice">--&gt; Result: {&quot;T&quot;, &quot;h&quot;, &quot;e&quot;, &quot; &quot;, &quot;q&quot;, &quot;u&quot;, &quot;i&quot;, &quot;c&quot;, &quot;k&quot;, &quot; &quot;, &quot;b&quot;, &quot;r&quot;, &quot;o&quot;, &quot;w&quot;, &quot;n&quot;, &quot; &quot;, &quot;f&quot;, &quot;o&quot;, &quot;x&quot;, &quot; &quot;, &quot;j&quot;, &quot;u&quot;, &quot;m&quot;, &quot;p&quot;, &quot;s&quot;, &quot; &quot;, &quot;o&quot;, &quot;v&quot;, &quot;e&quot;, &quot;r&quot;, &quot; &quot;, &quot;a&quot;, &quot; &quot;, &quot;l&quot;, &quot;a&quot;, &quot;z&quot;, &quot;y&quot;, &quot; &quot;, &quot;d&quot;, &quot;o&quot;, &quot;g&quot;, &quot;.&quot;}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20text%20%3D%20%22The%20quick%20brown%20fox%20jumps%20over%20a%20lazy%20dog.%22%0Atext.split%28%22%22%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW43"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-16</strong>JavaScript: Get the characters of a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var text = &quot;The quick brown fox jumps over a lazy dog.&quot;</code></li>
+            <li><code class="code-voice">text.split(&quot;&quot;)</code></li>
+            <li><code class="code-voice">// Result: [&quot;T&quot;, &quot;h&quot;, &quot;e&quot;, &quot; &quot;, &quot;q&quot;, &quot;u&quot;, &quot;i&quot;, &quot;c&quot;, &quot;k&quot;, &quot; &quot;, &quot;b&quot;, &quot;r&quot;, &quot;o&quot;, &quot;w&quot;, &quot;n&quot;, &quot; &quot;, &quot;f&quot;, &quot;o&quot;, &quot;x&quot;, &quot; &quot;, &quot;j&quot;, &quot;u&quot;, &quot;m&quot;, &quot;p&quot;, &quot;s&quot;, &quot; &quot;, &quot;o&quot;, &quot;v&quot;, &quot;e&quot;, &quot;r&quot;, &quot; &quot;, &quot;a&quot;, &quot; &quot;, &quot;l&quot;, &quot;a&quot;, &quot;z&quot;, &quot;y&quot;, &quot; &quot;, &quot;d&quot;, &quot;o&quot;, &quot;g&quot;, &quot;.&quot;]</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW18"></a>
+  <h3 class="section-name" tabindex="0">Getting the Length of String</h3>
+  <p class="para">
+  <span class="x-name-no-link">Listing 19-17</span> and <span class="x-name-no-link">Listing 19-18</span> show how to get the length of—the number of characters in—a string.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theText%20to%20%22The%20quick%20brown%20fox%20jumps%20over%20a%20lazy%20dog.%22%0Alength%20of%20theText">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW19"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-17</strong>AppleScript: Get the length of a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theText to &quot;The quick brown fox jumps over a lazy dog.&quot;</code></li>
+            <li><code class="code-voice">length of theText</code></li>
+            <li><code class="code-voice">--&gt; Result: 42</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20text%20%3D%20%22The%20quick%20brown%20fox%20jumps%20over%20a%20lazy%20dog.%22%0Atext.length">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW44"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-18</strong>JavaScript: Get the length of a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var text = &quot;The quick brown fox jumps over a lazy dog.&quot;</code></li>
+            <li><code class="code-voice">text.length</code></li>
+            <li><code class="code-voice">// Result: 42</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW20"></a>
+  <h3 class="section-name" tabindex="0">Getting the Paragraphs of a String</h3>
+  <p class="para">
+  <span class="x-name-no-link">Listing 19-19</span> and <span class="x-name-no-link">Listing 19-20</span> show how to get a list of paragraphs in a string.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theText%20to%20%22*%20Sal%0A*%20Ben%0A*%20Chris%0A*%20David%22%0Aparagraphs%20of%20theText">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW21"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-19</strong>AppleScript: Get the characters of a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theText to &quot;* Sal</code></li>
+            <li><code class="code-voice">* Ben</code></li>
+            <li><code class="code-voice">* Chris</code></li>
+            <li><code class="code-voice">* David&quot;</code></li>
+            <li><code class="code-voice">paragraphs of theText</code></li>
+            <li><code class="code-voice">--&gt; Result: {&quot;* Sal&quot;, &quot;* Ben&quot;, &quot;* Chris&quot;, &quot;* David&quot;}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20text%20%3D%20%60*%20Sal%0A*%20Ben%0A*%20Chris%0A*%20David%60%0A%0Atext.split%28%22%5Cn%22%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW45"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-20</strong>JavaScript: Get the characters of a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var text = `* Sal</code></li>
+            <li><code class="code-voice">* Ben</code></li>
+            <li><code class="code-voice">* Chris</code></li>
+            <li><code class="code-voice">* David`</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">text.split(&quot;\n&quot;)</code></li>
+            <li><code class="code-voice">// Result: [&quot;* Sal&quot;, &quot;* Ben&quot;, &quot;* Chris&quot;, &quot;* David&quot;]</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW22"></a>
+  <h3 class="section-name" tabindex="0">Getting the Position of Text in a String</h3>
+  <p class="para">
+  To determine the position of text within a string in AppleScript, request its <code class="code-voice">offset</code>, as shown in <span class="x-name-no-link">Listing 19-21</span>. This provides the character number where the first instance of the text begins.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theText%20to%20%22The%20quick%20brown%20fox%20jumps%20over%20a%20lazy%20dog.%22%0Aoffset%20of%20%22quick%22%20in%20theText">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW46"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-21</strong>AppleScript: Get the position of text in a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theText to &quot;The quick brown fox jumps over a lazy dog.&quot;</code></li>
+            <li><code class="code-voice">offset of &quot;quick&quot; in theText</code></li>
+            <li><code class="code-voice">--&gt; Result: 5</code></li>
+        </ol>
+      </div>
+  </div>
+</section><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW23"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">In AppleScript, character positions start at <code class="code-voice">1</code>; the first character in a string has an offset of <code class="code-voice">1</code>. If the string doesn’t include the text provided, then an offset of <code class="code-voice">0</code> is returned.
+    	</p>
+    
+  </aside>
+</div><p class="para">
+  To determine the position of text within a string in JavaScript, call the <code class="code-voice">indexOf()</code> method of the text object, as shown in <span class="x-name-no-link">Listing 19-22</span>.
+</p><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20text%20%3D%20%22The%20quick%20brown%20fox%20jumps%20over%20a%20lazy%20dog.%22%0Atext.indexOf%28%22quick%22%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW47"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-22</strong>JavaScript: Get the position of text in a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var text = &quot;The quick brown fox jumps over a lazy dog.&quot;</code></li>
+            <li><code class="code-voice">text.indexOf(&quot;quick&quot;)</code></li>
+            <li><code class="code-voice">// Result: 4</code></li>
+        </ol>
+      </div>
+  </div>
+</section><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW48"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">In JavaScript, character positions start at <code class="code-voice">0</code>; the first character in a string has an index of <code class="code-voice">0</code>. If the string doesn’t include the text provided, then an offset of <code class="code-voice">-1</code> is returned.
+    	</p>
+    
+  </aside>
+</div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW6"></a>
+  <h3 class="section-name" tabindex="0">Splitting Text</h3>
+  <p class="para">
+  The handler in <span class="x-name-no-link">Listing 19-23</span> splits text into a list, based on a specific delimiter.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20splitText%28theText%2C%20theDelimiter%29%0A%20%20%20%20set%20AppleScript%27s%20text%20item%20delimiters%20to%20theDelimiter%0A%20%20%20%20set%20theTextItems%20to%20every%20text%20item%20of%20theText%0A%20%20%20%20set%20AppleScript%27s%20text%20item%20delimiters%20to%20%22%22%0A%20%20%20%20return%20theTextItems%0Aend%20splitText">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW24"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-23</strong>AppleScript: Handler that splits text</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on splitText(theText, theDelimiter)</code></li>
+            <li><code class="code-voice">    set AppleScript&#39;s text item delimiters to theDelimiter</code></li>
+            <li><code class="code-voice">    set theTextItems to every text item of theText</code></li>
+            <li><code class="code-voice">    set AppleScript&#39;s text item delimiters to &quot;&quot;</code></li>
+            <li><code class="code-voice">    return theTextItems</code></li>
+            <li><code class="code-voice">end splitText</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 19-24</span> shows how to call the handler in <span class="x-name-no-link">Listing 19-23</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theText%20to%20%22The%20quick%20brown%20fox%20jumps%20over%20a%20lazy%20dog.%22%0AsplitText%28theText%2C%20space%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW25"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-24</strong>AppleScript: Calling a handler to split text based on a delimiter</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theText to &quot;The quick brown fox jumps over a lazy dog.&quot;</code></li>
+            <li><code class="code-voice">splitText(theText, space)</code></li>
+            <li><code class="code-voice">--&gt; Result: {&quot;The&quot;, &quot;quick&quot;, &quot;brown&quot;, &quot;fox&quot;, &quot;jumps&quot;, &quot;over&quot;, &quot;a&quot;, &quot;lazy&quot;, &quot;dog.&quot;}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  In JavaScript, the <code class="code-voice">String</code> object’s <code class="code-voice">split()</code> method is used to split text based on a delimiter, as shown in <span class="x-name-no-link">Listing 19-25</span>.
+</p><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20text%20%3D%20%22The%20quick%20brown%20fox%20jumps%20over%20a%20lazy%20dog.%22%0Atext.split%28%22%20%22%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW49"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-25</strong>JavaScript: Function that splits text</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var text = &quot;The quick brown fox jumps over a lazy dog.&quot;</code></li>
+            <li><code class="code-voice">text.split(&quot; &quot;)</code></li>
+            <li><code class="code-voice">// Result: [&quot;The&quot;, &quot;quick&quot;, &quot;brown&quot;, &quot;fox&quot;, &quot;jumps&quot;, &quot;over&quot;, &quot;a&quot;, &quot;lazy&quot;, &quot;dog.&quot;]</code></li>
+        </ol>
+      </div>
+  </div>
+</section><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW26"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">See <span class="x-name"><a href="ManipulateListsofItems.html#//apple_ref/doc/uid/TP40016239-CH48-SW11" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH48-SW11">Converting a List to a String</a></span> to learn how to merge strings back together.
+    	</p>
+    
+  </aside>
+</div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW2"></a>
+  <h3 class="section-name" tabindex="0">Trimming Text</h3>
+  <p class="para">
+  The handlers in <span class="x-name-no-link">Listing 19-26</span> and <span class="x-name-no-link">Listing 19-27</span> trim text from the beginning or end of a string. To use these examples, provide some source text, characters to trim, and a trim direction—<code class="code-voice">beginning</code> (trim from the beginning), <code class="code-voice">end</code> (trim from the end), or <code class="code-voice">both</code> (trim from both the beginning and end).
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20trimText%28theText%2C%20theCharactersToTrim%2C%20theTrimDirection%29%0A%20%20%20%20set%20theTrimLength%20to%20length%20of%20theCharactersToTrim%0A%20%20%20%20if%20theTrimDirection%20is%20in%20%7B%22beginning%22%2C%20%22both%22%7D%20then%0A%20%20%20%20%20%20%20%20repeat%20while%20theText%20begins%20with%20theCharactersToTrim%0A%20%20%20%20%20%20%20%20%20%20%20%20try%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theText%20to%20characters%20%28theTrimLength%20%2B%201%29%20thru%20-1%20of%20theText%20as%20string%0A%20%20%20%20%20%20%20%20%20%20%20%20on%20error%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20--%20text%20contains%20nothing%20but%20trim%20characters%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20%22%22%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20try%0A%20%20%20%20%20%20%20%20end%20repeat%0A%20%20%20%20end%20if%0A%20%20%20%20if%20theTrimDirection%20is%20in%20%7B%22end%22%2C%20%22both%22%7D%20then%0A%20%20%20%20%20%20%20%20repeat%20while%20theText%20ends%20with%20theCharactersToTrim%0A%20%20%20%20%20%20%20%20%20%20%20%20try%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theText%20to%20characters%201%20thru%20-%28theTrimLength%20%2B%201%29%20of%20theText%20as%20string%0A%20%20%20%20%20%20%20%20%20%20%20%20on%20error%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20--%20text%20contains%20nothing%20but%20trim%20characters%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20%22%22%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20try%0A%20%20%20%20%20%20%20%20end%20repeat%0A%20%20%20%20end%20if%0A%20%20%20%20return%20theText%0Aend%20trimText">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW5"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-26</strong>AppleScript: Handler that trims text</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on trimText(theText, theCharactersToTrim, theTrimDirection)</code></li>
+            <li><code class="code-voice">    set theTrimLength to length of theCharactersToTrim</code></li>
+            <li><code class="code-voice">    if theTrimDirection is in {&quot;beginning&quot;, &quot;both&quot;} then</code></li>
+            <li><code class="code-voice">        repeat while theText begins with theCharactersToTrim</code></li>
+            <li><code class="code-voice">            try</code></li>
+            <li><code class="code-voice">                set theText to characters (theTrimLength + 1) thru -1 of theText as string</code></li>
+            <li><code class="code-voice">            on error</code></li>
+            <li><code class="code-voice">                -- text contains nothing but trim characters</code></li>
+            <li><code class="code-voice">                return &quot;&quot;</code></li>
+            <li><code class="code-voice">            end try</code></li>
+            <li><code class="code-voice">        end repeat</code></li>
+            <li><code class="code-voice">    end if</code></li>
+            <li><code class="code-voice">    if theTrimDirection is in {&quot;end&quot;, &quot;both&quot;} then</code></li>
+            <li><code class="code-voice">        repeat while theText ends with theCharactersToTrim</code></li>
+            <li><code class="code-voice">            try</code></li>
+            <li><code class="code-voice">                set theText to characters 1 thru -(theTrimLength + 1) of theText as string</code></li>
+            <li><code class="code-voice">            on error</code></li>
+            <li><code class="code-voice">                -- text contains nothing but trim characters</code></li>
+            <li><code class="code-voice">                return &quot;&quot;</code></li>
+            <li><code class="code-voice">            end try</code></li>
+            <li><code class="code-voice">        end repeat</code></li>
+            <li><code class="code-voice">    end if</code></li>
+            <li><code class="code-voice">    return theText</code></li>
+            <li><code class="code-voice">end trimText</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20trimText%28text%2C%20charsToTrim%2C%20direction%29%20%7B%0A%20%20%20%20var%20result%20%3D%20text%0A%20%20%20%20var%20regexString%20%3D%20charsToTrim.replace%28%2F%5B%5C-%5C%5B%5C%5D%5C%2F%5C%7B%5C%7D%5C%28%5C%29%5C*%5C%2B%5C%3F%5C.%5C%5C%5C%5E%5C%24%5C%7C%5D%2Fg%2C%20%22%5C%5C%24%26%22%29%3B%0A%20%20%20%20if%20%28direction%20%3D%3D%3D%20%22beginning%22%20%7C%7C%20direction%20%3D%3D%3D%20%22both%22%29%20%7B%0A%20%20%20%20%20%20%20%20var%20regex%20%3D%20new%20RegExp%28%60%5E%28%3F%3A%24%7BregexString%7D%29*%60%29%0A%20%20%20%20%20%20%20%20result%20%3D%20result.replace%28regex%2C%20%22%22%29%0A%20%20%20%20%7D%0A%20%20%20%20if%20%28direction%20%3D%3D%3D%20%22end%22%20%7C%7C%20direction%20%3D%3D%3D%20%22both%22%29%20%7B%0A%20%20%20%20%20%20%20%20var%20regex%20%3D%20new%20RegExp%28%60%28%3F%3A%24%7BregexString%7D%29*%24%60%29%0A%20%20%20%20%20%20%20%20result%20%3D%20result.replace%28regex%2C%20%22%22%29%0A%20%20%20%20%7D%0A%20%20%20%20return%20result%0A%7D">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW50"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-27</strong>JavaScript: Function that trims text</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function trimText(text, charsToTrim, direction) {</code></li>
+            <li><code class="code-voice">    var result = text</code></li>
+            <li><code class="code-voice">    var regexString = charsToTrim.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, &quot;\\$&amp;&quot;);</code></li>
+            <li><code class="code-voice">    if (direction === &quot;beginning&quot; || direction === &quot;both&quot;) {</code></li>
+            <li><code class="code-voice">        var regex = new RegExp(`^(?:${regexString})*`)</code></li>
+            <li><code class="code-voice">        result = result.replace(regex, &quot;&quot;)</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">    if (direction === &quot;end&quot; || direction === &quot;both&quot;) {</code></li>
+            <li><code class="code-voice">        var regex = new RegExp(`(?:${regexString})*$`)</code></li>
+            <li><code class="code-voice">        result = result.replace(regex, &quot;&quot;)</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">    return result</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 19-28</span> and <span class="x-name-no-link">Listing 19-29</span> show how to call the handlers in <span class="x-name-no-link">Listing 19-26</span> and <span class="x-name-no-link">Listing 19-27</span> to trim text from the beginning of a string.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=trimText%28%22----1----%22%2C%20%22-%22%2C%20%22beginning%22%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW27"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-28</strong>AppleScript: Calling a handler to trim text from the beginning of a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">trimText(&quot;----1----&quot;, &quot;-&quot;, &quot;beginning&quot;)</code></li>
+            <li><code class="code-voice">--&gt; Result: &quot;1----&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=trimText%28%22----1----%22%2C%20%22-%22%2C%20%22beginning%22%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW51"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-29</strong>JavaScript: Calling a function to trim text from the beginning of a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">trimText(&quot;----1----&quot;, &quot;-&quot;, &quot;beginning&quot;)</code></li>
+            <li><code class="code-voice">// Result: &quot;1----&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 19-30</span> and <span class="x-name-no-link">Listing 19-31</span> show how to call the handlers in <span class="x-name-no-link">Listing 19-26</span> and <span class="x-name-no-link">Listing 19-27</span> to trim text from the end of a string.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=trimText%28%2212345.txt%22%2C%20%22.txt%22%2C%20%22end%22%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW28"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-30</strong>AppleScript: Calling a handler to trim text from the end of a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">trimText(&quot;12345.txt&quot;, &quot;.txt&quot;, &quot;end&quot;)</code></li>
+            <li><code class="code-voice">--&gt; Result: &quot;12345&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=trimText%28%2212345.txt%22%2C%20%22.txt%22%2C%20%22end%22%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW52"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-31</strong>JavaScript: Calling a function to trim text from the end of a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">trimText(&quot;12345.txt&quot;, &quot;.txt&quot;, &quot;end&quot;)</code></li>
+            <li><code class="code-voice">// Result: &quot;12345&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 19-32</span> and <span class="x-name-no-link">Listing 19-33</span> show how to call the handlers in <span class="x-name-no-link">Listing 19-26</span> and <span class="x-name-no-link">Listing 19-27</span> to trim text from the beginning and end of a string.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=trimText%28%22*-*-Ben*-*-%22%2C%20%22*-%22%2C%20%22both%22%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW29"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-32</strong>AppleScript: Calling a handler to trim text from the beginning and end of a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">trimText(&quot;*-*-Ben*-*-&quot;, &quot;*-&quot;, &quot;both&quot;)</code></li>
+            <li><code class="code-voice">--&gt; Result: &quot;Ben&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=trimText%28%22*-*-Ben*-*-%22%2C%20%22*-%22%2C%20%22both%22%29">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW53"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-33</strong>JavaScript: Calling a function to trim text from the beginning and end of a string</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">trimText(&quot;*-*-Ben*-*-&quot;, &quot;*-&quot;, &quot;both&quot;)</code></li>
+            <li><code class="code-voice">// Result: &quot;Ben&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW30"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">When you use AppleScriptObjC or JavaScriptObjC, you can use methods of the <code class="code-voice u-api"><a href="../../../LegacyTechnologies/WebObjects/WebObjects_3.5/Reference/Frameworks/ObjC/Foundation/Classes/NSStringClassCluster/Description.html#//apple_ref/occ/cl/NSString" data-renderer-version="1">NSString</a></code> class to remove whitespace around text. The handlers in <span class="x-name-no-link">Listing 19-34</span> and <span class="x-name-no-link">Listing 19-35</span> demonstrate how to do this.
+    	</p>
+    <p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=use%20framework%20%22Foundation%22%0A%0Aon%20trimWhiteSpaceAroundString%28theText%29%0A%20%20%20%20--%20Create%20an%20NSString%20object%20from%20an%20AppleScript%20string%0A%20%20%20%20set%20theText%20to%20stringWithString_%28theText%29%20of%20NSString%20of%20current%20application%0A%20%20%20%20--%20Trim%20white%20space%20around%20the%20NSString%0A%20%20%20%20set%20theWhitespaceCharacterSet%20to%20whitespaceCharacterSet%20of%20NSCharacterSet%20of%20current%20application%0A%20%20%20%20set%20theText%20to%20stringByTrimmingCharactersInSet_%28theWhitespaceCharacterSet%29%20of%20theText%0A%20%20%20%20--%20return%20result%20coerced%20to%20an%20AppleScript%20string%0A%20%20%20%20return%20%28theText%20as%20string%29%0Aend%20trimWhiteSpaceAroundString">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW31"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-34</strong>AppleScriptObjC: Handler that removes white space around text</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">use framework &quot;Foundation&quot;</code></li>
+            <li><code class="code-voice"> </code></li>
+            <li><code class="code-voice">on trimWhiteSpaceAroundString(theText)</code></li>
+            <li><code class="code-voice">    -- Create an NSString object from an AppleScript string</code></li>
+            <li><code class="code-voice">    set theText to stringWithString_(theText) of NSString of current application</code></li>
+            <li><code class="code-voice">    -- Trim white space around the NSString</code></li>
+            <li><code class="code-voice">    set theWhitespaceCharacterSet to whitespaceCharacterSet of NSCharacterSet of current application</code></li>
+            <li><code class="code-voice">    set theText to stringByTrimmingCharactersInSet_(theWhitespaceCharacterSet) of theText</code></li>
+            <li><code class="code-voice">    -- return result coerced to an AppleScript string</code></li>
+            <li><code class="code-voice">    return (theText as string)</code></li>
+            <li><code class="code-voice">end trimWhiteSpaceAroundString</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+<p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p>
+<p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20trimWhiteSpaceAroundString%28text%29%20%7B%0A%20%20%20%20%2F%2F%20Create%20an%20NSString%20object%20from%20the%20text%0A%20%20%20%20var%20alteredText%20%3D%20%24%28text%29%0A%20%20%20%20%2F%2F%20Trim%20white%20space%20around%20the%20NSString%20and%20return%20the%20result%0A%20%20%20%20var%20whitespace%20%3D%20%24.NSCharacterSet.whitespaceCharacterSet%0A%20%20%20%20return%20alteredText.stringByTrimmingCharactersInSet%28whitespace%29.js%0A%7D">Open in Script Editor</a>
+</p>
+<section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW54"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-35</strong>JavaScriptObjC: Function that removes white space around text</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function trimWhiteSpaceAroundString(text) {</code></li>
+            <li><code class="code-voice">    // Create an NSString object from the text</code></li>
+            <li><code class="code-voice">    var alteredText = $(text)</code></li>
+            <li><code class="code-voice">    // Trim white space around the NSString and return the result</code></li>
+            <li><code class="code-voice">    var whitespace = $.NSCharacterSet.whitespaceCharacterSet</code></li>
+            <li><code class="code-voice">    return alteredText.stringByTrimmingCharactersInSet(whitespace).js</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section>
+
+  </aside>
+</div>
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW32"></a>
+  <h3 class="section-name" tabindex="0">Trimming Paragraphs of Text</h3>
+  <p class="para">
+  The handlers in <span class="x-name-no-link">Listing 19-36</span> and <span class="x-name-no-link">Listing 19-37</span> remove unwanted characters from multiple paragraphs.
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW55"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">This handler calls the <code class="code-voice">trimText()</code> handler. See <span class="x-name"><a href="#//apple_ref/doc/uid/TP40016239-CH33-SW5" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH33-SW5">Listing 19-26</a></span>.
+    	</p>
+    
+  </aside>
+</div><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=on%20trimParagraphsOfText%28theText%2C%20theCharactersToTrim%2C%20theTrimDirection%29%0A%20%20%20%20set%20theParagraphs%20to%20every%20paragraph%20of%20theText%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20paragraphs%20of%20theText%0A%20%20%20%20%20%20%20%20set%20theCurrentParagraph%20to%20item%20a%20of%20theParagraphs%0A%20%20%20%20%20%20%20%20set%20item%20a%20of%20theParagraphs%20to%20trimText%28theCurrentParagraph%2C%20theCharactersToTrim%2C%20theTrimDirection%29%0A%20%20%20%20end%20repeat%0A%20%20%20%20set%20AppleScript%27s%20text%20item%20delimiters%20to%20return%0A%20%20%20%20set%20theText%20to%20theParagraphs%20as%20string%0A%20%20%20%20set%20AppleScript%27s%20text%20item%20delimiters%20to%20%22%22%0A%20%20%20%20return%20theText%0Aend%20trimParagraphsOfText">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW33"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-36</strong>AppleScript: Handler that trims text on multiple paragraphs</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">on trimParagraphsOfText(theText, theCharactersToTrim, theTrimDirection)</code></li>
+            <li><code class="code-voice">    set theParagraphs to every paragraph of theText</code></li>
+            <li><code class="code-voice">    repeat with a from 1 to count of paragraphs of theText</code></li>
+            <li><code class="code-voice">        set theCurrentParagraph to item a of theParagraphs</code></li>
+            <li><code class="code-voice">        set item a of theParagraphs to trimText(theCurrentParagraph, theCharactersToTrim, theTrimDirection)</code></li>
+            <li><code class="code-voice">    end repeat</code></li>
+            <li><code class="code-voice">    set AppleScript&#39;s text item delimiters to return</code></li>
+            <li><code class="code-voice">    set theText to theParagraphs as string</code></li>
+            <li><code class="code-voice">    set AppleScript&#39;s text item delimiters to &quot;&quot;</code></li>
+            <li><code class="code-voice">    return theText</code></li>
+            <li><code class="code-voice">end trimParagraphsOfText</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=function%20trimParagraphsOfText%28text%2C%20charsToTrim%2C%20direction%29%20%7B%0A%20%20%20%20var%20paragraphs%20%3D%20text.split%28%22%5Cn%22%29%0A%20%20%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20paragraphs.length%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20%20%20%20%20var%20currentParagraph%20%3D%20paragraphs%5Bi%5D%0A%20%20%20%20%20%20%20%20paragraphs%5Bi%5D%20%3D%20trimText%28currentParagraph%2C%20charsToTrim%2C%20direction%29%0A%20%20%20%20%7D%0A%20%20%20%20return%20paragraphs.join%28%22%5Cn%22%29%0A%7D">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW56"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-37</strong>JavaScript: Function that trims text on multiple paragraphs</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function trimParagraphsOfText(text, charsToTrim, direction) {</code></li>
+            <li><code class="code-voice">    var paragraphs = text.split(&quot;\n&quot;)</code></li>
+            <li><code class="code-voice">    for (var i = 0; i &lt; paragraphs.length; i++) {</code></li>
+            <li><code class="code-voice">        var currentParagraph = paragraphs[i]</code></li>
+            <li><code class="code-voice">        paragraphs[i] = trimText(currentParagraph, charsToTrim, direction)</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">    return paragraphs.join(&quot;\n&quot;)</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <span class="x-name-no-link">Listing 19-38</span> and <span class="x-name-no-link">Listing 19-39</span> show how to call the handlers in <span class="x-name-no-link">Listing 19-36</span> and <span class="x-name-no-link">Listing 19-37</span>.
+</p><p class="para">
+  <strong class="inline-head">APPLESCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=set%20theText%20to%20%22*%20Sal%0A*%20Ben%0A*%20Chris%0A*%20David%22%0AtrimParagraphsOfText%28theText%2C%20%22*%20%22%2C%20%22beginning%22%29%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW35"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-38</strong>AppleScript: Calling a handler to trim text from multiple paragraphs</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">set theText to &quot;* Sal</code></li>
+            <li><code class="code-voice">* Ben</code></li>
+            <li><code class="code-voice">* Chris</code></li>
+            <li><code class="code-voice">* David&quot;</code></li>
+            <li><code class="code-voice">trimParagraphsOfText(theText, &quot;* &quot;, &quot;beginning&quot;)</code></li>
+            <li><code class="code-voice">--&gt; Result:</code></li>
+            <li><code class="code-voice">(*</code></li>
+            <li><code class="code-voice">&quot;Sal</code></li>
+            <li><code class="code-voice">Ben</code></li>
+            <li><code class="code-voice">Chris</code></li>
+            <li><code class="code-voice">David&quot;</code></li>
+            <li><code class="code-voice">*)</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  <strong class="inline-head">JAVASCRIPT</strong>
+</p><p class="para">
+  <a href="applescript://com.apple.scripteditor?action=new&amp;script=var%20text%20%3D%20%60*%20Sal%0A*%20Ben%0A*%20Chris%0A*%20David%60%0AtrimParagraphsOfText%28text%2C%20%22*%20%22%2C%20%22beginning%22%29%0A">Open in Script Editor</a>
+</p><section class="code-listing">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW57"></a>
+    <span class="caption"><strong class="caption-number">Listing 19-39</strong>JavaScript: Calling a function to trim text from multiple paragraphs</span>
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var text = `* Sal</code></li>
+            <li><code class="code-voice">* Ben</code></li>
+            <li><code class="code-voice">* Chris</code></li>
+            <li><code class="code-voice">* David`</code></li>
+            <li><code class="code-voice">trimParagraphsOfText(text, &quot;* &quot;, &quot;beginning&quot;)</code></li>
+            <li><code class="code-voice">// Result: &quot;Sal\nBen\nChris\nDavid&quot;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><div class="note">
+  <a name="//apple_ref/doc/uid/TP40016239-CH33-SW58"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">In JavaScript, <code class="code-voice">\n</code> represents a newline character.
+    	</p>
+    
+  </aside>
+</div>
+  
+</section>
+
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="WatchFolders.html#//apple_ref/doc/uid/TP40016239-CH39-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH39-SW1">Watching Folders</a></p>
+  			<p class="next-link"><a href="ManipulateNumbers.html#//apple_ref/doc/uid/TP40016239-CH47-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH47-SW1">Manipulating Numbers</a></p>
+
+    <p class="copyright">Copyright &#x00a9; 2018 Apple Inc. All rights reserved. 
+  <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a> | 
+  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a> | 
+  <a href="RevisionHistory.html#//apple_ref/doc/uid/TP40016239-CH99-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016239-CH99-SW1">Updated: 2016-06-13</a>
+</p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <script src="../../../../Resources/1282/JavaScript/devpubs-1.6.3.js" type="text/javascript" charset="utf-8"></script>
+  <div id="_omniture_top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="awdappledeveloper"
+</script>
+
+<script type="text/javascript" src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
+<script type="text/javascript">
+s.channel="www.documentationarchive.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="https://developer.apple.com/bugreporter/" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+</html>

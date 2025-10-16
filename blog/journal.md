@@ -23,3 +23,14 @@ Current focus is front-loaded on three fronts:
 Meta-wise, we added a “Snapshot” block to `PLAN.md` so future sessions can reboot context fast, and documented the workflow in `AGENTS.md`. Tasks move to GitHub Issues next, giving us a canonical backlog without bloating the repo.
 
 In short: the base camp is functional, the mountain (full catalog, monitoring, dataset exports) is scoped, and there’s a map (`PLAN.md` + issues) to avoid getting lost between sessions.
+
+## 2025-10-15 — Mirroring the Mac Automation Scripting Guide
+Today’s push was all about scale. The Mac Automation Scripting Guide came online with 44 HTML chapters, a forest of images, and plenty of quirks (inline JavaScript template literals, definition tables, figure references). Highlights:
+
+- Enhanced the converter (`scripts/convert_html_to_md.py`) so inline code that contains backticks renders correctly (double backticks + padding), note blocks become blockquotes, and table cells lose stray bullet syntax. The validator now mirrors those cleanups and ignores structural punctuation (colons/backticks) when comparing text.
+- Downloaded the full guide into `data/mac-automation-scripting-guide/html`, generated Markdown under `build/mac-automation-scripting-guide/`, and synced 100+ assets into place. `scripts/validate_markdown.py` now passes with zero diffs.
+- Extended `monitor/manifest.json` plus the new `scripts/check_updates.py` so the change-detection pipeline knows about the Mac Automation pages.
+
+Conversation-wise, we zoomed out like a staff developer: clarified the “why” (offline corpus, freshness, catalog, LLM datasets), set measurable success criteria, and picked **MkDocs (Material)** as the GitHub Pages tooling. Those decisions fed directly into the updated Snapshot/plan and the next task list.
+
+Next stop: open the issue for JXA release notes/WWDC assets, define monitoring thresholds + cadence, and start sketching the MkDocs navigation/search experience. The project now feels like a marching order instead of a pile of one-offs.

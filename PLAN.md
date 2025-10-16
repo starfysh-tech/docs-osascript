@@ -6,9 +6,9 @@
   - Stand up the change-detection framework that keeps mirrors fresh.
   - Prepare for a public-facing catalog and LLM-ready datasets.
 - **Next actions**
-  1. Draft the extraction workflow for the Mac Automation Scripting Guide (TOC source, assets, validation expectations) and open an issue.
-  2. Finalize the monitoring manifest and `scripts/check_updates.py` MVP; document freshness thresholds.
-  3. Scaffold the GitHub Pages catalog using **MkDocs** + Material theme (decided); outline navigation/search requirements.
+  1. Create the JXA release-notes mirroring plan (identify pages, assets) and open an issue.
+  2. Define monitoring thresholds + schedule (what counts as “changed”, alert cadence) and capture in an issue.
+  3. Begin the MkDocs (Material) scaffold for the GitHub Pages catalog; draft navigation + search requirements.
 - **Blockers / decisions pending**
   - Determine how to handle large WWDC video assets (link-out vs. local copy).
   - Decide on the storage/export format for man-page captures (plain text vs. Markdown).
@@ -34,6 +34,7 @@
 - 2024-10-15: Built `scripts/validate_markdown.py` and verified AppleScript Overview matches source HTML exactly; Language Guide diffs limited to dense tables (manually inspected).
 - 2024-10-15: Imported `apple-official-docs.md` as the authoritative backlog of Apple automation docs to mirror.
 - 2025-10-15: Added `monitor/manifest.json` and `scripts/check_updates.py` to seed the change-detection pipeline.
+- 2025-10-15: Mirrored the Mac Automation Scripting Guide (`data/mac-automation-scripting-guide/`, `build/mac-automation-scripting-guide/`) and enhanced conversion/validation to handle complex code listings.
 
 ## Task Board
 
@@ -44,7 +45,7 @@
 | ✅ | Keep Markdown outputs aligned with original Apple doc paths per collection. |
 | ✅ | Post-process Markdown (handle external assets, review remaining HTML links) and spot-check formatting. |
 | ⬜️ | Document any gaps or manual follow-ups required. |
-| ⬜️ | Mirror the Mac Automation Scripting Guide collection (see `apple-official-docs.md`). |
+| ✅ | Mirror the Mac Automation Scripting Guide collection (see `apple-official-docs.md`). |
 | ⬜️ | Mirror JavaScript for Automation release notes + WWDC resources. |
 | ⬜️ | Capture Script Editor User Guide for offline use. |
 | ⬜️ | Implement change detection (`monitor/manifest.json` + `scripts/check_updates.py`). |
@@ -73,6 +74,6 @@
 - **Catalog tooling**: MkDocs + Material theme will power the GitHub Pages site; capture structural notes in repo issues/docs as the scaffold progresses.
 
 ## Next Up
-1. Draft the extraction workflow for the Mac Automation Scripting Guide and open a GitHub Issue enumerating subtasks.
-2. Triage `apple-official-docs.md`: note which resources are HTML, PDF, or video and capture that in their respective Issues.
-3. Define the verification checklist for current collections and the upcoming change-detection pipeline (record in an Issue or this plan).
+1. Open the GitHub issue for mirroring the JXA release notes + WWDC resources (list pages/assets, clarify video handling).
+2. Document monitoring thresholds + schedule (issue + README/PLAN) and outline automation for reports/alerts.
+3. Draft the MkDocs/Material catalog structure (navigation, search expectations) before wiring up GitHub Pages.
