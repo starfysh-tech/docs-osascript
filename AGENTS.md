@@ -21,10 +21,15 @@
 - Collection folders should reuse Apple’s slug (e.g., `applescript-language-guide`, `mac-automation-scripting-guide`) to simplify cross-linking.
 - Keep scripts single-purpose and composable; expose arguments rather than hard-coding paths.
 
-## Testing Guidelines
-- `validate_markdown.py` is the primary regression test; diffs must be reviewed and either resolved or annotated in `PLAN.md`.
-- When altering parsing rules, create minimal HTML fixtures under `data/tmp/` and run the full pipeline before touching live URLs.
-- For large table-heavy pages, document any acceptable discrepancies (e.g., index tables) in the PR description.
+## Testing Guidelines (TDD-friendly)
+- Treat tests as the first-class steering wheel:
+  - Before changing a script, sketch the expected outcome and encode it in a focused test (see below) so failures drive implementation work.
+  - Keep fixtures minimal (`data/tmp/<case>/…`) and commit them when they capture edge cases we want to guard forever.
+- Test command sequence after any pipeline change:
+  1. Unit-style: run the targeted script-specific test (for example, `python3 tests/test_convert_html_to_md.py` once added) to confirm the edge case is covered.
+  2. Integration: run the full sequence (`inventory_toc.py`, `download_html.py`, `convert_html_to_md.py`, `normalize_markdown_links.py`, `download_assets.py`, `sync_assets.py`, `validate_markdown.py`) against a minimal fixture collection before touching real data.
+  3. Regression: execute `python3 scripts/validate_markdown.py --html-dir data/<collection>/html --markdown-dir build/<collection>` on the actual target collection and review diffs (resolve or document in `PLAN.md`).
+- For large table-heavy pages or dynamic content, document acceptable deviations in PR descriptions and add TODO tests/fixtures so we revisit them.
 
 ## Commit & Pull Request Guidelines
 - Commits use short, imperative subjects (“Mirror Mac Automation guide introduction”) and include details when context aids review.
