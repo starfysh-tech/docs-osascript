@@ -63,9 +63,9 @@
 | ✅ | Mirror Apple Events Programming Guide (archived PDF). |
 | ✅ | Mirror AppleScript Scripting Additions Guide (archived PDF). |
 | ✅ | Mirror Introduction to Scripting (archived PDF). |
-| ⬜️ | Implement change detection (`monitor/manifest.json` + `scripts/check_updates.py`). |
+| ✅ | Implement change detection (`monitor/manifest.json` + `scripts/check_updates.py`). |
 | ⬜️ | Publish GitHub Pages catalog sourced from `build/`. |
-| ⬜️ | Generate LLM-ready datasets (plain text + JSONL chunks, optional embeddings). |
+| ✅ | Generate LLM-ready datasets (plain text + JSONL chunks, optional embeddings). |
 
 ## Open Questions
 - Which additional AppleScript doc sets (e.g., Apple Events Programming Guide) should be pulled next?
