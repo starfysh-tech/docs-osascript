@@ -5,30 +5,118 @@ repo_name: starfysh-tech/docs-osascript
 repo_url: https://github.com/starfysh-tech/docs-osascript
 docs_dir: build
 use_directory_urls: false
-
 theme:
   name: material
   features:
-    - navigation.sections
-    - navigation.expand
-    - search.highlight
-    - search.share
-
+  - navigation.sections
+  - navigation.expand
+  - search.highlight
+  - search.share
 markdown_extensions:
-  - admonition
-  - attr_list
-  - def_list
-  - footnotes
-  - tables
-  - toc:
-      permalink: true
-  - pymdownx.highlight
-  - pymdownx.superfences
-
+- admonition
+- attr_list
+- def_list
+- footnotes
+- tables
+- toc:
+    permalink: true
+- pymdownx.highlight
+- pymdownx.superfences
 nav:
-  - Home: index.md
-  - Collections:
-      - AppleScript Overview: applescript-overview/AppleScriptX.md
-      - AppleScript Language Guide: applescript-language-guide/introduction/ASLR_intro.md
-      - Mac Automation Scripting Guide: mac-automation-scripting-guide/index.md
-      - JXA Release Notes: jxa-release-notes/Articles/Introduction.md
+- Home: index.md
+- AppleScript Overview:
+  - Introduction: applescript-overview/AppleScriptX.md
+  - About AppleScript: applescript-overview/Concepts/ScriptingOnOSX.md
+  - Open Scripting Architecture: applescript-overview/Concepts/osa.md
+  - Scripting with AppleScript: applescript-overview/Concepts/work_with_as.md
+  - Scriptable Applications: applescript-overview/Concepts/scriptable_apps.md
+  - Scripting Bridge: applescript-overview/Concepts/scripting_bridge.md
+  - Automator: applescript-overview/Concepts/automator.md
+  - AppleScript Utilities and Applications: applescript-overview/Concepts/as_related_apps.md
+  - Revision History: applescript-overview/RevisionHistory.md
+- AppleScript Language Guide:
+  - Introduction: applescript-language-guide/introduction/ASLR_intro.md
+  - AppleScript Lexical Conventions: applescript-language-guide/conceptual/ASLR_lexical_conventions.md
+  - AppleScript Fundamentals: applescript-language-guide/conceptual/ASLR_fundamentals.md
+  - Variables and Properties: applescript-language-guide/conceptual/ASLR_variables.md
+  - Script Objects: applescript-language-guide/conceptual/ASLR_script_objects.md
+  - About Handlers: applescript-language-guide/conceptual/ASLR_about_handlers.md
+  - Class Reference: applescript-language-guide/reference/ASLR_classes.md
+  - Commands Reference: applescript-language-guide/reference/ASLR_cmds.md
+  - Reference Forms: applescript-language-guide/reference/ASLR_reference_forms.md
+  - Operators Reference: applescript-language-guide/reference/ASLR_operators.md
+  - Control Statements Reference: applescript-language-guide/reference/ASLR_control_statements.md
+  - Handler Reference: applescript-language-guide/reference/ASLR_handlers.md
+  - Folder Actions Reference: applescript-language-guide/reference/ASLR_folder_actions.md
+  - 'Appendix A: AppleScript Keywords': applescript-language-guide/reference/ASLR_keywords.md
+  - 'Appendix B: Error Numbers and Error Messages': applescript-language-guide/reference/ASLR_error_codes.md
+  - 'Appendix C: Working with Errors': applescript-language-guide/reference/ASLR_error_xmpls.md
+  - 'Appendix D: Double Angle Brackets': applescript-language-guide/conceptual/ASLR_raw_data.md
+  - 'Appendix E: Libraries using Load Script': applescript-language-guide/reference/ASLR_load_script.md
+  - 'Appendix F: Unsupported Terms': applescript-language-guide/reference/ASLR_unsupported_terms.md
+  - Revision History: applescript-language-guide/revision_history/ASLR_rev_history.md
+  - Glossary: applescript-language-guide/reference/ASLR_glossary.md
+  - Index: applescript-language-guide/Index/index_of_book.md
+- Mac Automation Scripting Guide:
+  - 'Part I: Mac Scripting Essentials':
+    - 'Part I: Mac Scripting Essentials': mac-automation-scripting-guide/index.md
+    - How Mac Scripting Works: mac-automation-scripting-guide/HowMacScriptingWorks.md
+    - Types of Scripts: mac-automation-scripting-guide/TypesofScripts.md
+    - About this Guide: mac-automation-scripting-guide/AboutthisGuide.md
+  - 'Part II: Starting Scripting':
+    - 'Part II: Starting Scripting': mac-automation-scripting-guide/GettoKnowScriptEditor.md
+    - Creating a Script: mac-automation-scripting-guide/CreateaScript.md
+    - Saving a Script: mac-automation-scripting-guide/SaveaScript.md
+    - Running a Script: mac-automation-scripting-guide/RunaScript.md
+    - Configuring Scripting Preferences: mac-automation-scripting-guide/ConfigureScriptingPreferences.md
+  - 'Part III: Accessing Scripting Terminology':
+    - 'Part III: Accessing Scripting Terminology': mac-automation-scripting-guide/AboutScriptingTerminology.md
+    - Opening a Scripting Dictionary: mac-automation-scripting-guide/OpenaScriptingDictionary.md
+    - Navigating a Scripting Dictionary: mac-automation-scripting-guide/NavigateaScriptingDictionary.md
+  - 'Part IV: Modularizing Code':
+    - 'Part IV: Modularizing Code': mac-automation-scripting-guide/UseHandlersFunctions.md
+    - Using Script Libraries: mac-automation-scripting-guide/UseScriptLibraries.md
+  - 'Part V: Working with Files and Folders':
+    - 'Part V: Working with Files and Folders': mac-automation-scripting-guide/ReferenceFilesandFolders.md
+    - Reading and Writing Files: mac-automation-scripting-guide/ReadandWriteFiles.md
+    - Processing Dropped Files and Folders: mac-automation-scripting-guide/ProcessDroppedFilesandFolders.md
+    - Watching Folders: mac-automation-scripting-guide/WatchFolders.md
+  - 'Part VI: Working with Text, Numbers, and Lists':
+    - 'Part VI: Working with Text, Numbers, and Lists': mac-automation-scripting-guide/ManipulateText.md
+    - Manipulating Numbers: mac-automation-scripting-guide/ManipulateNumbers.md
+    - Manipulating Lists of Items: mac-automation-scripting-guide/ManipulateListsofItems.md
+  - 'Part VII: Interacting with Users':
+    - 'Part VII: Interacting with Users': mac-automation-scripting-guide/DisplayDialogsandAlerts.md
+    - Prompting for Text: mac-automation-scripting-guide/PromptforText.md
+    - Displaying Notifications: mac-automation-scripting-guide/DisplayNotifications.md
+    - Speaking Text: mac-automation-scripting-guide/SpeakText.md
+    - Prompting for Files or Folders: mac-automation-scripting-guide/PromptforaFileorFolder.md
+    - Prompting for a File Name: mac-automation-scripting-guide/PromptforaFileName.md
+    - Prompting for a Choice from a List: mac-automation-scripting-guide/PromptforaChoicefromaList.md
+    - Prompting for a Color: mac-automation-scripting-guide/PromptforaColor.md
+    - Displaying Progress: mac-automation-scripting-guide/DisplayProgress.md
+  - 'Part VIII: Working with HTML and URLs':
+    - 'Part VIII: Working with HTML and URLs': mac-automation-scripting-guide/ConvertRGBtoHTMLColor.md
+    - Encoding and Decoding Text: mac-automation-scripting-guide/EncodeandDecodeText.md
+    - Parsing HTML: mac-automation-scripting-guide/ParseHTML.md
+    - Removing HTML Markup from Text: mac-automation-scripting-guide/RemoveMarkupfromHTML.md
+  - 'Part IX: Working with Data':
+    - 'Part IX: Working with Data': mac-automation-scripting-guide/WorkwithPropertyListFiles.md
+    - Working with XML: mac-automation-scripting-guide/WorkwithXML.md
+  - 'Part X: Performing Common Scripting Tasks':
+    - 'Part X: Performing Common Scripting Tasks': mac-automation-scripting-guide/AutomatetheUserInterface.md
+    - Manipulating Images: mac-automation-scripting-guide/ManipulateImages.md
+    - Calling Command-Line Tools: mac-automation-scripting-guide/CallCommandLineUtilities.md
+  - 'Part XI: Extending Apps and Processes':
+    - 'Part XI: Extending Apps and Processes': mac-automation-scripting-guide/MakeaSystem-WideService.md
+    - Using the Systemwide Script Menu: mac-automation-scripting-guide/UsetheSystem-WideScriptMenu.md
+    - Using Dictation to Run Scripts: mac-automation-scripting-guide/UseDictationtoRunScripts.md
+  - 'Part XII: Appendixes': mac-automation-scripting-guide/AppendixA-AppleScriptObjCQuickTranslationGuide.md
+  - Revision History: mac-automation-scripting-guide/RevisionHistory.md
+- JXA Release Notes:
+  - Introduction: jxa-release-notes/Articles/Introduction.md
+  - OS X 10.11 Release Notes: jxa-release-notes/Articles/OSX10-11.md
+  - OS X 10.10 Release Notes: jxa-release-notes/Articles/OSX10-10.md
+  - Revision History: jxa-release-notes/Articles/RevisionHistory.md
+  - Additional Resources:
+    - WWDC 2014 Session 306 Resources: jxa-release-notes/WWDC-2014-session.md

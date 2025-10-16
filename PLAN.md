@@ -37,6 +37,7 @@
 - 2025-10-16: Defined monitoring thresholds/cadence (weekly Monday 09:00 UTC checks), noted WWDC video helper script approach (download on demand), and captured initial report in `reports/update-status-YYYYMMDD.md`.
 - 2025-10-16: Added pytest coverage for inline code + definition list conversions, mirrored the JXA release notes, archived the Session 306 PDF, and linked to a curated WWDC resources note (note injection now automated during conversion with matching validator suppression).
 - 2025-10-16: Scoped MkDocs + Material scaffold (issue #2); MKDocs nav will surface each mirrored collection landing page plus a custom index, powered by `build/` as `docs_dir`.
+- 2025-10-16: Built `scripts/generate_mkdocs_nav.py` to auto-generate the MkDocs navigation from `toc_hierarchy.json` and pull in extra Markdown (e.g., WWDC resources); remaining MkDocs warnings stem from Apple anchors targeting external docs.
 
 ## Task Board
 
@@ -59,6 +60,7 @@
 - Should PDFs/assets be stored alongside each doc or centralized under `assets/`?
 - Do we want to capture linked non-AppleScript materials that live outside the mirrored paths?
 - Where should large binary artifacts (WWDC video, high-res PDFs) live if mirrored locally?
+- How aggressively should we reconcile legacy Apple anchor fragments in MkDocs (ignore vs. rewrite vs. custom redirect pages)?
 
 ## Backlog Reference
 - `apple-official-docs.md` enumerates all official Apple automation resources. Highlight near-term targets:
@@ -75,6 +77,7 @@
 - **Catalog tooling**: MkDocs + Material theme will power the GitHub Pages site; capture structural notes in repo issues/docs as the scaffold progresses.
 - **Monitoring cadence**: Run `python3 scripts/check_updates.py --manifest monitor/manifest.json --save --report reports/update-status-YYYYMMDD.md` every Monday at 09:00 UTC (and before major releases). Exit code `3` (changed) ⇒ re-run the mirror pipeline; exit code `2` (error) ⇒ investigate (HTTP issue, network outage).
   - The WWDC Session 306 pointer and supporting note are generated automatically when converting the JXA release notes set.
+- **MkDocs navigation**: Regenerate `mkdocs.yml` via `python3 scripts/generate_mkdocs_nav.py` to sync nav with mirrored TOCs; rerun `mkdocs build` to spot anchor/backlink warnings that need triage.
 - **MkDocs scaffold (issue #2)**: Use `build/` as `docs_dir`, create a lightweight `index.md` landing page, and expose each collection via its primary landing Markdown (`AppleScriptX.md`, `ASLR_intro.md`, `index.md`, `Articles/Introduction.md`). Future enhancements: richer nav hierarchy, search tuning, theme customization.
 
 ## Next Up
