@@ -1309,6 +1309,24 @@
           "last_checked": null
         }
       ]
+    },
+    {
+      "id": "introduction-to-scripting",
+      "description": "Introduction to Scripting (archived PDF)",
+      "base_url": "https://developer.apple.com/library/archive/documentation/mac/pdf/Interapplication_Communication/",
+      "sources": [
+        {
+          "id": "introduction-to-scripting",
+          "path": "Intro_to_Scripting.pdf",
+          "url": "https://developer.apple.com/library/archive/documentation/mac/pdf/Interapplication_Communication/Intro_to_Scripting.pdf",
+          "type": "pdf",
+          "output": "build/introduction-to-scripting/intro-to-scripting.pdf",
+          "sha256": "9b4807e856c364e40a93ded649c4507aa8920ce9090b9336947958be50ffc557",
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        }
+      ]
     }
   ]
 }

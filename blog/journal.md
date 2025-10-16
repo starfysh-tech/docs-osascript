@@ -57,3 +57,6 @@ Followed the plan from `docs/dataset-packaging.md` and built `scripts/export_dat
 
 ## 2025-10-16 — Apple Events Programming Guide
 Rounded out the backlog with the archived Apple Events Programming Guide. Added a tiny `download_file.py` helper, pulled the PDF into `data/` (and mirrored it under `build/`), captured metadata, and wired the doc into `monitor/manifest.json` plus MkDocs navigation. The dataset exporter learned how to emit metadata-only JSONL rows for binaries, so PDFs show up in the corpus without pretending to be text. Issue #4 tracks future PDFs, but this one’s already sitting beside the rest of the catalog.
+
+## 2025-10-16 — Introduction to Scripting
+Continued the PDF sweep with Apple's "Introduction to Scripting" guide. Downloaded it via `scripts/download_file.py`, stored the metadata under `data/introduction-to-scripting/`, mirrored it into `build/`, and updated MkDocs navigation plus the monitoring manifest. The dataset exporter now advertises another metadata-only entry, keeping the legacy OSA docs in lockstep with the rest of the archive.

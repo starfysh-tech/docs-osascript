@@ -46,6 +46,7 @@
 - 2025-10-16: Archived the Apple Events Programming Guide PDF (downloaded via new `download_file.py`), added metadata/manifest/nav entries, and taught the dataset exporter to emit metadata-only records for binary assets.
 - 2025-10-16: Ran `scripts/check_updates.py --save --report` post-expansion; report stored at `reports/update-status-20251016.md` with all sources unchanged.
 - 2025-10-16: Captured the AppleScript Scripting Additions Guide PDF (assets + metadata), updated nav/manifest, and verified dataset exporter emits the binary placeholder record.
+- 2025-10-16: Captured the Introduction to Scripting PDF (Classic Mac OS), storing metadata, navigation, and monitoring entries to align with other archived assets.
 
 ## Task Board
 
@@ -61,6 +62,7 @@
 | ✅ | Capture Script Editor User Guide for offline use. |
 | ✅ | Mirror Apple Events Programming Guide (archived PDF). |
 | ✅ | Mirror AppleScript Scripting Additions Guide (archived PDF). |
+| ✅ | Mirror Introduction to Scripting (archived PDF). |
 | ⬜️ | Implement change detection (`monitor/manifest.json` + `scripts/check_updates.py`). |
 | ⬜️ | Publish GitHub Pages catalog sourced from `build/`. |
 | ⬜️ | Generate LLM-ready datasets (plain text + JSONL chunks, optional embeddings). |
