@@ -41,6 +41,7 @@ Outline how to transform the mirrored Apple automation docs under `build/` into 
   - `--plain-dir`, `--jsonl-path`
   - `--metadata monitor/manifest.json`
 - Integrate into workflow after link normalization and validation.
+- Treat `dataset/` as build output: run the exporter on demand, then bundle the results (zip/tar + manifest) for release distribution rather than committing the directory to git.
 
 ## Open Questions
 - Should JSONL records be single-page (`body`=whole doc) or chunked for LLM training (e.g., 1k token segments)?

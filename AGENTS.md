@@ -10,7 +10,7 @@
 ## Build, Test, and Development Commands
 - After regenerating Markdown, run `python3 scripts/normalize_markdown_links.py --markdown-dir build --pages-file ...` (include all collection `html_pages.txt`) to keep cross-collection links and anchors accurate.
 - Regenerate the MkDocs navigation whenever new build output is introduced via `python3 scripts/generate_mkdocs_nav.py` before running `mkdocs build`.
-- Produce datasets from mirrored content with `python3 scripts/export_dataset.py --collections <slug>` (omit `--collections` to export everything).
+- Produce datasets from mirrored content with `python3 scripts/export_dataset.py --collections <slug>` (omit `--collections` to export everything); treat the outputs as build artifacts and package them separately if distributing.
 - Fetch archived binaries with `python3 scripts/download_file.py --url <source> --output data/<collection>/assets/<filename>`.
 
 - TOC harvest: `python3 scripts/inventory_toc.py --book-json data/<collection>/book.json --base-url <url> --output-dir data/<collection>`.

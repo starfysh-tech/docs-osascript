@@ -93,5 +93,6 @@
 
 ## Next Up
 1. Assess the next archived automation PDF (e.g., AppleScript Scripting Additions Guide) and repeat the capture/metadata process.
-2. Execute `python3 scripts/export_dataset.py` across all collections and review `dataset/manifest.json` before publishing datasets.
-3. Schedule the next monitoring check (reports/update-status-YYYYMMDD.md) for the upcoming Monday cadence.
+2. Package the generated dataset (plain text + JSONL) as a release artifact so consumers can download without cloning the repo; document the packaging workflow.
+3. Keep the repository lean by treating `dataset/` outputs as build artifacts (run `python3 scripts/export_dataset.py` on demand before packaging).
+4. Schedule the next monitoring check (reports/update-status-YYYYMMDD.md) for the upcoming Monday cadence.
