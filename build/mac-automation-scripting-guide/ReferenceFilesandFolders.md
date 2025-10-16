@@ -12,7 +12,7 @@ In AppleScript, file and folder paths are typically represented using `alias`, `
 > **Note**
 >
 >
-> Additional information about working with file and folder paths in AppleScript can be found in [Aliases and Files](../../../AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW28) in *[AppleScript Language Guide](../../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983)*.
+> Additional information about working with file and folder paths in AppleScript can be found in [Aliases and Files](https://developer.apple.com/library/archive/../../AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW28) in *[AppleScript Language Guide](https://developer.apple.com/library/archive/../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983)*.
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW3"></a>
 
@@ -24,7 +24,7 @@ An `alias` object is displayed as a colon-delimited path preceded by an `alias` 
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=alias%20%22VolumeName%3AFolderName%3ASubfolderName%3AFileName%22)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=alias%20%22VolumeName%3AFolderName%3ASubfolderName%3AFileName%22)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW4"></a>
 **Listing 15-1**AppleScript: Structure of an alias object
@@ -35,7 +35,7 @@ Listing 15-2 shows an example of an `alias` object that references the Desktop f
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3A%22)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3A%22)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW5"></a>
 **Listing 15-2**AppleScript: Example of an alias reference to a folder
@@ -46,7 +46,7 @@ Listing 15-3 is an example of an `alias` object that references an existing file
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW6"></a>
 **Listing 15-3**AppleScript: Example of an alias reference to a file
@@ -57,7 +57,7 @@ To create an alias, add the alias specifier prefix to a colon-delimited path str
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20thePath%20to%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3A%22)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20thePath%20to%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3A%22)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW10"></a>
 **Listing 15-4**AppleScript: Creating an alias from a colon-delimited path string
@@ -68,7 +68,7 @@ Many commands accept an alias as a parameter and/or return an alias as a result.
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theDefaultFolder%20to%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3A%22%0Achoose%20file%20default%20location%20theDefaultFolder)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theDefaultFolder%20to%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3A%22%0Achoose%20file%20default%20location%20theDefaultFolder)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW18"></a>
 **Listing 15-5**AppleScript: Example of a command that accepts an alias parameter and returns an alias result
@@ -87,7 +87,7 @@ A `file` object is displayed as a colon-delimited path preceded by a `file` spec
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=file%20%22VolumeName%3AFolderName%3ASubfolderName%3AFileName%22)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=file%20%22VolumeName%3AFolderName%3ASubfolderName%3AFileName%22)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW8"></a>
 **Listing 15-6**AppleScript: Structure of a file object
@@ -98,7 +98,7 @@ Listing 15-7 shows an example of a `file` object that references a file that may
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=file%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=file%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW9"></a>
 **Listing 15-7**AppleScript: Example of a file reference to a file
@@ -109,7 +109,7 @@ Unlike the way an `alias` object works, you can’t create a `file` object simpl
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theFile%20to%20file%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theFile%20to%20file%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW20"></a>
 **Listing 15-8**AppleScript: Example of incorrect usage of a file object specifier
@@ -120,7 +120,7 @@ Instead, you must prefix the path with the `file` specifier at the time the file
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theFile%20to%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22%0Aread%20file%20theFile)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theFile%20to%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22%0Aread%20file%20theFile)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW21"></a>
 **Listing 15-9**AppleScript: Example of correct usage of a file object specifier
@@ -143,7 +143,7 @@ A `POSIX file` object is displayed as a slash-delimited path preceded by a `POSI
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=POSIX%20file%20%22%2FFolderName%2FSubfolderName%2FFileName%22)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=POSIX%20file%20%22%2FFolderName%2FSubfolderName%2FFileName%22)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW12"></a>
 **Listing 15-10**AppleScript: Structure of a POSIX file object
@@ -154,7 +154,7 @@ Listing 15-11 is an example of a `POSIX file` object that references a file that
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=POSIX%20file%20%22%2FUsers%2FyourUserName%2FDesktop%2FMy%20File.txt%22)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=POSIX%20file%20%22%2FUsers%2FyourUserName%2FDesktop%2FMy%20File.txt%22)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW13"></a>
 **Listing 15-11**AppleScript: Example of a POSIX file reference to a file
@@ -176,7 +176,7 @@ Some apps, such as the Finder and System Events, have their own syntax for refer
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=document%20file%20%22My%20File.txt%22%20of%20folder%20%22Desktop%22%20of%20folder%20%22yourUserName%22%20of%20folder%20%22Users%22%20of%20startup%20disk%20of%20application%20%22Finder%22)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=document%20file%20%22My%20File.txt%22%20of%20folder%20%22Desktop%22%20of%20folder%20%22yourUserName%22%20of%20folder%20%22Users%22%20of%20startup%20disk%20of%20application%20%22Finder%22)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW16"></a>
 **Listing 15-12**AppleScript: Example of a reference to a file in the Finder
@@ -187,7 +187,7 @@ Listing 15-13 shows how a System Events folder reference appears.
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=folder%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3A%22%20of%20application%20%22System%20Events%22)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=folder%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3A%22%20of%20application%20%22System%20Events%22)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW17"></a>
 **Listing 15-13**AppleScript: Example of a reference to a folder in System Events
@@ -204,7 +204,7 @@ Since different situations may result in paths appearing in different formats, y
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theFilePath%20to%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22%0Aset%20theFilePath%20to%20theFilePath%20as%20alias)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theFilePath%20to%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22%0Aset%20theFilePath%20to%20theFilePath%20as%20alias)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW23"></a>
 **Listing 15-14**AppleScript: Coercing a string to an alias
@@ -215,7 +215,7 @@ Since different situations may result in paths appearing in different formats, y
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theFilePath%20to%20choose%20file%0A--%3E%20Result%3A%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22%0A%0Aset%20theFilePath%20to%20theFilePath%20as%20string%0A--%3E%20Result%3A%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theFilePath%20to%20choose%20file%0A--%3E%20Result%3A%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22%0A%0Aset%20theFilePath%20to%20theFilePath%20as%20string%0A--%3E%20Result%3A%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW24"></a>
 **Listing 15-15**AppleScript: Coercing an alias to a string
@@ -228,7 +228,7 @@ Since different situations may result in paths appearing in different formats, y
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theFilePath%20to%20POSIX%20file%20%22%2FUsers%2FyourUserName%2FDesktop%2FMy%20File.txt%22%0Aset%20theFilePath%20to%20theFilePath%20as%20alias%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theFilePath%20to%20POSIX%20file%20%22%2FUsers%2FyourUserName%2FDesktop%2FMy%20File.txt%22%0Aset%20theFilePath%20to%20theFilePath%20as%20alias%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW25"></a>
 **Listing 15-16**AppleScript: Coercing a POSIX file to an alias
@@ -239,7 +239,7 @@ Since different situations may result in paths appearing in different formats, y
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=tell%20application%20%22Finder%22%0A%20%20%20%20set%20theFilePath%20to%20file%20%22My%20File.txt%22%20of%20desktop%0Aend%20tell%0A--%3E%20Result%3A%20document%20file%20%22My%20File.txt%22%20of%20folder%20%22Desktop%22%20of%20folder%20%22yourUserName%22%20of%20folder%20%22Users%22%20of%20startup%20disk%20of%20application%20%22Finder%22%0A%0Aset%20theFilePath%20to%20theFilePath%20as%20alias%0A--%3E%20Result%3A%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=tell%20application%20%22Finder%22%0A%20%20%20%20set%20theFilePath%20to%20file%20%22My%20File.txt%22%20of%20desktop%0Aend%20tell%0A--%3E%20Result%3A%20document%20file%20%22My%20File.txt%22%20of%20folder%20%22Desktop%22%20of%20folder%20%22yourUserName%22%20of%20folder%20%22Users%22%20of%20startup%20disk%20of%20application%20%22Finder%22%0A%0Aset%20theFilePath%20to%20theFilePath%20as%20alias%0A--%3E%20Result%3A%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW37"></a>
 **Listing 15-17**AppleScript: Coercing a Finder file reference to an alias
@@ -256,7 +256,7 @@ Converting from a string or alias to a POSIX path can’t be done through coerci
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theFilePath%20to%20choose%20file%0A--%3E%20Result%3A%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22%0A%0Aset%20theFilePath%20to%20POSIX%20path%20of%20theFilePath%0A--%3E%20Result%3A%20%22%2FUsers%2FyourUserName%2FDesktop%2FMy%20File.txt%22)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theFilePath%20to%20choose%20file%0A--%3E%20Result%3A%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22%0A%0Aset%20theFilePath%20to%20POSIX%20path%20of%20theFilePath%0A--%3E%20Result%3A%20%22%2FUsers%2FyourUserName%2FDesktop%2FMy%20File.txt%22)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW26"></a>
 **Listing 15-18**AppleScript: Converting an alias to a POSIX path string
@@ -281,7 +281,7 @@ The handler in Listing 15-19 converts strings, `path` objects, `POSIX file` obje
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20convertPathToAlias%28thePath%29%0A%20%20%20%20tell%20application%20%22System%20Events%22%0A%20%20%20%20%20%20%20%20try%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20%28path%20of%20disk%20item%20%28thePath%20as%20string%29%29%20as%20alias%0A%20%20%20%20%20%20%20%20on%20error%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20%28path%20of%20disk%20item%20%28path%20of%20thePath%29%20as%20string%29%20as%20alias%0A%20%20%20%20%20%20%20%20end%20try%0A%20%20%20%20end%20tell%0Aend%20convertPathToAlias)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20convertPathToAlias%28thePath%29%0A%20%20%20%20tell%20application%20%22System%20Events%22%0A%20%20%20%20%20%20%20%20try%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20%28path%20of%20disk%20item%20%28thePath%20as%20string%29%29%20as%20alias%0A%20%20%20%20%20%20%20%20on%20error%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20%28path%20of%20disk%20item%20%28path%20of%20thePath%29%20as%20string%29%20as%20alias%0A%20%20%20%20%20%20%20%20end%20try%0A%20%20%20%20end%20tell%0Aend%20convertPathToAlias)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW29"></a>
 **Listing 15-19**AppleScript: Handler that converts a path to an AppleScript alias
@@ -300,7 +300,7 @@ Listing 15-19 shows how to call the handler in Listing 15-19 to convert a POSIX-
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20thePath%20to%20%22%2FUsers%2FyourUserName%2FDesktop%2FMy%20File.txt%22%0Aset%20thePath%20to%20convertPathToAlias%28thePath%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20thePath%20to%20%22%2FUsers%2FyourUserName%2FDesktop%2FMy%20File.txt%22%0Aset%20thePath%20to%20convertPathToAlias%28thePath%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW30"></a>
 **Listing 15-20**AppleScript: Calling a handler to convert a path to an AppleScript alias
@@ -317,7 +317,7 @@ The handler in Listing 15-21 converts a path to string format.
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20convertPathToString%28thePath%29%0A%20%20%20%20tell%20application%20%22System%20Events%22%0A%20%20%20%20%20%20%20%20try%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20path%20of%20disk%20item%20%28thePath%20as%20string%29%0A%20%20%20%20%20%20%20%20on%20error%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20path%20of%20thePath%0A%20%20%20%20%20%20%20%20end%20try%0A%20%20%20%20end%20tell%0Aend%20convertPathToString)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20convertPathToString%28thePath%29%0A%20%20%20%20tell%20application%20%22System%20Events%22%0A%20%20%20%20%20%20%20%20try%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20path%20of%20disk%20item%20%28thePath%20as%20string%29%0A%20%20%20%20%20%20%20%20on%20error%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20path%20of%20thePath%0A%20%20%20%20%20%20%20%20end%20try%0A%20%20%20%20end%20tell%0Aend%20convertPathToString)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW32"></a>
 **Listing 15-21**AppleScript: Handler that converts a path to an a string
@@ -336,7 +336,7 @@ Listing 15-22 shows how to call the handler in Listing 15-21 to convert an alias
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20thePath%20to%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22%0Aset%20thePath%20to%20convertPathToString%28thePath%29%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20thePath%20to%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22%0Aset%20thePath%20to%20convertPathToString%28thePath%29%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW33"></a>
 **Listing 15-22**AppleScript: Calling a handler to convert an AppleScript alias to a path string
@@ -353,7 +353,7 @@ The handler in Listing 15-23 converts a path to POSIX path string format.
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20convertPathToPOSIXString%28thePath%29%0A%20%20%20%20tell%20application%20%22System%20Events%22%0A%20%20%20%20%20%20%20%20try%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20thePath%20to%20path%20of%20disk%20item%20%28thePath%20as%20string%29%0A%20%20%20%20%20%20%20%20on%20error%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20thePath%20to%20path%20of%20thePath%0A%20%20%20%20%20%20%20%20end%20try%0A%20%20%20%20end%20tell%0A%20%20%20%20return%20POSIX%20path%20of%20thePath%0Aend%20convertPathToPOSIXString)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20convertPathToPOSIXString%28thePath%29%0A%20%20%20%20tell%20application%20%22System%20Events%22%0A%20%20%20%20%20%20%20%20try%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20thePath%20to%20path%20of%20disk%20item%20%28thePath%20as%20string%29%0A%20%20%20%20%20%20%20%20on%20error%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20thePath%20to%20path%20of%20thePath%0A%20%20%20%20%20%20%20%20end%20try%0A%20%20%20%20end%20tell%0A%20%20%20%20return%20POSIX%20path%20of%20thePath%0Aend%20convertPathToPOSIXString)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW35"></a>
 **Listing 15-23**AppleScript: Handler that converts a path to an a POSIX path string
@@ -373,7 +373,7 @@ Listing 15-24 shows how to call the handler in Listing 15-23 to convert an alias
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20thePath%20to%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22%0Aset%20thePath%20to%20convertPathToPOSIXString%28thePath%29%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20thePath%20to%20alias%20%22Macintosh%20HD%3AUsers%3AyourUserName%3ADesktop%3AMy%20File.txt%22%0Aset%20thePath%20to%20convertPathToPOSIXString%28thePath%29%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW36"></a>
 **Listing 15-24**AppleScript: Calling a handler to convert an AppleScript alias to a POSIX path string
@@ -401,7 +401,7 @@ To convert a path to a string, call the `toString()` method on the path, as show
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20path%20%3D%20Path%28%22%2FUsers%2FyourUserName%2FDesktop%2FMy%20File.txt%22%29%0Avar%20string%20%3D%20path.toString%28%29%0Astring)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20path%20%3D%20Path%28%22%2FUsers%2FyourUserName%2FDesktop%2FMy%20File.txt%22%29%0Avar%20string%20%3D%20path.toString%28%29%0Astring)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH34-SW41"></a>
 **Listing 15-26**JavaScript: Converting a `Path` object to a string

@@ -12,7 +12,7 @@ The handlers in Listing 16-1 and Listing 16-2 safely write data to disk, creatin
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20writeTextToFile%28theText%2C%20theFile%2C%20overwriteExistingContent%29%0A%20%20%20%20try%0A%0A%20%20%20%20%20%20%20%20--%20Convert%20the%20file%20to%20a%20string%0A%20%20%20%20%20%20%20%20set%20theFile%20to%20theFile%20as%20string%0A%0A%20%20%20%20%20%20%20%20--%20Open%20the%20file%20for%20writing%0A%20%20%20%20%20%20%20%20set%20theOpenedFile%20to%20open%20for%20access%20file%20theFile%20with%20write%20permission%0A%0A%20%20%20%20%20%20%20%20--%20Clear%20the%20file%20if%20content%20should%20be%20overwritten%0A%20%20%20%20%20%20%20%20if%20overwriteExistingContent%20is%20true%20then%20set%20eof%20of%20theOpenedFile%20to%200%0A%0A%20%20%20%20%20%20%20%20--%20Write%20the%20new%20content%20to%20the%20file%0A%20%20%20%20%20%20%20%20write%20theText%20to%20theOpenedFile%20starting%20at%20eof%0A%0A%20%20%20%20%20%20%20%20--%20Close%20the%20file%0A%20%20%20%20%20%20%20%20close%20access%20theOpenedFile%0A%0A%20%20%20%20%20%20%20%20--%20Return%20a%20boolean%20indicating%20that%20writing%20was%20successful%0A%20%20%20%20%20%20%20%20return%20true%0A%0A%20%20%20%20%20%20%20%20--%20Handle%20a%20write%20error%0A%20%20%20%20on%20error%0A%0A%20%20%20%20%20%20%20%20--%20Close%20the%20file%0A%20%20%20%20%20%20%20%20try%0A%20%20%20%20%20%20%20%20%20%20%20%20close%20access%20file%20theFile%0A%20%20%20%20%20%20%20%20end%20try%0A%0A%20%20%20%20%20%20%20%20--%20Return%20a%20boolean%20indicating%20that%20writing%20failed%0A%20%20%20%20%20%20%20%20return%20false%0A%20%20%20%20end%20try%0Aend%20writeTextToFile)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20writeTextToFile%28theText%2C%20theFile%2C%20overwriteExistingContent%29%0A%20%20%20%20try%0A%0A%20%20%20%20%20%20%20%20--%20Convert%20the%20file%20to%20a%20string%0A%20%20%20%20%20%20%20%20set%20theFile%20to%20theFile%20as%20string%0A%0A%20%20%20%20%20%20%20%20--%20Open%20the%20file%20for%20writing%0A%20%20%20%20%20%20%20%20set%20theOpenedFile%20to%20open%20for%20access%20file%20theFile%20with%20write%20permission%0A%0A%20%20%20%20%20%20%20%20--%20Clear%20the%20file%20if%20content%20should%20be%20overwritten%0A%20%20%20%20%20%20%20%20if%20overwriteExistingContent%20is%20true%20then%20set%20eof%20of%20theOpenedFile%20to%200%0A%0A%20%20%20%20%20%20%20%20--%20Write%20the%20new%20content%20to%20the%20file%0A%20%20%20%20%20%20%20%20write%20theText%20to%20theOpenedFile%20starting%20at%20eof%0A%0A%20%20%20%20%20%20%20%20--%20Close%20the%20file%0A%20%20%20%20%20%20%20%20close%20access%20theOpenedFile%0A%0A%20%20%20%20%20%20%20%20--%20Return%20a%20boolean%20indicating%20that%20writing%20was%20successful%0A%20%20%20%20%20%20%20%20return%20true%0A%0A%20%20%20%20%20%20%20%20--%20Handle%20a%20write%20error%0A%20%20%20%20on%20error%0A%0A%20%20%20%20%20%20%20%20--%20Close%20the%20file%0A%20%20%20%20%20%20%20%20try%0A%20%20%20%20%20%20%20%20%20%20%20%20close%20access%20file%20theFile%0A%20%20%20%20%20%20%20%20end%20try%0A%0A%20%20%20%20%20%20%20%20--%20Return%20a%20boolean%20indicating%20that%20writing%20failed%0A%20%20%20%20%20%20%20%20return%20false%0A%20%20%20%20end%20try%0Aend%20writeTextToFile)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH58-SW4"></a>
 **Listing 16-1**AppleScript: Handler that writes text to a file
@@ -53,7 +53,7 @@ The handlers in Listing 16-1 and Listing 16-2 safely write data to disk, creatin
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Afunction%20writeTextToFile%28text%2C%20file%2C%20overwriteExistingContent%29%20%7B%0A%20%20%20%20try%20%7B%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Convert%20the%20file%20to%20a%20string%0A%20%20%20%20%20%20%20%20var%20fileString%20%3D%20file.toString%28%29%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Open%20the%20file%20for%20writing%0A%20%20%20%20%20%20%20%20var%20openedFile%20%3D%20app.openForAccess%28Path%28fileString%29%2C%20%7B%20writePermission%3A%20true%20%7D%29%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Clear%20the%20file%20if%20content%20should%20be%20overwritten%0A%20%20%20%20%20%20%20%20if%20%28overwriteExistingContent%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20app.setEof%28openedFile%2C%20%7B%20to%3A%200%20%7D%29%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Write%20the%20new%20content%20to%20the%20file%0A%20%20%20%20%20%20%20%20app.write%28text%2C%20%7B%20to%3A%20openedFile%2C%20startingAt%3A%20app.getEof%28openedFile%29%20%7D%29%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Close%20the%20file%0A%20%20%20%20%20%20%20%20app.closeAccess%28openedFile%29%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Return%20a%20boolean%20indicating%20that%20writing%20was%20successful%0A%20%20%20%20%20%20%20%20return%20true%0A%20%20%20%20%7D%0A%20%20%20%20%C5%93%20%28error%29%20%7B%0A%0A%20%20%20%20%20%20%20%20try%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%2F%2F%20Close%20the%20file%0A%20%20%20%20%20%20%20%20%20%20%20%20app.closeAccess%28file%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20catch%28error%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%2F%2F%20Report%20the%20error%20is%20closing%20failed%0A%20%20%20%20%20%20%20%20%20%20%20%20console.log%28%60Couldn%27t%20close%20file%3A%20%24%7Berror%7D%60%29%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Return%20a%20boolean%20indicating%20that%20writing%20was%20successful%0A%20%20%20%20%20%20%20%20return%20false%0A%20%20%20%20%7D%0A%7D)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Afunction%20writeTextToFile%28text%2C%20file%2C%20overwriteExistingContent%29%20%7B%0A%20%20%20%20try%20%7B%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Convert%20the%20file%20to%20a%20string%0A%20%20%20%20%20%20%20%20var%20fileString%20%3D%20file.toString%28%29%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Open%20the%20file%20for%20writing%0A%20%20%20%20%20%20%20%20var%20openedFile%20%3D%20app.openForAccess%28Path%28fileString%29%2C%20%7B%20writePermission%3A%20true%20%7D%29%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Clear%20the%20file%20if%20content%20should%20be%20overwritten%0A%20%20%20%20%20%20%20%20if%20%28overwriteExistingContent%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20app.setEof%28openedFile%2C%20%7B%20to%3A%200%20%7D%29%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Write%20the%20new%20content%20to%20the%20file%0A%20%20%20%20%20%20%20%20app.write%28text%2C%20%7B%20to%3A%20openedFile%2C%20startingAt%3A%20app.getEof%28openedFile%29%20%7D%29%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Close%20the%20file%0A%20%20%20%20%20%20%20%20app.closeAccess%28openedFile%29%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Return%20a%20boolean%20indicating%20that%20writing%20was%20successful%0A%20%20%20%20%20%20%20%20return%20true%0A%20%20%20%20%7D%0A%20%20%20%20%C5%93%20%28error%29%20%7B%0A%0A%20%20%20%20%20%20%20%20try%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%2F%2F%20Close%20the%20file%0A%20%20%20%20%20%20%20%20%20%20%20%20app.closeAccess%28file%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20catch%28error%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%2F%2F%20Report%20the%20error%20is%20closing%20failed%0A%20%20%20%20%20%20%20%20%20%20%20%20console.log%28%60Couldn%27t%20close%20file%3A%20%24%7Berror%7D%60%29%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Return%20a%20boolean%20indicating%20that%20writing%20was%20successful%0A%20%20%20%20%20%20%20%20return%20false%0A%20%20%20%20%7D%0A%7D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH58-SW13"></a>
 **Listing 16-2**JavaScript: Function that writes text to a file
@@ -104,7 +104,7 @@ Listing 16-3 and Listing 16-4 show how to call the handlers in Listing 16-1 and 
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20this_story%20to%20%22Once%20upon%20a%20time%20in%20Silicon%20Valley...%22%0Aset%20theFile%20to%20%28%28%28path%20to%20desktop%20folder%29%20as%20string%29%20%26%20%22MY%20STORY.txt%22%29%0AwriteTextToFile%28this_story%2C%20theFile%2C%20true%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20this_story%20to%20%22Once%20upon%20a%20time%20in%20Silicon%20Valley...%22%0Aset%20theFile%20to%20%28%28%28path%20to%20desktop%20folder%29%20as%20string%29%20%26%20%22MY%20STORY.txt%22%29%0AwriteTextToFile%28this_story%2C%20theFile%2C%20true%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH58-SW5"></a>
 **Listing 16-3**AppleScript: Calling a handler to write text to a file
@@ -115,7 +115,7 @@ Listing 16-3 and Listing 16-4 show how to call the handlers in Listing 16-1 and 
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20story%20%3D%20%22Once%20upon%20a%20time%20in%20Silicon%20Valley...%22%0Avar%20desktopString%20%3D%20app.pathTo%28%22desktop%22%29.toString%28%29%0Avar%20file%20%3D%20%60%24%7BdesktopString%7D%2FMY%20STORY.txt%60%0AwriteTextToFile%28story%2C%20file%2C%20true%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20story%20%3D%20%22Once%20upon%20a%20time%20in%20Silicon%20Valley...%22%0Avar%20desktopString%20%3D%20app.pathTo%28%22desktop%22%29.toString%28%29%0Avar%20file%20%3D%20%60%24%7BdesktopString%7D%2FMY%20STORY.txt%60%0AwriteTextToFile%28story%2C%20file%2C%20true%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH58-SW14"></a>
 **Listing 16-4**JavaScript: Calling a function to write text to a file
@@ -129,7 +129,7 @@ Listing 16-5 and Listing 16-6 show how Listing 16-1 and Listing 16-2 could be ca
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theText%20to%20%28%28current%20date%29%20as%20string%29%20%26%20space%20%26%20%22STATUS%20OK%22%20%26%20return%0Aset%20theFile%20to%20%28%28%28path%20to%20desktop%20folder%29%20as%20string%29%20%26%20%22MY%20LOG%20FILE.log%22%29%0AwriteTextToFile%28theText%2C%20theFile%2C%20false%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theText%20to%20%28%28current%20date%29%20as%20string%29%20%26%20space%20%26%20%22STATUS%20OK%22%20%26%20return%0Aset%20theFile%20to%20%28%28%28path%20to%20desktop%20folder%29%20as%20string%29%20%26%20%22MY%20LOG%20FILE.log%22%29%0AwriteTextToFile%28theText%2C%20theFile%2C%20false%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH58-SW6"></a>
 **Listing 16-5**AppleScript: Calling a handler to write an entry to a log file
@@ -140,7 +140,7 @@ Listing 16-5 and Listing 16-6 show how Listing 16-1 and Listing 16-2 could be ca
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20dateString%20%3D%20Date%28%29.toString%28%29%0Avar%20desktopString%20%3D%20app.pathTo%28%22desktop%22%29.toString%28%29%0Avar%20text%20%3D%20%60%24%7BdateString%7D%20STATUS%20OK%5Cn%5Cn%60%0Avar%20file%20%3D%20%60%24%7BdesktopString%7D%2FMY%20LOG%20FILE.log%60%0AwriteTextToFile%28text%2C%20file%2C%20false%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20dateString%20%3D%20Date%28%29.toString%28%29%0Avar%20desktopString%20%3D%20app.pathTo%28%22desktop%22%29.toString%28%29%0Avar%20text%20%3D%20%60%24%7BdateString%7D%20STATUS%20OK%5Cn%5Cn%60%0Avar%20file%20%3D%20%60%24%7BdesktopString%7D%2FMY%20LOG%20FILE.log%60%0AwriteTextToFile%28text%2C%20file%2C%20false%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH58-SW15"></a>
 **Listing 16-6**JavaScript: Calling a function to write an entry to a log file
@@ -155,7 +155,7 @@ In practice, this technique could be used to maintain a log when script errors o
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=try%0A%20%20%20%20--%20Your%20custom%20script%20code%20goes%20here%0Aon%20error%20theErrorMessage%20number%20theErrorNumber%0A%20%20%20%20set%20theError%20to%20%22Error%3A%20%22%20%26%20theErrorNumber%20%26%20%22.%20%22%20%26%20theErrorMessage%20%26%20return%0A%20%20%20%20set%20theLogFile%20to%20%28%28path%20to%20library%20folder%20from%20user%20domain%29%20as%20string%29%20%26%20%22Logs%3AScript%20Error%20Log.log%22%0A%20%20%20%20my%20writeTextToFile%28theError%2C%20theLogFile%2C%20false%29%0Aend%20try)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=try%0A%20%20%20%20--%20Your%20custom%20script%20code%20goes%20here%0Aon%20error%20theErrorMessage%20number%20theErrorNumber%0A%20%20%20%20set%20theError%20to%20%22Error%3A%20%22%20%26%20theErrorNumber%20%26%20%22.%20%22%20%26%20theErrorMessage%20%26%20return%0A%20%20%20%20set%20theLogFile%20to%20%28%28path%20to%20library%20folder%20from%20user%20domain%29%20as%20string%29%20%26%20%22Logs%3AScript%20Error%20Log.log%22%0A%20%20%20%20my%20writeTextToFile%28theError%2C%20theLogFile%2C%20false%29%0Aend%20try)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH58-SW7"></a>
 **Listing 16-7**AppleScript: Example of a try statement that writes an entry to a log file when an error occurs
@@ -170,7 +170,7 @@ In practice, this technique could be used to maintain a log when script errors o
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=try%20%7B%0A%20%20%20%20%2F%2F%20Your%20custom%20script%20code%20goes%20here%0A%7D%0Acatch%20%28error%29%20%7B%0A%20%20%20%20var%20errorString%20%3D%20%60Error%3A%20%24%7Berror.message%7D%5Cn%5Cn%60%0A%20%20%20%20var%20logFile%20%3D%20app.pathTo%28%22library%20folder%22%2C%20%7B%20from%3A%20%22user%20domain%22%20%7D%29.toString%28%29%20%2B%20%22%2FLogs%2FScript%20Error%20Log.log%22%0A%20%20%20%20writeTextToFile%28errorString%2C%20logFile%2C%20false%29%0A%7D)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=try%20%7B%0A%20%20%20%20%2F%2F%20Your%20custom%20script%20code%20goes%20here%0A%7D%0Acatch%20%28error%29%20%7B%0A%20%20%20%20var%20errorString%20%3D%20%60Error%3A%20%24%7Berror.message%7D%5Cn%5Cn%60%0A%20%20%20%20var%20logFile%20%3D%20app.pathTo%28%22library%20folder%22%2C%20%7B%20from%3A%20%22user%20domain%22%20%7D%29.toString%28%29%20%2B%20%22%2FLogs%2FScript%20Error%20Log.log%22%0A%20%20%20%20writeTextToFile%28errorString%2C%20logFile%2C%20false%29%0A%7D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH58-SW16"></a>
 **Listing 16-8**JavaScript: Example of a try statement that writes an entry to a log file when an error occurs
@@ -192,7 +192,7 @@ The handlers in Listing 16-9 and Listing 16-10 read the contents of a specified 
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20readFile%28theFile%29%0A%20%20%20%20--%20Convert%20the%20file%20to%20a%20string%0A%20%20%20%20set%20theFile%20to%20theFile%20as%20string%0A%0A%20%20%20%20--%20Read%20the%20file%20and%20return%20its%20contents%0A%20%20%20%20return%20read%20file%20theFile%0Aend%20readFile)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20readFile%28theFile%29%0A%20%20%20%20--%20Convert%20the%20file%20to%20a%20string%0A%20%20%20%20set%20theFile%20to%20theFile%20as%20string%0A%0A%20%20%20%20--%20Read%20the%20file%20and%20return%20its%20contents%0A%20%20%20%20return%20read%20file%20theFile%0Aend%20readFile)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH58-SW8"></a>
 **Listing 16-9**AppleScript: Handler that reads the contents of a file
@@ -207,7 +207,7 @@ The handlers in Listing 16-9 and Listing 16-10 read the contents of a specified 
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Afunction%20readFile%28file%29%20%7B%0A%20%20%20%20%2F%2F%20Convert%20the%20file%20to%20a%20string%0A%20%20%20%20var%20fileString%20%3D%20file.toString%28%29%0A%0A%20%20%20%20%2F%2F%20Read%20the%20file%20and%20return%20its%20contents%0A%20%20%20%20return%20app.read%28Path%28fileString%29%29%0A%7D)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Afunction%20readFile%28file%29%20%7B%0A%20%20%20%20%2F%2F%20Convert%20the%20file%20to%20a%20string%0A%20%20%20%20var%20fileString%20%3D%20file.toString%28%29%0A%0A%20%20%20%20%2F%2F%20Read%20the%20file%20and%20return%20its%20contents%0A%20%20%20%20return%20app.read%28Path%28fileString%29%29%0A%7D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH58-SW17"></a>
 **Listing 16-10**JavaScript: Function that reads the contents of a file
@@ -227,7 +227,7 @@ Listing 16-11 and Listing 16-12 show how to call the handlers in Listing 16-9 an
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theFile%20to%20choose%20file%20of%20type%20%22txt%22%20with%20prompt%20%22Please%20select%20a%20text%20file%20to%20read%3A%22%0AreadFile%28theFile%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theFile%20to%20choose%20file%20of%20type%20%22txt%22%20with%20prompt%20%22Please%20select%20a%20text%20file%20to%20read%3A%22%0AreadFile%28theFile%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH58-SW9"></a>
 **Listing 16-11**AppleScript: Calling a handler to read the contents of a file
@@ -238,7 +238,7 @@ Listing 16-11 and Listing 16-12 show how to call the handlers in Listing 16-9 an
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20file%20%3D%20app.chooseFile%28%7B%0A%20%20%20%20ofType%3A%20%22txt%22%2C%0A%20%20%20%20withPrompt%3A%20%22Please%20select%20a%20text%20file%20to%20read%3A%22%0A%7D%29%0A%0AreadFile%28file%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20file%20%3D%20app.chooseFile%28%7B%0A%20%20%20%20ofType%3A%20%22txt%22%2C%0A%20%20%20%20withPrompt%3A%20%22Please%20select%20a%20text%20file%20to%20read%3A%22%0A%7D%29%0A%0AreadFile%28file%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH58-SW18"></a>
 **Listing 16-12**JavaScript: Calling a function to read the contents of a file
@@ -259,7 +259,7 @@ The handlers in Listing 16-13 and Listing 16-14 read the contents of a specified
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20readAndSplitFile%28theFile%2C%20theDelimiter%29%0A%20%20%20%20--%20Convert%20the%20file%20to%20a%20string%0A%20%20%20%20set%20theFile%20to%20theFile%20as%20string%0A%0A%20%20%20%20--%20Read%20the%20file%20using%20a%20specific%20delimiter%20and%20return%20the%20results%0A%20%20%20%20return%20read%20file%20theFile%20using%20delimiter%20%7BtheDelimiter%7D%0Aend%20readAndSplitFile)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20readAndSplitFile%28theFile%2C%20theDelimiter%29%0A%20%20%20%20--%20Convert%20the%20file%20to%20a%20string%0A%20%20%20%20set%20theFile%20to%20theFile%20as%20string%0A%0A%20%20%20%20--%20Read%20the%20file%20using%20a%20specific%20delimiter%20and%20return%20the%20results%0A%20%20%20%20return%20read%20file%20theFile%20using%20delimiter%20%7BtheDelimiter%7D%0Aend%20readAndSplitFile)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH58-SW11"></a>
 **Listing 16-13**AppleScript: Handler for reading and splitting the contents of a file based on a delimiter
@@ -274,7 +274,7 @@ The handlers in Listing 16-13 and Listing 16-14 read the contents of a specified
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Afunction%20readAndSplitFile%28file%2C%20delimiter%29%20%7B%0A%20%20%20%20%2F%2F%20Convert%20the%20file%20to%20a%20string%0A%20%20%20%20var%20fileString%20%3D%20file.toString%28%29%0A%0A%20%20%20%20%2F%2F%20Read%20the%20file%20using%20a%20specific%20delimiter%20and%20return%20the%20results%0A%20%20%20%20return%20app.read%28Path%28fileString%29%2C%20%7B%20usingDelimiter%3A%20delimiter%20%7D%29%0A%7D)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Afunction%20readAndSplitFile%28file%2C%20delimiter%29%20%7B%0A%20%20%20%20%2F%2F%20Convert%20the%20file%20to%20a%20string%0A%20%20%20%20var%20fileString%20%3D%20file.toString%28%29%0A%0A%20%20%20%20%2F%2F%20Read%20the%20file%20using%20a%20specific%20delimiter%20and%20return%20the%20results%0A%20%20%20%20return%20app.read%28Path%28fileString%29%2C%20%7B%20usingDelimiter%3A%20delimiter%20%7D%29%0A%7D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH58-SW19"></a>
 **Listing 16-14**JavaScript: Function for reading and splitting the contents of a file based on a delimiter
@@ -294,7 +294,7 @@ Listing 16-15 and Listing 16-16 shows how to call the handlers in Listing 16-13 
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theFile%20to%20choose%20file%20of%20type%20%22log%22%20with%20prompt%20%22Please%20select%20a%20log%20file%3A%22%0AreadAndSplitFile%28theFile%2C%20return%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theFile%20to%20choose%20file%20of%20type%20%22log%22%20with%20prompt%20%22Please%20select%20a%20log%20file%3A%22%0AreadAndSplitFile%28theFile%2C%20return%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH58-SW12"></a>
 **Listing 16-15**AppleScript: Calling a handler to read and split the contents of a file based on a delimiter
@@ -305,7 +305,7 @@ Listing 16-15 and Listing 16-16 shows how to call the handlers in Listing 16-13 
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20file%20%3D%20app.chooseFile%28%7B%0A%20%20%20%20ofType%3A%20%22log%22%2C%0A%20%20%20%20withPrompt%3A%20%22Please%20select%20a%20log%20file%3A%22%0A%7D%29%0AreadAndSplitFile%28file%2C%20%22%5Cn%22%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20file%20%3D%20app.chooseFile%28%7B%0A%20%20%20%20ofType%3A%20%22log%22%2C%0A%20%20%20%20withPrompt%3A%20%22Please%20select%20a%20log%20file%3A%22%0A%7D%29%0AreadAndSplitFile%28file%2C%20%22%5Cn%22%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH58-SW20"></a>
 **Listing 16-16**JavaScript: Calling a function to read and split the contents of a file based on a delimiter

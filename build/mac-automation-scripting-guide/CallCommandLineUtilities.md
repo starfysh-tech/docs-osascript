@@ -17,7 +17,7 @@ The direct parameter of the `do shell script` command is a string containing the
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=do%20shell%20script%20%22ls%20%2FApplications%2F%22%0A%28*%0A--%3E%20Result%3A%20%0A%22App%20Store.app%0AAutomator.app%0ACalculator.app%0ACalendar.app%0A...%22%0A*%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=do%20shell%20script%20%22ls%20%2FApplications%2F%22%0A%28*%0A--%3E%20Result%3A%20%0A%22App%20Store.app%0AAutomator.app%0ACalculator.app%0ACalendar.app%0A...%22%0A*%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH43-SW3"></a>
 **Listing 39-1**AppleScript: Executing a simple shell command that lists the contents of a directory
@@ -36,7 +36,7 @@ Since the direct parameter of `do shell script` is a string, you can concatenate
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theHostName%20to%20%22www.apple.com%22%0Ado%20shell%20script%20%22ping%20-c1%20%22%20%26%20theHostName)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theHostName%20to%20%22www.apple.com%22%0Ado%20shell%20script%20%22ping%20-c1%20%22%20%26%20theHostName)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH43-SW4"></a>
 **Listing 39-2**AppleScript: Concatenating a command with a value
@@ -52,7 +52,7 @@ The shell uses space characters to separate parameters and gives special meaning
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20thePath%20to%20%22%2FLibrary%2FApplication%20Support%2F%22%0Ado%20shell%20script%20%22ls%20%22%20%26%20thePath%0A--%3E%20Result%3A%20error%20%22ls%3A%20%2FLibrary%2FApplication%3A%20No%20such%20file%20or%20directory%5Crls%3A%20Support%3A%20No%20such%20file%20or%20directory%22%20number%201)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20thePath%20to%20%22%2FLibrary%2FApplication%20Support%2F%22%0Ado%20shell%20script%20%22ls%20%22%20%26%20thePath%0A--%3E%20Result%3A%20error%20%22ls%3A%20%2FLibrary%2FApplication%3A%20No%20such%20file%20or%20directory%5Crls%3A%20Support%3A%20No%20such%20file%20or%20directory%22%20number%201)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH43-SW5"></a>
 **Listing 39-3**AppleScript: An error resulting from a string containing a space
@@ -65,7 +65,7 @@ The easiest way to quote a string is to use the `quoted form` property of the te
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20thePath%20to%20quoted%20form%20of%20%22%2FLibrary%2FApplication%20Support%2F%22%0A--%3E%20Result%3A%20%22%27%2FLibrary%2FApplication%20Support%2F%27%22%0Ado%20shell%20script%20%22ls%20%22%20%26%20thePath%0A%28*%0A--%3E%20Result%3A%0A%22App%20Store%0AApple%0A...%0A%22%0A*%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20thePath%20to%20quoted%20form%20of%20%22%2FLibrary%2FApplication%20Support%2F%22%0A--%3E%20Result%3A%20%22%27%2FLibrary%2FApplication%20Support%2F%27%22%0Ado%20shell%20script%20%22ls%20%22%20%26%20thePath%0A%28*%0A--%3E%20Result%3A%0A%22App%20Store%0AApple%0A...%0A%22%0A*%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH43-SW6"></a>
 **Listing 39-4**AppleScript: Quoting a string to prevent errors
@@ -85,4 +85,4 @@ The easiest way to quote a string is to use the `quoted form` property of the te
 
 ### More Information
 
-For more information about the `do shell script` command, see [Commands Reference](../../../AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216) in *[AppleScript Language Guide](../../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983)* and [Technical Note TN2065](http://developer.apple.com/technotes/tn2002/tn2065.html).
+For more information about the `do shell script` command, see [Commands Reference](https://developer.apple.com/library/archive/../../AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216) in *[AppleScript Language Guide](https://developer.apple.com/library/archive/../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983)* and [Technical Note TN2065](http://developer.apple.com/technotes/tn2002/tn2065.html).

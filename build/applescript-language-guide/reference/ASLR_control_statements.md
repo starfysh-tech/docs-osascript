@@ -76,7 +76,7 @@ You can nest `considering` and `ignoring` statements. If the same attribute appe
 
 ##### Special Considerations
 
-Because `text item delimiters` (described in [version](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW6)) respect `considering` and `ignoring` attributes in AppleScript 2.0, delimiters are case-insensitive by default. Formerly, they were always case-sensitive. To enforce the previous behavior, add an explicit `considering case` statement.
+Because `text item delimiters` (described in [version](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW6)) respect `considering` and `ignoring` attributes in AppleScript 2.0, delimiters are case-insensitive by default. Formerly, they were always case-sensitive. To enforce the previous behavior, add an explicit `considering case` statement.
 
 `considering` and `ignoring` are fully Unicode-aware. For example, with `ignoring case`, “Горбач” is equal to “ГОРБАЧ”. Also, the characters ignored by diacriticals, hyphens, punctuation, and white space are defined by Unicode character classes:
 
@@ -164,7 +164,7 @@ Signals an error in a script.
 :   A `text` object describing the error. Although this parameter is optional, you should provide descriptions for errors wherever possible. If you do not include an error description, an empty `text` object ("") is passed to the error handler.
 
 *errorNumber*
-:   The error number for the error. This is an optional parameter. If you do not include a number parameter, the value -2700 (unknown error) is passed to the error handler. If the error you are signaling is a close match for one that already has an AppleScript error constant, you can use that constant. If you need to create a new number for the error, avoid using one that conflicts with error numbers defined by AppleScript, macOS, and the Apple Event Manager. In general, you should use positive numbers from 500 to 10,000. For more information, see [Error Numbers and Error Messages](ASLR_error_codes.md#//apple_ref/doc/uid/TP40000983-CH220-SW5).
+:   The error number for the error. This is an optional parameter. If you do not include a number parameter, the value -2700 (unknown error) is passed to the error handler. If the error you are signaling is a close match for one that already has an AppleScript error constant, you can use that constant. If you need to create a new number for the error, avoid using one that conflicts with error numbers defined by AppleScript, macOS, and the Apple Event Manager. In general, you should use positive numbers from 500 to 10,000. For more information, see [Error Numbers and Error Messages](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_error_codes.md#//apple_ref/doc/uid/TP40000983-CH220-SW5).
 
 *resultList*
 :   A list of objects. Applies only to commands that return results for multiple objects. If results for some, but not all, of the objects specified in the command are available, you can include them in the partial result parameter. This is rarely supported by applications.
@@ -203,7 +203,7 @@ on error
 end try
 ```
 
-For more comprehensive examples, see [Working with Errors](ASLR_error_xmpls.md#//apple_ref/doc/uid/TP40000983-CH221-SW1).
+For more comprehensive examples, see [Working with Errors](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_error_xmpls.md#//apple_ref/doc/uid/TP40000983-CH221-SW1).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH6g-158244"></a>
 
@@ -294,7 +294,7 @@ An `if` statement can also include a final `else`<a id="//apple_ref/doc/uid/TP40
 
 There are a number of types of `repeat` statement, each differing in the way it terminates the loop. Each of the options, from repeating a loop a specific number of times, to looping over the items in a list, to looping until a condition is met, and so on, lends itself to particular kinds of tasks.
 
-For information on testing and debugging `repeat` statements, see [Debugging AppleScript Scripts](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW20).
+For information on testing and debugging `repeat` statements, see [Debugging AppleScript Scripts](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW20).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH6g-128843"></a><a id="//apple_ref/doc/uid/TP40000983-CH6g-DontLinkElementID_866"></a>
 
@@ -358,7 +358,7 @@ repeat
 end repeat
 ```
 
-In a script application that stays open, you can use an `idle` handler to perform periodic tasks, such as checking for an operation to complete. See [idle Handlers](../conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW8) for more information.
+In a script application that stays open, you can use an `idle` handler to perform periodic tasks, such as checking for an operation to complete. See [idle Handlers](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW8) for more information.
 
 <a id="//apple_ref/doc/uid/TP40000983-CH6g-127676"></a><a id="//apple_ref/doc/uid/TP40000983-CH6g-DontLinkElementID_870"></a>
 
@@ -621,7 +621,7 @@ end repeat
 
 > <a id="//apple_ref/doc/uid/TP40000983-CH6g-SW11"></a>
 >
-> **Note:** In the previous example, the statement `log currentWord` logs the current list item to Script Editor’s log pane. For more information about logging, see [Debugging AppleScript Scripts](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW20).
+> **Note:** In the previous example, the statement `log currentWord` logs the current list item to Script Editor’s log pane. For more information about logging, see [Debugging AppleScript Scripts](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW20).
 
 You can also use list variables directly in expressions, which may result in an implicit coercion from an object reference to a specific data type. In the following example, the loop variable `i` is implicitly coerced to an integer (equivalent to explicitly retrieving the `contents of i`) by using the `+` operator to add it to a variable containing an integer.
 
@@ -650,7 +650,7 @@ end tell
 
 <a id="//apple_ref/doc/uid/TP40000983-CH6g-DontLinkElementID_880"></a><a id="//apple_ref/doc/uid/TP40000983-CH6g-DontLinkElementID_881"></a>You can nest `tell` statements inside other `tell` statements, as long as you follow the syntax and rules described in `tell (compound)`.
 
-When you need to call a handler from within a `tell` statement, there are special terms you use to indicate that the handler is part of the script and not a command that should be sent to the object of the `tell` statement. These terms are described in [The it and me Keywords](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW4) and in [Calling Handlers in a tell Statement](../conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW1).
+When you need to call a handler from within a `tell` statement, there are special terms you use to indicate that the handler is part of the script and not a command that should be sent to the object of the `tell` statement. These terms are described in [The it and me Keywords](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW4) and in [Calling Handlers in a tell Statement](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW1).
 
 A `tell` statement that targets a local application doesn’t cause it to launch, if it is not already running. For example, a script can examine the `running` property of the targeted `application` object to determine if the application is running before attempting to send it any commands. If it is not running it won’t be launched.
 
@@ -747,7 +747,7 @@ This example works because in each case the terminology understood by a particul
 
 <a id="//apple_ref/doc/uid/TP40000983-CH6g-DontLinkElementID_886"></a><a id="//apple_ref/doc/uid/TP40000983-CH6g-DontLinkElementID_887"></a><a id="//apple_ref/doc/uid/TP40000983-CH6g-DontLinkElementID_888"></a>A `try` statement provides the means for scripts to handle potential errors. It attempts to execute one or more statements and, if an error occurs, executes a separate set of statements to deal with the error condition. If an error occurs and there is no `try` statement in the calling chain to handle it, AppleScript displays an error and script execution stops.
 
-For related information, see [error Statements](#//apple_ref/doc/uid/TP40000983-CH6g-129657) and [AppleScript Error Handling](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW10).
+For related information, see [error Statements](#//apple_ref/doc/uid/TP40000983-CH6g-129657) and [AppleScript Error Handling](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW10).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH6g-129232"></a><a id="//apple_ref/doc/uid/TP40000983-CH6g-DontLinkElementID_889"></a>
 
@@ -772,7 +772,7 @@ A `try` statement is a two-part compound statement that contains a series of App
 :   A `text` object, that describes the error.
 
 *errorNumber*
-:   The error number, an integer. For possible values, see [Error Numbers and Error Messages](ASLR_error_codes.md#//apple_ref/doc/uid/TP40000983-CH220-SW5).
+:   The error number, an integer. For possible values, see [Error Numbers and Error Messages](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_error_codes.md#//apple_ref/doc/uid/TP40000983-CH220-SW5).
 
 *offendingObject*
 :   A reference to the object, if any, that caused the error.
@@ -784,7 +784,7 @@ A `try` statement is a two-part compound statement that contains a series of App
 :   The expected class. If the error was caused by a coercion failure, the value of this variable is the class of the coercion that failed. (The second example below shows how this works in a case where AppleScript is unable to coerce a `text` object into an `integer`.)
 
 *variable*
-:   Either a global variable or a local variable that can be used in the handler. A variable can contain any class of value. The scope of a local variable is the handler. The scope of a global variable extends to any other part of the script, including other handlers and `script` objects. For related information about local and global variables, see [version](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW6).
+:   Either a global variable or a local variable that can be used in the handler. A variable can contain any class of value. The scope of a local variable is the handler. The scope of a global variable extends to any other part of the script, including other handlers and `script` objects. For related information about local and global variables, see [version](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW6).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH6g-DontLinkElementID_195"></a>
 
@@ -829,7 +829,7 @@ end try
 
 This `repeat` statement fails because the `text` object `"Toronto"` cannot be coerced to an `integer`. The error handler simply writes the values of `obj` (the offending value, `"Toronto"`) and `newClass` (the class of the coercion that failed, `integer`<a id="//apple_ref/doc/uid/TP40000983-CH6g-DontLinkElementID_890"></a><a id="//apple_ref/doc/uid/TP40000983-CH6g-DontLinkElementID_891"></a>) to Script Editor’s Event Log History window (and to the script window’s Event Log pane). The result is “(\*Toronto, integer\*)”, indicating the error occurred while trying to coerce “Toronto” to an integer.
 
-For additional examples, see [Working with Errors](ASLR_error_xmpls.md#//apple_ref/doc/uid/TP40000983-CH221-SW1).
+For additional examples, see [Working with Errors](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_error_xmpls.md#//apple_ref/doc/uid/TP40000983-CH221-SW1).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH6g-SW4"></a>
 
@@ -847,7 +847,7 @@ The basic function of `use` is to require that a resource be present before the 
 use application "Safari" version "7.0"
 ```
 
-`use` statements can also import terminology from the used resource, making the terms available throughout the script without requiring the use of `tell` or `using terms from`. AppleScript tracks where terms were imported from, and sends events that use those terms to that target. Ordinarily, commands are sent to the current target (`it`) as described in [Target](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW18), but imported terminology overrides this. If…
+`use` statements can also import terminology from the used resource, making the terms available throughout the script without requiring the use of `tell` or `using terms from`. AppleScript tracks where terms were imported from, and sends events that use those terms to that target. Ordinarily, commands are sent to the current target (`it`) as described in [Target](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW18), but imported terminology overrides this. If…
 
 * the event identifier is imported
 * the direct parameter is an imported class or enumeration identifier
@@ -945,7 +945,7 @@ using terms from scripting additions
 end using terms from
 ```
 
-If a script uses `use scripting additions`, AppleScript may optimize scripting addition commands, sending them to the current application instead of the current target (`it`) when it does not change the meaning to do so. For example, [random number](ASLR_cmds.md#//apple_ref/doc/uid/TP40000983-CH216-SW42) does not need to be sent to another application to work correctly, and will always be sent to the current application when imported with `use`. Without a `use scripting additions` command, AppleScript must use a less efficient dispatching scheme, so explicitly declaring them is recommended.
+If a script uses `use scripting additions`, AppleScript may optimize scripting addition commands, sending them to the current application instead of the current target (`it`) when it does not change the meaning to do so. For example, [random number](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_cmds.md#//apple_ref/doc/uid/TP40000983-CH216-SW42) does not need to be sent to another application to work correctly, and will always be sent to the current application when imported with `use`. Without a `use scripting additions` command, AppleScript must use a less efficient dispatching scheme, so explicitly declaring them is recommended.
 
 <a id="//apple_ref/doc/uid/TP40000983-CH6g-SW9"></a><a id="//apple_ref/doc/uid/TP40000983-CH6g-DontLinkElementID_894"></a>
 
@@ -1106,7 +1106,7 @@ end using terms from
 
 To use the script, you open Preferences for the Mail application, create or edit a rule, and assign the script as the action for the rule.
 
-For an example that works with an application on a remote machine, see [Targeting Remote Applications](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW35).
+For an example that works with an application on a remote machine, see [Targeting Remote Applications](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW35).
 
 As discussed in [use Statements](#//apple_ref/doc/uid/TP40000983-CH6g-SW4), a script with any `use` statements does not make scripting addition terms visible by default. You can enable scripting addition terms for specific parts of a script with `using terms from` as in this example:
 

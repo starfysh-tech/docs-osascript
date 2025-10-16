@@ -138,7 +138,10 @@ def test_cross_collection_links_rewrite(tmp_path) -> None:
 
     build_dir = tmp_path / "build"
     (build_dir / "foo").mkdir(parents=True)
-    (build_dir / "foo" / "Doc.md").write_text("# Doc\n", encoding="utf-8")
+    (build_dir / "foo" / "Doc.md").write_text(
+        '<a id="//apple_ref/doc/uid/test"></a>\n# Doc\n',
+        encoding="utf-8",
+    )
 
     target_dir = build_dir / "bar" / "Sub"
     target_dir.mkdir(parents=True, exist_ok=True)
@@ -152,3 +155,27 @@ def test_cross_collection_links_rewrite(tmp_path) -> None:
 
     updated = md_path.read_text(encoding="utf-8")
     assert "../../foo/Doc.md#//apple_ref/doc/uid/test" in updated
+
+
+def test_missing_anchor_is_removed(tmp_path) -> None:
+    data_root = tmp_path / "data"
+    data_root.mkdir()
+    foo = data_root / "foo"
+    foo.mkdir(parents=True)
+    (foo / "html_pages.txt").write_text("Doc.html\n", encoding="utf-8")
+
+    build_dir = tmp_path / "build"
+    (build_dir / "foo").mkdir(parents=True)
+    (build_dir / "foo" / "Doc.md").write_text("# Doc\n", encoding="utf-8")
+
+    md_path = build_dir / "foo" / "Other.md"
+    md_path.write_text(
+        "See [doc](Doc.html#//apple_ref/doc/uid/missing).",
+        encoding="utf-8",
+    )
+
+    normalize_links_main([foo / "html_pages.txt"], build_dir)
+
+    updated = md_path.read_text(encoding="utf-8")
+    assert "Doc.md" in updated
+    assert "#//apple_ref" not in updated

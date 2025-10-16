@@ -2,7 +2,7 @@
 
 # Working with Errors
 
-<a id="//apple_ref/doc/uid/TP40000983-CH221-DontLinkElementID_915"></a><a id="//apple_ref/doc/uid/TP40000983-CH221-DontLinkElementID_916"></a>This appendix provides a detailed example of handling errors with [try Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973) and [error Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-129657). It shows how to use a `try` statement to check for bad data and other errors, and an `error` statement to pass on any error that can’t be handled. It also shows how to check for just a particular error number that you are interested in.
+<a id="//apple_ref/doc/uid/TP40000983-CH221-DontLinkElementID_915"></a><a id="//apple_ref/doc/uid/TP40000983-CH221-DontLinkElementID_916"></a>This appendix provides a detailed example of handling errors with [try Statements](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973) and [error Statements](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-129657). It shows how to use a `try` statement to check for bad data and other errors, and an `error` statement to pass on any error that can’t be handled. It also shows how to check for just a particular error number that you are interested in.
 
 <a id="//apple_ref/doc/uid/TP40000983-CH221-SW2"></a>
 

@@ -6,7 +6,7 @@ A scripting dictionary window in Script Editor contains three primary areas. See
 
 <a id="//apple_ref/doc/uid/TP40016239-CH77-SW2"></a>
 **Figure 12-1**Primary elements of a scripting dictionary window in Script Editor
-![image: ../Art/script-editor_dictionary-callouts_2x.png](Art/script-editor_dictionary-callouts_2x.png)
+![image: ../Art/script-editor_dictionary-callouts_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/script-editor_dictionary-callouts_2x.png)
 
 * **Toolbar.** Options for toggling between terminology views, setting the scripting language, entering search terms, and more.
 * **Navigation pane.** Columns of scripting terminology.
@@ -47,7 +47,7 @@ In some cases, a class inherits properties from multiple classes. In Finder, an 
 
 <a id="//apple_ref/doc/uid/TP40016239-CH77-SW4"></a>
 **Figure 12-2**In scripting, classes can inherit the properties of other classes
-![image: ../Art/Inheritance_2x.png](Art/Inheritance_2x.png)
+![image: ../Art/Inheritance_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/Inheritance_2x.png)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH77-SW16"></a>
 
@@ -57,13 +57,13 @@ Classes of a scriptable app reside within a certain containment hierarchy. The a
 
 <a id="//apple_ref/doc/uid/TP40016239-CH77-SW5"></a>
 **Figure 12-3**In scripting, classes can contain other classes as elements
-![image: ../Art/Containment_2x.png](Art/Containment_2x.png)
+![image: ../Art/Containment_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/Containment_2x.png)
 
 When referencing a class, you must do so very specifically according to its containment hierarchy in order to provide the scripting system with context. To reference a file in Finder, you would specify where the file resides in the folder hierarchy. See Listing 12-1 and Listing 12-2. To reference a message in Mail, you would specify where the message resides in the mailbox and account hierarchy.
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&name=Reference%20a%20File%20by%20Containment%20Hierarchy%20in%20Finder&script=tell%20application%20%22Finder%22%0D%20%20%20%20modification%20date%20of%20file%20%22My%20File.txt%22%20of%20folder%20%22Documents%22%20of%20folder%20%22YourUserName%22%20of%20folder%20%22Users%22%20of%20startup%20disk%0Dend%20tell%0D--%3E%20Result%3A%20date%20%22Monday%2C%20September%2028%2C%202015%20at%2010%3A10%3A17%20AM%22%0D)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&name=Reference%20a%20File%20by%20Containment%20Hierarchy%20in%20Finder&script=tell%20application%20%22Finder%22%0D%20%20%20%20modification%20date%20of%20file%20%22My%20File.txt%22%20of%20folder%20%22Documents%22%20of%20folder%20%22YourUserName%22%20of%20folder%20%22Users%22%20of%20startup%20disk%0Dend%20tell%0D--%3E%20Result%3A%20date%20%22Monday%2C%20September%2028%2C%202015%20at%2010%3A10%3A17%20AM%22%0D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH77-SW6"></a>
 **Listing 12-1**AppleScript: Referencing a file by containment hierarchy in Finder
@@ -75,7 +75,7 @@ When referencing a class, you must do so very specifically according to its cont
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&name=Reference%20a%20File%20by%20Containment%20Hierarchy%20in%20Finder&script=var%20Finder%20%3D%20Application%28%22Finder%22%29%0DFinder.startupDisk.folders%5B%22Users%22%5D.folders%5B%22YourUserName%22%5D.folders%5B%22Documents%22%5D.files%5B%22My%20File.txt%22%5D.modificationDate%28%29%0D%2F%2F%20Result%3A%20Mon%20Sep%2028%202015%2017%3A10%3A17%20GMT-0700%20%28PDT%29%0D)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&name=Reference%20a%20File%20by%20Containment%20Hierarchy%20in%20Finder&script=var%20Finder%20%3D%20Application%28%22Finder%22%29%0DFinder.startupDisk.folders%5B%22Users%22%5D.folders%5B%22YourUserName%22%5D.folders%5B%22Documents%22%5D.files%5B%22My%20File.txt%22%5D.modificationDate%28%29%0D%2F%2F%20Result%3A%20Mon%20Sep%2028%202015%2017%3A10%3A17%20GMT-0700%20%28PDT%29%0D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH77-SW7"></a>
 **Listing 12-2**JavaScript: Referencing a file by containment hierarchy in Finder
@@ -92,7 +92,7 @@ The definition of a command in a scripting dictionary is a recipe for using the 
 
 <a id="//apple_ref/doc/uid/TP40016239-CH77-SW8"></a>
 **Figure 12-4**Definition for the move command in the Finder scripting dictionary
-![image: ../Art/dictionary_move_command_2x.png](Art/dictionary_move_command_2x.png)
+![image: ../Art/dictionary_move_command_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/dictionary_move_command_2x.png)
 
 A command definition includes the following elements:
 
@@ -103,7 +103,7 @@ A command definition includes the following elements:
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&name=Example%20Usage%20of%20the%20Move%20Command%20in%20Finder&script=tell%20application%20%22Finder%22%0D%20%20%20%20move%20folder%20someFolder%20to%20someOtherFolder%20replacing%20true%0Dend%20tell%0D)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&name=Example%20Usage%20of%20the%20Move%20Command%20in%20Finder&script=tell%20application%20%22Finder%22%0D%20%20%20%20move%20folder%20someFolder%20to%20someOtherFolder%20replacing%20true%0Dend%20tell%0D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH77-SW9"></a>
 **Listing 12-3**AppleScript: Example usage of the move command in Finder
@@ -114,7 +114,7 @@ A command definition includes the following elements:
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&name=Example%20Usage%20of%20the%20Move%20Command%20in%20Finder&script=var%20Finder%20%3D%20Application%28%22Finder%22%29%0DFinder.move%28someFolder%2C%20%7B%0D%20%20to%3A%20someOtherFolder%2C%0D%20%20replacing%3A%20true%0D%7D%29%0D)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&name=Example%20Usage%20of%20the%20Move%20Command%20in%20Finder&script=var%20Finder%20%3D%20Application%28%22Finder%22%29%0DFinder.move%28someFolder%2C%20%7B%0D%20%20to%3A%20someOtherFolder%2C%0D%20%20replacing%3A%20true%0D%7D%29%0D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH77-SW10"></a>
 **Listing 12-4**JavaScript: Example usage of the move command in Finder
@@ -133,7 +133,7 @@ A class definition describes a class, as shown in Figure 12-5.
 
 <a id="//apple_ref/doc/uid/TP40016239-CH77-SW12"></a>
 **Figure 12-5**Definition for the mailbox class in the Mail scripting dictionary
-![image: ../Art/dictionary_mailbox_class_2x.png](Art/dictionary_mailbox_class_2x.png)
+![image: ../Art/dictionary_mailbox_class_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/dictionary_mailbox_class_2x.png)
 
 A class definition includes the following elements:
 
@@ -146,4 +146,4 @@ To view inherited properties, as well as containing classes in the Script Editor
 
 <a id="//apple_ref/doc/uid/TP40016239-CH77-SW11"></a>
 **Figure 12-6**Enabling inherited item dictionary details in Script Editor
-![image: ../Art/script-editor_preferences_window_showinheriteditems_2x.png](Art/script-editor_preferences_window_showinheriteditems_2x.png)
+![image: ../Art/script-editor_preferences_window_showinheriteditems_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/script-editor_preferences_window_showinheriteditems_2x.png)

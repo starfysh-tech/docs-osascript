@@ -29,13 +29,13 @@ Script Editor has text formatting preferences for various types of script text, 
 
 A *dictionary* <a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_278"></a>is the part of a scriptable application that specifies the scripting terms it understands. You can choose File > Open Dictionary in Script Editor to display the dictionary<a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_279"></a> of a scriptable application or scripting addition on your computer. Or you can drag an application icon to the Script Editor icon to display its dictionary (if it has one).
 
-To display a list that includes just the scriptable applications and scripting additions provided by macOS, choose Window > Library. Double-click an item in the list to display its dictionary. Figure 2-1 shows the dictionary for the Finder application in OS X v10.5. The dictionary is labeled as “Finder.sdef”. The sdef format, along with other terminology formats, is described in “Specifying Scripting Terminology” in *[AppleScript Overview](../../applescript-overview/AppleScriptX.md#//apple_ref/doc/uid/10000156i)*.
+To display a list that includes just the scriptable applications and scripting additions provided by macOS, choose Window > Library. Double-click an item in the list to display its dictionary. Figure 2-1 shows the dictionary for the Finder application in OS X v10.5. The dictionary is labeled as “Finder.sdef”. The sdef format, along with other terminology formats, is described in “Specifying Scripting Terminology” in *[AppleScript Overview](https://developer.apple.com/library/archive/applescript-overview/AppleScriptX.md#//apple_ref/doc/uid/10000156i)*.
 
 <a id="//apple_ref/doc/uid/TP40000983-CH218-1153023-BBCCDDAF"></a>
 
 <a id="//apple_ref/doc/uid/TP40001568-1153023"></a>**Figure 2-1**  The Finder dictionary in Script Editor (in OS X v10.5)
 
-![The Finder dictionary in Script Editor (in OS X v10.5)](../Art/finder_dictionary_2x.png)![The Finder dictionary in Script Editor (in OS X v10.5)](../Art/finder_dictionary_2x.png)
+![The Finder dictionary in Script Editor (in OS X v10.5)](https://developer.apple.com/library/archive/applescript-language-guide/Art/finder_dictionary_2x.png)![The Finder dictionary in Script Editor (in OS X v10.5)](https://developer.apple.com/library/archive/applescript-language-guide/Art/finder_dictionary_2x.png)
 
 There are also third-party editors for AppleScript.
 
@@ -49,7 +49,7 @@ Within in a `script` object, you work with other objects, including:
 
 * AppleScript objects:
 
-  AppleScript defines classes for boolean values, scripts, text, numbers, and other kinds of objects for working in scripts; for a complete list, see [Class Reference](../reference/ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-246384).
+  AppleScript defines classes for boolean values, scripts, text, numbers, and other kinds of objects for working in scripts; for a complete list, see [Class Reference](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-246384).
 * macOS objects:
 
   Scriptable parts of macOS and applications distributed with it, such as Finder, System Events, and Database Events (located in `/System/Library/CoreServices`), define many useful classes.
@@ -76,16 +76,16 @@ When you enter AppleScript statements in script window in Script Editor, you are
   A property is a labeled container in which to store a value.
 * An explicit `run` handler (optional):
 
-  A `run` handler contains statements AppleScript executes when the script is run. (For more information, see [run Handlers](ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW15).)
+  A `run` handler contains statements AppleScript executes when the script is run. (For more information, see [run Handlers](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW15).)
 * An implicit `run` handler (optional):
 
   An implicit `run` handler consists of any statements outside of any contained handlers or `script` objects.
 * Additional handlers (optional):
 
-  A handler is the equivalent of a subroutine. (For details, see [About Handlers](ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-CJBIDBJH).)
+  A handler is the equivalent of a subroutine. (For details, see [About Handlers](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-CJBIDBJH).)
 * Additional `script` objects (optional):
 
-  A `script` object can contain nested `script` objects, each of which is defined just like a top-level `script` object, except that a nested `script` object is bracketed with statements that mark its beginning and end. (For details, see [Script Objects](ASLR_script_objects.md#//apple_ref/doc/uid/TP40000983-CH207-BAJJCIAA).)
+  A `script` object can contain nested `script` objects, each of which is defined just like a top-level `script` object, except that a nested `script` object is bracketed with statements that mark its beginning and end. (For details, see [Script Objects](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_script_objects.md#//apple_ref/doc/uid/TP40000983-CH207-BAJJCIAA).)
 
 Here is an example of a simple script with one property, one handler, one nested `script` object, and an implicit `run` handler with two statements:
 
@@ -118,7 +118,7 @@ The AppleScript `date` class, for example, defines both read/write and read only
 
 The class of a property can be a simple class such as `boolean` or `integer`, a composite class such as a `point` class (made up of two integers), or a more complex class.
 
-Most classes only support predefined properties. However, for the `script` class, AppleScript lets you to define additional properties. For information on how to do this, see [Defining Properties](ASLR_variables.md#//apple_ref/doc/uid/TP40000983-CH223-SW2). You can also define properties for `record` objects.
+Most classes only support predefined properties. However, for the `script` class, AppleScript lets you to define additional properties. For information on how to do this, see [Defining Properties](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_variables.md#//apple_ref/doc/uid/TP40000983-CH223-SW2). You can also define properties for `record` objects.
 
 <a id="//apple_ref/doc/uid/TP40000983-CH218-SW14"></a>
 
@@ -169,7 +169,7 @@ end tell
 >
 > **Note:** If you examine the dictionary for the TextEdit application, you might think this script should say `paragraph 1 of text of document 1`. However, where the meaning is unambiguous, some applications make life easier for scripters by allowing them to omit a container from an object specifier. TextEdit uses this feature in supplying an <a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_288"></a><a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_289"></a>*implicitly specified subcontainer* for the text in a document. That is, if an object specifier identifies an object, such as a word or paragraph, that is contained in a document’s text, TextEdit automatically supplies the `of text` part of the object specifier.
 
-In addition to the index reference form, you can specify objects in a container by name, by range, by ID, and by the other forms described in [Reference Forms](../reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-120522).
+In addition to the index reference form, you can specify objects in a container by name, by range, by ID, and by the other forms described in [Reference Forms](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-120522).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH218-SW24"></a>
 
@@ -225,7 +225,7 @@ tell application "Finder"
 end tell
 ```
 
-When AppleScript encounters a relative object specifier outside any `tell` statement, it tries to complete the object specifier by looking up the inheritance chain described in [Inheritance in Script Objects](ASLR_script_objects.md#//apple_ref/doc/uid/TP40000983-CH207-SW5).
+When AppleScript encounters a relative object specifier outside any `tell` statement, it tries to complete the object specifier by looking up the inheritance chain described in [Inheritance in Script Objects](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_script_objects.md#//apple_ref/doc/uid/TP40000983-CH207-SW5).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH218-SW27"></a>
 
@@ -289,7 +289,7 @@ For related information, see the Discussion section for the `reference` class.
 * in response to the `as` operator<a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_306"></a>
 * automatically, when an object is of a different class than was expected for a particular command or operation
 
-Not all classes can be coerced to all other class types. Table 2-1 summarizes the coercions that AppleScript supports for commonly used classes. For more information about each coercion, see the corresponding class definition in [Class Reference](../reference/ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-246384).
+Not all classes can be coerced to all other class types. Table 2-1 summarizes the coercions that AppleScript supports for commonly used classes. For more information about each coercion, see the corresponding class definition in [Class Reference](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-246384).
 
 AppleScript provides many coercions, either as a built-in part of the language or through the Standard Additions scripting addition. You can use these coercions outside of a `tell` block in your script. However, coercion of application class types may be dependent on the application and require a `tell` block that targets the application.
 
@@ -346,7 +346,7 @@ Many of the commands described in this guide are defined in the Standard Additio
 
 Scripting additions can be embedded within bundled script applets by placing them in a folder named `Scripting Additions` (note the space between “Scripting” and “Additions”) inside the bundle’s `Contents/Resources/` folder. Note that Script Editor does not look for embedded scripting additions when editing bundled applets. During script development, any required scripting additions must be properly installed in `/System/ScriptingAdditions`, `/Library/ScriptingAdditions`, or `~/Library/ScriptingAdditions` so that Script Editor can find them.
 
-Developers can create their own scripting additions, as described in Technical Note TN1164, *[Scripting Additions for Mac OS X](../../../../../technotes/tn1164/_index.html#//apple_ref/doc/uid/DTS10003003)*. For related conceptual information, see *[AppleScript Overview](../../applescript-overview/AppleScriptX.md#//apple_ref/doc/uid/10000156i)*, particularly the section “Extending AppleScript with Coercions, Scripting Additions, and Faceless Background Applications” in the chapter [Open Scripting Architecture](../../applescript-overview/Concepts/osa.md#//apple_ref/doc/uid/TP40001571).
+Developers can create their own scripting additions, as described in Technical Note TN1164, *[Scripting Additions for Mac OS X](https://developer.apple.com/library/archive/../../../technotes/tn1164/_index.html#//apple_ref/doc/uid/DTS10003003)*. For related conceptual information, see *[AppleScript Overview](https://developer.apple.com/library/archive/applescript-overview/AppleScriptX.md#//apple_ref/doc/uid/10000156i)*, particularly the section “Extending AppleScript with Coercions, Scripting Additions, and Faceless Background Applications” in the chapter [Open Scripting Architecture](https://developer.apple.com/library/archive/applescript-overview/Concepts/osa.md#//apple_ref/doc/uid/TP40001571).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH218-SW8"></a>
 
@@ -363,21 +363,21 @@ Commands often return results. For example, the `display dialog` command returns
 Scripts can make use of the following kinds of commands:
 
 * <a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_310"></a><a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_311"></a>An *AppleScript command* is one that is built into the AppleScript language. There currently are five such commands: `get` , `set`, `count`, `copy`, and `run`. Except for `copy` , each of these commands can also be implemented by applications. That is, there is an AppleScript version of the command that works on AppleScript objects, but an application can define its own version that works on the object types it defines.
-* <a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_312"></a><a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_313"></a>A *scripting addition command* is one that is implemented through the mechanism described in [Scripting Additions](#//apple_ref/doc/uid/TP40000983-CH218-SW3)). Although anyone can create a scripting addition (see Technical Note TN1164, *[Scripting Additions for Mac OS X](../../../../../technotes/tn1164/_index.html#//apple_ref/doc/uid/DTS10003003)*), this guide documents only the scripting addition commands from the Standard Additions, supplied by Apple as part of macOS. These commands are available to all scripts.
+* <a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_312"></a><a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_313"></a>A *scripting addition command* is one that is implemented through the mechanism described in [Scripting Additions](#//apple_ref/doc/uid/TP40000983-CH218-SW3)). Although anyone can create a scripting addition (see Technical Note TN1164, *[Scripting Additions for Mac OS X](https://developer.apple.com/library/archive/../../../technotes/tn1164/_index.html#//apple_ref/doc/uid/DTS10003003)*), this guide documents only the scripting addition commands from the Standard Additions, supplied by Apple as part of macOS. These commands are available to all scripts.
 * <a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_314"></a><a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_315"></a>A *user-defined command* is one that is implemented by a handler defined in a `script` object. To invoke a user-defined command outside of a `tell` statement, simply use its name and supply values for any parameters it requires. The command will use the current script as its target.
 
-  To invoke a user-defined command inside a `tell` statement, see [Calling Handlers in a tell Statement](ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW1).
+  To invoke a user-defined command inside a `tell` statement, see [Calling Handlers in a tell Statement](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW1).
 * <a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_316"></a><a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_317"></a>An *application command* is one that is defined by scriptable application to provide access to a scriptable feature. They are typically enclosed in a `tell` statement that targets the application. You can determine which commands an application supports by examining its dictionary in Script Editor.
 
   Scriptable applications that ship with macOS, such as the Finder and System Events applications (located in `/System/Library/CoreServices`), provide many useful scripting commands.
 
-  Third-party scriptable applications also provide commands you can use in scripts. Many support all or a subset of the Standard commands, described in Technical Note TN2106, *[Scripting Interface Guidelines](../../../../../technotes/tn2002/tn2106.html#//apple_ref/doc/uid/DTS10003199)*. These include commands such as `delete`, `duplicate`, `exists`, and `move`, as well as application implementations of AppleScript commands, such as `get` and `set`.
+  Third-party scriptable applications also provide commands you can use in scripts. Many support all or a subset of the Standard commands, described in Technical Note TN2106, *[Scripting Interface Guidelines](https://developer.apple.com/library/archive/../../../technotes/tn2002/tn2106.html#//apple_ref/doc/uid/DTS10003199)*. These include commands such as `delete`, `duplicate`, `exists`, and `move`, as well as application implementations of AppleScript commands, such as `get` and `set`.
 
 <a id="//apple_ref/doc/uid/TP40000983-CH218-SW18"></a>
 
 ### Target
 
-<a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_318"></a><a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_319"></a>There are two ways to explicitly specify an object as the target of a command: by supplying it as the direct parameter of the command (described in the next section) or by specifying it as the target of a `tell` statement that contains the command. If a script doesn’t explicitly specify the target with a `tell` statement, and it isn’t handled by a handler in the script or by AppleScript itself, it is sent to the next object in the inheritance chain (see [The AppleScript Inheritance Chain](ASLR_script_objects.md#//apple_ref/doc/uid/TP40000983-CH207-SW15)).
+<a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_318"></a><a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_319"></a>There are two ways to explicitly specify an object as the target of a command: by supplying it as the direct parameter of the command (described in the next section) or by specifying it as the target of a `tell` statement that contains the command. If a script doesn’t explicitly specify the target with a `tell` statement, and it isn’t handled by a handler in the script or by AppleScript itself, it is sent to the next object in the inheritance chain (see [The AppleScript Inheritance Chain](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_script_objects.md#//apple_ref/doc/uid/TP40000983-CH207-SW15)).
 
 In the following script, the target of the `get` command is the object specifier `name of first window`. Because the enclosing `tell` statement specifies the Finder application, the full specifier is `name of first window of application "Finder"`, and it is the Finder application which obtains and returns the requested information.
 
@@ -438,7 +438,7 @@ tell front document of application "TextEdit"
 end tell
 ```
 
-The phrases `paragraph 1` and `before paragraph 4` are called index and relative references, respectively. For more information, see [Reference Forms](../reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-120522).
+The phrases `paragraph 1` and `before paragraph 4` are called index and relative references, respectively. For more information, see [Reference Forms](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-120522).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH218-SW10"></a>
 
@@ -454,7 +454,7 @@ A script can use an `error` statement to signal an error directly. Doing so invo
 
 Some “errors” are the result of the normal operation of a command. For example, commands such as `display dialog` and `choose file` signal <a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_329"></a><a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_330"></a>`error –128` (User canceled), if the user clicks the Cancel button. Scripts routinely handle the user canceled error to ensure normal operation. For an example of how to do this, see the Examples section for the `display dialog` command. If no `try` statement in a script handles the -128 error, AppleScript halts execution of the script without displaying any error message.<a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_331"></a>
 
-For related information, see [Results](ASLR_lexical_conventions.md#//apple_ref/doc/uid/TP40000983-CH214-SW19), [error Statements](../reference/ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-129657), [try Statements](../reference/ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973), [Error Numbers and Error Messages](../reference/ASLR_error_codes.md#//apple_ref/doc/uid/TP40000983-CH220-SW5), and [Working with Errors](../reference/ASLR_error_xmpls.md#//apple_ref/doc/uid/TP40000983-CH221-SW1).
+For related information, see [Results](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_lexical_conventions.md#//apple_ref/doc/uid/TP40000983-CH214-SW19), [error Statements](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-129657), [try Statements](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973), [Error Numbers and Error Messages](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_error_codes.md#//apple_ref/doc/uid/TP40000983-CH220-SW5), and [Working with Errors](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_error_xmpls.md#//apple_ref/doc/uid/TP40000983-CH221-SW1).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH218-BAJBDEJI"></a>
 
@@ -594,7 +594,7 @@ end tell
 
 ### current application Constant
 
-The <a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_349"></a><a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_350"></a>`current application` constant refers to the application that is executing the current AppleScript script (for example, Script Editor). Because the current application is the parent of AppleScript <a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_351"></a>(see [The AppleScript Inheritance Chain](ASLR_script_objects.md#//apple_ref/doc/uid/TP40000983-CH207-SW15)), it gets a chance to handle commands that aren’t handled by the current script or by AppleScript.
+The <a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_349"></a><a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_350"></a>`current application` constant refers to the application that is executing the current AppleScript script (for example, Script Editor). Because the current application is the parent of AppleScript <a id="//apple_ref/doc/uid/TP40000983-CH218-DontLinkElementID_351"></a>(see [The AppleScript Inheritance Chain](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_script_objects.md#//apple_ref/doc/uid/TP40000983-CH207-SW15)), it gets a chance to handle commands that aren’t handled by the current script or by AppleScript.
 
 The `current application` constant is an object specifier—if you ask AppleScript for its value, the result is the object specifier:
 
@@ -676,7 +676,7 @@ tell document 1 of application "TextEdit"
 end tell
 ```
 
-The following example shows how to specify different `version` properties in a Finder `tell` statement. The Finder is the default target, but using `version of me`, `my version`, or `version of AppleScript` allows you to specify the version of the top-level `script` object. (The top-level `script` object returns the AppleScript version, because it inherits from AppleScript, as described in [The AppleScript Inheritance Chain](ASLR_script_objects.md#//apple_ref/doc/uid/TP40000983-CH207-SW15).)
+The following example shows how to specify different `version` properties in a Finder `tell` statement. The Finder is the default target, but using `version of me`, `my version`, or `version of AppleScript` allows you to specify the version of the top-level `script` object. (The top-level `script` object returns the AppleScript version, because it inherits from AppleScript, as described in [The AppleScript Inheritance Chain](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_script_objects.md#//apple_ref/doc/uid/TP40000983-CH207-SW15).)
 
 ```
 tell application "Finder"
@@ -688,7 +688,7 @@ tell application "Finder"
 end tell
 ```
 
-For information on using `it` in a filter reference, see the Discussion section for the [Filter](../reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BAJJHEFE) reference form.
+For information on using `it` in a filter reference, see the Discussion section for the [Filter](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BAJJHEFE) reference form.
 
 <a id="//apple_ref/doc/uid/TP40000983-CH218-SW28"></a>
 
@@ -759,7 +759,7 @@ POSIX path of notesAlias --result: "/Feb_Notes.rtf"
 
 If an alias doesn’t refer to an existing file system object then it is broken. You can’t create an alias to an object that doesn’t exist, such as a file you plan to create. For that you use a `file` object, described in the next section.
 
-For a sample script that shows how a script application can process a list of aliases it receives when a user drops one or more file icons on it, see [open Handlers](ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW16).
+For a sample script that shows how a script application can process a list of aliases it receives when a user drops one or more file icons on it, see [open Handlers](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW16).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH218-SW31"></a>
 

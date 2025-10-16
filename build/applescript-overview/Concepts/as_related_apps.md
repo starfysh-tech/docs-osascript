@@ -51,7 +51,7 @@ This utility helps you perform tasks related to Folder Actions, including the fo
 
 System Events is an agent (or faceless background application) that supplies the terminology for using a number of features in AppleScript scripts. Among these features is GUI scripting, which allows your scripts to perform some actions in applications that have no built-in scripting support. System Events, which is located in `/System/Library/CoreServices`, has been part of OS X since version 10.1 (Puma), though its features have evolved since that release.
 
-The following are some of the terminology suites supplied by System Events in OS X version 10.4 (and where noted, in version 10.5). For more information, display the application dictionary, as described in [Displaying Scripting Dictionaries](work_with_as.md#//apple_ref/doc/uid/TP40001568-1153006). You can also get information on many of the features supported by System Events in Mac Help (from the Help menu in OS X) and at the AppleScript [GUI Scripting](http://www.macosxautomation.com/applescript/uiscripting/index.html) web page at the [AppleScript in OS X](http://www.macosxautomation.com/applescript/index.html) website.
+The following are some of the terminology suites supplied by System Events in OS X version 10.4 (and where noted, in version 10.5). For more information, display the application dictionary, as described in [Displaying Scripting Dictionaries](https://developer.apple.com/library/archive/applescript-overview/Concepts/work_with_as.md#//apple_ref/doc/uid/TP40001568-1153006). You can also get information on many of the features supported by System Events in Mac Help (from the Help menu in OS X) and at the AppleScript [GUI Scripting](http://www.macosxautomation.com/applescript/uiscripting/index.html) web page at the [AppleScript in OS X](http://www.macosxautomation.com/applescript/index.html) website.
 
 * Accounts suite and Login Items suite
 
@@ -108,7 +108,7 @@ Like System Events, Image Events is an agent (or faceless background application
 
 Image Events has been part of OS X since version 10.4 and provides access to the built-in service called SIPS (Scriptable Image Processing Server) that became available in that OS release.
 
-You can find more information on Image Events in Mac Help (from the OS X Help menu) or at the [Image Events](http://www.macosxautomation.com/applescript/imageevents/index.html) web page. You can also examine the Image Events dictionary with Script Editor, as described in [Displaying Scripting Dictionaries](work_with_as.md#//apple_ref/doc/uid/TP40001568-1153006). SIPS is described in [Technical Note TN2035 ColorSync on OS X](http://developer.apple.com/technotes/tn/tn2035.html#TNTAG58). You can also get some information about SIPS by typing `sips --help` in a Terminal window.
+You can find more information on Image Events in Mac Help (from the OS X Help menu) or at the [Image Events](http://www.macosxautomation.com/applescript/imageevents/index.html) web page. You can also examine the Image Events dictionary with Script Editor, as described in [Displaying Scripting Dictionaries](https://developer.apple.com/library/archive/applescript-overview/Concepts/work_with_as.md#//apple_ref/doc/uid/TP40001568-1153006). SIPS is described in [Technical Note TN2035 ColorSync on OS X](http://developer.apple.com/technotes/tn/tn2035.html#TNTAG58). You can also get some information about SIPS by typing `sips --help` in a Terminal window.
 
 <a id="//apple_ref/doc/uid/TP40001570-SW1"></a>
 
@@ -120,7 +120,7 @@ You can use Database Events to create a new database with a file associated with
 
 Database Events has been part of OS X since version 10.4. Like System Events, Database Events is an agent (or faceless background application) that is located in `/System/Library/CoreServices`.
 
-You can examine the Database Events dictionary with Script Editor, as described in [Displaying Scripting Dictionaries](work_with_as.md#//apple_ref/doc/uid/TP40001568-1153006).
+You can examine the Database Events dictionary with Script Editor, as described in [Displaying Scripting Dictionaries](https://developer.apple.com/library/archive/applescript-overview/Concepts/work_with_as.md#//apple_ref/doc/uid/TP40001568-1153006).
 
   
 

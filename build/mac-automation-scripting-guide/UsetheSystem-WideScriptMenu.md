@@ -6,7 +6,7 @@ The OS X script menu provides quick access to your collection of scripts. Simply
 
 <a id="//apple_ref/doc/uid/TP40016239-CH7-SW4"></a>
 **Figure 41-1**The OS X script menu
-![image: ../Art/scriptmenu_2x.png](Art/scriptmenu_2x.png)
+![image: ../Art/scriptmenu_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/scriptmenu_2x.png)
 > **Note**
 >
 >
@@ -30,7 +30,7 @@ The script menu is disabled by default in OS X.
 
    <a id="//apple_ref/doc/uid/TP40016239-CH7-SW3"></a>
 
-   ![image: ../Art/scripteditor_scriptmenu_preferences_2x.png](Art/scripteditor_scriptmenu_preferences_2x.png)
+   ![image: ../Art/scripteditor_scriptmenu_preferences_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/scripteditor_scriptmenu_preferences_2x.png)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH7-DontLinkElementID_11"></a>
 
@@ -71,7 +71,7 @@ Select a script from the script menu to run it. If the script is an application,
 
 <a id="//apple_ref/doc/uid/TP40016239-CH7-SW2"></a>
 **Figure 41-2**Script menu progress
-![image: ../Art/scriptmenu_progress_2x.png](Art/scriptmenu_progress_2x.png)
+![image: ../Art/scriptmenu_progress_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/scriptmenu_progress_2x.png)
 > **Note**
 >
 >

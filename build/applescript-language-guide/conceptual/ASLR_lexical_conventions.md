@@ -28,7 +28,7 @@ AppleScript Lexical Conventions contains the following sections:
 
 Starting in OS X v10.5 (AppleScript 2.0), <a id="//apple_ref/doc/uid/TP40000983-CH214-DontLinkElementID_397"></a>the character set for AppleScript is Unicode. AppleScript preserves all characters correctly worldwide, and comments and text constants in scripts may contain any Unicode characters.
 
-AppleScript syntax uses several non-ASCII characters, which can be typed using special key combinations. For information on characters that AppleScript treats specially, see the sections [Identifiers](#//apple_ref/doc/uid/TP40000983-CH214-SW4), [Comments](#//apple_ref/doc/uid/TP40000983-CH214-SW8), [Text](#//apple_ref/doc/uid/TP40000983-CH214-SW26), [The Continuation Character](#//apple_ref/doc/uid/TP40000983-CH214-SW9), and [Raw Codes](#//apple_ref/doc/uid/TP40000983-CH214-SW5) in this chapter, as well as [Table 9-1](../reference/ASLR_operators.md#//apple_ref/doc/uid/TP40000983-CH5g-SW2) in [Operators Reference](../reference/ASLR_operators.md#//apple_ref/doc/uid/TP40000983-CH5g-124070).
+AppleScript syntax uses several non-ASCII characters, which can be typed using special key combinations. For information on characters that AppleScript treats specially, see the sections [Identifiers](#//apple_ref/doc/uid/TP40000983-CH214-SW4), [Comments](#//apple_ref/doc/uid/TP40000983-CH214-SW8), [Text](#//apple_ref/doc/uid/TP40000983-CH214-SW26), [The Continuation Character](#//apple_ref/doc/uid/TP40000983-CH214-SW9), and [Raw Codes](#//apple_ref/doc/uid/TP40000983-CH214-SW5) in this chapter, as well as [Table 9-1](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_operators.md#//apple_ref/doc/uid/TP40000983-CH5g-SW2) in [Operators Reference](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_operators.md#//apple_ref/doc/uid/TP40000983-CH5g-124070).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH214-SW4"></a>
 
@@ -70,7 +70,7 @@ An identifier can contain additional vertical bars preceded by a backslash (\) c
 >
 > **Important:** You should not attempt to reuse keywords in your scripts for variable names or other purposes. Developers should not re-define keywords in the terminology for their scriptable applications.
 
-Table 1-1 lists the keywords reserved in AppleScript 2.0 (which are the same as those used in AppleScript 1.x). For additional information, see [Table A-1](../reference/ASLR_keywords.md#//apple_ref/doc/uid/TP40000983-CH222-SW1), which provides a brief description for each keyword and points to related information, where available.
+Table 1-1 lists the keywords reserved in AppleScript 2.0 (which are the same as those used in AppleScript 1.x). For additional information, see [Table A-1](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_keywords.md#//apple_ref/doc/uid/TP40000983-CH222-SW1), which provides a brief description for each keyword and points to related information, where available.
 
 <a id="//apple_ref/doc/uid/TP40000983-CH214-SW2"></a>
 
@@ -155,7 +155,7 @@ AppleScript defines the <a id="//apple_ref/doc/uid/TP40000983-CH214-DontLinkElem
 
 ### Constant
 
-[Global Constants in AppleScript](ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-BAJBDEJI) describes constants that can be used throughout your scripts. For related information, see the `constant` class.
+[Global Constants in AppleScript](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-BAJBDEJI) describes constants that can be used throughout your scripts. For related information, see the `constant` class.
 
 <a id="//apple_ref/doc/uid/TP40000983-CH214-SW15"></a>
 
@@ -213,7 +213,7 @@ AppleScript `text` objects are instances of the `text` class, which provides mec
 
 An *operator* is a symbol, word, or phrase that derives a value from another value or pair of values. For example, the multiplication operator (`*`) multiplies two numeric operands, while the concatenation operator (`&`) joins two objects (such as text strings). The `is equal` operator performs a test on two Boolean values.
 
-For detailed information on AppleScript’s operators, see [Operators Reference](../reference/ASLR_operators.md#//apple_ref/doc/uid/TP40000983-CH5g-124070).
+For detailed information on AppleScript’s operators, see [Operators Reference](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_operators.md#//apple_ref/doc/uid/TP40000983-CH5g-124070).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH214-SW23"></a>
 
@@ -232,7 +232,7 @@ When AppleScript encounters a variable, it evaluates the variable by getting its
 
 AppleScript variables can hold values of any class. For example, you can assign the integer value `17` to a variable, then later assign the Boolean value `true` to the same variable.<a id="//apple_ref/doc/uid/TP40000983-CH214-DontLinkElementID_417"></a><a id="//apple_ref/doc/uid/TP40000983-CH214-DontLinkElementID_418"></a>
 
-For more information, see [Variables and Properties](ASLR_variables.md#//apple_ref/doc/uid/TP40000983-CH223-SW10).
+For more information, see [Variables and Properties](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_variables.md#//apple_ref/doc/uid/TP40000983-CH223-SW10).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH214-SW20"></a>
 
@@ -252,7 +252,7 @@ An object specifier<a id="//apple_ref/doc/uid/TP40000983-CH214-DontLinkElementID
 document named "FavoritesList"
 ```
 
-For more information, see [Object Specifiers](ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW7).
+For more information, see [Object Specifiers](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW7).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH214-SW17"></a>
 
@@ -262,7 +262,7 @@ For more information, see [Object Specifiers](ASLR_fundamentals.md#//apple_ref/d
 
 Every script consists of statements. When AppleScript executes a script, it reads the statements in order and carries out their instructions.
 
-A *control statement* is a statement that determines when and how other statements are executed. AppleScript defines standard control statements such as `if`, `repeat`, and `while` statements, which are described in detail in [Control Statements Reference](../reference/ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-157332).
+A *control statement* is a statement that determines when and how other statements are executed. AppleScript defines standard control statements such as `if`, `repeat`, and `while` statements, which are described in detail in [Control Statements Reference](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-157332).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH214-DontLinkElementID_425"></a><a id="//apple_ref/doc/uid/TP40000983-CH214-DontLinkElementID_426"></a> A *simple statement* is one that can be written on a single line:
 
@@ -297,13 +297,13 @@ The following statement uses AppleScript’s `get` command to obtain the name of
 get name of front window of application "Finder"
 ```
 
-For more information on command types, parameters, and targets, see [Commands Overview](ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW8).
+For more information on command types, parameters, and targets, see [Commands Overview](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW8).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH214-SW19"></a>
 
 ## Results
 
-The <a id="//apple_ref/doc/uid/TP40000983-CH214-DontLinkElementID_429"></a>*result* of a statement is the value generated, if any, when the statement is executed. For example, executing the statement `3 + 4` results in the value `7`. The result of the statement `set myText to "keyboard"` is the text object `"keyboard"`. A result can be of any class. AppleScript stores the result in the globally available property <a id="//apple_ref/doc/uid/TP40000983-CH214-DontLinkElementID_430"></a>`result`, described in [AppleScript Constant](ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW38).<a id="//apple_ref/doc/uid/TP40000983-CH214-DontLinkElementID_431"></a>
+The <a id="//apple_ref/doc/uid/TP40000983-CH214-DontLinkElementID_429"></a>*result* of a statement is the value generated, if any, when the statement is executed. For example, executing the statement `3 + 4` results in the value `7`. The result of the statement `set myText to "keyboard"` is the text object `"keyboard"`. A result can be of any class. AppleScript stores the result in the globally available property <a id="//apple_ref/doc/uid/TP40000983-CH214-DontLinkElementID_430"></a>`result`, described in [AppleScript Constant](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW38).<a id="//apple_ref/doc/uid/TP40000983-CH214-DontLinkElementID_431"></a>
 
 <a id="//apple_ref/doc/uid/TP40000983-CH214-SW5"></a>
 
@@ -313,7 +313,7 @@ When you open, compile, edit, or run scripts with a script editor, you may occas
 
 For compatibility with Asian national encodings, “《” and “》” are allowed as synonyms for “«” and “»” ( (Option- \ and Option-Shift- \, respectively, on a U.S. keyboard), since the latter do not exist in some Asian encodings.
 
-For more information on raw codes, see [Double Angle Brackets](ASLR_raw_data.md#//apple_ref/doc/uid/TP40000983-CH225-SW1).<a id="//apple_ref/doc/uid/TP40000983-CH214-DontLinkElementID_434"></a>
+For more information on raw codes, see [Double Angle Brackets](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_raw_data.md#//apple_ref/doc/uid/TP40000983-CH225-SW1).<a id="//apple_ref/doc/uid/TP40000983-CH214-DontLinkElementID_434"></a>
 
   
 

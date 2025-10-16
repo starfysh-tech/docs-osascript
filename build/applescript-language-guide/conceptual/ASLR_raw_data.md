@@ -64,7 +64,7 @@ Script Editor can compile the script, but displays chevron format for any terms 
 
 ## Sending Raw Apple Events From a Script
 
-<a id="//apple_ref/doc/uid/TP40000983-CH225-DontLinkElementID_443"></a>The term `«event sysodlog»` is actually the raw form for an Apple event with event class `'syso'` and event ID `'dlog'` (the `display dialog` command). For a list of many of the four-character codes and their related terminology used by Apple, see *[AppleScript Terminology and Apple Event Codes Reference](../../../../../releasenotes/AppleScript/ASTerminology_AppleEventCodes/TermsAndCodes.html#//apple_ref/doc/uid/TP40004532)*.
+<a id="//apple_ref/doc/uid/TP40000983-CH225-DontLinkElementID_443"></a>The term `«event sysodlog»` is actually the raw form for an Apple event with event class `'syso'` and event ID `'dlog'` (the `display dialog` command). For a list of many of the four-character codes and their related terminology used by Apple, see *[AppleScript Terminology and Apple Event Codes Reference](https://developer.apple.com/library/archive/../../../releasenotes/AppleScript/ASTerminology_AppleEventCodes/TermsAndCodes.html#//apple_ref/doc/uid/TP40004532)*.
 
 You can use raw syntax to enter and execute events (even complex events with numerous parameters) when there is no dictionary to support them. However, providing detailed documentation for how to do so is beyond the scope of this guide.<a id="//apple_ref/doc/uid/TP40000983-CH225-DontLinkElementID_444"></a><a id="//apple_ref/doc/uid/TP40000983-CH225-DontLinkElementID_445"></a><a id="//apple_ref/doc/uid/TP40000983-CH225-DontLinkElementID_446"></a>
 

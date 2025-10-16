@@ -8,11 +8,11 @@ Apple events provide an event dispatching and data transport mechanism that can 
 
 > <a id="//apple_ref/doc/uid/TP40001571-SW2"></a>
 >
-> **Note:** Apple events are not always the most efficient or appropriate mechanism for communicating between processes. OS X offers other mechanisms, including distributed objects, notifications, sockets, ports, streams, shared memory, and Mach messaging. These mechanisms are described in “IPC and Notification Mechanisms” in [Kernel and Device Drivers Layer](../../../../MacOSX/Conceptual/OSX_Technology_Overview/SystemTechnology/SystemTechnology.html#//apple_ref/doc/uid/TP40001067-CH207) in *[Mac Technology Overview](../../../../MacOSX/Conceptual/OSX_Technology_Overview/About/About.html#//apple_ref/doc/uid/TP40001067)*.
+> **Note:** Apple events are not always the most efficient or appropriate mechanism for communicating between processes. OS X offers other mechanisms, including distributed objects, notifications, sockets, ports, streams, shared memory, and Mach messaging. These mechanisms are described in “IPC and Notification Mechanisms” in [Kernel and Device Drivers Layer](https://developer.apple.com/library/archive/../../MacOSX/Conceptual/OSX_Technology_Overview/SystemTechnology/SystemTechnology.html#//apple_ref/doc/uid/TP40001067-CH207) in *[Mac Technology Overview](https://developer.apple.com/library/archive/../../MacOSX/Conceptual/OSX_Technology_Overview/About/About.html#//apple_ref/doc/uid/TP40001067)*.
 
 The OSA supports several powerful features in OS X:
 
-* the ability to create scriptable applications (described in [Scriptable Applications](scriptable_apps.md#//apple_ref/doc/uid/TP40001569-BABEBGCF))
+* the ability to create scriptable applications (described in [Scriptable Applications](https://developer.apple.com/library/archive/applescript-overview/Concepts/scriptable_apps.md#//apple_ref/doc/uid/TP40001569-BABEBGCF))
 * the ability for users to write scripts that combine operations from multiple scriptable applications
 * the ability to communicate between applications with Apple events
 
@@ -32,14 +32,14 @@ The Open Scripting Architecture is made up of the following parts:
 
   This framework also defines constants that developers can use to support a standard vocabulary for Apple events among different applications.
 
-  For API documentation, see *[Apple Event Manager Reference](https://developer.apple.com/documentation/applicationservices/apple_event_manager)*. For conceptual documentation and code samples, see *[Apple Events Programming Guide](../../AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449)*.
+  For API documentation, see *[Apple Event Manager Reference](https://developer.apple.com/documentation/applicationservices/apple_event_manager)*. For conceptual documentation and code samples, see *[Apple Events Programming Guide](https://developer.apple.com/library/archive/AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449)*.
 * The *Carbon umbrella framework* includes the HIToolbox framework, which in turn defines certain functions used in processing and sending Apple events (for example, in the header file `Interaction.h`).
 * The *Open Scripting framework* defines standard data structures, routines, and resources for creating scripting components, which support scripting languages. Because of its standard interface, applications can interact with any scripting component, regardless of its language. This framework provides API for compiling, executing, loading, and storing scripts. It is implemented in `OpenScripting.framework`, a subframework of `Carbon.framework`.
 
   For documentation, see *Open Scripting Architecture Reference*.
 * The AppleScript component (in `System/Library/Components`) implements the AppleScript language, which provides a way for scripts to control scriptable applications.
 
-  The AppleScript language is described in *[AppleScript Language Guide](../../applescript-language-guide/introduction/ASLR_intro.md#//apple_ref/doc/uid/TP40000983)*, as well as in a number of third-party books.
+  The AppleScript language is described in *[AppleScript Language Guide](https://developer.apple.com/library/archive/applescript-language-guide/introduction/ASLR_intro.md#//apple_ref/doc/uid/TP40000983)*, as well as in a number of third-party books.
 
 <a id="//apple_ref/doc/uid/TP40001571-1155023"></a>
 
@@ -47,7 +47,7 @@ The Open Scripting Architecture is made up of the following parts:
 
 The Apple event is the basic message for interprocess communication in the Open Scripting Architecture. With Apple events, you can gather all the data necessary to accomplish a high level task into a single package that can be passed across process boundaries, evaluated, and returned with results.
 
-An Apple event consists of a series of nested data structures, each identified by one or more four-character codes (also referred to as Apple event codes). These data structures, as well as the codes and the header files in which they are defined, are described in *[Apple Events Programming Guide](../../AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449)*. That document also provides conceptual information about Apple events and programming examples that work with them. For a list of four-character codes and their related terminology used by Apple, see *[AppleScript Terminology and Apple Event Codes Reference](../../../../../releasenotes/AppleScript/ASTerminology_AppleEventCodes/TermsAndCodes.html#//apple_ref/doc/uid/TP40004532)*. Your application can reuse these terms and codes whenever it performs an equivalent function.
+An Apple event consists of a series of nested data structures, each identified by one or more four-character codes (also referred to as Apple event codes). These data structures, as well as the codes and the header files in which they are defined, are described in *[Apple Events Programming Guide](https://developer.apple.com/library/archive/AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449)*. That document also provides conceptual information about Apple events and programming examples that work with them. For a list of four-character codes and their related terminology used by Apple, see *[AppleScript Terminology and Apple Event Codes Reference](https://developer.apple.com/library/archive/../../../releasenotes/AppleScript/ASTerminology_AppleEventCodes/TermsAndCodes.html#//apple_ref/doc/uid/TP40004532)*. Your application can reuse these terms and codes whenever it performs an equivalent function.
 
 <a id="//apple_ref/doc/uid/TP40001571-1152144"></a><a id="//apple_ref/doc/uid/TP40001571-1152144-BAJFBDEI"></a>
 
@@ -57,8 +57,8 @@ The Mac OS takes advantage of Apple events to communicate with applications, suc
 
 For detailed information on the events sent by the Mac OS and how to respond to them, see:
 
-* For Carbon applications: “Handling Events Sent by the Mac OS” in [Responding to Apple Events](../../AppleEvents/responding_aepg/responding_aepg.html#//apple_ref/doc/uid/TP40001449-CH206) in *[Apple Events Programming Guide](../../AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449)*.
-* For Cocoa applications: [How Cocoa Applications Handle Apple Events](../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_handle_AEs/SAppsHandleAEs.html#//apple_ref/doc/uid/20001239) in *[Cocoa Scripting Guide](../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_intro/SAppsIntro.html#//apple_ref/doc/uid/TP40002164)*.
+* For Carbon applications: “Handling Events Sent by the Mac OS” in [Responding to Apple Events](https://developer.apple.com/library/archive/AppleEvents/responding_aepg/responding_aepg.html#//apple_ref/doc/uid/TP40001449-CH206) in *[Apple Events Programming Guide](https://developer.apple.com/library/archive/AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449)*.
+* For Cocoa applications: [How Cocoa Applications Handle Apple Events](https://developer.apple.com/library/archive/../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_handle_AEs/SAppsHandleAEs.html#//apple_ref/doc/uid/20001239) in *[Cocoa Scripting Guide](https://developer.apple.com/library/archive/../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_intro/SAppsIntro.html#//apple_ref/doc/uid/TP40002164)*.
 
 <a id="//apple_ref/doc/uid/TP40001571-1151905"></a>
 
@@ -68,13 +68,13 @@ The Open Scripting Architecture allows users to control multiple applications wi
 
 Although AppleScript is the most widely used language (and the only one provided by Apple), developers are free to use the Open Scripting Architecture to create scripting components for other scripting languages. Depending on the implementation, scripts written in these languages may be able to communicate with scriptable applications.
 
-Figure 1 shows what happens when the [Script Editor](work_with_as.md#//apple_ref/doc/uid/TP40001568-1152365) application executes an AppleScript script that targets the Mail application. Script Editor calls functions in the Open Scripting framework. The Open Scripting framework communicates through the AppleScript component, which in turn uses the Apple Event Manager to send any required Apple events to the Mail application. If a reply is requested, the Mail application returns information in a reply Apple event.
+Figure 1 shows what happens when the [Script Editor](https://developer.apple.com/library/archive/applescript-overview/Concepts/work_with_as.md#//apple_ref/doc/uid/TP40001568-1152365) application executes an AppleScript script that targets the Mail application. Script Editor calls functions in the Open Scripting framework. The Open Scripting framework communicates through the AppleScript component, which in turn uses the Apple Event Manager to send any required Apple events to the Mail application. If a reply is requested, the Mail application returns information in a reply Apple event.
 
 <a id="//apple_ref/doc/uid/TP40001571-1152867-BAJECDEI"></a>
 
 <a id="//apple_ref/doc/uid/TP40001571-1152867"></a>**Figure 1**  How parts of the OSA work together in executing scripts
 
-![How parts of the OSA work together in executing scripts.](../art/execute_script_2x.png)![How parts of the OSA work together in executing scripts.](../art/execute_script_2x.png)
+![How parts of the OSA work together in executing scripts.](https://developer.apple.com/library/archive/applescript-overview/art/execute_script_2x.png)![How parts of the OSA work together in executing scripts.](https://developer.apple.com/library/archive/applescript-overview/art/execute_script_2x.png)
 
 Applications can also call Apple Event Manager functions directly to send Apple events to other applications and get replies from them (not shown in Figure 1).
 
@@ -88,7 +88,7 @@ Developers can extend AppleScript by creating bundles that provide command handl
 
 ### Coercions
 
-*Coercion* is the process of converting the information in an Apple event from one type to another. A *coercion handler* is a function that provides coercion between two (or possibly more) data types. OS X provides default coercion between many standard types. For a complete listing, see [Default Coercion Handlers](../../AppleEvents/appendix3_aepg/appendix3_aepg.html#//apple_ref/doc/uid/TP40001449-CH213) in *[Apple Events Programming Guide](../../AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449)*.
+*Coercion* is the process of converting the information in an Apple event from one type to another. A *coercion handler* is a function that provides coercion between two (or possibly more) data types. OS X provides default coercion between many standard types. For a complete listing, see [Default Coercion Handlers](https://developer.apple.com/library/archive/AppleEvents/appendix3_aepg/appendix3_aepg.html#//apple_ref/doc/uid/TP40001449-CH213) in *[Apple Events Programming Guide](https://developer.apple.com/library/archive/AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449)*.
 
 Coercion is available to both scripts and applications. In a script, for example, the following statement coerces the numeric value 1234 to the string value “1234”.
 
@@ -96,13 +96,13 @@ Coercion is available to both scripts and applications. In a script, for example
 set myString to 1234 as text
 ```
 
-A scriptable application can specify a type when it uses an Apple Event Manager function to extract data from an Apple event. If the data is not already in the specified type, the Apple Event Manager will attempt to coerce it to that type. An application can provide coercion handlers for its own data types, as described in [Writing and Installing Coercion Handlers](../../AppleEvents/coercions_aepg/coercions_aepg.html#//apple_ref/doc/uid/TP40001449-CH208) in *[Apple Events Programming Guide](../../AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449)*.
+A scriptable application can specify a type when it uses an Apple Event Manager function to extract data from an Apple event. If the data is not already in the specified type, the Apple Event Manager will attempt to coerce it to that type. An application can provide coercion handlers for its own data types, as described in [Writing and Installing Coercion Handlers](https://developer.apple.com/library/archive/AppleEvents/coercions_aepg/coercions_aepg.html#//apple_ref/doc/uid/TP40001449-CH208) in *[Apple Events Programming Guide](https://developer.apple.com/library/archive/AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449)*.
 
 <a id="//apple_ref/doc/uid/TP40001571-1164142"></a>
 
 ### Scripting Additions
 
-A *scripting addition* is a file or bundle that provides AppleScript commands or coercions. A single scripting addition can contain multiple handlers. For example, the Standard Additions scripting addition in OS X (filename `StandardAdditions.osax`), includes commands for using the Clipboard, obtaining the path to a file, speaking text, executing shell scripts, and more. The commands provided by the Standard Additions are available to all scripts. To see what terminology a scripting addition provides, you can examine its dictionary, as described in [Displaying Scripting Dictionaries](work_with_as.md#//apple_ref/doc/uid/TP40001568-1153006).
+A *scripting addition* is a file or bundle that provides AppleScript commands or coercions. A single scripting addition can contain multiple handlers. For example, the Standard Additions scripting addition in OS X (filename `StandardAdditions.osax`), includes commands for using the Clipboard, obtaining the path to a file, speaking text, executing shell scripts, and more. The commands provided by the Standard Additions are available to all scripts. To see what terminology a scripting addition provides, you can examine its dictionary, as described in [Displaying Scripting Dictionaries](https://developer.apple.com/library/archive/applescript-overview/Concepts/work_with_as.md#//apple_ref/doc/uid/TP40001568-1153006).
 
 Terms introduced by scripting additions exist in the same name space as AppleScript terms and application-defined terms. While this has the advantage of making a service globally available, it also means that terms from scripting additions can conflict with other terms, polluting the global name space. Debugging scripting additions can also be difficult. Because you can not simply set breakpoints in your own code, you may need to use sampling, profiling, and various other tools to determine where a problem lies. (See [Faceless Background Applications](#//apple_ref/doc/uid/TP40001571-SW1) for an approach that avoids these problems.)
 
@@ -118,7 +118,7 @@ A faceless background application (now more commonly referred to as an agent), i
 
 You can install your agent directly, but if it is intended for use with another application, you can put it in the `Resources` folder of the application it supports. That promotes ease of use by allowing a drag-and-drop installation process, and will minimize users stumbling across the agent and asking “What is this for?“ The agent will be launched whenever it is referenced in a `tell` statement. It can be told to quit, and you can also set it up to time out, so it can get unloaded when it is no longer in use.
 
-Apple provides a number of scriptable services through agents, as described in [System Events and GUI Scripting](as_related_apps.md#//apple_ref/doc/uid/TP40001570-1149074), [Image Events](as_related_apps.md#//apple_ref/doc/uid/TP40001570-1147921), and [Database Events](as_related_apps.md#//apple_ref/doc/uid/TP40001570-SW1). For example, scripts can use the System Events application to perform operations on property list files.
+Apple provides a number of scriptable services through agents, as described in [System Events and GUI Scripting](https://developer.apple.com/library/archive/applescript-overview/Concepts/as_related_apps.md#//apple_ref/doc/uid/TP40001570-1149074), [Image Events](https://developer.apple.com/library/archive/applescript-overview/Concepts/as_related_apps.md#//apple_ref/doc/uid/TP40001570-1147921), and [Database Events](https://developer.apple.com/library/archive/applescript-overview/Concepts/as_related_apps.md#//apple_ref/doc/uid/TP40001570-SW1). For example, scripts can use the System Events application to perform operations on property list files.
 
   
 

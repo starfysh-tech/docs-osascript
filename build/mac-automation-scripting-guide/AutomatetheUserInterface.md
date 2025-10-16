@@ -22,19 +22,19 @@ User interface scripting relies upon the OS X accessibility frameworks that prov
 5. Choose an app and click Open.
 6. Select the checkbox to the left of the app.
 
-   ![image: ../Art/systempreferences_security_accessibility_2x.png](Art/systempreferences_security_accessibility_2x.png)
+   ![image: ../Art/systempreferences_security_accessibility_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/systempreferences_security_accessibility_2x.png)
 
 When running an app that requires accessibility control for the first time, the system prompts you to enable it. See Figure 37-1.
 
 <a id="//apple_ref/doc/uid/TP40016239-CH69-SW2"></a>
 **Figure 37-1**An accessibility control prompt
-![image: ../Art/accessibility_alert1_2x.png](Art/accessibility_alert1_2x.png)
+![image: ../Art/accessibility_alert1_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/accessibility_alert1_2x.png)
 
 Attempting to run an app that has not been given permission to use accessibility features results in an error. See Figure 37-2.
 
 <a id="//apple_ref/doc/uid/TP40016239-CH69-SW3"></a>
 **Figure 37-2**An accessibility control error
-![image: ../Art/accessibility_alert2_2x.png](Art/accessibility_alert2_2x.png)
+![image: ../Art/accessibility_alert2_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/accessibility_alert2_2x.png)
 > **Note**
 >
 >
@@ -50,7 +50,7 @@ User interface scripting terminology is found in the Processes Suite of the Syst
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=tell%20application%20%22System%20Events%22%0A%20%20%20%20tell%20process%20%22Safari%22%0A%20%20%20%20%20%20%20%20--%20Perform%20user%20interface%20scripting%20tasks%0A%20%20%20%20end%20tell%0Aend%20tell)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=tell%20application%20%22System%20Events%22%0A%20%20%20%20tell%20process%20%22Safari%22%0A%20%20%20%20%20%20%20%20--%20Perform%20user%20interface%20scripting%20tasks%0A%20%20%20%20end%20tell%0Aend%20tell)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH69-SW4"></a>
 **Listing 37-1**AppleScript: Targeting an app for user interface scripting
@@ -65,7 +65,7 @@ To control the user interface of an app, you must first inspect the app and dete
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=tell%20application%20%22System%20Events%22%0A%20%20%20%20tell%20process%20%22Safari%22%0A%20%20%20%20%20%20%20%20name%20of%20every%20menu%20of%20menu%20bar%201%0A%20%20%20%20end%20tell%0Aend%20tell%0A--%3E%20Result%3A%20%7B%22Apple%22%2C%20%22Safari%22%2C%20%22File%22%2C%20%22Edit%22%2C%20%22View%22%2C%20%22History%22%2C%20%22Bookmarks%22%2C%20%22Develop%22%2C%20%22Window%22%2C%20%22Help%22%7D)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=tell%20application%20%22System%20Events%22%0A%20%20%20%20tell%20process%20%22Safari%22%0A%20%20%20%20%20%20%20%20name%20of%20every%20menu%20of%20menu%20bar%201%0A%20%20%20%20end%20tell%0Aend%20tell%0A--%3E%20Result%3A%20%7B%22Apple%22%2C%20%22Safari%22%2C%20%22File%22%2C%20%22Edit%22%2C%20%22View%22%2C%20%22History%22%2C%20%22Bookmarks%22%2C%20%22Develop%22%2C%20%22Window%22%2C%20%22Help%22%7D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH69-SW5"></a>
 **Listing 37-2**AppleScript: Querying an app for user interface element information
@@ -81,7 +81,7 @@ Accessibility Inspector (Figure 37-3) makes it even easier to identify user inte
 
 <a id="//apple_ref/doc/uid/TP40016239-CH69-SW6"></a>
 **Figure 37-3**Accessibility Inspector
-![image: ../Art/accessibilityinspector_2x.png](Art/accessibilityinspector_2x.png)
+![image: ../Art/accessibilityinspector_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/accessibilityinspector_2x.png)
 
 Once you know how an element fits into an interface, you target it within that hierarchy. For example, `button X of window Y of process Z`.
 
@@ -93,7 +93,7 @@ Use the `click` command to click a button. Listing 37-3 clicks a button in the S
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=tell%20application%20%22System%20Events%22%0A%20%20%20%20tell%20process%20%22Safari%22%0A%20%20%20%20%20%20%20%20tell%20toolbar%20of%20window%201%0A%20%20%20%20%20%20%20%20%20%20%20%20click%20%28first%20button%20where%20its%20accessibility%20description%20%3D%20%22Sidebar%22%29%0A%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20end%20tell%0Aend%20tell%0A--%3E%20Result%3A%20%7Bbutton%201%20of%20toolbar%201%20of%20window%20%22AppleScript%3A%20Graphic%20User%20Interface%20%28GUI%29%20Scripting%22%20of%20application%20process%20%22Safari%22%20of%20application%20%22System%20Events%22%7D)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=tell%20application%20%22System%20Events%22%0A%20%20%20%20tell%20process%20%22Safari%22%0A%20%20%20%20%20%20%20%20tell%20toolbar%20of%20window%201%0A%20%20%20%20%20%20%20%20%20%20%20%20click%20%28first%20button%20where%20its%20accessibility%20description%20%3D%20%22Sidebar%22%29%0A%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20end%20tell%0Aend%20tell%0A--%3E%20Result%3A%20%7Bbutton%201%20of%20toolbar%201%20of%20window%20%22AppleScript%3A%20Graphic%20User%20Interface%20%28GUI%29%20Scripting%22%20of%20application%20process%20%22Safari%22%20of%20application%20%22System%20Events%22%7D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH69-SW7"></a>
 **Listing 37-3**AppleScript: Clicking a button
@@ -115,7 +115,7 @@ Menu items can have a fairly deep hierarchy within the interface of an app. A me
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=tell%20application%20%22System%20Events%22%0A%20%20%20%20tell%20process%20%22Safari%22%0A%20%20%20%20%20%20%20%20set%20frontmost%20to%20true%0A%20%20%20%20%20%20%20%20click%20menu%20item%20%22Pin%20Tab%22%20of%20menu%20%22Window%22%20of%20menu%20bar%201%0A%20%20%20%20end%20tell%0Aend%20tell%0A--%3E%20Result%3A%20menu%20item%20%22Pin%20Tab%22%20of%20menu%20%22Window%22%20of%20menu%20bar%20item%20%22Window%22%20of%20menu%20bar%201%20of%20application%20process%20%22Safari%22%20of%20application%20%22System%20Events%22)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=tell%20application%20%22System%20Events%22%0A%20%20%20%20tell%20process%20%22Safari%22%0A%20%20%20%20%20%20%20%20set%20frontmost%20to%20true%0A%20%20%20%20%20%20%20%20click%20menu%20item%20%22Pin%20Tab%22%20of%20menu%20%22Window%22%20of%20menu%20bar%201%0A%20%20%20%20end%20tell%0Aend%20tell%0A--%3E%20Result%3A%20menu%20item%20%22Pin%20Tab%22%20of%20menu%20%22Window%22%20of%20menu%20bar%20item%20%22Window%22%20of%20menu%20bar%201%20of%20application%20process%20%22Safari%22%20of%20application%20%22System%20Events%22)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH69-SW8"></a>
 **Listing 37-4**AppleScript: Choosing a menu item
@@ -135,7 +135,7 @@ Menu items can have a fairly deep hierarchy within the interface of an app. A me
 >
 > **APPLESCRIPT**
 >
-> [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20chooseMenuItem%28theAppName%2C%20theMenuName%2C%20theMenuItemName%29%0A%20%20%20%20try%0A%20%20%20%20%20%20%20%20--%20Bring%20the%20target%20app%20to%20the%20front%0A%20%20%20%20%20%20%20%20tell%20application%20theAppName%0A%20%20%20%20%20%20%20%20%20%20%20%20activate%0A%20%20%20%20%20%20%20%20end%20tell%0A%0A%20%20%20%20%20%20%20%20--%20Target%20the%20app%0A%20%20%20%20%20%20%20%20tell%20application%20%22System%20Events%22%0A%20%20%20%20%20%20%20%20%20%20%20%20tell%20process%20theAppName%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20--%20Target%20the%20menu%20bar%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20tell%20menu%20bar%201%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20--%20Target%20the%20menu%20by%20name%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20tell%20menu%20bar%20item%20theMenuName%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20tell%20menu%20theMenuName%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20--%20Click%20the%20menu%20item%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20click%20menu%20item%20theMenuItemName%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20%20%20%20%20return%20true%0A%20%20%20%20on%20error%0A%20%20%20%20%20%20%20%20return%20false%0A%20%20%20%20end%20try%0Aend%20chooseMenuItem)
+> [Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20chooseMenuItem%28theAppName%2C%20theMenuName%2C%20theMenuItemName%29%0A%20%20%20%20try%0A%20%20%20%20%20%20%20%20--%20Bring%20the%20target%20app%20to%20the%20front%0A%20%20%20%20%20%20%20%20tell%20application%20theAppName%0A%20%20%20%20%20%20%20%20%20%20%20%20activate%0A%20%20%20%20%20%20%20%20end%20tell%0A%0A%20%20%20%20%20%20%20%20--%20Target%20the%20app%0A%20%20%20%20%20%20%20%20tell%20application%20%22System%20Events%22%0A%20%20%20%20%20%20%20%20%20%20%20%20tell%20process%20theAppName%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20--%20Target%20the%20menu%20bar%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20tell%20menu%20bar%201%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20--%20Target%20the%20menu%20by%20name%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20tell%20menu%20bar%20item%20theMenuName%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20tell%20menu%20theMenuName%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20--%20Click%20the%20menu%20item%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20click%20menu%20item%20theMenuItemName%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20%20%20%20%20return%20true%0A%20%20%20%20on%20error%0A%20%20%20%20%20%20%20%20return%20false%0A%20%20%20%20end%20try%0Aend%20chooseMenuItem)
 >
 > <a id="//apple_ref/doc/uid/TP40016239-CH69-SW9"></a>
 > **Listing 37-5**AppleScript: A handler that chooses a menu item
@@ -175,7 +175,7 @@ Menu items can have a fairly deep hierarchy within the interface of an app. A me
 >
 > **APPLESCRIPT**
 >
-> [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=chooseMenuItem%28%22Safari%22%2C%20%22Window%22%2C%20%22Pin%20Tab%22%29)
+> [Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=chooseMenuItem%28%22Safari%22%2C%20%22Window%22%2C%20%22Pin%20Tab%22%29)
 >
 > <a id="//apple_ref/doc/uid/TP40016239-CH69-SW10"></a>
 > **Listing 37-6**AppleScript: Calling a handler to choose a menu item
@@ -190,7 +190,7 @@ Some menus contain other menus. In these cases, it may be necessary to select a 
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=tell%20application%20%22System%20Events%22%0A%20%20%20%20tell%20process%20%22Safari%22%0A%20%20%20%20%20%20%20%20set%20frontmost%20to%20true%0A%20%20%20%20%20%20%20%20click%20menu%20item%20%22Email%20This%20Page%22%20of%20menu%20of%20menu%20item%20%22Share%22%20of%20menu%20%22File%22%20of%20menu%20bar%201%0A%20%20%20%20end%20tell%0Aend%20tell%0A--%3E%20Result%3A%20%7Bmenu%20item%20%22Email%20This%20Page%22%20of%20menu%20%22Share%22%20of%20menu%20item%20%22Share%22%20of%20menu%20%22File%22%20of%20menu%20bar%20item%20%22File%22%20of%20menu%20bar%201%20of%20application%20process%20%22Safari%22%20of%20application%20%22System%20Events%22%7D)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=tell%20application%20%22System%20Events%22%0A%20%20%20%20tell%20process%20%22Safari%22%0A%20%20%20%20%20%20%20%20set%20frontmost%20to%20true%0A%20%20%20%20%20%20%20%20click%20menu%20item%20%22Email%20This%20Page%22%20of%20menu%20of%20menu%20item%20%22Share%22%20of%20menu%20%22File%22%20of%20menu%20bar%201%0A%20%20%20%20end%20tell%0Aend%20tell%0A--%3E%20Result%3A%20%7Bmenu%20item%20%22Email%20This%20Page%22%20of%20menu%20%22Share%22%20of%20menu%20item%20%22Share%22%20of%20menu%20%22File%22%20of%20menu%20bar%20item%20%22File%22%20of%20menu%20bar%201%20of%20application%20process%20%22Safari%22%20of%20application%20%22System%20Events%22%7D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH69-SW11"></a>
 **Listing 37-7**AppleScript: Selecting a submenu item

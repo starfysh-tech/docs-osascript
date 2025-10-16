@@ -16,18 +16,18 @@ You must enable dictation commands before you can use them.
 
 1. Launch System Preferences and open the Dictation & Speech preference pane.
 
-   ![image: ../Art/systempreferences_speechanddictation_pane_2x.png](Art/systempreferences_speechanddictation_pane_2x.png)
+   ![image: ../Art/systempreferences_speechanddictation_pane_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/systempreferences_speechanddictation_pane_2x.png)
 2. Click the On radio button to enable dictation.
 3. Click Use Enhanced Dictation.
 
    Enhanced dictation lets you perform dictation when your computer is offline, and is required to use dictation commands. Enabling this feature downloads some additional system content to your Mac.
 4. Open the Accessibility preference pane.
 
-   ![image: ../Art/systempreferences_accessibility_pane_dictation_2x.png](Art/systempreferences_accessibility_pane_dictation_2x.png)
+   ![image: ../Art/systempreferences_accessibility_pane_dictation_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/systempreferences_accessibility_pane_dictation_2x.png)
 5. In the list of accessibility features, click Dictation.
 6. Click Dictation Commands.
 
-   ![image: ../Art/systempreferences_accessibility_pane_dictation_2x.png](Art/systempreferences_accessibility_pane_dictation_2x.png)
+   ![image: ../Art/systempreferences_accessibility_pane_dictation_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/systempreferences_accessibility_pane_dictation_2x.png)
 7. Select the“Enabled advanced commands” checkbox.
 
 <a id="//apple_ref/doc/uid/TP40016239-CH87-SW6"></a>
@@ -48,13 +48,13 @@ Any script can serve as a dictation command. When the command is called, any cod
 4. In the list of accessibility features, click Dictation.
 5. Click Dictation Commands.
 
-   ![image: ../Art/dictation_advancedCommands_2x.png](Art/dictation_advancedCommands_2x.png)
+   ![image: ../Art/dictation_advancedCommands_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/dictation_advancedCommands_2x.png)
 6. Click + to adde a new dictation command.
 7. Enter a phrase to speak to invoke the script.
 8. Choose the application context for triggering the command, such as Any Application, Mail, or Safari.
 9. Choose Run Workflow > Other from the Perform pop-up menu.
 
-   ![image: ../Art/dictation_customscript_2x.png](Art/dictation_customscript_2x.png)
+   ![image: ../Art/dictation_customscript_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/dictation_customscript_2x.png)
 10. Click Done.
 
 <a id="//apple_ref/doc/uid/TP40016239-CH87-SW8"></a>
@@ -65,7 +65,7 @@ To run a dictation command—script or otherwise—press Fn key twice. When the 
 
 <a id="//apple_ref/doc/uid/TP40016239-CH87-SW3"></a>
 **Figure 42-1**Dictation listener window
-![image: ../Art/dictation_window_2x.png](Art/dictation_window_2x.png)
+![image: ../Art/dictation_window_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/dictation_window_2x.png)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH87-DontLinkElementID_10"></a>
 
@@ -87,13 +87,13 @@ Automator can also be used to create dictation commands.
 1. Launch Automator.
 2. Click Dictation Command in the template selection dialog.
 
-   ![image: ../Art/automator_dictationcommand_template_2x.png](Art/automator_dictationcommand_template_2x.png)
+   ![image: ../Art/automator_dictationcommand_template_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/automator_dictationcommand_template_2x.png)
 3. Add actions to the workflow.
 
    The Run AppleScript, Run JavaScript, and Run Shell Script actions can be used to initiate scripts from your workflow.
 4. At the top of the workflow, enter a dictation command and select the Command Enabled checkbox.
 
-   ![image: ../Art/automator_dictationcommand_workflow_2x.png](Art/automator_dictationcommand_workflow_2x.png)
+   ![image: ../Art/automator_dictationcommand_workflow_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/automator_dictationcommand_workflow_2x.png)
 5. Save the workflow and name it.
 
 > **Note**

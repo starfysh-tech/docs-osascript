@@ -19,7 +19,7 @@ You can Control-click a folder to access some Folder Action features with the co
 
 Folder Actions Setup looks for scripts located in `/Library/Scripts/Folder Action Scripts` and `~/Library/Scripts/Folder Action Scripts`. You can use the sample scripts located in `/Library/Scripts/Folder Action Scripts` or any scripts you have added to these locations, or you can navigate to other scripts.
 
-A Folder Action script provides a handler (see [Handler Reference](ASLR_handlers.md#//apple_ref/doc/uid/TP40000983-CH7g-163762)) that is invoked when the specified action takes place. When working with Folder Action handlers, keep in mind that:
+A Folder Action script provides a handler (see [Handler Reference](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_handlers.md#//apple_ref/doc/uid/TP40000983-CH7g-163762)) that is invoked when the specified action takes place. When working with Folder Action handlers, keep in mind that:
 
 * You do not invoke Folder Actions directly. Instead, when a triggering action takes place on a folder, the associated handler is invoked automatically.
 * When a Folder Action handler is invoked, none of the parameters is optional.

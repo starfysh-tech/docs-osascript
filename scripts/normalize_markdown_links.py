@@ -5,7 +5,7 @@ import argparse
 import posixpath
 import re
 from pathlib import Path
-from typing import Dict, Iterable, List, Tuple
+from typing import Dict, Iterable, List, Set, Tuple
 
 LINK_RE = re.compile(r"(?P<prefix>!?\[[^\]]*\])\((?P<url>[^)\s]+)\)")
 
@@ -18,6 +18,8 @@ COLLECTION_ALIASES = {
         "InterapplicationCommunication/RN-JavaScriptForAutomation",
     ],
 }
+
+ANCHOR_RE = re.compile(r"<a\s+[^>]*?id=\"([^\"]+)\"", re.IGNORECASE)
 
 
 def load_html_mapping(pages_files: Iterable[Path]) -> Dict[str, str]:
@@ -46,6 +48,16 @@ def load_html_mapping(pages_files: Iterable[Path]) -> Dict[str, str]:
     return mapping
 
 
+def collect_anchor_map(markdown_dir: Path) -> Dict[str, Set[str]]:
+    anchor_map: Dict[str, Set[str]] = {}
+    for md_file in markdown_dir.rglob("*.md"):
+        rel = md_file.relative_to(markdown_dir).as_posix()
+        text = md_file.read_text(encoding="utf-8")
+        anchors = set(match.group(1) for match in ANCHOR_RE.finditer(text))
+        anchor_map[rel] = anchors
+    return anchor_map
+
+
 def normalize_path(base_dir: str, target: str) -> Tuple[str, str]:
     """Return normalized absolute-like path within build root and anchor."""
     path_part, _, anchor = target.partition("#")
@@ -57,7 +69,12 @@ def normalize_path(base_dir: str, target: str) -> Tuple[str, str]:
     return normalized, anchor
 
 
-def rewrite_links(md_path: Path, mapping: Dict[str, str], markdown_root: Path) -> bool:
+def rewrite_links(
+    md_path: Path,
+    mapping: Dict[str, str],
+    anchor_map: Dict[str, Set[str]],
+    markdown_root: Path,
+) -> bool:
     rel_path = md_path.relative_to(markdown_root).as_posix()
     base_dir = posixpath.dirname(rel_path)
     original = md_path.read_text(encoding="utf-8")
@@ -77,10 +94,18 @@ def rewrite_links(md_path: Path, mapping: Dict[str, str], markdown_root: Path) -
 
         if normalized in mapping:
             target_md = mapping[normalized]
+            anchors = anchor_map.get(target_md, set())
+            if anchor and anchor not in anchors:
+                anchor = ""
             rel_target = posixpath.relpath(target_md, base_dir or ".")
             if anchor:
                 rel_target = f"{rel_target}#{anchor}"
             return f"{prefix}({rel_target})"
+
+        fallback = f"https://developer.apple.com/library/archive/{normalized}"
+        if anchor:
+            fallback = f"{fallback}#{anchor}"
+        return f"{prefix}({fallback})"
 
         return match.group(0)
 
@@ -94,9 +119,10 @@ def rewrite_links(md_path: Path, mapping: Dict[str, str], markdown_root: Path) -
 
 def main(pages_files: List[Path], markdown_dir: Path) -> None:
     mapping = load_html_mapping(pages_files)
+    anchor_map = collect_anchor_map(markdown_dir)
     touched = 0
     for md_file in sorted(markdown_dir.rglob("*.md")):
-        if rewrite_links(md_file, mapping, markdown_dir):
+        if rewrite_links(md_file, mapping, anchor_map, markdown_dir):
             touched += 1
     print(f"Rewrote links in {touched} Markdown files.")
 

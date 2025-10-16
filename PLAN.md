@@ -39,6 +39,7 @@
 - 2025-10-16: Scoped MkDocs + Material scaffold (issue #2); MKDocs nav will surface each mirrored collection landing page plus a custom index, powered by `build/` as `docs_dir`.
 - 2025-10-16: Built `scripts/generate_mkdocs_nav.py` to auto-generate the MkDocs navigation from `toc_hierarchy.json` and pull in extra Markdown (e.g., WWDC resources); remaining MkDocs warnings stem from Apple anchors targeting external docs.
 - 2025-10-16: Preserved Apple `//apple_ref` anchors during conversion and expanded link normalization to rewrite cross-collection references; internal links now resolve across mirrored sets.
+- 2025-10-16: Converted unresolved cross-collection anchors to page-level links and rewrote unknown relative paths to the Apple archive domain; MkDocs now builds without warnings.
 
 ## Task Board
 
@@ -80,6 +81,7 @@
   - The WWDC Session 306 pointer and supporting note are generated automatically when converting the JXA release notes set.
 - **MkDocs navigation**: Regenerate `mkdocs.yml` via `python3 scripts/generate_mkdocs_nav.py` to sync nav with mirrored TOCs; rerun `mkdocs build` to spot anchor/backlink warnings that need triage.
 - **MkDocs scaffold (issue #2)**: Use `build/` as `docs_dir`, create a lightweight `index.md` landing page, and expose each collection via its primary landing Markdown (`AppleScriptX.md`, `ASLR_intro.md`, `index.md`, `Articles/Introduction.md`). Future enhancements: richer nav hierarchy, search tuning, theme customization.
+- **Link normalization**: After regenerating Markdown, run `python3 scripts/normalize_markdown_links.py --markdown-dir build --pages-file …` so cross-collection links drop missing anchors and off-repo references point to `https://developer.apple.com/library/archive/`.
 
 ## Next Up
 1. Execute issue #1 (mirror JXA release notes + WWDC resources) with tests, pipeline run, and monitoring update.

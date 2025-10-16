@@ -2,13 +2,13 @@
 
 # Commands Reference
 
-<a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_640"></a><a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_641"></a>This chapter describes the commands available to perform actions in AppleScript scripts. For information on how commands work, see [Commands Overview](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW8).
+<a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_640"></a><a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_641"></a>This chapter describes the commands available to perform actions in AppleScript scripts. For information on how commands work, see [Commands Overview](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW8).
 
-The commands described in this chapter are available to any script—they are either built into the AppleScript language or added to it through the standard scripting additions (described in [Scripting Additions](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW3)).
+The commands described in this chapter are available to any script—they are either built into the AppleScript language or added to it through the standard scripting additions (described in [Scripting Additions](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW3)).
 
 > <a id="//apple_ref/doc/uid/TP40000983-CH216-SW67"></a>
 >
-> **Note:** In the command descriptions below, if the first item in the Parameters list does not include a parameter name, it is the direct parameter of the command (described in [Direct Parameter](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW13)).
+> **Note:** In the command descriptions below, if the first item in the Parameters list does not include a parameter name, it is the direct parameter of the command (described in [Direct Parameter](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW13)).
 
 Table 7-1 lists each command according to the suite (or related group) of commands to which it belongs and provides a brief description. Detailed command descriptions follow the table, in alphabetical order.
 
@@ -116,7 +116,7 @@ tell application "TextEdit" to activate
 
 ##### Discussion
 
-The `activate` command does not launch applications on remote machines. For examples of other ways to specify an application, see the `application` class and [Remote Applications](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW9).
+The `activate` command does not launch applications on remote machines. For examples of other ways to specify an application, see the `application` class and [Remote Applications](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW9).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-SW21"></a><a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_663"></a>
 
@@ -252,7 +252,7 @@ Allows the user to choose an application.
 
 The selected application, as either an `application` or `alias` object; for example, `application "TextEdit"`. If multiple selections are allowed, returns a list containing one item for each selected application, if any.
 
-Signals a “user canceled” error if the user cancels the dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
+Signals a “user canceled” error if the user cancels the dialog. For an example of how to handle such errors, see [try Statements](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_74"></a>
 
@@ -289,7 +289,7 @@ Allows the user to choose a color from a color picker dialog.
 
 The selected color, represented as a list of three integers from 0 to 65535 corresponding to the red, green, and blue components of a color; for example, {0, 65535, 0} represents green.
 
-Signals a “user canceled” error if the user cancels the `choose color` dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
+Signals a “user canceled” error if the user cancels the `choose color` dialog. For an example of how to handle such errors, see [try Statements](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_76"></a>
 
@@ -332,7 +332,7 @@ Allows the user to choose a file.
 
 The selected file, as an `alias`. If multiple selections are allowed, returns a list containing one `alias` for each selected file, if any.
 
-Signals a “user canceled” error if the user cancels the dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
+Signals a “user canceled” error if the user cancels the dialog. For an example of how to handle such errors, see [try Statements](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_78"></a>
 
@@ -376,7 +376,7 @@ The selected location, as a `file`. For example:
 
 ` file "HD:Users:currentUser:Documents:untitled"`
 
-Signals a “user canceled” error if the user cancels the dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
+Signals a “user canceled” error if the user cancels the dialog. For an example of how to handle such errors, see [try Statements](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_80"></a>
 
@@ -419,7 +419,7 @@ Allows the user to choose a directory, such as a folder or a disk.
 
 The selected directory, as an `alias`. If multiple selections are allowed, returns a list containing one `alias` for each selected directory, if any.
 
-Signals a “user canceled” error if the user cancels the `choose folder` dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
+Signals a “user canceled” error if the user cancels the `choose folder` dialog. For an example of how to handle such errors, see [try Statements](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_82"></a>
 
@@ -516,7 +516,7 @@ choose remote application
 
 The selected application, as an `application` object.
 
-Signals a “user canceled” error if the user cancels the dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
+Signals a “user canceled” error if the user cancels the dialog. For an example of how to handle such errors, see [try Statements](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_86"></a>
 
@@ -530,7 +530,7 @@ set myApp to choose remote application with prompt "Choose a remote web browser:
 
 The user may choose a remote machine using <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_702"></a>Bonjour or by entering a specific IP address. There is no way to limit the precise kind of application returned, so either limit your script to generic operations or validate the user’s choice. If you want your script to send application-specific commands to the resulting application, you will need a using terms from statement.
 
-For information on targeting other machines, see [Remote Applications](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW9).
+For information on targeting other machines, see [Remote Applications](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW9).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-SW9"></a><a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_703"></a>
 
@@ -554,7 +554,7 @@ Allows the user to specify a URL.
 
 The URL for the service, as a `text` object. This result may be passed to `open location` or to any application that can handle the URL, such as a browser for `http` URLs.
 
-Signals a “user canceled” error if the user cancels the dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
+Signals a “user canceled” error if the user cancels the dialog. For an example of how to handle such errors, see [try Statements](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_88"></a>
 
@@ -682,7 +682,7 @@ See the `set` command for examples of using variable patterns. The behavior is t
 
 ##### Discussion
 
-The `copy` command may be used to assign new values to existing variables, or to define new variables. See [Declaring Variables with the copy Command](../conceptual/ASLR_variables.md#//apple_ref/doc/uid/TP40000983-CH223-SW8) for additional details.
+The `copy` command may be used to assign new values to existing variables, or to define new variables. See [Declaring Variables with the copy Command](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_variables.md#//apple_ref/doc/uid/TP40000983-CH223-SW8) for additional details.
 
 Using the `copy` command creates a new value that is independent of the original—a subsequent change to that value does not change the original value. The copy is a “deep” copy, so sub-objects, such as lists within lists, are also copied. Contrast this with the behavior of the `set` command.
 
@@ -730,7 +730,7 @@ number of aList  --result: 5
 tell application "Finder" to count disk 1  --result: 4
 ```
 
-If the value is an object specifier that evaluates to a list, `count` counts the items of that list. This may be an [Every](ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFIIH) specifier:
+If the value is an object specifier that evaluates to a list, `count` counts the items of that list. This may be an [Every](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFIIH) specifier:
 
 ```
 count every integer of aList  --result: 3
@@ -738,7 +738,7 @@ count words of "hello world"  --result: 2
 tell application "Finder" to count folders of disk 1  --result: 4
 ```
 
-…or a [Filter](ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BAJJHEFE) specifier:
+…or a [Filter](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BAJJHEFE) specifier:
 
 ```
 tell application "Finder"
@@ -746,7 +746,7 @@ tell application "Finder"
 end tell
 ```
 
-…or similar. For more on object specifiers, see [Object Specifiers](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW7).
+…or similar. For more on object specifiers, see [Object Specifiers](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW7).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-SW39"></a><a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_713"></a>
 
@@ -840,7 +840,7 @@ If the user clicks a button that was not specified as the cancel button, `displa
 
 If the `display alert` command specifies a `giving up after` value, and the dialog is dismissed due to timing out before the user clicks a button, the command returns a record indicating that no button was returned and the command gave up: `{button returned:"", gave up:true}`
 
-If the user clicks the specified cancel button, the command signals a “user canceled” error. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
+If the user clicks the specified cancel button, the command signals a “user canceled” error. For an example of how to handle such errors, see [try Statements](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_102"></a>
 
@@ -888,7 +888,7 @@ A record containing the button clicked and text entered, if any. For example:
 
 If the dialog does not allow text input, there is no `text returned` item in the returned record.
 
-If the user clicks the specified cancel button, the command signals a “user canceled” error. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
+If the user clicks the specified cancel button, the command signals a “user canceled” error. For an example of how to handle such errors, see [try Statements](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
 
 If the `display dialog` command specifies a `giving up after` value, and the dialog is dismissed due to timing out before the user clicks a button, it returns a record indicating that no button was returned and the command gave up: `{button returned:"", gave up:true}`
 
@@ -1039,7 +1039,7 @@ The command name `get` is typically optional—expressions that appear as statem
 
 ##### Result
 
-The value of the evaluated expression. See [Reference Forms](ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-120522) for details on what the results of evaluating various object specifiers are.
+The value of the evaluated expression. See [Reference Forms](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-120522) for details on what the results of evaluating various object specifiers are.
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_110"></a>
 
@@ -1080,7 +1080,7 @@ tell application "Finder" to get word 1 of (get name of home)
 
 The explicit `get` forces that part of the specifier to be evaluated; Finder returns a `text` result, from which AppleScript can then get `word 1`.
 
-For more information on specifiers, see [Object Specifiers](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW7).
+For more information on specifiers, see [Object Specifiers](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW7).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-SW30"></a><a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_745"></a>
 
@@ -1369,7 +1369,7 @@ The `script` object. You can get this object’s properties or call its handlers
 
 ##### Examples
 
-For examples, see [Parameter Specifications](../conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW12) in [About Handlers](../conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-CJBIDBJH).
+For examples, see [Parameter Specifications](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW12) in [About Handlers](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-CJBIDBJH).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-SW23"></a><a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_755"></a>
 
@@ -1406,14 +1406,14 @@ In order for `localized string` to be useful, you must create localized string d
 
    **Figure 7-1**  Bundle structure with localized string data
 
-   ![Bundle structure with localized string data](../Art/localizedStringLayout_2x.png)
+   ![Bundle structure with localized string data](https://developer.apple.com/library/archive/applescript-language-guide/Art/localizedStringLayout_2x.png)
 3. Add key/value pairs to each Localized.strings file. Each pair is a line of text `"`*key*`" = "`*value*`";`, for example:
 
    <a id="//apple_ref/doc/uid/TP40000983-CH216-SW218"></a>
 
    **Figure 7-2**  Key/value pair for localized string data
 
-   ![Key/value pair for localized string data](../Art/localizableStringData_2x.png)
+   ![Key/value pair for localized string data](https://developer.apple.com/library/archive/applescript-language-guide/Art/localizableStringData_2x.png)
 
 Now `localized string` will return the appropriate values, as defined in your files. For example, when running in French:
 
@@ -1453,7 +1453,7 @@ set area to 7 * 43 as square feet
 log area -- result (in Event Log pane): (*square feet 301.0*)
 ```
 
-Log statements can be useful for tracking a script’s progress. For an example that shows how to log statements in a repeat loop, see [Logging](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW17).
+Log statements can be useful for tracking a script’s progress. For an example that shows how to log statements in a repeat loop, see [Logging](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW17).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-SW17"></a><a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_759"></a>
 
@@ -1759,7 +1759,7 @@ Random numbers are, by definition, random, which means that you may get the same
 
 The numbers generated are only pseudo-random, and are not considered cryptographically secure.
 
-If you need to select one of a set of objects in a relationship, use `some` *object* rather than *object* `(random number from 1 to count` *objects*`)`. See the [Arbitrary](ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BCIJEEHE) reference form for more details.
+If you need to select one of a set of objects in a relationship, use `some` *object* rather than *object* `(random number from 1 to count` *objects*`)`. See the [Arbitrary](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BCIJEEHE) reference form for more details.
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-SW32"></a><a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_784"></a>
 
@@ -1872,7 +1872,7 @@ To run an application, it must be on a local or mounted volume. If the applicati
 
 The `run` command launches an application as hidden; use `activate` to bring the application to the front.
 
-For a `script` object, the `run` command causes either the explicit or the implicit `run` handler, if any, to be executed. For related information, see [run Handlers](../conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW15).
+For a `script` object, the `run` command causes either the explicit or the implicit `run` handler, if any, to be executed. For related information, see [run Handlers](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW15).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_149"></a>
 
@@ -1898,13 +1898,13 @@ tell application "TextEdit" to run
 run myScript --where myScript is a script object
 ```
 
-For information about using the `run` command with `script` objects, see [Sending Commands to Script Objects](../conceptual/ASLR_script_objects.md#//apple_ref/doc/uid/TP40000983-CH207-SW3).
+For information about using the `run` command with `script` objects, see [Sending Commands to Script Objects](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_script_objects.md#//apple_ref/doc/uid/TP40000983-CH207-SW3).
 
 ##### Discussion
 
-To specify an application to run, you can supply a string with only the application name, as shown in the Examples section. Or you can specify a location more precisely, using one of the forms described in [Aliases and Files](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW28). For examples of other ways to specify an application, see the `application` class.
+To specify an application to run, you can supply a string with only the application name, as shown in the Examples section. Or you can specify a location more precisely, using one of the forms described in [Aliases and Files](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW28). For examples of other ways to specify an application, see the `application` class.
 
-It is not necessary to explicitly tell an application to `run` before sending it other commands; AppleScript will do that automatically. To launch an application without invoking its usual startup behavior, use the `launch` command. For further details, see [Calling a Script Application From a Script](../conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW17).
+It is not necessary to explicitly tell an application to `run` before sending it other commands; AppleScript will do that automatically. To launch an application without invoking its usual startup behavior, use the `launch` command. For further details, see [Calling a Script Application From a Script](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW17).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-SW36"></a><a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_797"></a>
 
@@ -2109,7 +2109,7 @@ set {x, y} to {y, x} --now x is 2, and y is 1.
 
 To accomplish the second statement using only simple assignments, you would need a temporary third variable.
 
-For more information on using the set command, including a more complex pattern example, see [Declaring Variables with the set Command](../conceptual/ASLR_variables.md#//apple_ref/doc/uid/TP40000983-CH223-SW9).
+For more information on using the set command, including a more complex pattern example, see [Declaring Variables with the set Command](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_variables.md#//apple_ref/doc/uid/TP40000983-CH223-SW9).
 
 ##### Discussion
 

@@ -12,11 +12,11 @@ Use the Standard Additions scripting addition’s `choose file` command to promp
 
 <a id="//apple_ref/doc/uid/TP40016239-CH81-SW4"></a>
 **Figure 26-1**Prompting for a file
-![image: ../Art/choosefile_2x.png](Art/choosefile_2x.png)
+![image: ../Art/choosefile_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/choosefile_2x.png)
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theDocument%20to%20choose%20file%20with%20prompt%20%22Please%20select%20a%20document%20to%20process%3A%22)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theDocument%20to%20choose%20file%20with%20prompt%20%22Please%20select%20a%20document%20to%20process%3A%22)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH81-SW3"></a>
 **Listing 26-1**AppleScript: Prompting for a file
@@ -26,7 +26,7 @@ Use the Standard Additions scripting addition’s `choose file` command to promp
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20document%20%3D%20app.chooseFile%28%7B%0A%20%20%20%20withPrompt%3A%20%22Please%20select%20a%20document%20to%20process%3A%22%0A%7D%29%0Adocument%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20document%20%3D%20app.chooseFile%28%7B%0A%20%20%20%20withPrompt%3A%20%22Please%20select%20a%20document%20to%20process%3A%22%0A%7D%29%0Adocument%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH81-SW5"></a>
 **Listing 26-2**JavaScript: Prompting for a file
@@ -48,7 +48,7 @@ If your script requires specific types of files for processing, you can use the 
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theImage%20to%20choose%20file%20with%20prompt%20%22Please%20select%20an%20image%20to%20process%3A%22%20of%20type%20%7B%22public.image%22%7D)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theImage%20to%20choose%20file%20with%20prompt%20%22Please%20select%20an%20image%20to%20process%3A%22%20of%20type%20%7B%22public.image%22%7D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH81-SW6"></a>
 **Listing 26-3**AppleScript: Prompting for an image
@@ -58,7 +58,7 @@ If your script requires specific types of files for processing, you can use the 
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20image%20%3D%20app.chooseFile%28%7B%0A%20%20%20%20withPrompt%3A%20%22Please%20select%20an%20image%20to%20process%3A%22%2C%0A%20%20%20%20ofType%3A%20%5B%22public.image%22%5D%0A%7D%29%0Aimage)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20image%20%3D%20app.chooseFile%28%7B%0A%20%20%20%20withPrompt%3A%20%22Please%20select%20an%20image%20to%20process%3A%22%2C%0A%20%20%20%20ofType%3A%20%5B%22public.image%22%5D%0A%7D%29%0Aimage)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH81-SW7"></a>
 **Listing 26-4**JavaScript: Prompting for an image
@@ -81,11 +81,11 @@ To let the user choose more than one file, include the `choose file` command’s
 
 <a id="//apple_ref/doc/uid/TP40016239-CH81-SW10"></a>
 **Figure 26-2**Prompting for multiple images
-![image: ../Art/chooseimages_2x.png](Art/chooseimages_2x.png)
+![image: ../Art/chooseimages_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/chooseimages_2x.png)
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theImages%20to%20choose%20file%20with%20prompt%20%22Please%20select%20some%20images%20to%20process%3A%22%20of%20type%20%7B%22public.image%22%7D%20with%20multiple%20selections%20allowed)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theImages%20to%20choose%20file%20with%20prompt%20%22Please%20select%20some%20images%20to%20process%3A%22%20of%20type%20%7B%22public.image%22%7D%20with%20multiple%20selections%20allowed)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH81-SW8"></a>
 **Listing 26-5**AppleScript: Prompting for multiple images
@@ -95,7 +95,7 @@ To let the user choose more than one file, include the `choose file` command’s
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20images%20%3D%20app.chooseFile%28%7B%0A%20%20%20%20withPrompt%3A%20%22Please%20select%20some%20images%20to%20process%3A%22%2C%0A%20%20%20%20ofType%3A%20%5B%22public.image%22%5D%2C%0A%20%20%20%20multipleSelectionsAllowed%3A%20true%0A%7D%29%0Aimages)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20images%20%3D%20app.chooseFile%28%7B%0A%20%20%20%20withPrompt%3A%20%22Please%20select%20some%20images%20to%20process%3A%22%2C%0A%20%20%20%20ofType%3A%20%5B%22public.image%22%5D%2C%0A%20%20%20%20multipleSelectionsAllowed%3A%20true%0A%7D%29%0Aimages)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH81-SW9"></a>
 **Listing 26-6**JavaScript: Prompting for multiple images
@@ -119,11 +119,11 @@ Use the Standard Additions scripting addition’s `choose folder` command to pro
 
 <a id="//apple_ref/doc/uid/TP40016239-CH81-SW13"></a>
 **Figure 26-3**Prompting for a folder
-![image: ../Art/choosefolder_2x.png](Art/choosefolder_2x.png)
+![image: ../Art/choosefolder_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/choosefolder_2x.png)
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theOutputFolder%20to%20choose%20folder%20with%20prompt%20%22Please%20select%20an%20output%20folder%3A%22)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theOutputFolder%20to%20choose%20folder%20with%20prompt%20%22Please%20select%20an%20output%20folder%3A%22)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH81-SW11"></a>
 **Listing 26-7**AppleScript: Prompting for a folder
@@ -133,7 +133,7 @@ Use the Standard Additions scripting addition’s `choose folder` command to pro
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20outputFolder%20%3D%20app.chooseFolder%28%7B%0A%20%20%20%20withPrompt%3A%20%22Please%20select%20an%20output%20folder%3A%22%0A%7D%29%0AoutputFolder)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20outputFolder%20%3D%20app.chooseFolder%28%7B%0A%20%20%20%20withPrompt%3A%20%22Please%20select%20an%20output%20folder%3A%22%0A%7D%29%0AoutputFolder)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH81-SW12"></a>
 **Listing 26-8**JavaScript: Prompting for a folder
@@ -155,7 +155,7 @@ To let the user choose more than one folder, include the `choose folder` command
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theFoldersToProcess%20to%20choose%20folder%20with%20prompt%20%22Please%20select%20the%20folders%20containing%20images%20to%20process%3A%22%20with%20multiple%20selections%20allowed)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theFoldersToProcess%20to%20choose%20folder%20with%20prompt%20%22Please%20select%20the%20folders%20containing%20images%20to%20process%3A%22%20with%20multiple%20selections%20allowed)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH81-SW14"></a>
 **Listing 26-9**AppleScript: Prompting for multiple folders
@@ -165,7 +165,7 @@ To let the user choose more than one folder, include the `choose folder` command
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20foldersToProcess%20%3D%20app.chooseFolder%28%7B%0A%20%20%20%20withPrompt%3A%20%22Please%20select%20an%20output%20folder%3A%22%2C%0A%20%20%20%20multipleSelectionsAllowed%3A%20true%0A%7D%29%0AfoldersToProcess)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20foldersToProcess%20%3D%20app.chooseFolder%28%7B%0A%20%20%20%20withPrompt%3A%20%22Please%20select%20an%20output%20folder%3A%22%2C%0A%20%20%20%20multipleSelectionsAllowed%3A%20true%0A%7D%29%0AfoldersToProcess)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH81-SW15"></a>
 **Listing 26-10**JavaScript: Prompting for multiple folders

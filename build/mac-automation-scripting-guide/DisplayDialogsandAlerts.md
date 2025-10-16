@@ -13,11 +13,11 @@ Use the `display dialog` command, provided by the Standard Additions scripting a
 
 <a id="//apple_ref/doc/uid/TP40016239-CH15-SW11"></a>
 **Figure 22-1**A simple dialog
-![image: ../Art/dialog_simple_2x.png](Art/dialog_simple_2x.png)
+![image: ../Art/dialog_simple_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/dialog_simple_2x.png)
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theDialogText%20to%20%22The%20curent%20date%20and%20time%20is%20%22%20%26%20%28current%20date%29%20%26%20%22.%22%0Adisplay%20dialog%20theDialogText)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theDialogText%20to%20%22The%20curent%20date%20and%20time%20is%20%22%20%26%20%28current%20date%29%20%26%20%22.%22%0Adisplay%20dialog%20theDialogText)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH15-SW12"></a>
 **Listing 22-1**AppleScript: Displaying a simple dialog
@@ -28,7 +28,7 @@ Use the `display dialog` command, provided by the Standard Additions scripting a
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20dialogText%20%3D%20%22The%20current%20date%20and%20time%20is%20%22%20%2B%20%28app.currentDate%28%29%29%0Aapp.displayDialog%28dialogText%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20dialogText%20%3D%20%22The%20current%20date%20and%20time%20is%20%22%20%2B%20%28app.currentDate%28%29%29%0Aapp.displayDialog%28dialogText%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH15-SW13"></a>
 **Listing 22-2**JavaScript: Displaying a simple dialog
@@ -43,7 +43,7 @@ Use the `display dialog` command, provided by the Standard Additions scripting a
 > **Note**
 >
 >
-> This chapter covers a portion of the `display dialog` command’s capabilities. For example, the `display dialog` command can also be used to collect text entered by the user. This is covered in [Prompting for Text](PromptforText.md#//apple_ref/doc/uid/TP40016239-CH80-SW1). For complete information about the `display dialog` command and its parameters, launch Script Editor, open the Standard Additions scripting addition’s dictionary, and navigate to the command’s definition.
+> This chapter covers a portion of the `display dialog` command’s capabilities. For example, the `display dialog` command can also be used to collect text entered by the user. This is covered in [Prompting for Text](https://developer.apple.com/library/archive/mac-automation-scripting-guide/PromptforText.md#//apple_ref/doc/uid/TP40016239-CH80-SW1). For complete information about the `display dialog` command and its parameters, launch Script Editor, open the Standard Additions scripting addition’s dictionary, and navigate to the command’s definition.
 
 <a id="//apple_ref/doc/uid/TP40016239-CH15-SW5"></a>
 
@@ -57,11 +57,11 @@ The dialog shown in Figure 22-2 has been customized to include Don’t Continue 
 
 <a id="//apple_ref/doc/uid/TP40016239-CH15-SW14"></a>
 **Figure 22-2**A dialog with custom buttons
-![image: ../Art/dialog_customButtons_2x.png](Art/dialog_customButtons_2x.png)
+![image: ../Art/dialog_customButtons_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/dialog_customButtons_2x.png)
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theDialogText%20to%20%22An%20error%20has%20occurred.%20Would%20you%20like%20to%20continue%3F%22%0Adisplay%20dialog%20theDialogText%20buttons%20%7B%22Don%27t%20Continue%22%2C%20%22Continue%22%7D%20default%20button%20%22Continue%22%20cancel%20button%20%22Don%27t%20Continue%22%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theDialogText%20to%20%22An%20error%20has%20occurred.%20Would%20you%20like%20to%20continue%3F%22%0Adisplay%20dialog%20theDialogText%20buttons%20%7B%22Don%27t%20Continue%22%2C%20%22Continue%22%7D%20default%20button%20%22Continue%22%20cancel%20button%20%22Don%27t%20Continue%22%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH15-SW15"></a>
 **Listing 22-3**AppleScript: Displaying a dialog with custom buttons
@@ -72,7 +72,7 @@ The dialog shown in Figure 22-2 has been customized to include Don’t Continue 
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0A%0Avar%20dialogText%20%3D%20%22An%20error%20has%20occurred.%20Would%20you%20like%20to%20continue%3F%22%0Aapp.displayDialog%28dialogText%2C%20%7B%0A%20%20%20%20buttons%3A%20%5B%22Don%27t%20Continue%22%2C%20%22Continue%22%5D%2C%0A%20%20%20%20defaultButton%3A%20%22Continue%22%2C%0A%20%20%20%20cancelButton%3A%20%22Don%27t%20Continue%22%0A%7D%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0A%0Avar%20dialogText%20%3D%20%22An%20error%20has%20occurred.%20Would%20you%20like%20to%20continue%3F%22%0Aapp.displayDialog%28dialogText%2C%20%7B%0A%20%20%20%20buttons%3A%20%5B%22Don%27t%20Continue%22%2C%20%22Continue%22%5D%2C%0A%20%20%20%20defaultButton%3A%20%22Continue%22%2C%0A%20%20%20%20cancelButton%3A%20%22Don%27t%20Continue%22%0A%7D%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH15-SW16"></a>
 **Listing 22-4**JavaScript: Displaying a dialog with custom buttons
@@ -97,11 +97,11 @@ Dialogs can also include an icon, providing users with a visual clue to their im
 
 <a id="//apple_ref/doc/uid/TP40016239-CH15-SW19"></a>
 **Figure 22-3**A dialog with an icon
-![image: ../Art/dialog_customIcon_2x.png](Art/dialog_customIcon_2x.png)
+![image: ../Art/dialog_customIcon_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/dialog_customIcon_2x.png)
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theDialogText%20to%20%22The%20amount%20of%20available%20free%20space%20is%20dangerously%20low.%22%0Adisplay%20dialog%20theDialogText%20with%20icon%20caution)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theDialogText%20to%20%22The%20amount%20of%20available%20free%20space%20is%20dangerously%20low.%22%0Adisplay%20dialog%20theDialogText%20with%20icon%20caution)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH15-SW17"></a>
 **Listing 22-5**AppleScript: Displaying a dialog with an icon
@@ -111,7 +111,7 @@ Dialogs can also include an icon, providing users with a visual clue to their im
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20dialogText%20%3D%20%22The%20amount%20of%20available%20free%20space%20is%20dangerously%20low.%22%0Aapp.displayDialog%28dialogText%2C%20%7BwithIcon%3A%20%22caution%22%7D%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20dialogText%20%3D%20%22The%20amount%20of%20available%20free%20space%20is%20dangerously%20low.%22%0Aapp.displayDialog%28dialogText%2C%20%7BwithIcon%3A%20%22caution%22%7D%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH15-SW18"></a>
 **Listing 22-6**JavaScript: Displaying a dialog with an icon
@@ -132,7 +132,7 @@ Listing 22-7 and Listing 22-8 display a dialog that automatically closes after f
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=display%20dialog%20%22Do%2C%20or%20do%20not.%20There%20is%20no%20try.%22%20giving%20up%20after%205)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=display%20dialog%20%22Do%2C%20or%20do%20not.%20There%20is%20no%20try.%22%20giving%20up%20after%205)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH15-SW20"></a>
 **Listing 22-7**AppleScript: Displaying a dialog that automatically dismisses after a period of inactivity
@@ -142,7 +142,7 @@ Listing 22-7 and Listing 22-8 display a dialog that automatically closes after f
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20dialogText%20%3D%20%22Do%2C%20or%20do%20not.%20There%20is%20no%20try.%22%0Aapp.displayDialog%28dialogText%2C%20%7BgivingUpAfter%3A%205%7D%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20dialogText%20%3D%20%22Do%2C%20or%20do%20not.%20There%20is%20no%20try.%22%0Aapp.displayDialog%28dialogText%2C%20%7BgivingUpAfter%3A%205%7D%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH15-SW21"></a>
 **Listing 22-8**JavaScript: JavaScript a dialog that automatically dismisses after a period of inactivity
@@ -164,11 +164,11 @@ The `display alert` command is also provided by the Standard Additions scripting
 
 <a id="//apple_ref/doc/uid/TP40016239-CH15-SW22"></a>
 **Figure 22-4**An alert
-![image: ../Art/alert_2x.png](Art/alert_2x.png)
+![image: ../Art/alert_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/alert_2x.png)
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theAlertText%20to%20%22An%20error%20has%20occurred.%22%0Aset%20theAlertMessage%20to%20%22The%20amount%20of%20available%20free%20space%20is%20dangerously%20low.%20Would%20you%20like%20to%20continue%3F%22%0Adisplay%20alert%20theAlertText%20message%20theAlertMessage%20as%20critical%20buttons%20%7B%22Don%27t%20Continue%22%2C%20%22Continue%22%7D%20default%20button%20%22Continue%22%20cancel%20button%20%22Don%27t%20Continue%22%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theAlertText%20to%20%22An%20error%20has%20occurred.%22%0Aset%20theAlertMessage%20to%20%22The%20amount%20of%20available%20free%20space%20is%20dangerously%20low.%20Would%20you%20like%20to%20continue%3F%22%0Adisplay%20alert%20theAlertText%20message%20theAlertMessage%20as%20critical%20buttons%20%7B%22Don%27t%20Continue%22%2C%20%22Continue%22%7D%20default%20button%20%22Continue%22%20cancel%20button%20%22Don%27t%20Continue%22%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH15-SW9"></a>
 **Listing 22-9**AppleScript: Displaying an alert with a message
@@ -180,7 +180,7 @@ The `display alert` command is also provided by the Standard Additions scripting
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20alertText%20%3D%20%22An%20error%20has%20occurred.%22%0Avar%20alertMessage%20%3D%20%22The%20amount%20of%20available%20free%20space%20is%20dangerously%20low.%20Would%20you%20like%20to%20continue%3F%22%0Aapp.displayAlert%28alertText%2C%20%7B%0A%20%20%20%20message%3A%20alertMessage%2C%0A%20%20%20%20as%3A%20%22critical%22%2C%0A%20%20%20%20buttons%3A%20%5B%22Don%27t%20Continue%22%2C%20%22Continue%22%5D%2C%0A%20%20%20%20defaultButton%3A%20%22Continue%22%2C%0A%20%20%20%20cancelButton%3A%20%22Don%27t%20Continue%22%0A%7D%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20alertText%20%3D%20%22An%20error%20has%20occurred.%22%0Avar%20alertMessage%20%3D%20%22The%20amount%20of%20available%20free%20space%20is%20dangerously%20low.%20Would%20you%20like%20to%20continue%3F%22%0Aapp.displayAlert%28alertText%2C%20%7B%0A%20%20%20%20message%3A%20alertMessage%2C%0A%20%20%20%20as%3A%20%22critical%22%2C%0A%20%20%20%20buttons%3A%20%5B%22Don%27t%20Continue%22%2C%20%22Continue%22%5D%2C%0A%20%20%20%20defaultButton%3A%20%22Continue%22%2C%0A%20%20%20%20cancelButton%3A%20%22Don%27t%20Continue%22%0A%7D%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH15-SW10"></a>
 **Listing 22-10**JavaScript: Displaying an alert with a message

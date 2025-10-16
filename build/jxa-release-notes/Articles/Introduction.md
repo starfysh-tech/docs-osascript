@@ -16,8 +16,8 @@ This document describes significant changes to JavaScript for Automation (JXA) a
 
 This document includes the following articles:
 
-* [OS X 10.11 Release Notes](OSX10-11.md#//apple_ref/doc/uid/TP40014508-CH110-SW1) describes the JavaScript for Automation changes that were introduced in OS X v10.11.
-* [OS X 10.10 Release Notes](OSX10-10.md#//apple_ref/doc/uid/TP40014508-CH109-SW1) describes the JavaScript for Automation changes that were introduced in OS X v10.10.
+* [OS X 10.11 Release Notes](https://developer.apple.com/library/archive/jxa-release-notes/Articles/OSX10-11.md#//apple_ref/doc/uid/TP40014508-CH110-SW1) describes the JavaScript for Automation changes that were introduced in OS X v10.11.
+* [OS X 10.10 Release Notes](https://developer.apple.com/library/archive/jxa-release-notes/Articles/OSX10-10.md#//apple_ref/doc/uid/TP40014508-CH109-SW1) describes the JavaScript for Automation changes that were introduced in OS X v10.10.
 
   
 
