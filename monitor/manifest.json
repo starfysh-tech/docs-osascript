@@ -1291,6 +1291,24 @@
           "collection_id": "apple-events-programming-guide"
         }
       ]
+    },
+    {
+      "id": "applescript-scripting-additions-guide",
+      "description": "AppleScript Scripting Additions Guide (archived PDF)",
+      "base_url": "https://applescriptlibrary.wordpress.com/wp-content/uploads/2013/11/",
+      "sources": [
+        {
+          "id": "applescript-scripting-additions-guide",
+          "path": "applescript-scripting-additions-guide.pdf",
+          "url": "https://applescriptlibrary.wordpress.com/wp-content/uploads/2013/11/applescript-scripting-additions-guide.pdf",
+          "type": "pdf",
+          "output": "build/applescript-scripting-additions-guide/applescript-scripting-additions-guide.pdf",
+          "sha256": "2cf9c21361db7b380e1502c57adca2f8d72e73f28a08d43075692a2964a44f11",
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        }
+      ]
     }
   ]
 }

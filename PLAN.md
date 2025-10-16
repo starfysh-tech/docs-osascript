@@ -45,6 +45,7 @@
 - 2025-10-16: Implemented `scripts/export_dataset.py` with tests to generate plain-text + JSONL corpora (per-collection outputs, metadata sidecars, dataset manifest).
 - 2025-10-16: Archived the Apple Events Programming Guide PDF (downloaded via new `download_file.py`), added metadata/manifest/nav entries, and taught the dataset exporter to emit metadata-only records for binary assets.
 - 2025-10-16: Ran `scripts/check_updates.py --save --report` post-expansion; report stored at `reports/update-status-20251016.md` with all sources unchanged.
+- 2025-10-16: Captured the AppleScript Scripting Additions Guide PDF (assets + metadata), updated nav/manifest, and verified dataset exporter emits the binary placeholder record.
 
 ## Task Board
 
@@ -59,6 +60,7 @@
 | ✅ | Mirror JavaScript for Automation release notes + WWDC resources. |
 | ✅ | Capture Script Editor User Guide for offline use. |
 | ✅ | Mirror Apple Events Programming Guide (archived PDF). |
+| ✅ | Mirror AppleScript Scripting Additions Guide (archived PDF). |
 | ⬜️ | Implement change detection (`monitor/manifest.json` + `scripts/check_updates.py`). |
 | ⬜️ | Publish GitHub Pages catalog sourced from `build/`. |
 | ⬜️ | Generate LLM-ready datasets (plain text + JSONL chunks, optional embeddings). |

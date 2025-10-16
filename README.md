@@ -75,5 +75,5 @@ For scriptable doc sets with large index tables (e.g., AppleScript Language Guid
 - After regenerating Markdown, rerun `python3 scripts/normalize_markdown_links.py --markdown-dir build --pages-file ...` (include every collection `html_pages.txt`) so cross-collection anchors stay valid.
 - Regenerate MkDocs navigation with `python3 scripts/generate_mkdocs_nav.py` before `mkdocs build` whenever new collections are added.
 - Export plain text + JSONL datasets with `python3 scripts/export_dataset.py --collections <collection>` (defaults to all collections) — see `docs/dataset-packaging.md` for details.
-- Fetch standalone resources (PDFs, ZIPs, etc.) with `python3 scripts/download_file.py --url <source> --output <path>` when adding archived assets.
+- Fetch standalone resources (PDFs, ZIPs, etc.) with `python3 scripts/download_file.py --url <source> --output data/<collection>/assets/<filename>`.
 - Dataset export planning lives in `docs/dataset-packaging.md`; follow it when producing plain text or JSONL corpora.
