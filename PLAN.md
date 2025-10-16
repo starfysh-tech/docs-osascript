@@ -47,6 +47,7 @@
 - 2025-10-16: Ran `scripts/check_updates.py --save --report` post-expansion; report stored at `reports/update-status-20251016.md` with all sources unchanged.
 - 2025-10-16: Captured the AppleScript Scripting Additions Guide PDF (assets + metadata), updated nav/manifest, and verified dataset exporter emits the binary placeholder record.
 - 2025-10-16: Captured the Introduction to Scripting PDF (Classic Mac OS), storing metadata, navigation, and monitoring entries to align with other archived assets.
+- 2025-10-16: Added GitHub Actions workflow (`.github/workflows/pages.yml`) to publish the MkDocs site to GitHub Pages automatically.
 - 2025-10-16: Documented outstanding manual follow-ups in `docs/manual-followups.md` (assets, publishing, QA checks).
 
 ## Task Board
@@ -65,8 +66,9 @@
 | ✅ | Mirror AppleScript Scripting Additions Guide (archived PDF). |
 | ✅ | Mirror Introduction to Scripting (archived PDF). |
 | ✅ | Implement change detection (`monitor/manifest.json` + `scripts/check_updates.py`). |
-| ⬜️ | Publish GitHub Pages catalog sourced from `build/`. |
+| ✅ | Publish GitHub Pages catalog sourced from `build/`. |
 | ✅ | Generate LLM-ready datasets (plain text + JSONL chunks, optional embeddings). |
+| ⬜️ | Run final pre-release validation (mirror checks, monitoring, MkDocs). |
 
 ## Open Questions
 - Which additional AppleScript doc sets (e.g., Apple Events Programming Guide) should be pulled next?
@@ -99,3 +101,4 @@
 2. Package the generated dataset (plain text + JSONL) as a release artifact so consumers can download without cloning the repo; document the packaging workflow.
 3. Keep the repository lean by treating `dataset/` outputs as build artifacts (run `python3 scripts/export_dataset.py` on demand before packaging).
 4. When source freshness is a concern, run `python3 scripts/check_updates.py --manifest monitor/manifest.json --save --report reports/update-status-YYYYMMDD.md`; weekly cadence is optional because upstream docs rarely change.
+5. Plan a final pre-release validation sweep (mirror validation, monitoring, MkDocs build) before the next dataset/site release.

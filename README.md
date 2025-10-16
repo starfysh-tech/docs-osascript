@@ -78,3 +78,4 @@ For scriptable doc sets with large index tables (e.g., AppleScript Language Guid
 - Fetch standalone resources (PDFs, ZIPs, etc.) with `python3 scripts/download_file.py --url <source> --output data/<collection>/assets/<filename>`.
 - Dataset export planning lives in `docs/dataset-packaging.md`; follow it when producing plain text or JSONL corpora.
 - Manual cleanups / pending decisions are tracked in `docs/manual-followups.md`.
+- GitHub Pages deployment is automated via `.github/workflows/pages.yml`; pushes to `main` rebuild and publish https://starfysh-tech.github.io/docs-osascript/.
