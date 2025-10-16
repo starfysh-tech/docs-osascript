@@ -1,6 +1,8 @@
+<a id="//apple_ref/doc/uid/TP40000983-CH219-SW2"></a>
+
 # Folder Actions Reference
 
-Folder Actions is a feature of macOS that lets you associate AppleScript scripts with folders. A Folder Action script is executed when the folder to which it is attached has items added or removed, or when its window is opened, closed, moved, or resized. The script provides a handler that matches the appropriate format for the action, as described in this chapter.
+<a id="//apple_ref/doc/uid/TP40000983-CH219-DontLinkElementID_919"></a>Folder Actions is a feature of macOS that lets you associate AppleScript scripts with folders. A Folder Action script is executed when the folder to which it is attached has items added or removed, or when its window is opened, closed, moved, or resized. The script provides a handler that matches the appropriate format for the action, as described in this chapter.
 
 Folder Actions make it easy to create hot folders that respond to external actions to trigger a workflow. For example, you can use a Folder Action script to initiate automated processing of any photo dropped in a targeted folder. A well written Folder Action script leaves the hot folder empty. This avoids repeated application of the action to the same files, and allows Folder Actions to perform more efficiently.
 
@@ -34,9 +36,11 @@ Here’s how you can use a Folder Action script to perform a specific action whe
    1. Enable folder actions for your image folder.
    2. Add a script to that folder, choosing the script you created.
 
+<a id="//apple_ref/doc/uid/TP40000983-CH219-SW48"></a>
+
 adding folder items to
 
-A script handler that is invoked after items are added to its associated folder.
+<a id="//apple_ref/doc/uid/TP40000983-CH219-DontLinkElementID_920"></a>A script handler that is invoked after items are added to its associated folder.
 
 ##### Syntax
 
@@ -55,38 +59,42 @@ A script handler that is invoked after items are added to its associated folder.
 *statement*
 :   Any AppleScript statement.
 
+<a id="//apple_ref/doc/uid/TP40000983-CH219-DontLinkElementID_203"></a>
+
 ##### Examples
 
 The following Folder Action handler is triggered when items are added to the folder to which it is attached. It makes an archived copy, in ZIP format, of the individual items added to the attached folder. Archived files are placed in a folder named `Done` within the attached folder.
 
-|  |
-| --- |
-| ```   ``` |
-| ``` on adding folder items to this_folder after receiving these_items ``` |
-| ```     tell application "Finder" ``` |
-| ```         if not (exists folder "Done" of this_folder) then ``` |
-| ```             make new folder at this_folder with properties {name:"Done"} ``` |
-| ```         end if ``` |
-| ```         set the destination_folder to folder "Done" of this_folder as alias ``` |
-| ```         set the destination_directory to POSIX path of the destination_folder ``` |
-| ```     end tell ``` |
-| ```     repeat with i from 1 to number of items in these_items ``` |
-| ```         set this_item to item i of these_items ``` |
-| ```         set the item_info to info for this_item ``` |
-| ```         if this_item is not the destination_folder and ¬ ``` |
-| ```             the name extension of the item_info is not in {"zip", "sit"} then ``` |
-| ```             set the item_path to the quoted form of the POSIX path of this_item ``` |
-| ```             set the destination_path to the quoted form of ¬ ``` |
-| ```                 (destination_directory & (name of the item_info) & ".zip") ``` |
-| ```             do shell script ("/usr/bin/ditto -c -k -rsrc --keepParent " ¬ ``` |
-| ```                 & item_path & " " & destination_path) ``` |
-| ```         end if ``` |
-| ```     end repeat ``` |
-| ``` end adding folder items to ``` |
+```
+ 
+on adding folder items to this_folder after receiving these_items
+    tell application "Finder"
+        if not (exists folder "Done" of this_folder) then
+            make new folder at this_folder with properties {name:"Done"}
+        end if
+        set the destination_folder to folder "Done" of this_folder as alias
+        set the destination_directory to POSIX path of the destination_folder
+    end tell
+    repeat with i from 1 to number of items in these_items
+        set this_item to item i of these_items
+        set the item_info to info for this_item
+        if this_item is not the destination_folder and ¬
+            the name extension of the item_info is not in {"zip", "sit"} then
+            set the item_path to the quoted form of the POSIX path of this_item
+            set the destination_path to the quoted form of ¬
+                (destination_directory & (name of the item_info) & ".zip")
+            do shell script ("/usr/bin/ditto -c -k -rsrc --keepParent " ¬
+                & item_path & " " & destination_path)
+        end if
+    end repeat
+end adding folder items to
+```
+
+<a id="//apple_ref/doc/uid/TP40000983-CH219-SW1"></a>
 
 closing folder window for
 
-A script handler that is invoked after a folder’s associated window is closed.
+<a id="//apple_ref/doc/uid/TP40000983-CH219-DontLinkElementID_921"></a>A script handler that is invoked after a folder’s associated window is closed.
 
 ##### Syntax
 
@@ -102,26 +110,30 @@ A script handler that is invoked after a folder’s associated window is closed.
 *statement*
 :   Any AppleScript statement.
 
+<a id="//apple_ref/doc/uid/TP40000983-CH219-DontLinkElementID_204"></a>
+
 ##### Examples
 
 The following Folder Action handler is triggered when the folder to which it is attached is closed. It closes any open windows of folders within the targeted folder.
 
-|  |
-| --- |
-| ``` -- This script is designed for use with OS X v10.2 and later. ``` |
-| ``` on closing folder window for this_folder ``` |
-| ```     tell application "Finder" ``` |
-| ```         repeat with EachFolder in (get every folder of folder this_folder) ``` |
-| ```             try ``` |
-| ```                 close window of EachFolder ``` |
-| ```             end try ``` |
-| ```         end repeat ``` |
-| ```     end tell ``` |
-| ``` end closing folder window for ``` |
+```
+-- This script is designed for use with OS X v10.2 and later.
+on closing folder window for this_folder
+    tell application "Finder"
+        repeat with EachFolder in (get every folder of folder this_folder)
+            try
+                close window of EachFolder
+            end try
+        end repeat
+    end tell
+end closing folder window for
+```
+
+<a id="//apple_ref/doc/uid/TP40000983-CH219-SW50"></a>
 
 moving folder window for
 
-A script handler that is invoked after a folder’s associated window is moved or resized. Not currently available.
+<a id="//apple_ref/doc/uid/TP40000983-CH219-DontLinkElementID_922"></a>A script handler that is invoked after a folder’s associated window is moved or resized. Not currently available.
 
 ##### Syntax
 
@@ -132,9 +144,7 @@ A script handler that is invoked after a folder’s associated window is moved o
 ##### Placeholders
 
 *alias*
-:   An `alias` that identifies the folder that was moved or resized.
-
-    You can use this alias to obtain the folder window’s new coordinates from the Finder.
+:   An `alias` that identifies the folder that was moved or resized. You can use this alias to obtain the folder window’s new coordinates from the Finder.
 
 *bounding rectangle*
 :   The previous coordinates of the window of the folder that was moved or resized. The coordinates are provided as a list of four numbers, {left, top, right, bottom}; for example, {10, 50, 500, 300} for a window whose origin is near the top left of the screen (but below the menu bar, if present).
@@ -142,26 +152,32 @@ A script handler that is invoked after a folder’s associated window is moved o
 *statement*
 :   Any AppleScript statement.
 
+<a id="//apple_ref/doc/uid/TP40000983-CH219-DontLinkElementID_205"></a>
+
 ##### Examples
 
-|  |
-| --- |
-| ``` on moving folder window for this_folder from original_coordinates ``` |
-| ```     tell application "Finder" ``` |
-| ```         set this_name to the name of this_folder ``` |
-| ```         set the bounds of the container window of this_folder ¬ ``` |
-| ```             to the original_coordinates ``` |
-| ```     end tell ``` |
-| ```     display dialog "Window \"" & this_name & "\" has been returned to its original size and position." buttons {"OK"} default button 1 ``` |
-| ``` end moving folder window for ``` |
+```
+on moving folder window for this_folder from original_coordinates
+    tell application "Finder"
+        set this_name to the name of this_folder
+        set the bounds of the container window of this_folder ¬
+            to the original_coordinates
+    end tell
+    display dialog "Window \"" & this_name & "\" has been returned to its original size and position." buttons {"OK"} default button 1
+end moving folder window for
+```
 
 ##### Special Considerations
 
+<a id="//apple_ref/doc/uid/TP40000983-CH219-DontLinkElementID_206"></a>
+
 **Warning:** In OS X v10.5, and possibly in previous OS versions, Folder Actions does not activate attached `moving folder window for` scripts when the folder is moved.
+
+<a id="//apple_ref/doc/uid/TP40000983-CH219-SW51"></a>
 
 opening folder
 
-A script handler that is invoked when its associated folder is opened in a window.
+<a id="//apple_ref/doc/uid/TP40000983-CH219-DontLinkElementID_923"></a>A script handler that is invoked when its associated folder is opened in a window.
 
 ##### Syntax
 
@@ -177,38 +193,42 @@ A script handler that is invoked when its associated folder is opened in a windo
 *statement*
 :   Any AppleScript statement.
 
+<a id="//apple_ref/doc/uid/TP40000983-CH219-DontLinkElementID_207"></a>
+
 ##### Examples
 
 The following Folder Action handler is triggered when the folder it is attached to is opened. It displays any text from the Spotlight Comments field of the targeted folder. (Prior to OS X v10.4, this script displays text from the Comments field of the specified folder.)
 
-|  |
-| --- |
-| ``` -- This script is designed for use with OS X v10.2 and later. ``` |
-| ``` property dialog_timeout : 30 -- set the amount of time before dialogs auto-answer. ``` |
-| ```   ``` |
-| ``` on opening folder this_folder ``` |
-| ```     tell application "Finder" ``` |
-| ```         activate ``` |
-| ```         set the alert_message to the comment of this_folder ``` |
-| ```         if the alert_message is not "" then ``` |
-| ```             display dialog alert_message buttons {"Open Comments", "Clear Comments", "OK"} default button 3 giving up after dialog_timeout ``` |
-| ```             set the user_choice to the button returned of the result ``` |
-| ```             if the user_choice is "Clear Comments" then ``` |
-| ```                 set comment of this_folder to "" ``` |
-| ```             else if the user_choice is "Open Comments" then ``` |
-| ```                 open information window of this_folder ``` |
-| ```             end if ``` |
-| ```         end if ``` |
-| ```     end tell ``` |
-| ``` end opening folder ``` |
+```
+-- This script is designed for use with OS X v10.2 and later.
+property dialog_timeout : 30 -- set the amount of time before dialogs auto-answer.
+ 
+on opening folder this_folder
+    tell application "Finder"
+        activate
+        set the alert_message to the comment of this_folder
+        if the alert_message is not "" then
+            display dialog alert_message buttons {"Open Comments", "Clear Comments", "OK"} default button 3 giving up after dialog_timeout
+            set the user_choice to the button returned of the result
+            if the user_choice is "Clear Comments" then
+                set comment of this_folder to ""
+            else if the user_choice is "Open Comments" then
+                open information window of this_folder
+            end if
+        end if
+    end tell
+end opening folder
+```
 
 ##### Special Considerations
 
 Spotlight was introduced in OS X v10.4. In prior versions of the Mac OS, the example script shown above works with the Comments field of the specified folder, rather than the Spotlight Comments field.
 
+<a id="//apple_ref/doc/uid/TP40000983-CH219-SW52"></a>
+
 removing folder items from
 
-A script handler that is invoked after items have been removed from its associated folder.
+<a id="//apple_ref/doc/uid/TP40000983-CH219-DontLinkElementID_924"></a>A script handler that is invoked after items have been removed from its associated folder.
 
 ##### Syntax
 
@@ -227,19 +247,21 @@ A script handler that is invoked after items have been removed from its associat
 *statement*
 :   Any AppleScript statement.
 
+<a id="//apple_ref/doc/uid/TP40000983-CH219-DontLinkElementID_208"></a>
+
 ##### Examples
 
-The following Folder Action handler is triggered when items are removed from the folder to which it is attached. It displays an alert containing the number of items removed.
+The following Folder Action handler is triggered when items are removed from the folder to which it is attached. It displays an alert containing the number of items removed.<a id="//apple_ref/doc/uid/TP40000983-CH219-DontLinkElementID_925"></a>
 
-|  |
-| --- |
-| ``` on removing folder items from this_folder after losing these_items ``` |
-| ```     tell application "Finder" ``` |
-| ```         set this_name to the name of this_folder ``` |
-| ```     end tell ``` |
-| ```     set the item_count to the count of these_items ``` |
-| ```     display dialog (item_count as text) & " items have been removed " & "from folder \"" & this_name & "\"." buttons {"OK"} default button 1 ``` |
-| ``` end removing folder items from ``` |
+```
+on removing folder items from this_folder after losing these_items
+    tell application "Finder"
+        set this_name to the name of this_folder
+    end tell
+    set the item_count to the count of these_items
+    display dialog (item_count as text) & " items have been removed " & "from folder \"" & this_name & "\"." buttons {"OK"} default button 1
+end removing folder items from
+```
 
   
 

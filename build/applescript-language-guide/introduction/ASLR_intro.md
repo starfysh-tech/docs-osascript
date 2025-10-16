@@ -1,30 +1,42 @@
+<a id="//apple_ref/doc/uid/TP40000983"></a><a id="//apple_ref/doc/uid/TP40000983-CH208-SW1"></a>
+
 # Introduction to AppleScript Language Guide
 
 This document is a guide to the AppleScript language—its lexical conventions, syntax, keywords, and other elements. It is intended primarily for use with AppleScript 2.0 or later and macOS version 10.5 or later.
 
 AppleScript 2.0 can use scripts developed for any version of AppleScript from 1.1 through 1.10.7, any scripting addition created for AppleScript 1.5 or later for macOS, and any scriptable application for Mac OS v7.1 or later. A script created with AppleScript 2.0 can be used by any version of AppleScript back to version 1.1, provided it does not use features of AppleScript, scripting additions, or scriptable applications that are unavailable in that version.
 
+> <a id="//apple_ref/doc/uid/TP40000983-CH208-DontLinkElementID_14"></a>
+>
 > **Important:** Descriptions and examples for the terms in this document have been tested with AppleScript 2.0 in OS X v10.5 (Leopard). Except for terms that are noted as being new in Leopard, most descriptions and examples work with previous system versions, but have not been tested against all of them.
 >
 > If you need detailed information about prior system and AppleScript versions, see *AppleScript Release Notes (OS X v10.4 and earlier)*.
 
+<a id="//apple_ref/doc/uid/TP40000983-CH208-SW2"></a>
+
 ## What Is AppleScript?
 
-AppleScript is a scripting language created by Apple. It allows users to directly control scriptable Macintosh applications, as well as parts of macOS itself. You can create scripts—sets of written instructions—to automate repetitive tasks, combine features from multiple scriptable applications, and create complex workflows.
+<a id="//apple_ref/doc/uid/TP40000983-CH208-DontLinkElementID_519"></a>AppleScript is a scripting language created by Apple. It allows users to directly control scriptable Macintosh applications, as well as parts of macOS itself. You can create scripts—sets of written instructions—to automate repetitive tasks, combine features from multiple scriptable applications, and create complex workflows.
 
+> <a id="//apple_ref/doc/uid/TP40000983-CH208-SW3"></a>
+>
 > **Note:** Apple also provides the Automator application, which allows users to automate common tasks by hooking together ready-made actions in a graphical environment. For more information, see [Automator Documentation](../../../../../navigation/redirect.html#//apple_ref/doc/uid/TP30000943-TP40005948-TP40001673).
 
-A scriptable application is one that can be controlled by a script. For AppleScript, that means being responsive to interapplication messages, called *Apple events*, sent when a script command targets the application. (Apple events can also be sent directly from other applications and macOS.)
+A scriptable application is one that can be controlled by a script. For AppleScript, that means being responsive to interapplication messages, called <a id="//apple_ref/doc/uid/TP40000983-CH208-DontLinkElementID_520"></a>*Apple events*, sent when a script command targets the application. (Apple events can also be sent directly from other applications and macOS.)
 
 AppleScript itself provides a very small number of commands, but it provides a framework into which you can plug many task-specific commands—those provided by scriptable applications and scriptable parts of macOS.
 
 Most script samples and script fragments in this guide use scriptable features of the Finder application, scriptable parts of macOS, or scriptable applications distributed with macOS, such as TextEdit (located in `/Applications`).
 
+<a id="//apple_ref/doc/uid/TP40000983-CH208-SW4"></a>
+
 ## Who Should Read This Document?
 
 You should use this document if you write or modify AppleScript scripts, or if you create scriptable applications and need to know how scripts should work.
 
-*AppleScript Language Guide* assumes you are familiar with the high-level information about AppleScript found in *[AppleScript Overview](../../AppleScriptX/AppleScriptX.html#//apple_ref/doc/uid/10000156i)*.
+*AppleScript Language Guide* assumes you are familiar with the high-level information about AppleScript found in *[AppleScript Overview](../../applescript-overview/AppleScriptX.md#//apple_ref/doc/uid/10000156i)*.
+
+<a id="//apple_ref/doc/uid/TP40000983-CH208-DontLinkElementID_1"></a>
 
 ## Organization of This Document
 
@@ -60,30 +72,36 @@ The following appendixes provide additional information about the AppleScript la
 * [Libraries using Load Script](../reference/ASLR_load_script.md#//apple_ref/doc/uid/TP40000983-CH227-SW1) describes how to save libraries of handlers and access them from other scripts.
 * [Unsupported Terms](../reference/ASLR_unsupported_terms.md#//apple_ref/doc/uid/TP40000983-CH224-SW1) lists terms that are no longer supported in AppleScript.
 
+<a id="//apple_ref/doc/uid/TP40000983-CH208-38112"></a>
+
 ## Conventions Used in This Guide
 
-Glossary terms are shown in *boldface* where they are defined.
+<a id="//apple_ref/doc/uid/TP40000983-CH208-DontLinkElementID_521"></a>Glossary terms are shown in *boldface* where they are defined.
 
+> <a id="//apple_ref/doc/uid/TP40000983-CH208-DontLinkElementID_15"></a>
+>
 > **Important:** This document sometimes uses the continuation character (¬) for sample statements that don’t fit on one line on a document page. It also uses the continuation character in some syntax statements to identify an item that, if included, must appear on the same line as the previous item. The continuation character itself is not a required part of the syntax—it is merely a mechanism for including multiple lines in one statement.
 
 The following conventions are used in syntax descriptions:
 
 |  |  |
 | --- | --- |
-| `language element` | Plain computer font indicates an element that you type exactly as shown. If there are special symbols (for example, `+` or `&`), you also type them exactly as shown. |
-| *placeholder* | Italic text indicates a placeholder that you replace with an appropriate value. |
-| [optional] | Brackets indicate that the enclosed language element or elements are optional. |
+| `language element` | Plain computer font indicates an element that you type exactly as shown. If there are special symbols (for example, `+` or `&`), you also type them exactly as shown.<a id="//apple_ref/doc/uid/TP40000983-CH208-DontLinkElementID_522"></a> |
+| *placeholder* | Italic text indicates a placeholder that you replace with an appropriate value.<a id="//apple_ref/doc/uid/TP40000983-CH208-DontLinkElementID_523"></a> |
+| [optional] | Brackets indicate that the enclosed language element or elements are optional.<a id="//apple_ref/doc/uid/TP40000983-CH208-DontLinkElementID_524"></a> |
 | (a group) | Parentheses group elements together.  However, the parentheses shown in [Handler Syntax (Positional Parameters)](../reference/ASLR_handlers.md#//apple_ref/doc/uid/TP40000983-CH7g-166812) are part of the syntax. |
-| [optional]... | Three ellipsis points (...) after a group defined by brackets indicate that you can repeat the group of elements within brackets 0 or more times. |
-| a | b | c | Vertical bars separate elements in a group from which you must choose a single element. The elements are often grouped within parentheses or brackets. |
+| [optional]... | Three ellipsis points (...) after a group defined by brackets indicate that you can repeat the group of elements within brackets 0 or more times.<a id="//apple_ref/doc/uid/TP40000983-CH208-DontLinkElementID_525"></a> |
+| a | b | c | Vertical bars separate elements in a group from which you must choose a single element. The elements are often grouped within parentheses or brackets.<a id="//apple_ref/doc/uid/TP40000983-CH208-DontLinkElementID_526"></a><a id="//apple_ref/doc/uid/TP40000983-CH208-DontLinkElementID_527"></a> |
 | Filenames shown in scripts | Most filenames shown in examples in this document include extensions, such as `rtf` for a TextEdit document. Use of extensions in scripts is generally dependent on the “Show all file extensions” setting in the Advanced pane of Finder Preferences.  To work with the examples on your computer, you may need to modify either that setting or the filenames. |
+
+<a id="//apple_ref/doc/uid/TP40000983-CH208-DontLinkElementID_2"></a>
 
 ## See Also
 
 These Apple documents provide additional information for working with AppleScript:
 
 * See *Getting Started with AppleScript* for a guided quick start, useful to both scripters and developers.
-* See *[AppleScript Overview](../../AppleScriptX/AppleScriptX.html#//apple_ref/doc/uid/10000156i)*, including the chapter [Scripting with AppleScript](../../AppleScriptX/Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568), for a high-level overview of AppleScript and its related technologies.
+* See *[AppleScript Overview](../../applescript-overview/AppleScriptX.md#//apple_ref/doc/uid/10000156i)*, including the chapter [Scripting with AppleScript](../../applescript-overview/Concepts/work_with_as.md#//apple_ref/doc/uid/TP40001568), for a high-level overview of AppleScript and its related technologies.
 * See *Getting Started With Scripting & Automation* for information on the universe of scripting technologies available in macOS.
 * See [AppleScript Terminology and Apple Event Codes](http://developer.apple.com/releasenotes/AppleScript/ASTerminology_AppleEventCodes/TermsAndCodes.html) for a list of many of the scripting terms defined by Apple.
 

@@ -1,3 +1,5 @@
+<a id="//apple_ref/doc/uid/TP40000983-CH212-BCIHHGJH"></a>
+
 # Document Revision History
 
 This table describes the changes to *AppleScript Language Guide*.

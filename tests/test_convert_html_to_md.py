@@ -1,6 +1,7 @@
 from pathlib import Path
 
 from scripts.convert_html_to_md import convert_file, main, make_converter
+from scripts.normalize_markdown_links import main as normalize_links_main
 
 
 def write_html(tmp_path: Path, name: str, body: str) -> Path:
@@ -110,3 +111,44 @@ def test_main_creates_wwdc_note_for_jxa(tmp_path) -> None:
     assert note_path.exists()
     content = note_path.read_text(encoding="utf-8")
     assert "Session 306 PDF" in content
+
+
+def test_apple_ref_anchors_preserved(tmp_path) -> None:
+    html_path = write_html(
+        tmp_path,
+        "anchors",
+        "<a name='//apple_ref/doc/uid/test'></a><h2>Section</h2>",
+    )
+
+    markdown = run_conversion(tmp_path, html_path)
+
+    assert '<a id="//apple_ref/doc/uid/test"></a>' in markdown
+
+
+def test_cross_collection_links_rewrite(tmp_path) -> None:
+    data_root = tmp_path / "data"
+    data_root.mkdir()
+    overview = data_root / "foo"
+    overview.mkdir(parents=True)
+    (overview / "html_pages.txt").write_text("Doc.html\n", encoding="utf-8")
+
+    lang = data_root / "bar"
+    lang.mkdir(parents=True)
+    (lang / "html_pages.txt").write_text("Sub/Ref.html\n", encoding="utf-8")
+
+    build_dir = tmp_path / "build"
+    (build_dir / "foo").mkdir(parents=True)
+    (build_dir / "foo" / "Doc.md").write_text("# Doc\n", encoding="utf-8")
+
+    target_dir = build_dir / "bar" / "Sub"
+    target_dir.mkdir(parents=True, exist_ok=True)
+    md_path = target_dir / "Ref.md"
+    md_path.write_text(
+        "See [Doc](../../foo/Doc.html#//apple_ref/doc/uid/test).",
+        encoding="utf-8",
+    )
+
+    normalize_links_main([overview / "html_pages.txt", lang / "html_pages.txt"], build_dir)
+
+    updated = md_path.read_text(encoding="utf-8")
+    assert "../../foo/Doc.md#//apple_ref/doc/uid/test" in updated

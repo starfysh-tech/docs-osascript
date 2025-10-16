@@ -1,6 +1,10 @@
+<a id="//apple_ref/doc/uid/TP40001569-BABEBGCF"></a>
+
 # Scriptable Applications
 
 A *scriptable application* is one that goes beyond the basics of responding to Apple events sent by the Mac OS to make its most important data and operations available to AppleScript scripts or to other applications. To do this, the application must provide both a terminology for scripters to use and the underlying Apple event code to support it. Both Carbon and Cocoa applications can be scriptable, and the Cocoa framework contains built-in support that minimizes the amount of code you have to write.
+
+<a id="//apple_ref/doc/uid/TP40001569-1156165"></a>
 
 ## Specifying Scripting Terminology
 
@@ -20,6 +24,8 @@ There are currently three dictionary formats:
   For documentation, see [Script Suite and Script Terminology Files](../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_suites/SAppsSuites.html#//apple_ref/doc/uid/20001241) in *[Cocoa Scripting Guide](../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_intro/SAppsIntro.html#//apple_ref/doc/uid/TP40002164)*.
 * *aete:* This is the original dictionary format, and is still used in Carbon applications. The name comes from the Resource Manager resource type in which the information is stored (`'aete'`). An aete is useful in 10.4 and earlier, in both Carbon and Cocoa applications, to provide a dictionary that scripting languages can use without launching the application.
 
+<a id="//apple_ref/doc/uid/TP40001571-1155730"></a><a id="//apple_ref/doc/uid/TP40001569-1155730-BAJEGIED"></a>
+
 ## Determining What to Make Scriptable
 
 In designing a scriptable application, it’s a good idea to provide access to all of the application’s main features, though it may make sense to start with just a key subset. You don’t typically make your application’s user interface directly scriptable. A good design allows users to script your application’s model objects (which represent data and basic behaviors) rather than its user interface (which presents information to the user).
@@ -30,13 +36,19 @@ For design information, see “Learning How to Make an Application Scriptable”
 
 For information on how to support printing in a scriptable application, see *[The Enhanced Print Apple Event](../../../../../technotes/tn2002/tn2082.html#//apple_ref/doc/uid/DTS10003113)*.
 
+<a id="//apple_ref/doc/uid/TP40001569-SW2"></a>
+
 ## Registering to Receive Apple Events
 
 A scriptable application typically responds to a set of common commands, such as `get data`, `set data`, `delete`, and `save`, as well as to other commands that support operations specific to the application. Commands are represented in Apple events by constants defined in framework or application headers. To support a command, an application registers an event handler routine with the Apple Event Manager to handle Apple events it receives that specify that command. The Apple Event Manager dispatches received events to the handlers registered for them.
 
+> <a id="//apple_ref/doc/uid/TP40001569-SW3"></a>
+>
 > **Note:** For Cocoa applications, commands are registered automatically, so that developers rarely need to register apple event handlers directly.
 
 For more information on creating and registering event handlers, see [Apple Event Dispatching](../../AppleEvents/dispatch_aes_aepg/dispatch_aes_aepg.html#//apple_ref/doc/uid/TP40001449-CH204) and [Responding to Apple Events](../../AppleEvents/responding_aepg/responding_aepg.html#//apple_ref/doc/uid/TP40001449-CH206) in *[Apple Events Programming Guide](../../AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449)*.
+
+<a id="//apple_ref/doc/uid/TP40001569-1153769"></a>
 
 ## Resolving Objects in the Application
 
@@ -47,6 +59,8 @@ The structures within an Apple event that identify objects are referred to as *o
 For Cocoa applications, Cocoa scripting support does much of the work of resolving object specifiers, but a scriptable application must still supply methods that can locate an object within its object model containment hierarchy.
 
 For an example of an AppleScript object model, see [Overview of Cocoa Support for Scriptable Applications](../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_about_apps/SAppsAboutApps.html#//apple_ref/doc/uid/TP40001976); for information on how Cocoa applications resolve objects, see [Object Specifiers](../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_object_specifiers/SAppsObjectSpecifiers.html#//apple_ref/doc/uid/TP40002164-CH3); both are in *[Cocoa Scripting Guide](../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_intro/SAppsIntro.html#//apple_ref/doc/uid/TP40002164)*.
+
+<a id="//apple_ref/doc/uid/TP40001571-1153888"></a><a id="//apple_ref/doc/uid/TP40001569-1153888-BAJICJEG"></a>
 
 ## Recording
 
@@ -60,6 +74,8 @@ Applications that support recording typically:
 
 The Finder application in OS X is recordable. Starting in OS X version 10.5, the [Automator](automator.md#//apple_ref/doc/uid/TP40006469-SW1) application has a separate Record mechanism that lets users record actions into an Automator workflow.
 
+<a id="//apple_ref/doc/uid/TP40001569-1153953"></a>
+
 ## Creating and Sending Apple Events
 
 An application can create and send Apple events directly. This is usually done either to send internal Apple events, as described in [Recording](#//apple_ref/doc/uid/TP40001571-1153888), to obtain services from a scriptable application, or to communicate directly with another application. The Open Scripting Architecture provides various mechanisms for creating and sending Apple events.
@@ -67,6 +83,8 @@ An application can create and send Apple events directly. This is usually done e
 Starting in OS X version 10.5, applications can use [Scripting Bridge](scripting_bridge.md#//apple_ref/doc/uid/TP40006467-SW1) to obtain services from scriptable applications. Scripting Bridge lets you work efficiently in a high-level language (Objective-C) without having to handle the details of sending and receiving Apple events. (See also [Support for Cocoa Applications](#//apple_ref/doc/uid/TP40001569-1151567) for related information.)
 
 When you really do need to send an Apple event directly, see [Building an Apple Event](../../AppleEvents/building_aes_aepg/building_aes_aepg.html#//apple_ref/doc/uid/TP40001449-CH203) and [Creating and Sending Apple Events](../../AppleEvents/create_send_aepg/create_send_aepg.html#//apple_ref/doc/uid/TP40001449-CH209) in *[Apple Events Programming Guide](../../AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449)*.
+
+<a id="//apple_ref/doc/uid/TP40001571-1153983"></a><a id="//apple_ref/doc/uid/TP40001569-1153983-BAJCGEBB"></a>
 
 ## Executing Scripts
 
@@ -76,11 +94,15 @@ To execute scripts, an application establishes a connection with the AppleScript
 * Let users record and edit scripts.
 * Compile and execute scripts.
 
+> <a id="//apple_ref/doc/uid/TP40001569-SW4"></a>
+>
 > **Note:** Starting in OS X version 10.5, applications can use [Scripting Bridge](scripting_bridge.md#//apple_ref/doc/uid/TP40006467-SW1) to obtain services from scriptable applications. This can be much more efficient than manipulating scripts.
 
 An application can store and execute scripts regardless of whether it is scriptable or recordable. If an application is scriptable, however, it can execute scripts that control its own behavior, thus acting as both the client application and the server application for the corresponding Apple events. For more information, see *Open Scripting Architecture Reference*.
 
 In Cocoa, the `NSAppleScript` class, described in *[NSAppleScript Class Reference](https://developer.apple.com/documentation/foundation/nsapplescript)*, provides a high-level wrapper for executing AppleScript scripts from applications. For more information, see [Support for Cocoa Applications](#//apple_ref/doc/uid/TP40001569-1151567).
+
+<a id="//apple_ref/doc/uid/TP40001569-1155176"></a>
 
 ## Summary of Operations in a Scriptable Application
 
@@ -107,6 +129,8 @@ The following list summarizes how scriptable applications interact with the Open
   Applications can also send Apple events directly to other applications.
 * An application responds to the Apple events it receives by performing operations, returning data, or both.
 
+<a id="//apple_ref/doc/uid/TP40001569-SW1"></a>
+
 ## OS X Support for Creating Scriptable Applications
 
 OS X supplies a number of resources that applications can use to work with Apple events and to support scriptability, including the API provided in the following frameworks:
@@ -117,6 +141,8 @@ OS X supplies a number of resources that applications can use to work with Apple
   For specific Cocoa scripting documentation, see *[Cocoa Scripting Guide](../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_intro/SAppsIntro.html#//apple_ref/doc/uid/TP40002164)*.
 * Java applications are not typically scriptable, though they can be made AppleScript-aware using the mechanisms described in [OS X Integration for Java](../../../../Java/Conceptual/Java14Development/07-NativePlatformIntegration/NativePlatformIntegration.html#//apple_ref/doc/uid/TP40001909) in *[Java Development Guide for Mac](../../../../Java/Conceptual/Java14Development/00-Intro/JavaDevelopment.html#//apple_ref/doc/uid/TP30001142)*.
 
+<a id="//apple_ref/doc/uid/TP40001569-1150941"></a><a id="//apple_ref/doc/uid/TP40001569-1150941-BCIBAEAI"></a>
+
 ### Support for Carbon Applications
 
 Carbon applications have traditionally worked directly with the Apple Event Manager to create, send, receive, and interpret Apple events. These topics are described in detail in *[Apple Events Programming Guide](../../AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449)*.
@@ -126,6 +152,8 @@ For information on making your Carbon application scriptable, see previous secti
 Carbon applications can use functions such as `OSACompile` and `OSAExecute` from `OpenScripting.framework` to compile and execute scripts. Keep in mind, however, that if you are executing a script merely to send a simple command to another application, it is more efficient to create and send an Apple event directly.
 
 If the purpose for executing a script is just to perform a `do shell script` command, Carbon applications can do so more efficiently using one of the BSD calls `system(3)`, `popen(3)`, or `exec(3)`, which you can read about at their respective man pages.
+
+<a id="//apple_ref/doc/uid/TP40001569-1151567"></a><a id="//apple_ref/doc/uid/TP40001569-1151567-BCIIEGJD"></a>
 
 ### Support for Cocoa Applications
 

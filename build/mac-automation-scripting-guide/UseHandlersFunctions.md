@@ -1,3 +1,6 @@
+<a id="//apple_ref/doc/uid/TP40016239-CH52"></a><a id="//apple_ref/doc/uid/TP40016239-CH52-SW1"></a>
+<a id="//apple_ref/doc/uid/TP40016239-CH74"></a><a id="//apple_ref/doc/uid/TP40016239-CH74-SW1"></a>
+
 ## Using Handlers/Functions
 
 Collections of script statements that can be invoked by name are referred to as *handlers* in AppleScript, *functions* or *methods* in JavaScript, and *subroutines* in some other languages. Throughout this document, these terms are used interchangeably.
@@ -11,6 +14,8 @@ Handlers provide a way to organize your code by breaking it up into smaller, man
 >
 > AppleScript handlers are generally placed at the end of a script, while in JavaScript, they’re usually placed at the top.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW4"></a>
+
 ### AppleScript Handlers
 
 In AppleScript, a handler begins with the word `on` or `to`, followed by the handler name and its parameters, if any. It ends with the word `end`, followed by the handler name. AppleScript handlers can be written with positional, labeled, or interleaved parameters.
@@ -21,6 +26,7 @@ Listing 13-1 shows a simple one-line script that displays a hypothetical error m
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=display%20dialog%20%22The%20script%20encountered%20a%20problem.%22)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW7"></a>
 **Listing 13-1**AppleScript: A simple script that displays an error message
 
 1. `display dialog "The script encountered a problem."`
@@ -31,6 +37,7 @@ In Listing 13-1, the code from Listing 13-1 has been converted to a handler name
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20displayError%28%29%0A%20%20%20%20display%20dialog%20%22The%20script%20encountered%20a%20problem.%22%0Aend%20displayError)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW5"></a>
 **Listing 13-2**AppleScript: A simple handler that displays an error message
 
 1. `on displayError()`
@@ -43,6 +50,7 @@ Listing 13-3 shows a variation of the handler in Listing 13-1, which uses the `t
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=to%20displayError%28%29%0A%20%20%20%20display%20dialog%20%22The%20script%20encountered%20a%20problem.%22%0Aend%20displayError)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW9"></a>
 **Listing 13-3**AppleScript: A variation of a simple handler that displays an error message
 
 1. `to displayError()`
@@ -55,6 +63,7 @@ You can now call the `displayError` handler any time you want to display an erro
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=try%0A%20%20%20%20--%20Do%20something%0Aon%20error%0A%20%20%20%20--%20Notify%20the%20user%20that%20there%27s%20a%20problem%0A%20%20%20%20displayError%28%29%0Aend%20try%0A%0Atry%0A%20%20%20%20--%20Do%20something%20else%0Aon%20error%0A%20%20%20%20--%20Notify%20the%20user%20that%20there%27s%20a%20problem%0A%20%20%20%20displayError%28%29%0Aend%20try)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW8"></a>
 **Listing 13-4**AppleScript: Calling a simple handler to display an error message
 
 1. `try`
@@ -82,6 +91,7 @@ For detailed information about AppleScript handlers, see [About Handlers](../../
 >
 > [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=tell%20application%20%22Finder%22%0A%20%20%20%20try%0A%20%20%20%20%20%20%20%20--%20Do%20something%0A%20%20%20%20on%20error%0A%20%20%20%20%20%20%20%20--%20Notify%20the%20user%20that%20there%27s%20a%20problem%0A%20%20%20%20%20%20%20%20displayError%28%29%20of%20me%0A%20%20%20%20end%20try%0Aend%20tell%0A%0A%0Atell%20application%20%22Finder%22%0A%20%20%20%20try%0A%20%20%20%20%20%20%20%20--%20Do%20something%20else%0A%20%20%20%20on%20error%0A%20%20%20%20%20%20%20%20--%20Notify%20the%20user%20that%20there%27s%20a%20problem%0A%20%20%20%20%20%20%20%20my%20displayError%28%29%0A%20%20%20%20end%20try%0Aend%20tell)
 >
+> <a id="//apple_ref/doc/uid/TP40016239-CH52-SW10"></a>
 > **Listing 13-5**AppleScript: Calling a handler from within a tell statement
 >
 > 1. `tell application "Finder"`
@@ -103,6 +113,8 @@ For detailed information about AppleScript handlers, see [About Handlers](../../
 > 17. ` end try`
 > 18. `end tell`
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW6"></a>
+
 ### AppleScript Handlers with Positional Parameters
 
 Positional parameters are a series of comma-separated variables, contained within parentheses, following the handler name. In Listing 13-6, the `displayError` handler from Listing 13-1 has been updated to accept two positional parameters—an error message and a list of buttons to display.
@@ -111,6 +123,7 @@ Positional parameters are a series of comma-separated variables, contained withi
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20displayError%28theErrorMessage%2C%20theButtons%29%0A%20%20%20%20display%20dialog%20theErrorMessage%20buttons%20theButtons%0Aend%20displayError)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW11"></a>
 **Listing 13-6**AppleScript: A handler that displays a specified error message with custom buttons
 
 1. `on displayError(theErrorMessage, theButtons)`
@@ -123,11 +136,14 @@ To call the handler, refer to it by name and provide a value for each positional
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=displayError%28%22There%27s%20not%20enough%20available%20space.%20Would%20you%20like%20to%20continue%3F%22%2C%20%7B%22Don%27t%20Continue%22%2C%20%22Continue%22%7D%29)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW12"></a>
 **Listing 13-7**AppleScript: Calling a handler to display a specified error message with custom buttons
 
 1. `displayError("There's not enough available space. Would you like to continue?", {"Don't Continue", "Continue"})`
 
 For additional information about this style of handler, see [Handlers with Positional Parameters](../../../AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW13) in *[AppleScript Language Guide](../../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983)*.
+
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW14"></a>
 
 ### AppleScript Handlers with Interleaved Parameters
 
@@ -137,6 +153,7 @@ Interleaved parameters are a variation of positional parameters, in which the pa
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=tell%20me%20to%20displayError%3A%22There%27s%20not%20enough%20available%20space.%20Would%20you%20like%20to%20continue%3F%22%20withButtons%3A%7B%22Don%27t%20Continue%22%2C%20%22Continue%22%7D%0A%0Aon%20displayError%3AtheErrorMessage%20withButtons%3AtheButtons%0A%20%20%20%20display%20dialog%20theErrorMessage%20buttons%20theButtons%0Aend%20displayError%3AwithButtons%3A)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW23"></a>
 **Listing 13-8**AppleScript: Example of a handler with interleaved parameters
 
 1. `tell me to displayError:"There's not enough available space. Would you like to continue?" withButtons:{"Don't Continue", "Continue"}`
@@ -149,6 +166,8 @@ Interleaved parameters resemble Objective-C syntax. Therefore, they are typicall
 
 [Objective-C to AppleScript Quick Translation Guide](AppendixA-AppleScriptObjCQuickTranslationGuide.md#//apple_ref/doc/uid/TP40016239-CH79-SW1) discusses interleaved parameter use in AppleScriptObjC scripts. For additional information about this style of handler, see [Handlers with Interleaved Parameters](../../../AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW2) in *[AppleScript Language Guide](../../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983)*.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW37"></a>
+
 ### AppleScript Handlers with Labeled Parameters
 
 AppleScript also supports labeled parameters, although this style is rarely used when defining custom handlers. Most often, it’s a style used for event handlers. See [Event Handlers](#//apple_ref/doc/uid/TP40016239-CH52-SW17). Listing 13-9 shows how the `displayError` handler might appear if it were written using the labeled parameter style.
@@ -157,6 +176,7 @@ AppleScript also supports labeled parameters, although this style is rarely used
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=display%20of%20%22There%27s%20not%20enough%20available%20space.%20Would%20you%20like%20to%20continue%3F%22%20over%20%7B%22Don%27t%20Continue%22%2C%20%22Continue%22%7D%0A%0Ato%20display%20of%20theErrorMessage%20over%20theButtons%0A%20%20%20%20display%20dialog%20theErrorMessage%20buttons%20theButtons%0Aend%20display)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW13"></a>
 **Listing 13-9**AppleScript: Example of a handler with labeled parameters
 
 1. `display of "There's not enough available space. Would you like to continue?" over {"Don't Continue", "Continue"}`
@@ -166,6 +186,8 @@ AppleScript also supports labeled parameters, although this style is rarely used
 5. `end display`
 
 For additional information about this style of handler, see [Handlers with Labeled Parameters](../../../AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW22) in *[AppleScript Language Guide](../../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983)*.
+
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW15"></a>
 
 ### JavaScript Functions
 
@@ -177,6 +199,7 @@ Listing 13-10 shows a simple script that displays a hypothetical error message.
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Afunction%20displayError%28%29%20%7B%0A%20%20%20%20app.displayDialog%28%22The%20script%20encountered%20a%20problem.%22%29%0A%7D)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW19"></a>
 **Listing 13-10**JavaScript: A simple function that displays an error message
 
 1. `var app = Application.currentApplication()`
@@ -192,6 +215,7 @@ You can now call the `displayError` function any time you want to display an err
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=try%20%7B%0A%20%20%20%20%2F%2F%20Do%20something%0A%7D%20catch%20%28error%29%20%7B%0A%20%20%20%20%2F%2F%20Notify%20the%20user%20that%20there%27s%20a%20problem%0A%20%20%20%20displayError%28%29%0A%7D%0A%0Atry%20%7B%0A%20%20%20%20%2F%2F%20Do%20something%20else%0A%7D%20catch%20%28error%29%20%7B%0A%20%20%20%20%2F%2F%20Notify%20the%20user%20that%20there%27s%20a%20problem%0A%20%20%20%20displayError%28%29%0A%7D)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW20"></a>
 **Listing 13-11**JavaScript: Calling a simple function to display an error message
 
 1. `try {`
@@ -208,6 +232,8 @@ You can now call the `displayError` function any time you want to display an err
 12. ` displayError()`
 13. `}`
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW38"></a>
+
 ### Using Parameters
 
 JavaScript functions are written with positional parameters, comma-separated variables, contained within parentheses, following the function name. In Listing 13-12, the `displayError` function from Listing 13-10 has been updated to accept two positional parameters—an error message and a list of buttons to display.
@@ -216,6 +242,7 @@ JavaScript functions are written with positional parameters, comma-separated var
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Afunction%20displayError%28errorMessage%2C%20buttons%29%20%7B%0A%20%20%20%20app.displayDialog%28errorMessage%2C%20%7B%0A%20%20%20%20%20%20%20%20buttons%3A%20buttons%0A%20%20%20%20%7D%29%0A%7D)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW21"></a>
 **Listing 13-12**JavaScript: A function that displays a specified error message with custom buttons
 
 1. `var app = Application.currentApplication()`
@@ -233,9 +260,12 @@ To call the function, refer to it by name and provide a value for each positiona
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=displayError%28%22There%27s%20not%20enough%20available%20space.%20Would%20you%20like%20to%20continue%3F%22%2C%20%5B%22Don%27t%20Continue%22%2C%20%22Continue%22%5D%29)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW22"></a>
 **Listing 13-13**JavaScript: Calling a function to display a specified error message with custom buttons
 
 1. `displayError("There's not enough available space. Would you like to continue?", ["Don't Continue", "Continue"])`
+
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW16"></a>
 
 ### Exiting Handlers and Returning a Result
 
@@ -245,6 +275,7 @@ Often, handlers are used to process information and produce a result for further
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20shouldContinueProcessing%20to%20displayError%28%22There%27s%20not%20enough%20available%20space.%20Would%20you%20like%20to%20continue%3F%22%29%0Aif%20shouldContinueProcessing%20%3D%20true%20then%0A%20%20%20%20--%20Continue%20processing%20%20%20%20%0Aelse%0A%20%20%20%20--%20Stop%20processing%0Aend%20if%0A%0Aon%20displayError%28theErrorMessage%29%0A%20%20%20%20set%20theResponse%20to%20display%20dialog%20theErrorMessage%20buttons%20%7B%22Don%27t%20Continue%22%2C%20%22Continue%22%7D%20default%20button%20%22Continue%22%0A%20%20%20%20set%20theButtonChoice%20to%20button%20returned%20of%20theResponse%0A%20%20%20%20if%20theButtonChoice%20%3D%20%22Continue%22%20then%0A%20%20%20%20%20%20%20%20return%20true%0A%20%20%20%20else%0A%20%20%20%20%20%20%20%20return%20false%0A%20%20%20%20end%20if%0Aend%20displayError)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW2"></a>
 **Listing 13-14**AppleScript: Returning a value from a handler
 
 1. `set shouldContinueProcessing to displayError("There's not enough available space. Would you like to continue?")`
@@ -268,6 +299,7 @@ Often, handlers are used to process information and produce a result for further
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Afunction%20displayError%28errorMessage%29%20%7B%0A%20%20%20%20var%20response%20%3D%20app.displayDialog%28errorMessage%2C%20%7B%0A%20%20%20%20%20%20%20%20buttons%3A%20%5B%22Don%27t%20Continue%22%2C%20%22Continue%22%5D%2C%0A%20%20%20%20%20%20%20%20defaultButton%3A%20%22Continue%22%0A%20%20%20%20%7D%29%0A%20%20%20%20var%20buttonChoice%20%3D%20response.buttonReturned%0A%20%20%20%20if%20%28buttonChoice%20%3D%3D%20%22Continue%22%29%0A%20%20%20%20%20%20%20%20return%20true%0A%20%20%20%20else%0A%20%20%20%20%20%20%20%20return%20false%0A%7D%0A%0Avar%20shouldContinueProcessing%20%3D%20displayError%28%22There%27s%20not%20enough%20available%20space.%20Would%20you%20like%20to%20continue%3F%22%29%0Aif%20%28shouldContinueProcessing%29%20%7B%0A%20%20%20%20%2F%2F%20Continue%20processing%0A%7D%20else%20%7B%0A%20%20%20%20%2F%2F%20Stop%20processing%0A%7D%0A)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW18"></a>
 **Listing 13-15**JavaScript: Returning a value from a function
 
 1. `var app = Application.currentApplication()`
@@ -297,6 +329,8 @@ Often, handlers are used to process information and produce a result for further
 >
 > You can return a value at any time within a handler, not just at the end.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW17"></a>
+
 ### Event Handlers
 
 Some apps, including scripts themselves, can call handlers when certain events occur, such as when launched or quit. In Mail, you can set up a rule to look for incoming emails matching certain criteria. When a matching email is detected, Mail can call a handler in a specified script to process the email. Handlers like these are considered *event handlers* or *command handlers*.
@@ -307,6 +341,7 @@ Listing 13-16 shows an example of a Mail rule event handler. It receives any det
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=using%20terms%20from%20application%20%22Mail%22%0A%20%20%20%20on%20perform%20mail%20action%20with%20messages%20theDetectedMessages%20for%20rule%20theRule%0A%20%20%20%20%20%20%20%20tell%20application%20%22Mail%22%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theMessageCount%20to%20count%20of%20theDetectedMessages%0A%20%20%20%20%20%20%20%20%20%20%20%20repeat%20with%20a%20from%201%20to%20theMessageCount%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theCurrentMessage%20to%20item%20a%20of%20theDetectedMessages%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20--%20Process%20the%20message%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20repeat%0A%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20end%20perform%20mail%20action%20with%20messages%0Aend%20using%20terms%20from)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW24"></a>
 **Listing 13-16**AppleScript: Example of a Mail rule event handler
 
 1. `using terms from application "Mail"`
@@ -321,9 +356,13 @@ Listing 13-16 shows an example of a Mail rule event handler. It receives any det
 10. ` end perform mail action with messages`
 11. `end using terms from`
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW40"></a>
+
 ### Script Event Handlers
 
 As previously mentioned, scripts can contain event handlers too. These handlers run when certain events occur.
+
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW41"></a>
 
 ### Run Handlers
 
@@ -333,6 +372,7 @@ The `run` event handler is called when a script runs. By default, any executable
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=display%20dialog%20%22The%20script%20is%20running.%22)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW25"></a>
 **Listing 13-17**AppleScript: Example of an implicitly defined `run` handler
 
 1. `display dialog "The script is running."`
@@ -341,6 +381,7 @@ The `run` event handler is called when a script runs. By default, any executable
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0Aapp.displayDialog%28%22The%20script%20is%20running.%22%29)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW26"></a>
 **Listing 13-18**JavaScript: Example of an implicitly defined `run` function
 
 1. `var app = Application.currentApplication()`
@@ -353,6 +394,7 @@ Optionally, the `run` handler can be explicitly defined. Listing 13-19 and Listi
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20run%0A%20%20%20%20display%20dialog%20%22The%20script%20is%20running.%22%0Aend%20run)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW27"></a>
 **Listing 13-19**AppleScript: Example of an explicitly defined `run` handler
 
 1. `on run`
@@ -363,6 +405,7 @@ Optionally, the `run` handler can be explicitly defined. Listing 13-19 and Listi
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=function%20run%28%29%20%7B%0A%20%20%20%20var%20app%20%3D%20Application.currentApplication%28%29%0A%20%20%20%20app.includeStandardAdditions%20%3D%20true%0A%20%20%20%20app.displayDialog%28%22The%20script%20is%20running.%22%29%0A%7D)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW28"></a>
 **Listing 13-20**JavaScript: Example of an explicitly defined `run` function
 
 1. `function run() {`
@@ -370,6 +413,8 @@ Optionally, the `run` handler can be explicitly defined. Listing 13-19 and Listi
 3. ` app.includeStandardAdditions = true`
 4. ` app.displayDialog("The script is running.")`
 5. `}`
+
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW42"></a>
 
 ### Quit Handlers
 
@@ -379,6 +424,7 @@ The `quit` event handler is optional, and is called when a script app quits. Use
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20quit%0A%20%20%20%20display%20dialog%20%22The%20script%20is%20quitting.%22%0Aend%20quit)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW29"></a>
 **Listing 13-21**AppleScript: Example of a `quit` handler
 
 1. `on quit`
@@ -389,6 +435,7 @@ The `quit` event handler is optional, and is called when a script app quits. Use
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Afunction%20quit%28%29%20%7B%0A%20%20%20%20app.displayDialog%28%22The%20script%20is%20quitting.%22%29%0A%7D)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW30"></a>
 **Listing 13-22**JavaScript: Example of a `quit` function
 
 1. `var app = Application.currentApplication()`
@@ -398,6 +445,8 @@ The `quit` event handler is optional, and is called when a script app quits. Use
 5. ` app.displayDialog("The script is quitting.")`
 6. `}`
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW43"></a>
+
 ### Open Handlers
 
 The inclusion of an `open` handler or `openDocuments` method in a script app automatically makes the app drag-and-droppable. When launched in this way, the `open` handler receives a dropped list of files or folders as a direct parameter, as shown in Listing 13-23 and Listing 13-24.
@@ -406,6 +455,7 @@ The inclusion of an `open` handler or `openDocuments` method in a script app aut
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20open%20theDroppedItems%0A%20%20%20%20--%20Process%20the%20dropped%20items%20here%0Aend%20open)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW33"></a>
 **Listing 13-23**AppleScript: Structure of an `open` handler
 
 1. `on open theDroppedItems`
@@ -416,6 +466,7 @@ The inclusion of an `open` handler or `openDocuments` method in a script app aut
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=function%20openDocuments%28droppedItems%29%20%7B%0A%20%20%20%20%2F%2F%20Process%20the%20dropped%20items%20here%0A%7D)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW34"></a>
 **Listing 13-24**JavaScript: Structure of an `openDocuments` function
 
 1. `function openDocuments(droppedItems) {`
@@ -424,10 +475,13 @@ The inclusion of an `open` handler or `openDocuments` method in a script app aut
 
 For detailed information about using the `open` handler to create drop scripts, see [Processing Dropped Files and Folders](ProcessDroppedFilesandFolders.md#//apple_ref/doc/uid/TP40016239-CH53-SW1).
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW44"></a>
+
 ### Idle Handlers
 
 When saving a script, you can optionally save it as a stay-open application. See Figure 13-1. In a stay-open script app, the script stays open after the `run` handler completes, and an `idle` handler is called every 30 seconds. Use the `idle` handler to perform periodic processing tasks, such as checking a watched folder for new files to process. To change the duration between `idle` calls, return a new duration, in seconds, as the result of the `idle` handler. Listing 13-25 and Listing 13-26 demonstrate an `idle` handler that delays for five seconds between executions.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW35"></a>
 **Figure 13-1**Saving a stay-open script
 ![image: ../Art/scripteditor_savestayopenapp_2x.png](Art/scripteditor_savestayopenapp_2x.png)
 
@@ -435,6 +489,7 @@ When saving a script, you can optionally save it as a stay-open application. See
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20idle%0A%20%20%20%20display%20dialog%20%22The%20script%20is%20idling.%22%0A%20%20%20%20return%205%0Aend%20idle)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW31"></a>
 **Listing 13-25**AppleScript: Example of an `idle` handler
 
 1. `on idle`
@@ -446,6 +501,7 @@ When saving a script, you can optionally save it as a stay-open application. See
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Afunction%20idle%28%29%20%7B%0A%20%20%20%20app.displayDialog%28%22The%20script%20is%20idling.%22%29%0A%20%20%20%20return%205%0A%7D)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH52-SW32"></a>
 **Listing 13-26**JavaScript: Example of an `idle` function
 
 1. `var app = Application.currentApplication()`

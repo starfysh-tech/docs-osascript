@@ -1,6 +1,10 @@
+<a id="//apple_ref/doc/uid/TP40001570-BABEBGCF"></a>
+
 # AppleScript Utilities and Applications
 
 Apple provides a number of utilities and applications in OS X to enhance the features of AppleScript and your scripts. You can get additional information on some items described in this section by searching in Mac Help in the Finder or by going to the [AppleScript](http://www.macosxautomation.com/applescript/index.html) website.
+
+<a id="//apple_ref/doc/uid/TP40001570-1148318"></a>
 
 ## AppleScript Utility
 
@@ -24,6 +28,8 @@ AppleScript Utility helps you manage several AppleScript-related features in OS 
 
   In OS X version 10.3, you install and remove the Script menu with utility applications located in `/Applications/AppleScript`.
 
+<a id="//apple_ref/doc/uid/TP40001570-1148133"></a><a id="//apple_ref/doc/uid/TP40001570-1148133-BAJJGIBG"></a>
+
 ## Folder Actions Setup
 
 Folder Actions is a feature that lets you associate scripts with folders. A script is executed when the folder to which it is attached is opened or closed, moved or resized, or has items added or removed.
@@ -38,6 +44,8 @@ This utility helps you perform tasks related to Folder Actions, including the fo
 * Attach one or more scripts to a folder.
 * Remove attached scripts from a folder.
 * Enable or disable scripts attached to a folder.
+
+<a id="//apple_ref/doc/uid/TP40001570-1149074"></a><a id="//apple_ref/doc/uid/TP40001570-1149074-BAJEIHJA"></a>
 
 ## System Events and GUI Scripting
 
@@ -92,6 +100,8 @@ The following are some of the terminology suites supplied by System Events in OS
 
   Provides terminology for working with information in XML files.
 
+<a id="//apple_ref/doc/uid/TP40001570-1147921"></a>
+
 ## Image Events
 
 Like System Events, Image Events is an agent (or faceless background application) that is located in `/System/Library/CoreServices`. Image Events supports the manipulation, from scripts, of images and image-related data through operations such as cropping, embedding, matching, padding, profiling, rotating, and scaling. These operations are typically used in print, web, and media publishing.
@@ -99,6 +109,8 @@ Like System Events, Image Events is an agent (or faceless background application
 Image Events has been part of OS X since version 10.4 and provides access to the built-in service called SIPS (Scriptable Image Processing Server) that became available in that OS release.
 
 You can find more information on Image Events in Mac Help (from the OS X Help menu) or at the [Image Events](http://www.macosxautomation.com/applescript/imageevents/index.html) web page. You can also examine the Image Events dictionary with Script Editor, as described in [Displaying Scripting Dictionaries](work_with_as.md#//apple_ref/doc/uid/TP40001568-1153006). SIPS is described in [Technical Note TN2035 ColorSync on OS X](http://developer.apple.com/technotes/tn/tn2035.html#TNTAG58). You can also get some information about SIPS by typing `sips --help` in a Terminal window.
+
+<a id="//apple_ref/doc/uid/TP40001570-SW1"></a>
 
 ## Database Events
 

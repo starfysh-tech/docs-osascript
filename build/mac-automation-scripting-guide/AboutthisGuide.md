@@ -1,3 +1,5 @@
+<a id="//apple_ref/doc/uid/TP40016239-CH71"></a><a id="//apple_ref/doc/uid/TP40016239-CH71-SW1"></a>
+
 ## About this Guide
 
 This guide provides high-level information about scripting on the Mac and isn’t designed to serve as a language guide. Primarily, it introduces core concepts, highlights resources, and provides examples that demonstrate common scripting tasks.
@@ -19,6 +21,7 @@ The majority of examples in this guide are provided in both AppleScript and Java
 >
 > [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=numberOfPeople%20%3D%2012%0Aconsole.log%28%60There%20are%20%24%7BnumberOfPeople%7D%20people.%60%29)
 >
+> <a id="//apple_ref/doc/uid/TP40016239-CH71-SW3"></a>
 > **Listing 4-1**JavaScript: Example of a Template String with an embedded expression
 >
 > 1. `numberOfPeople = 12`
@@ -26,13 +29,16 @@ The majority of examples in this guide are provided in both AppleScript and Java
 >
 > Template strings were introduced as a JavaScript standard in 2015, and are supported in OS X 10.11 and later.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH71-SW4"></a>
+
 ### Opening Examples in Script Editor
 
 Links have been provided throughout this guide to open example code directly in Script Editor. To open an example, click the “Open in Script Editor” link above a code listing. Depending on the security settings on your Mac, you may be prompted to confirm you want to open the script in Script Editor. If you receive this prompt, click the New Script button to create a new document. See Figure 4-1 and Figure 4-2.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH71-SW5"></a>
 **Figure 4-1**The dialog that opens when you click the “Open in Script Editor” link
 ![image: ../Art/scripteditor_openscript_alert_2x.png](Art/scripteditor_openscript_alert_2x.png)
-
+<a id="//apple_ref/doc/uid/TP40016239-CH71-SW6"></a>
 **Figure 4-2**Example of a script that opens after you click the New Script button
 ![image: ../Art/scripteditor_openedscript_2x.png](Art/scripteditor_openedscript_2x.png)
 > **Note**

@@ -1,3 +1,6 @@
+<a id="//apple_ref/doc/uid/TP40016239-CH56"></a><a id="//apple_ref/doc/uid/TP40016239-CH56-SW1"></a>
+<a id="//apple_ref/doc/uid/TP40016239-CH2"></a><a id="//apple_ref/doc/uid/TP40016239-CH2-SW1"></a>
+
 ## About Mac Scripting
 
 Scripting allows you to automate complex, repetitive, and time-consuming tasks by writing scripts that interact with apps, processes, and the operating system. A script consists of a series of statements, each of which performs a specific operation. These statements work together to automate tasks. Through scripting, you can create powerful workflow solutions that enhance productivity, reduce errors, save time, and save money.
@@ -11,11 +14,15 @@ There are many different scripting languages. On the Mac, the primary ones used 
 >
 > Python and Perl are other examples of scripting languages.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH56-SW3"></a>
+
 ### AppleScript
 
 AppleScript is a mature scripting language developed by Apple. It’s relatively easy to learn in relation to other scripting and programming languages, has been around since System 7.1, and has been widely adopted in both enterprise and personal workflows. While the AppleScript scripting language uses an English-like terminology which may appear simple, it is a rich, object-oriented language, capable of performing complicated programming tasks.
 
 The core fundamentals of AppleScript are described in *[AppleScript Language Guide](../../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983)*, as well as in numerous third-party books.
+
+<a id="//apple_ref/doc/uid/TP40016239-CH56-SW4"></a>
 
 ### JavaScript
 

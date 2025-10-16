@@ -11,7 +11,7 @@
 - TOC harvest: `python3 scripts/inventory_toc.py --book-json data/<collection>/book.json --base-url <url> --output-dir data/<collection>`.
 - HTML mirror: `python3 scripts/download_html.py --pages-file data/<collection>/html_pages.txt --base-url <url> --output-dir data/<collection>/html`.
 - Markdown render: `python3 scripts/convert_html_to_md.py --html-dir data/<collection>/html --output-dir build/<collection>`.
-- Link rewrite: `python3 scripts/normalize_markdown_links.py --pages-file data/<collection>/html_pages.txt --markdown-dir build/<collection>`.
+- Link rewrite: `python3 scripts/normalize_markdown_links.py --markdown-dir build --pages-file data/applescript-overview/html_pages.txt --pages-file data/applescript-language-guide/html_pages.txt --pages-file data/mac-automation-scripting-guide/html_pages.txt --pages-file data/jxa-release-notes/html_pages.txt`.
 - Asset sync: run `download_assets.py` followed by `sync_assets.py` with matching arguments to copy images beside Markdown.
 - Verification: `python3 scripts/validate_markdown.py --html-dir data/<collection>/html --markdown-dir build/<collection>`.
 - Monitoring dry-run: `python3 scripts/check_updates.py --manifest monitor/manifest.json` (add `--save --report reports/update-status-<date>.md` when ready).

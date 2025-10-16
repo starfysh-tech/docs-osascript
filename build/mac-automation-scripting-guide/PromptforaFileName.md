@@ -1,7 +1,10 @@
+<a id="//apple_ref/doc/uid/TP40016239-CH82"></a><a id="//apple_ref/doc/uid/TP40016239-CH82-SW1"></a>
+
 ## Prompting for a File Name
 
 Use the Standard Additions scripting addition’s `choose file name` command to display a save dialog that lets the user enter a file name and choose an output folder, such as the one produced by Listing 27-1 and Listing 27-2, shown in Figure 27-1.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH82-SW2"></a>
 **Figure 27-1**Prompting for a file name
 ![image: ../Art/choosefilename_2x.png](Art/choosefilename_2x.png)
 
@@ -9,6 +12,7 @@ Use the Standard Additions scripting addition’s `choose file name` command to 
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theNewFilePath%20to%20choose%20file%20name%20with%20prompt%20%22Save%20the%20document%20as%3A%22)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH82-SW3"></a>
 **Listing 27-1**AppleScript: Prompting for a file name
 
 1. `set theNewFilePath to choose file name with prompt "Save the document as:"`
@@ -18,6 +22,7 @@ Use the Standard Additions scripting addition’s `choose file name` command to 
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20newFilePath%20%3D%20app.chooseFileName%28%7B%0A%20%20%20%20withPrompt%3A%20%22Save%20the%20document%20as%3A%22%0A%7D%29%0AnewFilePath)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH82-SW4"></a>
 **Listing 27-2**JavaScript: Prompting for a file name
 
 1. `var app = Application.currentApplication()`
@@ -31,6 +36,7 @@ Use the Standard Additions scripting addition’s `choose file name` command to 
 
 If the specified file name already exists in the output folder when the user clicks the Save button, the user is prompted to replace it, as shown in Figure 27-2.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH82-SW5"></a>
 **Figure 27-2**Prompting to replace an existing file
 ![image: ../Art/choosefilename_replacing_2x.png](Art/choosefilename_replacing_2x.png)
 
@@ -42,6 +48,7 @@ Listing 27-3 and Listing 27-4 ask the user to type some text as a note and choos
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theResponse%20to%20display%20dialog%20%22Enter%20a%20note%3A%22%20default%20answer%20%22%22%0Aset%20theNote%20to%20text%20returned%20of%20theResponse%0A%0Aset%20theNewFilePath%20to%20choose%20file%20name%20with%20prompt%20%22Save%20the%20document%20as%3A%22%0A%0AwriteTextToFile%28theNote%2C%20theNewFilePath%2C%20true%29%0A%0Aon%20writeTextToFile%28theText%2C%20theFile%2C%20overwriteExistingContent%29%0A%20%20%20%20try%0A%0A%20%20%20%20%20%20%20%20--%20Convert%20file%20to%20a%20string%0A%20%20%20%20%20%20%20%20set%20theFile%20to%20theFile%20as%20string%0A%0A%20%20%20%20%20%20%20%20--%20Open%20file%20for%20writing%0A%20%20%20%20%20%20%20%20set%20theOpenedFile%20to%20open%20for%20access%20file%20theFile%20with%20write%20permission%0A%0A%20%20%20%20%20%20%20%20--%20Clear%20file%20if%20content%20should%20be%20overwritten%0A%20%20%20%20%20%20%20%20if%20overwriteExistingContent%20is%20true%20then%20set%20eof%20of%20theOpenedFile%20to%200%0A%0A%20%20%20%20%20%20%20%20--%20Write%20new%20content%20to%20file%0A%20%20%20%20%20%20%20%20write%20theText%20to%20theOpenedFile%20starting%20at%20eof%0A%0A%20%20%20%20%20%20%20%20--%20Close%20file%0A%20%20%20%20%20%20%20%20close%20access%20theOpenedFile%0A%0A%20%20%20%20%20%20%20%20--%20Return%20a%20boolean%20indicating%20that%20writing%20was%20successful%0A%20%20%20%20%20%20%20%20return%20true%0A%0A%20%20%20%20%20%20%20%20--%20Handle%20a%20write%20error%0A%20%20%20%20on%20error%0A%0A%20%20%20%20%20%20%20%20--%20Close%20file%0A%20%20%20%20%20%20%20%20try%0A%20%20%20%20%20%20%20%20%20%20%20%20close%20access%20file%20theFile%0A%20%20%20%20%20%20%20%20end%20try%0A%0A%20%20%20%20%20%20%20%20--%20Return%20a%20boolean%20indicating%20that%20writing%20failed%0A%20%20%20%20%20%20%20%20return%20false%0A%20%20%20%20end%20try%0Aend%20writeTextToFile%0A)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH82-SW6"></a>
 **Listing 27-3**AppleScript: Saving content in a specified file
 
 1. `set theResponse to display dialog "Enter a note:" default answer ""`
@@ -89,6 +96,7 @@ Listing 27-3 and Listing 27-4 ask the user to type some text as a note and choos
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20response%20%3D%20app.displayDialog%28%22Enter%20a%20note%3A%22%2C%20%7B%0A%20%20%20%20defaultAnswer%3A%20%22%22%0A%7D%29%0Avar%20note%20%3D%20response.textReturned%0A%0Avar%20newFilePath%20%3D%20app.chooseFileName%28%7B%0A%20%20%20%20withPrompt%3A%20%22Save%20document%20as%3A%22%0A%7D%29%0AwriteTextToFile%28note%2C%20newFilePath%2C%20true%29%0A%0Afunction%20writeTextToFile%28text%2C%20file%2C%20overwriteExistingContent%29%20%7B%0A%20%20%20%20try%20%7B%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Convert%20file%20to%20a%20string%0A%20%20%20%20%20%20%20%20var%20fileString%20%3D%20file.toString%28%29%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Open%20file%20for%20writing%0A%20%20%20%20%20%20%20%20var%20openedFile%20%3D%20app.openForAccess%28Path%28fileString%29%2C%20%7B%20writePermission%3A%20true%20%7D%29%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Clear%20file%20if%20content%20should%20be%20overwritten%0A%20%20%20%20%20%20%20%20if%20%28overwriteExistingContent%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20app.setEof%28openedFile%2C%20%7B%20to%3A%200%20%7D%29%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Write%20new%20content%20to%20file%0A%20%20%20%20%20%20%20%20app.write%28text%2C%20%7B%20to%3A%20openedFile%2C%20startingAt%3A%20app.getEof%28openedFile%29%20%7D%29%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Close%20file%0A%20%20%20%20%20%20%20%20app.closeAccess%28openedFile%29%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Return%20a%20boolean%20indicating%20that%20writing%20was%20successful%0A%20%20%20%20%20%20%20%20return%20true%0A%20%20%20%20%7D%0A%20%20%20%20catch%20%28error%29%20%7B%0A%0A%20%20%20%20%20%20%20%20try%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%2F%2F%20Close%20file%0A%20%20%20%20%20%20%20%20%20%20%20%20app.closeAccess%28file%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20catch%28error%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%2F%2F%20Report%20error%20is%20closing%20failed%0A%20%20%20%20%20%20%20%20%20%20%20%20console.log%28%60Couldn%27t%20close%20file%3A%20%24%7Berror%7D%60%29%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%2F%2F%20Return%20a%20boolean%20indicating%20that%20writing%20was%20successful%0A%20%20%20%20%20%20%20%20return%20false%0A%20%20%20%20%7D%0A%7D)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH82-SW7"></a>
 **Listing 27-4**JavaScript: Saving content in a specified file
 
 1. `var app = Application.currentApplication()`

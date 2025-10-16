@@ -1,3 +1,5 @@
+<a id="//apple_ref/doc/uid/TP40016239-CH73"></a><a id="//apple_ref/doc/uid/TP40016239-CH73-SW1"></a>
+
 ## How Mac Scripting Works
 
 The *Open Scripting Architecture (OSA)* provides a standard and extensible mechanism for interapplication communication in OS X. This communication takes place through the exchange of Apple events. An *Apple event* is a type of interprocess message that encapsulates commands and data.
@@ -16,8 +18,11 @@ The *Apple Event Manager* supplies the underlying support for creating scriptabl
 
 Figure 2-1 shows how OSA elements work together in OS X.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH73-SW2"></a>
 **Figure 2-1**The Open Scripting Architecture workflow
 ![image: ../Art/execute_script_2x.png](Art/execute_script_2x.png)
+
+<a id="//apple_ref/doc/uid/TP40016239-CH73-SW3"></a>
 
 ### Extending the Reach of Scripting
 
@@ -26,6 +31,8 @@ Every scriptable app expands the reach of scripting. Developers can also add new
 A *scripting addition* is a bundle that implements new scripting terminology. For example, the Standard Additions scripting addition that comes with OS X (found in `/System/Library/ScriptingAdditions/StandardAdditions.osax`), includes commands for using the Clipboard, displaying alerts, speaking text, executing shell scripts, and more. Since scripting additions are loaded in a global context, commands provided by Standard Additions are available to all scripts.
 
 A *scriptable background application* (sometimes called an *agent*) runs with no visible user interface and provides scripts with access to useful features. System Events and Image Events are examples of scriptable background apps in OS X. Scripts can target System Events to perform operations on property list files, adjust system preferences, and much more. Scripts can target Image Events to perform basic image manipulations, such as cropping, rotating, and resizing.
+
+<a id="//apple_ref/doc/uid/TP40016239-CH73-SW4"></a>
 
 ### Objective-C Bridging
 

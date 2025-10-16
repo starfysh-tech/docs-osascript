@@ -1,17 +1,21 @@
+<a id="//apple_ref/doc/uid/TP40000983-CH224-SW1"></a>
+
 # Unsupported Terms
 
-This appendix lists scripting terms that are not supported by AppleScript. Though you may see these terms in a dictionary, script, or scripting addition, you should not count on their behavior.
+<a id="//apple_ref/doc/uid/TP40000983-CH224-DontLinkElementID_1131"></a><a id="//apple_ref/doc/uid/TP40000983-CH224-DontLinkElementID_1132"></a>This appendix lists scripting terms that are not supported by AppleScript. Though you may see these terms in a dictionary, script, or scripting addition, you should not count on their behavior.
+
+<a id="//apple_ref/doc/uid/TP40000983-CH224-SW2"></a>
 
 ## List of Unsupported Terms
 
 `handle CGI request`
-:   This command is not supported.
+:   <a id="//apple_ref/doc/uid/TP40000983-CH224-DontLinkElementID_1133"></a>This command is not supported.
 
 `internet address`
-:   An Internet or intranet address for the TCP/IP protocol. Only used for compatibility with WebSTAR AppleScript CGI scripts, this term is not supported by AppleScript itself.
+:   <a id="//apple_ref/doc/uid/TP40000983-CH224-DontLinkElementID_1134"></a>An Internet or intranet address for the TCP/IP protocol. Only used for compatibility with WebSTAR AppleScript CGI scripts, this term is not supported by AppleScript itself.
 
 `web page`
-:   An HTML page. This class is not supported.
+:   <a id="//apple_ref/doc/uid/TP40000983-CH224-DontLinkElementID_1135"></a>An HTML page. This class is not supported.
 
   
 

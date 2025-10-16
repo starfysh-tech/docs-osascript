@@ -1,3 +1,5 @@
+<a id="//apple_ref/doc/uid/TP40014508-CH112-SW1"></a>
+
 # Document Revision History
 
 This table describes the changes to *JavaScript for Automation Release Notes*.

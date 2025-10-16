@@ -1,6 +1,10 @@
+<a id="//apple_ref/doc/uid/TP40016239-CH50"></a><a id="//apple_ref/doc/uid/TP40016239-CH50-SW1"></a>
+
 ## Parsing HTML
 
 The process of reading an HTML file is no different than the process of reading a standard text file—see [Reading a File](ReadandWriteFiles.md#//apple_ref/doc/uid/TP40016239-CH58-SW2) to learn how to do it. However, it’s often necessary to extract specific bits of information from HTML files, such as links, images, and table data, for further processing.
+
+<a id="//apple_ref/doc/uid/TP40016239-CH50-SW6"></a>
 
 ### Parsing an HTML File
 
@@ -10,6 +14,7 @@ The handler in Listing 33-1 extracts specific tags and their content from HTML t
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20parseHTMLFile%28theFile%2C%20theOpeningTag%2C%20theClosingTag%2C%20returnContentsOnly%29%0A%20%20%20%20try%0A%20%20%20%20%20%20%20%20set%20theFile%20to%20theFile%20as%20string%0A%20%20%20%20%20%20%20%20set%20theFile%20to%20open%20for%20access%20file%20theFile%0A%20%20%20%20%20%20%20%20set%20theCombinedResults%20to%20%22%22%0A%20%20%20%20%20%20%20%20set%20theCurrentOpeningTag%20to%20%22%22%0A%20%20%20%20%20%20%20%20repeat%0A%20%20%20%20%20%20%20%20%20%20%20%20read%20theFile%20before%20%22%3C%22%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theCurrentTag%20to%20read%20theFile%20until%20%22%3E%22%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20theCurrentTag%20does%20not%20start%20with%20%22%3C%22%20then%20set%20theCurrentTag%20to%20%28%22%3C%22%20%26%20theCurrentTag%29%20as%20string%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20theCurrentTag%20begins%20with%20theOpeningTag%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theCurrentOpeningTag%20to%20theCurrentTag%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20theClosingTag%20is%20%22%22%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20theCombinedResults%20is%20%22%22%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theCombinedResults%20to%20theCombinedResults%20%26%20theCurrentOpeningTag%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theCombinedResults%20to%20theCombinedResults%20%26%20return%20%26%20theCurrentOpeningTag%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theTextBuffer%20to%20%22%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20repeat%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theTextBuffer%20to%20theTextBuffer%20%26%20%28read%20theFile%20before%20%22%3C%22%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theTagBuffer%20to%20read%20theFile%20until%20%22%3E%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20theTagBuffer%20does%20not%20start%20with%20%22%3C%22%20then%20set%20theTagBuffer%20to%20%28%22%3C%22%20%26%20theTagBuffer%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20theTagBuffer%20is%20theClosingTag%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20returnContentsOnly%20is%20false%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theTextBuffer%20to%20theCurrentOpeningTag%20%26%20theTextBuffer%20%26%20theTagBuffer%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20theCombinedResults%20is%20%22%22%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theCombinedResults%20to%20theCombinedResults%20%26%20theTextBuffer%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theCombinedResults%20to%20theCombinedResults%20%26%20return%20%26%20theTextBuffer%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20exit%20repeat%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theTextBuffer%20to%20theTextBuffer%20%26%20theTagBuffer%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20end%20repeat%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20end%20repeat%0A%20%20%20%20%20%20%20%20close%20access%20theFile%0A%20%20%20%20on%20error%20theErrorMessage%20number%20theErrorNumber%0A%20%20%20%20%20%20%20%20try%0A%20%20%20%20%20%20%20%20%20%20%20%20close%20access%20theFile%0A%20%20%20%20%20%20%20%20end%20try%0A%20%20%20%20%20%20%20%20if%20theErrorNumber%20is%20not%20-39%20then%20return%20false%0A%20%20%20%20end%20try%0A%20%20%20%20return%20theCombinedResults%0Aend%20parseHTMLFile%0A)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH50-SW2"></a>
 **Listing 33-1**AppleScript: Handler that parses an HTML file for specific tagged content
 
 1. `on parseHTMLFile(theFile, theOpeningTag, theClosingTag, returnContentsOnly)`
@@ -69,6 +74,7 @@ Listing 33-2 shows how to call the handler in Listing 33-1 to extract all hyperl
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theFile%20to%20choose%20file%20with%20prompt%20%22Select%20an%20HTML%20file%3A%22%0AparseHTMLFile%28theFile%2C%20%22%3CA%20HREF%3D%22%2C%20%22%3C%2FA%3E%22%2C%20false%29)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH50-SW3"></a>
 **Listing 33-2**AppleScript: Calling a handler to parse an HTML file for URLs
 
 1. `set theFile to choose file with prompt "Select an HTML file:"`
@@ -82,6 +88,7 @@ Listing 33-3 shows how to call the handler in Listing 33-1 to extract the destin
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theFile%20to%20choose%20file%20with%20prompt%20%22Select%20an%20HTML%20file%3A%22%0AparseHTMLFile%28theFile%2C%20%22%3CA%20HREF%3D%22%2C%20%22%3C%2FA%3E%22%2C%20true%29)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH50-SW7"></a>
 **Listing 33-3**AppleScript: Calling a handler to parse an HTML file for URLs
 
 1. `set theFile to choose file with prompt "Select an HTML file:"`
@@ -95,6 +102,7 @@ Listing 33-4 shows how to call the handler in Listing 33-1 to extract all images
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theFile%20to%20choose%20file%20with%20prompt%20%22Select%20an%20HTML%20file%3A%22%0AparseHTMLFile%28theFile%2C%20%22%3CIMG%20%22%2C%20%22%22%2C%20false%29%0A)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH50-SW4"></a>
 **Listing 33-4**AppleScript: Calling a handler to parse an HTML file for images
 
 1. `set theFile to choose file with prompt "Select an HTML file:"`
@@ -109,6 +117,7 @@ Listing 33-5 shows how to call the handler in Listing 33-1 to extract any tables
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theFile%20to%20choose%20file%20with%20prompt%20%22Select%20an%20HTML%20file%3A%22%0AparseHTMLFile%28theFile%2C%20%22%3CTABLE%22%2C%20%22%3C%2FTABLE%3E%22%2C%20false%29%0A)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH50-SW5"></a>
 **Listing 33-5**AppleScript: Calling a handler to parse an HTML file for tables
 
 1. `set theFile to choose file with prompt "Select an HTML file:"`
@@ -121,6 +130,8 @@ Listing 33-5 shows how to call the handler in Listing 33-1 to extract any tables
 8. `</TR>`
 9. `</TABLE>"`
 
+<a id="//apple_ref/doc/uid/TP40016239-CH50-SW8"></a>
+
 ### Parsing an HTML Tag
 
 The handler in Listing 33-6 extracts the contents—first instance of text contained within quotes—of an HTML tag.
@@ -129,6 +140,7 @@ The handler in Listing 33-6 extracts the contents—first instance of text conta
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20parseHTMLTag%28theHTMLTag%29%0A%20%20%20%20set%20AppleScript%27s%20text%20item%20delimiters%20to%20%22%5C%22%22%0A%20%20%20%20set%20theHTMLTagElements%20to%20text%20items%20of%20theHTMLTag%0A%20%20%20%20set%20AppleScript%27s%20text%20item%20delimiters%20to%20%22%22%0A%20%20%20%20if%20length%20of%20theHTMLTagElements%20is%20greater%20than%201%20then%20return%20item%202%20of%20theHTMLTagElements%0A%20%20%20%20return%20%22%22%0Aend%20parseHTMLTag)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH50-SW9"></a>
 **Listing 33-6**AppleScript: Handler that parses an HTML tag for content
 
 1. `on parseHTMLTag(theHTMLTag)`
@@ -145,6 +157,7 @@ Listing 33-7 shows how to call the handler in Listing 33-6 to extract the destin
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theHTMLTag%20to%20%22%3CA%20HREF%3D%5C%22http%3A%2F%2Fwww.apple.com%2FfileA.html%5C%22%3EClick%20here%20to%20view%20fileA.%3C%2FA%3E%22%0AparseHTMLTag%28theHTMLTag%29)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH50-SW10"></a>
 **Listing 33-7**AppleScript: Calling a handler to parse an HTML tag for content
 
 1. `set theHTMLTag to "<A HREF=\"http://www.apple.com/fileA.html\">Click here to view fileA.</A>"`

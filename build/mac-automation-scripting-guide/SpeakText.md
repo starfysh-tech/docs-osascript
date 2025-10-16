@@ -1,3 +1,5 @@
+<a id="//apple_ref/doc/uid/TP40016239-CH62"></a><a id="//apple_ref/doc/uid/TP40016239-CH62-SW1"></a>
+
 ## Speaking Text
 
 Spoken text is another way to provide feedback to users during script execution; instead of reading a message visually, the user can listen to it audibly. Listing 25-1 and Listing 25-2 show how the Standard Additions scripting addition’s `say` command can be used to speak a phrase.
@@ -6,6 +8,7 @@ Spoken text is another way to provide feedback to users during script execution;
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=say%20%22Processing%20is%20complete.%22)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH62-SW2"></a>
 **Listing 25-1**AppleScript: Speaking text
 
 1. `say "Processing is complete."`
@@ -14,6 +17,7 @@ Spoken text is another way to provide feedback to users during script execution;
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Aapp.say%28%22Processing%20is%20complete.%22%29)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH62-SW3"></a>
 **Listing 25-2**JavaScript: Speaking text
 
 1. `var app = Application.currentApplication()`
@@ -27,6 +31,7 @@ The `say` command has a number of optional parameters, some of which allow you t
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=say%20%22Just%20what%20do%20you%20think%20you%27re%20doing%20Dave%3F%22%20using%20%22Alex%22%20speaking%20rate%20140%20pitch%2042%20modulation%2060)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH62-SW4"></a>
 **Listing 25-3**AppleScript: Speaking text with custom speech attributes
 
 1. `say "Just what do you think you're doing Dave?" using "Alex" speaking rate 140 pitch 42 modulation 60`
@@ -35,6 +40,7 @@ The `say` command has a number of optional parameters, some of which allow you t
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Aapp.say%28%22Just%20what%20do%20you%20think%20you%27re%20doing%20Dave%3F%22%2C%20%7B%0A%20%20%20%20using%3A%20%22Alex%22%2C%0A%20%20%20%20speakingRate%3A%20140%2C%0A%20%20%20%20pitch%3A%2042%2C%0A%20%20%20%20modulation%3A%2060%0A%7D%29%0A)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH62-SW5"></a>
 **Listing 25-4**JavaScript: Speaking text with custom speech attributes
 
 1. `var app = Application.currentApplication()`
@@ -47,6 +53,8 @@ The `say` command has a number of optional parameters, some of which allow you t
 8. ` modulation: 60`
 9. `})`
 
+<a id="//apple_ref/doc/uid/TP40016239-CH62-SW10"></a>
+
 ### Saving Text as an Audio File
 
 The `say` command’s `saving as` parameter adds another level of power, enabling text to be converted to audio format and saved as an `.aiff` file for later listening. This technique could be used, for example, to save email messages in audio format, as demonstrated by Listing 25-5 and Listing 25-6.
@@ -55,6 +63,7 @@ The `say` command’s `saving as` parameter adds another level of power, enablin
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=tell%20application%20%22Mail%22%0A%20%20%20%20tell%20message%201%20of%20inbox%0A%20%20%20%20%20%20%20%20set%20theSubject%20to%20subject%0A%20%20%20%20%20%20%20%20set%20theBody%20to%20content%0A%20%20%20%20end%20tell%0Aend%20tell%0A%0Aset%20theOutputFile%20to%20%28path%20to%20desktop%20as%20string%29%20%26%20%22message.aiff%22%0Aset%20theAudio%20to%20%22Message%20Subject%3A%20%22%20%26%20theSubject%20%26%20return%20%26%20%22Body%3A%20%22%20%26%20theBody%0Asay%20theAudio%20saving%20to%20theOutputFile)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH62-SW6"></a>
 **Listing 25-5**AppleScript: Saving text as audio
 
 1. `tell application "Mail"`
@@ -72,6 +81,7 @@ The `say` command’s `saving as` parameter adds another level of power, enablin
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20Mail%20%3D%20Application%28%22Mail%22%29%0Avar%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Amessage%20%3D%20Mail.inbox.messages%5B0%5D%0Asubject%20%3D%20message.subject%28%29%0Abody%20%3D%20message.content%28%29%0A%0AoutputFile%20%3D%20%28%28app.pathTo%28%22desktop%22%29.toString%28%29%29%20%2B%20%22%2Fmessage.aiff%22%29%0Aaudio%20%3D%20%22Message%20Subject%3A%20%22%20%2B%20subject%20%2B%20%22%5CnBody%3A%20%22%20%2B%20body%0Aapp.say%28audio%2C%20%7BsavingTo%3A%20outputFile%7D%29)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH62-SW7"></a>
 **Listing 25-6**JavaScript: Saving text as audio
 
 1. `var Mail = Application("Mail")`
@@ -86,6 +96,8 @@ The `say` command’s `saving as` parameter adds another level of power, enablin
 10. `audio = "Message Subject: " + subject + "\nBody: " + body`
 11. `app.say(audio, {savingTo: outputFile})`
 
+<a id="//apple_ref/doc/uid/TP40016239-CH62-SW11"></a>
+
 ### Speaking Text While Displaying a Dialog
 
 Typically, a script executes a single command at a time, waiting for a command to complete before moving onto the next. Listing 25-7 and Listing 25-8 demonstrate how to display a dialog message, while simultaneously using the `NSTask` class in the Foundation framework to read the message out loud.
@@ -94,6 +106,7 @@ Typically, a script executes a single command at a time, waiting for a command t
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=use%20framework%20%22Foundation%22%0Ause%20scripting%20additions%0A%0Aset%20theStatusText%20to%20%22Processing%20is%20complete.%22%0Aset%20theTask%20to%20%28current%20application%27s%20NSTask%27s%20launchedTaskWithLaunchPath%3A%22%2Fusr%2Fbin%2Fsay%22%20arguments%3A%7BtheStatusText%7D%29%0Atry%0A%20%20%20%20display%20dialog%20theStatusText%0A%20%20%20%20theTask%27s%20terminate%28%29%0Aon%20error%0A%20%20%20%20try%0A%20%20%20%20%20%20%20%20theTask%27s%20terminate%28%29%0A%20%20%20%20end%20try%0Aend%20try)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH62-SW8"></a>
 **Listing 25-7**AppleScriptObjC: Speaking text while displaying a dialog
 
 1. `use framework "Foundation"`
@@ -114,6 +127,7 @@ Typically, a script executes a single command at a time, waiting for a command t
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20statusText%20%3D%20%22Processing%20is%20complete.%22%0Avar%20task%20%3D%20%24.NSTask.launchedTaskWithLaunchPathArguments%28%22%2Fusr%2Fbin%2Fsay%22%2C%20%5BstatusText%5D%29%0A%0Atry%20%7B%0A%20%20%20%20app.displayDialog%28statusText%29%0A%20%20%20%20task.terminate%0A%7D%0Acatch%28error%29%7B%0A%20%20%20%20task.terminate%0A%7D)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH62-SW9"></a>
 **Listing 25-8**JavaScriptObjC: Speaking text while displaying a dialog
 
 1. `var app = Application.currentApplication()`

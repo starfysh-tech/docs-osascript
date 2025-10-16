@@ -47,6 +47,14 @@ class DocsMarkdownConverter(MarkdownConverter):
                 current_term = None
         return "".join(result)
 
+    def convert_a(self, el, text, parent_tags):  # type: ignore[override]
+        href = el.get("href")
+        if not href:
+            anchor = el.get("name") or el.get("id")
+            if anchor and anchor.startswith("//apple_ref"):
+                return f'<a id="{anchor}"></a>'
+        return super().convert_a(el, text, parent_tags)
+
 
 def make_converter() -> DocsMarkdownConverter:
     return DocsMarkdownConverter(heading_style="ATX", bullets="*")
@@ -56,6 +64,9 @@ def iter_html_files(directory: Path) -> Iterable[Path]:
     for path in sorted(directory.rglob("*.html")):
         if path.is_file():
             yield path
+
+
+ANCHOR_PLACEHOLDER_PREFIX = "@@ANCHOR@@"
 
 
 def clean_article(soup: BeautifulSoup, article: Tag) -> None:
@@ -100,7 +111,11 @@ def clean_article(soup: BeautifulSoup, article: Tag) -> None:
     for anchor in list(article.find_all("a")):
         if anchor.get("href"):
             continue
-        if anchor.get("name") and not anchor.get_text(strip=True):
+        name = anchor.get("name")
+        text = anchor.get_text(strip=True)
+        if name and name.startswith("//apple_ref"):
+            continue
+        if name and not text:
             anchor.decompose()
             continue
         if not anchor.get_text(strip=True):
@@ -117,7 +132,6 @@ def clean_article(soup: BeautifulSoup, article: Tag) -> None:
         code_tag.string = code_text
         new_pre.append(code_tag)
         sample.replace_with(new_pre)
-
 
 def inject_special_note(markdown: str) -> str:
     if WWDC_NOTE in markdown:

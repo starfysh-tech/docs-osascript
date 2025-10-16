@@ -1,3 +1,5 @@
+<a id="//apple_ref/doc/uid/TP40016239-CH20"></a><a id="//apple_ref/doc/uid/TP40016239-CH20-SW1"></a>
+
 ## Manipulating Images
 
 Image Events is a scriptable background app in OS X that can be used to automate the manipulation of images without the need for a fully-featured image editor. You can use Image Events to:
@@ -15,6 +17,8 @@ The Image Events app is located in `/System/Library/CoreServices/`. You can acce
 >
 > Image Events can read and save most standard image formats, including `.bmp`, `.jpg`, `.png`, `.psd`, and `.tif`. Image Events can read `.pdf` files, but cannot save them.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH20-SW11"></a>
+
 ### The Image Events Workflow
 
 To manipulate an image with Image Events, a script typically performs the following sequential steps:
@@ -25,6 +29,8 @@ To manipulate an image with Image Events, a script typically performs the follow
 4. Save the modified image as a new image file or overwriting the original image file.
 5. Close the image.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH20-SW12"></a>
+
 ### Opening an Image
 
 An image must be opened before Image Events can interact with it. To open an image, use the `open` command and provide the image’s path, as shown in Listing 38-1.
@@ -33,6 +39,7 @@ An image must be opened before Image Events can interact with it. To open an ima
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=--%20Prompt%20for%20an%20image%0Aset%20theImageFile%20to%20choose%20file%20of%20type%20%22public.image%22%20with%20prompt%20%22%22%0A%0A--%20Launch%20Image%20Events%20and%20open%20the%20image%0Atell%20application%20%22Image%20Events%22%0A%20%20%20%20launch%0A%20%20%20%20open%20theImageFile%0Aend%20tell%0A--%3E%20Result%3A%20image%20%22My%20Image.png%22%20of%20application%20%22Image%20Events%22)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH20-SW2"></a>
 **Listing 38-1**AppleScript: Opening an image with Image Events
 
 1. `-- Prompt for an image`
@@ -52,6 +59,8 @@ The result of the open command is an `image` object, the newly opened image. Sin
 >
 > When working with Image Events, use the `launch` command to make sure it’s running rather than the `activate` command, which is reserved for apps with interfaces.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH20-SW14"></a>
+
 ### Reading Image Properties
 
 Like all scriptable objects, images have attributes that define them, such as dimensions, color space, and resolution. The `image` class in the Image Events scripting dictionary contains a variety of properties for key attributes. Listing 38-2 shows how to access some of these properties. First, it retrieves a record of available properties for a selected image. Next, it retrieves some individual properties.
@@ -60,6 +69,7 @@ Like all scriptable objects, images have attributes that define them, such as di
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=--%20Prompt%20for%20an%20image%0Aset%20theImageFile%20to%20choose%20file%20of%20type%20%22public.image%22%20with%20prompt%20%22%22%0A%0A--%20Launch%20Image%20Events%0Atell%20application%20%22Image%20Events%22%0A%20%20%20%20launch%0A%0A%20%20%20%20--%20Open%20the%20image%0A%20%20%20%20set%20theImage%20to%20open%20theImageFile%0A%0A%20%20%20%20--%20Read%20the%20image%27s%20properties%0A%20%20%20%20tell%20theImage%0A%20%20%20%20%20%20%20%20properties%0A%20%20%20%20%20%20%20%20--%3E%20%7Bcolor%20space%3ARGB%2C%20image%20file%3Afile%20%22Macintosh%20HD%3AUsers%3AYourUserName%3ADesktop%3AMy%20Image.png%22%20of%20application%20%22Image%20Events%22%2C%20bit%20depth%3Amillions%20of%20colors%2C%20dimensions%3A%7B293%2C%20252%7D%2C%20location%3Afolder%20%22Macintosh%20HD%3AUsers%3AYourUserName%3ADesktop%3A%22%20of%20application%20%22Image%20Events%22%2C%20embedded%20profile%3Aprofile%20%22Thunderbolt%20Display%22%20of%20image%20%22My%20Image.png%22%20of%20application%20%22Image%20Events%22%2C%20file%20type%3APNG%2C%20class%3Aimage%2C%20name%3A%22My%20Image.png%22%2C%20resolution%3A%7B72.0%2C%2072.0%7D%7D%0A%0A%20%20%20%20%20%20%20%20--%20Read%20the%20image%27s%20resolution%0A%20%20%20%20%20%20%20resolution%0A%20%20%20%20%20%20%20%20--%3E%20%7B72.0%2C%2072.0%7D%0A%0A%20%20%20%20%20%20%20%20--%20Read%20the%20image%27s%20type%0A%20%20%20%20%20%20%20file%20type%0A%20%20%20%20%20%20%20%20--%3E%20PNG%0A%0A%20%20%20%20%20%20%20%20--%20Read%20the%20name%20of%20the%20image%27s%20embedded%20profile%0A%20%20%20%20%20%20%20name%20of%20embedded%20profile%0A%20%20%20%20%20%20%20%20--%3E%20%22Thunderbolt%20Display%22%0A%20%20%20%20end%20tell%0Aend%20tell)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH20-SW3"></a>
 **Listing 38-2**AppleScript: Retrieving properties from an image
 
 1. `-- Prompt for an image`
@@ -91,9 +101,14 @@ Like all scriptable objects, images have attributes that define them, such as di
 27. ` end tell`
 28. `end tell`
 
+<a id="//apple_ref/doc/uid/TP40016239-CH20-SW15"></a>
+
 ### Flipping an Image
 
 The `flip` command reverses the axis of an image. It has two options for the required parameter: `horizontal` for changing the axis of the image on a horizontal plane, and `vertical` for changing the axis of the image on a vertical plane. Listing 38-3 flips an image both horizontally and vertically.
+
+<a id="//apple_ref/doc/uid/TP40016239-CH20-DontLinkElementID_3"></a>
+
 
 Important
 
@@ -103,6 +118,7 @@ The script in Listing 38-3 saves a chosen image as a new file with a prefix of `
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=--%20Prompt%20for%20an%20image%0Aset%20theImageFile%20to%20choose%20file%20of%20type%20%22public.image%22%20with%20prompt%20%22%22%0A%0A--%20Locate%20an%20output%20folder%0Aset%20theOutputFolder%20to%20%28path%20to%20desktop%20folder%20as%20string%29%0A%0A--%20Launch%20Image%20Events%0Atell%20application%20%22Image%20Events%22%0A%20%20%20%20launch%0A%0A%20%20%20%20--%20Open%20the%20image%0A%20%20%20%20set%20theImage%20to%20open%20theImageFile%0A%20%20%20%20tell%20theImage%0A%0A%20%20%20%20%20%20%20%20--%20Determine%20a%20save%20name%20for%20the%20image%0A%20%20%20%20%20%20%20%20set%20theName%20to%20name%0A%20%20%20%20%20%20%20%20set%20theSaveName%20to%20%22temp-%22%20%26%20theName%0A%0A%20%20%20%20%20%20%20%20--%20Flip%20the%20image%20horizontally%0A%20%20%20%20%20%20%20%20flip%20with%20horizontal%0A%0A%20%20%20%20%20%20%20%20--%20Flip%20the%20image%20vertically%0A%20%20%20%20%20%20%20%20flip%20with%20vertical%0A%0A%20%20%20%20%20%20%20%20--%20Save%20the%20image%20to%20the%20output%20folder%2C%20using%20the%20save%20name%0A%20%20%20%20%20%20%20%20save%20as%20file%20type%20in%20%28theOutputFolder%20%26%20theSaveName%29%0A%0A%20%20%20%20%20%20%20%20--%20Close%20the%20image%0A%20%20%20%20%20%20%20%20close%0A%20%20%20%20end%20tell%0Aend%20tell)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH20-SW4"></a>
 **Listing 38-3**AppleScript: Flipping an image
 
 1. `-- Prompt for an image`
@@ -137,9 +153,14 @@ The script in Listing 38-3 saves a chosen image as a new file with a prefix of `
 30. ` end tell`
 31. `end tell`
 
+<a id="//apple_ref/doc/uid/TP40016239-CH20-SW16"></a>
+
 ### Rotating an Image
 
 The `rotate` command rotates an image around its center point. To rotate an image clockwise, provide the command’s `to angle` parameter with an integer value between `1` to `359` (see Listing 38-4). To rotate an image counter-clockwise, provide a negative value, such as `-90`.
+
+<a id="//apple_ref/doc/uid/TP40016239-CH20-DontLinkElementID_4"></a>
+
 
 Important
 
@@ -149,6 +170,7 @@ The script in Listing 38-4 saves a chosen image as a new file with a prefix of `
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=--%20Prompt%20for%20an%20image%0Aset%20theImageFile%20to%20choose%20file%20of%20type%20%22public.image%22%20with%20prompt%20%22%22%0A%0A--%20Locate%20an%20output%20folder%0Aset%20theOutputFolder%20to%20%28path%20to%20desktop%20folder%20as%20string%29%0A%0A--%20Launch%20Image%20Events%0Atell%20application%20%22Image%20Events%22%0A%20%20%20%20launch%0A%0A%20%20%20%20--%20Open%20the%20image%0A%20%20%20%20set%20theImage%20to%20open%20theImageFile%0A%20%20%20%20tell%20theImage%0A%0A%20%20%20%20%20%20%20%20--%20Determine%20a%20save%20name%20for%20the%20image%0A%20%20%20%20%20%20%20%20set%20theName%20to%20name%0A%20%20%20%20%20%20%20%20set%20theSaveName%20to%20%22temp-%22%20%26%20theName%0A%0A%20%20%20%20%20%20%20%20--%20Rotate%20an%20image%2045%20degrees%0A%20%20%20%20%20%20%20%20rotate%20to%20angle%2045%0A%0A%20%20%20%20%20%20%20%20--%20Save%20the%20image%20to%20the%20output%20folder%2C%20using%20the%20save%20name%0A%20%20%20%20%20%20%20%20save%20as%20file%20type%20in%20%28theOutputFolder%20%26%20theSaveName%29%0A%0A%20%20%20%20%20%20%20%20--%20Close%20the%20image%0A%20%20%20%20%20%20%20%20close%0A%20%20%20%20end%20tell%0Aend%20tell)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH20-SW8"></a>
 **Listing 38-4**AppleScript: Rotating an image
 
 1. `-- Prompt for an image`
@@ -180,6 +202,8 @@ The script in Listing 38-4 saves a chosen image as a new file with a prefix of `
 27. ` end tell`
 28. `end tell`
 
+<a id="//apple_ref/doc/uid/TP40016239-CH20-SW17"></a>
+
 ### Scaling an Image
 
 Scaling an image proportionally increases or decreases its dimensions. The `scale` command can resize images in one of two ways:
@@ -195,6 +219,9 @@ Scaling doesn’t change the resolution of an image. For example, a 72 dpi image
 
 Listing 38-5 demonstrates how to resize an image. It can scale by percentage or pixels, depending on the value of a Boolean variable.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH20-DontLinkElementID_5"></a>
+
+
 Important
 
 The script in Listing 38-5 saves a chosen image as a new file with a prefix of `temp-`. If another file exists with this same name, it is overwritten.
@@ -203,6 +230,7 @@ The script in Listing 38-5 saves a chosen image as a new file with a prefix of `
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=--%20Prompt%20for%20an%20image%0Aset%20theImageFile%20to%20choose%20file%20of%20type%20%22public.image%22%20with%20prompt%20%22%22%0A%0A--%20Locate%20an%20output%20folder%0Aset%20theOutputFolder%20to%20%28path%20to%20desktop%20folder%20as%20string%29%0A%0A--%20To%20scale%20by%20percentage%2C%20set%20this%20value%20to%20true.%20To%20scale%20to%20a%20specific%20size%2C%20set%20it%20to%20false.%0Aset%20scaleByPercentage%20to%20true%0A%0A--%20Launch%20Image%20Events%0Atell%20application%20%22Image%20Events%22%0A%20%20%20%20launch%0A%0A%20%20%20%20--%20Open%20the%20image%0A%20%20%20%20set%20theImage%20to%20open%20theImageFile%0A%20%20%20%20tell%20theImage%0A%0A%20%20%20%20%20%20%20%20--%20Determine%20a%20save%20name%20for%20the%20image%0A%20%20%20%20%20%20%20%20set%20theName%20to%20name%0A%20%20%20%20%20%20%20%20set%20theSaveName%20to%20%22temp-%22%20%26%20theName%0A%0A%20%20%20%20%20%20%20%20--%20Scale%20the%20image%20by%2050%25%0A%20%20%20%20%20%20%20%20if%20scaleByPercentage%20%3D%20true%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20scale%20by%20factor%200.5%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20--%20Scale%20the%20image%20to%20100px%20on%20its%20longese%20side%0A%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20scale%20to%20size%20100%0A%20%20%20%20%20%20%20%20end%20if%0A%0A%20%20%20%20%20%20%20%20--%20Save%20the%20image%20to%20the%20output%20folder%2C%20using%20the%20save%20name%0A%20%20%20%20%20%20%20%20save%20as%20file%20type%20in%20%28theOutputFolder%20%26%20theSaveName%29%0A%0A%20%20%20%20%20%20%20%20--%20Close%20the%20image%0A%20%20%20%20%20%20%20%20close%0A%20%20%20%20end%20tell%0Aend%20tell)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH20-SW7"></a>
 **Listing 38-5**AppleScript: Scaling an image
 
 1. `-- Prompt for an image`
@@ -243,9 +271,14 @@ The script in Listing 38-5 saves a chosen image as a new file with a prefix of `
 36. ` end tell`
 37. `end tell`
 
+<a id="//apple_ref/doc/uid/TP40016239-CH20-SW18"></a>
+
 ### Cropping an Image
 
 Cropping an image removes pixels around all of its sides, centering the remaining area. The `to dimensions` required parameter takes a list of two integers: the new width and height, in pixels. In Listing 38-6, an image is cropped to 100 by 100 pixels.
+
+<a id="//apple_ref/doc/uid/TP40016239-CH20-DontLinkElementID_6"></a>
+
 
 Important
 
@@ -255,6 +288,7 @@ The script in Listing 38-6 saves a chosen image as a new file with a prefix of `
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=--%20Prompt%20for%20an%20image%0Aset%20theImageFile%20to%20choose%20file%20of%20type%20%22public.image%22%20with%20prompt%20%22%22%0A%0A--%20Locate%20an%20output%20folder%0Aset%20theOutputFolder%20to%20%28path%20to%20desktop%20folder%20as%20string%29%0A%0A--%20Launch%20Image%20Events%0Atell%20application%20%22Image%20Events%22%0A%20%20%20%20launch%0A%0A%20%20%20%20--%20Open%20the%20image%0A%20%20%20%20set%20theImage%20to%20open%20theImageFile%0A%20%20%20%20tell%20theImage%0A%0A%20%20%20%20%20%20%20%20--%20Determine%20a%20save%20name%20for%20the%20image%0A%20%20%20%20%20%20%20%20set%20theName%20to%20name%0A%20%20%20%20%20%20%20%20set%20theSaveName%20to%20%22temp-%22%20%26%20theName%0A%0A%20%20%20%20%20%20%20%20--%20Crop%20the%20image%20to%20100px%20by%20100px%0A%20%20%20%20%20%20%20%20crop%20to%20dimensions%20%7B100%2C%20100%7D%0A%0A%20%20%20%20%20%20%20%20--%20Save%20the%20image%20to%20the%20output%20folder%2C%20using%20the%20save%20name%0A%20%20%20%20%20%20%20%20save%20as%20file%20type%20in%20%28theOutputFolder%20%26%20theSaveName%29%0A%0A%20%20%20%20%20%20%20%20--%20Close%20the%20image%0A%20%20%20%20%20%20%20%20close%0A%20%20%20%20end%20tell%0Aend%20tell)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH20-SW6"></a>
 **Listing 38-6**AppleScript: Cropping an image
 
 1. `-- Prompt for an image`
@@ -286,9 +320,14 @@ The script in Listing 38-6 saves a chosen image as a new file with a prefix of `
 27. ` end tell`
 28. `end tell`
 
+<a id="//apple_ref/doc/uid/TP40016239-CH20-SW19"></a>
+
 ### Padding an Image
 
 Padding an image adds space around its sides. It’s essentially the reverse of cropping an image, although negative padding an image produces cropping. The `to dimensions` required parameter takes a list of two integers: the new width and height, in pixels. The optional `with pad color` parameter can be used to specify the color of the padding. In Listing 38-7, 20 pixels of padding is added around an image.
+
+<a id="//apple_ref/doc/uid/TP40016239-CH20-DontLinkElementID_7"></a>
+
 
 Important
 
@@ -298,6 +337,7 @@ The script in Listing 38-7 saves a chosen image as a new file with a prefix of `
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=--%20Prompt%20for%20an%20image%0Aset%20theImageFile%20to%20choose%20file%20of%20type%20%22public.image%22%20with%20prompt%20%22%22%0A%0A--%20Prompt%20for%20a%20color%0Aset%20theColor%20to%20choose%20color%0A%0A--%20Locate%20an%20output%20folder%0Aset%20theOutputFolder%20to%20%28path%20to%20desktop%20folder%20as%20string%29%0A%0A--%20Launch%20Image%20Events%0Atell%20application%20%22Image%20Events%22%0A%20%20%20%20launch%0A%0A%20%20%20%20--%20Open%20the%20image%0A%20%20%20%20set%20theImage%20to%20open%20theImageFile%0A%20%20%20%20tell%20theImage%0A%0A%20%20%20%20%20%20%20%20--%20Determine%20a%20save%20name%20for%20the%20image%0A%20%20%20%20%20%20%20%20set%20theName%20to%20name%0A%20%20%20%20%20%20%20%20set%20theSaveName%20to%20%22temp-%22%20%26%20theName%0A%0A%20%20%20%20%20%20%20%20--%20Get%20the%20current%20dimensions%20of%20the%20image%0A%20%20%20%20%20%20%20%20set%20%7BtheWidth%2C%20theHeight%7D%20to%20dimensions%0A%0A%20%20%20%20%20%20%20%20--%20Pad%20the%20image%20by%2020%20pixels%20on%20all%20sides%0A%20%20%20%20%20%20%20%20pad%20to%20dimensions%20%7BtheWidth%20%2B%2020%2C%20theHeight%20%2B%2020%7D%20with%20pad%20color%20theColor%0A%0A%20%20%20%20%20%20%20%20--%20Save%20the%20image%20to%20the%20output%20folder%2C%20using%20the%20save%20name%0A%20%20%20%20%20%20%20%20save%20as%20file%20type%20in%20%28theOutputFolder%20%26%20theSaveName%29%0A%0A%20%20%20%20%20%20%20%20--%20Close%20the%20image%0A%20%20%20%20%20%20%20%20close%0A%20%20%20%20end%20tell%0Aend%20tell)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH20-SW5"></a>
 **Listing 38-7**AppleScript: Padding an image
 
 1. `-- Prompt for an image`
@@ -340,6 +380,8 @@ The script in Listing 38-7 saves a chosen image as a new file with a prefix of `
 >
 > Images containing transparency result in transparent padding, regardless of whether a color is specified.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH20-SW21"></a>
+
 ### Converting an Image from One Type to Another
 
 To convert an image from one type to another, open it and save it in another format. Listing 38-8 saves a chosen image in `.jpg`, `.psd`, and `.tif` format.
@@ -348,6 +390,7 @@ To convert an image from one type to another, open it and save it in another for
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=--%20Prompt%20for%20an%20image%0Aset%20theImageFile%20to%20choose%20file%20of%20type%20%22public.image%22%20with%20prompt%20%22%22%0A%0A--%20Locate%20an%20output%20folder%0Aset%20theOutputFolder%20to%20%28path%20to%20desktop%20folder%20as%20string%29%0A%0A--%20Launch%20Image%20Events%0Atell%20application%20%22Image%20Events%22%0A%20%20%20%20launch%0A%0A%20%20%20%20--%20Open%20the%20image%0A%20%20%20%20set%20theImage%20to%20open%20theImageFile%0A%20%20%20%20tell%20theImage%0A%0A%20%20%20%20%20%20%20%20--%20Save%20the%20image%20as%20a%20.jpg%0A%20%20%20%20%20%20%20%20save%20as%20JPEG%20in%20%28theOutputFolder%20%26%20%22temp-conversion-output.jpg%22%29%0A%0A%20%20%20%20%20%20%20%20--%20Save%20the%20image%20as%20a%20.psd%0A%20%20%20%20%20%20%20%20save%20as%20PSD%20in%20%28theOutputFolder%20%26%20%22temp-conversion-output.psd%22%29%0A%0A%20%20%20%20%20%20%20%20--%20Save%20the%20image%20as%20a%20.tif%0A%20%20%20%20%20%20%20%20save%20as%20TIFF%20in%20%28theOutputFolder%20%26%20%22temp-conversion-output.tif%22%29%0A%0A%20%20%20%20%20%20%20%20--%20Close%20the%20image%0A%20%20%20%20%20%20%20%20close%0A%20%20%20%20end%20tell%0Aend%20tell)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH20-SW9"></a>
 **Listing 38-8**AppleScript: Converting an image from one type to another
 
 1. `-- Prompt for an image`

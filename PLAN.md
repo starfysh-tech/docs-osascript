@@ -38,6 +38,7 @@
 - 2025-10-16: Added pytest coverage for inline code + definition list conversions, mirrored the JXA release notes, archived the Session 306 PDF, and linked to a curated WWDC resources note (note injection now automated during conversion with matching validator suppression).
 - 2025-10-16: Scoped MkDocs + Material scaffold (issue #2); MKDocs nav will surface each mirrored collection landing page plus a custom index, powered by `build/` as `docs_dir`.
 - 2025-10-16: Built `scripts/generate_mkdocs_nav.py` to auto-generate the MkDocs navigation from `toc_hierarchy.json` and pull in extra Markdown (e.g., WWDC resources); remaining MkDocs warnings stem from Apple anchors targeting external docs.
+- 2025-10-16: Preserved Apple `//apple_ref` anchors during conversion and expanded link normalization to rewrite cross-collection references; internal links now resolve across mirrored sets.
 
 ## Task Board
 

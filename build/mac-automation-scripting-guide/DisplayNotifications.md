@@ -1,11 +1,14 @@
+<a id="//apple_ref/doc/uid/TP40016239-CH61"></a><a id="//apple_ref/doc/uid/TP40016239-CH61-SW1"></a>
+
 ## Displaying Notifications
 
 Notification Center offers another opportunity for providing feedback during script execution. Use the Standard Additions scripting addition’s `display notification` command to show notifications, such as status updates as files are processed. Notifications are shown as alerts or banners, depending on the user’s settings in System Preferences > Notifications. See Figure 24-1 and Figure 24-2.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH61-SW5"></a>
 **Figure 24-1**A banner notification
 ![image: ../Art/notification-banner_2x.png](Art/notification-banner_2x.png)
 
-
+<a id="//apple_ref/doc/uid/TP40016239-CH61-SW2"></a>
 **Figure 24-2**An alert notification
 ![image: ../Art/notification-alert_2x.png](Art/notification-alert_2x.png)
 
@@ -15,6 +18,7 @@ To show a notification, provide the `display notification` command with a string
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=display%20notification%20%22All%20graphics%20have%20been%20converted.%22%20with%20title%20%22My%20Graphic%20Processing%20Script%22%20subtitle%20%22Processing%20is%20complete.%22%20sound%20name%20%22Frog%22)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH61-SW3"></a>
 **Listing 24-1**AppleScript: Displaying a notification
 
 1. `display notification "All graphics have been converted." with title "My Graphic Processing Script" subtitle "Processing is complete." sound name "Frog"`
@@ -23,6 +27,7 @@ To show a notification, provide the `display notification` command with a string
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0A%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Aapp.displayNotification%28%22All%20graphics%20have%20been%20converted.%22%2C%20%7B%0A%20%20%20%20withTitle%3A%20%22My%20Graphic%20Processing%20Script%22%2C%0A%20%20%20%20subtitle%3A%20%22Processing%20is%20complete.%22%2C%0A%20%20%20%20soundName%3A%20%22Frog%22%0A%7D%29)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH61-SW4"></a>
 **Listing 24-2**JavaScript: Displaying a notification
 
 1. `var app = Application.currentApplication()`

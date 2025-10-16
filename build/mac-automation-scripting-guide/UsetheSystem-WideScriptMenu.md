@@ -1,7 +1,10 @@
+<a id="//apple_ref/doc/uid/TP40016239-CH7"></a><a id="//apple_ref/doc/uid/TP40016239-CH7-SW1"></a>
+
 ## Using the Systemwide Script Menu
 
 The OS X script menu provides quick access to your collection of scripts. Simply select a script in the menu at any time to run it instantly. Within the script menu, scripts can be organized into subfolders and by application. See Figure 41-1.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH7-SW4"></a>
 **Figure 41-1**The OS X script menu
 ![image: ../Art/scriptmenu_2x.png](Art/scriptmenu_2x.png)
 > **Note**
@@ -9,9 +12,13 @@ The OS X script menu provides quick access to your collection of scripts. Simply
 >
 > The script menu can run compiled scripts, as well as scripts saved as apps. It can also run UNIX shell scripts and Automator workflows.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH7-SW6"></a>
+
 ### Enabling the Script Menu
 
 The script menu is disabled by default in OS X.
+
+<a id="//apple_ref/doc/uid/TP40016239-CH7-SW7"></a>
 
 **To enable the script menu**
 
@@ -21,11 +28,18 @@ The script menu is disabled by default in OS X.
 4. Enable the “Show Script menu in menu bar” checkbox.
 5. Choose whether application scripts—scripts that appear only when a corresponding app is in the front—should appear at the top or bottom of the script menu.
 
+   <a id="//apple_ref/doc/uid/TP40016239-CH7-SW3"></a>
+
    ![image: ../Art/scripteditor_scriptmenu_preferences_2x.png](Art/scripteditor_scriptmenu_preferences_2x.png)
+
+<a id="//apple_ref/doc/uid/TP40016239-CH7-DontLinkElementID_11"></a>
+
 
 Tip
 
 The script menu displays scripts in the `~/Library/Scripts/` folder of your user directory. To include scripts at the computer-level (in the `/Library/Scripts/` folder), enable the “Show Computer scripts” checkbox.
+
+<a id="//apple_ref/doc/uid/TP40016239-CH7-SW8"></a>
 
 ### Adding User-Level Scripts to the Script Menu
 
@@ -33,11 +47,15 @@ User-level scripts are scripts that only you can see and use. They aren’t avai
 
 To add user-level scripts to the script menu, save them into the `~/Library/Scripts/` folder of your user directory. For quick access to this folder, select Open Scripts Folder > Open User Scripts Folder from the script menu. When you do this, the folder is automatically created if it doesn’t already exist.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH7-SW9"></a>
+
 ### Adding Computer-Level Scripts to the Script Menu
 
 Computer-level scripts are scripts that any user on your Mac can see and use.
 
 To add computer-level scripts to the script menu, save them into the `/Library/Scripts/` folder on your Mac. For quick access to this folder, select Open Scripts Folder > Open Computer Scripts Folder from the script menu. When you do this, the folder is automatically created if it doesn’t already exist.
+
+<a id="//apple_ref/doc/uid/TP40016239-CH7-SW10"></a>
 
 ### Adding Application-Specific Scripts to the Script Menu
 
@@ -45,10 +63,13 @@ Application-specific scripts are only visible in the script menu when a specific
 
 To add application-specific scripts to the script menu, save them into the `~/Library/Scripts/Applications/«ApplicationName»` folder in your user directory or the `/Library/Scripts/Applications/«ApplicationName»` folder on your Mac. For quick access to this folder, bring the app to the front, then select Open Scripts Folder > Open «ApplicationName» Scripts Folder from the script menu. When you do this, a folder for the application is automatically created if it doesn’t already exist.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH7-SW11"></a>
+
 ### Running Scripts in the Script Menu
 
 Select a script from the script menu to run it. If the script is an application, it launches and runs normally. If the script is a compiled script, a progress indicator appears in the menu bar. See Figure 41-2.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH7-SW2"></a>
 **Figure 41-2**Script menu progress
 ![image: ../Art/scriptmenu_progress_2x.png](Art/scriptmenu_progress_2x.png)
 > **Note**

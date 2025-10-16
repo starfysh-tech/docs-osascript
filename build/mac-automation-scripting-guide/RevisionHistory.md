@@ -1,3 +1,5 @@
+<a id="//apple_ref/doc/uid/TP40016239-CH99"></a><a id="//apple_ref/doc/uid/TP40016239-CH99-SW1"></a>
+
 ## Document Revision History
 
 This table describes the changes to *Mac Automation Scripting Guide*.

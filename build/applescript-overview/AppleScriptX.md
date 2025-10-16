@@ -1,9 +1,15 @@
+<a id="//apple_ref/doc/uid/10000156i"></a><a id="//apple_ref/doc/uid/10000156-BCICHGIE"></a>
+
 # Introduction to AppleScript Overview
 
 > **Important:** This document is no longer being updated. For the latest information about Apple SDKs, visit the [documentation website](https://developer.apple.com/documentation).
 
+<a id="//apple_ref/doc/uid/10000156-DontLinkElementID_1"></a>
+
 *AppleScript Overview* provides a high-level overview of AppleScript and its related technologies to help you determine where you can use them in your work.
 
+> <a id="//apple_ref/doc/uid/10000156-SW1"></a>
+>
 > **Note:** For information on the universe of scripting technologies available on OS X, see *Getting Started With Scripting & Automation*.
 
 AppleScript is a scripting language that makes possible direct control of scriptable applications and of many parts of the Mac OS. A scriptable application is one that makes its operations and data available in response to AppleScript messages, called Apple events.
@@ -12,6 +18,8 @@ With scriptable applications, users can write scripts to automate operations, wh
 
 AppleScript and Apple events are based on the Open Scripting Architecture, which is implemented by several OS X frameworks. Apple provides a number of additional applications and technologies that enhance AppleScript or take advantage of its features.
 
+<a id="//apple_ref/doc/uid/10000156-1140846"></a>
+
 ## Who Should Read This Document
 
 You should read *AppleScript Overview* to get a broad understanding of AppleScript and related automation technologies, and to determine where they fit into your development process.
@@ -19,6 +27,8 @@ You should read *AppleScript Overview* to get a broad understanding of AppleScri
 This document may also be of interest if you write AppleScript scripts and would like to know more about the technology behind them.
 
 *AppleScript Overview* is intended for a general developer audience, but experience with some kind of scripting language is helpful. If you are starting from scratch, see *Getting Started with AppleScript*.
+
+<a id="//apple_ref/doc/uid/10000156-DontLinkElementID_2"></a>
 
 ## Organization of This Document
 
@@ -31,6 +41,8 @@ This document contains the following:
 * [Scripting Bridge](Concepts/scripting_bridge.md#//apple_ref/doc/uid/TP40006467-SW1) describes a technology available starting in OS X version 10.5 that generates Objective-C API for accessing scriptable applications.
 * [Automator](Concepts/automator.md#//apple_ref/doc/uid/TP40006469-SW1) describes Apple’s graphical automation program and how developers can take advantage of it.
 * [AppleScript Utilities and Applications](Concepts/as_related_apps.md#//apple_ref/doc/uid/TP40001570-BABEBGCF) describes utilities and applications that work with AppleScript or provide additional features you can use in AppleScript scripts.
+
+<a id="//apple_ref/doc/uid/10000156-1119515"></a>
 
 ## See Also
 

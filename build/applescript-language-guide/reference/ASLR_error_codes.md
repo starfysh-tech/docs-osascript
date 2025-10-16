@@ -1,10 +1,16 @@
+<a id="//apple_ref/doc/uid/TP40000983-CH220-SW5"></a>
+
 # Error Numbers and Error Messages
 
 This appendix describes error numbers and error messages provided by AppleScript and macOS.
 
+<a id="//apple_ref/doc/uid/TP40000983-CH220-SW1"></a>
+
 ## AppleScript Errors
 
-An AppleScript error is an error that occurs when AppleScript processes script statements. Nearly all of these are of interest to users. For errors returned by an application, see the documentation for that application.
+<a id="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_907"></a><a id="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_908"></a>An AppleScript error is an error that occurs when AppleScript processes script statements. Nearly all of these are of interest to users. For errors returned by an application, see the documentation for that application.
+
+<a id="//apple_ref/doc/uid/TP40000983-CH220-SW3"></a>
 
 **Table B-1**  AppleScript errors
 
@@ -35,9 +41,13 @@ An AppleScript error is an error that occurs when AppleScript processes script s
 | -2762 | <name> is not a parameter name for the event <event>. |
 | -2763 | No result was returned for some argument of this expression. |
 
+<a id="//apple_ref/doc/uid/TP40000983-CH220-SW2"></a>
+
 ## Operating System Errors
 
-An operating system error is an error that occurs when AppleScript or an application requests services from the Mac OS. They are rare, and often there is nothing you can do about them in a script, other than report them. A few, such as `"User canceled"`, make sense for scripts to handle—as shown, for an example, in the Examples section for the [display dialog](ASLR_cmds.md#//apple_ref/doc/uid/TP40000983-CH216-SW12) command.
+<a id="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_909"></a><a id="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_910"></a>An operating system error is an error that occurs when AppleScript or an application requests services from the Mac OS. They are rare, and often there is nothing you can do about them in a script, other than report them. A few, such as `"User canceled"`, make sense for scripts to handle—as shown, for an example, in the Examples section for the [display dialog](ASLR_cmds.md#//apple_ref/doc/uid/TP40000983-CH216-SW12) command.
+
+<a id="//apple_ref/doc/uid/TP40000983-CH220-SW4"></a>
 
 **Table B-2**  Mac OS errors
 
@@ -78,9 +88,13 @@ An operating system error is an error that occurs when AppleScript or an applica
 | -915 | Can’t find remote machine. |
 | -30720 | Invalid date and time <date string>. |
 
+<a id="//apple_ref/doc/uid/TP40000983-CH220-SW6"></a>
+
 ## Apple Event Errors
 
-An Apple event error may occur when an app attempts to process an event sent by a script or a script attempts to process the reply.
+<a id="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_911"></a><a id="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_912"></a>An Apple event error may occur when an app attempts to process an event sent by a script or a script attempts to process the reply.
+
+<a id="//apple_ref/doc/uid/TP40000983-CH220-SW7"></a>
 
 **Table B-3**  Apple Event Manager errors
 
@@ -136,9 +150,13 @@ An Apple event error may occur when an app attempts to process an event sent by 
 | -10024 | The specified class can’t be an element of the specified container, such as when attempting to make or duplicate an object. |
 | -10025 | An invalid combination of properties was provided, such as for the `set`, `make`, or `duplicate` command. |
 
+<a id="//apple_ref/doc/uid/TP40000983-CH220-SW8"></a>
+
 ## Open Scripting Architecture Errors
 
-An Open Scripting Architecture error may occur when the scripting system itself encounters an error.
+<a id="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_913"></a><a id="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_914"></a>An Open Scripting Architecture error may occur when the scripting system itself encounters an error.
+
+<a id="//apple_ref/doc/uid/TP40000983-CH220-SW9"></a>
 
 **Table B-4**  Open Scripting Architecture errors
 

@@ -1,3 +1,5 @@
+<a id="//apple_ref/doc/uid/TP40016239-CH43"></a><a id="//apple_ref/doc/uid/TP40016239-CH43-SW1"></a>
+
 ## Calling Command-Line Tools
 
 In AppleScript, the `do shell script` command is used to execute command-line tools. This command is implemented by the Standard Additions scripting addition included with OS X.
@@ -7,6 +9,8 @@ In AppleScript, the `do shell script` command is used to execute command-line to
 >
 > The Terminal app in `/Applications/Utilities/` is scriptable and provides another way to execute command-line tools from scripts.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH43-SW7"></a>
+
 ### Executing Commands
 
 The direct parameter of the `do shell script` command is a string containing the shell code you want to execute, as demonstrated in Listing 39-1, which simply lists a directory.
@@ -15,6 +19,7 @@ The direct parameter of the `do shell script` command is a string containing the
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=do%20shell%20script%20%22ls%20%2FApplications%2F%22%0A%28*%0A--%3E%20Result%3A%20%0A%22App%20Store.app%0AAutomator.app%0ACalculator.app%0ACalendar.app%0A...%22%0A*%29)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH43-SW3"></a>
 **Listing 39-1**AppleScript: Executing a simple shell command that lists the contents of a directory
 
 1. `do shell script "ls /Applications/"`
@@ -33,10 +38,13 @@ Since the direct parameter of `do shell script` is a string, you can concatenate
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theHostName%20to%20%22www.apple.com%22%0Ado%20shell%20script%20%22ping%20-c1%20%22%20%26%20theHostName)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH43-SW4"></a>
 **Listing 39-2**AppleScript: Concatenating a command with a value
 
 1. `set theHostName to "www.apple.com"`
 2. `do shell script "ping -c1 " & theHostName`
+
+<a id="//apple_ref/doc/uid/TP40016239-CH43-SW8"></a>
 
 ### Quoting Strings
 
@@ -46,6 +54,7 @@ The shell uses space characters to separate parameters and gives special meaning
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20thePath%20to%20%22%2FLibrary%2FApplication%20Support%2F%22%0Ado%20shell%20script%20%22ls%20%22%20%26%20thePath%0A--%3E%20Result%3A%20error%20%22ls%3A%20%2FLibrary%2FApplication%3A%20No%20such%20file%20or%20directory%5Crls%3A%20Support%3A%20No%20such%20file%20or%20directory%22%20number%201)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH43-SW5"></a>
 **Listing 39-3**AppleScript: An error resulting from a string containing a space
 
 1. `set thePath to "/Library/Application Support/"`
@@ -58,6 +67,7 @@ The easiest way to quote a string is to use the `quoted form` property of the te
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20thePath%20to%20quoted%20form%20of%20%22%2FLibrary%2FApplication%20Support%2F%22%0A--%3E%20Result%3A%20%22%27%2FLibrary%2FApplication%20Support%2F%27%22%0Ado%20shell%20script%20%22ls%20%22%20%26%20thePath%0A%28*%0A--%3E%20Result%3A%0A%22App%20Store%0AApple%0A...%0A%22%0A*%29)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH43-SW6"></a>
 **Listing 39-4**AppleScript: Quoting a string to prevent errors
 
 1. `set thePath to quoted form of "/Library/Application Support/"`
@@ -70,6 +80,8 @@ The easiest way to quote a string is to use the `quoted form` property of the te
 8. `...`
 9. `"`
 10. `*)`
+
+<a id="//apple_ref/doc/uid/TP40016239-CH43-SW9"></a>
 
 ### More Information
 

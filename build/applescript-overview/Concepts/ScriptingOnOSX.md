@@ -1,3 +1,5 @@
+<a id="//apple_ref/doc/uid/20000032-BABEBGCF"></a>
+
 # About AppleScript
 
 *AppleScript* is a scripting language that provides direct control of scriptable applications and scriptable parts of the Mac OS. A *scriptable application* is one that can respond to a variety of Apple events by performing operations or supplying data. An *Apple event* is a type of interprocess message that can encapsulate commands and data of arbitrary complexity. By providing an API that supports these mechanisms, the [Open Scripting Architecture](osa.md#//apple_ref/doc/uid/TP40001571-BABEBGCF) makes possible one of the most powerful features in OS X—the ability to write scripts that automate operations with multiple applications.
@@ -11,6 +13,8 @@ The [Automator](automator.md#//apple_ref/doc/uid/TP40006469-SW1) application, av
 [Scripting Bridge](scripting_bridge.md#//apple_ref/doc/uid/TP40006467-SW1), available starting in OS X version 10.5, provides an automated process for creating an Objective-C interface to scriptable applications. This allows Cocoa applications and other Objective-C code to efficiently access features of scriptable applications, using native Objective-C syntax. Some other scripting languages, such as Ruby and Python, can use Scripting Bridge, but also have their own software bridges to access features of scriptable applications—for more information, see *Getting Started With Scripting & Automation*.
 
 AppleScript has several other new or improved features in OS X v10.5, including full support for Unicode text, additional support for identifying and working with application objects in scripts, 64-bit support, more accurate and useful error messages, and additional scriptability in Apple technologies such as iChat and the Dock. For more information, see [AppleScript Features](http://www.macosxautomation.com/applescript/features/unicode.html).
+
+<a id="//apple_ref/doc/uid/20000032-1173352"></a><a id="//apple_ref/doc/uid/20000032-1173352-BABIFHCE"></a>
 
 ## When to Use AppleScript
 
@@ -26,6 +30,8 @@ The following are common scenarios in which you might use AppleScript or related
   For information on working with scripts, see [Scripting with AppleScript](work_with_as.md#//apple_ref/doc/uid/TP40001568-BABEBGCF) in this document, as well the learning paths in *Getting Started with AppleScript*.
 
   To learn about applications and technologies that extend AppleScript and help it work with graphic images, XML, property lists, databases, and other technologies, see [AppleScript Utilities and Applications](as_related_apps.md#//apple_ref/doc/uid/TP40001570-BABEBGCF).
+
+<a id="//apple_ref/doc/uid/20000032-1151403"></a>
 
 ## Limitations of AppleScript
 

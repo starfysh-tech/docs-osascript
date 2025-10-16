@@ -5,20 +5,44 @@ import argparse
 import posixpath
 import re
 from pathlib import Path
-from typing import Dict, Tuple
+from typing import Dict, Iterable, List, Tuple
 
 LINK_RE = re.compile(r"(?P<prefix>!?\[[^\]]*\])\((?P<url>[^)\s]+)\)")
 
+COLLECTION_ALIASES = {
+    "applescript-overview": ["AppleScriptX"],
+    "applescript-language-guide": ["AppleScriptLangGuide"],
+    "mac-automation-scripting-guide": ["MacAutomationScriptingGuide"],
+    "jxa-release-notes": [
+        "RN-JavaScriptForAutomation",
+        "InterapplicationCommunication/RN-JavaScriptForAutomation",
+    ],
+}
 
-def load_html_mapping(pages_file: Path) -> Dict[str, str]:
-    html_pages = [
-        line.strip()
-        for line in pages_file.read_text().splitlines()
-        if line.strip()
-    ]
-    mapping = {
-        page: posixpath.splitext(page)[0] + ".md" for page in html_pages
-    }
+
+def load_html_mapping(pages_files: Iterable[Path]) -> Dict[str, str]:
+    mapping: Dict[str, str] = {}
+    for pages_file in pages_files:
+        html_pages = [
+            line.strip()
+            for line in pages_file.read_text().splitlines()
+            if line.strip()
+        ]
+        collection = pages_file.parent.name
+        aliases = COLLECTION_ALIASES.get(collection, [])
+        for page in html_pages:
+            stem, _ = posixpath.splitext(page)
+            target_md = posixpath.join(collection, stem + ".md")
+            variants = {
+                page,
+                posixpath.join(collection, page),
+            }
+            if "/" not in page:
+                variants.add(posixpath.join(stem, page))
+            for alias in aliases:
+                variants.add(posixpath.join(alias, page))
+            for variant in variants:
+                mapping.setdefault(variant, target_md)
     return mapping
 
 
@@ -68,8 +92,8 @@ def rewrite_links(md_path: Path, mapping: Dict[str, str], markdown_root: Path) -
     return False
 
 
-def main(pages_file: Path, markdown_dir: Path) -> None:
-    mapping = load_html_mapping(pages_file)
+def main(pages_files: List[Path], markdown_dir: Path) -> None:
+    mapping = load_html_mapping(pages_files)
     touched = 0
     for md_file in sorted(markdown_dir.rglob("*.md")):
         if rewrite_links(md_file, mapping, markdown_dir):
@@ -79,7 +103,13 @@ def main(pages_file: Path, markdown_dir: Path) -> None:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Normalize local Markdown links to .md targets")
-    parser.add_argument("--pages-file", required=True, type=Path)
+    parser.add_argument(
+        "--pages-file",
+        action="append",
+        required=True,
+        type=Path,
+        help="Path(s) to html_pages.txt files used for building the link mapping.",
+    )
     parser.add_argument("--markdown-dir", required=True, type=Path)
     args = parser.parse_args()
     main(args.pages_file, args.markdown_dir)

@@ -1,6 +1,11 @@
+<a id="//apple_ref/doc/uid/TP40016239-CH79"></a><a id="//apple_ref/doc/uid/TP40016239-CH79-SW1"></a>
+<a id="//apple_ref/doc/uid/TP40016239-CH78"></a><a id="//apple_ref/doc/uid/TP40016239-CH78-SW1"></a>
+
 ## Objective-C to AppleScript Quick Translation Guide
 
 This appendix provides AppleScript equivalents for typical Objective-C features of a class. Below the table is a list of notes that correspond to the numbers in column 1.
+
+<a id="//apple_ref/doc/uid/TP40016239-CH79-SW2"></a>
 
 | Note | Objective-C | AppleScript |
 | --- | --- | --- |
@@ -30,6 +35,8 @@ This appendix provides AppleScript equivalents for typical Objective-C features 
 6. An Objective-C method with no parameters, such as a property or constant, can be called using an explicit accessor method call or more concise dot syntax. Similarly in AppleScript, a method with no parameters can be called using a handler call with empty parentheses, or as a property without the parentheses.
 7. In AppleScript, handlers and `script` objects are closed using the `end` syntax.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH79-SW7"></a>
+
 ### Resolving Terminology Conflicts in AppleScriptObjC
 
 AppleScript distinguishes between *reserved words*, *application identifiers*, and *user identifiers*. Reserved words are terms defined by AppleScript itself. Application identifiers, also known as *application keywords*, are terms defined by an app’s scripting dictionary. User identifiers are variable or subroutine names defined by the script writer.
@@ -40,6 +47,7 @@ Identifiers passed to AppleScriptObjC, in particular, Cocoa method names, must b
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=myColor%27s%20%7Cset%7C%28%29%0A--%20OR%0A%7Cset%7C%28%29%20of%20myColor%0A--%20OR%0Atell%20myColor%20to%20%7Cset%7C%28%29)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH79-SW3"></a>
 **Listing 43-1**AppleScriptObjC: Escaping a method name that conflicts with a reserved word
 
 1. `myColor's |set|()`
@@ -54,6 +62,7 @@ Similarly, `NSWindow` has a `bounds` property, but `bounds` is an application-de
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=get%20myWindow%27s%20%7Cbounds%7C%0A--%20OR%0Aget%20%7Cbounds%7C%20of%20myWindow%0A--%20OR%0Atell%20myColor%20to%20get%20%7Cbounds%7C)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH79-SW4"></a>
 **Listing 43-2**AppleScriptObjC: Escaping a property name that conflicts with an application identifier
 
 1. `get myWindow's |bounds|`
@@ -64,6 +73,8 @@ Similarly, `NSWindow` has a `bounds` property, but `bounds` is an application-de
 
 When in doubt, add the vertical bars. If they’re unnecessary, they are merely redundant and harmless.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH79-SW8"></a>
+
 ### Importing Frameworks
 
 To import a framework in AppleScript, use the `use` command, followed by the framework name. See Listing 43-3.
@@ -72,6 +83,7 @@ To import a framework in AppleScript, use the `use` command, followed by the fra
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=use%20framework%20%22Foundation%22%0A%0Aset%20theString%20to%20%22Hello%20World%22%0Aset%20theString%20to%20stringWithString_%28theString%29%20of%20NSString%20of%20current%20application%0Aset%20theString%20to%20%28uppercaseString%28%29%20of%20theString%29%20as%20string)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH79-SW5"></a>
 **Listing 43-3**AppleScriptObjC: Importing Foundation framework
 
 1. `use framework "Foundation"`
@@ -81,6 +93,8 @@ To import a framework in AppleScript, use the `use` command, followed by the fra
 5. `set theString to (uppercaseString() of theString) as string`
 6. `--> Result: "HELLO WORLD"`
 
+<a id="//apple_ref/doc/uid/TP40016239-CH79-SW9"></a>
+
 ### Accessing Scripting Additions
 
 A normal AppleScript automatically loads and has access to terminology from scripting additions that are installed on the system. In AppleScriptObjC scripts, you must explicitly state that you want to use scripting addition terminology. Listing 43-4 shows how to do this.
@@ -89,10 +103,13 @@ A normal AppleScript automatically loads and has access to terminology from scri
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=use%20scripting%20additions%0Adisplay%20dialog%20%22Hello%20World%22%20as%20string)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH79-SW6"></a>
 **Listing 43-4**AppleScriptObjC: Using scripting additions
 
 1. `use scripting additions`
 2. `display dialog "Hello World" as string`
+
+<a id="//apple_ref/doc/uid/TP40016239-CH79-SW10"></a>
 
 ### Classes and Constants
 
@@ -104,6 +121,7 @@ In this context, classes are referenced using the `class` specifier, followed by
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=use%20framework%20%22Foundation%22%0Aclass%20%22NSView%22%20of%20current%20application)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH79-SW11"></a>
 **Listing 43-5**AppleScriptObjC: Referencing a class
 
 1. `use framework "Foundation"`
@@ -115,6 +133,7 @@ Constants are referenced without a preceding identifier. See Listing 43-6.
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=use%20framework%20%22Foundation%22%0A%0Acurrent%20application%27s%20NSCalibratedRGBColorSpace%0A--%20OR%0ANSCalibratedRGBColorSpace%20of%20current%20application)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH79-SW12"></a>
 **Listing 43-6**AppleScriptObjC: Referencing a constant
 
 1. `use framework "Foundation"`
@@ -129,6 +148,7 @@ Listing 43-7 demonstrates how to reference both Objective-C classes and constant
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=script%20MyView%0A%20%20%20%20property%20parent%20%3A%20class%20%22NSView%22%0A%0A%20%20%20%20on%20drawRect%3Arect%0A%20%20%20%20%20%20%20%20set%20theWhiteColor%20to%20current%20application%27s%20class%20%22NSColor%22%27s%20whiteColor%28%29%0A%20%20%20%20%20%20%20%20--%20OR%0A%20%20%20%20%20%20%20%20set%20theWhiteColor%20to%20whiteColor%28%29%20of%20class%20%22NSColor%22%20of%20current%20application%0A%20%20%20%20%20%20%20%20--%20OR%0A%20%20%20%20%20%20%20%20tell%20class%20%22NSColor%22%20of%20current%20application%20to%20set%20theWhiteColor%20to%20whiteColor%28%29%0A%0A%20%20%20%20%20%20%20%20theWhiteColor%27s%20colorUsingColorSpaceName%3A%28current%20application%27s%20NSCalibratedRGBColorSpace%29%0A%20%20%20%20%20%20%20%20--%20OR%0A%20%20%20%20%20%20%20%20colorUsingColorSpaceName_%28NSCalibratedRGBColorSpace%20of%20current%20application%29%20of%20theWhiteColor%0A%20%20%20%20end%20drawRect%3A%0Aend%20script)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH79-SW14"></a>
 **Listing 43-7**AppleScriptObjC: Example of a script that references both classes and constants
 
 1. `script MyView`
@@ -153,6 +173,7 @@ In places where `current application` is the current context, such as the top le
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=use%20framework%20%22Foundation%22%0A%0Aclass%20%22NSView%22%0A%0Amy%20NSCalibratedRGBColorSpace%0A--%20OR%0ANSCalibratedRGBColorSpace%20of%20me)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH79-SW13"></a>
 **Listing 43-8**AppleScriptObjC: Referencing a classes and constants in the context of the current application
 
 1. `use framework "Foundation"`
@@ -169,6 +190,7 @@ As a convenience technique to save typing, it’s good practice to define proper
 
 [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=script%20MyView%0A%20%20%20%20property%20parent%20%3A%20class%20%22NSView%22%0A%20%20%20%20property%20NSColor%20%3A%20class%20%22NSColor%22%0A%0A%20%20%20%20on%20drawRect%3Arect%0A%20%20%20%20%20%20%20%20set%20theWhiteColor%20to%20NSColor%27s%20whiteColor%28%29%0A%20%20%20%20%20%20%20%20theWhiteColor%27s%20colorUsingColorSpaceName%3ANSCalibratedRGBColorSpace%0A%20%20%20%20end%20drawRect%3A%0Aend%20script)
 
+<a id="//apple_ref/doc/uid/TP40016239-CH79-SW15"></a>
 **Listing 43-9**AppleScriptObjC: Defining classes as properties
 
 1. `script MyView`
@@ -180,6 +202,8 @@ As a convenience technique to save typing, it’s good practice to define proper
 7. ` theWhiteColor's colorUsingColorSpaceName:NSCalibratedRGBColorSpace`
 8. ` end drawRect:`
 9. `end script`
+
+<a id="//apple_ref/doc/uid/TP40016239-CH79-SW16"></a>
 
 ### Resources
 

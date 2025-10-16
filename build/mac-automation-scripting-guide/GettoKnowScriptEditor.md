@@ -1,3 +1,6 @@
+<a id="//apple_ref/doc/uid/TP40016239-CH5"></a><a id="//apple_ref/doc/uid/TP40016239-CH5-SW1"></a>
+<a id="//apple_ref/doc/uid/TP40016239-CH10"></a><a id="//apple_ref/doc/uid/TP40016239-CH10-SW1"></a>
+
 ## Getting to Know Script Editor
 
 ![image: ../Art/script-editor_icon_2x.png](Art/script-editor_icon_2x.png)
@@ -9,10 +12,13 @@ Script Editor, found in `/Applications/Utilities/`, is an app for writing AppleS
 >
 > Xcode can also be used to write AppleScriptObjC and JavaScriptObjC apps.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH5-SW3"></a>
+
 ### Navigating Script Editor Documents
 
 A Script Editor document window includes the following main areas, as shown in Figure 5-1:
 
+<a id="//apple_ref/doc/uid/TP40016239-CH5-SW11"></a>
 **Figure 5-1**A Script Editor document window
 ![image: ../Art/script-editor_window_withcallouts_2x.png](Art/script-editor_window_withcallouts_2x.png)
 
@@ -26,17 +32,23 @@ A Script Editor document window includes the following main areas, as shown in F
 * **Accessory View pane**—View and edit your script’s description here, or browse the result and events produced when your script runs.
 * **Bundle Contents pane**— Edit the identifier, version, and copyright info for your script here. You can also use this pane to add, remove, or manage resources contained within the bundle. This pane is accessible only when your script is saved in script bundle or app format.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH5-SW4"></a>
+
 ### Targeting a Scripting Language
 
 When you create a Script Editor document, select a scripting language in the navigation bar. See Figure 5-2.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH5-SW2"></a>
 **Figure 5-2**Setting the scripting language in a Script Editor document window
 ![image: ../Art/script-editor_langage_selector_2x.png](Art/script-editor_langage_selector_2x.png)
 
 If you always use the same language, set it as the default in the General pane of Script Editor preferences. See Figure 5-3.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH5-SW5"></a>
 **Figure 5-3**Setting the default scripting language for Script Editor documents
 ![image: ../Art/script-editor_preferences_window_general_pane_language_2x.png](Art/script-editor_preferences_window_general_pane_language_2x.png)
+
+<a id="//apple_ref/doc/uid/TP40016239-CH5-SW6"></a>
 
 ### Viewing Script Events and Results
 
@@ -47,12 +59,17 @@ Script Editor can display the result of executing a script, as well as a log of 
 >
 > A *result* is a value generated when a script statement executes. For example, executing the `make` command to create a folder in the Finder produces the newly created folder object as its result. The result of a script is the result of the script’s last statement. If the script’s last statement doesn’t produce a result, then the script has no result.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH5-SW7"></a>
+
 ### Viewing the Script Result
 
 The result of executing your script—if a result was produced—is found in the Accessory View pane. See Figure 5-4.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH5-SW13"></a>
 **Figure 5-4**Viewing the result of a script in Script Editor
 ![image: ../Art/script-editor_window_result_2x.png](Art/script-editor_window_result_2x.png)
+
+<a id="//apple_ref/doc/uid/TP40016239-CH5-SW20"></a>
 
 **To view the result of your script**
 
@@ -62,10 +79,13 @@ Do one of the following:
 * Choose View > Show Result.
 * Click the Show Result (![image: ../Art/icon_showresult_2x.png](Art/icon_showresult_2x.png)) button at the bottom of the Accessory View pane.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH5-SW8"></a>
+
 ### Viewing the Script Log
 
 The Accessory View pane also contains a script log. See Figure 5-5.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH5-SW14"></a>
 **Figure 5-5**Viewing the script log in Script Editor
 ![image: ../Art/script-editor_eventlog_2x.png](Art/script-editor_eventlog_2x.png)
 
@@ -75,6 +95,8 @@ The script log displays the following information.
 * **Messages**—Includes log messages generated as your script runs, as well as the script’s result.
 * **Events**—Includes log messages, the script’s result, and events—commands—sent to applications.
 * **Replies**—Includes log messages, the script’s result, events sent to applications, and event replies.
+
+<a id="//apple_ref/doc/uid/TP40016239-CH5-SW22"></a>
 
 **To view the script log**
 
@@ -93,6 +115,7 @@ Do one of the following:
 >
 > [Open in Script Editor](applescript://com.apple.scripteditor?action=new&name=Log%20a%20Message&script=log%20%22My%20log%20entry.%22%0D)
 >
+> <a id="//apple_ref/doc/uid/TP40016239-CH5-SW15"></a>
 > **Listing 5-1**AppleScript: Example of a log message at the root level of a script
 >
 > 1. `log "My log entry."`
@@ -103,6 +126,7 @@ Do one of the following:
 >
 > [Open in Script Editor](applescript://com.apple.scripteditor?action=new&name=Log%20a%20Message%20in%20a%20Tell%20Statement&script=tell%20app%20%22Finder%22%0D%20%20%20%20tell%20me%20to%20log%20%22My%20log%20entry.%22%0Dend%20tell%0D)
 >
+> <a id="//apple_ref/doc/uid/TP40016239-CH5-SW16"></a>
 > **Listing 5-2**AppleScript: Example of a log message within an application tell statement
 >
 > 1. `tell app "Finder"`
@@ -115,16 +139,22 @@ Do one of the following:
 >
 > [Open in Script Editor](applescript://com.apple.scripteditor?action=new&name=Log%20a%20Message&script=console.log%28%22My%20log%20entry.%22%29%0D)
 >
+> <a id="//apple_ref/doc/uid/TP40016239-CH5-SW17"></a>
 > **Listing 5-3**JavaScript: Example of a log message
 >
 > 1. `console.log("My log entry.")`
+
+<a id="//apple_ref/doc/uid/TP40016239-CH5-SW9"></a>
 
 ### Viewing the Log History
 
 The result and script log areas in the Accessory View pane reset each time you run your script. However, you can view historical logs for an opened script in the Log History window. See Figure 5-6.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH5-SW19"></a>
 **Figure 5-6**The Log History window in Script Editor
 ![image: ../Art/script-editor_resulthistory_window_2x.png](Art/script-editor_resulthistory_window_2x.png)
+
+<a id="//apple_ref/doc/uid/TP40016239-CH5-SW23"></a>
 
 **To view the Log History window**
 

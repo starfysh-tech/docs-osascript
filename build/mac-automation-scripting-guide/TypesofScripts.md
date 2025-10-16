@@ -1,3 +1,5 @@
+<a id="//apple_ref/doc/uid/TP40016239-CH72"></a><a id="//apple_ref/doc/uid/TP40016239-CH72-SW1"></a>
+
 ## Types of Scripts
 
 There are many different types of scripts on the Mac.

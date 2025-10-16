@@ -1,8 +1,12 @@
+<a id="//apple_ref/doc/uid/TP40000983-CH222-SW2"></a>
+
 # AppleScript Keywords
 
-This appendix lists AppleScript keywords (or *reserved words*), provides a brief description for each, and points to related information, where available. (See also [Keywords](../conceptual/ASLR_lexical_conventions.md#//apple_ref/doc/uid/TP40000983-CH214-SW7) in [AppleScript Lexical Conventions](../conceptual/ASLR_lexical_conventions.md#//apple_ref/doc/uid/TP40000983-CH214-SW1).)
+<a id="//apple_ref/doc/uid/TP40000983-CH222-DontLinkElementID_967"></a><a id="//apple_ref/doc/uid/TP40000983-CH222-DontLinkElementID_968"></a><a id="//apple_ref/doc/uid/TP40000983-CH222-DontLinkElementID_969"></a>This appendix lists AppleScript keywords (or *reserved words*), provides a brief description for each, and points to related information, where available. (See also [Keywords](../conceptual/ASLR_lexical_conventions.md#//apple_ref/doc/uid/TP40000983-CH214-SW7) in [AppleScript Lexical Conventions](../conceptual/ASLR_lexical_conventions.md#//apple_ref/doc/uid/TP40000983-CH214-SW1).)
 
 The keywords in [Table A-1](#//apple_ref/doc/uid/TP40000983-CH222-SW1) are part of the AppleScript language. You should not attempt to reuse them in your scripts for variable names or other purposes. Developers should not re-define keywords in the terminology for their scriptable applications. You can view many additional scripting terms defined by Apple, but not part of the AppleScript language, in [AppleScript Terminology and Apple Event Codes](http://developer.apple.com/releasenotes/AppleScript/ASTerminology_AppleEventCodes/TermsAndCodes.html).
+
+<a id="//apple_ref/doc/uid/TP40000983-CH222-SW1"></a>
 
 **Table A-1**  AppleScript reserved words, with descriptions
 
@@ -72,11 +76,11 @@ The keywords in [Table A-1](#//apple_ref/doc/uid/TP40000983-CH222-SW1) are part 
 | `out of` | handler parameter label—see [Handler Syntax (Labeled Parameters)](ASLR_handlers.md#//apple_ref/doc/uid/TP40000983-CH7g-SW2) |
 | `over` | handler parameter label—see [Handler Syntax (Labeled Parameters)](ASLR_handlers.md#//apple_ref/doc/uid/TP40000983-CH7g-SW2) |
 | `prop, property` | `prop` is an abbreviation for `property`—see [The it and me Keywords](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW4) |
-| `put` | `put into` is a deprecated synonym for the `copy` command |
+| `put`<a id="//apple_ref/doc/uid/TP40000983-CH222-DontLinkElementID_970"></a> | `put into` is a deprecated synonym for the `copy` command |
 | `ref/reference` | `ref` is an abbreviation for `reference`—see `reference` |
 | `repeat` | a control statement—see [repeat Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-127362) |
 | `return` | exits from a handler—see `return` |
-| `returning` | deprecated |
+| `returning`<a id="//apple_ref/doc/uid/TP40000983-CH222-DontLinkElementID_971"></a> | deprecated |
 | `script` | used to declare a script object; also the class of a script object—see the `script` class and [Script Objects](../conceptual/ASLR_script_objects.md#//apple_ref/doc/uid/TP40000983-CH207-BAJJCIAA) |
 | `second` | specifies a position in a container—see [Index](ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCGHGAF) reference form |
 | `set` | an AppleScript command—see `set` |
@@ -87,7 +91,7 @@ The keywords in [Table A-1](#//apple_ref/doc/uid/TP40000983-CH222-SW1) are part 
 | `tell` | a control statement—see [tell Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-158637) |
 | `tenth` | specifies a position in a container—see [Index](ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCGHGAF) reference form |
 | `that` | synonym for `whose` |
-| `the` | syntactic no-op, used to make script statements look more like natural language |
+| `the`<a id="//apple_ref/doc/uid/TP40000983-CH222-DontLinkElementID_972"></a> | syntactic no-op, used to make script statements look more like natural language |
 | `then` | used with `if` control statement—see [if Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-158244) |
 | `third` | specifies a position in a container—see [Index](ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCGHGAF) reference form |
 | `through, thru` | used in specifying a range of objects in a container—see [Range](ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCHDJJJ) reference form |
@@ -103,7 +107,7 @@ The keywords in [Table A-1](#//apple_ref/doc/uid/TP40000983-CH222-SW1) are part 
 | `while` | used with `repeat` control statement—see `repeat while` |
 | `whose` | used with the [Filter](ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BAJJHEFE) reference form to specify a Boolean test expression (synonymous with `where`) |
 | `with` | used in commands to specify various kinds of parameters, including `true` for some Boolean for parameters—see, for example, the `with prompt` and `multiple selections allowed` parameters to the `choose from list` command; also used with application `make` commands to specify properties (`with properties`) |
-| `without` | used in commands to specify `false` for a Boolean for a parameter—see, for example, the `multiple selections allowed` parameter to the `choose from list` command |
+| `without` | used in commands to specify `false` for a Boolean for a parameter—see, for example, the `multiple selections allowed` parameter to the `choose from list` command<a id="//apple_ref/doc/uid/TP40000983-CH222-DontLinkElementID_973"></a> |
 
   
 

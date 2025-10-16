@@ -36,10 +36,13 @@ python3 scripts/convert_html_to_md.py \
   --html-dir data/<collection>/html \
   --output-dir build/<collection>
 
-# 4. Normalize internal links to use local .md targets
+# 4. Normalize internal links (across all mirrored collections)
 python3 scripts/normalize_markdown_links.py \
-  --pages-file data/<collection>/html_pages.txt \
-  --markdown-dir build/<collection>
+  --markdown-dir build \
+  --pages-file data/applescript-overview/html_pages.txt \
+  --pages-file data/applescript-language-guide/html_pages.txt \
+  --pages-file data/mac-automation-scripting-guide/html_pages.txt \
+  --pages-file data/jxa-release-notes/html_pages.txt
 
 # 5. Mirror referenced images/assets and copy them into the Markdown tree
 python3 scripts/download_assets.py \

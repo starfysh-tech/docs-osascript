@@ -1,3 +1,6 @@
+<a id="//apple_ref/doc/uid/TP40016239-CH75"></a><a id="//apple_ref/doc/uid/TP40016239-CH75-SW2"></a>
+<a id="//apple_ref/doc/uid/TP40016239-CH9"></a><a id="//apple_ref/doc/uid/TP40016239-CH9-SW1"></a>
+
 ## About Scripting Terminology
 
 AppleScript and JavaScript possess core language commands, classes, and properties that make scripting possible. For AppleScript, core terminology is documented in *[AppleScript Language Guide](../../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983)*. For JavaScript, see *[JavaScript for Automation Release Notes](../../../../releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/Introduction.html#//apple_ref/doc/uid/TP40014508)* and [Mozilla’s official JavaScript documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript).
@@ -6,6 +9,7 @@ Each scriptable app introduces additional terminology that extends the core lang
 
 The terminology for an app is found in its *scripting dictionary*, an `.sdef` file stored in the app bundle. The dictionary describes the commands, classes, and properties an app supports. This information is used by the scripting components of the operating system, the app itself, and any other apps or scripts that interact with the app through scripting. It also serves as a reference, which you can consult in Script Editor for guidance as you write a script. See Figure 10-1.
 
+<a id="//apple_ref/doc/uid/TP40016239-CH75-SW1"></a>
 **Figure 10-1**Example of a scripting dictionary in Script Editor
 ![image: ../Art/script-editor_dictionary_2x.png](Art/script-editor_dictionary_2x.png)
 

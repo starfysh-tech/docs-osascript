@@ -1,3 +1,5 @@
+<a id="//apple_ref/doc/uid/20001726-CJBGIAGF"></a>
+
 # Document Revision History
 
 This table describes the changes to *AppleScript Overview*.

@@ -1,3 +1,5 @@
+<a id="//apple_ref/doc/uid/TP40006467-SW1"></a>
+
 # Scripting Bridge
 
 Scripting Bridge, introduced in OS X version 10.5, provides an automated process for creating an Objective-C interface to scriptable applications. This allows Cocoa applications and other Objective-C code to efficiently access features of scriptable applications, using native Objective-C syntax. Some other scripting languages, such as Ruby and Python, can use also Scripting Bridge (they also have open-source software bridges to scriptable applications—RubyOSA and py-appscript). For more information, see *[Ruby and Python Programming Topics for Mac](../../../../Cocoa/Conceptual/RubyPythonCocoa/Introduction/Introduction.html#//apple_ref/doc/uid/TP40004936)*.
