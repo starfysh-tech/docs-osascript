@@ -1,14 +1,14 @@
 # AppleScript Docs Archive Plan
 
-## Snapshot (updated: 2025-10-16)
+## Snapshot (updated: 2025-10-17)
 - **Current focus**
-  - Confirm the published GitHub release (dataset-20251017) stays linked from our project docs and README.
-  - Publish the refreshed GitHub Pages build to surface regenerated Markdown.
-  - Plan the next monitoring/dataset refresh cadence post-release.
+  - QA the new MkDocs navigation overrides (accordion sidebar, sticky TOC, pinned footer) across breakpoints and document the behaviour.
+  - Add clear links to the dataset-20251017 release in README/site content before publishing the refreshed GitHub Pages build.
+  - Schedule the next monitoring + dataset refresh cadence post-release.
 - **Next actions**
-  1. Publish the refreshed GitHub Pages build once the release assets are live.
-  2. Link the dataset release in README/landing copy for discoverability.
-  3. Schedule the next monitoring + dataset refresh (tentatively four weeks out) in PLAN.md.
+  1. Document navigation overrides (README + dedicated note) and validate them on tablet/mobile.
+  2. Link the dataset release in README/landing copy for discoverability, then publish the refreshed GitHub Pages build.
+  3. Schedule the next monitoring + dataset refresh (tentatively four weeks out) in PLAN.md once the above ships.
 - **Blockers / decisions pending**
   - Determine how to handle large WWDC video assets (link-out vs. local copy).
   - Decide on the storage/export format for man-page captures (plain text vs. Markdown).
@@ -56,6 +56,7 @@
 - 2025-10-17: Exported all collections via `scripts/export_dataset.py`, wrote `dataset/manifest.json`, and recorded monitoring baseline `reports/update-status-20251017.md` (no upstream changes).
 - 2025-10-17: Packaged dataset artifacts into `dist/dataset-20251017.tar.gz` with accompanying checksum/readme for release distribution.
 - 2025-10-17: Tagged `dataset-20251017` and published GitHub release with tarball + checksum.
+- 2025-10-17: Added MkDocs overrides (accordion sidebar, expand/collapse control, sticky TOC card, pinned footer) and restyled the navigation for better scanning.
 
 ## Task Board
 

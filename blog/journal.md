@@ -77,3 +77,6 @@ Built the release bundle from the freshly exported datasets: `tar -czf dist/data
 
 ## 2025-10-17 — GitHub Release
 Tagged `dataset-20251017` and used `gh release create` to publish the dataset bundle (tarball + checksum) with the validation/monitoring notes. The release lives at https://github.com/starfysh-tech/docs-osascript/releases/tag/dataset-20251017. Next checkpoint: update docs/README with the download link and push the refreshed MkDocs site.
+
+## 2025-10-17 — Navigation Refresh
+Implemented a Material override so the left nav behaves like the Option 1 accordion we prototyped. The pills now collapse/expand, there’s an “Expand all” control, and the right-hand TOC lives in a sticky card. Also pinned the footer, trimmed the sidebar width, and hid the redundant Home link. Remaining work: sanity-check the layout on tablet/phone, document the overrides, and add the dataset CTA/link to README before publishing the refreshed site.
