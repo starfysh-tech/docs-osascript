@@ -14,7 +14,7 @@
     }
     var link = document.createElement('a');
     link.className = 'header-cta';
-    link.href = 'https://github.com/starfysh-tech/docs-osascript/releases/tag/dataset-20251017';
+    link.href = 'https://github.com/starfysh-tech/docs-osascript/releases';
     link.target = '_blank';
     link.rel = 'noopener';
     link.textContent = 'Download dataset';

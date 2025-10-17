@@ -10,7 +10,7 @@ Offline-ready mirrors of Apple's automation documentation, organised by collecti
 
 - Browse the sidebar to explore its chapters.
 - Use the sticky table of contents on the right to jump around within the current page.
-- Need a full offline bundle? Download the latest dataset snapshot (`dataset-20251017`) from the header button; it contains every Markdown file plus JSONL exports.
+- Need a full offline bundle? Grab the latest dataset snapshot from the [releases page](https://github.com/starfysh-tech/docs-osascript/releases) (the header button links there); each drop includes every Markdown file plus JSONL exports.
 
 ## Core Collections
 
