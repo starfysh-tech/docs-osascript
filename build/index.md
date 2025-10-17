@@ -1,6 +1,44 @@
 # Apple Automation Archive
 
-Offline-ready mirrors of Apple's automation documentation, organised by collection and kept in Markdown for easy reuse.
+Offline-ready mirrors of Apple's automation documentation, organised by collection, and kept in Markdown for easy reuse.
+
+---
+
+## How to Use
+
+### Readers
+
+- Browse the accordion-style sidebar to open a collection and drill into its chapters.
+- Use the sticky table of contents on the right to jump around within the current page.
+- Need a full offline bundle? Download the latest dataset snapshot (`dataset-20251017`) from the header button; it contains every Markdown file plus JSONL exports.
+
+### Coding agents & CLIs
+
+- Search the Markdown corpus directly:
+
+  ```sh
+  rg "do shell script" build/
+  ```
+
+  Each result is a path under `build/` that you can open or parse on demand.
+
+- Prefer structured data? Scan the JSONL datasets under `dataset/jsonl/`:
+
+  ```python
+  python3 - <<'PY'
+  import json, pathlib
+  term = "do shell script"
+  for jsonl in pathlib.Path("dataset/jsonl").glob("*.jsonl"):
+      with jsonl.open(encoding="utf-8") as fh:
+          for line in fh:
+              obj = json.loads(line)
+              if term in (obj.get("body") or ""):
+                  print(f"{jsonl.stem}: {obj['path']}")
+                  raise SystemExit
+  PY
+  ```
+
+- Need metadata or hashes? See `dataset/manifest.json`.
 
 ## Core Collections
 
