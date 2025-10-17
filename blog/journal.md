@@ -80,3 +80,6 @@ Tagged `dataset-20251017` and used `gh release create` to publish the dataset bu
 
 ## 2025-10-17 — Navigation Refresh
 Implemented a Material override so the left nav behaves like the Option 1 accordion we prototyped. The pills now collapse/expand, there’s an “Expand all” control, and the right-hand TOC lives in a sticky card. Also pinned the footer, trimmed the sidebar width, and hid the redundant Home link. Remaining work: document the overrides and add the dataset CTA/link to README before publishing the refreshed site.
+
+## 2025-10-17 — Project Wrap-Up
+From the first crawl scripts to today's navigation polish, the repo now hosts clean Markdown mirrors plus a dataset pipeline, capped with a polished MkDocs shell. Automations (mirroring, link rewrites, validation, dataset export, monitoring) proved reliable, and the latest UI pass delivered accordion navigation, sticky TOC, and a release CTA. Remaining work is on-demand: rerun monitoring when Apple updates docs. Publishing to GitHub Pages is automated and a dataset release hub is in place, so the archive is ready for readers and coding agents alike.
