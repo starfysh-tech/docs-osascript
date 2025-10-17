@@ -8,9 +8,26 @@ Offline-ready mirrors of Apple's automation documentation, organised by collecti
 
 ### Readers
 
-- Browse the accordion-style sidebar to open a collection and drill into its chapters.
+- Browse the sidebar to explore its chapters.
 - Use the sticky table of contents on the right to jump around within the current page.
 - Need a full offline bundle? Download the latest dataset snapshot (`dataset-20251017`) from the header button; it contains every Markdown file plus JSONL exports.
+
+## Core Collections
+
+- [AppleScript Overview](https://developer.apple.com/library/archive/applescript-overview/AppleScriptX.md) — glossary-friendly introduction to scripting concepts.
+- [AppleScript Language Guide](https://developer.apple.com/library/archive/applescript-language-guide/introduction/ASLR_intro.md) — the canonical language reference.
+- [Mac Automation Scripting Guide](https://developer.apple.com/library/archive/mac-automation-scripting-guide/index.md) — practical automation workflows and recipes.
+- [JavaScript for Automation (JXA) Release Notes](https://developer.apple.com/library/archive/jxa-release-notes/Articles/Introduction.md) — change history and WWDC resources including WWDC 2014 Session 306.
+- [Script Editor User Guide](https://support.apple.com/guide/script-editor/welcome/mac.md) — Apple Support documentation for Script Editor.
+
+## Archived References
+
+- [Apple Events Programming Guide (PDF)](https://developer.apple.com/library/archive/apple-events-programming-guide/apple-events-programming-guide.pdf) — historical Apple Events documentation.
+- [AppleScript Scripting Additions Guide (PDF)](https://developer.apple.com/library/archive/applescript-scripting-additions-guide/applescript-scripting-additions-guide.pdf) — comprehensive Standard Additions reference.
+- [Introduction to Scripting (PDF)](https://developer.apple.com/library/archive/introduction-to-scripting/intro-to-scripting.pdf) — Classic Mac OS introduction to OSA scripting components.
+- [Scripting Components (PDF)](https://developer.apple.com/library/archive/scripting-components/scripting-components.pdf) — details of Classic Mac OS scripting component architecture.
+
+> Looking for more? Review `apple-official-docs.md` in the repository for the remaining backlog of Apple automation resources queued for mirroring.
 
 ### Coding agents & CLIs
 
@@ -39,23 +56,6 @@ Offline-ready mirrors of Apple's automation documentation, organised by collecti
   ```
 
 - Need metadata or hashes? See `dataset/manifest.json`.
-
-## Core Collections
-
-- [AppleScript Overview](https://developer.apple.com/library/archive/applescript-overview/AppleScriptX.md) — glossary-friendly introduction to scripting concepts.
-- [AppleScript Language Guide](https://developer.apple.com/library/archive/applescript-language-guide/introduction/ASLR_intro.md) — the canonical language reference.
-- [Mac Automation Scripting Guide](https://developer.apple.com/library/archive/mac-automation-scripting-guide/index.md) — practical automation workflows and recipes.
-- [JavaScript for Automation (JXA) Release Notes](https://developer.apple.com/library/archive/jxa-release-notes/Articles/Introduction.md) — change history and WWDC resources including WWDC 2014 Session 306.
-- [Script Editor User Guide](https://support.apple.com/guide/script-editor/welcome/mac.md) — Apple Support documentation for Script Editor.
-
-## Archived References
-
-- [Apple Events Programming Guide (PDF)](https://developer.apple.com/library/archive/apple-events-programming-guide/apple-events-programming-guide.pdf) — historical Apple Events documentation.
-- [AppleScript Scripting Additions Guide (PDF)](https://developer.apple.com/library/archive/applescript-scripting-additions-guide/applescript-scripting-additions-guide.pdf) — comprehensive Standard Additions reference.
-- [Introduction to Scripting (PDF)](https://developer.apple.com/library/archive/introduction-to-scripting/intro-to-scripting.pdf) — Classic Mac OS introduction to OSA scripting components.
-- [Scripting Components (PDF)](https://developer.apple.com/library/archive/scripting-components/scripting-components.pdf) — details of Classic Mac OS scripting component architecture.
-
-> Looking for more? Review `apple-official-docs.md` in the repository for the remaining backlog of Apple automation resources queued for mirroring.
 
 ## About This Catalog
 

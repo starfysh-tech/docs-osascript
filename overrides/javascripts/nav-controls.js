@@ -7,7 +7,23 @@
     }
   }
 
+  function injectHeaderCTA() {
+    var headerInner = document.querySelector('.md-header__inner');
+    if (!headerInner || headerInner.querySelector('.header-cta')) {
+      return;
+    }
+    var link = document.createElement('a');
+    link.className = 'header-cta';
+    link.href = 'https://github.com/starfysh-tech/docs-osascript/releases/tag/dataset-20251017';
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.textContent = 'Download dataset';
+    headerInner.appendChild(link);
+  }
+
   ready(function () {
+    injectHeaderCTA();
+
     var sidebar = document.querySelector('[data-md-component="sidebar"] [data-md-component="primary"] .md-sidebar__scrollwrap');
     if (!sidebar) {
       return;
