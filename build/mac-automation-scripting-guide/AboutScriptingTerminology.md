@@ -3,7 +3,7 @@
 
 ## About Scripting Terminology
 
-AppleScript and JavaScript possess core language commands, classes, and properties that make scripting possible. For AppleScript, core terminology is documented in *[AppleScript Language Guide](../../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983)*. For JavaScript, see *[JavaScript for Automation Release Notes](../../../../releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/Introduction.html#//apple_ref/doc/uid/TP40014508)* and [Mozilla’s official JavaScript documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript).
+AppleScript and JavaScript possess core language commands, classes, and properties that make scripting possible. For AppleScript, core terminology is documented in *[AppleScript Language Guide](https://developer.apple.com/library/archive/../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983)*. For JavaScript, see *[JavaScript for Automation Release Notes](https://developer.apple.com/library/archive/../../../releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/Introduction.html#//apple_ref/doc/uid/TP40014508)* and [Mozilla’s official JavaScript documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript).
 
 Each scriptable app introduces additional terminology that extends the core language. For example, Mail introduces terminology for creating and sending email messages. iTunes introduces terminology for working with music and playlists. In order to write a script that controls an app, you need to familiarize yourself with that app’s terminology.
 
@@ -11,9 +11,9 @@ The terminology for an app is found in its *scripting dictionary*, an `.sdef` fi
 
 <a id="//apple_ref/doc/uid/TP40016239-CH75-SW1"></a>
 **Figure 10-1**Example of a scripting dictionary in Script Editor
-![image: ../Art/script-editor_dictionary_2x.png](Art/script-editor_dictionary_2x.png)
+![image: ../Art/script-editor_dictionary_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/script-editor_dictionary_2x.png)
 
-Not every OS X app supports scripting, but many apps do, including Mail, Address Book, Calendar, iTunes, and Messages. To determine if a particular app is scriptable, see if it has a scripting dictionary. See [Opening a Scripting Dictionary](OpenaScriptingDictionary.html#//apple_ref/doc/uid/TP40016239-CH76-SW1).
+Not every OS X app supports scripting, but many apps do, including Mail, Address Book, Calendar, iTunes, and Messages. To determine if a particular app is scriptable, see if it has a scripting dictionary. See [Opening a Scripting Dictionary](https://developer.apple.com/library/archive/mac-automation-scripting-guide/OpenaScriptingDictionary.md#//apple_ref/doc/uid/TP40016239-CH76-SW1).
 
 Scripting terminology can vary extensively from app to app. While some apps may have extensive scripting support, others may have very limited scripting support. If an app doesn’t meet your scripting needs, reach out to the app developer and request improved support in a future version. To request scripting enhancements for Apple apps, submit a [bug report](http://bugreport.apple.com) that specifies the app and communicates your specific needs.
 

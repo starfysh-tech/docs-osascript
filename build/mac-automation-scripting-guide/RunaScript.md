@@ -8,13 +8,13 @@ Scripts can be opened and run in Script Editor and script applications can be ru
 
 ### Running a Script in Script Editor
 
-To run a script in Script Editor, click the Run button (![image: ../Art/icon_record_2x.png](Art/icon_record_2x.png)) in the toolbar, press Command-R, or choose Script &gt; Run, as shown in Figure 8-1.
+To run a script in Script Editor, click the Run button (![image: ../Art/icon_record_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/icon_record_2x.png)) in the toolbar, press Command-R, or choose Script &gt; Run, as shown in Figure 8-1.
 
 <a id="//apple_ref/doc/uid/TP40016239-CH14-SW3"></a>
 **Figure 8-1**Running a script in Script Editor
-![image: ../Art/script-editor_run_menu_2x.png](Art/script-editor_run_menu_2x.png)
+![image: ../Art/script-editor_run_menu_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/script-editor_run_menu_2x.png)
 
-As the script runs, the Accessory View pane shows events and results of the script. This information can be useful for troubleshooting. See [Viewing Script Events and Results](GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW6).
+As the script runs, the Accessory View pane shows events and results of the script. This information can be useful for troubleshooting. See [Viewing Script Events and Results](https://developer.apple.com/library/archive/mac-automation-scripting-guide/GettoKnowScriptEditor.md#//apple_ref/doc/uid/TP40016239-CH5-SW6).
 
 <a id="//apple_ref/doc/uid/TP40016239-CH14-SW4"></a>
 

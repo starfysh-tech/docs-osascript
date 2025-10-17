@@ -34,13 +34,13 @@ This document may also be of interest if you write AppleScript scripts and would
 
 This document contains the following:
 
-* [About AppleScript](Concepts/ScriptingOnOSX.html#//apple_ref/doc/uid/20000032-BABEBGCF) introduces AppleScript, describes when you might use it, and notes some limitations.
-* [Open Scripting Architecture](Concepts/osa.html#//apple_ref/doc/uid/TP40001571-BABEBGCF) describes the underlying technology used to implement AppleScript and Apple events. It also describes how to extend AppleScript.
-* [Scripting with AppleScript](Concepts/work_with_as.html#//apple_ref/doc/uid/TP40001568-BABEBGCF) provides a brief description of how you work with AppleScript scripts. It also describes options for combining AppleScript scripting with other kinds of scripting.
-* [Scriptable Applications](Concepts/scriptable_apps.html#//apple_ref/doc/uid/TP40001569-BABEBGCF) explains how scriptable applications work, including how they specify their scripting terminology, and describes the programming resources available for creating scriptable applications.
-* [Scripting Bridge](Concepts/scripting_bridge.html#//apple_ref/doc/uid/TP40006467-SW1) describes a technology available starting in OS X version 10.5 that generates Objective-C API for accessing scriptable applications.
-* [Automator](Concepts/automator.html#//apple_ref/doc/uid/TP40006469-SW1) describes Apple’s graphical automation program and how developers can take advantage of it.
-* [AppleScript Utilities and Applications](Concepts/as_related_apps.html#//apple_ref/doc/uid/TP40001570-BABEBGCF) describes utilities and applications that work with AppleScript or provide additional features you can use in AppleScript scripts.
+* [About AppleScript](https://developer.apple.com/library/archive/applescript-overview/Concepts/ScriptingOnOSX.md#//apple_ref/doc/uid/20000032-BABEBGCF) introduces AppleScript, describes when you might use it, and notes some limitations.
+* [Open Scripting Architecture](https://developer.apple.com/library/archive/applescript-overview/Concepts/osa.md#//apple_ref/doc/uid/TP40001571-BABEBGCF) describes the underlying technology used to implement AppleScript and Apple events. It also describes how to extend AppleScript.
+* [Scripting with AppleScript](https://developer.apple.com/library/archive/applescript-overview/Concepts/work_with_as.md#//apple_ref/doc/uid/TP40001568-BABEBGCF) provides a brief description of how you work with AppleScript scripts. It also describes options for combining AppleScript scripting with other kinds of scripting.
+* [Scriptable Applications](https://developer.apple.com/library/archive/applescript-overview/Concepts/scriptable_apps.md#//apple_ref/doc/uid/TP40001569-BABEBGCF) explains how scriptable applications work, including how they specify their scripting terminology, and describes the programming resources available for creating scriptable applications.
+* [Scripting Bridge](https://developer.apple.com/library/archive/applescript-overview/Concepts/scripting_bridge.md#//apple_ref/doc/uid/TP40006467-SW1) describes a technology available starting in OS X version 10.5 that generates Objective-C API for accessing scriptable applications.
+* [Automator](https://developer.apple.com/library/archive/applescript-overview/Concepts/automator.md#//apple_ref/doc/uid/TP40006469-SW1) describes Apple’s graphical automation program and how developers can take advantage of it.
+* [AppleScript Utilities and Applications](https://developer.apple.com/library/archive/applescript-overview/Concepts/as_related_apps.md#//apple_ref/doc/uid/TP40001570-BABEBGCF) describes utilities and applications that work with AppleScript or provide additional features you can use in AppleScript scripts.
 
 <a id="//apple_ref/doc/uid/10000156-1119515"></a>
 

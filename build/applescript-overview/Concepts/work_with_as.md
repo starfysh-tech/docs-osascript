@@ -56,13 +56,13 @@ Script Editor has text formatting preferences for various types of script text, 
 
 You can choose File &gt; Open Dictionary in Script Editor to examine the scripting dictionary of a scriptable application or scripting addition on your computer. Or you can drag an application icon to the Script Editor icon to display its dictionary (if it has one). You can also open scripting dictionaries in Xcode.
 
-To display a list that includes just the scriptable applications and scripting additions provided by the Mac OS, choose Window &gt; Library. Double-click an item in the list to display its dictionary. Figure 1 shows the dictionary for the Finder application in OS X version 10.5. The dictionary is labeled as “Finder.sdef”. The sdef format, along with other terminology formats, is described in [Specifying Scripting Terminology](scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1156165).
+To display a list that includes just the scriptable applications and scripting additions provided by the Mac OS, choose Window &gt; Library. Double-click an item in the list to display its dictionary. Figure 1 shows the dictionary for the Finder application in OS X version 10.5. The dictionary is labeled as “Finder.sdef”. The sdef format, along with other terminology formats, is described in [Specifying Scripting Terminology](https://developer.apple.com/library/archive/applescript-overview/Concepts/scriptable_apps.md#//apple_ref/doc/uid/TP40001569-1156165).
 
 <a id="//apple_ref/doc/uid/TP40001568-1153023-BBCCDDAF"></a>
 
 <a id="//apple_ref/doc/uid/TP40001568-1153023"></a>**Figure 1**  The Finder dictionary in Script Editor (in OS X v10.5)
 
-![The Finder dictionary in Script Editor (in OS X v10.5)](../art/finder_dictionary_2x.png)
+![The Finder dictionary in Script Editor (in OS X v10.5)](https://developer.apple.com/library/archive/applescript-overview/art/finder_dictionary_2x.png)
 
 <a id="//apple_ref/doc/uid/TP40001568-1152927"></a>
 
@@ -70,23 +70,23 @@ To display a list that includes just the scriptable applications and scripting a
 
 Script Editor supports only simple debugging strategies, such as logging event output and inserting `speak` or `display dialog` statements within scripts. However, there are a number of third-party products for working with AppleScript, some of them quite powerful. For example, there are script editors and tools for monitoring and debugging scripts, Apple events, and scriptable applications. Some of these third-party products are listed at the [AppleScript Resources](http://www.macosxautomation.com/applescript/resources.html) web page.
 
-For information on debugging scriptable applications and Apple events, see the documents *[Cocoa Scripting Guide](../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_intro/SAppsIntro.html#//apple_ref/doc/uid/TP40002164)* and *[Apple Events Programming Guide](../../AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449)*.
+For information on debugging scriptable applications and Apple events, see the documents *[Cocoa Scripting Guide](https://developer.apple.com/library/archive/../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_intro/SAppsIntro.html#//apple_ref/doc/uid/TP40002164)* and *[Apple Events Programming Guide](https://developer.apple.com/library/archive/AppleEvents/intro_aepg/intro_aepg.html#//apple_ref/doc/uid/TP40001449)*.
 
 <a id="//apple_ref/doc/uid/TP40001568-1152119"></a>
 
 ### Interacting with the User in Scripts
 
-AppleScript provides little direct support for interacting with the user in scripts. However, the Standard Additions scripting addition provides terminology for obtaining various choices from the user. For example, it includes commands for letting the user choose an application, a color, a file, a filename, and so on. It also provides the `display dialog` command, which allows you to display a dialog with various options for text labels, buttons, and text input. Scripting Additions are described in [Extending AppleScript with Coercions, Scripting Additions, and Faceless Background Applications](osa.html#//apple_ref/doc/uid/TP40001571-1164068).
+AppleScript provides little direct support for interacting with the user in scripts. However, the Standard Additions scripting addition provides terminology for obtaining various choices from the user. For example, it includes commands for letting the user choose an application, a color, a file, a filename, and so on. It also provides the `display dialog` command, which allows you to display a dialog with various options for text labels, buttons, and text input. Scripting Additions are described in [Extending AppleScript with Coercions, Scripting Additions, and Faceless Background Applications](https://developer.apple.com/library/archive/applescript-overview/Concepts/osa.md#//apple_ref/doc/uid/TP40001571-1164068).
 
 <a id="//apple_ref/doc/uid/TP40001568-1174450"></a>
 
 ## What You Can Control with Scripts
 
-Many applications from Apple are scriptable and you can also script some parts of the Mac OS. For example, the Finder, iTunes, QuickTime Player, and Mail are highly scriptable. For a complete list, see the [Scriptable Applications](http://www.macosxautomation.com/applescript/resources.html) web page at the [AppleScript](http://www.macosxautomation.com/applescript/index.html) website. For more information on scriptability provided by Apple, see [AppleScript Utilities and Applications](as_related_apps.html#//apple_ref/doc/uid/TP40001570-BABEBGCF).
+Many applications from Apple are scriptable and you can also script some parts of the Mac OS. For example, the Finder, iTunes, QuickTime Player, and Mail are highly scriptable. For a complete list, see the [Scriptable Applications](http://www.macosxautomation.com/applescript/resources.html) web page at the [AppleScript](http://www.macosxautomation.com/applescript/index.html) website. For more information on scriptability provided by Apple, see [AppleScript Utilities and Applications](https://developer.apple.com/library/archive/applescript-overview/Concepts/as_related_apps.md#//apple_ref/doc/uid/TP40001570-BABEBGCF).
 
 > <a id="//apple_ref/doc/uid/TP40001568-SW1"></a>
 >
-> **Note:** You can also control many Apple technologies and applications with [Automator](automator.html#//apple_ref/doc/uid/TP40006469-SW1), which is available starting in OS X version 10.4.
+> **Note:** You can also control many Apple technologies and applications with [Automator](https://developer.apple.com/library/archive/applescript-overview/Concepts/automator.md#//apple_ref/doc/uid/TP40006469-SW1), which is available starting in OS X version 10.4.
 
 Many third-party applications are scriptable—their advertising and packaging usually mention if they are scriptable. The documentation for a scriptable application typically lists the AppleScript terminology that the application understands. You can also determine if an application is scriptable by attempting to examine its dictionary with the Script Editor application, as described in [Displaying Scripting Dictionaries](#//apple_ref/doc/uid/TP40001568-1153006).
 
@@ -103,7 +103,7 @@ XML-RPC and SOAP are remote procedure call protocols that support exchanging com
 * Scripters can make XML-RPC calls and SOAP requests from scripts.
 * Developers can make XML-RPC calls and SOAP requests from applications or other code by sending Apple events.
 
-For documentation on using AppleScript with web services, see *[XML-RPC and SOAP Programming Guide](../../soapXMLRPC/chapter1/soapXMLRPC_intro.html#//apple_ref/doc/uid/TP30001126)* (some examples may be out of date). For additional sources and examples, see [Web Services](http://www.macosxautomation.com/applescript/resources.html). For information on developing web content and applications for the web in OS X, see *[Getting Started with Internet and Web](../../../../../referencelibrary/GettingStarted/GS_WebInternet/_index.html#//apple_ref/doc/uid/TP30001123)*.
+For documentation on using AppleScript with web services, see *[XML-RPC and SOAP Programming Guide](https://developer.apple.com/library/archive/soapXMLRPC/chapter1/soapXMLRPC_intro.html#//apple_ref/doc/uid/TP30001126)* (some examples may be out of date). For additional sources and examples, see [Web Services](http://www.macosxautomation.com/applescript/resources.html). For information on developing web content and applications for the web in OS X, see *[Getting Started with Internet and Web](https://developer.apple.com/library/archive/../../../referencelibrary/GettingStarted/GS_WebInternet/_index.html#//apple_ref/doc/uid/TP30001123)*.
 
 <a id="//apple_ref/doc/uid/TP40001568-1152618"></a><a id="//apple_ref/doc/uid/TP40001568-1152618-BGBEFCAH"></a>
 
@@ -121,7 +121,7 @@ AppleScript provides the `do shell script` command to support executing a shell 
 set fileInfo to do shell script "cd ~; ls"
 ```
 
-The `do shell script` command is primarily of use to scripters. Although applications can execute AppleScript scripts that use the `do shell script` command, they have more efficient options for executing shell commands, as described in [Support for Carbon Applications](scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1150941) and [Support for Cocoa Applications](scriptable_apps.html#//apple_ref/doc/uid/TP40001569-1151567). For more information on the `do shell script` command, see Technical Note TN2065, [do shell script in AppleScript](http://developer.apple.com/technotes/tn2002/tn2065.html).
+The `do shell script` command is primarily of use to scripters. Although applications can execute AppleScript scripts that use the `do shell script` command, they have more efficient options for executing shell commands, as described in [Support for Carbon Applications](https://developer.apple.com/library/archive/applescript-overview/Concepts/scriptable_apps.md#//apple_ref/doc/uid/TP40001569-1150941) and [Support for Cocoa Applications](https://developer.apple.com/library/archive/applescript-overview/Concepts/scriptable_apps.md#//apple_ref/doc/uid/TP40001569-1151567). For more information on the `do shell script` command, see Technical Note TN2065, [do shell script in AppleScript](http://developer.apple.com/technotes/tn2002/tn2065.html).
 
 <a id="//apple_ref/doc/uid/TP40001568-1148189"></a>
 
@@ -155,7 +155,7 @@ osascript -e 'tell app "Address Book" to get the name of every person' | perl -p
 
 This statement uses `osascript` to execute an inline AppleScript script (`'tell app "Address Book" to get the name of every person'`) that returns the names of every address entry from the Address Book application. It pipes the output of this script through the `perl` tool, and with a series of other commands and pipes, obtains and formats a (possibly empty) list of duplicate names.
 
-For additional information about working with AppleScript from languages such as Ruby and Python, see [Scripting Bridge](scripting_bridge.html#//apple_ref/doc/uid/TP40006467-SW1).
+For additional information about working with AppleScript from languages such as Ruby and Python, see [Scripting Bridge](https://developer.apple.com/library/archive/applescript-overview/Concepts/scripting_bridge.md#//apple_ref/doc/uid/TP40006467-SW1).
 
   
 

@@ -63,3 +63,8 @@ Continued the PDF sweep with Apple's "Introduction to Scripting" guide. Download
 
 ## 2025-10-16 — Scripting Components PDF
 Rounded out the Classic Mac OS set with the "Scripting Components" guide. Downloaded via `download_file.py`, mirrored it under `data/` + `build/`, refreshed MkDocs navigation/landing page, and added it to the monitoring manifest so the dataset exporter tracks it as a metadata-only entry.
+
+## 2025-10-16 — Pre-release Validation Sweep
+Closed the loop on Issue #2 by fixing MkDocs’ lingering index warnings. The converter now leaves `<a name>` anchors in place even when the link text is empty, so the AppleScript Language Guide index keeps its section jump links after conversion. After regenerating the collection and re-running link normalization, the Material build came back clean—no more missing-fragment chatter.
+
+Validation ran end-to-end: `mkdocs build`, `python3 scripts/validate_site_links.py`, and `python3 scripts/validate_markdown.py --diff-lines 0` for every collection (with the AppleScript Language Guide index skipped via `--skip`). `pytest tests/test_convert_html_to_md.py` stayed green, confirming the anchor tweak didn’t regress the converter. Next up: export the datasets, refresh `scripts/check_updates.py`, and roll the results into the release notes before we publish the updated GitHub Pages site.

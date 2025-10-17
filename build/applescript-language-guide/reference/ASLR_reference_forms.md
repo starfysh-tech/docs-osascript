@@ -2,7 +2,7 @@
 
 # Reference Forms
 
-This chapter describes AppleScript reference forms. <a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1065"></a>A *reference form* specifies the syntax for identifying an object or group of objects in an application or other container—that is, the syntax for constructing an object specifier (described in [Object Specifiers](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW7)).
+This chapter describes AppleScript reference forms. <a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1065"></a>A *reference form* specifies the syntax for identifying an object or group of objects in an application or other container—that is, the syntax for constructing an object specifier (described in [Object Specifiers](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW7)).
 
 For example, the following object specifier (from a script targeting the Finder) uses several index reference forms, which identify an object by its number within a container:<a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1066"></a>
 
@@ -12,7 +12,7 @@ item 1 of second folder of disk 1
 
 > <a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_218"></a>
 >
-> **Important:** When you use a reference form, you specify the container in which the referenced object or objects reside. This takes the form *referenceForm* `of` *containerObject*. You can also enclose a reference form in a `tell` statement, which then serves to specify the outer container. For more information, see [Absolute and Relative Object Specifiers](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW25).
+> **Important:** When you use a reference form, you specify the container in which the referenced object or objects reside. This takes the form *referenceForm* `of` *containerObject*. You can also enclose a reference form in a `tell` statement, which then serves to specify the outer container. For more information, see [Absolute and Relative Object Specifiers](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW25).
 >
 > Some of the examples of reference forms shown in this chapter will not compile as shown. To compile them, you may need to add an enclosing `tell` statement, targeting the Finder or the word processing application TextEdit.
 
@@ -151,7 +151,7 @@ The following is an abbreviated form of the previous script:
 windows of application "TextEdit" whose name is not "Old Report.rtf"
 ```
 
-For related information, see [repeat Statements](ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-127362).
+For related information, see [repeat Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-127362).
 
 ##### Syntax
 
@@ -202,7 +202,7 @@ tell application "Finder"
 end tell
 ```
 
-Within a test in a filter reference, the direct object is the object being tested. Though it isn’t generally needed, this implicit target can be specified explicitly using the keyword `it`, which is described in [The it and me Keywords](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW4).
+Within a test in a filter reference, the direct object is the object being tested. Though it isn’t generally needed, this implicit target can be specified explicitly using the keyword `it`, which is described in [The it and me Keywords](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW4).
 
 The following example shows several equivalent ways of constructing a filter reference to find all the files in a folder that whose name contains the word “AppleScript”. While the term `it` refers to the Finder application outside of the filter statements, within them `of it` refers to the current file being tested. The result of each filter test is the same and is not changed by including or omitting the term `of it`:
 

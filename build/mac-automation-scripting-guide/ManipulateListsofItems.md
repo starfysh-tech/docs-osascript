@@ -7,7 +7,7 @@ In scripting, a list—typically referred to as an array in JavaScript—is a an
 > **Note**
 >
 >
-> For general information about working with lists in AppleScript, see the [list](../../../AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE) class reference documentation in *[AppleScript Language Guide](../../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983)*.
+> For general information about working with lists in AppleScript, see the [list](https://developer.apple.com/library/archive/../../AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE) class reference documentation in *[AppleScript Language Guide](https://developer.apple.com/library/archive/../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983)*.
 >
 > In JavaScript, the `Array` object provides a range of processing functions. Information about this object can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
 
@@ -19,7 +19,7 @@ Listing 21-1 and Listing 21-2 show how to incrementally loop through a list. In 
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0Arepeat%20with%20a%20from%201%20to%20length%20of%20theList%0A%20%20%20%20set%20theCurrentListItem%20to%20item%20a%20of%20theList%0A%20%20%20%20--%20Process%20the%20current%20list%20item%0A%20%20%20%20display%20dialog%20theCurrentListItem%20%26%20%22%20is%20item%20%22%20%26%20a%20%26%20%22%20in%20the%20list.%22%0Aend%20repeat)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0Arepeat%20with%20a%20from%201%20to%20length%20of%20theList%0A%20%20%20%20set%20theCurrentListItem%20to%20item%20a%20of%20theList%0A%20%20%20%20--%20Process%20the%20current%20list%20item%0A%20%20%20%20display%20dialog%20theCurrentListItem%20%26%20%22%20is%20item%20%22%20%26%20a%20%26%20%22%20in%20the%20list.%22%0Aend%20repeat)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW52"></a>
 **Listing 21-1**AppleScript: Incrementally looping through items in a list
@@ -33,7 +33,7 @@ Listing 21-1 and Listing 21-2 show how to incrementally loop through a list. In 
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Avar%20arrayLength%20%3D%20array.length%0A%0Afor%20%28var%20i%20%3D%200%3B%20i%20%3C%20arrayLength%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20var%20currentArrayItem%20%3D%20array%5Bi%5D%0A%20%20%20%20%2F%2F%20Process%20the%20current%20array%20item%0A%20%20%20%20app.displayDialog%28%60%24%7BcurrentArrayItem%7D%20is%20item%20%24%7Bi%20%2B%201%7D%20in%20the%20array.%60%29%0A%7D)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Avar%20arrayLength%20%3D%20array.length%0A%0Afor%20%28var%20i%20%3D%200%3B%20i%20%3C%20arrayLength%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20var%20currentArrayItem%20%3D%20array%5Bi%5D%0A%20%20%20%20%2F%2F%20Process%20the%20current%20array%20item%0A%20%20%20%20app.displayDialog%28%60%24%7BcurrentArrayItem%7D%20is%20item%20%24%7Bi%20%2B%201%7D%20in%20the%20array.%60%29%0A%7D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW61"></a>
 **Listing 21-2**JavaScript: Incrementally looping through items in an array
@@ -52,7 +52,7 @@ A script can also loop through a list of items more directly by dynamically assi
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0Arepeat%20with%20theCurrentListItem%20in%20theList%0A%20%20%20%20--%20Process%20the%20current%20list%20item%0A%20%20%20%20display%20dialog%20theCurrentListItem%20%26%20%22%20is%20an%20item%20in%20the%20list.%22%0Aend%20repeat)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0Arepeat%20with%20theCurrentListItem%20in%20theList%0A%20%20%20%20--%20Process%20the%20current%20list%20item%0A%20%20%20%20display%20dialog%20theCurrentListItem%20%26%20%22%20is%20an%20item%20in%20the%20list.%22%0Aend%20repeat)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW62"></a>
 **Listing 21-3**AppleScript: Directly looping through items in a list
@@ -65,7 +65,7 @@ A script can also loop through a list of items more directly by dynamically assi
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Avar%20arrayLength%20%3D%20array.length%0Afor%20%28var%20currentArrayItem%20of%20array%29%20%7B%0A%20%20%20%20%2F%2F%20Process%20the%20current%20array%20item%0A%20%20%20%20app.displayDialog%28%60%24%7BcurrentArrayItem%7D%20is%20an%20item%20in%20the%20array.%60%29%0A%7D)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Avar%20arrayLength%20%3D%20array.length%0Afor%20%28var%20currentArrayItem%20of%20array%29%20%7B%0A%20%20%20%20%2F%2F%20Process%20the%20current%20array%20item%0A%20%20%20%20app.displayDialog%28%60%24%7BcurrentArrayItem%7D%20is%20an%20item%20in%20the%20array.%60%29%0A%7D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW63"></a>
 **Listing 21-4**JavaScript: Directly looping through items in an array
@@ -82,7 +82,7 @@ A script can also loop through a list of items more directly by dynamically assi
 > **Note**
 >
 >
-> For more information about looping through list items in AppleScript, see [Control Statements Reference](../../../AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g) in *[AppleScript Language Guide](../../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983)*.
+> For more information about looping through list items in AppleScript, see [Control Statements Reference](https://developer.apple.com/library/archive/../../AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g) in *[AppleScript Language Guide](https://developer.apple.com/library/archive/../../AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html#//apple_ref/doc/uid/TP40000983)*.
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW11"></a>
 
@@ -92,7 +92,7 @@ The handler in Listing 21-5 joins a list of strings together in AppleScript, sep
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20convertListToString%28theList%2C%20theDelimiter%29%0A%20%20%20%20set%20AppleScript%27s%20text%20item%20delimiters%20to%20theDelimiter%0A%20%20%20%20set%20theString%20to%20theList%20as%20string%0A%20%20%20%20set%20AppleScript%27s%20text%20item%20delimiters%20to%20%22%22%0A%20%20%20%20return%20theString%0Aend%20convertListToString)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20convertListToString%28theList%2C%20theDelimiter%29%0A%20%20%20%20set%20AppleScript%27s%20text%20item%20delimiters%20to%20theDelimiter%0A%20%20%20%20set%20theString%20to%20theList%20as%20string%0A%20%20%20%20set%20AppleScript%27s%20text%20item%20delimiters%20to%20%22%22%0A%20%20%20%20return%20theString%0Aend%20convertListToString)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW7"></a>
 **Listing 21-5**AppleScript: Handler that converts a list of strings into a single string
@@ -108,7 +108,7 @@ Listing 21-6 shows how to call the handler in Listing 21-5.
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22The%22%2C%20%22quick%22%2C%20%22brown%22%2C%20%22fox%22%2C%20%22jumps%22%2C%20%22over%22%2C%20%22a%22%2C%20%22lazy%22%2C%20%22dog.%22%7D%0AconvertListToString%28theList%2C%20space%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22The%22%2C%20%22quick%22%2C%20%22brown%22%2C%20%22fox%22%2C%20%22jumps%22%2C%20%22over%22%2C%20%22a%22%2C%20%22lazy%22%2C%20%22dog.%22%7D%0AconvertListToString%28theList%2C%20space%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW12"></a>
 **Listing 21-6**AppleScript: Calling a handler to convert a list of strings into a single string
@@ -121,7 +121,7 @@ In JavaScript, custom scripting isn’t required to perform this operation. The 
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22The%22%2C%20%22quick%22%2C%20%22brown%22%2C%20%22fox%22%2C%20%22jumps%22%2C%20%22over%22%2C%20%22a%22%2C%20%22lazy%22%2C%20%22dog.%22%5D%0Avar%20array.join%28%22%20%22%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22The%22%2C%20%22quick%22%2C%20%22brown%22%2C%20%22fox%22%2C%20%22jumps%22%2C%20%22over%22%2C%20%22a%22%2C%20%22lazy%22%2C%20%22dog.%22%5D%0Avar%20array.join%28%22%20%22%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW54"></a>
 **Listing 21-7**JavaScript: Calling a function to convert an array of strings into a single string
@@ -133,13 +133,13 @@ In JavaScript, custom scripting isn’t required to perform this operation. The 
 > **Note**
 >
 >
-> See [Splitting Text](ManipulateText.html#//apple_ref/doc/uid/TP40016239-CH33-SW6) to learn how to break text apart, based on a specific delimiter.
+> See [Splitting Text](https://developer.apple.com/library/archive/mac-automation-scripting-guide/ManipulateText.md#//apple_ref/doc/uid/TP40016239-CH33-SW6) to learn how to break text apart, based on a specific delimiter.
 >
 > When you use AppleScriptObjC or JavaScriptObjC, you can use methods of the `NSArray` class to convert a list of strings into a single string. The handlers in Listing 21-8 and Listing 21-9 demonstrate how to do this.
 >
 > **APPLESCRIPT**
 >
-> [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20convertListToString%28theList%2C%20theDelimiter%29%0A%20%20%20%20set%20theArray%20to%20arrayWithArray_%28theList%29%20of%20NSArray%20of%20current%20application%0A%20%20%20%20set%20theString%20to%20componentsJoinedByString_%28theDelimiter%29%20of%20theArray%0A%20%20%20%20return%20%28theString%20as%20string%29%0Aend%20convertListToString)
+> [Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20convertListToString%28theList%2C%20theDelimiter%29%0A%20%20%20%20set%20theArray%20to%20arrayWithArray_%28theList%29%20of%20NSArray%20of%20current%20application%0A%20%20%20%20set%20theString%20to%20componentsJoinedByString_%28theDelimiter%29%20of%20theArray%0A%20%20%20%20return%20%28theString%20as%20string%29%0Aend%20convertListToString)
 >
 > <a id="//apple_ref/doc/uid/TP40016239-CH48-SW14"></a>
 > **Listing 21-8**AppleScriptObjC: Handler that converts a list of strings into a single string
@@ -152,7 +152,7 @@ In JavaScript, custom scripting isn’t required to perform this operation. The 
 >
 > **JAVASCRIPT**
 >
-> [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=function%20convertArrayToString%28array%2C%20delimiter%29%20%7B%0A%20%20%20%20array%20%3D%20%24%28array%29%0A%20%20%20%20array%20%3D%20array.componentsJoinedByString%28delimiter%29%0A%20%20%20%20return%20array.js%0A%7D)
+> [Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=function%20convertArrayToString%28array%2C%20delimiter%29%20%7B%0A%20%20%20%20array%20%3D%20%24%28array%29%0A%20%20%20%20array%20%3D%20array.componentsJoinedByString%28delimiter%29%0A%20%20%20%20return%20array.js%0A%7D)
 >
 > <a id="//apple_ref/doc/uid/TP40016239-CH48-SW55"></a>
 > **Listing 21-9**JavaScriptObjC: Function that converts an array of strings into a single string
@@ -171,7 +171,7 @@ Listing 21-10 and Listing 21-11 show how to get the number of items in a list.
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Apple%20Watch%22%2C%20%22iMac%22%2C%20%22iPhone%22%2C%20%22MacBook%20Pro%22%7D%0Alength%20of%20theList)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Apple%20Watch%22%2C%20%22iMac%22%2C%20%22iPhone%22%2C%20%22MacBook%20Pro%22%7D%0Alength%20of%20theList)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW18"></a>
 **Listing 21-10**AppleScript: Get the count of the items in a list
@@ -182,7 +182,7 @@ Listing 21-10 and Listing 21-11 show how to get the number of items in a list.
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Apple%20Watch%22%2C%20%22iMac%22%2C%20%22iPhone%22%2C%20%22MacBook%20Pro%22%5D%0Aarray.length)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Apple%20Watch%22%2C%20%22iMac%22%2C%20%22iPhone%22%2C%20%22MacBook%20Pro%22%5D%0Aarray.length)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW56"></a>
 **Listing 21-11**JavaScript: Get the count of the items in an array
@@ -199,7 +199,7 @@ The handlers in Listing 21-12 and Listing 21-13 count how many times an item app
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20countInstancesOfItemInList%28theList%2C%20theItem%29%0A%20%20%20%20set%20theCount%20to%200%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theList%0A%20%20%20%20%20%20%20%20if%20item%20a%20of%20theList%20is%20theItem%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theCount%20to%20theCount%20%2B%201%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%20theCount%0Aend%20countInstancesOfItemInList)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20countInstancesOfItemInList%28theList%2C%20theItem%29%0A%20%20%20%20set%20theCount%20to%200%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theList%0A%20%20%20%20%20%20%20%20if%20item%20a%20of%20theList%20is%20theItem%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theCount%20to%20theCount%20%2B%201%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%20theCount%0Aend%20countInstancesOfItemInList)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW15"></a>
 **Listing 21-12**AppleScript: Handler that counts the number of times an item appears in a list
@@ -216,7 +216,7 @@ The handlers in Listing 21-12 and Listing 21-13 count how many times an item app
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=function%20countInstancesOfItemInArray%28array%2C%20item%29%20%7B%0A%20%20%20%20var%20count%20%3D%200%0A%20%20%20%20for%20%28var%20element%20of%20array%29%20%7B%0A%20%20%20%20%20%20%20%20if%20%28element%20%3D%3D%3D%20item%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20count%2B%2B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20return%20count%0A%7D)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=function%20countInstancesOfItemInArray%28array%2C%20item%29%20%7B%0A%20%20%20%20var%20count%20%3D%200%0A%20%20%20%20for%20%28var%20element%20of%20array%29%20%7B%0A%20%20%20%20%20%20%20%20if%20%28element%20%3D%3D%3D%20item%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20count%2B%2B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20return%20count%0A%7D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW57"></a>
 **Listing 21-13**JavaScript: Function that counts the number of times an item appears in an array
@@ -235,7 +235,7 @@ Listing 21-14 and Listing 21-15 show how to call the handlers in Listing 21-12 a
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Jen%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%7D%0AcountInstancesOfItemInList%28theList%2C%20%22Jen%22%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Jen%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%7D%0AcountInstancesOfItemInList%28theList%2C%20%22Jen%22%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW16"></a>
 **Listing 21-14**AppleScript: Calling a handler to count the number of times an item appears in a list
@@ -246,7 +246,7 @@ Listing 21-14 and Listing 21-15 show how to call the handlers in Listing 21-12 a
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Jen%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%5D%0AcountInstancesOfItemInArray%28array%2C%20%22Jen%22%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Jen%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%5D%0AcountInstancesOfItemInArray%28array%2C%20%22Jen%22%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW58"></a>
 **Listing 21-15**JavaScript: Calling a function to count the number of times an item appears in an array
@@ -263,7 +263,7 @@ Listing 21-16 and Listing 21-17 return a `true` or `false` value, indicating the
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AtheList%20contains%20%22Lizzie%22)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AtheList%20contains%20%22Lizzie%22)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW19"></a>
 **Listing 21-16**AppleScript: Check for the existence of an item in a list
@@ -274,7 +274,7 @@ Listing 21-16 and Listing 21-17 return a `true` or `false` value, indicating the
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray.includes%28%22Lizzie%22%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray.includes%28%22Lizzie%22%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW59"></a>
 **Listing 21-17**JavaScript: Check for the existence of an item in an array
@@ -287,7 +287,7 @@ Listing 21-18 and Listing 21-19 demonstrate how to add an item to a list only if
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0Aif%20theList%20does%20not%20contain%20%22Jen%22%20then%0A%20%20%20%20set%20end%20of%20theList%20to%20%22Jen%22%0Aend%20if%0Areturn%20theList)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0Aif%20theList%20does%20not%20contain%20%22Jen%22%20then%0A%20%20%20%20set%20end%20of%20theList%20to%20%22Jen%22%0Aend%20if%0Areturn%20theList)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW20"></a>
 **Listing 21-18**AppleScript: Add an item to a list only if the list doesn’t contain the item
@@ -301,7 +301,7 @@ Listing 21-18 and Listing 21-19 demonstrate how to add an item to a list only if
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aif%20%28!array.includes%28%22Jen%22%29%29%20%7B%0A%20%20%20%20array.push%28%22Jen%22%29%0A%7D%0Aarray)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aif%20%28!array.includes%28%22Jen%22%29%29%20%7B%0A%20%20%20%20array.push%28%22Jen%22%29%0A%7D%0Aarray)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW60"></a>
 **Listing 21-19**JavaScript: Add an item to an array only if the array doesn’t contain the item
@@ -321,7 +321,7 @@ The handler in Listing 21-20 determines the position of an item the first time i
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20getPositionOfItemInList%28theItem%2C%20theList%29%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theList%0A%20%20%20%20%20%20%20%20if%20item%20a%20of%20theList%20is%20theItem%20then%20return%20a%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%200%0Aend%20getPositionOfItemInList)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20getPositionOfItemInList%28theItem%2C%20theList%29%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theList%0A%20%20%20%20%20%20%20%20if%20item%20a%20of%20theList%20is%20theItem%20then%20return%20a%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%200%0Aend%20getPositionOfItemInList)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW21"></a>
 **Listing 21-20**AppleScript: Handler that determines the position of an item in a list
@@ -337,7 +337,7 @@ Listing 21-21 shows how to call the handler in Listing 21-20. In AppleScript, li
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%2C%20%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%7D%0AgetPositionOfItemInList%28%22Maddie%22%2C%20theList%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%2C%20%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%7D%0AgetPositionOfItemInList%28%22Maddie%22%2C%20theList%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW22"></a>
 **Listing 21-21**AppleScript: Calling a handler to determine the position of an item in a list
@@ -350,7 +350,7 @@ In JavaScript, the `indexOf()` method of the `Array` object can be called to det
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%2C%20%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%5D%0Aarray.indexOf%28%22Maddie%22%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%2C%20%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%5D%0Aarray.indexOf%28%22Maddie%22%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW64"></a>
 **Listing 21-22**JavaScript: Determine the position of an item in an array
@@ -363,7 +363,7 @@ The `getPositionOfItemInList()` AppleScript handler and `indexOf()` JavaScript m
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theNames%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%2C%20%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%7D%0Aset%20theExtensions%20to%20%7B%22x1111%22%2C%20%22x2222%22%2C%20%22x3333%22%2C%20%22x4444%22%2C%20%22x5555%22%2C%20%22x6666%22%2C%20%22x7777%22%2C%20%22x8888%22%7D%7D%0Aset%20thePerson%20to%20choose%20from%20list%20theNames%20with%20prompt%20%22Choose%20a%20person%3A%22%0Aif%20thePerson%20is%20false%20then%20error%20number%20-128%0Aset%20theExtension%20to%20item%20%28getPositionOfItemInList%28%28thePerson%20as%20string%29%2C%20theNames%29%29%20of%20theExtensions%0Adisplay%20dialog%20%22The%20phone%20extension%20for%20%22%20%26%20thePerson%20%26%20%22%20is%20%22%20%26%20theExtension%20%26%20%22.%22)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theNames%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%2C%20%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%7D%0Aset%20theExtensions%20to%20%7B%22x1111%22%2C%20%22x2222%22%2C%20%22x3333%22%2C%20%22x4444%22%2C%20%22x5555%22%2C%20%22x6666%22%2C%20%22x7777%22%2C%20%22x8888%22%7D%7D%0Aset%20thePerson%20to%20choose%20from%20list%20theNames%20with%20prompt%20%22Choose%20a%20person%3A%22%0Aif%20thePerson%20is%20false%20then%20error%20number%20-128%0Aset%20theExtension%20to%20item%20%28getPositionOfItemInList%28%28thePerson%20as%20string%29%2C%20theNames%29%29%20of%20theExtensions%0Adisplay%20dialog%20%22The%20phone%20extension%20for%20%22%20%26%20thePerson%20%26%20%22%20is%20%22%20%26%20theExtension%20%26%20%22.%22)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW23"></a>
 **Listing 21-23**AppleScript: Using cross-referencing to locate an item in a list based on the position of an item in another list
@@ -377,7 +377,7 @@ The `getPositionOfItemInList()` AppleScript handler and `indexOf()` JavaScript m
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20names%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%2C%20%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%5D%0Avar%20extensions%20%3D%20%5B%22x1111%22%2C%20%22x2222%22%2C%20%22x3333%22%2C%20%22x4444%22%2C%20%22x5555%22%2C%20%22x6666%22%2C%20%22x7777%22%2C%20%22x8888%22%5D%0Avar%20people%20%3D%20app.chooseFromList%28names%2C%20%7BwithPrompt%3A%20%22Choose%20a%20person%3A%22%7D%29%0Aif%20%28!people%29%20%7B%0A%20%20%20%20throw%20new%20Error%28-128%29%0A%7D%0Avar%20person%20%3D%20people%5B0%5D%0Avar%20index%20%3D%20names.indexOf%28person%29%0Aconsole.log%28index%29%0Avar%20extension%20%3D%20extensions%5Bindex%5D%0Aapp.displayDialog%28%60The%20phone%20extension%20for%20%24%7Bperson%7D%20is%20%24%7Bextension%7D.%60%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20names%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%2C%20%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%5D%0Avar%20extensions%20%3D%20%5B%22x1111%22%2C%20%22x2222%22%2C%20%22x3333%22%2C%20%22x4444%22%2C%20%22x5555%22%2C%20%22x6666%22%2C%20%22x7777%22%2C%20%22x8888%22%5D%0Avar%20people%20%3D%20app.chooseFromList%28names%2C%20%7BwithPrompt%3A%20%22Choose%20a%20person%3A%22%7D%29%0Aif%20%28!people%29%20%7B%0A%20%20%20%20throw%20new%20Error%28-128%29%0A%7D%0Avar%20person%20%3D%20people%5B0%5D%0Avar%20index%20%3D%20names.indexOf%28person%29%0Aconsole.log%28index%29%0Avar%20extension%20%3D%20extensions%5Bindex%5D%0Aapp.displayDialog%28%60The%20phone%20extension%20for%20%24%7Bperson%7D%20is%20%24%7Bextension%7D.%60%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW65"></a>
 **Listing 21-24**JavaScript: Using cross-referencing to locate an item in an array based on the position of an item in another array
@@ -404,7 +404,7 @@ The handlers in Listing 21-25 and Listing 21-26 determine every position of an i
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20getPositionsOfItemInList%28theItem%2C%20theList%2C%20listFirstPositionOnly%29%0A%20%20%20%20set%20thePositions%20to%20%7B%7D%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20length%20of%20theList%0A%20%20%20%20%20%20%20%20if%20item%20a%20of%20theList%20is%20theItem%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20listFirstPositionOnly%20%3D%20true%20then%20return%20a%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20end%20of%20thePositions%20to%20a%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0A%20%20%20%20if%20listFirstPositionOnly%20is%20true%20and%20thePositions%20%3D%20%7B%7D%20then%20return%200%0A%20%20%20%20return%20thePositions%0Aend%20getPositionsOfItemInList)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20getPositionsOfItemInList%28theItem%2C%20theList%2C%20listFirstPositionOnly%29%0A%20%20%20%20set%20thePositions%20to%20%7B%7D%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20length%20of%20theList%0A%20%20%20%20%20%20%20%20if%20item%20a%20of%20theList%20is%20theItem%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20listFirstPositionOnly%20%3D%20true%20then%20return%20a%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20end%20of%20thePositions%20to%20a%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0A%20%20%20%20if%20listFirstPositionOnly%20is%20true%20and%20thePositions%20%3D%20%7B%7D%20then%20return%200%0A%20%20%20%20return%20thePositions%0Aend%20getPositionsOfItemInList)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW25"></a>
 **Listing 21-25**AppleScript: Handler that determines every position of an item in a list
@@ -423,7 +423,7 @@ The handlers in Listing 21-25 and Listing 21-26 determine every position of an i
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=function%20getPositionsOfItemInArray%28item%2C%20array%2C%20firstPositionOnly%29%20%7B%0A%20%20%20%20if%20%28firstPositionOnly%29%20%7B%0A%20%20%20%20%20%20%20%20return%20array.indexOf%28item%29%0A%20%20%20%20%7D%0A%20%20%20%20var%20indexes%20%3D%20%5B%5D%0A%20%20%20%20for%20%28var%20index%20%3D%200%3B%20index%20%3C%20array.length%3B%20index%2B%2B%29%20%7B%0A%20%20%20%20%20%20%20%20var%20element%20%3D%20array%5Bindex%5D%0A%20%20%20%20%20%20%20%20if%20%28element%20%3D%3D%3D%20item%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20indexes.push%28index%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20return%20indexes%0A%7D%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=function%20getPositionsOfItemInArray%28item%2C%20array%2C%20firstPositionOnly%29%20%7B%0A%20%20%20%20if%20%28firstPositionOnly%29%20%7B%0A%20%20%20%20%20%20%20%20return%20array.indexOf%28item%29%0A%20%20%20%20%7D%0A%20%20%20%20var%20indexes%20%3D%20%5B%5D%0A%20%20%20%20for%20%28var%20index%20%3D%200%3B%20index%20%3C%20array.length%3B%20index%2B%2B%29%20%7B%0A%20%20%20%20%20%20%20%20var%20element%20%3D%20array%5Bindex%5D%0A%20%20%20%20%20%20%20%20if%20%28element%20%3D%3D%3D%20item%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20indexes.push%28index%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20return%20indexes%0A%7D%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW66"></a>
 **Listing 21-26**JavaScript: Function that determines every position of an item in an array
@@ -446,7 +446,7 @@ Listing 21-27 and Listing 21-28 show how to call the handlers in Listing 21-25 a
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22Jen%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Jen%22%2C%20%22Lillie%22%7D%0AgetPositionsOfItemInList%28%22Jen%22%2C%20theList%2C%20false%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22Jen%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Jen%22%2C%20%22Lillie%22%7D%0AgetPositionsOfItemInList%28%22Jen%22%2C%20theList%2C%20false%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW26"></a>
 **Listing 21-27**AppleScript: Calling a handler to determine every position of an item in a list
@@ -457,7 +457,7 @@ Listing 21-27 and Listing 21-28 show how to call the handlers in Listing 21-25 a
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22Jen%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Jen%22%2C%20%22Lillie%22%5D%0AgetPositionsOfItemInArray%28%22Jen%22%2C%20array%2C%20false%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22Jen%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Jen%22%2C%20%22Lillie%22%5D%0AgetPositionsOfItemInArray%28%22Jen%22%2C%20array%2C%20false%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW67"></a>
 **Listing 21-28**JavaScript: Calling a function to determine every position of an item in an array
@@ -474,7 +474,7 @@ The handlers in Listing 21-29 and Listing 21-30 determine the highest numeric va
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20getHighestNumberInList%28theList%29%0A%20%20%20%20set%20theHighestNumber%20to%20false%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theList%0A%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20item%20a%20of%20theList%0A%20%20%20%20%20%20%20%20set%20theClass%20to%20class%20of%20theCurrentItem%0A%20%20%20%20%20%20%20%20if%20theClass%20is%20in%20%7Binteger%2C%20real%7D%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20theHighestNumber%20is%20%22%22%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theHighestNumber%20to%20theCurrentItem%0A%20%20%20%20%20%20%20%20%20%20%20%20else%20if%20theCurrentItem%20is%20greater%20than%20theHighestNumber%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theHighestNumber%20to%20item%20a%20of%20theList%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20else%20if%20theClass%20is%20list%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theHighValue%20to%20getHighestNumberInList%28theCurrentItem%29%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20theHighValue%20is%20greater%20than%20theHighestNumber%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theHighestNumber%20to%20theHighValue%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%20theHighestNumber%0Aend%20getHighestNumberInList)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20getHighestNumberInList%28theList%29%0A%20%20%20%20set%20theHighestNumber%20to%20false%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theList%0A%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20item%20a%20of%20theList%0A%20%20%20%20%20%20%20%20set%20theClass%20to%20class%20of%20theCurrentItem%0A%20%20%20%20%20%20%20%20if%20theClass%20is%20in%20%7Binteger%2C%20real%7D%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20theHighestNumber%20is%20%22%22%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theHighestNumber%20to%20theCurrentItem%0A%20%20%20%20%20%20%20%20%20%20%20%20else%20if%20theCurrentItem%20is%20greater%20than%20theHighestNumber%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theHighestNumber%20to%20item%20a%20of%20theList%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20else%20if%20theClass%20is%20list%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theHighValue%20to%20getHighestNumberInList%28theCurrentItem%29%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20theHighValue%20is%20greater%20than%20theHighestNumber%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theHighestNumber%20to%20theHighValue%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%20theHighestNumber%0Aend%20getHighestNumberInList)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW27"></a>
 **Listing 21-29**AppleScript: Handler that determines the highest numeric value in a list of items
@@ -502,7 +502,7 @@ The handlers in Listing 21-29 and Listing 21-30 determine the highest numeric va
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=function%20getHighestNumberInList%28list%29%20%7B%0A%20%20%20%20var%20highestNumber%20%3D%20undefined%0A%20%20%20%20for%20%28var%20item%20of%20list%29%20%7B%0A%20%20%20%20%20%20%20%20var%20number%20%3D%20undefined%0A%20%20%20%20%20%20%20%20if%20%28item.constructor%20%3D%3D%3D%20Number%29%20%7B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20number%20%3D%20item%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20else%20if%20%28item.constructor%20%3D%3D%3D%20Array%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20number%20%3D%20getHighestNumberInList%28item%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20if%20%28number%20!%3D%20undefined%20%26%26%20%28highestNumber%20%3D%3D%3D%20undefined%20%7C%7C%20number%20%3E%20highestNumber%29%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20highestNumber%20%3D%20number%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20return%20highestNumber%0A%7D)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=function%20getHighestNumberInList%28list%29%20%7B%0A%20%20%20%20var%20highestNumber%20%3D%20undefined%0A%20%20%20%20for%20%28var%20item%20of%20list%29%20%7B%0A%20%20%20%20%20%20%20%20var%20number%20%3D%20undefined%0A%20%20%20%20%20%20%20%20if%20%28item.constructor%20%3D%3D%3D%20Number%29%20%7B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20number%20%3D%20item%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20else%20if%20%28item.constructor%20%3D%3D%3D%20Array%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20number%20%3D%20getHighestNumberInList%28item%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20if%20%28number%20!%3D%20undefined%20%26%26%20%28highestNumber%20%3D%3D%3D%20undefined%20%7C%7C%20number%20%3E%20highestNumber%29%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20highestNumber%20%3D%20number%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20return%20highestNumber%0A%7D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW82"></a>
 **Listing 21-30**JavaScript: Function that determines the highest numeric value in a list of items
@@ -528,7 +528,7 @@ Listing 21-31 and Listing 21-32 show how to call the handlers in Listing 21-29 a
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=getHighestNumberInList%28%7B-3.25%2C%2023%2C%202345%2C%20%22sid%22%2C%203%2C%2067%7D%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=getHighestNumberInList%28%7B-3.25%2C%2023%2C%202345%2C%20%22sid%22%2C%203%2C%2067%7D%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW28"></a>
 **Listing 21-31**AppleScript: Calling a handler to determine the highest numeric value in a list of numbers and strings
@@ -538,7 +538,7 @@ Listing 21-31 and Listing 21-32 show how to call the handlers in Listing 21-29 a
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=getHighestNumberInList%28%5B-3.25%2C%2023%2C%202345%2C%20%22sid%22%2C%203%2C%2067%5D%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=getHighestNumberInList%28%5B-3.25%2C%2023%2C%202345%2C%20%22sid%22%2C%203%2C%2067%5D%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW83"></a>
 **Listing 21-32**JavaScript: Calling a function to determine the highest numeric value in a list of numbers and strings
@@ -550,7 +550,7 @@ Listing 21-33 and Listing 21-34 show how to call the handlers in Listing 21-29 a
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=getHighestNumberInList%28%7B-3.25%2C%2023%2C%20%7B23%2C%2078695%2C%20%22bob%22%7D%2C%202345%2C%20true%2C%20%22sid%22%2C%203%2C%2067%7D%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=getHighestNumberInList%28%7B-3.25%2C%2023%2C%20%7B23%2C%2078695%2C%20%22bob%22%7D%2C%202345%2C%20true%2C%20%22sid%22%2C%203%2C%2067%7D%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW29"></a>
 **Listing 21-33**AppleScript: Calling a handler to determine the highest numeric value in a list of different value types
@@ -560,7 +560,7 @@ Listing 21-33 and Listing 21-34 show how to call the handlers in Listing 21-29 a
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=getHighestNumberInList%28%5B-3.25%2C%2023%2C%20%5B23%2C%2078695%2C%20%22bob%22%5D%2C%202345%2C%20true%2C%20%22sid%22%2C%203%2C%2067%5D%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=getHighestNumberInList%28%5B-3.25%2C%2023%2C%20%5B23%2C%2078695%2C%20%22bob%22%5D%2C%202345%2C%20true%2C%20%22sid%22%2C%203%2C%2067%5D%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW84"></a>
 **Listing 21-34**JavaScript: Calling a function to determine the highest numeric value in a list of different value types
@@ -572,7 +572,7 @@ Listing 21-35 and Listing 21-36 show how to call the handlers in Listing 21-29 a
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=getHighestNumberInList%28%7B%22this%22%2C%20%22list%22%2C%20%22contains%22%2C%20%22only%22%2C%20%22text%22%7D%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=getHighestNumberInList%28%7B%22this%22%2C%20%22list%22%2C%20%22contains%22%2C%20%22only%22%2C%20%22text%22%7D%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW30"></a>
 **Listing 21-35**AppleScript: Calling a handler to determine the highest numeric value in a list of strings
@@ -582,7 +582,7 @@ Listing 21-35 and Listing 21-36 show how to call the handlers in Listing 21-29 a
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=getHighestNumberInList%28%5B%22this%22%2C%20%22list%22%2C%20%22contains%22%2C%20%22only%22%2C%20%22text%22%5D%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=getHighestNumberInList%28%5B%22this%22%2C%20%22list%22%2C%20%22contains%22%2C%20%22only%22%2C%20%22text%22%5D%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW85"></a>
 **Listing 21-36**JavaScript: Calling a function to determine the highest numeric value in a list of strings
@@ -598,7 +598,7 @@ The handlers in Listing 21-37 and Listing 21-38 determines the lowest numeric va
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20getLowestNumberInList%28theList%29%0A%20%20%20%20set%20theLowestNumber%20to%20false%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theList%0A%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20item%20a%20of%20theList%0A%20%20%20%20%20%20%20%20set%20theClass%20to%20class%20of%20theCurrentItem%0A%20%20%20%20%20%20%20%20if%20theClass%20is%20in%20%7Binteger%2C%20real%7D%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20theLowestNumber%20is%20%22%22%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowestNumber%20to%20theCurrentItem%0A%20%20%20%20%20%20%20%20%20%20%20%20else%20if%20theCurrentItem%20is%20less%20than%20theLowestNumber%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowestNumber%20to%20item%20a%20of%20theList%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20else%20if%20theClass%20is%20list%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowValue%20to%20getLowestNumberInList%28theCurrentItem%29%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20theLowValue%20is%20less%20than%20theLowestNumber%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowestNumber%20to%20theLowValue%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%20theLowestNumber%0Aend%20getLowestNumberInList)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20getLowestNumberInList%28theList%29%0A%20%20%20%20set%20theLowestNumber%20to%20false%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theList%0A%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20item%20a%20of%20theList%0A%20%20%20%20%20%20%20%20set%20theClass%20to%20class%20of%20theCurrentItem%0A%20%20%20%20%20%20%20%20if%20theClass%20is%20in%20%7Binteger%2C%20real%7D%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20theLowestNumber%20is%20%22%22%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowestNumber%20to%20theCurrentItem%0A%20%20%20%20%20%20%20%20%20%20%20%20else%20if%20theCurrentItem%20is%20less%20than%20theLowestNumber%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowestNumber%20to%20item%20a%20of%20theList%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20else%20if%20theClass%20is%20list%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowValue%20to%20getLowestNumberInList%28theCurrentItem%29%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20theLowValue%20is%20less%20than%20theLowestNumber%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowestNumber%20to%20theLowValue%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%20theLowestNumber%0Aend%20getLowestNumberInList)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW31"></a>
 **Listing 21-37**AppleScript: Handler that determines the lowest numeric value in a list of items
@@ -626,7 +626,7 @@ The handlers in Listing 21-37 and Listing 21-38 determines the lowest numeric va
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=function%20getLowestNumberInList%28list%29%20%7B%0A%20%20%20%20var%20lowestNumber%20%3D%20undefined%0A%20%20%20%20for%20%28var%20item%20of%20list%29%20%7B%0A%20%20%20%20%20%20%20%20var%20number%20%3D%20undefined%0A%20%20%20%20%20%20%20%20if%20%28item.constructor%20%3D%3D%3D%20Number%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20number%20%3D%20item%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20else%20if%20%28item.constructor%20%3D%3D%3D%20Array%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20number%20%3D%20getLowestNumberInList%28item%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20if%20%28number%20!%3D%20undefined%20%26%26%20%28lowestNumber%20%3D%3D%3D%20undefined%20%7C%7C%20number%20%3C%20lowestNumber%29%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20lowestNumber%20%3D%20number%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20return%20lowestNumber%0A%7D%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=function%20getLowestNumberInList%28list%29%20%7B%0A%20%20%20%20var%20lowestNumber%20%3D%20undefined%0A%20%20%20%20for%20%28var%20item%20of%20list%29%20%7B%0A%20%20%20%20%20%20%20%20var%20number%20%3D%20undefined%0A%20%20%20%20%20%20%20%20if%20%28item.constructor%20%3D%3D%3D%20Number%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20number%20%3D%20item%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20else%20if%20%28item.constructor%20%3D%3D%3D%20Array%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20number%20%3D%20getLowestNumberInList%28item%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20if%20%28number%20!%3D%20undefined%20%26%26%20%28lowestNumber%20%3D%3D%3D%20undefined%20%7C%7C%20number%20%3C%20lowestNumber%29%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20lowestNumber%20%3D%20number%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20return%20lowestNumber%0A%7D%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW86"></a>
 **Listing 21-38**JavaScript: Function that determines the lowest numeric value in a list of items
@@ -652,7 +652,7 @@ Listing 21-39 and Listing 21-40 show how to call the handlers in Listing 21-37 a
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=getLowestNumberInList%28%7B-3.25%2C%2023%2C%202345%2C%20%22sid%22%2C%203%2C%2067%7D%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=getLowestNumberInList%28%7B-3.25%2C%2023%2C%202345%2C%20%22sid%22%2C%203%2C%2067%7D%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW32"></a>
 **Listing 21-39**AppleScript: Calling a handler to determine the lowest numeric value in a list of numbers and strings
@@ -662,7 +662,7 @@ Listing 21-39 and Listing 21-40 show how to call the handlers in Listing 21-37 a
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=getLowestNumberInList%28%5B-3.25%2C%2023%2C%202345%2C%20%22sid%22%2C%203%2C%2067%5D%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=getLowestNumberInList%28%5B-3.25%2C%2023%2C%202345%2C%20%22sid%22%2C%203%2C%2067%5D%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW87"></a>
 **Listing 21-40**JavaScript: Calling a function to determine the lowest numeric value in a list of strings
@@ -674,7 +674,7 @@ Listing 21-41 and Listing 21-42 show how to call the handlers in Listing 21-37 a
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=getLowestNumberInList%28%7B-3.25%2C%2023%2C%20%7B-22%2C%2078695%2C%20%22Sal%22%7D%2C%202345%2C%20true%2C%20%22sid%22%2C%203%2C%2067%7D%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=getLowestNumberInList%28%7B-3.25%2C%2023%2C%20%7B-22%2C%2078695%2C%20%22Sal%22%7D%2C%202345%2C%20true%2C%20%22sid%22%2C%203%2C%2067%7D%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW33"></a>
 **Listing 21-41**AppleScript: Calling a handler to determine the lowest numeric value in a list of different value types
@@ -684,7 +684,7 @@ Listing 21-41 and Listing 21-42 show how to call the handlers in Listing 21-37 a
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=getLowestNumberInList%28%5B-3.25%2C%2023%2C%20%5B-22%2C%2078695%2C%20%22bob%22%5D%2C%202345%2C%20true%2C%20%22sid%22%2C%203%2C%2067%5D%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=getLowestNumberInList%28%5B-3.25%2C%2023%2C%20%5B-22%2C%2078695%2C%20%22bob%22%5D%2C%202345%2C%20true%2C%20%22sid%22%2C%203%2C%2067%5D%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW88"></a>
 **Listing 21-42**JavaScript: Calling a function to determine the lowest numeric value in a list of different value types
@@ -696,7 +696,7 @@ Listing 21-43 and Listing 21-44 show how to call the handlers in Listing 21-37 a
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=getLowestNumberInList%28%7B%22this%22%2C%20%22list%22%2C%20%22contains%22%2C%20%22only%22%2C%20%22text%22%7D%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=getLowestNumberInList%28%7B%22this%22%2C%20%22list%22%2C%20%22contains%22%2C%20%22only%22%2C%20%22text%22%7D%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW34"></a>
 **Listing 21-43**AppleScript: Calling a handler to determine the lowest numeric value in a list of strings
@@ -706,7 +706,7 @@ Listing 21-43 and Listing 21-44 show how to call the handlers in Listing 21-37 a
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=getLowestNumberInList%28%5B%22this%22%2C%20%22list%22%2C%20%22contains%22%2C%20%22only%22%2C%20%22text%22%5D%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=getLowestNumberInList%28%5B%22this%22%2C%20%22list%22%2C%20%22contains%22%2C%20%22only%22%2C%20%22text%22%5D%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW89"></a>
 **Listing 21-44**JavaScript: Calling a function to determine the lowest numeric value in a list of strings
@@ -727,7 +727,7 @@ The handlers in Listing 21-45 and Listing 21-46 insert an item into a list. Prov
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20insertItemInList%28theItem%2C%20theList%2C%20thePosition%29%0A%20%20%20%20set%20theListCount%20to%20length%20of%20theList%0A%20%20%20%20if%20thePosition%20is%200%20then%0A%20%20%20%20%20%20%20%20return%20false%0A%20%20%20%20else%20if%20thePosition%20is%20less%20than%200%20then%0A%20%20%20%20%20%20%20%20if%20%28thePosition%20*%20-1%29%20is%20greater%20than%20theListCount%20%2B%201%20then%20return%20false%0A%20%20%20%20else%0A%20%20%20%20%20%20%20%20if%20thePosition%20is%20greater%20than%20theListCount%20%2B%201%20then%20return%20false%0A%20%20%20%20end%20if%0A%20%20%20%20if%20thePosition%20is%20less%20than%200%20then%0A%20%20%20%20%20%20%20%20if%20%28thePosition%20*%20-1%29%20is%20theListCount%20%2B%201%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20beginning%20of%20theList%20to%20theItem%0A%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theList%20to%20reverse%20of%20theList%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20thePosition%20to%20%28thePosition%20*%20-1%29%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20thePosition%20is%201%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20beginning%20of%20theList%20to%20theItem%0A%20%20%20%20%20%20%20%20%20%20%20%20else%20if%20thePosition%20is%20%28theListCount%20%2B%201%29%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20end%20of%20theList%20to%20theItem%0A%20%20%20%20%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theList%20to%20%28items%201%20thru%20%28thePosition%20-%201%29%20of%20theList%29%20%26%20theItem%20%26%20%28items%20thePosition%20thru%20-1%20of%20theList%29%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theList%20to%20reverse%20of%20theList%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20else%0A%20%20%20%20%20%20%20%20if%20thePosition%20is%201%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20beginning%20of%20theList%20to%20theItem%0A%20%20%20%20%20%20%20%20else%20if%20thePosition%20is%20%28theListCount%20%2B%201%29%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20end%20of%20theList%20to%20theItem%0A%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theList%20to%20%28items%201%20thru%20%28thePosition%20-%201%29%20of%20theList%29%20%26%20theItem%20%26%20%28items%20thePosition%20thru%20-1%20of%20theList%29%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20if%0A%20%20%20%20return%20theList%0Aend%20insertItemInList)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20insertItemInList%28theItem%2C%20theList%2C%20thePosition%29%0A%20%20%20%20set%20theListCount%20to%20length%20of%20theList%0A%20%20%20%20if%20thePosition%20is%200%20then%0A%20%20%20%20%20%20%20%20return%20false%0A%20%20%20%20else%20if%20thePosition%20is%20less%20than%200%20then%0A%20%20%20%20%20%20%20%20if%20%28thePosition%20*%20-1%29%20is%20greater%20than%20theListCount%20%2B%201%20then%20return%20false%0A%20%20%20%20else%0A%20%20%20%20%20%20%20%20if%20thePosition%20is%20greater%20than%20theListCount%20%2B%201%20then%20return%20false%0A%20%20%20%20end%20if%0A%20%20%20%20if%20thePosition%20is%20less%20than%200%20then%0A%20%20%20%20%20%20%20%20if%20%28thePosition%20*%20-1%29%20is%20theListCount%20%2B%201%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20beginning%20of%20theList%20to%20theItem%0A%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theList%20to%20reverse%20of%20theList%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20thePosition%20to%20%28thePosition%20*%20-1%29%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20thePosition%20is%201%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20beginning%20of%20theList%20to%20theItem%0A%20%20%20%20%20%20%20%20%20%20%20%20else%20if%20thePosition%20is%20%28theListCount%20%2B%201%29%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20end%20of%20theList%20to%20theItem%0A%20%20%20%20%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theList%20to%20%28items%201%20thru%20%28thePosition%20-%201%29%20of%20theList%29%20%26%20theItem%20%26%20%28items%20thePosition%20thru%20-1%20of%20theList%29%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theList%20to%20reverse%20of%20theList%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20else%0A%20%20%20%20%20%20%20%20if%20thePosition%20is%201%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20beginning%20of%20theList%20to%20theItem%0A%20%20%20%20%20%20%20%20else%20if%20thePosition%20is%20%28theListCount%20%2B%201%29%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20end%20of%20theList%20to%20theItem%0A%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theList%20to%20%28items%201%20thru%20%28thePosition%20-%201%29%20of%20theList%29%20%26%20theItem%20%26%20%28items%20thePosition%20thru%20-1%20of%20theList%29%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20if%0A%20%20%20%20return%20theList%0Aend%20insertItemInList)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW35"></a>
 **Listing 21-45**AppleScript: Handler that inserts an item into a list
@@ -770,7 +770,7 @@ The handlers in Listing 21-45 and Listing 21-46 insert an item into a list. Prov
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=function%20insertItemInArray%28item%2C%20array%2C%20position%29%20%7B%0A%20%20%20%20var%20arrayCount%20%3D%20array.length%0A%20%20%20%20if%20%28Math.abs%28position%29%20%3E%20arrayCount%29%20%7B%0A%20%20%20%20%20%20%20%20return%20false%0A%20%20%20%20%7D%0A%20%20%20else%20if%20%28position%20%3D%3D%3D%200%29%20%7B%0A%20%20%20%20%20%20%20%20array.unshift%28item%29%0A%20%20%20%20%7D%0A%20%20%20%20else%20if%20%28position%20%3C%20arrayCount%29%20%7B%0A%20%20%20%20%20%20%20%20array.splice%28position%2C%200%2C%20item%29%0A%20%20%20%20%7D%0A%20%20%20%20else%20%7B%0A%20%20%20%20%20%20%20%20array.push%28item%29%0A%20%20%20%20%7D%0A%20%20%20%20return%20array%0A%7D)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=function%20insertItemInArray%28item%2C%20array%2C%20position%29%20%7B%0A%20%20%20%20var%20arrayCount%20%3D%20array.length%0A%20%20%20%20if%20%28Math.abs%28position%29%20%3E%20arrayCount%29%20%7B%0A%20%20%20%20%20%20%20%20return%20false%0A%20%20%20%20%7D%0A%20%20%20else%20if%20%28position%20%3D%3D%3D%200%29%20%7B%0A%20%20%20%20%20%20%20%20array.unshift%28item%29%0A%20%20%20%20%7D%0A%20%20%20%20else%20if%20%28position%20%3C%20arrayCount%29%20%7B%0A%20%20%20%20%20%20%20%20array.splice%28position%2C%200%2C%20item%29%0A%20%20%20%20%7D%0A%20%20%20%20else%20%7B%0A%20%20%20%20%20%20%20%20array.push%28item%29%0A%20%20%20%20%7D%0A%20%20%20%20return%20array%0A%7D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW69"></a>
 **Listing 21-46**JavaScript: Function that inserts an item into an array
@@ -796,7 +796,7 @@ Listing 21-47 and Listing 21-48 show how to call the handlers in Listing 21-45 a
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AinsertItemInList%28%22Jen%22%2C%20theList%2C%203%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AinsertItemInList%28%22Jen%22%2C%20theList%2C%203%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW36"></a>
 **Listing 21-47**AppleScript: Calling a handler to insert a single item at a specific position in a list
@@ -807,7 +807,7 @@ Listing 21-47 and Listing 21-48 show how to call the handlers in Listing 21-45 a
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray%20%3D%20insertItemInArray%28%22Jen%22%2C%20array%2C%202%29%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray%20%3D%20insertItemInArray%28%22Jen%22%2C%20array%2C%202%29%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW70"></a>
 **Listing 21-48**JavaScript: Calling a function to insert a single item at a specific position in an array
@@ -820,7 +820,7 @@ Listing 21-49 and Listing 21-50 show how to call the handlers in Listing 21-45 a
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AinsertItemInList%28%7B%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%7D%2C%20theList%2C%203%29%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AinsertItemInList%28%7B%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%7D%2C%20theList%2C%203%29%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW37"></a>
 **Listing 21-49**AppleScript: Calling a handler to insert multiple items at a specific position in a list
@@ -831,7 +831,7 @@ Listing 21-49 and Listing 21-50 show how to call the handlers in Listing 21-45 a
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Avar%20items%20%3D%20%5B%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%5D%0Afor%20%28var%20item%20of%20items%29%20%7B%0A%20%20%20%20array%20%3D%20insertItemInArray%28item%2C%20array%2C%202%29%0A%7D)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Avar%20items%20%3D%20%5B%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%5D%0Afor%20%28var%20item%20of%20items%29%20%7B%0A%20%20%20%20array%20%3D%20insertItemInArray%28item%2C%20array%2C%202%29%0A%7D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW71"></a>
 **Listing 21-50**JavaScript: Calling a function to insert multiple items at a specific position in an array
@@ -847,7 +847,7 @@ Listing 21-51 and Listing 21-52 show how to call the handlers in Listing 21-45 a
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AinsertItemInList%28%7B%7B%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%7D%7D%2C%20theList%2C%203%29%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AinsertItemInList%28%7B%7B%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%7D%7D%2C%20theList%2C%203%29%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW38"></a>
 **Listing 21-51**AppleScript: Calling a handler to insert a list at a specific position in a list
@@ -858,7 +858,7 @@ Listing 21-51 and Listing 21-52 show how to call the handlers in Listing 21-45 a
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray%20%3D%20insertItemInArray%28%5B%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%5D%2C%20array%2C%202%29%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray%20%3D%20insertItemInArray%28%5B%22Lizzie%22%2C%20%22Maddie%22%2C%20%22Lillie%22%5D%2C%20array%2C%202%29%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW72"></a>
 **Listing 21-52**JavaScript: Calling a function to insert a list at a specific position in an array
@@ -871,7 +871,7 @@ Listing 21-53 and Listing 21-54 show how to call the handlers in Listing 21-45 a
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AinsertItemInList%28%22Jen%22%2C%20theList%2C%20-1%29%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AinsertItemInList%28%22Jen%22%2C%20theList%2C%20-1%29%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW39"></a>
 **Listing 21-53**AppleScript: Calling a handler to insert a single item at the end of a list
@@ -882,7 +882,7 @@ Listing 21-53 and Listing 21-54 show how to call the handlers in Listing 21-45 a
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray%20%3D%20insertItemInArray%28%22Jen%22%2C%20array%2C%20array.length%29%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray%20%3D%20insertItemInArray%28%22Jen%22%2C%20array%2C%20array.length%29%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW73"></a>
 **Listing 21-54**JavaScript: Calling a function to insert a single item at the end of an array
@@ -895,7 +895,7 @@ Listing 21-55 and Listing 21-56 show how to call the handlers in Listing 21-45 a
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AinsertItemInList%28%22Wanda%22%2C%20theList%2C%20-2%29%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AinsertItemInList%28%22Wanda%22%2C%20theList%2C%20-2%29%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW40"></a>
 **Listing 21-55**AppleScript: Calling a handler to insert a single item at the second-to-last position in a list
@@ -906,7 +906,7 @@ Listing 21-55 and Listing 21-56 show how to call the handlers in Listing 21-45 a
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray%20%3D%20insertItemInArray%28%22Jen%22%2C%20array%2C%20-1%29%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray%20%3D%20insertItemInArray%28%22Jen%22%2C%20array%2C%20-1%29%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW74"></a>
 **Listing 21-56**JavaScript: Calling a function to insert a single item at the second-to-last position of an array
@@ -919,7 +919,7 @@ Listing 21-57 and Listing 21-58 show how to call the handlers in Listing 21-45 a
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AinsertItemInList%28%22Jen%22%2C%20theList%2C%2015%29%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AinsertItemInList%28%22Jen%22%2C%20theList%2C%2015%29%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW41"></a>
 **Listing 21-57**AppleScript: Calling a handler to insert a single item at a position that doesn’t exist in a list
@@ -930,7 +930,7 @@ Listing 21-57 and Listing 21-58 show how to call the handlers in Listing 21-45 a
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray%20%3D%20insertItemInArray%28%22Jen%22%2C%20array%2C%2014%29%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray%20%3D%20insertItemInArray%28%22Jen%22%2C%20array%2C%2014%29%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW75"></a>
 **Listing 21-58**JavaScript: Calling a function to insert a single item at a position that doesn’t exist in an array
@@ -947,7 +947,7 @@ You can replace an item in a list using the syntax shown in Listing 21-59 and Li
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0Aset%20item%203%20of%20theList%20to%20%22Wanda%22%0Areturn%20theList)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0Aset%20item%203%20of%20theList%20to%20%22Wanda%22%0Areturn%20theList)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW42"></a>
 **Listing 21-59**AppleScript: Replacing a specific item in a list based on position
@@ -959,7 +959,7 @@ You can replace an item in a list using the syntax shown in Listing 21-59 and Li
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray%5B2%5D%20%3D%20%22Wanda%22%0Aarray)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray%5B2%5D%20%3D%20%22Wanda%22%0Aarray)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW78"></a>
 **Listing 21-60**JavaScript: Replacing a specific item in an array based on position
@@ -973,7 +973,7 @@ The handlers in Listing 21-61 and Listing 21-62 can be used to replace an item i
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20replaceItemInList%28theItem%2C%20theList%2C%20theReplacementItem%2C%20replaceAll%29%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20the%20count%20of%20theList%0A%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20item%20a%20of%20theList%0A%20%20%20%20%20%20%20%20if%20theCurrentItem%20is%20theItem%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20item%20a%20of%20theList%20to%20theReplacementItem%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20replaceAll%20is%20false%20then%20return%20theList%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%20theList%0Aend%20replaceItemInList)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20replaceItemInList%28theItem%2C%20theList%2C%20theReplacementItem%2C%20replaceAll%29%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20the%20count%20of%20theList%0A%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20item%20a%20of%20theList%0A%20%20%20%20%20%20%20%20if%20theCurrentItem%20is%20theItem%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20item%20a%20of%20theList%20to%20theReplacementItem%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20replaceAll%20is%20false%20then%20return%20theList%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%20theList%0Aend%20replaceItemInList)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW43"></a>
 **Listing 21-61**AppleScript: Handler that replaces items in a list
@@ -991,7 +991,7 @@ The handlers in Listing 21-61 and Listing 21-62 can be used to replace an item i
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=function%20replaceItemInArray%28item%2C%20array%2C%20replacementItem%2C%20replaceAll%29%20%7B%0A%20%20%20%20var%20arrayLength%20%3D%20array.length%0A%20%20%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20arrayLength%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20%20%20%20%20var%20currentArrayItem%20%3D%20array%5Bi%5D%0A%20%20%20%20%20%20%20%20if%20%28currentArrayItem%20%3D%3D%3D%20item%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20array.splice%28i%2C%201%2C%20replacementItem%29%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28!replaceAll%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20break%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20return%20array%0A%7D)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=function%20replaceItemInArray%28item%2C%20array%2C%20replacementItem%2C%20replaceAll%29%20%7B%0A%20%20%20%20var%20arrayLength%20%3D%20array.length%0A%20%20%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20arrayLength%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20%20%20%20%20var%20currentArrayItem%20%3D%20array%5Bi%5D%0A%20%20%20%20%20%20%20%20if%20%28currentArrayItem%20%3D%3D%3D%20item%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20array.splice%28i%2C%201%2C%20replacementItem%29%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28!replaceAll%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20break%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20return%20array%0A%7D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW79"></a>
 **Listing 21-62**JavaScript: Function that replaces items in an array
@@ -1014,7 +1014,7 @@ Listing 21-63 and Listing 21-64 show how to call the handlers in Listing 21-61 a
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Jen%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%7D%0AreplaceItemInList%28%22Jen%22%2C%20theList%2C%20%22Lizzie%22%2C%20true%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Jen%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%7D%0AreplaceItemInList%28%22Jen%22%2C%20theList%2C%20%22Lizzie%22%2C%20true%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW44"></a>
 **Listing 21-63**AppleScript: Calling a handler to replace items in a list
@@ -1025,7 +1025,7 @@ Listing 21-63 and Listing 21-64 show how to call the handlers in Listing 21-61 a
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Jen%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%5D%0AreplaceItemInArray%28%22Jen%22%2C%20array%2C%20%22Lizzie%22%2C%20true%29%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Jen%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%2C%20%22Jen%22%5D%0AreplaceItemInArray%28%22Jen%22%2C%20array%2C%20%22Lizzie%22%2C%20true%29%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW80"></a>
 **Listing 21-64**JavaScript: Calling a function to replace items in an array
@@ -1042,7 +1042,7 @@ The handler in Listing 21-65 sorts a list of strings or numbers in AppleScript.
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20sortList%28theList%29%0A%20%20%20%20set%20theIndexList%20to%20%7B%7D%0A%20%20%20%20set%20theSortedList%20to%20%7B%7D%0A%20%20%20%20repeat%20%28length%20of%20theList%29%20times%0A%20%20%20%20%20%20%20%20set%20theLowItem%20to%20%22%22%0A%20%20%20%20%20%20%20%20repeat%20with%20a%20from%201%20to%20%28length%20of%20theList%29%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20a%20is%20not%20in%20theIndexList%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20item%20a%20of%20theList%20as%20text%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20theLowItem%20is%20%22%22%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowItem%20to%20theCurrentItem%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowItemIndex%20to%20a%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20else%20if%20theCurrentItem%20comes%20before%20theLowItem%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowItem%20to%20theCurrentItem%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowItemIndex%20to%20a%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20end%20repeat%0A%20%20%20%20%20%20%20%20set%20end%20of%20theSortedList%20to%20theLowItem%0A%20%20%20%20%20%20%20%20set%20end%20of%20theIndexList%20to%20theLowItemIndex%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%20theSortedList%0Aend%20sortList)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20sortList%28theList%29%0A%20%20%20%20set%20theIndexList%20to%20%7B%7D%0A%20%20%20%20set%20theSortedList%20to%20%7B%7D%0A%20%20%20%20repeat%20%28length%20of%20theList%29%20times%0A%20%20%20%20%20%20%20%20set%20theLowItem%20to%20%22%22%0A%20%20%20%20%20%20%20%20repeat%20with%20a%20from%201%20to%20%28length%20of%20theList%29%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20a%20is%20not%20in%20theIndexList%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20item%20a%20of%20theList%20as%20text%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20theLowItem%20is%20%22%22%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowItem%20to%20theCurrentItem%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowItemIndex%20to%20a%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20else%20if%20theCurrentItem%20comes%20before%20theLowItem%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowItem%20to%20theCurrentItem%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20set%20theLowItemIndex%20to%20a%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20%20%20%20%20end%20repeat%0A%20%20%20%20%20%20%20%20set%20end%20of%20theSortedList%20to%20theLowItem%0A%20%20%20%20%20%20%20%20set%20end%20of%20theIndexList%20to%20theLowItemIndex%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%20theSortedList%0Aend%20sortList)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW45"></a>
 **Listing 21-65**AppleScript: Handler that sorts a list of strings
@@ -1074,7 +1074,7 @@ Listing 21-66 shows how to call the handler in Listing 21-65.
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AsortList%28theList%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0AsortList%28theList%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW46"></a>
 **Listing 21-66**AppleScript: Calling a handler to sort a list of strings
@@ -1087,7 +1087,7 @@ To perform a reverse (descending) sort, use the reverse command, as shown in Lis
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0Areverse%20of%20sortList%28theList%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theList%20to%20%7B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%7D%0Areverse%20of%20sortList%28theList%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW47"></a>
 **Listing 21-67**AppleScript: Calling a handler to sort a list of strings in reverse order
@@ -1100,7 +1100,7 @@ In JavaScript, the `Array` object has a `sort` method, which sorts the array’s
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray.sort%28%29%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray.sort%28%29%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW76"></a>
 **Listing 21-68**JavaScript: Sorting an array of strings
@@ -1113,7 +1113,7 @@ As in AppleScript, a sorted JavaScript array can be reversed, as shown in Listin
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray.sort%28%29%0Aarray.reverse%28%29%0A)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20array%20%3D%20%5B%22Sal%22%2C%20%22Ben%22%2C%20%22David%22%2C%20%22Chris%22%5D%0Aarray.sort%28%29%0Aarray.reverse%28%29%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH48-SW77"></a>
 **Listing 21-69**JavaScript: Sorting an array of strings in reverse order
@@ -1130,7 +1130,7 @@ As in AppleScript, a sorted JavaScript array can be reversed, as shown in Listin
 >
 > **APPLESCRIPT**
 >
-> [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20sortList%28theList%29%0A%20%20%20%20set%20theArray%20to%20arrayWithArray_%28theList%29%20of%20NSArray%20of%20current%20application%0A%20%20%20%20set%20theSortedList%20to%20sortedArrayUsingSelector_%28%22localizedStandardCompare%3A%22%29%20of%20theArray%0A%20%20%20%20return%20%28theSortedList%20as%20list%29%0Aend%20sortList)
+> [Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20sortList%28theList%29%0A%20%20%20%20set%20theArray%20to%20arrayWithArray_%28theList%29%20of%20NSArray%20of%20current%20application%0A%20%20%20%20set%20theSortedList%20to%20sortedArrayUsingSelector_%28%22localizedStandardCompare%3A%22%29%20of%20theArray%0A%20%20%20%20return%20%28theSortedList%20as%20list%29%0Aend%20sortList)
 >
 > <a id="//apple_ref/doc/uid/TP40016239-CH48-SW49"></a>
 > **Listing 21-70**AppleScriptObjC: Handler that sorts a list of strings
@@ -1143,7 +1143,7 @@ As in AppleScript, a sorted JavaScript array can be reversed, as shown in Listin
 >
 > **JAVASCRIPT**
 >
-> [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=function%20sortArray%28array%29%20%7B%0A%20%20%20%20array%20%3D%20%24%28array%29%0A%20%20%20%20var%20sortedArray%20%3D%20array.sortedArrayUsingSelector%28%22localizedStandardCompare%3A%22%29%0A%20%20%20%20return%20ObjC.deepUnwrap%28sortedArray%29%0A%7D)
+> [Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=function%20sortArray%28array%29%20%7B%0A%20%20%20%20array%20%3D%20%24%28array%29%0A%20%20%20%20var%20sortedArray%20%3D%20array.sortedArrayUsingSelector%28%22localizedStandardCompare%3A%22%29%0A%20%20%20%20return%20ObjC.deepUnwrap%28sortedArray%29%0A%7D)
 >
 > <a id="//apple_ref/doc/uid/TP40016239-CH48-SW81"></a>
 > **Listing 21-71**JavaScriptObjC: Function that sorts an array of strings

@@ -9,7 +9,7 @@ This chapter describes how to work with handlers, in the following sections:
 * [Handler Basics](#//apple_ref/doc/uid/TP40000983-CH206-SW3)
 * [Handlers in Script Applications](#//apple_ref/doc/uid/TP40000983-CH206-SW14)
 
-For detailed reference information, see [Handler Reference](../reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-163762).
+For detailed reference information, see [Handler Reference](../reference/ASLR_handlers.md#//apple_ref/doc/uid/TP40000983-CH7g-163762).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH206-SW3"></a>
 
@@ -68,7 +68,7 @@ helloWorld() -- Call the handler
 
 ### Handlers with Labeled Parameters
 
-<a id="//apple_ref/doc/uid/TP40000983-CH206-DontLinkElementID_234"></a><a id="//apple_ref/doc/uid/TP40000983-CH206-DontLinkElementID_235"></a>To define a handler with labeled parameters, you list the labels to use when calling the handler and the statements to be executed when it is called. (The syntax is shown in [Handler Syntax (Labeled Parameters)](../reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-SW2).)
+<a id="//apple_ref/doc/uid/TP40000983-CH206-DontLinkElementID_234"></a><a id="//apple_ref/doc/uid/TP40000983-CH206-DontLinkElementID_235"></a>To define a handler with labeled parameters, you list the labels to use when calling the handler and the statements to be executed when it is called. (The syntax is shown in [Handler Syntax (Labeled Parameters)](../reference/ASLR_handlers.md#//apple_ref/doc/uid/TP40000983-CH7g-SW2).)
 
 Handlers with labeled parameters can also have a direct parameter. With the exception of the direct parameter, which must directly follow the handler name, labeled parameters can appear in any order, with the labels from the handler definition identifying the parameter values. This includes parameters listed in `given`, `with`, and `without` clauses (of which there can be any number).
 
@@ -131,7 +131,7 @@ check for 8 from 7 thru 10 -- call the handler
 
 ### Handlers with Positional Parameters
 
-<a id="//apple_ref/doc/uid/TP40000983-CH206-DontLinkElementID_236"></a><a id="//apple_ref/doc/uid/TP40000983-CH206-DontLinkElementID_237"></a>The definition for a handler with positional parameters shows the order in which to list parameters when calling the handler and the statements to be executed when the handler is called. The definition must include parentheses, even if it doesn’t include any parameters. The syntax is shown in [Handler Syntax (Positional Parameters)](../reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-166812).
+<a id="//apple_ref/doc/uid/TP40000983-CH206-DontLinkElementID_236"></a><a id="//apple_ref/doc/uid/TP40000983-CH206-DontLinkElementID_237"></a>The definition for a handler with positional parameters shows the order in which to list parameters when calling the handler and the statements to be executed when the handler is called. The definition must include parentheses, even if it doesn’t include any parameters. The syntax is shown in [Handler Syntax (Positional Parameters)](../reference/ASLR_handlers.md#//apple_ref/doc/uid/TP40000983-CH7g-166812).
 
 In the following example, the `minimumValue` routine returns the smaller of two values:
 
@@ -203,7 +203,7 @@ minimumValue(20, maximumValue(1, 313)) --result: 20
 
 ### Handlers with Interleaved Parameters
 
-<a id="//apple_ref/doc/uid/TP40000983-CH206-DontLinkElementID_240"></a><a id="//apple_ref/doc/uid/TP40000983-CH206-DontLinkElementID_241"></a>A handler with interleaved parameters is a special case of one with positional parameters. The definition shows the order in which to list parameters when calling the handler and the statements to be executed when the handler is called, but the name of the handler is broken into pieces and interleaved with the parameters, which can make it easier to read. Handlers with interleaved parameters may be used in any script, but are especially useful with bridged Objective-C methods, since they naturally resemble Objective-C syntax. The syntax is shown in [Handler Syntax (Interleaved Parameters)](../reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-SW4).
+<a id="//apple_ref/doc/uid/TP40000983-CH206-DontLinkElementID_240"></a><a id="//apple_ref/doc/uid/TP40000983-CH206-DontLinkElementID_241"></a>A handler with interleaved parameters is a special case of one with positional parameters. The definition shows the order in which to list parameters when calling the handler and the statements to be executed when the handler is called, but the name of the handler is broken into pieces and interleaved with the parameters, which can make it easier to read. Handlers with interleaved parameters may be used in any script, but are especially useful with bridged Objective-C methods, since they naturally resemble Objective-C syntax. The syntax is shown in [Handler Syntax (Interleaved Parameters)](../reference/ASLR_handlers.md#//apple_ref/doc/uid/TP40000983-CH7g-SW4).
 
 A handler with interleaved parameters may have only one parameter, as in this example:
 
@@ -254,7 +254,7 @@ The parameter “name” in a handler definition may be a simple name, as shown 
 on factorial(x as integer)
 ```
 
-The effect is as if the handler began with `set x to x as integer`; if coercing the actual value to an integer fails, AppleScript throws an appropriate error, which may be caught with a `try` block. The class may be a list of classes, as described in [Operators Reference](../reference/ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124070).
+The effect is as if the handler began with `set x to x as integer`; if coercing the actual value to an integer fails, AppleScript throws an appropriate error, which may be caught with a `try` block. The class may be a list of classes, as described in [Operators Reference](../reference/ASLR_operators.md#//apple_ref/doc/uid/TP40000983-CH5g-124070).
 
 Labeled parameters may be declared with a default value by following the formal parameter name with `:`*literal*. Doing so makes the parameter optional when called. For example, this declares a `make` handler with a default value for the `with data` parameter:
 
@@ -301,13 +301,13 @@ In addition, a recursive handler may not be the most efficient solution to a pro
 
 <a id="//apple_ref/doc/uid/TP40000983-CH206-DontLinkElementID_245"></a>As with any AppleScript statements that may encounter an error, you can use a `try` statement to deal with possible errors in a handler. A `try` statement includes two collections of statements: one to be executed in the general case, and a second to be executed only if an error occurs.
 
-By using one or more `try` statements with a handler, you can combine the advantages of reuse and error handling in one package. For a detailed example that demonstrates this approach, see [Working with Errors](../reference/ASLR_error_xmpls.html#//apple_ref/doc/uid/TP40000983-CH221-SW1).
+By using one or more `try` statements with a handler, you can combine the advantages of reuse and error handling in one package. For a detailed example that demonstrates this approach, see [Working with Errors](../reference/ASLR_error_xmpls.md#//apple_ref/doc/uid/TP40000983-CH221-SW1).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH206-SW4"></a>
 
 ### Passing by Reference Versus Passing by Value
 
-<a id="//apple_ref/doc/uid/TP40000983-CH206-DontLinkElementID_246"></a>Within a handler, each parameter is like a variable, providing access to passed information. AppleScript passes all parameters by reference, which means that a passed variable is shared between the handler and the caller, as if the handler had created a variable using the `set` command. However, it is important to remember a point raised in [Using the copy and set Commands](ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW7): only mutable objects can actually be changed.
+<a id="//apple_ref/doc/uid/TP40000983-CH206-DontLinkElementID_246"></a>Within a handler, each parameter is like a variable, providing access to passed information. AppleScript passes all parameters by reference, which means that a passed variable is shared between the handler and the caller, as if the handler had created a variable using the `set` command. However, it is important to remember a point raised in [Using the copy and set Commands](ASLR_variables.md#//apple_ref/doc/uid/TP40000983-CH223-SW7): only mutable objects can actually be changed.
 
 As a result, a parameter’s class type determines whether information is effectively passed by value or by reference:
 
@@ -364,7 +364,7 @@ end tell
 
 What this script does as a script application depends on what you specify when you save it. If you don’t specify a startup screen or tell it to stay open, it will automatically execute once, closing the front Finder window, and then quit.
 
-If a script application modifies the value of a property, the changed value persists across launches of the application. For related information, see [Scope of Variables and Properties](ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW1).
+If a script application modifies the value of a property, the changed value persists across launches of the application. For related information, see [Scope of Variables and Properties](ASLR_variables.md#//apple_ref/doc/uid/TP40000983-CH223-SW1).
 
 For information about some common script application handlers, see the following sections:
 
@@ -372,7 +372,7 @@ For information about some common script application handlers, see the following
 * [open Handlers](#//apple_ref/doc/uid/TP40000983-CH206-SW16)
 * [idle and quit Handlers for Stay-Open Applications](#//apple_ref/doc/uid/TP40000983-CH206-SW7)
 
-See [Handler Reference](../reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-163762) for syntax information.
+See [Handler Reference](../reference/ASLR_handlers.md#//apple_ref/doc/uid/TP40000983-CH7g-163762) for syntax information.
 
 <a id="//apple_ref/doc/uid/TP40000983-CH206-SW15"></a>
 
@@ -440,7 +440,7 @@ on open names
 end open
 ```
 
-Files, folders, or disks are not moved, copied, or affected in any way by merely dropping them on a script application. However, the script application’s handler can tell Finder to move, copy, or otherwise manipulate the items. For examples that work with Finder items, see [Folder Actions Reference](../reference/ASLR_folder_actions.html#//apple_ref/doc/uid/TP40000983-CH219-SW2).
+Files, folders, or disks are not moved, copied, or affected in any way by merely dropping them on a script application. However, the script application’s handler can tell Finder to move, copy, or otherwise manipulate the items. For examples that work with Finder items, see [Folder Actions Reference](../reference/ASLR_folder_actions.md#//apple_ref/doc/uid/TP40000983-CH219-SW2).
 
 You can also run an `open` handler by sending a script application the `open` command. For details, see [Calling a Script Application From a Script](#//apple_ref/doc/uid/TP40000983-CH206-SW17).
 

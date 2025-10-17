@@ -2,13 +2,13 @@
 
 ## Snapshot (updated: 2025-10-16)
 - **Current focus**
-  - Harden coverage across mirrored collections (Script Editor User Guide now live alongside the developer docs).
-  - Outline dataset export mechanics (plain text + JSONL) so the corpus serves downstream LLM experiments.
-  - Keep the monitoring tooling current as new collections land.
+  - Finalize dataset exports across the mirrored collections and package them per `docs/dataset-packaging.md`.
+  - Keep monitoring coverage fresh by rerunning `scripts/check_updates.py` with the expanded manifest and capturing the next status report.
+  - Maintain MkDocs parity after the anchor fix and queue the GitHub Pages publish once datasets are staged.
 - **Next actions**
-  1. Draft the dataset packaging plan (scope inputs, chunking rules, automation entry points).
-  2. Run the next change-detection dry run with the expanded manifest and capture a `reports/update-status-YYYYMMDD.md`.
-  3. Choose the next backlog doc set and sketch the conversion fixtures it will need.
+  1. Run `python3 scripts/export_dataset.py` (all collections) and follow the packaging checklist.
+  2. Execute `python3 scripts/check_updates.py --manifest monitor/manifest.json --save --report reports/update-status-YYYYMMDD.md`, then triage any `changed` or `error` entries.
+  3. Mark Issue #2 (MkDocs polish) as done and draft the release notes covering the clean validation sweep.
 - **Blockers / decisions pending**
   - Determine how to handle large WWDC video assets (link-out vs. local copy).
   - Decide on the storage/export format for man-page captures (plain text vs. Markdown).
@@ -51,6 +51,7 @@
 - 2025-10-16: Updated the MkDocs landing page to link against local mirrors/archived PDFs and added `scripts/validate_site_links.py` for quick link checks.
 - 2025-10-16: Archived the Scripting Components PDF (Classic Mac OS), wired metadata/nav/monitor entries, and surfaced it on the site landing page.
 - 2025-10-16: Documented outstanding manual follow-ups in `docs/manual-followups.md` (assets, publishing, QA checks).
+- 2025-10-16: Restored `<a name>` anchors during conversion, regenerated the AppleScript Language Guide, reran MkDocs + site link + per-collection validation, and moved Issue #2 (MkDocs polish) toward done ahead of dataset export.
 - 2025-10-17: Hardened HTML→Markdown conversion (anchors, `sup` exponents, multi-line `<pre>`, definition lists) and expanded the validator/test harness so all mirrored collections compare cleanly as part of the pre-release sweep.
 
 ## Task Board

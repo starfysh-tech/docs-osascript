@@ -12,7 +12,7 @@ In addition to defining and calling handlers within a script, you can access han
 
 > <a id="//apple_ref/doc/uid/TP40000983-CH227-SW3"></a>
 >
-> **Note:** The `load script` command loads the compiled script as a `script` object; for more information, see [Script Objects](../conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-BAJJCIAA).
+> **Note:** The `load script` command loads the compiled script as a `script` object; for more information, see [Script Objects](../conceptual/ASLR_script_objects.md#//apple_ref/doc/uid/TP40000983-CH207-BAJJCIAA).
 
 For example, the following script contains two handlers: `areaOfCircle` and `factorial`:
 

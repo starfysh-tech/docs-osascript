@@ -19,7 +19,7 @@ The majority of examples in this guide are provided in both AppleScript and Java
 >
 > **JAVASCRIPT**
 >
-> [Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=numberOfPeople%20%3D%2012%0Aconsole.log%28%60There%20are%20%24%7BnumberOfPeople%7D%20people.%60%29)
+> [Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=numberOfPeople%20%3D%2012%0Aconsole.log%28%60There%20are%20%24%7BnumberOfPeople%7D%20people.%60%29)
 >
 > <a id="//apple_ref/doc/uid/TP40016239-CH71-SW3"></a>
 > **Listing 4-1**JavaScript: Example of a Template String with an embedded expression
@@ -37,11 +37,11 @@ Links have been provided throughout this guide to open example code directly in 
 
 <a id="//apple_ref/doc/uid/TP40016239-CH71-SW5"></a>
 **Figure 4-1**The dialog that opens when you click the “Open in Script Editor” link
-![image: ../Art/scripteditor_openscript_alert_2x.png](Art/scripteditor_openscript_alert_2x.png)
+![image: ../Art/scripteditor_openscript_alert_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/scripteditor_openscript_alert_2x.png)
 <a id="//apple_ref/doc/uid/TP40016239-CH71-SW6"></a>
 **Figure 4-2**Example of a script that opens after you click the New Script button
-![image: ../Art/scripteditor_openedscript_2x.png](Art/scripteditor_openedscript_2x.png)
+![image: ../Art/scripteditor_openedscript_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/scripteditor_openedscript_2x.png)
 > **Note**
 >
 >
-> New Script Editor documents are set to use your default scripting language, as configured in the General pane of Script Editor preferences. See [Targeting a Scripting Language](GettoKnowScriptEditor.html#//apple_ref/doc/uid/TP40016239-CH5-SW4) to learn how to configure an example script to target a different scripting language.
+> New Script Editor documents are set to use your default scripting language, as configured in the General pane of Script Editor preferences. See [Targeting a Scripting Language](https://developer.apple.com/library/archive/mac-automation-scripting-guide/GettoKnowScriptEditor.md#//apple_ref/doc/uid/TP40016239-CH5-SW4) to learn how to configure an example script to target a different scripting language.

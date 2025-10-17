@@ -2,13 +2,13 @@
 
 # Commands Reference
 
-<a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_640"></a><a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_641"></a>This chapter describes the commands available to perform actions in AppleScript scripts. For information on how commands work, see [Commands Overview](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW8).
+<a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_640"></a><a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_641"></a>This chapter describes the commands available to perform actions in AppleScript scripts. For information on how commands work, see [Commands Overview](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW8).
 
-The commands described in this chapter are available to any script—they are either built into the AppleScript language or added to it through the standard scripting additions (described in [Scripting Additions](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW3)).
+The commands described in this chapter are available to any script—they are either built into the AppleScript language or added to it through the standard scripting additions (described in [Scripting Additions](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW3)).
 
 > <a id="//apple_ref/doc/uid/TP40000983-CH216-SW67"></a>
 >
-> **Note:** In the command descriptions below, if the first item in the Parameters list does not include a parameter name, it is the direct parameter of the command (described in [Direct Parameter](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW13)).
+> **Note:** In the command descriptions below, if the first item in the Parameters list does not include a parameter name, it is the direct parameter of the command (described in [Direct Parameter](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW13)).
 
 Table 7-1 lists each command according to the suite (or related group) of commands to which it belongs and provides a brief description. Detailed command descriptions follow the table, in alphabetical order.
 
@@ -119,7 +119,7 @@ tell application "TextEdit" to activate
 
 ##### Discussion
 
-The `activate` command does not launch applications on remote machines. For examples of other ways to specify an application, see the `application` class and [Remote Applications](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW9).
+The `activate` command does not launch applications on remote machines. For examples of other ways to specify an application, see the `application` class and [Remote Applications](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW9).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-SW21"></a><a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_663"></a>
 
@@ -141,7 +141,7 @@ Returns the character for a specified number.
 
 ##### Parameters
 
-*[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
+*[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
 :   The character code, an integer between 0 and 255.
 
 ##### Result
@@ -186,7 +186,7 @@ Returns the number associated with a specified character.
 
 ##### Parameters
 
-*[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+*[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   A `text` object containing at least one character. If there is more than one character, only the first one is used.
 
 ##### Result
@@ -222,7 +222,7 @@ Plays the system alert sound one or more times.
 
 ##### Parameters
 
-*[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
+*[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
 :   Number of times to beep.
 
 *Default Value:*
@@ -263,25 +263,25 @@ Allows the user to choose an application.
 
 ##### Parameters
 
-`with title` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`with title` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   Title text for the dialog.
 
 *Default Value:*
 :   `"Choose Application"`
 
-`with prompt` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`with prompt` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   A prompt to be displayed in the dialog.
 
 *Default Value:*
 :   `"Select an application:"`
 
-`multiple selections allowed` *[boolean](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
+`multiple selections allowed` *[boolean](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
 :   Allow multiple items to be selected? If `true`, the results will be returned in a list, even if there is exactly one item.
 
 *Default Value:*
 :   `false`
 
-`as` *class* ( *[application](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW2)* | *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* )
+`as` *class* ( *[application](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW2)* | *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* )
 :   Specifies the desired class of the result. If specified, the value must be one of `application` or `alias`.
 
 *Default Value:*
@@ -291,7 +291,7 @@ Allows the user to choose an application.
 
 The selected application, as either an `application` or `alias` object; for example, `application "TextEdit"`. If multiple selections are allowed, returns a list containing one item for each selected application, if any.
 
-Signals a “user canceled” error if the user cancels the dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-128973).
+Signals a “user canceled” error if the user cancels the dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_74"></a>
 
@@ -324,7 +324,7 @@ Allows the user to choose a color from a color picker dialog.
 
 ##### Parameters
 
-`default color` *[RGB color](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW1)*
+`default color` *[RGB color](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW1)*
 :   The color to show when the color picker dialog is first opened.
 
 *Default Value:*
@@ -334,7 +334,7 @@ Allows the user to choose a color from a color picker dialog.
 
 The selected color, represented as a list of three integers from 0 to 65535 corresponding to the red, green, and blue components of a color; for example, {0, 65535, 0} represents green.
 
-Signals a “user canceled” error if the user cancels the `choose color` dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-128973).
+Signals a “user canceled” error if the user cancels the `choose color` dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_76"></a>
 
@@ -373,37 +373,37 @@ Allows the user to choose a file.
 
 ##### Parameters
 
-`with prompt` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`with prompt` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The prompt to be displayed in the dialog.
 
 *Default Value:*
 :   None; no prompt is displayed.
 
-`of type` *[list](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE)* of *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
-:   A list of Uniform Type Identifiers (UTIs); for example, `{"public.html", "public.rtf"}`. Only files of the specified types will be selectable. For a list of system-defined UTIs, see *[Uniform Type Identifiers Overview](../../../../FileManagement/Conceptual/understanding_utis/understand_utis_intro/understand_utis_intro.html#//apple_ref/doc/uid/TP40001319)*. To get the UTI for a particular file, use `info for`. <a id="//apple_ref/doc/uid/TP40000983-CH216-SW85"></a> **Note:** Four-character file type codes, such as `"PICT"` or `"MooV"`, are also supported, but are deprecated. To get the file type code for a particular file, use `info for`.
+`of type` *[list](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE)* of *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+:   A list of Uniform Type Identifiers (UTIs); for example, `{"public.html", "public.rtf"}`. Only files of the specified types will be selectable. For a list of system-defined UTIs, see *[Uniform Type Identifiers Overview](https://developer.apple.com/library/archive/../../FileManagement/Conceptual/understanding_utis/understand_utis_intro/understand_utis_intro.html#//apple_ref/doc/uid/TP40001319)*. To get the UTI for a particular file, use `info for`. <a id="//apple_ref/doc/uid/TP40000983-CH216-SW85"></a> **Note:** Four-character file type codes, such as `"PICT"` or `"MooV"`, are also supported, but are deprecated. To get the file type code for a particular file, use `info for`.
 
 *Default Value:*
 :   None; any file can be chosen.
 
-`default location` *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)*
+`default location` *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)*
 :   The folder to begin browsing in.
 
 *Default Value:*
 :   Browsing begins in the last selected location, or, if this is the first invocation, in the user’s `Documents` folder.
 
-`invisibles` *[boolean](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
+`invisibles` *[boolean](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
 :   Show invisible files and folders?
 
 *Default Value:*
 :   `true`: This is only for historical compatibility reasons. Unless you have a specific need to choose invisible files, you should always use `invisibles false`.
 
-`multiple selections allowed` *[boolean](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
+`multiple selections allowed` *[boolean](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
 :   Allow multiple items to be selected? If `true`, the results will be returned in a list, even if there is exactly one item.
 
 *Default Value:*
 :   `false`
 
-`showing package contents` *[boolean](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
+`showing package contents` *[boolean](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
 :   Show the contents of packages? If `true`, packages are treated as folders, so that the user can choose a file inside a package (such as an application).
 
 *Default Value:*
@@ -413,7 +413,7 @@ Allows the user to choose a file.
 
 The selected file, as an `alias`. If multiple selections are allowed, returns a list containing one `alias` for each selected file, if any.
 
-Signals a “user canceled” error if the user cancels the dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-128973).
+Signals a “user canceled” error if the user cancels the dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_78"></a>
 
@@ -451,19 +451,19 @@ Allows the user to specify a new filename and location. This does not create a f
 
 ##### Parameters
 
-`with prompt` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`with prompt` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The prompt to be displayed near the top of the dialog.
 
 *Default Value:*
 :   `"Specify new file name and location"`
 
-`default name` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`default name` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The default file name.
 
 *Default Value:*
 :   `"untitled"`
 
-`default location` *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)*
+`default location` *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)*
 :   The default file location. See `choose file` for examples.
 
 *Default Value:*
@@ -475,7 +475,7 @@ The selected location, as a `file`. For example:
 
 ` file "HD:Users:currentUser:Documents:untitled"`
 
-Signals a “user canceled” error if the user cancels the dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-128973).
+Signals a “user canceled” error if the user cancels the dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_80"></a>
 
@@ -514,31 +514,31 @@ Allows the user to choose a directory, such as a folder or a disk.
 
 ##### Parameters
 
-`with prompt` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`with prompt` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The prompt to be displayed in the dialog.
 
 *Default Value:*
 :   None; no prompt is displayed.
 
-`default location` *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)*
+`default location` *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)*
 :   The folder to begin browsing in.
 
 *Default Value:*
 :   Browsing begins in the last selected location, or, if this is the first invocation, in the user’s `Documents` folder.
 
-`invisibles` *[boolean](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
+`invisibles` *[boolean](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
 :   Show invisible folders?
 
 *Default Value:*
 :   `false`
 
-`multiple selections allowed` *[boolean](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
+`multiple selections allowed` *[boolean](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
 :   Allow multiple items to be selected? If `true`, the results will be returned in a list, even if there is exactly one item.
 
 *Default Value:*
 :   `false`
 
-`showing package contents` *[boolean](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
+`showing package contents` *[boolean](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
 :   Show the contents of packages? If `true`, packages are treated as folders, so that the user can choose a package folder, such as an application, or a folder inside a package.
 
 *Default Value:*
@@ -548,7 +548,7 @@ Allows the user to choose a directory, such as a folder or a disk.
 
 The selected directory, as an `alias`. If multiple selections are allowed, returns a list containing one `alias` for each selected directory, if any.
 
-Signals a “user canceled” error if the user cancels the `choose folder` dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-128973).
+Signals a “user canceled” error if the user cancels the `choose folder` dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_82"></a>
 
@@ -597,46 +597,46 @@ Allows the user to choose items from a list.
 
 ##### Parameters
 
-*[list](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE)* (of *[number](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCBJDGC)* or *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* )
+*[list](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE)* (of *[number](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCBJDGC)* or *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* )
 :   A list of numbers and/or `text` objects for the user to choose from.
 
-`with title` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`with title` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   Title text for the dialog.
 
 *Default Value:*
 :   None; no title is displayed.
 
-`with prompt` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`with prompt` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The prompt to be displayed in the dialog.
 
 *Default Value:*
 :   `"Please make your selection:"`
 
-`default items` *[list](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE)* (of *[number](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCBJDGC)* or *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* )
+`default items` *[list](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE)* (of *[number](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCBJDGC)* or *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* )
 :   A list of numbers and/or `text` objects to be initially selected. The list cannot include multiple items unless you also specify `multiple selections allowed true`. If an item in the default items list is not in the list to choose from, it is ignored.
 
 *Default Value:*
 :   None; no items are selected.
 
-`OK button name` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`OK button name` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The name of the OK button.
 
 *Default Value:*
 :   `"OK"`
 
-`cancel button name` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`cancel button name` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The name of the Cancel button.
 
 *Default Value:*
 :   `"Cancel"`
 
-`multiple selections allowed` *[boolean](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
+`multiple selections allowed` *[boolean](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
 :   Allow multiple items to be selected?
 
 *Default Value:*
 :   `false`
 
-`empty selection allowed` *[boolean](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
+`empty selection allowed` *[boolean](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
 :   Allow the user to choose OK with no items selected? If `false`, the OK button will not be enabled unless at least one item is selected.
 
 *Default Value:*
@@ -686,13 +686,13 @@ choose remote application
 
 ##### Parameters
 
-`with title` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`with title` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   Title text for the `choose remote application` dialog.
 
 *Default Value:*
 :   None; no title is displayed.
 
-`with prompt` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`with prompt` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The prompt to be displayed in the dialog.
 
 *Default Value:*
@@ -702,7 +702,7 @@ choose remote application
 
 The selected application, as an `application` object.
 
-Signals a “user canceled” error if the user cancels the dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-128973).
+Signals a “user canceled” error if the user cancels the dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_86"></a>
 
@@ -716,7 +716,7 @@ set myApp to choose remote application with prompt "Choose a remote web browser:
 
 The user may choose a remote machine using <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_702"></a>Bonjour or by entering a specific IP address. There is no way to limit the precise kind of application returned, so either limit your script to generic operations or validate the user’s choice. If you want your script to send application-specific commands to the resulting application, you will need a using terms from statement.
 
-For information on targeting other machines, see [Remote Applications](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW9).
+For information on targeting other machines, see [Remote Applications](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW9).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-SW9"></a><a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_703"></a>
 
@@ -736,13 +736,13 @@ Allows the user to specify a URL.
 
 ##### Parameters
 
-`showing` *[list](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE)* (of service types or *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* )
+`showing` *[list](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE)* (of service types or *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* )
 :   A list that specifies the types of services to show, if available. The list can contain one or more of the following service types, or one or more `text` objects representing Bonjour service types (described below), or both: * `Web servers`: shows `http` and `https` services * `FTP Servers`: shows `ftp` services * `Telnet hosts`: shows `telnet` services * `File servers`: shows `afp`, `nfs`, and `smb` services * `News servers`: shows `nntp` services * `Directory services`: shows `ldap` services * `Media servers`: shows `rtsp` services * `Remote applications`: shows `eppc` services A `text` object is interpreted as a Bonjour service type—for example, `"_ftp._tcp"` represents the file transfer protocol. These types are listed in [Technical Q&A 1312: Bonjour service types used in OS X](http://developer.apple.com/qa/qa2001/qa1312.html).<a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_705"></a>
 
 *Default Value:*
 :   `File servers`
 
-`editable URL` *[boolean](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
+`editable URL` *[boolean](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
 :   Allow user to type in a URL? If you specify `editable URL false`, the text field in the dialog is inactive. `choose URL` does not attempt to verify that the user-entered text is a valid URL. Your script should be prepared to verify the returned value.
 
 *Default Value:*
@@ -752,7 +752,7 @@ Allows the user to specify a URL.
 
 The URL for the service, as a `text` object. This result may be passed to `open location` or to any application that can handle the URL, such as a browser for `http` URLs.
 
-Signals a “user canceled” error if the user cancels the dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-128973).
+Signals a “user canceled” error if the user cancels the dialog. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_88"></a>
 
@@ -782,7 +782,7 @@ Returns information about the current clipboard contents.
 
 ##### Parameters
 
-`for` *[class](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCFEDGB)*
+`for` *[class](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCFEDGB)*
 :   Restricts returned information to only this data type.
 
 *Default Value:*
@@ -817,7 +817,7 @@ Closes a file opened with the `open for access` command.
 
 ##### Parameters
 
-( *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* | *file descriptor* )
+( *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* | *file descriptor* )
 :   The alias or file specifier or integer file descriptor of the file to close. A file descriptor must be obtained as the result of an earlier `open for access` call.
 
 ##### Result
@@ -895,7 +895,7 @@ See the `set` command for examples of using variable patterns. The behavior is t
 
 ##### Discussion
 
-The `copy` command may be used to assign new values to existing variables, or to define new variables. See [Declaring Variables with the copy Command](../conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW8) for additional details.
+The `copy` command may be used to assign new values to existing variables, or to define new variables. See [Declaring Variables with the copy Command](../conceptual/ASLR_variables.md#//apple_ref/doc/uid/TP40000983-CH223-SW8) for additional details.
 
 Using the `copy` command creates a new value that is independent of the original—a subsequent change to that value does not change the original value. The copy is a “deep” copy, so sub-objects, such as lists within lists, are also copied. Contrast this with the behavior of the `set` command.
 
@@ -946,7 +946,7 @@ number of aList  --result: 5
 tell application "Finder" to count disk 1  --result: 4
 ```
 
-If the value is an object specifier that evaluates to a list, `count` counts the items of that list. This may be an [Every](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFIIH) specifier:
+If the value is an object specifier that evaluates to a list, `count` counts the items of that list. This may be an [Every](ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFIIH) specifier:
 
 ```
 count every integer of aList  --result: 3
@@ -954,7 +954,7 @@ count words of "hello world"  --result: 2
 tell application "Finder" to count folders of disk 1  --result: 4
 ```
 
-…or a [Filter](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BAJJHEFE) specifier:
+…or a [Filter](ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BAJJHEFE) specifier:
 
 ```
 tell application "Finder"
@@ -962,7 +962,7 @@ tell application "Finder"
 end tell
 ```
 
-…or similar. For more on object specifiers, see [Object Specifiers](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW7).
+…or similar. For more on object specifiers, see [Object Specifiers](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW7).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-SW39"></a><a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_713"></a>
 
@@ -1009,7 +1009,7 @@ Waits for a specified number of seconds.
 
 ##### Parameters
 
-*[number](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCBJDGC)*
+*[number](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCBJDGC)*
 :   The number of seconds to delay. The number may be fractional, such as `0.5` to delay half a second.
 
 *Default Value:*
@@ -1056,10 +1056,10 @@ Displays a standardized alert containing a message, explanation, and from one to
 
 ##### Parameters
 
-*[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+*[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The alert text, which is displayed in emphasized system font.
 
-`message` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`message` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   An explanatory message, which is displayed in small system font, below the alert text.
 
 `as` *alertType*
@@ -1068,25 +1068,25 @@ Displays a standardized alert containing a message, explanation, and from one to
 *Default Value:*
 :   `informational`
 
-`buttons` *[list](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE)* (of *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* )
+`buttons` *[list](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE)* (of *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* )
 :   A list of up to three button names. If you supply one name, a button with that name serves as the default and is displayed on the right side of the alert dialog. If you supply two names, two buttons are displayed on the right, with the second serving as the default button. If you supply three names, the first is displayed on the left, and the next two on the right, as in the case with two buttons.
 
 *Default Value:*
 :   `{"OK"}`: One button labeled “OK”, which is the default button.
 
-`default button` ( *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* or *[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)* )
+`default button` ( *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* or *[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)* )
 :   The name or number of the default button. This may be the same as the cancel button.
 
 *Default Value:*
 :   The rightmost button.
 
-`cancel button` ( *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* or *[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)* )
+`cancel button` ( *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* or *[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)* )
 :   The name or number of the cancel button. See “Result” below. This may be the same as the default button.
 
 *Default Value:*
 :   None; there is no cancel button.
 
-`giving up after` *[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
+`giving up after` *[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
 :   The number of seconds to wait before automatically dismissing the alert.
 
 *Default Value:*
@@ -1098,7 +1098,7 @@ If the user clicks a button that was not specified as the cancel button, `displa
 
 If the `display alert` command specifies a `giving up after` value, and the dialog is dismissed due to timing out before the user clicks a button, the command returns a record indicating that no button was returned and the command gave up: `{button returned:"", gave up:true}`
 
-If the user clicks the specified cancel button, the command signals a “user canceled” error. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-128973).
+If the user clicks the specified cancel button, the command signals a “user canceled” error. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_102"></a>
 
@@ -1141,52 +1141,52 @@ Displays a dialog containing a message, one to three buttons, and optionally an 
 *text*
 :   The dialog text, which is displayed in emphasized system font.
 
-`default answer` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`default answer` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The initial contents of an editable text field. This edit field is not present unless this parameter is present; to have the field present but blank, specify an empty string: `default answer ""`
 
 *Default Value:*
 :   None; there is no edit field.
 
-`hidden answer` *[boolean](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
+`hidden answer` *[boolean](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
 :   If true, any text in the edit field is obscured as in a password dialog: each character is displayed as a bullet.
 
 *Default Value:*
 :   `false`: text in the edit field is shown in cleartext.
 
-`buttons` *[list](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE)* (of *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* )
+`buttons` *[list](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE)* (of *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* )
 :   A list of up to three button names.
 
 *Default Value:*
 :   If you don’t specify any buttons, by default, Cancel and OK buttons are shown, with the OK button set as the default button. If you specify any buttons, there is no default or cancel button unless you use the following parameters to specify them.
 
-`default button` ( *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* | *[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)* )
+`default button` ( *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* | *[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)* )
 :   The name or number of the default button. This button is highlighted, and will be pressed if the user presses the Return or Enter key.
 
 *Default Value:*
 :   If there are no buttons specified using `buttons`, the OK button. Otherwise, there is no default button.
 
-`cancel button` ( *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* | *[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)* )
+`cancel button` ( *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* | *[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)* )
 :   The name or number of the cancel button. This button will be pressed if the user presses the Escape key or Command-period.
 
 *Default Value:*
 :   If there are no buttons specified using `buttons`, the Cancel button. Otherwise, there is no cancel button.
 
-`with title` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`with title` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The dialog window title.
 
 *Default Value:*
 :   None; no title is displayed.
 
-`with icon` ( *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* | *[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)* )
+`with icon` ( *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* | *[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)* )
 :   The resource name or ID of the icon to display.
 
 `with icon` ( *stop | note | caution* )
 :   The type of icon to show. You may specify one of the following constants: * `stop` (or `0`): Shows a stop icon * `note` (or `1`): Shows the application icon * `caution` (or `2`): Shows a warning icon, badged with the application icon
 
-`with icon` ( *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* )
+`with icon` ( *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* )
 :   An `alias` or `file` specifier that specifies a `.icns` file.
 
-`giving up after` *[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
+`giving up after` *[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
 :   The number of seconds to wait before automatically dismissing the dialog.
 
 *Default Value:*
@@ -1200,7 +1200,7 @@ A record containing the button clicked and text entered, if any. For example:
 
 If the dialog does not allow text input, there is no `text returned` item in the returned record.
 
-If the user clicks the specified cancel button, the command signals a “user canceled” error. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-128973).
+If the user clicks the specified cancel button, the command signals a “user canceled” error. For an example of how to handle such errors, see [try Statements](ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-128973).
 
 If the `display dialog` command specifies a `giving up after` value, and the dialog is dismissed due to timing out before the user clicks a button, it returns a record indicating that no button was returned and the command gave up: `{button returned:"", gave up:true}`
 
@@ -1275,16 +1275,16 @@ Posts a notification using the Notification Center, containing a title, subtitle
 
 ##### Parameters
 
-*[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+*[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The body text of the notification. At least one of this and the title must be specified.
 
-`with title` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`with title` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The title of the notification. At least one of this and the body text must be specified.
 
-`subtitle` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`subtitle` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The subtitle of the notification.
 
-`sound name` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`sound name` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The name of a sound to play when the notification appears. This may be the base name of any sound installed in `Library/Sounds`.
 
 ##### Result
@@ -1324,28 +1324,28 @@ Executes a shell script using the `sh` shell.
 
 ##### Parameters
 
-*[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+*[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The shell script to execute.
 
-`as` *[class](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCFEDGB)*
+`as` *[class](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCFEDGB)*
 :   Specifies the desired type of the result. The raw bytes returned by the command will be interpreted as the specified class.
 
 *Default Value:*
 :   `«class utf8»`: UTF-8 text. If there is no *as* parameter and the output is not valid UTF-8, the output will be interpreted as text in the primary encoding.
 
-`administrator privileges` *[boolean](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
+`administrator privileges` *[boolean](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
 :   Execute the command as the administrator? Once a script is correctly authenticated, it will not ask for authentication again for five minutes. The elevated privileges and the grace period do not extend to any other scripts or to the rest of the system. For security reasons, you may not tell another application to `do shell script with administrator privileges`. Put the command outside of any `tell` block, or put it inside a `tell me` block.
 
 *Default Value:*
 :   `false`
 
-`user name` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`user name` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The name of an administrator account. You can avoid a password dialog by specifying a name in this parameter and a password in the `password` parameter. If you specify a user name, you must also specify a password.
 
-`password` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`password` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   An administrator password, typically used in conjunction with the administrator specified by the `user name` parameter. If `user name` is omitted, it is assumed to be the current user.
 
-`altering line endings` *[boolean](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
+`altering line endings` *[boolean](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
 :   Should the `do shell script` command change all line endings in the command output to Mac-style and trim a trailing one? For example, the result of `do shell script "echo foo; echo bar"` is `"foo\\rbar"`, not the `"foo\\nbar\\n"` that the shell script actually returned.
 
 *Default Value:*
@@ -1391,7 +1391,7 @@ The command name `get` is typically optional—expressions that appear as statem
 *specifier*
 :   An object specifier to be evaluated. If the specifier refers to an application-defined object, the `get` command is sent to that application. Technically, all values respond to `get`, but for all values other than object specifiers, `get` is an identity operation: the result is the exact same value.
 
-`as` *[class](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCFEDGB)*
+`as` *[class](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCFEDGB)*
 :   The desired class for the returned data. If the data is not of the desired type, AppleScript attempts to coerce it to that type.
 
 *Default Value:*
@@ -1399,7 +1399,7 @@ The command name `get` is typically optional—expressions that appear as statem
 
 ##### Result
 
-The value of the evaluated expression. See [Reference Forms](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-120522) for details on what the results of evaluating various object specifiers are.
+The value of the evaluated expression. See [Reference Forms](ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-120522) for details on what the results of evaluating various object specifiers are.
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_110"></a>
 
@@ -1440,7 +1440,7 @@ tell application "Finder" to get word 1 of (get name of home)
 
 The explicit `get` forces that part of the specifier to be evaluated; Finder returns a `text` result, from which AppleScript can then get `word 1`.
 
-For more information on specifiers, see [Object Specifiers](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW7).
+For more information on specifiers, see [Object Specifiers](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW7).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-SW30"></a><a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_745"></a>
 
@@ -1458,7 +1458,7 @@ Returns the length of a file, in bytes.
 
 ##### Parameters
 
-( *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* | *file descriptor* )
+( *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* | *file descriptor* )
 :   The file to obtain the length for, as an alias, a file specifier, or an `integer` file descriptor. A file descriptor must be obtained as the result of an earlier `open for access` call.
 
 ##### Result
@@ -1534,10 +1534,10 @@ Return information for a file or folder.
 
 ##### Parameters
 
-( *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* )
+( *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* )
 :   An alias or file specifier for the file or folder.
 
-`size` *[boolean](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
+`size` *[boolean](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
 :   Return the size of the file or folder? For a file, its “size” is its length in bytes; for a folder, it is the sum of the sizes of all the files the folder contains.
 
 *Default Value:*
@@ -1716,10 +1716,10 @@ Returns the names of the items in a specified folder.
 
 ##### Parameters
 
-( *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* )
+( *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* )
 :   Specifies the folder to list.
 
-`invisibles` *[boolean](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
+`invisibles` *[boolean](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
 :   Show invisible files and folders?
 
 *Default Value:*
@@ -1745,7 +1745,7 @@ Returns a `script` object loaded from a specified file.
 
 ##### Parameters
 
-( *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* )
+( *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* )
 :   An `alias` or `file` specifier that specifies a `script` object. The file must be a compiled script (with extension `scpt`) or script bundle (with extension `scptd`).
 
 ##### Result
@@ -1756,7 +1756,7 @@ The `script` object. You can get this object’s properties or call its handlers
 
 ##### Examples
 
-For examples, see [Parameter Specifications](../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW12) in [About Handlers](../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-CJBIDBJH).
+For examples, see [Parameter Specifications](../conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW12) in [About Handlers](../conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-CJBIDBJH).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-SW23"></a><a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_755"></a>
 
@@ -1776,16 +1776,16 @@ Returns the localized text for the specified key.
 
 ##### Parameters
 
-*[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+*[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The key for which to obtain the localized text.
 
-`from table` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`from table` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The name of the strings file excluding the `.strings` suffix.
 
 *Default Value:*
 :   `"Localizable"`
 
-`in bundle` ( *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* )
+`in bundle` ( *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* )
 :   An `alias` or `file` specifier that specifies the strings file.
 
 *Default Value:*
@@ -1808,14 +1808,14 @@ In order for `localized string` to be useful, you must create localized string d
 
    **Figure 7-1**  Bundle structure with localized string data
 
-   ![Bundle structure with localized string data](../Art/localizedStringLayout_2x.png)
+   ![Bundle structure with localized string data](https://developer.apple.com/library/archive/applescript-language-guide/Art/localizedStringLayout_2x.png)
 3. Add key/value pairs to each Localized.strings file. Each pair is a line of text `"`*key*`" = "`*value*`";`, for example:
 
    <a id="//apple_ref/doc/uid/TP40000983-CH216-SW218"></a>
 
    **Figure 7-2**  Key/value pair for localized string data
 
-   ![Key/value pair for localized string data](../Art/localizableStringData_2x.png)
+   ![Key/value pair for localized string data](https://developer.apple.com/library/archive/applescript-language-guide/Art/localizableStringData_2x.png)
 
 Now `localized string` will return the appropriate values, as defined in your files. For example, when running in French:
 
@@ -1858,7 +1858,7 @@ set area to 7 * 43 as square feet
 log area -- result (in Event Log pane): (*square feet 301.0*)
 ```
 
-Log statements can be useful for tracking a script’s progress. For an example that shows how to log statements in a repeat loop, see [Logging](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW17).
+Log statements can be useful for tracking a script’s progress. For an example that shows how to log statements in a repeat loop, see [Logging](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW17).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-SW17"></a><a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_759"></a>
 
@@ -1880,19 +1880,19 @@ Mounts the specified network volume.
 
 ##### Parameters
 
-*[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+*[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The name or URL (for example, `afp://server/volume/`) of the volume to mount.
 
-`on server` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`on server` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The server on which the volume resides; omit if URL path provided in direct parameter.
 
-`in AppleTalk zone` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`in AppleTalk zone` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The AppleTalk zone in which the server resides; omit if URL path provided.
 
-`as user name` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`as user name` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The user name with which to log in to the server; omit for guest access.
 
-`with password` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`with password` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The password for the user name; omit for guest access.
 
 ##### Result
@@ -1932,10 +1932,10 @@ Finds one piece of text inside another.
 
 ##### Parameters
 
-`of` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`of` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The source text to find the position of.
 
-`in` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`in` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The target text to search in.
 
 ##### Result
@@ -1977,10 +1977,10 @@ Opens a file for reading and writing.
 
 ##### Parameters
 
-( *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* )
+( *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* )
 :   An `alias` or `file` specifier that specifies the file to open. You can only use an alias if the file exists.
 
-`write permission` *[boolean](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
+`write permission` *[boolean](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
 :   Should writing to the file be allowed?
 
 *Default Value:*
@@ -2038,10 +2038,10 @@ Opens a URL with the appropriate program.
 
 ##### Parameters
 
-*[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+*[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The URL to open.
 
-`error reporting` *[boolean](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
+`error reporting` *[boolean](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
 :   This parameter exists only for historical reasons; it is no longer supported.
 
 ##### Result
@@ -2082,7 +2082,7 @@ Returns the location of the specified application.
 *Default Value:*
 :   `it`
 
-`as` *[class](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCFEDGB)* ( *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* )
+`as` *[class](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCFEDGB)* ( *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* )
 :   The class of the returned location. If specified, must be one of `alias` or `text`.
 
 *Default Value:*
@@ -2135,7 +2135,7 @@ Returns the location of the specified special folder.
 *Default Value:*
 :   The default domain for the specified folder. This varies depending on the folder.
 
-`as` *[class](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCFEDGB)* ( *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* )
+`as` *[class](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCFEDGB)* ( *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* )
 :   The class of the returned location.
 
 *Default Value:*
@@ -2181,13 +2181,13 @@ Returns the location of the specified resource.
 *text*
 :   The name of the requested resource.
 
-`in bundle` ( *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* )
+`in bundle` ( *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* )
 :   An `alias` or `file` specifier that specifies the bundle containing the resource.
 
 *Default Value:*
 :   The current script bundle for a document-based script (a `scptd` bundle); otherwise, the current application.
 
-`in directory` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`in directory` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The name of a subdirectory in the bundle’s `Resources` directory.
 
 ##### Result
@@ -2226,19 +2226,19 @@ Returns a random number.
 
 ##### Parameters
 
-`from` *[number](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCBJDGC)*
+`from` *[number](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCBJDGC)*
 :   The lowest number to return. Can be negative.
 
 *Default Value:*
 :   0.0
 
-`to` *[number](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCBJDGC)*
+`to` *[number](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCBJDGC)*
 :   The highest number to return. Can be negative.
 
 *Default Value:*
 :   1.0
 
-`with seed` *[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
+`with seed` *[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
 :   An initial seed for the random number generator. Once called with any particular seed value, `random number` will always generate the same sequence of numbers. This can be useful when testing randomized algorithms: you can force it to behave the same way every time.
 
 ##### Result
@@ -2260,7 +2260,7 @@ Random numbers are, by definition, random, which means that you may get the same
 
 The numbers generated are only pseudo-random, and are not considered cryptographically secure.
 
-If you need to select one of a set of objects in a relationship, use `some` *object* rather than *object* `(random number from 1 to count` *objects*`)`. See the [Arbitrary](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BCIJEEHE) reference form for more details.
+If you need to select one of a set of objects in a relationship, use `some` *object* rather than *object* `(random number from 1 to count` *objects*`)`. See the [Arbitrary](ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BCIJEEHE) reference form for more details.
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-SW32"></a><a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_784"></a>
 
@@ -2285,41 +2285,41 @@ Reads data from a file.
 
 ##### Parameters
 
-( *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* | *file descriptor* )
+( *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* | *file descriptor* )
 :   The file to read from, as an alias, a file specifier, or an `integer` file descriptor. A file descriptor must be obtained as the result of an earlier `open for access` call.
 
-`from` *[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
+`from` *[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
 :   The byte position in the file to start reading from. The position is 1-based, so `1` is the first byte of the file, `2` the second, and so on. Negative integers count from the end of the file, so `-1` is the last byte, `-2` the second-to-last, and so on.
 
 *Default Value:*
 :   The current file pointer (see `open for access`) if the file is open, or the beginning of the file if not.
 
-`for` *[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
+`for` *[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
 :   The number of bytes to read.
 
 *Default Value:*
 :   Read until the end of the file.
 
-`to` ( *[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)* | *eof* )
+`to` ( *[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)* | *eof* )
 :   Stop reading at this byte position in the file; use `eof` to indicate the last byte. The position is 1-based, like the `from` parameter.
 
-`before` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`before` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   A single character; read up to the next occurrence of that character. The *before* character is also read, but is not part of the result, so the next `read` will start just after it.
 
-`until` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`until` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   A single character; read up to and including the next occurrence of that character.
 
-`using delimiter` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`using delimiter` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   A delimiter, such as a tab or return character, used to separate the data read into a list of text objects. The resulting items consist of the text between occurrences of the delimiter text. The delimiter is considered a separator, so a leading or trailing delimiter will produce an empty string on the other side. For example, the result of reading `"axbxcx"` using a delimiter of `"x"` would be `{"a", "b", "c", ""}`.
 
 *Default Value:*
 :   None; `read` returns a single item.
 
-`using delimiters` *[list](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE)* of *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`using delimiters` *[list](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE)* of *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   As `using delimiter` above, but all of the strings in the list count as delimiters.
 
-`as` *[class](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCFEDGB)*
-:   Interpret the raw bytes read as this class. The most common ones control the use of three different text encodings: `text` or `string` : The primary text encoding, as determined by the user’s language preferences set in the International preference panel. (For example, Mac OS Roman for English, MacJapanese for Japanese, and so on.) `Unicode text` : UTF-16. `«class utf8»` : UTF-8. (See [Double Angle Brackets](../conceptual/ASLR_raw_data.html#//apple_ref/doc/uid/TP40000983-CH225-SW1) for information on chevron or “raw” syntax.) Any other class is possible, for example `date` or `list`, but is typically only useful if the data was written using a `write` statement specifying the same value for the `as` parameter.
+`as` *[class](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCFEDGB)*
+:   Interpret the raw bytes read as this class. The most common ones control the use of three different text encodings: `text` or `string` : The primary text encoding, as determined by the user’s language preferences set in the International preference panel. (For example, Mac OS Roman for English, MacJapanese for Japanese, and so on.) `Unicode text` : UTF-16. `«class utf8»` : UTF-8. (See [Double Angle Brackets](../conceptual/ASLR_raw_data.md#//apple_ref/doc/uid/TP40000983-CH225-SW1) for information on chevron or “raw” syntax.) Any other class is possible, for example `date` or `list`, but is typically only useful if the data was written using a `write` statement specifying the same value for the `as` parameter.
 
 *Default Value:*
 :   `text`
@@ -2368,7 +2368,7 @@ Rounds a number to an integer.
 
 ##### Parameters
 
-*[real](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCJECEC)*
+*[real](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCJECEC)*
 :   The number to round.
 
 `rounding` *roundingDirection*
@@ -2421,7 +2421,7 @@ To run an application, it must be on a local or mounted volume. If the applicati
 
 The `run` command launches an application as hidden; use `activate` to bring the application to the front.
 
-For a `script` object, the `run` command causes either the explicit or the implicit `run` handler, if any, to be executed. For related information, see [run Handlers](../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW15).
+For a `script` object, the `run` command causes either the explicit or the implicit `run` handler, if any, to be executed. For related information, see [run Handlers](../conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW15).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_149"></a>
 
@@ -2453,13 +2453,13 @@ tell application "TextEdit" to run
 run myScript --where myScript is a script object
 ```
 
-For information about using the `run` command with `script` objects, see [Sending Commands to Script Objects](../conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW3).
+For information about using the `run` command with `script` objects, see [Sending Commands to Script Objects](../conceptual/ASLR_script_objects.md#//apple_ref/doc/uid/TP40000983-CH207-SW3).
 
 ##### Discussion
 
-To specify an application to run, you can supply a string with only the application name, as shown in the Examples section. Or you can specify a location more precisely, using one of the forms described in [Aliases and Files](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW28). For examples of other ways to specify an application, see the `application` class.
+To specify an application to run, you can supply a string with only the application name, as shown in the Examples section. Or you can specify a location more precisely, using one of the forms described in [Aliases and Files](../conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW28). For examples of other ways to specify an application, see the `application` class.
 
-It is not necessary to explicitly tell an application to `run` before sending it other commands; AppleScript will do that automatically. To launch an application without invoking its usual startup behavior, use the `launch` command. For further details, see [Calling a Script Application From a Script](../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW17).
+It is not necessary to explicitly tell an application to `run` before sending it other commands; AppleScript will do that automatically. To launch an application without invoking its usual startup behavior, use the `launch` command. For further details, see [Calling a Script Application From a Script](../conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW17).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH216-SW36"></a><a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_797"></a>
 
@@ -2481,13 +2481,13 @@ See also `store script`.
 
 ##### Parameters
 
-( *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* | *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* )
+( *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)* | *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* )
 :   The script text, or an `alias` or `file` specifier that specifies the script file to run.
 
-`with parameters` *[list](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE)* of *anything*
+`with parameters` *[list](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCDBHIE)* of *anything*
 :   A list of parameter values to be passed to the script.
 
-`in` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`in` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The scripting component to use.
 
 *Default Value:*
@@ -2534,25 +2534,25 @@ Speaks the specified text.
 
 ##### Parameters
 
-*[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+*[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The text to speak.
 
-`displaying` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`displaying` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The text to display in the feedback window, if different from the spoken text. This parameter is ignored unless Speech Recognition is turned on (in System Preferences).
 
-`using` *[text](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
+`using` *[text](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF)*
 :   The voice to speak with—for example: `"Zarvox"`. You can use any of the voices from the System Voice pop-up on the Text to Speech tab in the Speech preferences pane.
 
 *Default Value:*
 :   The current System Voice (set in the Speech panel in System Preferences.
 
-`waiting until completion` *[boolean](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
+`waiting until completion` *[boolean](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
 :   Should the command wait for speech to complete before returning? This parameter is ignored unless Speech Recognition is turned on (in System Preferences).
 
 *Default Value:*
 :   `true`
 
-`saving to` ( *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* )
+`saving to` ( *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* )
 :   An `alias` or `file` specifier to an `AIFF` file (existing or not) to contain the sound output. You can only use an `alias` specifier if the file exists. If this parameter is specified, the sound is not played audibly, only saved to the file.
 
 *Default Value:*
@@ -2706,7 +2706,7 @@ set {x, y} to {y, x} --now x is 2, and y is 1.
 
 To accomplish the second statement using only simple assignments, you would need a temporary third variable.
 
-For more information on using the set command, including a more complex pattern example, see [Declaring Variables with the set Command](../conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW9).
+For more information on using the set command, including a more complex pattern example, see [Declaring Variables with the set Command](../conceptual/ASLR_variables.md#//apple_ref/doc/uid/TP40000983-CH223-SW9).
 
 ##### Discussion
 
@@ -2729,10 +2729,10 @@ Sets the length of a file, in bytes.
 
 ##### Parameters
 
-( *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* | *file descriptor* )
+( *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* | *file descriptor* )
 :   The file to set the length of, as an alias, a file specifier, or as an integer file descriptor, which must be obtained as the result of an earlier `open for access` call.
 
-`to` *[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
+`to` *[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
 :   The new length of the file, in bytes. If the new length is shorter than the existing length of the file, any data beyond that position is lost. If the new length is longer, the contents of the new bytes are unspecified.
 
 ##### Result
@@ -2815,28 +2815,28 @@ Sets the sound output, input, and alert volumes.
 
 ##### Parameters
 
-*[number](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCBJDGC)*
+*[number](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCBJDGC)*
 :   The sound output volume, a real number from 0 to 7. <a id="//apple_ref/doc/uid/TP40000983-CH216-DontLinkElementID_164"></a> **Important:** This parameter is deprecated; if specified, all other parameters will be ignored.
 
-`output volume` *[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
+`output volume` *[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
 :   The sound output volume, an integer from 0 to 100.
 
 *Default Value:*
 :   None; the output volume is not changed.
 
-`input volume` *[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
+`input volume` *[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
 :   The sound input volume, an integer from 0 to 100.
 
 *Default Value:*
 :   None; the input volume is not changed.
 
-`alert volume` *[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
+`alert volume` *[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
 :   The alert input volume, an integer from 0 to 100.
 
 *Default Value:*
 :   None; the alert volume is not changed.
 
-`output muted` *[boolean](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
+`output muted` *[boolean](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCIBBGG)*
 :   Should the sound output be muted?
 
 *Default Value:*
@@ -2885,7 +2885,7 @@ See also `run script`.
 *script*
 :   The `script` object to store.
 
-`in` ( *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* )
+`in` ( *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* )
 :   An `alias` or `file` specifier that specifies the file to store the `script` object in.
 
 *Default Value:*
@@ -2939,7 +2939,7 @@ Summarizes the specified text or text file.
 *textSpecifier*
 :   The `text`, or an `alias` to a text file, to summarize.
 
-`in` *[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
+`in` *[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
 :   The number of sentences desired in the summary.
 
 *Default Value:*
@@ -2985,7 +2985,7 @@ Get environment variables or attributes of this computer.
 *Default Value:*
 :   If the attribute is omitted, `system attribute` will return a list of the names of all currently defined environment variables.
 
-`has` *[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
+`has` *[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
 :   For Gestalt values, an integer mask that is bitwise-ANDed with the Gestalt response. If the result is non-zero, `system attribute` returns `true`, otherwise `false`. For environment variables, this parameter is ignored.
 
 *Default Value:*
@@ -3109,7 +3109,7 @@ Returns the contents of the clipboard.
 
 ##### Parameters
 
-`as` *[class](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCFEDGB)*
+`as` *[class](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCFEDGB)*
 :   The type of data desired. `the clipboard` will attempt to find that “flavor” of data on the clipboard; if it is not found, it will attempt to coerce whatever flavor is there.
 
 ##### Result
@@ -3190,22 +3190,22 @@ Writes data to a specified file.
 *anything*
 :   The data to write to the file. This is typically `text`, but may be of any type. When reading the data back, the `read` command must specify the same type, or the results are undefined.
 
-`to` ( *[alias](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* | *file descriptor* )
+`to` ( *[alias](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW3)* | *[file](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-SW17)* | *file descriptor* )
 :   The file to write to, as an alias, a file specifier, or an `integer` file descriptor. A file descriptor must be obtained as the result of an earlier `open for access` call.
 
-`starting at` ( *[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)* | *eof* )
+`starting at` ( *[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)* | *eof* )
 :   The byte position in the file to start reading from. The position is 1-based, so `1` is the first byte of the file, `2` the second, and so on. Negative integers count from the end of the file, so `-1` is the last byte, `-2` the second-to-last, and so on. The constant `eof` is the position just after the last byte; use this to append data to the file.
 
 *Default Value:*
 :   The current file pointer (see `open for access`) if the file is open, or the beginning of the file if not.
 
-`for` *[integer](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
+`for` *[integer](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCHBDCJ)*
 :   The number of bytes to write.
 
 *Default Value:*
 :   Write all the data provided.
 
-`as` *[class](ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-BBCFEDGB)*
+`as` *[class](ASLR_classes.md#//apple_ref/doc/uid/TP40000983-CH1g-BBCFEDGB)*
 :   Write the data as this class. The most common ones control the use of three different text encodings: `text` or `string` : The primary text encoding, as determined by the user’s language preferences set in the International preference panel. (For example, Mac OS Roman for English, MacJapanese for Japanese, and so on.) `Unicode text` : UTF-16. `«class utf8»` : UTF-8. Any other class is possible, for example `date` or `list`, but is typically only useful if the data will be read using a `read` statement specifying the same value for the `as` parameter.
 
 *Default Value:*

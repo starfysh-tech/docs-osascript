@@ -45,7 +45,7 @@ This appendix describes error numbers and error messages provided by AppleScript
 
 ## Operating System Errors
 
-<a id="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_909"></a><a id="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_910"></a>An operating system error is an error that occurs when AppleScript or an application requests services from the Mac OS. They are rare, and often there is nothing you can do about them in a script, other than report them. A few, such as `"User canceled"`, make sense for scripts to handle—as shown, for an example, in the Examples section for the [display dialog](ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW12) command.
+<a id="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_909"></a><a id="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_910"></a>An operating system error is an error that occurs when AppleScript or an application requests services from the Mac OS. They are rare, and often there is nothing you can do about them in a script, other than report them. A few, such as `"User canceled"`, make sense for scripts to handle—as shown, for an example, in the Examples section for the [display dialog](ASLR_cmds.md#//apple_ref/doc/uid/TP40000983-CH216-SW12) command.
 
 <a id="//apple_ref/doc/uid/TP40000983-CH220-SW4"></a>
 

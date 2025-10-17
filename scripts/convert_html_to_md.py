@@ -96,8 +96,9 @@ class DocsMarkdownConverter(MarkdownConverter):
         href = el.get("href")
         if not href:
             anchor = el.get("name") or el.get("id")
-            if anchor and anchor.startswith("//apple_ref"):
-                return f'<a id="{anchor}"></a>'
+            if anchor:
+                anchor_markup = f'<a id="{anchor}"></a>'
+                return f"{anchor_markup}{text}" if text else anchor_markup
         return super().convert_a(el, text, parent_tags)
 
     def process_text(self, el, parent_tags=None):  # type: ignore[override]

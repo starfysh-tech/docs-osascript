@@ -7,7 +7,7 @@ In HTML documents, colors are typically represented as hex values. The handlers 
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20convertRGBColorToHexValue%28theRGBValues%29%0A%20%20%20%20set%20theHexList%20to%20%7B%220%22%2C%20%221%22%2C%20%222%22%2C%20%223%22%2C%20%224%22%2C%20%225%22%2C%20%226%22%2C%20%227%22%2C%20%228%22%2C%20%229%22%2C%20%22A%22%2C%20%22B%22%2C%20%22C%22%2C%20%22D%22%2C%20%22E%22%2C%20%22F%22%7D%0A%20%20%20%20set%20theHexValue%20to%20%22%22%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theRGBValues%0A%20%20%20%20%20%20%20%20set%20theCurrentRGBValue%20to%20%28item%20a%20of%20theRGBValues%29%20div%20256%0A%20%20%20%20%20%20%20%20if%20theCurrentRGBValue%20is%20256%20then%20set%20theCurrentRGBValue%20to%20255%0A%20%20%20%20%20%20%20%20set%20theFirstItem%20to%20item%20%28%28theCurrentRGBValue%20div%2016%29%20%2B%201%29%20of%20theHexList%0A%20%20%20%20%20%20%20%20set%20theSecondItem%20to%20item%20%28%28%28theCurrentRGBValue%20%2F%2016%20mod%201%29%20*%2016%29%20%2B%201%29%20of%20theHexList%0A%20%20%20%20%20%20%20%20set%20theHexValue%20to%20%28theHexValue%20%26%20theFirstItem%20%26%20theSecondItem%29%20as%20string%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%20%28%22%23%22%20%26%20theHexValue%29%20as%20string%0Aend%20convertRGBColorToHexValue)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20convertRGBColorToHexValue%28theRGBValues%29%0A%20%20%20%20set%20theHexList%20to%20%7B%220%22%2C%20%221%22%2C%20%222%22%2C%20%223%22%2C%20%224%22%2C%20%225%22%2C%20%226%22%2C%20%227%22%2C%20%228%22%2C%20%229%22%2C%20%22A%22%2C%20%22B%22%2C%20%22C%22%2C%20%22D%22%2C%20%22E%22%2C%20%22F%22%7D%0A%20%20%20%20set%20theHexValue%20to%20%22%22%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theRGBValues%0A%20%20%20%20%20%20%20%20set%20theCurrentRGBValue%20to%20%28item%20a%20of%20theRGBValues%29%20div%20256%0A%20%20%20%20%20%20%20%20if%20theCurrentRGBValue%20is%20256%20then%20set%20theCurrentRGBValue%20to%20255%0A%20%20%20%20%20%20%20%20set%20theFirstItem%20to%20item%20%28%28theCurrentRGBValue%20div%2016%29%20%2B%201%29%20of%20theHexList%0A%20%20%20%20%20%20%20%20set%20theSecondItem%20to%20item%20%28%28%28theCurrentRGBValue%20%2F%2016%20mod%201%29%20*%2016%29%20%2B%201%29%20of%20theHexList%0A%20%20%20%20%20%20%20%20set%20theHexValue%20to%20%28theHexValue%20%26%20theFirstItem%20%26%20theSecondItem%29%20as%20string%0A%20%20%20%20end%20repeat%0A%20%20%20%20return%20%28%22%23%22%20%26%20theHexValue%29%20as%20string%0Aend%20convertRGBColorToHexValue)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH49-SW2"></a>
 **Listing 31-1**AppleScript: Handler that converts an RGB color to a hex value
@@ -27,7 +27,7 @@ In HTML documents, colors are typically represented as hex values. The handlers 
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=function%20convertRGBColorToHexValue%28rgbValues%29%20%7B%0A%20%20%20%20var%20r%20%3D%20parseInt%28rgbValues%5B0%5D%2C%2010%29.toString%2816%29.slice%28-2%29%0A%20%20%20%20if%20%28r.length%20%3D%3D%201%29%0A%20%20%20%20%20%20%20%20r%20%3D%20%220%22%20%2B%20r%0A%20%20%20%20var%20g%20%3D%20parseInt%28rgbValues%5B1%5D%2C%2010%29.toString%2816%29.slice%28-2%29%0A%20%20%20%20if%20%28g.length%20%3D%3D%201%29%0A%20%20%20%20%20%20%20%20g%20%3D%20%220%22%20%2B%20g%0A%20%20%20%20var%20b%20%3D%20parseInt%28rgbValues%5B2%5D%2C%2010%29.toString%2816%29.slice%28-2%29%0A%20%20%20%20if%20%28b.length%20%3D%3D%201%29%0A%20%20%20%20%20%20%20%20b%20%3D%20%220%22%20%2B%20b%0A%20%20%20%20return%20%28%22%23%22%20%2B%20r%20%2B%20g%20%2B%20b%29%0A%7D)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=function%20convertRGBColorToHexValue%28rgbValues%29%20%7B%0A%20%20%20%20var%20r%20%3D%20parseInt%28rgbValues%5B0%5D%2C%2010%29.toString%2816%29.slice%28-2%29%0A%20%20%20%20if%20%28r.length%20%3D%3D%201%29%0A%20%20%20%20%20%20%20%20r%20%3D%20%220%22%20%2B%20r%0A%20%20%20%20var%20g%20%3D%20parseInt%28rgbValues%5B1%5D%2C%2010%29.toString%2816%29.slice%28-2%29%0A%20%20%20%20if%20%28g.length%20%3D%3D%201%29%0A%20%20%20%20%20%20%20%20g%20%3D%20%220%22%20%2B%20g%0A%20%20%20%20var%20b%20%3D%20parseInt%28rgbValues%5B2%5D%2C%2010%29.toString%2816%29.slice%28-2%29%0A%20%20%20%20if%20%28b.length%20%3D%3D%201%29%0A%20%20%20%20%20%20%20%20b%20%3D%20%220%22%20%2B%20b%0A%20%20%20%20return%20%28%22%23%22%20%2B%20r%20%2B%20g%20%2B%20b%29%0A%7D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH49-SW4"></a>
 **Listing 31-2**JavaScript: Function that converts an RGB color to a hex value
@@ -49,7 +49,7 @@ Listing 31-3 shows how to call the handlers in Listing 31-1 to convert a specifi
 
 **APPLESCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=set%20theRGBValues%20to%20%28choose%20color%20default%20color%20%7B65535%2C%200%2C%200%7D%29%0AconvertRGBColorToHexValue%28theRGBValues%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=set%20theRGBValues%20to%20%28choose%20color%20default%20color%20%7B65535%2C%200%2C%200%7D%29%0AconvertRGBColorToHexValue%28theRGBValues%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH49-SW3"></a>
 **Listing 31-3**AppleScript: Calling a handler to convert an RGB color to a hex value
@@ -60,7 +60,7 @@ Listing 31-3 shows how to call the handlers in Listing 31-1 to convert a specifi
 
 **JAVASCRIPT**
 
-[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20color%20%3D%20app.chooseColor%28%7BdefaultColor%3A%20%5B1%2C%200%2C%200%5D%7D%29%0Acolor%20%3D%20%5BMath.trunc%28color%5B0%5D%20*%2065535%29%2C%20Math.trunc%28color%5B1%5D%20*%2065535%29%2C%20Math.trunc%28color%5B2%5D%20*%2065535%29%5D%0AconvertRGBColorToHexValue%28color%29)
+[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0A%0Avar%20color%20%3D%20app.chooseColor%28%7BdefaultColor%3A%20%5B1%2C%200%2C%200%5D%7D%29%0Acolor%20%3D%20%5BMath.trunc%28color%5B0%5D%20*%2065535%29%2C%20Math.trunc%28color%5B1%5D%20*%2065535%29%2C%20Math.trunc%28color%5B2%5D%20*%2065535%29%5D%0AconvertRGBColorToHexValue%28color%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH49-SW5"></a>
 **Listing 31-4**JavaScript: Calling a function to convert an RGB color to a hex value
