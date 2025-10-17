@@ -74,3 +74,6 @@ Kicked off the release checklist by running `python3 scripts/export_dataset.py` 
 
 ## 2025-10-17 — Dataset Packaging
 Built the release bundle from the freshly exported datasets: `tar -czf dist/dataset-20251017.tar.gz -C dataset .` plus a SHA-256 checksum (`dist/dataset-20251017.sha256`) and a short manifest summary (`dist/dataset-20251017.md`). With the archive ready, the remaining release steps are documentation (release notes), tagging, and publishing the GitHub Pages rebuild alongside the dataset upload.
+
+## 2025-10-17 — GitHub Release
+Tagged `dataset-20251017` and used `gh release create` to publish the dataset bundle (tarball + checksum) with the validation/monitoring notes. The release lives at https://github.com/starfysh-tech/docs-osascript/releases/tag/dataset-20251017. Next checkpoint: update docs/README with the download link and push the refreshed MkDocs site.

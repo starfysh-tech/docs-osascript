@@ -2,13 +2,13 @@
 
 ## Snapshot (updated: 2025-10-16)
 - **Current focus**
-  - Finalize release packaging for the exported datasets (dist tarball + checksum) and verify integrity.
-  - Draft release notes capturing validation, monitoring, and dataset packaging details.
-  - Queue the GitHub Pages publish alongside the dataset release once artifacts are verified.
+  - Confirm the published GitHub release (dataset-20251017) stays linked from our project docs and README.
+  - Publish the refreshed GitHub Pages build to surface regenerated Markdown.
+  - Plan the next monitoring/dataset refresh cadence post-release.
 - **Next actions**
-  1. Draft the combined site + dataset release notes, including validation + monitoring results.
-  2. Tag the repo (`dataset-20251017`) and upload `dist/dataset-20251017.tar.gz` + checksum to a GitHub release.
-  3. Publish the refreshed GitHub Pages build once release artifacts are staged.
+  1. Publish the refreshed GitHub Pages build once the release assets are live.
+  2. Link the dataset release in README/landing copy for discoverability.
+  3. Schedule the next monitoring + dataset refresh (tentatively four weeks out) in PLAN.md.
 - **Blockers / decisions pending**
   - Determine how to handle large WWDC video assets (link-out vs. local copy).
   - Decide on the storage/export format for man-page captures (plain text vs. Markdown).
@@ -55,6 +55,7 @@
 - 2025-10-17: Hardened HTML→Markdown conversion (anchors, `sup` exponents, multi-line `<pre>`, definition lists) and expanded the validator/test harness so all mirrored collections compare cleanly as part of the pre-release sweep.
 - 2025-10-17: Exported all collections via `scripts/export_dataset.py`, wrote `dataset/manifest.json`, and recorded monitoring baseline `reports/update-status-20251017.md` (no upstream changes).
 - 2025-10-17: Packaged dataset artifacts into `dist/dataset-20251017.tar.gz` with accompanying checksum/readme for release distribution.
+- 2025-10-17: Tagged `dataset-20251017` and published GitHub release with tarball + checksum.
 
 ## Task Board
 
