@@ -71,3 +71,6 @@ Validation ran end-to-end: `mkdocs build`, `python3 scripts/validate_site_links.
 
 ## 2025-10-17 — Dataset Exports & Monitoring
 Kicked off the release checklist by running `python3 scripts/export_dataset.py` across every collection. The command emitted plain-text + JSONL datasets, refreshed `dataset/manifest.json`, and confirmed counts match our collection inventory (107 docs total). Followed immediately with `python3 scripts/check_updates.py --manifest monitor/manifest.json --save --report reports/update-status-20251017.md`; the report logged 107 URLs as unchanged, so there’s no upstream churn blocking the release. Next tasks: package the dataset artifacts, fold these results into the release notes, and push the rebuilt site once the bundle is ready.
+
+## 2025-10-17 — Dataset Packaging
+Built the release bundle from the freshly exported datasets: `tar -czf dist/dataset-20251017.tar.gz -C dataset .` plus a SHA-256 checksum (`dist/dataset-20251017.sha256`) and a short manifest summary (`dist/dataset-20251017.md`). With the archive ready, the remaining release steps are documentation (release notes), tagging, and publishing the GitHub Pages rebuild alongside the dataset upload.

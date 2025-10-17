@@ -2,12 +2,12 @@
 
 ## Snapshot (updated: 2025-10-16)
 - **Current focus**
-  - Package the freshly exported datasets per `docs/dataset-packaging.md` and prep release artifacts.
-  - Keep monitoring coverage fresh by logging `scripts/check_updates.py` results and tracking follow-ups.
-  - Maintain MkDocs parity after the anchor fix and queue the GitHub Pages publish alongside the dataset release.
+  - Finalize release packaging for the exported datasets (dist tarball + checksum) and verify integrity.
+  - Draft release notes capturing validation, monitoring, and dataset packaging details.
+  - Queue the GitHub Pages publish alongside the dataset release once artifacts are verified.
 - **Next actions**
-  1. Package `dataset/` outputs (archive, checksum, README) following `docs/dataset-packaging.md`.
-  2. Draft the combined site + dataset release notes, including validation + monitoring results.
+  1. Draft the combined site + dataset release notes, including validation + monitoring results.
+  2. Tag the repo (`dataset-20251017`) and upload `dist/dataset-20251017.tar.gz` + checksum to a GitHub release.
   3. Publish the refreshed GitHub Pages build once release artifacts are staged.
 - **Blockers / decisions pending**
   - Determine how to handle large WWDC video assets (link-out vs. local copy).
@@ -54,6 +54,7 @@
 - 2025-10-16: Restored `<a name>` anchors during conversion, regenerated the AppleScript Language Guide, reran MkDocs + site link + per-collection validation, and moved Issue #2 (MkDocs polish) toward done ahead of dataset export.
 - 2025-10-17: Hardened HTML→Markdown conversion (anchors, `sup` exponents, multi-line `<pre>`, definition lists) and expanded the validator/test harness so all mirrored collections compare cleanly as part of the pre-release sweep.
 - 2025-10-17: Exported all collections via `scripts/export_dataset.py`, wrote `dataset/manifest.json`, and recorded monitoring baseline `reports/update-status-20251017.md` (no upstream changes).
+- 2025-10-17: Packaged dataset artifacts into `dist/dataset-20251017.tar.gz` with accompanying checksum/readme for release distribution.
 
 ## Task Board
 
