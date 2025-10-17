@@ -19,7 +19,7 @@ You can Control-click a folder to access some Folder Action features with the co
 
 Folder Actions Setup looks for scripts located in `/Library/Scripts/Folder Action Scripts` and `~/Library/Scripts/Folder Action Scripts`. You can use the sample scripts located in `/Library/Scripts/Folder Action Scripts` or any scripts you have added to these locations, or you can navigate to other scripts.
 
-A Folder Action script provides a handler (see [Handler Reference](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_handlers.md#//apple_ref/doc/uid/TP40000983-CH7g-163762)) that is invoked when the specified action takes place. When working with Folder Action handlers, keep in mind that:
+A Folder Action script provides a handler (see [Handler Reference](ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-163762)) that is invoked when the specified action takes place. When working with Folder Action handlers, keep in mind that:
 
 * You do not invoke Folder Actions directly. Instead, when a triggering action takes place on a folder, the associated handler is invoked automatically.
 * When a Folder Action handler is invoked, none of the parameters is optional.
@@ -163,7 +163,7 @@ on moving folder window for this_folder from original_coordinates
         set the bounds of the container window of this_folder ¬
             to the original_coordinates
     end tell
-    display dialog "Window \"" & this_name & "\" has been returned to its original size and position." buttons {"OK"} default button 1
+    display dialog "Window \\"" & this_name & "\\" has been returned to its original size and position." buttons {"OK"} default button 1
 end moving folder window for
 ```
 
@@ -183,7 +183,7 @@ opening folder
 
 |  |
 | --- |
-| ``` on opening folderalias  [ statement ]... end [ opening folder ]  ``` |
+| ``` on opening folder alias  [ statement ]... end [ opening folder ]  ``` |
 
 ##### Placeholders
 
@@ -234,7 +234,7 @@ removing folder items from
 
 |  |
 | --- |
-| ``` on removing folder items from alias after losinglistOfAliasOrText  [ statement ]... end [ removing folder items from ]  ``` |
+| ``` on removing folder items from alias after losing listOfAliasOrText  [ statement ]... end [ removing folder items from ]  ``` |
 
 ##### Placeholders
 
@@ -259,7 +259,7 @@ on removing folder items from this_folder after losing these_items
         set this_name to the name of this_folder
     end tell
     set the item_count to the count of these_items
-    display dialog (item_count as text) & " items have been removed " & "from folder \"" & this_name & "\"." buttons {"OK"} default button 1
+    display dialog (item_count as text) & " items have been removed " & "from folder \\"" & this_name & "\\"." buttons {"OK"} default button 1
 end removing folder items from
 ```
 

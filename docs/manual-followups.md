@@ -26,3 +26,7 @@ as each item is resolved.
 - **Table-heavy diffs:** When new collections introduce complex tables or other
   HTML structures, perform manual spot checks after conversion and note any
   acceptable deviations.
+
+## Pre-release Checklist
+- [ ] Scripted final validation (mirror comparisons, monitoring, site rebuild, link checks).
+- [ ] Optional Playwright smoke tests if scripted validation flags issues or for extra assurance.

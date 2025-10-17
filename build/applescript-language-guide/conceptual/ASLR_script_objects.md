@@ -2,7 +2,7 @@
 
 # Script Objects
 
-<a id="//apple_ref/doc/uid/TP40000983-CH207-DontLinkElementID_447"></a>This chapter describes the `script` object, which is used to implement all AppleScript scripts. Before reading this chapter, you should be familiar with the information in [AppleScript and Objects](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW1).
+<a id="//apple_ref/doc/uid/TP40000983-CH207-DontLinkElementID_447"></a>This chapter describes the `script` object, which is used to implement all AppleScript scripts. Before reading this chapter, you should be familiar with the information in [AppleScript and Objects](ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW1).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH207-DontLinkElementID_448"></a><a id="//apple_ref/doc/uid/TP40000983-CH207-DontLinkElementID_449"></a>A *script object* is a user-defined object that can combine data (in the form of properties) and actions (in the form of handlers and additional `script` objects). Script objects support inheritance, allowing you to define a hierarchy of objects that share properties and handlers. You can also extend or modify the behavior of a handler in one `script` object when calling it from another `script` object.
 
@@ -49,7 +49,7 @@ Each `script` object definition (except for the top-level `script` object) begin
 :   The value that is assigned to the property each time the `script` object is initialized. `script` objects are initialized when compiled. *initialValue* is required in property definitions.
 
 *handlerDefinition*
-:   A handler for a command the `script` object can respond to; equivalent to a method. For more information, see [About Handlers](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-CJBIDBJH) and [Handler Reference](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_handlers.md#//apple_ref/doc/uid/TP40000983-CH7g-163762).
+:   A handler for a command the `script` object can respond to; equivalent to a method. For more information, see [About Handlers](ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-CJBIDBJH) and [Handler Reference](../reference/ASLR_handlers.html#//apple_ref/doc/uid/TP40000983-CH7g-163762).
 
 *statement*
 :   Any AppleScript statement. Statements other than handler and property definitions are treated as if they were part of an implicit handler definition for the `run` command; they are executed when a `script` object receives the `run` command.<a id="//apple_ref/doc/uid/TP40000983-CH207-DontLinkElementID_452"></a>
@@ -129,7 +129,7 @@ end tell
 
 For a `script` object to respond to a command within a `tell` statement, either the `script` object or its parent object must have a handler for the command. For more information about parent objects, see [Inheritance in Script Objects](#//apple_ref/doc/uid/TP40000983-CH207-SW5).
 
-A `script` object definition may include an implicit `run` handler, consisting of all executable statements that are outside of any handler or nested `script` object, or it may include an explicit `run` handler that begins with `on run`, but it may not contain both—such a script will not compile. If a script has no run handler (for example, a script that serves as a library of handlers, as described in [Parameter Specifications](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW12)), executing the script does nothing. However, sending it an explicit `run` command causes an error. For more information, see [run Handlers](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW15).
+A `script` object definition may include an implicit `run` handler, consisting of all executable statements that are outside of any handler or nested `script` object, or it may include an explicit `run` handler that begins with `on run`, but it may not contain both—such a script will not compile. If a script has no run handler (for example, a script that serves as a library of handlers, as described in [Parameter Specifications](ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW12)), executing the script does nothing. However, sending it an explicit `run` command causes an error. For more information, see [run Handlers](ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW15).
 
 The `display dialog` command in the following `script` object definition is the only executable statement at the top level, so it constitutes the `script` object’s implicit `run` handler and is executed when the script sends a `run` command to `script` object `John`, with the statement `tell John to run`. <a id="//apple_ref/doc/uid/TP40000983-CH207-DontLinkElementID_465"></a>
 
@@ -161,7 +161,7 @@ A top-level `script` object saved in a Script Libraries folder becomes a *script
 
 > <a id="//apple_ref/doc/uid/TP40000983-CH207-SW12"></a>
 >
-> **Note:** Libraries are supported in OS X Mavericks v10.9 (AppleScript 2.3) and later. To share properties and handlers between scripts in prior OS versions, use the `load script` command as described in [Libraries using Load Script](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_load_script.md#//apple_ref/doc/uid/TP40000983-CH227-SW1).
+> **Note:** Libraries are supported in OS X Mavericks v10.9 (AppleScript 2.3) and later. To share properties and handlers between scripts in prior OS versions, use the `load script` command as described in [Libraries using Load Script](../reference/ASLR_load_script.html#//apple_ref/doc/uid/TP40000983-CH227-SW1).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH207-SW13"></a>
 
@@ -188,7 +188,7 @@ A script library may be a single-file (scpt) or bundle format (scptd). If a libr
 
 Libraries may define scripting terminology, including commands, properties and enumerated values, by supplying a Scripting Definition (sdef) file in their bundle. Like applications, this terminology is available to client scripts when they target the library with `tell` or `use`, and to the library script itself.
 
-To define terminology, create an sdef file as described in the *[Cocoa Scripting Guide](https://developer.apple.com/library/archive/../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_intro/SAppsIntro.html#//apple_ref/doc/uid/TP40002164)* under [Preparing a Scripting Definition File](https://developer.apple.com/library/archive/../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_creating_sdef/SAppsCreateSdef.html#//apple_ref/doc/uid/TP40001979). Then, copy the file to the bundle’s Resources directory and set the Info.plist key `OSAScriptingDefinition` to the base name of the sdef file (that is, the file name without the “.sdef” extension). Script Editor’s Bundle Contents drawer can do this for you: drag the file into the “Resources” list to copy the file into the bundle, and enter the base name of the sdef file in the “Scripting Definition” field.
+To define terminology, create an sdef file as described in the *[Cocoa Scripting Guide](../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_intro/SAppsIntro.html#//apple_ref/doc/uid/TP40002164)* under [Preparing a Scripting Definition File](../../../../Cocoa/Conceptual/ScriptableCocoaApplications/SApps_creating_sdef/SAppsCreateSdef.html#//apple_ref/doc/uid/TP40001979). Then, copy the file to the bundle’s Resources directory and set the Info.plist key `OSAScriptingDefinition` to the base name of the sdef file (that is, the file name without the “.sdef” extension). Script Editor’s Bundle Contents drawer can do this for you: drag the file into the “Resources” list to copy the file into the bundle, and enter the base name of the sdef file in the “Scripting Definition” field.
 
 <a id="//apple_ref/doc/uid/TP40000983-CH207-SW17"></a>
 
@@ -239,11 +239,11 @@ tell script "Counter" to log its nextNumber() -- logs "2"
 
 The top-level `script` object is the parent of all other `script` objects, although any `script` object can specify a different parent object. The top-level `script` object also has a parent—AppleScript itself (the AppleScript component). And even AppleScript has a parent—the current application. The name of that application (which is typically Script Editor) can be obtained through the global constant `current application`. This hierarchy defines the *inheritance chain* that AppleScript searches to find the target for a command or the definition of a term.
 
-Every `script` object has access to the properties, handlers, and script objects it defines, as well as to those defined by its parent, and those of any other object in the inheritance chain, including AppleScript. That’s why the constants and properties described in [Global Constants in AppleScript](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-BAJBDEJI) are available to any script.
+Every `script` object has access to the properties, handlers, and script objects it defines, as well as to those defined by its parent, and those of any other object in the inheritance chain, including AppleScript. That’s why the constants and properties described in [Global Constants in AppleScript](ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-BAJBDEJI) are available to any script.
 
 > <a id="//apple_ref/doc/uid/TP40000983-CH207-SW1"></a>
 >
-> **Note:** There is an exception to the previous claim. An explicit `local` variable can *shadow*<a id="//apple_ref/doc/uid/TP40000983-CH207-DontLinkElementID_467"></a> (or block access to) a `global` variable or property with the same name, making the global version inaccessible in the scope of the handler or `script` object. For related information, see [Scope of Variables and Properties](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_variables.md#//apple_ref/doc/uid/TP40000983-CH223-SW1).
+> **Note:** There is an exception to the previous claim. An explicit `local` variable can *shadow*<a id="//apple_ref/doc/uid/TP40000983-CH207-DontLinkElementID_467"></a> (or block access to) a `global` variable or property with the same name, making the global version inaccessible in the scope of the handler or `script` object. For related information, see [Scope of Variables and Properties](ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW1).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH207-SW7"></a>
 
@@ -340,7 +340,7 @@ When you change the `vegetable` property of `script` object `JohnSon` to `"Zucch
 
 The previous example demonstrates an important point about inherited properties: to refer to an inherited property from within a child `script` object, you must use the reserved word `my` or `of me` to indicate that the value to which you’re referring is a property of the current `script` object. (You can also use the words `of parent` to indicate that the value is a property of the parent `script` object.) If you don’t, AppleScript assumes the value is a local variable.
 
-For example, if you refer to `vegetable` instead of `my vegetable` in the `changeVegetable` handler in the previous example, the result is `"Spinach"`. For related information, see [The it and me Keywords](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW4).
+For example, if you refer to `vegetable` instead of `my vegetable` in the `changeVegetable` handler in the previous example, the result is `"Spinach"`. For related information, see [The it and me Keywords](ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW4).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH207-SW9"></a>
 
@@ -372,7 +372,7 @@ end script
 script ChildOfElizabeth
     property parent : Elizabeth
     on sayHello to someone
-        if my HowManyTimes > 3 then
+        if my HowManyTimes &gt; 3 then
             return "No, I'm tired of saying hello."
         else
             continue sayHello to someone
@@ -390,7 +390,7 @@ In this example, the handler defined by `ChildOfElizabeth` for the `sayHello` co
 
 > <a id="//apple_ref/doc/uid/TP40000983-CH207-SW11"></a>
 >
-> **Note:** The reserved word `my` in the statement `if` `my HowManyTimes > 10` in this example is required to indicate that `HowManyTimes` is a property of the `script` object. Without the word `my`, AppleScript assumes that `HowManyTimes` is an undefined local variable.<a id="//apple_ref/doc/uid/TP40000983-CH207-DontLinkElementID_477"></a>
+> **Note:** The reserved word `my` in the statement `if` `my HowManyTimes &gt; 10` in this example is required to indicate that `HowManyTimes` is a property of the `script` object. Without the word `my`, AppleScript assumes that `HowManyTimes` is an undefined local variable.<a id="//apple_ref/doc/uid/TP40000983-CH207-DontLinkElementID_477"></a>
 
 A `continue` statement can change the parameters of a command before delegating it. For example, suppose the following `script` object is defined in the same script as the preceding example. The first `continue` statement changes the direct parameter of the `sayHello` command from `"Bill"` to `"William"`. It does this by specifying the value `"William"` instead of the parameter variable `someone`.
 

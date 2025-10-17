@@ -16,36 +16,36 @@ This appendix describes error numbers and error messages provided by AppleScript
 
 | Error number | Error message |
 | -2700 | Unknown error. |
-| -2701 | Can’t divide <number> by zero. |
+| -2701 | Can’t divide &lt;number&gt; by zero. |
 | -2702 | The result of a numeric operation was too large. |
-| -2703 | <reference> can't be launched because it is not an application. |
-| -2704 | <reference> isn't scriptable. |
+| -2703 | &lt;reference&gt; can't be launched because it is not an application. |
+| -2704 | &lt;reference&gt; isn't scriptable. |
 | -2705 | The application has a corrupted dictionary. |
 | -2706 | Stack overflow. |
 | -2707 | Internal table overflow. |
 | -2708 | Attempt to create a value larger than the allowable size. |
 | -2709 | Can't get the event dictionary. |
-| -2720 | Can't both consider and ignore <attribute>. |
+| -2720 | Can't both consider and ignore &lt;attribute&gt;. |
 | -2721 | Can't perform operation on text longer than 32K bytes. |
 | -2729 | Message size too large for the 7.0 Finder. |
-| -2740 | A <language element> can't go after this <language element>. |
-| -2741 | Expected <language element> but found <language element>. |
-| -2750 | The <name> parameter is specified more than once. |
-| -2751 | The <name> property is specified more than once. |
-| -2752 | The <name> handler is specified more than once. |
-| -2753 | The variable <name> is not defined. |
-| -2754 | Can't declare <name> as both a local and global variable. |
+| -2740 | A &lt;language element&gt; can't go after this &lt;language element&gt;. |
+| -2741 | Expected &lt;language element&gt; but found &lt;language element&gt;. |
+| -2750 | The &lt;name&gt; parameter is specified more than once. |
+| -2751 | The &lt;name&gt; property is specified more than once. |
+| -2752 | The &lt;name&gt; handler is specified more than once. |
+| -2753 | The variable &lt;name&gt; is not defined. |
+| -2754 | Can't declare &lt;name&gt; as both a local and global variable. |
 | -2755 | Exit statement was not in a repeat loop. |
 | -2760 | Tell statements are nested too deeply. |
-| -2761 | <name> is illegal as a formal parameter. |
-| -2762 | <name> is not a parameter name for the event <event>. |
+| -2761 | &lt;name&gt; is illegal as a formal parameter. |
+| -2762 | &lt;name&gt; is not a parameter name for the event &lt;event&gt;. |
 | -2763 | No result was returned for some argument of this expression. |
 
 <a id="//apple_ref/doc/uid/TP40000983-CH220-SW2"></a>
 
 ## Operating System Errors
 
-<a id="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_909"></a><a id="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_910"></a>An operating system error is an error that occurs when AppleScript or an application requests services from the Mac OS. They are rare, and often there is nothing you can do about them in a script, other than report them. A few, such as `"User canceled"`, make sense for scripts to handle—as shown, for an example, in the Examples section for the [display dialog](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_cmds.md#//apple_ref/doc/uid/TP40000983-CH216-SW12) command.
+<a id="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_909"></a><a id="//apple_ref/doc/uid/TP40000983-CH220-DontLinkElementID_910"></a>An operating system error is an error that occurs when AppleScript or an application requests services from the Mac OS. They are rare, and often there is nothing you can do about them in a script, other than report them. A few, such as `"User canceled"`, make sense for scripts to handle—as shown, for an example, in the Examples section for the [display dialog](ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW12) command.
 
 <a id="//apple_ref/doc/uid/TP40000983-CH220-SW4"></a>
 
@@ -53,25 +53,25 @@ This appendix describes error numbers and error messages provided by AppleScript
 
 | Error number | Error message |
 | 0 | No error. |
-| -34 | Disk <name> full. |
-| -35 | Disk <name> wasn’t found. |
+| -34 | Disk &lt;name&gt; full. |
+| -35 | Disk &lt;name&gt; wasn’t found. |
 | -37 | Bad name for file |
-| -38 | File <name> wasn’t open. |
+| -38 | File &lt;name&gt; wasn’t open. |
 | -39 | End of file error. |
 | -42 | Too many files open. |
-| -43 | File <name> wasn’t found. |
-| -44 | Disk <name> is write protected. |
-| -45 | File <name> is locked. |
-| -46 | Disk <name> is locked. |
-| -47 | File <name> is busy. |
+| -43 | File &lt;name&gt; wasn’t found. |
+| -44 | Disk &lt;name&gt; is write protected. |
+| -45 | File &lt;name&gt; is locked. |
+| -46 | Disk &lt;name&gt; is locked. |
+| -47 | File &lt;name&gt; is busy. |
 | -48 | Duplicate file name. |
-| -49 | File <name> is already open. |
+| -49 | File &lt;name&gt; is already open. |
 | -50 | Parameter error. |
 | -51 | File reference number error. |
 | -61 | File not open with write permission. |
 | -108 | Out of memory. |
-| -120 | Folder <name> wasn’t found. |
-| -124 | Disk <name> is disconnected. |
+| -120 | Folder &lt;name&gt; wasn’t found. |
+| -124 | Disk &lt;name&gt; is disconnected. |
 | -128 | User cancelled. |
 | -192 | A resource wasn’t found. |
 | -600 | Application isn’t running |
@@ -84,9 +84,9 @@ This appendix describes error numbers and error messages provided by AppleScript
 | -609 | Connection is invalid. |
 | -904 | Not enough system memory to connect to remote application. |
 | -905 | Remote access is not allowed. |
-| -906 | <name> isn’t running or program linking isn’t enabled. |
+| -906 | &lt;name&gt; isn’t running or program linking isn’t enabled. |
 | -915 | Can’t find remote machine. |
-| -30720 | Invalid date and time <date string>. |
+| -30720 | Invalid date and time &lt;date string&gt;. |
 
 <a id="//apple_ref/doc/uid/TP40000983-CH220-SW6"></a>
 
@@ -107,7 +107,7 @@ This appendix describes error numbers and error messages provided by AppleScript
 | -1705 | The specified list item doesn’t exist. |
 | -1706 | A newer version of Apple Event Manager is required to perform this operation. |
 | -1707 | The event isn’t an Apple event. |
-| -1708 | The script doesn’t understand the <message> message. The event was not handled. |
+| -1708 | The script doesn’t understand the &lt;message&gt; message. The event was not handled. |
 | -1709 | An invalid reply parameter was received by `AEResetTimer`. |
 | -1710 | An invalid sending mode (something other than `NoReply`, `WaitReply`, or `QueueReply`) was detected or interaction level is unknown. |
 | -1711 | The user canceled while waiting for an event reply. |

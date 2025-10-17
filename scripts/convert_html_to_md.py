@@ -30,21 +30,66 @@ class DocsMarkdownConverter(MarkdownConverter):
         context = set(parent_tags or [])
         result: list[str] = []
         current_term: str | None = None
-        for child in el.children:
-            if isinstance(child, NavigableString):
-                continue
+
+        def extract_term(node: Tag) -> str | None:
+            def collect_text(current: Tag) -> list[str]:
+                parts: list[str] = []
+                for child in current.children:
+                    if isinstance(child, NavigableString):
+                        text = str(child)
+                        if text.strip():
+                            parts.append(text)
+                        else:
+                            parts.append(" ")
+                        continue
+                    if not isinstance(child, Tag):
+                        continue
+                    if child.name == "a" and not child.get("href"):
+                        continue
+                    if child.name in {"td", "tr"}:
+                        parts.extend(collect_text(child))
+                        continue
+                    rendered = self.process_tag(child, parent_tags=set(context)).strip()
+                    if rendered:
+                        parts.append(rendered)
+                return parts
+
+            collected = collect_text(node)
+            term_txt = " ".join(" ".join(collected).split())
+            if term_txt:
+                return term_txt
+            for candidate in node.find_all(("code", "em", "strong", "span", "a"), recursive=True):
+                if candidate.name == "a" and not candidate.get("href"):
+                    continue
+                term_txt = self.process_tag(candidate, parent_tags=set(context)).strip()
+                if term_txt:
+                    return term_txt
+            return None
+
+        for child in el.find_all(["tr", "dt", "dd"], recursive=True):
             if not isinstance(child, Tag):
                 continue
-            if child.name == "dt":
-                term = self.process_tag(child, parent_tags=set(context)).strip()
+            if child.find_parent("dl") is not el:
+                continue
+            if child.name in {"tr", "dt"}:
+                term = extract_term(child)
                 if term:
                     current_term = term.replace("\n", " ").strip(" :")
-            elif child.name == "dd" and current_term:
+            elif child.name == "dd":
+                term = current_term
+                first_tag = next((c for c in child.children if isinstance(c, Tag)), None)
+                if first_tag and first_tag.name == "em" and first_tag.get_text(strip=True).endswith(":"):
+                    term = self.process_tag(first_tag, parent_tags=set(context)).strip()
+                    first_tag.decompose()
+                if not term:
+                    continue
+                clean_term = term.replace("\n", " ").strip(" :")
                 definition = self.process_tag(child, parent_tags=set(context)).strip()
                 definition = definition.lstrip(": ").strip()
                 definition = " ".join(definition.split())
-                result.append(f"{current_term}\n:   {definition}\n\n")
-                current_term = None
+                if clean_term and definition:
+                    result.append(f"{clean_term}\n:   {definition}\n\n")
+                    current_term = None
         return "".join(result)
 
     def convert_a(self, el, text, parent_tags):  # type: ignore[override]
@@ -54,6 +99,17 @@ class DocsMarkdownConverter(MarkdownConverter):
             if anchor and anchor.startswith("//apple_ref"):
                 return f'<a id="{anchor}"></a>'
         return super().convert_a(el, text, parent_tags)
+
+    def process_text(self, el, parent_tags=None):  # type: ignore[override]
+        if isinstance(el, NavigableString):
+            text = str(el)
+            text = text.replace("\\", "\\\\")
+            tags = set(parent_tags or [])
+            if "td" in tags or "th" in tags:
+                text = text.replace("|", "\\|")
+            text = text.replace("<", "&lt;").replace(">", "&gt;")
+            el = NavigableString(text)
+        return super().process_text(el, parent_tags=parent_tags)
 
 
 def make_converter() -> DocsMarkdownConverter:
@@ -162,6 +218,40 @@ def clean_article(soup: BeautifulSoup, article: Tag) -> None:
         new_pre.append(code_tag)
         sample.replace_with(new_pre)
 
+    for pre in list(article.find_all("pre")):
+        for br in pre.find_all("br"):
+            br.replace_with("\n")
+        parts: list[str] = []
+        for node in pre.children:
+            if isinstance(node, NavigableString):
+                parts.append(str(node))
+            else:
+                parts.append(node.get_text())
+        text_builder: list[str] = []
+        for part in parts:
+            if not text_builder:
+                text_builder.append(part)
+                continue
+            if part == "\n":
+                text_builder.append(part)
+                continue
+            if not text_builder[-1].endswith((" ", "\n")) and not part.startswith((" ", "\n", ".", ",", ")")):
+                text_builder.append(" ")
+            text_builder.append(part)
+        text = "".join(text_builder)
+        new_pre = soup.new_tag("pre")
+        code_tag = soup.new_tag("code")
+        code_tag.string = text
+        new_pre.append(code_tag)
+        pre.replace_with(new_pre)
+
+    for empty_code in list(article.find_all("code")):
+        if not empty_code.get_text(strip=True):
+            empty_code.decompose()
+
+    for sup in list(article.find_all("sup")):
+        sup.replace_with(f"^{sup.get_text(strip=True)}")
+
     for icon in article.select("figure.topicIcon"):
         icon.decompose()
 
@@ -171,6 +261,19 @@ def clean_article(soup: BeautifulSoup, article: Tag) -> None:
         link = universal.find("a")
         if link and (not link.previous_sibling or link.previous_sibling.string is None):
             link.insert_before(soup.new_string(" "))
+
+    for em in article.select("em.variableText"):
+        prev = em.previous_sibling
+        needs_space = True
+        if prev is None:
+            needs_space = True
+        elif isinstance(prev, NavigableString):
+            if prev.endswith((" ", "\n")):
+                needs_space = False
+        elif prev.name == "br":
+            needs_space = False
+        if needs_space:
+            em.insert_before(soup.new_string(" "))
 
 def inject_special_note(markdown: str) -> str:
     if WWDC_NOTE in markdown:

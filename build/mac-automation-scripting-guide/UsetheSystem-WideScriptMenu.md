@@ -6,7 +6,7 @@ The OS X script menu provides quick access to your collection of scripts. Simply
 
 <a id="//apple_ref/doc/uid/TP40016239-CH7-SW4"></a>
 **Figure 41-1**The OS X script menu
-![image: ../Art/scriptmenu_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/scriptmenu_2x.png)
+![image: ../Art/scriptmenu_2x.png](Art/scriptmenu_2x.png)
 > **Note**
 >
 >
@@ -23,14 +23,14 @@ The script menu is disabled by default in OS X.
 **To enable the script menu**
 
 1. Launch Script Editor, located in `/Applications/Utilities/`.
-2. Select Script Editor > Preferences, or press Command-Comma (,), to open the preferences window.
+2. Select Script Editor &gt; Preferences, or press Command-Comma (,), to open the preferences window.
 3. Click General in the toolbar.
 4. Enable the “Show Script menu in menu bar” checkbox.
 5. Choose whether application scripts—scripts that appear only when a corresponding app is in the front—should appear at the top or bottom of the script menu.
 
    <a id="//apple_ref/doc/uid/TP40016239-CH7-SW3"></a>
 
-   ![image: ../Art/scripteditor_scriptmenu_preferences_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/scripteditor_scriptmenu_preferences_2x.png)
+   ![image: ../Art/scripteditor_scriptmenu_preferences_2x.png](Art/scripteditor_scriptmenu_preferences_2x.png)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH7-DontLinkElementID_11"></a>
 
@@ -45,7 +45,7 @@ The script menu displays scripts in the `~/Library/Scripts/` folder of your user
 
 User-level scripts are scripts that only you can see and use. They aren’t available to other users on your Mac.
 
-To add user-level scripts to the script menu, save them into the `~/Library/Scripts/` folder of your user directory. For quick access to this folder, select Open Scripts Folder > Open User Scripts Folder from the script menu. When you do this, the folder is automatically created if it doesn’t already exist.
+To add user-level scripts to the script menu, save them into the `~/Library/Scripts/` folder of your user directory. For quick access to this folder, select Open Scripts Folder &gt; Open User Scripts Folder from the script menu. When you do this, the folder is automatically created if it doesn’t already exist.
 
 <a id="//apple_ref/doc/uid/TP40016239-CH7-SW9"></a>
 
@@ -53,7 +53,7 @@ To add user-level scripts to the script menu, save them into the `~/Library/Scri
 
 Computer-level scripts are scripts that any user on your Mac can see and use.
 
-To add computer-level scripts to the script menu, save them into the `/Library/Scripts/` folder on your Mac. For quick access to this folder, select Open Scripts Folder > Open Computer Scripts Folder from the script menu. When you do this, the folder is automatically created if it doesn’t already exist.
+To add computer-level scripts to the script menu, save them into the `/Library/Scripts/` folder on your Mac. For quick access to this folder, select Open Scripts Folder &gt; Open Computer Scripts Folder from the script menu. When you do this, the folder is automatically created if it doesn’t already exist.
 
 <a id="//apple_ref/doc/uid/TP40016239-CH7-SW10"></a>
 
@@ -61,7 +61,7 @@ To add computer-level scripts to the script menu, save them into the `/Library/S
 
 Application-specific scripts are only visible in the script menu when a specific app is in the front.
 
-To add application-specific scripts to the script menu, save them into the `~/Library/Scripts/Applications/«ApplicationName»` folder in your user directory or the `/Library/Scripts/Applications/«ApplicationName»` folder on your Mac. For quick access to this folder, bring the app to the front, then select Open Scripts Folder > Open «ApplicationName» Scripts Folder from the script menu. When you do this, a folder for the application is automatically created if it doesn’t already exist.
+To add application-specific scripts to the script menu, save them into the `~/Library/Scripts/Applications/«ApplicationName»` folder in your user directory or the `/Library/Scripts/Applications/«ApplicationName»` folder on your Mac. For quick access to this folder, bring the app to the front, then select Open Scripts Folder &gt; Open «ApplicationName» Scripts Folder from the script menu. When you do this, a folder for the application is automatically created if it doesn’t already exist.
 
 <a id="//apple_ref/doc/uid/TP40016239-CH7-SW11"></a>
 
@@ -71,7 +71,7 @@ Select a script from the script menu to run it. If the script is an application,
 
 <a id="//apple_ref/doc/uid/TP40016239-CH7-SW2"></a>
 **Figure 41-2**Script menu progress
-![image: ../Art/scriptmenu_progress_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/scriptmenu_progress_2x.png)
+![image: ../Art/scriptmenu_progress_2x.png](Art/scriptmenu_progress_2x.png)
 > **Note**
 >
 >

@@ -6,7 +6,7 @@
 
 > <a id="//apple_ref/doc/uid/TP40000983-CH223-DontLinkElementID_13"></a>
 >
-> **Important:** In reading this chapter, you should be familiar with the information on implicit and explicit `run` handlers in [run Handlers](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW15).
+> **Important:** In reading this chapter, you should be familiar with the information on implicit and explicit `run` handlers in [run Handlers](ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW15).
 
 The following sections cover common issues in working with variables and properties, including how to declare them and how AppleScript interprets their scope in a script:
 
@@ -18,7 +18,7 @@ The following sections cover common issues in working with variables and propert
 
 ## Defining Properties
 
-<a id="//apple_ref/doc/uid/TP40000983-CH223-DontLinkElementID_485"></a>Property labels follow the rules described in [Identifiers](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_lexical_conventions.md#//apple_ref/doc/uid/TP40000983-CH214-SW4).
+<a id="//apple_ref/doc/uid/TP40000983-CH223-DontLinkElementID_485"></a>Property labels follow the rules described in [Identifiers](ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW4).
 
 Property definitions use the following syntax:
 
@@ -48,7 +48,7 @@ You cannot declare a property in a handler but a handler can access a property d
 
 ## Declaring Variables
 
-<a id="//apple_ref/doc/uid/TP40000983-CH223-DontLinkElementID_486"></a>Variable names follow the rules described in [Identifiers](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_lexical_conventions.md#//apple_ref/doc/uid/TP40000983-CH214-SW4).
+<a id="//apple_ref/doc/uid/TP40000983-CH223-DontLinkElementID_486"></a>Variable names follow the rules described in [Identifiers](ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW4).
 
 To create a variable in AppleScript, you assign it a value using the `copy` or `set` command. For example, the following statements create and initialize two variables, one named `circumference` and one named `savedResult`:
 
@@ -184,7 +184,7 @@ As this example demonstrates, the properties of a record need not be given in th
 
 > <a id="//apple_ref/doc/uid/TP40000983-CH223-SW14"></a>
 >
-> **Note:** Using patterns with the `set` command is similar to using patterned parameters with handlers, which is described in [Handlers with Patterned Positional Parameters](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW20).
+> **Note:** Using patterns with the `set` command is similar to using patterned parameters with handlers, which is described in [Handlers with Patterned Positional Parameters](ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW20).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH223-SW8"></a>
 
@@ -345,7 +345,7 @@ increment() --result: 5
 currentCount --result: 10
 ```
 
-The scope of the first `currentCount` variable’s declaration is limited to the `run` handler for the script. Because this script has no explicit `run` handler, outside statements are part of its implicit `run` handler, as described in [run Handlers](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW15). The scope of the second `currentCount` declaration, within the `on increment` handler, is limited to that handler. AppleScript keeps track of each variable independently.
+The scope of the first `currentCount` variable’s declaration is limited to the `run` handler for the script. Because this script has no explicit `run` handler, outside statements are part of its implicit `run` handler, as described in [run Handlers](ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW15). The scope of the second `currentCount` declaration, within the `on increment` handler, is limited to that handler. AppleScript keeps track of each variable independently.
 
 To associate a variable in a handler with the same variable declared with the `set` command outside the handler, you can use a `global` declaration in the handler, as shown in the next example. (This approach also works to associate a variable in a nested `script` object.)
 

@@ -2,7 +2,7 @@
 
 # Handler Reference
 
-<a id="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_926"></a>This chapter provides reference for handlers, which are defined and introduced in [About Handlers](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-CJBIDBJH). It describes the types of parameters you can use with handlers and how you invoke them. It also describes the `continue` and `return` statements, which you use to control the flow of execution in handlers.
+<a id="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_926"></a>This chapter provides reference for handlers, which are defined and introduced in [About Handlers](../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-CJBIDBJH). It describes the types of parameters you can use with handlers and how you invoke them. It also describes the `continue` and `return` statements, which you use to control the flow of execution in handlers.
 
 <a id="//apple_ref/doc/uid/TP40000983-CH7g-SW1"></a>
 
@@ -48,9 +48,9 @@ When AppleScript encounters the statement `beep 3`, it invokes the local `beep` 
 
 The final statement, `tell my parent to beep 3`, shows how to directly invoke the AppleScript `beep` command, rather than the local handler.
 
-For an example that uses a `continue` statement to exit a script handler and return control to the application’s default `quit` handler, see [quit Handlers](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW9).
+For an example that uses a `continue` statement to exit a script handler and return control to the application’s default `quit` handler, see [quit Handlers](../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW9).
 
-For additional examples, see [Using the continue Statement in Script Objects](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_script_objects.md#//apple_ref/doc/uid/TP40000983-CH207-SW9).
+For additional examples, see [Using the continue Statement in Script Objects](../conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW9).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH7g-163937"></a>
 
@@ -101,7 +101,7 @@ It is often considered good programming practice to have just one `return` state
 
 In some cases, however, it may make more sense to use multiple `return` statements. For example, the `minimumValue` handler in [Handler Syntax (Positional Parameters)](#//apple_ref/doc/uid/TP40000983-CH7g-166812) is a simple script that uses two `return` statements.
 
-For related information, see [AppleScript Error Handling](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW10).
+For related information, see [AppleScript Error Handling](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW10).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH7g-SW2"></a>
 
@@ -115,7 +115,7 @@ Labeled parameters are identified by their labels and can be listed in any order
 
 |  |
 | --- |
-| ``` ( on | to ) handlerName ¬    [ [ of | in ] directParamName ] ¬    [ ASLabel userParamName ]... ¬    [ given userLabel:userParamName [, userLabel:userParamName ]...]       [ statement ]... end [ handlerName ]  ``` |
+| ``` ( on \| to ) handlerName ¬    [ [ of \| in ] directParamName ] ¬    [ ASLabel userParamName ]... ¬    [ given userLabel : userParamName [, userLabel : userParamName ]...]       [ statement ]... end [ handlerName ]  ``` |
 
 ##### Placeholders
 
@@ -141,11 +141,11 @@ Labeled parameters are identified by their labels and can be listed in any order
 
 ##### Examples
 
-For examples and related conceptual information, see [Handlers with Labeled Parameters](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW22).
+For examples and related conceptual information, see [Handlers with Labeled Parameters](../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW22).
 
 ##### Discussion
 
-A handler written to respond to an application command (like those in [Handlers in Script Applications](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW14)) need not include all of the possible parameters defined for that command. For example, an application might define a command with up to five possible parameters, but you could define a handler for that command with only two of the parameters.
+A handler written to respond to an application command (like those in [Handlers in Script Applications](../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW14)) need not include all of the possible parameters defined for that command. For example, an application might define a command with up to five possible parameters, but you could define a handler for that command with only two of the parameters.
 
 If a script calls a handler with more parameters than are specified in the handler definition, the extra parameters are ignored.
 
@@ -159,7 +159,7 @@ Calling a Handler with Labeled Parameters
 
 |  |
 | --- |
-| ```  handlerName ¬   [ [ of | in ] directParam ] ¬   [ [ ASLabel paramValue ...] ¬    | [ with labelForTrueParam [, labelForTrueParam ]... ¬     [ ( and | , ) labelForTrueParam ] ] ¬    | [ without labelForFalseParam [, labelForFalseParam ]...] ¬     [ ( and | , ) labelForFalseParam ] ] ¬    | [ given userLabel:paramValue [, userLabel:paramValue ]...]...   ``` |
+| ```  handlerName ¬   [ [ of \| in ] directParam ] ¬   [ [ ASLabel paramValue ...] ¬    \| [ with labelForTrueParam [, labelForTrueParam ]... ¬     [ ( and \| , ) labelForTrueParam ] ] ¬    \| [ without labelForFalseParam [, labelForFalseParam ]...] ¬     [ ( and \| , ) labelForFalseParam ] ] ¬    \| [ given userLabel : paramValue [, userLabel : paramValue ]...]...   ``` |
 
 ##### Placeholders
 
@@ -176,7 +176,7 @@ Calling a Handler with Labeled Parameters
 :   The value of a parameter, which can be any valid expression.
 
 *labelForTrueParam*
-:   The label for a Boolean parameter whose value is `true`. You use this form in `with` clauses. Because the value `true` is implied by the word `with`, you provide only the label, not the value. For an example, see the `findNumbers` handler in [Handlers with Labeled Parameters](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW22). <a id="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_959"></a>
+:   The label for a Boolean parameter whose value is `true`. You use this form in `with` clauses. Because the value `true` is implied by the word `with`, you provide only the label, not the value. For an example, see the `findNumbers` handler in [Handlers with Labeled Parameters](../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW22). <a id="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_959"></a>
 
 *labelForFalseParam*
 :   The label for a Boolean parameter whose value is `false`. You use this form in `without` clauses. Because the value `false` is implied by the word `without`, you provide only the label, not the value.<a id="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_960"></a>
@@ -188,7 +188,7 @@ Calling a Handler with Labeled Parameters
 
 ##### Examples
 
-For examples, see [Handlers with Labeled Parameters](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW22).
+For examples, see [Handlers with Labeled Parameters](../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW22).
 
 ##### Discussion
 
@@ -232,7 +232,7 @@ Handler Syntax (Positional Parameters)
 
 |  |
 | --- |
-| ```  on | to handlerName ( [ userParamName [, userParamName ]...] )     [ statement ]...  end [ handlerName ]   ``` |
+| ```  on \| to handlerName ( [ userParamName [, userParamName ]...] )     [ statement ]...  end [ handlerName ]   ``` |
 
 ##### Placeholders
 
@@ -243,13 +243,13 @@ Handler Syntax (Positional Parameters)
 :   An identifier for a user-defined parameter variable.
 
 *statement*
-:   Any AppleScript statement, including global or local variable declarations. For information about the scope of local and global variables, see [Scope of Variables and Properties](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_variables.md#//apple_ref/doc/uid/TP40000983-CH223-SW1).
+:   Any AppleScript statement, including global or local variable declarations. For information about the scope of local and global variables, see [Scope of Variables and Properties](../conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW1).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_214"></a>
 
 ##### Examples
 
-For examples and related conceptual information, see [Handlers with Positional Parameters](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW13).
+For examples and related conceptual information, see [Handlers with Positional Parameters](../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW13).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH7g-166906"></a>
 
@@ -261,7 +261,7 @@ Calling a Handler with Positional Parameters
 
 |  |
 | --- |
-| ``` handlerName( [ paramValue [, paramValue ]...] )  ``` |
+| ``` handlerName ( [ paramValue [, paramValue ]...] )  ``` |
 
 ##### Placeholders
 
@@ -275,7 +275,7 @@ Calling a Handler with Positional Parameters
 
 ##### Examples
 
-For examples, see [Handlers with Positional Parameters](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW13)
+For examples, see [Handlers with Positional Parameters](../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW13)
 
 ##### Discussion
 
@@ -297,24 +297,24 @@ Handler Syntax (Interleaved Parameters)
 
 |  |
 | --- |
-| ``` on | tohandlerNamePart:userParamName [namePart:userParamName ]... )    [ statement ]... end [ handlerName ]   ``` |
+| ``` on \| to handlerNamePart : userParamName [ namePart : userParamName ]... )    [ statement ]... end [ handlerName ]   ``` |
 
 ##### Placeholders
 
-*handlerNamePart*, *namePart*
+*handlerNamePart* , *namePart*
 :   An identifier that, combined with the other parts, forms the handler name.
 
 *userParamName*
 :   An identifier for a user-defined parameter variable.
 
 *statement*
-:   Any AppleScript statement, including global or local variable declarations. For information about the scope of local and global variables, see [Scope of Variables and Properties](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_variables.md#//apple_ref/doc/uid/TP40000983-CH223-SW1).
+:   Any AppleScript statement, including global or local variable declarations. For information about the scope of local and global variables, see [Scope of Variables and Properties](../conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW1).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH7g-DontLinkElementID_216"></a>
 
 ##### Examples
 
-For examples and related conceptual information, see [Handlers with Interleaved Parameters](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW2).
+For examples and related conceptual information, see [Handlers with Interleaved Parameters](../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW2).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH7g-SW5"></a>
 
@@ -326,14 +326,14 @@ Calling a Handler with Interleaved Parameters
 
 |  |
 | --- |
-| ``` ( tell scriptObject to | scriptObject's | my ) handlerNamePart:paramValue [ namePart:paramValue ]...]   ``` |
+| ``` ( tell scriptObject to \| scriptObject 's \| my ) handlerNamePart : paramValue [ namePart : paramValue ]...]   ``` |
 
 ##### Placeholders
 
 scriptObject
 :   A script object to direct the handler call to, which can be any valid expression.
 
-*handlerNamePart*, *namePart*
+*handlerNamePart* , *namePart*
 :   An identifier that names the handler.
 
 *paramValue*
@@ -343,7 +343,7 @@ scriptObject
 
 ##### Examples
 
-For examples, see [Handlers with Positional Parameters](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_about_handlers.md#//apple_ref/doc/uid/TP40000983-CH206-SW13)
+For examples, see [Handlers with Positional Parameters](../conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-SW13)
 
 ##### Discussion
 

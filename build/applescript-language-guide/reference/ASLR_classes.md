@@ -14,7 +14,7 @@ alias
 
 A persistent reference to an existing file, folder, or volume in the file system.
 
-For related information, see `file`, `POSIX file`, and [Aliases and Files](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW28).
+For related information, see `file`, `POSIX file`, and [Aliases and Files](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW28).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH1g-SW4"></a>
 
@@ -192,7 +192,7 @@ The operators that take `boolean` objects as operands are `and`, `or`, `not`, `&
 
 The `=` operator returns `true` if both operands evaluate to the same value (either `true` or `false`); the `≠` operator returns `true` if the operands evaluate to different values.
 
-The binary operators `and` and `or` take `boolean` objects as operands and return Boolean values. An `and` operation, such as `(2 > 1) and (4 > 3)`, has the value `true` if both its operands are `true`, and `false` otherwise. An `or` operation, such as `(theString = "Yes") or (today = "Tuesday")`, has the value `true` if either of its operands is `true`.
+The binary operators `and` and `or` take `boolean` objects as operands and return Boolean values. An `and` operation, such as `(2 &gt; 1) and (4 &gt; 3)`, has the value `true` if both its operands are `true`, and `false` otherwise. An `or` operation, such as `(theString = "Yes") or (today = "Tuesday")`, has the value `true` if either of its operands is `true`.
 
 The unary `not` operator changes a `true` value to `false` or a `false` value to `true`.
 
@@ -202,7 +202,7 @@ The concatenation operator (`&`) creates a list containing the two boolean value
 true & false --result: {true, false}
 ```
 
-For additional information on these operators, see [Operators Reference](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_operators.md#//apple_ref/doc/uid/TP40000983-CH5g-124070).
+For additional information on these operators, see [Operators Reference](ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124070).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_21"></a>
 
@@ -219,7 +219,7 @@ The following are simple Boolean expressions:
 ```
 true
 false
-paragraphCount > 2
+paragraphCount &gt; 2
 ```
 
 <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_542"></a><a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_543"></a>AppleScript supplies the Boolean constants <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_544"></a>`true` and <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_545"></a>`false` to serve as the result of evaluating a Boolean operation. But scripts rarely need to use these literals explicitly because a Boolean expression itself evaluates to a Boolean value. For example, consider the following two script snippets:
@@ -319,7 +319,7 @@ class of {1, 2, "hello"} --result: list
 
 A word with a predefined value.
 
-Constants are generally used for enumerated types. You cannot define constants in scripts; constants can be defined only by applications and by AppleScript. See [Global Constants in AppleScript](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-BAJBDEJI) for more information.
+Constants are generally used for enumerated types. You cannot define constants in scripts; constants can be defined only by applications and by AppleScript. See [Global Constants in AppleScript](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-BAJBDEJI) for more information.
 
 <a id="//apple_ref/doc/uid/TP40000983-CH1g-248702"></a>
 
@@ -363,7 +363,7 @@ The final statement shows that the class of `hyphens` is `constant`.
 
 Constants are not text strings, and they must not be surrounded by quotation marks.
 
-Literal constants are defined in [Literals and Constants](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_lexical_conventions.md#//apple_ref/doc/uid/TP40000983-CH214-SW10).
+Literal constants are defined in [Literals and Constants](../conceptual/ASLR_lexical_conventions.html#//apple_ref/doc/uid/TP40000983-CH214-SW10).
 
 In addition to the constants defined by AppleScript, applications often define enumerated types to be used for command parameters or property values. For example, the iTunes `search` command defines these constants for specifying the search area:
 
@@ -437,7 +437,7 @@ When you compile a script, AppleScript displays date and time values according t
 
 ##### Operators
 
-<a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_563"></a><a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_564"></a><a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_565"></a><a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_566"></a>The operators that take `date` object as operands are `&`, `+`, `–`, `=`, `≠`, `>`, `≥`, `<`, `≤`, `comes before`, `comes after`, and `as`. In expressions containing `>`, `≥`, `<`, `≤`, `comes before`, or `comes after`, a later time is greater than an earlier time.
+<a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_563"></a><a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_564"></a><a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_565"></a><a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_566"></a>The operators that take `date` object as operands are `&`, `+`, `–`, `=`, `≠`, `&gt;`, `≥`, `&lt;`, `≤`, `comes before`, `comes after`, and `as`. In expressions containing `&gt;`, `≥`, `&lt;`, `≤`, `comes before`, or `comes after`, a later time is greater than an earlier time.
 
 AppleScript supports the following operations on `date` objects with the `+` and `–` operators:
 
@@ -554,7 +554,7 @@ file
 
 A reference to a file, folder, or volume in the file system. A `file` object has exactly the same attributes as an `alias` object, with the addition that it can refer to an item that does not exist.
 
-For related information, see `alias` and `POSIX file`. For a description of the format for a file path, see [Aliases and Files](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW28).
+For related information, see `alias` and `POSIX file`. For a description of the format for a file path, see [Aliases and Files](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW28).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_32"></a>
 
@@ -596,7 +596,7 @@ A number without a fractional part.
 
 ##### Operators
 
-The operators that can have `integer` values as operands are `+`, `-`, `*`, `÷` (or `/`), `div`, `mod`, `^`, `=`, `≠`, `>`, `≥`, `<`, and `≤`.
+The operators that can have `integer` values as operands are `+`, `-`, `*`, `÷` (or `/`), `div`, `mod`, `^`, `=`, `≠`, `&gt;`, `≥`, `&lt;`, and `≤`.
 
 The `div` operator always returns an `integer` value as its result. The `+`, `–`, `*`, `mod`, and `^` operators return values of type `integer` or `real`.
 
@@ -655,7 +655,7 @@ A list appears in a script as a series of expressions contained within braces an
 <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_580"></a>| `rest` | | | | |
 |  | Access: | read only | | |
 |  | Class: | `list` | | |
-|  | A list containing all items in the list except the first item. ``<a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_581"></a> | | | |
+|  | A list containing all items in the list except the first item. <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_581"></a> | | | |
 <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_582"></a>| `reverse` | | | | |
 |  | Access: | read only | | |
 |  | Class: | `list` | | |
@@ -677,7 +677,7 @@ A list appears in a script as a series of expressions contained within braces an
 
 The operators that can have list values as operands are `&`, `=`, `≠`, `starts with`, `ends with`, `contains`, and `is contained by`.
 
-For detailed explanations and examples of how AppleScript operators treat lists, see [Operators Reference](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_operators.md#//apple_ref/doc/uid/TP40000983-CH5g-124070).
+For detailed explanations and examples of how AppleScript operators treat lists, see [Operators Reference](ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124070).
 
 ##### Commands Handled
 
@@ -700,7 +700,7 @@ AppleScript also supports coercion of an entire list to a `text` object if each 
 {5, "George", 11.43, "Bill"} as text --result: "5George11.43Bill"
 ```
 
-The resulting `text` object concatenates all the items, separated by the current value of the AppleScript property `text item delimiters`. This property defaults to an empty string, so the items are simply concatenated. For more information, see [text item delimiters](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW22).
+The resulting `text` object concatenates all the items, separated by the current value of the AppleScript property `text item delimiters`. This property defaults to an empty string, so the items are simply concatenated. For more information, see [text item delimiters](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW22).
 
 Individual items in a list can be of any class, and AppleScript supports coercion of any value to a list that contains a single item.
 
@@ -717,7 +717,7 @@ The following statement defines a list that contains a `text` object, an integer
 Each list item can be any valid expression. The following list has the same value as the previous list:
 
 ```
-{ "it" & "'s", 1 + 1, 4 > 3 }
+{ "it" & "'s", 1 + 1, 4 &gt; 3 }
 ```
 
 The following statements work with lists; note that the concatenation operator (`&`) joins two lists into a single list:<a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_585"></a><a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_586"></a>
@@ -832,7 +832,7 @@ A pseudo-class equivalent to the `file` class.
 
 There is never an object whose class is `POSIX file`; the result of evaluating a POSIX file specifier is a `file` object. The difference between `file` and `POSIX file` objects is in how they interpret name specifiers: a `POSIX file` object interprets `"name"` as a POSIX path, while a `file` object interprets it as an HFS path.
 
-For related information, see `alias` and `file`. For a description of the format for a POSIX path, see [Aliases and Files](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW28).
+For related information, see `alias` and `file`. For a description of the format for a POSIX path, see [Aliases and Files](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW28).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH1g-SW16"></a>
 
@@ -879,7 +879,7 @@ Numbers that can include a fractional part, such as 3.14159 and 1.0.
 
 ##### Operators
 
-The operators that can have `real` values as operands are `+`, `-`, `*`, `÷` (or `/`), `div`, `mod`, `^`, `=`, `≠`, `>`, `≥`, `<`, and `≤`.
+The operators that can have `real` values as operands are `+`, `-`, `*`, `÷` (or `/`), `div`, `mod`, `^`, `=`, `≠`, `&gt;`, `≥`, `&lt;`, and `≤`.
 
 The `÷` and `/` operators always return `real` values as their results. The `+`, `-`, `*`, `mod`, and `^` operators return `real` values if either of their operands is a `real` value.
 
@@ -949,7 +949,7 @@ Each property in a record has a unique label which distinguishes it from other p
 
 The operators that can have records as operands are `&`, `=`, `≠`, `contains`, and `is contained by`.
 
-For detailed explanations and examples of how AppleScript operators treat records, see [Operators Reference](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_operators.md#//apple_ref/doc/uid/TP40000983-CH5g-124070).
+For detailed explanations and examples of how AppleScript operators treat records, see [Operators Reference](ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124070).
 
 ##### Commands Handled
 
@@ -1018,7 +1018,7 @@ An object that encapsulates an object specifier.
 
 A `reference` object “wraps” an object specifier. If you target a `reference` object with the `get` command, the command returns the `reference` object itself. If you ask a `reference` object for its `contents` property, it returns the enclosed object specifier. All other requests to a `reference` object are forwarded to its enclosed object specifier. For example, if you ask for the `class` of a `reference` object, you get the `class` of the object specified by its object specifier.
 
-For related information, see [Object Specifiers](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW7).
+For related information, see [Object Specifiers](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW7).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH1g-252730"></a>
 
@@ -1096,7 +1096,7 @@ script
 
 A collection of AppleScript declarations and statements that can be executed as a group.
 
-The syntax for a `script` object is described in [Defining Script Objects](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_script_objects.md#//apple_ref/doc/uid/TP40000983-CH207-SW2).
+The syntax for a `script` object is described in [Defining Script Objects](../conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW2).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH1g-SW13"></a>
 
@@ -1148,9 +1148,9 @@ run helloScript -- invoke the script
 
 ##### Discussion
 
-A `script` object can contain other `script` objects, called child scripts, and can have a parent object. For additional information, including more detailed examples, see [Script Objects](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_script_objects.md#//apple_ref/doc/uid/TP40000983-CH207-BAJJCIAA).
+A `script` object can contain other `script` objects, called child scripts, and can have a parent object. For additional information, including more detailed examples, see [Script Objects](../conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-BAJJCIAA).
 
-The `name`, `id`, and `version` properties are automatically defined in OS X Mavericks v10.9 (AppleScript 2.3) and later, and are used to identify scripts used as libraries, as described in [Script Objects](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_script_objects.md#//apple_ref/doc/uid/TP40000983-CH207-BAJJCIAA).
+The `name`, `id`, and `version` properties are automatically defined in OS X Mavericks v10.9 (AppleScript 2.3) and later, and are used to identify scripts used as libraries, as described in [Script Objects](../conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-BAJJCIAA).
 
 <a id="//apple_ref/doc/uid/TP40000983-CH1g-BBCIAHJF"></a><a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_608"></a>
 
@@ -1205,16 +1205,16 @@ For information on compatibility with previous AppleScript versions, including t
 A `text` object can contain these elements (which may behave differently than similar elements used in applications):
 
 <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_614"></a>| `character` | | | | |
-|  | Specify by: | [Arbitrary](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BCIJEEHE), [Every](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFIIH), [Index](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCGHGAF), [Middle](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFDBA), [Range](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCHDJJJ) | | |
+|  | Specify by: | [Arbitrary](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BCIJEEHE), [Every](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFIIH), [Index](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCGHGAF), [Middle](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFDBA), [Range](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCHDJJJ) | | |
 |  | <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_4"></a> One or more Unicode characters that make up the text.<a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_615"></a>  Starting in AppleScript 2.0, elements of `text` object count a combining character cluster (also known as a Unicode grapheme cluster) as a single character. (This relates to a feature of Unicode that is unlikely to have an impact on most scripters: some “characters” may be represented as either a single entity or as a base character plus a series of combining marks.  For example, “é” may be encoded as either U+00E9 (LATIN SMALL LETTER E WITH ACUTE) or as U+0065 (LATIN SMALL LETTER E), U+0301 (COMBINING ACUTE ACCENT). Nonetheless, AppleScript 2.0 will count both as one character, where older versions counted the base character and combining mark separately. | | | |
 <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_616"></a>| `paragraph` | | | | |
-|  | Specify by: | [Arbitrary](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BCIJEEHE), [Every](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFIIH), [Index](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCGHGAF), [Middle](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFDBA), [Range](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCHDJJJ) | | |
-|  | <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_5"></a> A series of characters beginning immediately after either the first character after the end of the preceding paragraph or the beginning of the text and ending with either a carriage return character (`\r`), a linefeed character (`\n`), a return/linefeed pair (`\r\n`), or the end of the text. The Unicode "paragraph separator" character (U+2029) is not supported.  Because `paragraph` elements are *separated* by a carriage return, linefeed, or carriage return/linefeed pair, text ending with a paragraph break specifies a following (empty) paragraph. For example, `"this\nthat\n"` has three paragraphs, not two: "this", "that", and "" (the empty paragraph after the trailing linefeed).  Similarly, two paragraph breaks in a row specify an empty paragraph between them:  `paragraphs of "this\n\nthat" --result: {"this", "", "that"}` | | | |
+|  | Specify by: | [Arbitrary](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BCIJEEHE), [Every](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFIIH), [Index](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCGHGAF), [Middle](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFDBA), [Range](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCHDJJJ) | | |
+|  | <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_5"></a> A series of characters beginning immediately after either the first character after the end of the preceding paragraph or the beginning of the text and ending with either a carriage return character (`\\r`), a linefeed character (`\\n`), a return/linefeed pair (`\\r\\n`), or the end of the text. The Unicode "paragraph separator" character (U+2029) is not supported.  Because `paragraph` elements are *separated* by a carriage return, linefeed, or carriage return/linefeed pair, text ending with a paragraph break specifies a following (empty) paragraph. For example, `"this\\nthat\\n"` has three paragraphs, not two: "this", "that", and "" (the empty paragraph after the trailing linefeed).  Similarly, two paragraph breaks in a row specify an empty paragraph between them:  `paragraphs of "this\\n\\nthat" --result: {"this", "", "that"}` | | | |
 <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_617"></a>| `text` | | | | |
-|  | Specify by: | [Every](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFIIH), [Name](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCIBAAJ) | | |
+|  | Specify by: | [Every](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFIIH), [Name](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCIBAAJ) | | |
 |  | <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_6"></a> All of the text contained in the `text` object, including spaces, tabs, and all other characters.  You can use `text` to access contiguous characters (but see also the Discussion section below):  `text 1 thru 5 of "Bring me the mouse." --result: "Bring"` | | | |
 <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_618"></a>| `word` | | | | |
-|  | Specify by: | [Arbitrary](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BCIJEEHE), [Every](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFIIH), [Index](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCGHGAF), [Middle](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFDBA), [Range](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_reference_forms.md#//apple_ref/doc/uid/TP40000983-CH4g-BBCHDJJJ) | | |
+|  | Specify by: | [Arbitrary](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BCIJEEHE), [Every](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFIIH), [Index](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCGHGAF), [Middle](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCJFDBA), [Range](ASLR_reference_forms.html#//apple_ref/doc/uid/TP40000983-CH4g-BBCHDJJJ) | | |
 |  | <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_7"></a> A continuous series of characters, with word elements parsed according to the word-break rules set in the International preference pane.  Because the rules for parsing words are thus under user control, your scripts should not count on a deterministic text parsing of words. | | | |
 
   
@@ -1222,34 +1222,34 @@ A `text` object can contain these elements (which may behave differently than si
 
 ##### Operators
 
-The operators that can have `text` objects as operands are `&`, `=`, `≠`, `>`, `≥`, `<`,` ≤`, `starts with`, `ends with`, `contains`, `is contained by`, and `as`.
+The operators that can have `text` objects as operands are `&`, `=`, `≠`, `&gt;`, `≥`, `&lt;`,` ≤`, `starts with`, `ends with`, `contains`, `is contained by`, and `as`.
 
 In text comparisons, you can specify whether white space should be considered or ignored. For more information, see `considering and ignoring Statements`.
 
-For detailed explanations and examples of how AppleScript operators treat `text` objects, see [Operators Reference](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_operators.md#//apple_ref/doc/uid/TP40000983-CH5g-124070).
+For detailed explanations and examples of how AppleScript operators treat `text` objects, see [Operators Reference](ASLR_operators.html#//apple_ref/doc/uid/TP40000983-CH5g-124070).
 
 ##### Special String Characters
 
-<a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_619"></a><a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_620"></a><a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_621"></a>The backslash (`\`) and double-quote (`"`) characters have special meaning in text. AppleScript encloses text in double-quote characters and uses the backslash character to represent return (`\r`), tab (`\t`), and linefeed (\n) characters (described below). So if you want to include an actual backslash or double-quote character in a `text` object, you must use the equivalent two-character sequence. As a convenience, AppleScript also provides the text constant `quote`, which has the value `\"`. <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_622"></a><a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_623"></a><a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_624"></a>
+<a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_619"></a><a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_620"></a><a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_621"></a>The backslash (`\\`) and double-quote (`"`) characters have special meaning in text. AppleScript encloses text in double-quote characters and uses the backslash character to represent return (`\\r`), tab (`\\t`), and linefeed (\\n) characters (described below). So if you want to include an actual backslash or double-quote character in a `text` object, you must use the equivalent two-character sequence. As a convenience, AppleScript also provides the text constant `quote`, which has the value `\\"`. <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_622"></a><a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_623"></a><a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_624"></a>
 
 <a id="//apple_ref/doc/uid/TP40000983-CH1g-SW6"></a>
 
 **Table 6-1**  Special characters in text
 
 | Character | To insert in text |
-| Backslash character (`\`) | `\\` |
-| Double quote (`"`) | `\"`  `quote` (text constant) |
+| Backslash character (`\\`) | `\\\\` |
+| Double quote (`"`) | `\\"`  `quote` (text constant) |
 
 To declare a `text` object that looks like this when displayed:
 
 ```
-He said "Use the '\' character."
+He said "Use the '\\' character."
 ```
 
 you can use the following:
 
 ```
-"He said \"Use the '\\' character.\""
+"He said \\"Use the '\\\\' character.\\""
 ```
 
 <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_625"></a><a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_626"></a>White space refers to text characters that display as vertical or horizontal space. AppleScript defines the white space <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_627"></a><a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_628"></a> constants <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_629"></a>`return`, <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_630"></a>`linefeed`, <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_631"></a>`space`, and <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_632"></a>`tab` to represent, respectively, a return character, a linefeed character, a space character, and a tab character. (The `linefeed` constant became available in AppleScript 2.0.)
@@ -1262,9 +1262,9 @@ Although you effectively use these values as text constants, they are actually d
 
 | Constant | Value |
 | space | " " |
-| tab | "\t" |
-| return | "\r" |
-| linefeed | "\n” |
+| tab | "\\t" |
+| return | "\\r" |
+| linefeed | "\\n” |
 
 To enter white space in a string, you can just type the character—that is, you can press the Space bar to insert a space, the Tab key to insert a tab character, or the Return key to insert a return. In the latter case, the string will appear on two lines in the script, like the following:
 
@@ -1278,7 +1278,7 @@ When you run this script, "Hello" appears above “Goodbye” in the dialog.
 <a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_633"></a><a id="//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_634"></a>You can also enter a tab, return, or linefeed with the equivalent two-character sequences. When a `text` object containing any of the two-character sequences is displayed to the user, the sequences are converted. For example, if you use the following `text` object in a `display dialog` command:
 
 ```
-display dialog "item 1\t1\ritem 2\t2"
+display dialog "item 1\\t1\\ritem 2\\t2"
 ```
 
 it is displayed like this (unless you enable “Escape tabs and line breaks in strings” in the Editing tab of the of Script Editor preferences):
@@ -1336,7 +1336,7 @@ every paragraph of docText --result: a list containing all paragraphs
 paragraphs 2 thru 3 of docText --result: a list containing two paragraphs
 ```
 
-The next example prepares a `text` object to use with the `display dialog` command. It uses the `quote` constant to insert `\"` into the text. When this text is displayed in the dialog (above a text entry field), it looks like this: `Enter the text in quotes ("text in quotes"): `
+The next example prepares a `text` object to use with the `display dialog` command. It uses the `quote` constant to insert `\\"` into the text. When this text is displayed in the dialog (above a text entry field), it looks like this: `Enter the text in quotes ("text in quotes"): `
 
 ```
 set promptString to "Enter the text in quotes (" & quote ¬
@@ -1353,7 +1353,7 @@ set folderName to quoted form of POSIX path of (choose folder)
 Suppose that you choose the folder named `iWork '08` in your `Applications` folder. The previous statement would return the following result, which properly handles the embedded single quote and space characters in the folder name:
 
 ```
-"'/Applications/iWork '\\''08/'"
+"'/Applications/iWork '\\\\''08/'"
 ```
 
 ##### Discussion
@@ -1406,7 +1406,7 @@ Starting with AppleScript 2.0, there is no style information stored with `text` 
 
 Because all text is Unicode text, scripts now always get the Unicode text behavior. This may be different from the former `string` behavior for some locale-dependent operations, in particular `word` elements. To get the same behavior with 2.0 and pre-2.0, add an explicit `as Unicode text` coercion, for example, `words of (someText as Unicode text)`.
 
-Because `text item delimiters` (described in [text item delimiters](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW22)) respect `considering` and `ignoring` attributes in AppleScript 2.0, delimiters are case-insensitive by default. Formerly, they were always case-sensitive. To enforce the previous behavior, add an explicit `considering case` statement.
+Because `text item delimiters` (described in [text item delimiters](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW22)) respect `considering` and `ignoring` attributes in AppleScript 2.0, delimiters are case-insensitive by default. Formerly, they were always case-sensitive. To enforce the previous behavior, add an explicit `considering case` statement.
 
 Because AppleScript 2.0 scripts store all text as Unicode, any text constants count as a use of the former `Unicode text` class, which will work with any version of AppleScript back to version 1.3. A script that contains Unicode-only characters such as Arabic or Thai will run, but will not be correctly editable using versions prior to AppleScript 2.0: the Unicode-only characters will be lost.
 

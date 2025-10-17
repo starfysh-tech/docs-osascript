@@ -6,15 +6,15 @@ Droplets are applets configured to process dropped files and folders. A droplet 
 
 <a id="//apple_ref/doc/uid/TP40016239-CH53-SW2"></a>
 **Figure 17-1**A script droplet icon
-![image: ../Art/icon_droplet_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/icon_droplet_2x.png)
+![image: ../Art/icon_droplet_2x.png](Art/icon_droplet_2x.png)
 
-To create an AppleScript droplet, include an `open` event handler in your script and save the script as an application. To create a JavaScript droplet, include an `openDocuments` function in your script and save the script as an application. The presence of this handler or function automatically renders the saved application as a droplet, allowing it to accept dropped files and folders in the Finder. The `open` handler and `openDocuments` function accept a single parameter—a list of dropped files or folders—which are passed to the handler when the script is activated by dropping something onto it. In AppleScript, these dropped files and folders are `alias` objects. In JavaScript, they’re `Path` objects. For more information about these types of objects, see [Referencing Files and Folders](https://developer.apple.com/library/archive/mac-automation-scripting-guide/ReferenceFilesandFolders.md#//apple_ref/doc/uid/TP40016239-CH34-SW1).
+To create an AppleScript droplet, include an `open` event handler in your script and save the script as an application. To create a JavaScript droplet, include an `openDocuments` function in your script and save the script as an application. The presence of this handler or function automatically renders the saved application as a droplet, allowing it to accept dropped files and folders in the Finder. The `open` handler and `openDocuments` function accept a single parameter—a list of dropped files or folders—which are passed to the handler when the script is activated by dropping something onto it. In AppleScript, these dropped files and folders are `alias` objects. In JavaScript, they’re `Path` objects. For more information about these types of objects, see [Referencing Files and Folders](ReferenceFilesandFolders.html#//apple_ref/doc/uid/TP40016239-CH34-SW1).
 
 An AppleScript `open` handler is formatted as shown in Listing 17-1.
 
 **APPLESCRIPT**
 
-[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20open%20theDroppedItems%0A%20%20%20%20--%20Process%20the%20dropped%20items%20here%0Aend%20open)
+[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20open%20theDroppedItems%0A%20%20%20%20--%20Process%20the%20dropped%20items%20here%0Aend%20open)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH53-SW3"></a>
 **Listing 17-1**AppleScript: Structure of an `open` handler
@@ -27,7 +27,7 @@ A JavaScript `openDocuments` function is formatted as shown in Listing 17-2.
 
 **JAVASCRIPT**
 
-[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=function%20openDocuments%28droppedItems%29%20%7B%0A%20%20%20%20%2F%2F%20Process%20the%20dropped%20items%20here%0A%7D)
+[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=function%20openDocuments%28droppedItems%29%20%7B%0A%20%20%20%20%2F%2F%20Process%20the%20dropped%20items%20here%0A%7D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH53-SW12"></a>
 **Listing 17-2**JavaScript: Structure of an `openDocuments` function
@@ -40,7 +40,7 @@ Typically, a droplet loops through items dropped onto it, processing them indivi
 
 **APPLESCRIPT**
 
-[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=on%20open%20theDroppedItems%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20length%20of%20theDroppedItems%0A%20%20%20%20%20%20%20%20set%20theCurrentDroppedItem%20to%20item%20a%20of%20theDroppedItems%0A%20%20%20%20%20%20%20%20--%20Process%20each%20dropped%20item%20here%0A%20%20%20%20end%20repeat%0Aend%20open)
+[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=on%20open%20theDroppedItems%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20length%20of%20theDroppedItems%0A%20%20%20%20%20%20%20%20set%20theCurrentDroppedItem%20to%20item%20a%20of%20theDroppedItems%0A%20%20%20%20%20%20%20%20--%20Process%20each%20dropped%20item%20here%0A%20%20%20%20end%20repeat%0Aend%20open)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH53-SW4"></a>
 **Listing 17-3**AppleScript: An `open` handler that loops through dropped items
@@ -54,7 +54,7 @@ Typically, a droplet loops through items dropped onto it, processing them indivi
 
 **JAVASCRIPT**
 
-[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=function%20openDocuments%28droppedItems%29%20%7B%0A%20%20%20%20for%20%28var%20item%20of%20droppedItems%29%20%7B%0A%20%20%20%20%20%20%20%20%2F%2F%20Process%20each%20dropped%20item%20here%0A%20%20%20%20%7D%0A%7D)
+[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=function%20openDocuments%28droppedItems%29%20%7B%0A%20%20%20%20for%20%28var%20item%20of%20droppedItems%29%20%7B%0A%20%20%20%20%20%20%20%20%2F%2F%20Process%20each%20dropped%20item%20here%0A%20%20%20%20%7D%0A%7D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH53-SW14"></a>
 **Listing 17-4**JavaScript: An `openDocuments` function that loops through dropped items
@@ -69,7 +69,7 @@ To run a droplet, drop files or folders onto it in the Finder. To test a droplet
 
 **APPLESCRIPT**
 
-[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=open%20%7Bchoose%20file%7D)
+[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=open%20%7Bchoose%20file%7D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH53-SW5"></a>
 **Listing 17-5**AppleScript: Calling the `open` handler to test a droplet within Script Editor
@@ -78,7 +78,7 @@ To run a droplet, drop files or folders onto it in the Finder. To test a droplet
 
 **JAVASCRIPT**
 
-[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0Avar%20file%20%3D%20app.chooseFile%28%29%0AopenDocuments%28%5Bfile%5D%29)
+[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20app%20%3D%20Application.currentApplication%28%29%0Aapp.includeStandardAdditions%20%3D%20true%0Avar%20file%20%3D%20app.chooseFile%28%29%0AopenDocuments%28%5Bfile%5D%29)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH53-SW15"></a>
 **Listing 17-6**JavaScript: Calling the `openDocuments` handler to test a droplet within Script Editor
@@ -104,7 +104,7 @@ Script Editor includes several preconfigured AppleScript droplet templates, whic
 **To create a droplet from a Script Editor template**
 
 1. Launch Script Editor from `/Applications/Utilities/`.
-2. Select File > New from Template > Droplets.
+2. Select File &gt; New from Template &gt; Droplets.
 3. Choose a droplet template.
 
    Options include:
@@ -123,7 +123,7 @@ In Listing 17-7 and Listing 17-8, the `open` handler and `openDocuments` functio
 
 **APPLESCRIPT**
 
-[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=property%20theFileTypesToProcess%20%3A%20%7B%7D%20--%20For%20example%3A%20%7B%22PICT%22%2C%20%22JPEG%22%2C%20%22TIFF%22%2C%20%22GIFf%22%7D%0Aproperty%20theExtensionsToProcess%20%3A%20%7B%7D%20--%20For%20example%3A%20%7B%22txt%22%2C%20%22text%22%2C%20%22jpg%22%2C%20%22jpeg%22%7D%2C%20NOT%3A%20%7B%22.txt%22%2C%20%22.text%22%2C%20%22.jpg%22%2C%20%22.jpeg%22%7D%0Aproperty%20theTypeIdentifiersToProcess%20%3A%20%7B%7D%20--%20For%20example%3A%20%7B%22public.jpeg%22%2C%20%22public.tiff%22%2C%20%22public.png%22%7D%0A%0Aon%20open%20theDroppedItems%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theDroppedItems%0A%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20item%20a%20of%20theDroppedItems%0A%20%20%20%20%20%20%20%20tell%20application%20%22System%20Events%22%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theExtension%20to%20name%20extension%20of%20theCurrentItem%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theFileType%20to%20file%20type%20of%20theCurrentItem%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theTypeIdentifier%20to%20type%20identifier%20of%20theCurrentItem%0A%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20%20%20%20%20if%20%28%28theFileTypesToProcess%20contains%20theFileType%29%20or%20%28theExtensionsToProcess%20contains%20theExtension%29%20or%20%28theTypeIdentifiersToProcess%20contains%20theTypeIdentifier%29%29%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20processItem%28theCurrentItem%29%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0Aend%20open%0A%0Aon%20processItem%28theItem%29%0A%20%20%20%20--%20NOTE%3A%20The%20variable%20theItem%20is%20a%20file%20reference%20in%20AppleScript%20alias%20format%0A%20%20%20%20--%20Add%20item%20processing%20code%20here%0Aend%20processItem)
+[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=property%20theFileTypesToProcess%20%3A%20%7B%7D%20--%20For%20example%3A%20%7B%22PICT%22%2C%20%22JPEG%22%2C%20%22TIFF%22%2C%20%22GIFf%22%7D%0Aproperty%20theExtensionsToProcess%20%3A%20%7B%7D%20--%20For%20example%3A%20%7B%22txt%22%2C%20%22text%22%2C%20%22jpg%22%2C%20%22jpeg%22%7D%2C%20NOT%3A%20%7B%22.txt%22%2C%20%22.text%22%2C%20%22.jpg%22%2C%20%22.jpeg%22%7D%0Aproperty%20theTypeIdentifiersToProcess%20%3A%20%7B%7D%20--%20For%20example%3A%20%7B%22public.jpeg%22%2C%20%22public.tiff%22%2C%20%22public.png%22%7D%0A%0Aon%20open%20theDroppedItems%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theDroppedItems%0A%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20item%20a%20of%20theDroppedItems%0A%20%20%20%20%20%20%20%20tell%20application%20%22System%20Events%22%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theExtension%20to%20name%20extension%20of%20theCurrentItem%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theFileType%20to%20file%20type%20of%20theCurrentItem%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20theTypeIdentifier%20to%20type%20identifier%20of%20theCurrentItem%0A%20%20%20%20%20%20%20%20end%20tell%0A%20%20%20%20%20%20%20%20if%20%28%28theFileTypesToProcess%20contains%20theFileType%29%20or%20%28theExtensionsToProcess%20contains%20theExtension%29%20or%20%28theTypeIdentifiersToProcess%20contains%20theTypeIdentifier%29%29%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20processItem%28theCurrentItem%29%0A%20%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0Aend%20open%0A%0Aon%20processItem%28theItem%29%0A%20%20%20%20--%20NOTE%3A%20The%20variable%20theItem%20is%20a%20file%20reference%20in%20AppleScript%20alias%20format%0A%20%20%20%20--%20Add%20item%20processing%20code%20here%0Aend%20processItem)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH53-SW9"></a>
 **Listing 17-7**Handler that processes dropped files matching specific file types, extensions, or type identifiers
@@ -131,7 +131,6 @@ In Listing 17-7 and Listing 17-8, the `open` handler and `openDocuments` functio
 1. `property theFileTypesToProcess : {} -- For example: {"PICT", "JPEG", "TIFF", "GIFf"}`
 2. `property theExtensionsToProcess : {} -- For example: {"txt", "text", "jpg", "jpeg"}, NOT: {".txt", ".text", ".jpg", ".jpeg"}`
 3. `property theTypeIdentifiersToProcess : {} -- For example: {"public.jpeg", "public.tiff", "public.png"}`
-4. ` `
 5. `on open theDroppedItems`
 6. ` repeat with a from 1 to count of theDroppedItems`
 7. ` set theCurrentItem to item a of theDroppedItems`
@@ -145,7 +144,6 @@ In Listing 17-7 and Listing 17-8, the `open` handler and `openDocuments` functio
 15. ` end if`
 16. ` end repeat`
 17. `end open`
-18. ` `
 19. `on processItem(theItem)`
 20. ` -- NOTE: The variable theItem is a file reference in AppleScript alias format`
 21. ` -- Add item processing code here`
@@ -153,7 +151,7 @@ In Listing 17-7 and Listing 17-8, the `open` handler and `openDocuments` functio
 
 **JAVASCRIPT**
 
-[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20SystemEvents%20%3D%20Application%28%22System%20Events%22%29%0Avar%20fileTypesToProcess%20%3D%20%5B%5D%20%2F%2F%20For%20example%3A%20%7B%22PICT%22%2C%20%22JPEG%22%2C%20%22TIFF%22%2C%20%22GIFf%22%7D%0Avar%20extensionsToProcess%20%3D%20%5B%5D%20%2F%2F%20For%20example%3A%20%7B%22txt%22%2C%20%22text%22%2C%20%22jpg%22%2C%20%22jpeg%22%7D%2C%20NOT%3A%20%7B%22.txt%22%2C%20%22.text%22%2C%20%22.jpg%22%2C%20%22.jpeg%22%7D%0Avar%20typeIdentifiersToProcess%20%3D%20%5B%5D%20%2F%2F%20For%20example%3A%20%7B%22public.jpeg%22%2C%20%22public.tiff%22%2C%20%22public.png%22%7D%0A%0Afunction%20openDocuments%28droppedItems%29%20%7B%0A%20%20%20%20for%20%28var%20item%20of%20droppedItems%29%20%7B%0A%20%20%20%20%20%20%20%20var%20alias%20%3D%20SystemEvents.aliases.byName%28item.toString%28%29%29%0A%20%20%20%20%20%20%20%20var%20extension%20%3D%20alias.nameExtension%28%29%0A%20%20%20%20%20%20%20%20var%20fileType%20%3D%20alias.fileType%28%29%0A%20%20%20%20%20%20%20%20var%20typeIdentifier%20%3D%20alias.typeIdentifier%28%29%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28fileTypesToProcess.includes%28fileType%29%20%7C%7C%20extensionsToProcess.includes%28extension%29%20%7C%7C%20typeIdentifiersToProcess.includes%28typeIdentifier%29%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20processItem%28item%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D%0A%0Afunction%20processItem%28item%29%20%7B%0A%20%20%20%20%2F%2F%20NOTE%3A%20The%20variable%20item%20is%20an%20instance%20of%20the%20Path%20object%0A%20%20%20%20%2F%2F%20Add%20item%20processing%20code%20here%0A%7D)
+[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20SystemEvents%20%3D%20Application%28%22System%20Events%22%29%0Avar%20fileTypesToProcess%20%3D%20%5B%5D%20%2F%2F%20For%20example%3A%20%7B%22PICT%22%2C%20%22JPEG%22%2C%20%22TIFF%22%2C%20%22GIFf%22%7D%0Avar%20extensionsToProcess%20%3D%20%5B%5D%20%2F%2F%20For%20example%3A%20%7B%22txt%22%2C%20%22text%22%2C%20%22jpg%22%2C%20%22jpeg%22%7D%2C%20NOT%3A%20%7B%22.txt%22%2C%20%22.text%22%2C%20%22.jpg%22%2C%20%22.jpeg%22%7D%0Avar%20typeIdentifiersToProcess%20%3D%20%5B%5D%20%2F%2F%20For%20example%3A%20%7B%22public.jpeg%22%2C%20%22public.tiff%22%2C%20%22public.png%22%7D%0A%0Afunction%20openDocuments%28droppedItems%29%20%7B%0A%20%20%20%20for%20%28var%20item%20of%20droppedItems%29%20%7B%0A%20%20%20%20%20%20%20%20var%20alias%20%3D%20SystemEvents.aliases.byName%28item.toString%28%29%29%0A%20%20%20%20%20%20%20%20var%20extension%20%3D%20alias.nameExtension%28%29%0A%20%20%20%20%20%20%20%20var%20fileType%20%3D%20alias.fileType%28%29%0A%20%20%20%20%20%20%20%20var%20typeIdentifier%20%3D%20alias.typeIdentifier%28%29%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28fileTypesToProcess.includes%28fileType%29%20%7C%7C%20extensionsToProcess.includes%28extension%29%20%7C%7C%20typeIdentifiersToProcess.includes%28typeIdentifier%29%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20processItem%28item%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D%0A%0Afunction%20processItem%28item%29%20%7B%0A%20%20%20%20%2F%2F%20NOTE%3A%20The%20variable%20item%20is%20an%20instance%20of%20the%20Path%20object%0A%20%20%20%20%2F%2F%20Add%20item%20processing%20code%20here%0A%7D)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH53-SW16"></a>
 **Listing 17-8**Function that processes dropped files matching specific file types, extensions, or type identifiers
@@ -162,7 +160,6 @@ In Listing 17-7 and Listing 17-8, the `open` handler and `openDocuments` functio
 2. `var fileTypesToProcess = [] // For example: {"PICT", "JPEG", "TIFF", "GIFf"}`
 3. `var extensionsToProcess = [] // For example: {"txt", "text", "jpg", "jpeg"}, NOT: {".txt", ".text", ".jpg", ".jpeg"}`
 4. `var typeIdentifiersToProcess = [] // For example: {"public.jpeg", "public.tiff", "public.png"}`
-5. ` `
 6. `function openDocuments(droppedItems) {`
 7. ` for (var item of droppedItems) {`
 8. ` var alias = SystemEvents.aliases.byName(item.toString())`
@@ -174,7 +171,6 @@ In Listing 17-7 and Listing 17-8, the `open` handler and `openDocuments` functio
 14. ` }`
 15. ` }`
 16. `}`
-17. ` `
 18. `function processItem(item) {`
 19. ` // NOTE: The variable item is an instance of the Path object`
 20. ` // Add item processing code here`
@@ -192,7 +188,7 @@ The script passes each dropped folder to the `processFolder()`, which retrieves 
 
 **APPLESCRIPT**
 
-[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=property%20theFileTypesToProcess%20%3A%20%7B%7D%20--%20I.e.%20%7B%22PICT%22%2C%20%22JPEG%22%2C%20%22TIFF%22%2C%20%22GIFf%22%7D%0Aproperty%20theExtensionsToProcess%20%3A%20%7B%7D%20--%20I.e.%20%7B%22txt%22%2C%20%22text%22%2C%20%22jpg%22%2C%20%22jpeg%22%7D%2C%20NOT%3A%20%7B%22.txt%22%2C%20%22.text%22%2C%20%22.jpg%22%2C%20%22.jpeg%22%7D%0Aproperty%20theTypeIdentifiersToProcess%20%3A%20%7B%7D%20--%20I.e.%20%7B%22public.jpeg%22%2C%20%22public.tiff%22%2C%20%22public.png%22%7D%0A%0Aon%20open%20theDroppedItems%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theDroppedItems%0A%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20item%20a%20of%20theDroppedItems%0A%20%20%20%20%20%20%20%20tell%20application%20%22Finder%22%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20isFolder%20to%20folder%20%28theCurrentItem%20as%20string%29%20exists%0A%20%20%20%20%20%20%20%20end%20tell%0A%0A%20%20%20%20%20%20%20--%20Process%20a%20dropped%20folder%0A%20%20%20%20%20%20%20if%20isFolder%20%3D%20true%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20processFolder%28theCurrentItem%29%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20--%20Process%20a%20dropped%20file%0A%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20processFile%28theCurrentItem%29%0A%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0Aend%20open%0A%0Aon%20processFolder%28theFolder%29%0A%20%20%20%20--%20NOTE%3A%20The%20variable%20theFolder%20is%20a%20folder%20reference%20in%20AppleScript%20alias%20format%0A%20%20%20%20--%20Retrieve%20a%20list%20of%20any%20visible%20items%20in%20the%20folder%0A%20%20%20%20set%20theFolderItems%20to%20list%20folder%20theFolder%20without%20invisibles%0A%0A%20%20%20%20--%20Loop%20through%20the%20visible%20folder%20items%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theFolderItems%0A%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20%28%28theFolder%20as%20string%29%20%26%20%28item%20a%20of%20theFolderItems%29%29%20as%20alias%0A%20%20%20%20%20%20%20%20open%20%7BtheCurrentItem%7D%0A%20%20%20%20end%20repeat%0A%20%20%20%20--%20Add%20additional%20folder%20processing%20code%20here%0Aend%20processFolder%0A%0Aon%20processFile%28theItem%29%0A%20%20%20%20--%20NOTE%3A%20variable%20theItem%20is%20a%20file%20reference%20in%20AppleScript%20alias%20format%0A%20%20%20%20tell%20application%20%22System%20Events%22%0A%20%20%20%20%20%20%20%20set%20theExtension%20to%20name%20extension%20of%20theItem%0A%20%20%20%20%20%20%20%20set%20theFileType%20to%20file%20type%20of%20theItem%0A%20%20%20%20%20%20%20%20set%20theTypeIdentifier%20to%20type%20identifier%20of%20theItem%0A%20%20%20%20end%20tell%0A%20%20%20%20if%20%28%28theFileTypesToProcess%20contains%20theFileType%29%20or%20%28theExtensionsToProcess%20contains%20theExtension%29%20or%20%28theTypeIdentifiersToProcess%20contains%20theTypeIdentifier%29%29%20then%0A%20%20%20%20%20%20%20%20--%20Add%20file%20processing%20code%20here%0A%20%20%20%20%20%20%20%20display%20dialog%20theItem%20as%20string%0A%20%20%20%20end%20if%0Aend%20processFile)
+[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=property%20theFileTypesToProcess%20%3A%20%7B%7D%20--%20I.e.%20%7B%22PICT%22%2C%20%22JPEG%22%2C%20%22TIFF%22%2C%20%22GIFf%22%7D%0Aproperty%20theExtensionsToProcess%20%3A%20%7B%7D%20--%20I.e.%20%7B%22txt%22%2C%20%22text%22%2C%20%22jpg%22%2C%20%22jpeg%22%7D%2C%20NOT%3A%20%7B%22.txt%22%2C%20%22.text%22%2C%20%22.jpg%22%2C%20%22.jpeg%22%7D%0Aproperty%20theTypeIdentifiersToProcess%20%3A%20%7B%7D%20--%20I.e.%20%7B%22public.jpeg%22%2C%20%22public.tiff%22%2C%20%22public.png%22%7D%0A%0Aon%20open%20theDroppedItems%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theDroppedItems%0A%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20item%20a%20of%20theDroppedItems%0A%20%20%20%20%20%20%20%20tell%20application%20%22Finder%22%0A%20%20%20%20%20%20%20%20%20%20%20%20set%20isFolder%20to%20folder%20%28theCurrentItem%20as%20string%29%20exists%0A%20%20%20%20%20%20%20%20end%20tell%0A%0A%20%20%20%20%20%20%20--%20Process%20a%20dropped%20folder%0A%20%20%20%20%20%20%20if%20isFolder%20%3D%20true%20then%0A%20%20%20%20%20%20%20%20%20%20%20%20processFolder%28theCurrentItem%29%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20--%20Process%20a%20dropped%20file%0A%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20processFile%28theCurrentItem%29%0A%20%20%20%20%20%20%20end%20if%0A%20%20%20%20end%20repeat%0Aend%20open%0A%0Aon%20processFolder%28theFolder%29%0A%20%20%20%20--%20NOTE%3A%20The%20variable%20theFolder%20is%20a%20folder%20reference%20in%20AppleScript%20alias%20format%0A%20%20%20%20--%20Retrieve%20a%20list%20of%20any%20visible%20items%20in%20the%20folder%0A%20%20%20%20set%20theFolderItems%20to%20list%20folder%20theFolder%20without%20invisibles%0A%0A%20%20%20%20--%20Loop%20through%20the%20visible%20folder%20items%0A%20%20%20%20repeat%20with%20a%20from%201%20to%20count%20of%20theFolderItems%0A%20%20%20%20%20%20%20%20set%20theCurrentItem%20to%20%28%28theFolder%20as%20string%29%20%26%20%28item%20a%20of%20theFolderItems%29%29%20as%20alias%0A%20%20%20%20%20%20%20%20open%20%7BtheCurrentItem%7D%0A%20%20%20%20end%20repeat%0A%20%20%20%20--%20Add%20additional%20folder%20processing%20code%20here%0Aend%20processFolder%0A%0Aon%20processFile%28theItem%29%0A%20%20%20%20--%20NOTE%3A%20variable%20theItem%20is%20a%20file%20reference%20in%20AppleScript%20alias%20format%0A%20%20%20%20tell%20application%20%22System%20Events%22%0A%20%20%20%20%20%20%20%20set%20theExtension%20to%20name%20extension%20of%20theItem%0A%20%20%20%20%20%20%20%20set%20theFileType%20to%20file%20type%20of%20theItem%0A%20%20%20%20%20%20%20%20set%20theTypeIdentifier%20to%20type%20identifier%20of%20theItem%0A%20%20%20%20end%20tell%0A%20%20%20%20if%20%28%28theFileTypesToProcess%20contains%20theFileType%29%20or%20%28theExtensionsToProcess%20contains%20theExtension%29%20or%20%28theTypeIdentifiersToProcess%20contains%20theTypeIdentifier%29%29%20then%0A%20%20%20%20%20%20%20%20--%20Add%20file%20processing%20code%20here%0A%20%20%20%20%20%20%20%20display%20dialog%20theItem%20as%20string%0A%20%20%20%20end%20if%0Aend%20processFile)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH53-SW11"></a>
 **Listing 17-9**Handler that processes dropped folders and files
@@ -200,30 +196,25 @@ The script passes each dropped folder to the `processFolder()`, which retrieves 
 1. `property theFileTypesToProcess : {} -- I.e. {"PICT", "JPEG", "TIFF", "GIFf"}`
 2. `property theExtensionsToProcess : {} -- I.e. {"txt", "text", "jpg", "jpeg"}, NOT: {".txt", ".text", ".jpg", ".jpeg"}`
 3. `property theTypeIdentifiersToProcess : {} -- I.e. {"public.jpeg", "public.tiff", "public.png"}`
-4. ` `
 5. `on open theDroppedItems`
 6. ` repeat with a from 1 to count of theDroppedItems`
 7. ` set theCurrentItem to item a of theDroppedItems`
 8. ` tell application "Finder"`
 9. ` set isFolder to folder (theCurrentItem as string) exists`
 10. ` end tell`
-11. ` `
 12. ` -- Process a dropped folder`
 13. ` if isFolder = true then`
 14. ` processFolder(theCurrentItem)`
-15. ` `
 16. ` -- Process a dropped file`
 17. ` else`
 18. ` processFile(theCurrentItem)`
 19. ` end if`
 20. ` end repeat`
 21. `end open`
-22. ` `
 23. `on processFolder(theFolder)`
 24. ` -- NOTE: The variable theFolder is a folder reference in AppleScript alias format`
 25. ` -- Retrieve a list of any visible items in the folder`
 26. ` set theFolderItems to list folder theFolder without invisibles`
-27. ` `
 28. ` -- Loop through the visible folder items`
 29. ` repeat with a from 1 to count of theFolderItems`
 30. ` set theCurrentItem to ((theFolder as string) & (item a of theFolderItems)) as alias`
@@ -231,7 +222,6 @@ The script passes each dropped folder to the `processFolder()`, which retrieves 
 32. ` end repeat`
 33. ` -- Add additional folder processing code here`
 34. `end processFolder`
-35. ` `
 36. `on processFile(theItem)`
 37. ` -- NOTE: variable theItem is a file reference in AppleScript alias format`
 38. ` tell application "System Events"`
@@ -247,7 +237,7 @@ The script passes each dropped folder to the `processFolder()`, which retrieves 
 
 **JAVASCRIPT**
 
-[Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&script=var%20SystemEvents%20%3D%20Application%28%22System%20Events%22%29%0Avar%20fileManager%20%3D%20%24.NSFileManager.defaultManager%0Avar%20currentApp%20%3D%20Application.currentApplication%28%29%0AcurrentApp.includeStandardAdditions%20%3D%20true%0A%0Avar%20fileTypesToProcess%20%3D%20%5B%5D%20%2F%2F%20For%20example%3A%20%7B%22PICT%22%2C%20%22JPEG%22%2C%20%22TIFF%22%2C%20%22GIFf%22%7D%0Avar%20extensionsToProcess%20%3D%20%5B%5D%20%2F%2F%20For%20example%3A%20%7B%22txt%22%2C%20%22text%22%2C%20%22jpg%22%2C%20%22jpeg%22%7D%2C%20NOT%3A%20%7B%22.txt%22%2C%20%22.text%22%2C%20%22.jpg%22%2C%20%22.jpeg%22%7D%0Avar%20typeIdentifiersToProcess%20%3D%20%5B%5D%20%2F%2F%20For%20example%3A%20%7B%22public.jpeg%22%2C%20%22public.tiff%22%2C%20%22public.png%22%7D%0A%0Afunction%20openDocuments%28droppedItems%29%20%7B%0A%20%20%20%20for%20%28var%20item%20of%20droppedItems%29%20%7B%0A%20%20%20%20%20%20%20%20var%20isDir%20%3D%20Ref%28%29%0A%20%20%20%20%20%20%20%20if%20%28fileManager.fileExistsAtPathIsDirectory%28item.toString%28%29%2C%20isDir%29%20%26%26%20isDir%5B0%5D%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20processFolder%28item%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20processFile%28item%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D%0A%0Afunction%20processFolder%28folder%29%20%7B%0A%20%20%20%20%2F%2F%20NOTE%3A%20The%20variable%20folder%20is%20an%20instance%20of%20the%20Path%20object%0A%20%20%20%20var%20folderString%20%3D%20folder.toString%28%29%0A%0A%20%20%20%20%2F%2F%20Retrieve%20a%20list%20of%20any%20visible%20items%20in%20the%20folder%0A%20%20%20%20var%20folderItems%20%3D%20currentApp.listFolder%28folder%2C%20%7B%20invisibles%3A%20false%20%7D%29%0A%0A%20%20%20%20%2F%2F%20Loop%20through%20the%20visible%20folder%20items%0A%20%20%20%20for%20%28var%20item%20of%20folderItems%29%20%7B%0A%20%20%20%20%20%20%20%20var%20currentItem%20%3D%20%60%24%7BfolderString%7D%2F%24%7Bitem%7D%60%0A%20%20%20%20%20%20%20%20openDocuments%28%5BcurrentItem%5D%29%0A%20%20%20%20%7D%0A%20%20%20%20%2F%2F%20Add%20additional%20folder%20processing%20code%20here%0A%7D%0A%0Afunction%20processFile%28file%29%20%7B%0A%20%20%20%20%2F%2F%20NOTE%3A%20The%20variable%20file%20is%20an%20instance%20of%20the%20Path%20object%0A%20%20%20%20var%20fileString%20%3D%20file.toString%28%29%0A%20%20%20%20var%20alias%20%3D%20SystemEvents.aliases.byName%28fileString%29%0A%20%20%20%20var%20extension%20%3D%20alias.nameExtension%28%29%0A%20%20%20%20var%20fileType%20%3D%20alias.fileType%28%29%0A%20%20%20%20var%20typeIdentifier%20%3D%20alias.typeIdentifier%28%29%0A%20%20%20%20if%20%28fileTypesToProcess.includes%28fileType%29%20%7C%7C%20extensionsToProcess.includes%28extension%29%20%7C%7C%20typeIdentifiersToProcess.includes%28typeIdentifier%29%29%20%7B%0A%20%20%20%20%20%20%20%20%2F%2F%20Add%20file%20processing%20code%20here%0A%20%20%20%20%7D%0A%7D%0A)
+[Open in Script Editor](applescript://com.apple.scripteditor?action=new&script=var%20SystemEvents%20%3D%20Application%28%22System%20Events%22%29%0Avar%20fileManager%20%3D%20%24.NSFileManager.defaultManager%0Avar%20currentApp%20%3D%20Application.currentApplication%28%29%0AcurrentApp.includeStandardAdditions%20%3D%20true%0A%0Avar%20fileTypesToProcess%20%3D%20%5B%5D%20%2F%2F%20For%20example%3A%20%7B%22PICT%22%2C%20%22JPEG%22%2C%20%22TIFF%22%2C%20%22GIFf%22%7D%0Avar%20extensionsToProcess%20%3D%20%5B%5D%20%2F%2F%20For%20example%3A%20%7B%22txt%22%2C%20%22text%22%2C%20%22jpg%22%2C%20%22jpeg%22%7D%2C%20NOT%3A%20%7B%22.txt%22%2C%20%22.text%22%2C%20%22.jpg%22%2C%20%22.jpeg%22%7D%0Avar%20typeIdentifiersToProcess%20%3D%20%5B%5D%20%2F%2F%20For%20example%3A%20%7B%22public.jpeg%22%2C%20%22public.tiff%22%2C%20%22public.png%22%7D%0A%0Afunction%20openDocuments%28droppedItems%29%20%7B%0A%20%20%20%20for%20%28var%20item%20of%20droppedItems%29%20%7B%0A%20%20%20%20%20%20%20%20var%20isDir%20%3D%20Ref%28%29%0A%20%20%20%20%20%20%20%20if%20%28fileManager.fileExistsAtPathIsDirectory%28item.toString%28%29%2C%20isDir%29%20%26%26%20isDir%5B0%5D%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20processFolder%28item%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20processFile%28item%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D%0A%0Afunction%20processFolder%28folder%29%20%7B%0A%20%20%20%20%2F%2F%20NOTE%3A%20The%20variable%20folder%20is%20an%20instance%20of%20the%20Path%20object%0A%20%20%20%20var%20folderString%20%3D%20folder.toString%28%29%0A%0A%20%20%20%20%2F%2F%20Retrieve%20a%20list%20of%20any%20visible%20items%20in%20the%20folder%0A%20%20%20%20var%20folderItems%20%3D%20currentApp.listFolder%28folder%2C%20%7B%20invisibles%3A%20false%20%7D%29%0A%0A%20%20%20%20%2F%2F%20Loop%20through%20the%20visible%20folder%20items%0A%20%20%20%20for%20%28var%20item%20of%20folderItems%29%20%7B%0A%20%20%20%20%20%20%20%20var%20currentItem%20%3D%20%60%24%7BfolderString%7D%2F%24%7Bitem%7D%60%0A%20%20%20%20%20%20%20%20openDocuments%28%5BcurrentItem%5D%29%0A%20%20%20%20%7D%0A%20%20%20%20%2F%2F%20Add%20additional%20folder%20processing%20code%20here%0A%7D%0A%0Afunction%20processFile%28file%29%20%7B%0A%20%20%20%20%2F%2F%20NOTE%3A%20The%20variable%20file%20is%20an%20instance%20of%20the%20Path%20object%0A%20%20%20%20var%20fileString%20%3D%20file.toString%28%29%0A%20%20%20%20var%20alias%20%3D%20SystemEvents.aliases.byName%28fileString%29%0A%20%20%20%20var%20extension%20%3D%20alias.nameExtension%28%29%0A%20%20%20%20var%20fileType%20%3D%20alias.fileType%28%29%0A%20%20%20%20var%20typeIdentifier%20%3D%20alias.typeIdentifier%28%29%0A%20%20%20%20if%20%28fileTypesToProcess.includes%28fileType%29%20%7C%7C%20extensionsToProcess.includes%28extension%29%20%7C%7C%20typeIdentifiersToProcess.includes%28typeIdentifier%29%29%20%7B%0A%20%20%20%20%20%20%20%20%2F%2F%20Add%20file%20processing%20code%20here%0A%20%20%20%20%7D%0A%7D%0A)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH53-SW17"></a>
 **Listing 17-10**Function that processes dropped folders and files
@@ -256,11 +246,9 @@ The script passes each dropped folder to the `processFolder()`, which retrieves 
 2. `var fileManager = $.NSFileManager.defaultManager`
 3. `var currentApp = Application.currentApplication()`
 4. `currentApp.includeStandardAdditions = true`
-5. ` `
 6. `var fileTypesToProcess = [] // For example: {"PICT", "JPEG", "TIFF", "GIFf"}`
 7. `var extensionsToProcess = [] // For example: {"txt", "text", "jpg", "jpeg"}, NOT: {".txt", ".text", ".jpg", ".jpeg"}`
 8. `var typeIdentifiersToProcess = [] // For example: {"public.jpeg", "public.tiff", "public.png"}`
-9. ` `
 10. `function openDocuments(droppedItems) {`
 11. ` for (var item of droppedItems) {`
 12. ` var isDir = Ref()`
@@ -272,14 +260,11 @@ The script passes each dropped folder to the `processFolder()`, which retrieves 
 18. ` }`
 19. ` }`
 20. `}`
-21. ` `
 22. `function processFolder(folder) {`
 23. ` // NOTE: The variable folder is an instance of the Path object`
 24. ` var folderString = folder.toString()`
-25. ` `
 26. ` // Retrieve a list of any visible items in the folder`
 27. ` var folderItems = currentApp.listFolder(folder, { invisibles: false })`
-28. ` `
 29. ` // Loop through the visible folder items`
 30. ` for (var item of folderItems) {`
 31. ``  var currentItem = `${folderString}/${item}` ``
@@ -287,7 +272,6 @@ The script passes each dropped folder to the `processFolder()`, which retrieves 
 33. ` }`
 34. ` // Add additional folder processing code here`
 35. `}`
-36. ` `
 37. `function processFile(file) {`
 38. ` // NOTE: The variable file is an instance of the Path object`
 39. ` var fileString = file.toString()`

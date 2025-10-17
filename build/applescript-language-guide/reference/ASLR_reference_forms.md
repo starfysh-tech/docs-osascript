@@ -2,7 +2,7 @@
 
 # Reference Forms
 
-This chapter describes AppleScript reference forms. <a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1065"></a>A *reference form* specifies the syntax for identifying an object or group of objects in an application or other container—that is, the syntax for constructing an object specifier (described in [Object Specifiers](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW7)).
+This chapter describes AppleScript reference forms. <a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1065"></a>A *reference form* specifies the syntax for identifying an object or group of objects in an application or other container—that is, the syntax for constructing an object specifier (described in [Object Specifiers](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW7)).
 
 For example, the following object specifier (from a script targeting the Finder) uses several index reference forms, which identify an object by its number within a container:<a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1066"></a>
 
@@ -12,7 +12,7 @@ item 1 of second folder of disk 1
 
 > <a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_218"></a>
 >
-> **Important:** When you use a reference form, you specify the container in which the referenced object or objects reside. This takes the form *referenceForm* `of` *containerObject*. You can also enclose a reference form in a `tell` statement, which then serves to specify the outer container. For more information, see [Absolute and Relative Object Specifiers](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW25).
+> **Important:** When you use a reference form, you specify the container in which the referenced object or objects reside. This takes the form *referenceForm* `of` *containerObject*. You can also enclose a reference form in a `tell` statement, which then serves to specify the outer container. For more information, see [Absolute and Relative Object Specifiers](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW25).
 >
 > Some of the examples of reference forms shown in this chapter will not compile as shown. To compile them, you may need to add an enclosing `tell` statement, targeting the Finder or the word processing application TextEdit.
 
@@ -70,7 +70,7 @@ end tell
 
 |  |
 | --- |
-| ```  every  class <a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1072"></a>  pluralClass  ``` |
+| ```  every  class   pluralClass  ``` |
 
 ##### Placeholders
 
@@ -151,13 +151,13 @@ The following is an abbreviated form of the previous script:
 windows of application "TextEdit" whose name is not "Old Report.rtf"
 ```
 
-For related information, see [repeat Statements](https://developer.apple.com/library/archive/applescript-language-guide/reference/ASLR_control_statements.md#//apple_ref/doc/uid/TP40000983-CH6g-127362).
+For related information, see [repeat Statements](ASLR_control_statements.html#//apple_ref/doc/uid/TP40000983-CH6g-127362).
 
 ##### Syntax
 
 |  |
 | --- |
-| ```  objectSpecifier  ( whose | where )  booleanTest <a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1081"></a><a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1082"></a>  ``` |
+| ```  objectSpecifier  ( whose \| where )  booleanTest    ``` |
 
 ##### Placeholders
 
@@ -202,7 +202,7 @@ tell application "Finder"
 end tell
 ```
 
-Within a test in a filter reference, the direct object is the object being tested. Though it isn’t generally needed, this implicit target can be specified explicitly using the keyword `it`, which is described in [The it and me Keywords](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_fundamentals.md#//apple_ref/doc/uid/TP40000983-CH218-SW4).
+Within a test in a filter reference, the direct object is the object being tested. Though it isn’t generally needed, this implicit target can be specified explicitly using the keyword `it`, which is described in [The it and me Keywords](../conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW4).
 
 The following example shows several equivalent ways of constructing a filter reference to find all the files in a folder that whose name contains the word “AppleScript”. While the term `it` refers to the Finder application outside of the filter statements, within them `of it` refers to the current file being tested. The result of each filter test is the same and is not changed by including or omitting the term `of it`:
 
@@ -251,7 +251,7 @@ You can use the ID reference form only with application objects that have an ID 
 
 |  |
 | --- |
-| ``` class id  expression<a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1085"></a>  ``` |
+| ``` class id  expression   ``` |
 
 ##### Placeholders
 
@@ -300,7 +300,7 @@ For related information, see [Relative](#//apple_ref/doc/uid/TP40000983-CH4g-BBC
 
 |  |
 | --- |
-| ```  class [ index ] integer<a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1088"></a>  integer (st | nd | rd | th ) class  ( first | second | third | fourth | fifth | sixth | seventh | eighth | ninth | tenth ) class<a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1089"></a><a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1090"></a><a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1091"></a><a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1092"></a><a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1093"></a><a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1094"></a><a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1095"></a><a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1096"></a><a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1097"></a><a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1098"></a>  ( last | front | back ) class<a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1099"></a><a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1100"></a><a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1101"></a>  ``` |
+| ```  class [ index ] integer   integer ( st \| nd \| rd \| th ) class  ( first \| second \| third \| fourth \| fifth \| sixth \| seventh \| eighth \| ninth \| tenth ) class            ( last \| front \| back ) class     ``` |
 
 ##### Placeholders
 
@@ -369,7 +369,7 @@ Specifies the middle object of a particular class in a container. This form is r
 
 |  |
 | --- |
-| ```  middle  class <a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1104"></a>  ``` |
+| ```  middle  class   ``` |
 
 ##### Placeholders
 
@@ -405,7 +405,7 @@ Specifies an object by name.<a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkE
 
 |  |
 | --- |
-| ```  class  [ named ]  nameText <a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1107"></a>  ``` |
+| ```  class  [ named ]  nameText   ``` |
 
 ##### Placeholders
 
@@ -495,7 +495,7 @@ Property labels are listed in class definitions in application dictionaries. Bec
 
 |  |
 | --- |
-| ```  every  class  from  boundarySpecifier1  to  boundarySpecifier2 <a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1112"></a>  pluralClass  from  boundarySpecifier1  to  boundarySpecifier2  class  startIndex  ( thru | through )  stopIndex <a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1113"></a><a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1114"></a>  pluralClass  startIndex  ( thru | through )  stopIndex  ``` |
+| ```  every  class  from  boundarySpecifier1  to  boundarySpecifier2   pluralClass  from  boundarySpecifier1  to  boundarySpecifier2  class  startIndex  ( thru \| through )  stopIndex    pluralClass  startIndex  ( thru \| through )  stopIndex  ``` |
 
 ##### Placeholders
 
@@ -570,7 +570,7 @@ Specifies an object or an insertion point in a container by describing a positio
 
 |  |
 | --- |
-| ```  [ class ] ( before | [in] front of ) baseSpecifier  [ class ] ( after | [in] back of | behind ) baseSpecifier<a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1117"></a><a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1118"></a><a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1119"></a><a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1120"></a><a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1121"></a><a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1122"></a><a id="//apple_ref/doc/uid/TP40000983-CH4g-DontLinkElementID_1123"></a>  ``` |
+| ```  [ class ] ( before \| [in] front of ) baseSpecifier  [ class ] ( after \| [in] back of \| behind ) baseSpecifier         ``` |
 
 ##### Placeholders
 

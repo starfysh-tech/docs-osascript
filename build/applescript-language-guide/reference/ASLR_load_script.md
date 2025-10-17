@@ -12,7 +12,7 @@ In addition to defining and calling handlers within a script, you can access han
 
 > <a id="//apple_ref/doc/uid/TP40000983-CH227-SW3"></a>
 >
-> **Note:** The `load script` command loads the compiled script as a `script` object; for more information, see [Script Objects](https://developer.apple.com/library/archive/applescript-language-guide/conceptual/ASLR_script_objects.md#//apple_ref/doc/uid/TP40000983-CH207-BAJJCIAA).
+> **Note:** The `load script` command loads the compiled script as a `script` object; for more information, see [Script Objects](../conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-BAJJCIAA).
 
 For example, the following script contains two handlers: `areaOfCircle` and `factorial`:
 
@@ -32,7 +32,7 @@ end areaOfCircle
 -- This handler returns the factorial of a number.
 on factorial(x)
     set returnVal to 1
-    if x > 1 then
+    if x &gt; 1 then
         repeat with n from 2 to x
             set returnVal to returnVal * n
         end repeat

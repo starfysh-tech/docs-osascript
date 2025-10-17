@@ -3,7 +3,7 @@
 
 ## Getting to Know Script Editor
 
-![image: ../Art/script-editor_icon_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/script-editor_icon_2x.png)
+![image: ../Art/script-editor_icon_2x.png](Art/script-editor_icon_2x.png)
 
 Script Editor, found in `/Applications/Utilities/`, is an app for writing AppleScripts and JavaScripts. It provides the ability to edit, compile, and run scripts, browse scripting terminology, and save scripts in a variety of formats including compiled scripts, apps, and plain text.
 
@@ -20,9 +20,9 @@ A Script Editor document window includes the following main areas, as shown in F
 
 <a id="//apple_ref/doc/uid/TP40016239-CH5-SW11"></a>
 **Figure 5-1**A Script Editor document window
-![image: ../Art/script-editor_window_withcallouts_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/script-editor_window_withcallouts_2x.png)
+![image: ../Art/script-editor_window_withcallouts_2x.png](Art/script-editor_window_withcallouts_2x.png)
 
-* **Toolbar**—Use this to compile, run, and stop your script. Buttons are also available for showing and hiding the accessory view pane and the bundle contents pane. Select View > Customize Toolbar, or Control-click on the toolbar and choose Customize Toolbar, to choose what buttons displayed in the toolbar.
+* **Toolbar**—Use this to compile, run, and stop your script. Buttons are also available for showing and hiding the accessory view pane and the bundle contents pane. Select View &gt; Customize Toolbar, or Control-click on the toolbar and choose Customize Toolbar, to choose what buttons displayed in the toolbar.
 
   The toolbar also includes a Record button, which converts manual mouse clicks and keystrokes into script code. However, recording is not supported in JavaScript and few apps support AppleScript recording.
 * **Navigation bar**—Use this bar to select a scripting language, target an app, or navigate through the handlers in your script.
@@ -40,13 +40,13 @@ When you create a Script Editor document, select a scripting language in the nav
 
 <a id="//apple_ref/doc/uid/TP40016239-CH5-SW2"></a>
 **Figure 5-2**Setting the scripting language in a Script Editor document window
-![image: ../Art/script-editor_langage_selector_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/script-editor_langage_selector_2x.png)
+![image: ../Art/script-editor_langage_selector_2x.png](Art/script-editor_langage_selector_2x.png)
 
 If you always use the same language, set it as the default in the General pane of Script Editor preferences. See Figure 5-3.
 
 <a id="//apple_ref/doc/uid/TP40016239-CH5-SW5"></a>
 **Figure 5-3**Setting the default scripting language for Script Editor documents
-![image: ../Art/script-editor_preferences_window_general_pane_language_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/script-editor_preferences_window_general_pane_language_2x.png)
+![image: ../Art/script-editor_preferences_window_general_pane_language_2x.png](Art/script-editor_preferences_window_general_pane_language_2x.png)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH5-SW6"></a>
 
@@ -67,7 +67,7 @@ The result of executing your script—if a result was produced—is found in the
 
 <a id="//apple_ref/doc/uid/TP40016239-CH5-SW13"></a>
 **Figure 5-4**Viewing the result of a script in Script Editor
-![image: ../Art/script-editor_window_result_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/script-editor_window_result_2x.png)
+![image: ../Art/script-editor_window_result_2x.png](Art/script-editor_window_result_2x.png)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH5-SW20"></a>
 
@@ -76,8 +76,8 @@ The result of executing your script—if a result was produced—is found in the
 Do one of the following:
 
 * Press Command-2.
-* Choose View > Show Result.
-* Click the Show Result (![image: ../Art/icon_showresult_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/icon_showresult_2x.png)) button at the bottom of the Accessory View pane.
+* Choose View &gt; Show Result.
+* Click the Show Result (![image: ../Art/icon_showresult_2x.png](Art/icon_showresult_2x.png)) button at the bottom of the Accessory View pane.
 
 <a id="//apple_ref/doc/uid/TP40016239-CH5-SW8"></a>
 
@@ -87,7 +87,7 @@ The Accessory View pane also contains a script log. See Figure 5-5.
 
 <a id="//apple_ref/doc/uid/TP40016239-CH5-SW14"></a>
 **Figure 5-5**Viewing the script log in Script Editor
-![image: ../Art/script-editor_eventlog_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/script-editor_eventlog_2x.png)
+![image: ../Art/script-editor_eventlog_2x.png](Art/script-editor_eventlog_2x.png)
 
 The script log displays the following information.
 
@@ -103,8 +103,8 @@ The script log displays the following information.
 Do one of the following:
 
 * Press Command-3.
-* Choose View > Show Log.
-* Click the Show Log (![image: ../Art/icon_showlog_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/icon_showlog_2x.png)) button at the bottom of the Accessory View pane.
+* Choose View &gt; Show Log.
+* Click the Show Log (![image: ../Art/icon_showlog_2x.png](Art/icon_showlog_2x.png)) button at the bottom of the Accessory View pane.
 
 > **Note**
 >
@@ -113,7 +113,7 @@ Do one of the following:
 >
 > **APPLESCRIPT**
 >
-> [Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&name=Log%20a%20Message&script=log%20%22My%20log%20entry.%22%0D)
+> [Open in Script Editor](applescript://com.apple.scripteditor?action=new&name=Log%20a%20Message&script=log%20%22My%20log%20entry.%22%0D)
 >
 > <a id="//apple_ref/doc/uid/TP40016239-CH5-SW15"></a>
 > **Listing 5-1**AppleScript: Example of a log message at the root level of a script
@@ -124,7 +124,7 @@ Do one of the following:
 >
 > **APPLESCRIPT**
 >
-> [Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&name=Log%20a%20Message%20in%20a%20Tell%20Statement&script=tell%20app%20%22Finder%22%0D%20%20%20%20tell%20me%20to%20log%20%22My%20log%20entry.%22%0Dend%20tell%0D)
+> [Open in Script Editor](applescript://com.apple.scripteditor?action=new&name=Log%20a%20Message%20in%20a%20Tell%20Statement&script=tell%20app%20%22Finder%22%0D%20%20%20%20tell%20me%20to%20log%20%22My%20log%20entry.%22%0Dend%20tell%0D)
 >
 > <a id="//apple_ref/doc/uid/TP40016239-CH5-SW16"></a>
 > **Listing 5-2**AppleScript: Example of a log message within an application tell statement
@@ -137,7 +137,7 @@ Do one of the following:
 >
 > **JAVASCRIPT**
 >
-> [Open in Script Editor](https://developer.apple.com/library/archive/mac-automation-scripting-guide/applescript:/com.apple.scripteditor?action=new&name=Log%20a%20Message&script=console.log%28%22My%20log%20entry.%22%29%0D)
+> [Open in Script Editor](applescript://com.apple.scripteditor?action=new&name=Log%20a%20Message&script=console.log%28%22My%20log%20entry.%22%29%0D)
 >
 > <a id="//apple_ref/doc/uid/TP40016239-CH5-SW17"></a>
 > **Listing 5-3**JavaScript: Example of a log message
@@ -152,7 +152,7 @@ The result and script log areas in the Accessory View pane reset each time you r
 
 <a id="//apple_ref/doc/uid/TP40016239-CH5-SW19"></a>
 **Figure 5-6**The Log History window in Script Editor
-![image: ../Art/script-editor_resulthistory_window_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/script-editor_resulthistory_window_2x.png)
+![image: ../Art/script-editor_resulthistory_window_2x.png](Art/script-editor_resulthistory_window_2x.png)
 
 <a id="//apple_ref/doc/uid/TP40016239-CH5-SW23"></a>
 
@@ -161,5 +161,5 @@ The result and script log areas in the Accessory View pane reset each time you r
 Do one of the following:
 
 * Press Option-Command-L.
-* Choose View > Log History.
-* Click the Log History button (![image: ../Art/icon_loghistory_2x.png](https://developer.apple.com/library/archive/mac-automation-scripting-guide/Art/icon_loghistory_2x.png)) in the top right of the Accessory View pane.
+* Choose View &gt; Log History.
+* Click the Log History button (![image: ../Art/icon_loghistory_2x.png](Art/icon_loghistory_2x.png)) in the top right of the Accessory View pane.

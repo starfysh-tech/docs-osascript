@@ -51,6 +51,7 @@
 - 2025-10-16: Updated the MkDocs landing page to link against local mirrors/archived PDFs and added `scripts/validate_site_links.py` for quick link checks.
 - 2025-10-16: Archived the Scripting Components PDF (Classic Mac OS), wired metadata/nav/monitor entries, and surfaced it on the site landing page.
 - 2025-10-16: Documented outstanding manual follow-ups in `docs/manual-followups.md` (assets, publishing, QA checks).
+- 2025-10-17: Hardened HTML→Markdown conversion (anchors, `sup` exponents, multi-line `<pre>`, definition lists) and expanded the validator/test harness so all mirrored collections compare cleanly as part of the pre-release sweep.
 
 ## Task Board
 
@@ -95,7 +96,7 @@
 - **Monitoring cadence**: Run `python3 scripts/check_updates.py --manifest monitor/manifest.json --save --report reports/update-status-YYYYMMDD.md` every Monday at 09:00 UTC (and before major releases). Exit code `3` (changed) ⇒ re-run the mirror pipeline; exit code `2` (error) ⇒ investigate (HTTP issue, network outage).
   - The WWDC Session 306 pointer and supporting note are generated automatically when converting the JXA release notes set.
 - **MkDocs navigation**: Regenerate `mkdocs.yml` via `python3 scripts/generate_mkdocs_nav.py` to sync nav with mirrored TOCs; rerun `mkdocs build` to spot anchor/backlink warnings that need triage.
-- **MkDocs scaffold (issue #2)**: Use `build/` as `docs_dir`, create a lightweight `index.md` landing page, and expose each collection via its primary landing Markdown (`AppleScriptX.md`, `ASLR_intro.md`, `index.md`, `Articles/Introduction.md`). Future enhancements: richer nav hierarchy, search tuning, theme customization.
+- **MkDocs scaffold (issue #2)**: Use `build/` as `docs_dir`, create a lightweight `index.md` landing page, and expose each collection via its primary landing Markdown (`AppleScriptX.md`, `ASLR_intro.md`, `index.md`, `Articles/Introduction.md`). Future enhancements: richer nav hierarchy, search tuning, theme customization. When MkDocs isn’t installed locally, skip `pytest`’s MkDocs build test or run `mkdocs build` inside a container that has the toolchain.
 - **Link normalization**: After regenerating Markdown, run `python3 scripts/normalize_markdown_links.py --markdown-dir build --pages-file …` so cross-collection links drop missing anchors and off-repo references point to `https://developer.apple.com/library/archive/`.
 
 ## Next Up
@@ -103,4 +104,4 @@
 2. Package the generated dataset (plain text + JSONL) as a release artifact so consumers can download without cloning the repo; document the packaging workflow.
 3. Keep the repository lean by treating `dataset/` outputs as build artifacts (run `python3 scripts/export_dataset.py` on demand before packaging).
 4. When source freshness is a concern, run `python3 scripts/check_updates.py --manifest monitor/manifest.json --save --report reports/update-status-YYYYMMDD.md`; weekly cadence is optional because upstream docs rarely change.
-5. Plan a final pre-release validation sweep (mirror validation, monitoring, MkDocs build) before the next dataset/site release.
+5. Run the final pre-release validation sweep (scripted mirror validation, monitoring check, MkDocs build/link validation) before the next dataset/site release.
