@@ -15,6 +15,7 @@ Offline-ready mirrors of Apple's automation documentation, organised by collecti
 - [Apple Events Programming Guide (PDF)](apple-events-programming-guide/apple-events-programming-guide.pdf) — historical Apple Events documentation.
 - [AppleScript Scripting Additions Guide (PDF)](applescript-scripting-additions-guide/applescript-scripting-additions-guide.pdf) — comprehensive Standard Additions reference.
 - [Introduction to Scripting (PDF)](introduction-to-scripting/intro-to-scripting.pdf) — Classic Mac OS introduction to OSA scripting components.
+- [Scripting Components (PDF)](scripting-components/scripting-components.pdf) — details of Classic Mac OS scripting component architecture.
 
 > Looking for more? Review `apple-official-docs.md` in the repository for the remaining backlog of Apple automation resources queued for mirroring.
 

@@ -60,3 +60,6 @@ Rounded out the backlog with the archived Apple Events Programming Guide. Added 
 
 ## 2025-10-16 — Introduction to Scripting
 Continued the PDF sweep with Apple's "Introduction to Scripting" guide. Downloaded it via `scripts/download_file.py`, stored the metadata under `data/introduction-to-scripting/`, mirrored it into `build/`, and updated MkDocs navigation plus the monitoring manifest. The dataset exporter now advertises another metadata-only entry, keeping the legacy OSA docs in lockstep with the rest of the archive.
+
+## 2025-10-16 — Scripting Components PDF
+Rounded out the Classic Mac OS set with the "Scripting Components" guide. Downloaded via `download_file.py`, mirrored it under `data/` + `build/`, refreshed MkDocs navigation/landing page, and added it to the monitoring manifest so the dataset exporter tracks it as a metadata-only entry.

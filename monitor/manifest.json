@@ -1327,6 +1327,24 @@
           "last_checked": null
         }
       ]
+    },
+    {
+      "id": "scripting-components",
+      "description": "Scripting Components (archived PDF)",
+      "base_url": "https://developer.apple.com/library/archive/documentation/mac/pdf/Interapplication_Communication/",
+      "sources": [
+        {
+          "id": "scripting-components",
+          "path": "Scripting_Components.pdf",
+          "url": "https://developer.apple.com/library/archive/documentation/mac/pdf/Interapplication_Communication/Scripting_Components.pdf",
+          "type": "pdf",
+          "output": "build/scripting-components/scripting-components.pdf",
+          "sha256": "69945deffcb8ad2531d08e4c4e75f81d651aee4dbe9dfb811373b7c5863576bf",
+          "etag": null,
+          "last_modified": null,
+          "last_checked": null
+        }
+      ]
     }
   ]
 }
