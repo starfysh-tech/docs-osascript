@@ -2,13 +2,11 @@
 
 ## Snapshot (updated: 2025-10-17)
 - **Current focus**
-  - QA the new MkDocs navigation overrides (accordion sidebar, sticky TOC, pinned footer) across breakpoints and document the behaviour.
   - Add clear links to the dataset-20251017 release in README/site content before publishing the refreshed GitHub Pages build.
-  - Schedule the next monitoring + dataset refresh cadence post-release.
+  - Publish the refreshed GitHub Pages build to surface regenerated Markdown.
 - **Next actions**
   1. Document navigation overrides (README + dedicated note) and validate them on tablet/mobile.
   2. Link the dataset release in README/landing copy for discoverability, then publish the refreshed GitHub Pages build.
-  3. Schedule the next monitoring + dataset refresh (tentatively four weeks out) in PLAN.md once the above ships.
 - **Blockers / decisions pending**
   - Determine how to handle large WWDC video assets (link-out vs. local copy).
   - Decide on the storage/export format for man-page captures (plain text vs. Markdown).
