@@ -7,11 +7,18 @@ docs_dir: build
 use_directory_urls: false
 theme:
   name: material
+  custom_dir: overrides
   features:
   - navigation.sections
-  - navigation.expand
+  - navigation.path
   - search.highlight
   - search.share
+  - content.code.copy
+extra_css:
+- assets/stylesheets/nav-controls.css
+- assets/stylesheets/custom.css
+extra_javascript:
+- javascripts/nav-controls.js
 markdown_extensions:
 - admonition
 - attr_list
