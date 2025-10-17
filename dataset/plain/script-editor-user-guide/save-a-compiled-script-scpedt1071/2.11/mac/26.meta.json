@@ -1,0 +1,11 @@
+{
+  "collection": "script-editor-user-guide",
+  "path": "save-a-compiled-script-scpedt1071/2.11/mac/26.md",
+  "title": "Save a compiled script in Script Editor on Mac",
+  "body": "# Save a compiled script in Script Editor on Mac\n\nYou can save your script as a compiled script that opens in Script Editor and is ready for further editing.\n\n[Open Script Editor for me](https://support.apple.com/guide/script-editor/save-a-compiled-script-scpedt1071/2.11/mac/x-help-action:/openApp?bundleId=com.apple.ScriptEditor2)\n\n1. In the Script Editor app ![](https://help.apple.com/assets/67DB7E842551EA97CB00BED5/67DB7E8502C5F38AAF0D7DC6/en_US/2d1774dafc25e40f6f806216d54cdf01.png) on your Mac, choose File &gt; Save.\n2. Enter a name for the script.\n3. To save your script in a different location than shown, click the triangle to show all your saving options, then select a folder.\n4. In the Save dialog, click the File Format pop-up menu, then choose a format.\n\n   * *Script:* Save the script as an editable Script Editor document.\n   * *Script bundle:* Include resources with the script, such as icons or sounds.\n   * *Application:* Create an app using the script.\n   * *Text:* Save the script as a plain text file.\n5. Click Save.\n\n**See also**[Save a script as an app in Script Editor on Mac](https://support.apple.com/guide/script-editor/save-a-script-as-an-app-scpedt1072/2.11/mac/26)[Edit scripts with Script Editor on Mac](https://support.apple.com/guide/script-editor/edit-scripts-scpedt1010/2.11/mac/26)\n",
+  "binary": false,
+  "source_url": "https://support.apple.com/guide/script-editor/save-a-compiled-script-scpedt1071/2.11/mac/26",
+  "sha256": "b2145fac5ed337213b38c2cbb29968112e7df21161bb34a72f16528b2fe09b92",
+  "etag": null,
+  "last_modified": null
+}

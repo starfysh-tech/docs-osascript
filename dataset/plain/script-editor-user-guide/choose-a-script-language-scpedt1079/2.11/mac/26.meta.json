@@ -1,0 +1,11 @@
+{
+  "collection": "script-editor-user-guide",
+  "path": "choose-a-script-language-scpedt1079/2.11/mac/26.md",
+  "title": "Choose a script language in Script Editor on Mac",
+  "body": "# Choose a script language in Script Editor on Mac\n\nIn OS X 10.10 or later, you can use the scripting language JavaScript for Automation, as well as AppleScript, to write your scripts. You can also use shell scripts and third-party scripting languages, such as UserTalk, to write scripts.\n\n[Open Script Editor for me](https://support.apple.com/guide/script-editor/choose-a-script-language-scpedt1079/2.11/mac/x-help-action:/openApp?bundleId=com.apple.ScriptEditor2)\n\n## Choose your scripting language\n\n* In the Script Editor app ![](https://help.apple.com/assets/67DB7E842551EA97CB00BED5/67DB7E8502C5F38AAF0D7DC6/en_US/2d1774dafc25e40f6f806216d54cdf01.png) on your Mac, click the Script Language pop-up menu in the toolbar, then choose a language.\n\n## Choose your default scripting language\n\n1. In the Script Editor app ![](https://help.apple.com/assets/67DB7E842551EA97CB00BED5/67DB7E8502C5F38AAF0D7DC6/en_US/2d1774dafc25e40f6f806216d54cdf01.png) on your Mac, choose Script Editor &gt; Settings, then click General.\n2. Click the Default Language pop-up menu, then choose a scripting language.\n\n**See also**[Change Script Editor settings on Mac](https://support.apple.com/guide/script-editor/change-script-editor-settings-scpedt1081/2.11/mac/26)\n",
+  "binary": false,
+  "source_url": "https://support.apple.com/guide/script-editor/choose-a-script-language-scpedt1079/2.11/mac/26",
+  "sha256": "a5e3b58600c04b3feca5b18324a178744b0a0ae508f80a27b5ea6a30866fa141",
+  "etag": null,
+  "last_modified": null
+}

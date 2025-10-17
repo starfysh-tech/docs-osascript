@@ -1,0 +1,45 @@
+Copyright and trademarks
+
+Copyright © 2025 Apple Inc. All rights reserved.
+
+Use of the “keyboard” Apple logo (Option-Shift-K) for commercial purposes without the prior written consent of Apple may constitute trademark infringement and unfair competition in violation of federal and state laws.
+
+Apple, the Apple logo, AirDrop, AirPlay, AirPods, AirPods Max, AirPods Pro, AirPort, AirPort Express, AirPort Extreme, AirPort Time Capsule, AirPrint, AirTag, Aperture, Apple Books, Apple Music, Apple Pay, Apple Pencil, Apple Pro Display XDR, AppleScript, Apple Studio Display, Apple TV, Apple Wallet, Apple Watch, Bonjour, Boot Camp, Carbon, CarPlay, Center Stage, ColorSync, EarPods, Exposé, Face ID, FaceTime, FileVault, Final Cut Pro, Finder, Find My, Flyover, Freeform, GarageBand, Guided Access, Handoff, HomeKit, HomePod, HomePod mini, iBooks, iCal, iChat, iMac, iMac Pro, iMessage, iMovie, iPad, iPad mini, iPadOS, iPad Pro, iPhone, iPod, iPod classic, iPod nano, iPod shuffle, iPod touch, iSight, iTunes, Keychain, Keynote, Launchpad, Lightning, Live Photos, Logic, Logic Pro, Mac, MacBook, MacBook Air, MacBook Pro, Macintosh, Mac mini, macOS, Mac Pro, Mac Studio, Magic Keyboard, Magic Mouse, Magic Trackpad, MagSafe, MainStage, Memoji, Metal, Mission Control, Motion, Night Shift, Numbers, OS X, Pages, Photo Booth, PowerBook, Quartz, QuickTime, Safari, Shake, Sidecar, Siri, Soundtrack, Spaces, Spotlight, Stage Manager, SuperDrive, Time Capsule, Time Machine, Touch Bar, Touch ID, TrueDepth, True Tone, tvOS, watchOS, and Xsan are trademarks of Apple Inc., registered in the U.S. and other countries and regions.
+
+Apple Intelligence, Apple Remote Desktop, Apple Vision Pro, Genmoji, iBook, Multi-Touch, SharePlay, and SnapBack are trademarks of Apple Inc.
+
+Apple Arcade, AppleCare, AppleCare+, Apple News, Apple News+, Apple One, Apple Podcasts, Apple Store, Apple TV+, App Store, Genius, iCloud, iCloud+, iCloud Drive, iCloud Keychain, iTunes Extras, iTunes Match, and iTunes Store are service marks of Apple Inc., registered in the U.S. and other countries and regions.
+
+iTunes Plus and .Mac are service marks of Apple Inc.
+
+Apple
+
+One Apple Park Way
+
+Cupertino, CA 95014
+
+apple.com
+
+Adobe, the Adobe logo, Acrobat, the Acrobat logo, Distiller, PostScript, and the PostScript logo are trademarks or registered trademarks of Adobe Systems Incorporated in the U.S. and/or other countries.
+
+Beats is a trademark of Beats Electronics, LLC., registered in the U.S. and other countries.
+
+The Bluetooth^® word mark and logos are registered trademarks owned by Bluetooth SIG, Inc. and any use of such marks by Apple is under license.
+
+Dolby, Dolby Atmos, and the double-D symbol are registered trademarks of Dolby Laboratories Licensing Corporation. Manufactured under license from Dolby Laboratories. Confidential unpublished works, © 1992–1997 Dolby Laboratories. All rights reserved.
+
+ENERGY STAR and the ENERGY STAR mark are registered trademarks owned by the U.S. Environmental Protection Agency.
+
+IOS is a trademark or registered trademark of Cisco in the U.S. and other countries and is used under license.
+
+Java is a registered trademark of Oracle and/or its affiliates.
+
+PowerPC™ and the PowerPC logo™ are trademarks of International Business Machines Corporation, used under license therefrom.
+
+UNIX^® is a registered trademark of The Open Group.
+
+Other company and product names and logos mentioned herein may be trademarks of their respective companies.
+
+Every effort has been made to ensure that the information in this manual is accurate. Apple is not responsible for printing or clerical errors.
+
+Some apps are not available in all countries or regions. App availability is subject to change.

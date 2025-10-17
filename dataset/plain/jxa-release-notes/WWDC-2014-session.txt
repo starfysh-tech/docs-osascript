@@ -1,0 +1,7 @@
+WWDC 2014 Session 306 Resources
+
+Apple’s JXA release notes reference WWDC Session 306 (“JavaScript for Automation”). We archive the session PDF locally and link out to the streaming video.
+
+Session 306 PDF
+
+Streaming video on developer.apple.com

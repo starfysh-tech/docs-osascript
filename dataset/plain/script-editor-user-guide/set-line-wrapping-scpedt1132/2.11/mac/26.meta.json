@@ -1,0 +1,11 @@
+{
+  "collection": "script-editor-user-guide",
+  "path": "set-line-wrapping-scpedt1132/2.11/mac/26.md",
+  "title": "Set line wrapping in Script Editor on Mac",
+  "body": "# Set line wrapping in Script Editor on Mac\n\nAutomatic line wrapping lets you write script statements of any length that wrap to fit the size of the script window.\n\n[Open Script Editor for me](https://support.apple.com/guide/script-editor/set-line-wrapping-scpedt1132/2.11/mac/x-help-action:/openApp?bundleId=com.apple.ScriptEditor2)\n\n1. In the Script Editor app ![](https://help.apple.com/assets/67DB7E842551EA97CB00BED5/67DB7E8502C5F38AAF0D7DC6/en_US/2d1774dafc25e40f6f806216d54cdf01.png) on your Mac, choose Script Editor &gt; Settings, then click Editing.\n2. To enable automatic line wrapping, select “Wrap lines to editor width.”\n3. To indent the wrapped line, select “Indent wrapped lines by,” then enter the number of spaces to indent.\n\n**See also**[Add commands using the shortcut menu in Script Editor on Mac](https://support.apple.com/guide/script-editor/add-commands-using-the-shortcut-menu-apscrpt1084/2.11/mac/26)\n",
+  "binary": false,
+  "source_url": "https://support.apple.com/guide/script-editor/set-line-wrapping-scpedt1132/2.11/mac/26",
+  "sha256": "664d2a21fb5b59ef60dd95140d3388defba86064e347098a0d8ee2bd6bd26dc7",
+  "etag": null,
+  "last_modified": null
+}

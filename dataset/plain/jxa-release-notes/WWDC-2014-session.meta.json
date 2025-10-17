@@ -1,0 +1,11 @@
+{
+  "collection": "jxa-release-notes",
+  "path": "WWDC-2014-session.md",
+  "title": "WWDC 2014 Session 306 Resources",
+  "body": "# WWDC 2014 Session 306 Resources\n\nApple’s JXA release notes reference WWDC Session 306 (“JavaScript for Automation”). We archive the session PDF locally and link out to the streaming video.\n\n* [Session 306 PDF](https://developer.apple.com/library/archive/jxa-release-notes/306_javascript_for_automation.pdf)\n* [Streaming video on developer.apple.com](https://developer.apple.com/videos/play/wwdc2014/306/)\n",
+  "binary": false,
+  "source_url": null,
+  "sha256": null,
+  "etag": null,
+  "last_modified": null
+}

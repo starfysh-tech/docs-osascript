@@ -1,0 +1,25 @@
+View an app’s scripting dictionary in Script Editor on Mac
+
+An app’s scripting dictionary displays the scripting vocabulary understood by an app or a scripting addition.
+
+To find out what commands and objects you can use to control an app, use Script Editor to look at that app’s dictionary. The scripting dictionary of an app is organized into different suites. Most scriptable apps contain at least the standard suite. Other apps may have a variety of different suites of objects and commands available. An app’s dictionary may contain multiple languages—for example an app’s dictionary may include both AppleScript and JavaScript for Automation.
+
+Open Script Editor for me
+
+In the Script Editor app
+ on your Mac, choose Window > Library.
+
+Double-click the name of the app in the Library window.
+
+Click the Language pop-up menu, then choose a scripting language.
+
+Select a suite.
+
+If a scriptable app doesn’t appear in the library, see
+Add or remove apps from the scripting dictionary
+.
+
+See also
+Automate Script Editor tasks in Script Editor on Mac
+AppleScript Language Guide
+JavaScript for Automation

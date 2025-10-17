@@ -1,0 +1,25 @@
+About Script Editor on Mac
+
+Script Editor lets you create powerful scripts, tools, and even apps. You can create scripts to perform repetitive tasks, automate complex workflows, and control apps or even the system. You can use various scripting languages, including AppleScript, JavaScript for Automation, shell scripts, and also some third-party scripting languages.
+
+In Script Editor, you can edit, debug, and compile your scripts. When your script is finished, you can save it as an app or a droplet.
+
+Open Script Editor for me
+
+Script Editor’s library gives you access to the scripting dictionary of all scriptable apps and scripting additions.
+
+For more information about the AppleScript scripting language, see the
+AppleScript Language Guide
+.
+
+For more information about JavaScript For Automation, see
+JavaScript for Automation Release Notes
+.
+
+For more information about automating tasks using AppleScript and Terminal, see
+Automate tasks using AppleScript and Terminal
+.
+
+See also
+View an app’s scripting dictionary in Script Editor on Mac
+Edit scripts with Script Editor on Mac

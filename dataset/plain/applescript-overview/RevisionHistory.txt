@@ -1,0 +1,77 @@
+Document Revision History
+
+This table describes the changes to
+AppleScript Overview
+.
+
+|
+Date
+ |
+Notes
+ |
+| 2007-10-31 | Updated to reflect AppleScript changes for OS X version 10.5. |
+|  | Added a chapter to describe the
+Scripting Bridge
+ technology that was introduced in OS X v10.5. In several places, noted that using Scripting Bridge can be easier and more efficient than using native Apple events to use the services of scriptable applications. |
+|  | In
+Open Scripting Architecture
+, added a section
+Faceless Background Applications
+ that describes this mechanism for extending AppleScript. |
+|  | In the renamed chapter
+AppleScript Utilities and Applications
+, added a section to describe the AppleScript helper application
+Database Events
+, which is available beginning in OS X v10.4. In the same chapter, noted that the AppleScript Utility and Folder Actions Setup applications are themselves scriptable. Also added information on new terminology supported by the System Events application, including the Desktop, Dock Preferences, Network Preferences, Security, and other new suites. |
+|  | Combined information that was previously in several places into the renamed chapter
+Scriptable Applications
+. The section
+Support for Cocoa Applications
+ now provides links to sample code projects. |
+|  | Added various information to the section
+Specifying Scripting Terminology
+, including a note that changes to sdef usage in Cocoa applications for OS X v10.5 are described in the Scripting section of
+Foundation Release Notes for macOS 10.13 and iOS 11
+. |
+|  | In the section
+Executing AppleScript Scripts as Shell Commands
+, noted that in OS X v10.5, you can use the # symbol as a comment-to-end-of-line token, providing a way to make a plain AppleScript script into a Unix executable. Also noted that in OS X v10.5 there is a command-line tool to display compiled scripts as text,
+osadecompile
+. |
+|  | In the section
+The Parts of the Open Scripting Architecture
+, noted that in OS X v10.5, the Apple event framework,
+AE.framework
+, is now part of
+CoreServices.framework
+. |
+|  | Updated
+Figure 1
+ showing a Finder dictionary. |
+| 2006-03-08 | Made minor editorial corrections and updated links. |
+|  | In several places that refer to how AppleScript works with Cocoa applications, added or revised links to
+Cocoa Scripting Guide
+. |
+|  | In the section
+Resolving Objects in the Application
+, added information about the AppleScript object model and about resolving objects in Cocoa applications. |
+| 2005-04-29 | Added information on Open Scripting Architecture (OSA) and the Automator, Script Utility, System Events, and Image Events applications. Changed title from "AppleScript for OS X." |
+| 2004-05-27 | Added section
+Determining What to Make Scriptable
+. |
+|  | Moved some existing material into a new section,
+Scriptable Applications
+. |
+|  | Made minor text revisions to avoid duplication with
+Getting Started with AppleScript
+. |
+|  | Made some document references into links. |
+| 2003-09-17 | Updated some links to other documentation. |
+| 2003-05-15 | Moved this material into a separate document. |
+|  | Reorganized some sections, added documentation links, and made minor corrections. |
+
+Copyright © 2002, 2007 Apple Inc. All Rights Reserved.
+Terms of Use
+ |
+Privacy Policy
+ | Updated: 2007-10-31

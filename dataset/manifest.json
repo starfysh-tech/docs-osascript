@@ -1,0 +1,33 @@
+{
+  "generated": "2025-10-17T16:41:25Z",
+  "command": "python3 scripts/export_dataset.py apple-events-programming-guide applescript-language-guide applescript-overview applescript-scripting-additions-guide introduction-to-scripting jxa-release-notes mac-automation-scripting-guide script-editor-user-guide scripting-components",
+  "collections": {
+    "apple-events-programming-guide": {
+      "documents": 1
+    },
+    "applescript-language-guide": {
+      "documents": 22
+    },
+    "applescript-overview": {
+      "documents": 9
+    },
+    "applescript-scripting-additions-guide": {
+      "documents": 1
+    },
+    "introduction-to-scripting": {
+      "documents": 1
+    },
+    "jxa-release-notes": {
+      "documents": 6
+    },
+    "mac-automation-scripting-guide": {
+      "documents": 44
+    },
+    "script-editor-user-guide": {
+      "documents": 24
+    },
+    "scripting-components": {
+      "documents": 1
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "collection": "jxa-release-notes",
+  "path": "Articles/Introduction.md",
+  "title": "Introduction to JavaScript for Automation Release Notes",
+  "body": "<a id=\"//apple_ref/doc/uid/TP40014508\"></a><a id=\"//apple_ref/doc/uid/TP40014508-CH111-SW1\"></a>\n\n# Introduction to JavaScript for Automation Release Notes\n\n> **Important:** This document is no longer being updated. For the latest information about Apple SDKs, visit the [documentation website](https://developer.apple.com/documentation).\n\n<a id=\"//apple_ref/doc/uid/TP40014508-CH111-DontLinkElementID_1\"></a>\n\nJavaScript for Automation provides the ability to use JavaScript for interapplication communication between apps in OS X.\n\nThis document describes significant changes to JavaScript for Automation (JXA) and related tools in OS X.\n\n<a id=\"//apple_ref/doc/uid/TP40014508-CH111-DontLinkElementID_2\"></a>\n\n## At a Glance\n\nThis document includes the following articles:\n\n* [OS X 10.11 Release Notes](https://developer.apple.com/library/archive/jxa-release-notes/Articles/OSX10-11.md#//apple_ref/doc/uid/TP40014508-CH110-SW1) describes the JavaScript for Automation changes that were introduced in OS X v10.11.\n* [OS X 10.10 Release Notes](https://developer.apple.com/library/archive/jxa-release-notes/Articles/OSX10-10.md#//apple_ref/doc/uid/TP40014508-CH109-SW1) describes the JavaScript for Automation changes that were introduced in OS X v10.10.\n\n  \n\n---\n\nCopyright © 2015 Apple Inc. All Rights Reserved. [Terms of Use](http://www.apple.com/legal/internet-services/terms/site.html) | [Privacy Policy](http://www.apple.com/privacy/) | Updated: 2015-09-16\n",
+  "binary": false,
+  "source_url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/Introduction.html",
+  "sha256": "83c1151e4877138e56853797098edac51ee7ea92726f5cccc5e2a77839a043a1",
+  "etag": null,
+  "last_modified": null
+}

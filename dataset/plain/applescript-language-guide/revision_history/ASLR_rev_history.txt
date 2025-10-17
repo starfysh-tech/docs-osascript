@@ -1,0 +1,24 @@
+Document Revision History
+
+This table describes the changes to
+AppleScript Language Guide
+.
+
+|
+Date
+ |
+Notes
+ |
+| 2016-01-25 | Expanded scripting errors chapter and repeat command discussion. |
+| 2015-09-16 | Updated for OS X Yosemite v10.10 and OS X v10.11 features. |
+| 2013-10-22 | Updated for OS X Mavericks features. |
+| 2008-03-11 | Updated to describe AppleScript features through OS X v10.5 and AppleScript 2.0. |
+|  | The previous release of
+AppleScript Language Guide
+ was on May 5, 1999. |
+
+Copyright © 2016 Apple Inc. All Rights Reserved.
+Terms of Use
+ |
+Privacy Policy
+ | Updated: 2016-01-25

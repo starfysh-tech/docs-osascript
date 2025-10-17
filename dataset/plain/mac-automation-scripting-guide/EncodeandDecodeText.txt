@@ -1,0 +1,333 @@
+Encoding and Decoding Text
+
+A standard practice when creating URL's is to encode spaces and special characters (high-level ASCII) to hexadecimal equivalents. For example, spaces in URL's are routinely converted to
+%20
+. The process of encoding and decoding URLs and other text in this manner can be accomplished through scripting.
+
+Encoding Characters
+
+The handler in Listing 32-1 encodes a single character.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 32-1
+AppleScript: Handler that URL encodes a character
+
+on encodeCharacter(theCharacter)
+
+set theASCIINumber to (the ASCII number theCharacter)
+
+set theHexList to {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"}
+
+set theFirstItem to item ((theASCIINumber div 16) + 1) of theHexList
+
+set theSecondItem to item ((theASCIINumber mod 16) + 1) of theHexList
+
+return ("%" & theFirstItem & theSecondItem) as string
+
+end encodeCharacter
+
+Listing 32-2 shows how to call the handler in Listing 32-1.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 32-2
+AppleScript: Calling a handler to URL encode a character
+
+encodeCharacter("$")
+
+--&gt; Result: "%24"
+
+Encoding Text
+
+The handler in Listing 32-3 encodes an entire string. Provide a string and indicate whether to encode two levels of special characters. The first level includes commonly encoded special characters, such as
+$
+,
+%
+, and
+*
+. The second level includes extended special characters that aren’t typically encoded—
+.
+,
+-
+,
+_
+, and
+:
+. High-level ASCII characters, such as copyright symbols, trademark symbols, and spaces, are always encoded.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 32-3
+AppleScript: Handler that URL encodes text
+
+on encodeText(theText, encodeCommonSpecialCharacters, encodeExtendedSpecialCharacters)
+
+set theStandardCharacters to "abcdefghijklmnopqrstuvwxyz0123456789"
+
+set theCommonSpecialCharacterList to "$+!'/?;&@=#%&gt;&lt;{}\\"~`^\\\\|*"
+
+set theExtendedSpecialCharacterList to ".-_:"
+
+set theAcceptableCharacters to theStandardCharacters
+
+if encodeCommonSpecialCharacters is false then set theAcceptableCharacters to theAcceptableCharacters & theCommonSpecialCharacterList
+
+if encodeExtendedSpecialCharacters is false then set theAcceptableCharacters to theAcceptableCharacters & theExtendedSpecialCharacterList
+
+set theEncodedText to ""
+
+repeat with theCurrentCharacter in theText
+
+if theCurrentCharacter is in theAcceptableCharacters then
+
+set theEncodedText to (theEncodedText & theCurrentCharacter)
+
+else
+
+set theEncodedText to (theEncodedText & encodeCharacter(theCurrentCharacter)) as string
+
+end if
+
+end repeat
+
+return theEncodedText
+
+end encodeText
+
+Note
+
+This handler calls the
+encodeCharacter()
+ handler. See
+Listing 32-1
+.
+
+Listing 32-4 shows how to call the handler in Listing 32-3 to encode only high-level ASCII characters.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 32-4
+AppleScript: Calling a handler to URL encode high-level ASCII characters in text
+
+encodeText("*smith-wilson© report_23.txt", false, false)
+
+--&gt; Result: "*smith-wilson%A9%20report_23.txt"
+
+Listing 32-5 shows how to call the handler in Listing 32-3 to encode high-level ASCII characters and all special characters.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 32-5
+AppleScript: Calling a handler to URL encode high- and low-level ASCII characters in text
+
+encodeText("*smith-wilson© report_23.txt", true, true)
+
+--&gt; Result: "%2Asmith%2Dwilson%A9%20report%5F23%2Etxt"
+
+Listing 32-6 shows how to call the handler in Listing 32-3 to encode high-level ASCII characters and special characters, excluding periods, hyphens, underscores, and colons.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 32-6
+AppleScript: Calling a handler to URL encode high- and low-level ASCII characters in text with certain exclusions
+
+encodeText("annual smith-wilson_report.txt", true, false)
+
+--&gt; Result: "annual%20smith-wilson_report.txt"
+
+Note
+
+When you use AppleScriptObjC, you can use methods of the
+NSString
+ class to encode text. The handler in Listing 32-7 demonstrates how to do this.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 32-7
+AppleScriptObjC: Handler that URL encodes text
+
+on encodeText(theText)
+
+set theString to stringWithString_(theText) of NSString of current application
+
+set theEncoding to NSUTF8StringEncoding of current application
+
+set theAdjustedString to stringByAddingPercentEscapesUsingEncoding_(theEncoding) of theString
+
+return (theAdjustedString as string)
+
+end encodeText
+
+Decoding Text
+
+The handler in Listing 32-8 decodes an encoded character hex string.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 32-8
+AppleScript: Handler that decodes an encoded character hex string
+
+on decodeCharacterHexString(theCharacters)
+
+copy theCharacters to {theIdentifyingCharacter, theMultiplierCharacter, theRemainderCharacter}
+
+set theHexList to "123456789ABCDEF"
+
+if theMultiplierCharacter is in "ABCDEF" then
+
+set theMultiplierAmount to offset of theMultiplierCharacter in theHexList
+
+else
+
+set theMultiplierAmount to theMultiplierCharacter as integer
+
+end if
+
+if theRemainderCharacter is in "ABCDEF" then
+
+set theRemainderAmount to offset of theRemainderCharacter in theHexList
+
+else
+
+set theRemainderAmount to theRemainderCharacter as integer
+
+end if
+
+set theASCIINumber to (theMultiplierAmount * 16) + theRemainderAmount
+
+return (ASCII character theASCIINumber)
+
+end decodeCharacterHexString
+
+Listing 32-9 shows how to call the handler in Listing 32-8.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 32-9
+AppleScript: Calling a handler to decode an encoded character hex string
+
+decodeCharacterHexString("%24")
+
+--&gt; Result: "$"
+
+The handler in Listing 32-10 decodes any encoded character hex strings in the specified text.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 32-10
+AppleScript: Handler that decodes any encoded character hex strings in specified text
+
+on decodeText(theText)
+
+set flagA to false
+
+set flagB to false
+
+set theTempCharacter to ""
+
+set theCharacterList to {}
+
+repeat with theCurrentCharacter in theText
+
+set theCurrentCharacter to contents of theCurrentCharacter
+
+if theCurrentCharacter is "%" then
+
+set flagA to true
+
+else if flagA is true then
+
+set theTempCharacter to theCurrentCharacter
+
+set flagA to false
+
+set flagB to true
+
+else if flagB is true then
+
+set end of theCharacterList to decodeCharacterHexString(("%" & theTempCharacter & theCurrentCharacter) as string)
+
+set theTempCharacter to ""
+
+set flagA to false
+
+set flagB to false
+
+else
+
+set end of theCharacterList to theCurrentCharacter
+
+end if
+
+end repeat
+
+return theCharacterList as string
+
+end decodeText
+
+Note
+
+This handler calls the
+decodeCharacterHexString()
+ handler. See
+Listing 32-8
+.
+
+Listing 32-11 shows how to call the handler in Listing 32-10.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 32-11
+AppleScript: Calling a handler to decode any encoded character hex strings in specified text
+
+decodeText("%2Asmith%2Dwilson%A9%20report%5F23%2Etxt")
+
+--&gt; Result: "*smith-wilson© report_23.txt"
+
+Note
+
+When you use AppleScriptObjC, you can use methods of the
+NSString
+ class to decode URL encoded text. The handler in Listing 32-12 demonstrates how to do this.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 32-12
+AppleScriptObjC: Handler that decodes URL encoded text
+
+on decodeText(theText)
+
+set theString to stringWithString_(theText) of NSString of current application
+
+set theEncoding to NSUTF8StringEncoding of current application
+
+set theAdjustedString to stringByReplacingPercentEscapesUsingEncoding_(theEncoding) of theString
+
+return (theAdjustedString as string)
+
+end decodeText

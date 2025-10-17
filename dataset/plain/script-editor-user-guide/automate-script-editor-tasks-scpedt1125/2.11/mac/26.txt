@@ -1,0 +1,15 @@
+Automate Script Editor tasks in Script Editor on Mac
+
+Script Editor is a scriptable app. It responds to commands from AppleScript and JavaScript for Automation. You can write time-saving scripts to help you in your scripting.
+
+Open Script Editor for me
+
+In the Script Editor app
+ on your Mac, choose Window > Library.
+
+Double-click Script Editor in the Library window.
+
+The Script Editor dictionary opens, showing the commands and objects that are available to script in Script Editor.
+
+See also
+View an app’s scripting dictionary in Script Editor on Mac

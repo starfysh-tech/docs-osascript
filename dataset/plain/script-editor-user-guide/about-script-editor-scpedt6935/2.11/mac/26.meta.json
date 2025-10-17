@@ -1,0 +1,11 @@
+{
+  "collection": "script-editor-user-guide",
+  "path": "about-script-editor-scpedt6935/2.11/mac/26.md",
+  "title": "About Script Editor on Mac",
+  "body": "# About Script Editor on Mac\n\nScript Editor lets you create powerful scripts, tools, and even apps. You can create scripts to perform repetitive tasks, automate complex workflows, and control apps or even the system. You can use various scripting languages, including AppleScript, JavaScript for Automation, shell scripts, and also some third-party scripting languages.\n\nIn Script Editor, you can edit, debug, and compile your scripts. When your script is finished, you can save it as an app or a droplet.\n\n[Open Script Editor for me](https://support.apple.com/guide/script-editor/about-script-editor-scpedt6935/2.11/mac/x-help-action:/openApp?bundleId=com.apple.ScriptEditor2)\n\nScript Editor’s library gives you access to the scripting dictionary of all scriptable apps and scripting additions.\n\nFor more information about the AppleScript scripting language, see the [AppleScript Language Guide](https://developer.apple.com/library/mac/documentation/AppleScript/Conceptual/AppleScriptLangGuide/index.html).\n\nFor more information about JavaScript For Automation, see [JavaScript for Automation Release Notes](https://developer.apple.com/library/mac/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/index.html).\n\nFor more information about automating tasks using AppleScript and Terminal, see [Automate tasks using AppleScript and Terminal](https://support.apple.com/guide/terminal/trml1003).\n\n**See also**[View an app’s scripting dictionary in Script Editor on Mac](https://support.apple.com/guide/script-editor/view-an-apps-scripting-dictionary-scpedt1126/2.11/mac/26)[Edit scripts with Script Editor on Mac](https://support.apple.com/guide/script-editor/edit-scripts-scpedt1010/2.11/mac/26)\n",
+  "binary": false,
+  "source_url": "https://support.apple.com/guide/script-editor/about-script-editor-scpedt6935/2.11/mac/26",
+  "sha256": "95bb64205ce28871531531433ee064496d4f79d143bafd9a4aad41df4acd6e2e",
+  "etag": null,
+  "last_modified": null
+}

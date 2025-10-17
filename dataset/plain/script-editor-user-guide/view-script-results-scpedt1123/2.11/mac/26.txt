@@ -1,0 +1,13 @@
+View script results in Script Editor on Mac
+
+After you compile your script, you can track the values it returns in the Log History. This is useful when analyzing or debugging, allowing you to observe what changes are occurring to the values used by the script.
+
+Open Script Editor for me
+
+In the Script Editor app
+ on your Mac, choose Window > Log History, then click Result.
+
+When you run a script in Script Editor, and a value is loaded into a variable, the value appears in the log.
+
+See also
+Set up the Log History in Script Editor on Mac

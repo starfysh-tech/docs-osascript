@@ -1,0 +1,21 @@
+Add or remove apps from the scripting dictionary in Script Editor on Mac
+
+Open an app’s AppleScript dictionary by choosing the app from the Script Editor library.
+
+Open Script Editor for me
+
+In the Script Editor app
+ on your Mac, choose Window > Library.
+
+Do any of the following:
+
+Add an app to the library:
+ Click the Add button
+ in the toolbar, choose the app, then click Open.
+
+Delete an app from the library:
+  Select the app, then click the Remove button
+ in the toolbar.
+
+See also
+View an app’s scripting dictionary in Script Editor on Mac

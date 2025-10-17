@@ -1,0 +1,11 @@
+{
+  "collection": "applescript-language-guide",
+  "path": "revision_history/ASLR_rev_history.md",
+  "title": "Document Revision History",
+  "body": "<a id=\"//apple_ref/doc/uid/TP40000983-CH212-BCIHHGJH\"></a>\n\n# Document Revision History\n\nThis table describes the changes to *AppleScript Language Guide*.\n\n| **Date** | **Notes** |\n| 2016-01-25 | Expanded scripting errors chapter and repeat command discussion. |\n| 2015-09-16 | Updated for OS X Yosemite v10.10 and OS X v10.11 features. |\n| 2013-10-22 | Updated for OS X Mavericks features. |\n| 2008-03-11 | Updated to describe AppleScript features through OS X v10.5 and AppleScript 2.0. |\n|  | The previous release of *AppleScript Language Guide* was on May 5, 1999. |\n\n  \n  \n\n---\n\nCopyright © 2016 Apple Inc. All Rights Reserved. [Terms of Use](http://www.apple.com/legal/internet-services/terms/site.html) | [Privacy Policy](http://www.apple.com/privacy/) | Updated: 2016-01-25\n",
+  "binary": false,
+  "source_url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/revision_history/ASLR_rev_history.html",
+  "sha256": "7da2a53bdac84b1b317b74532f3a9531f113ea6312d115d79c8a6254554aade0",
+  "etag": null,
+  "last_modified": null
+}

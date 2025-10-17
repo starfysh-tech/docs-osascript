@@ -1,0 +1,271 @@
+Displaying Dialogs and Alerts
+
+Dialogs and alerts are great ways to provide information about a script’s progress, report problems, and allow users to make decisions that affect script behavior.
+
+Displaying a Dialog
+
+Use the
+display dialog
+ command, provided by the Standard Additions scripting addition to show a basic dialog message to the user, such as the one in Figure 22-1. This dialog was produced by the code in Listing 22-1 and Listing 22-2. In these examples, a string is passed to the
+display dialog
+ command as a direct parameter. The result of the command is the button the user clicked in the dialog.
+
+Figure 22-1
+A simple dialog
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 22-1
+AppleScript: Displaying a simple dialog
+
+set theDialogText to "The curent date and time is " & (current date) & "."
+
+display dialog theDialogText
+
+--&gt; Result: {button returned:"OK"}
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 22-2
+JavaScript: Displaying a simple dialog
+
+var app = Application.currentApplication()
+
+app.includeStandardAdditions = true
+
+var dialogText = "The current date and time is " + (app.currentDate())
+
+app.displayDialog(dialogText)
+
+// Result: {"buttonReturned":"OK"}
+
+Note
+
+This chapter covers a portion of the
+display dialog
+ command’s capabilities. For example, the
+display dialog
+ command can also be used to collect text entered by the user. This is covered in
+Prompting for Text
+. For complete information about the
+display dialog
+ command and its parameters, launch Script Editor, open the Standard Additions scripting addition’s dictionary, and navigate to the command’s definition.
+
+Customizing Dialog Buttons
+
+By default, a dialog produced by the
+display dialog
+ command has two buttons—Cancel and OK (the default). However, the command also has numerous optional parameters, some of which can be used to customize the buttons.
+
+Use the
+buttons
+ parameter to provide a list of between one and three buttons. You can optionally use the
+default button
+ parameter to configure one as the default—it’s highlighted and pressing the Return key activates it to close the dialog. You can also use the
+cancel button
+ parameter to configure one as the cancel button—pressing Escape or Command-Period (.) activates it to close the dialog and produce a user cancelled error.
+
+The dialog shown in Figure 22-2 has been customized to include Don’t Continue (the cancel button) and Continue (the default) buttons. This dialog was produced by the example code in Listing 22-3 and Listing 22-4.
+
+Figure 22-2
+A dialog with custom buttons
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 22-3
+AppleScript: Displaying a dialog with custom buttons
+
+set theDialogText to "An error has occurred. Would you like to continue?"
+
+display dialog theDialogText buttons {"Don't Continue", "Continue"} default button "Continue" cancel button "Don't Continue"
+
+--&gt; Result: {{button returned:"Continue"}
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 22-4
+JavaScript: Displaying a dialog with custom buttons
+
+var app = Application.currentApplication()
+
+app.includeStandardAdditions = true
+
+var dialogText = "An error has occurred. Would you like to continue?"
+
+app.displayDialog(dialogText, {
+
+buttons: ["Don't Continue", "Continue"],
+
+defaultButton: "Continue",
+
+cancelButton: "Don't Continue"
+
+})
+
+// Result: {"buttonReturned":"Continue"}
+
+Adding an Icon to a Dialog
+
+Dialogs can also include an icon, providing users with a visual clue to their importance. You can direct the
+display dialog
+ command to a specific icon by its file path, or resource name or ID if the icon is stored as a resource within your script’s bundle. You can also use the standard system icons
+stop
+,
+note
+, and
+caution
+. Listing 22-5 and Listing 22-6 display a dialog that includes the system caution icon like the one shown in Figure 22-3.
+
+Figure 22-3
+A dialog with an icon
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 22-5
+AppleScript: Displaying a dialog with an icon
+
+set theDialogText to "The amount of available free space is dangerously low."
+
+display dialog theDialogText with icon caution
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 22-6
+JavaScript: Displaying a dialog with an icon
+
+var app = Application.currentApplication()
+
+app.includeStandardAdditions = true
+
+var dialogText = "The amount of available free space is dangerously low."
+
+app.displayDialog(dialogText, {withIcon: "caution"})
+
+Automatically Dismissing a Dialog
+
+Sometimes, you may want to continue with script execution if a dialog isn’t dismissed by a user within a certain timeframe. In this case, you can specify an integer value for the
+display dialog
+ command’s
+giving up after
+ parameter, causing the dialog to
+give up
+ and close automatically after a specified period of inactivity.
+
+Listing 22-7 and Listing 22-8 display a dialog that automatically closes after five seconds of inactivity.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 22-7
+AppleScript: Displaying a dialog that automatically dismisses after a period of inactivity
+
+display dialog "Do, or do not. There is no try." giving up after 5
+
+--&gt; Result: {button returned:"OK", gave up:true}
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 22-8
+JavaScript: JavaScript a dialog that automatically dismisses after a period of inactivity
+
+var app = Application.currentApplication()
+
+app.includeStandardAdditions = true
+
+var dialogText = "Do, or do not. There is no try."
+
+app.displayDialog(dialogText, {givingUpAfter: 5})
+
+// Result: {"buttonReturned":"OK", "gaveUp":true}
+
+When using the
+giving up after
+ parameter, the result of the
+display dialog
+ command includes a
+gaveUp
+ property, a Boolean value indicating whether the dialog was auto-dismissed. This information is useful if you want the script to take a different course of action based on whether a dialog is manually or automatically dismissed.
+
+Displaying an Alert
+
+The
+display alert
+ command is also provided by the Standard Additions scripting addition. It’s similar to the
+display dialog
+ command, but with slightly different parameters. One of the
+display alert
+ command’s optional parameters is
+message
+, which lets you provide additional text to display in a separate text field, below the bolded alert text. Listing 22-9 and Listing 22-10 show how to display the alert in Figure 22-4, which contains bolded alert text, plain message text, and custom buttons.
+
+Figure 22-4
+An alert
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 22-9
+AppleScript: Displaying an alert with a message
+
+set theAlertText to "An error has occurred."
+
+set theAlertMessage to "The amount of available free space is dangerously low. Would you like to continue?"
+
+display alert theAlertText message theAlertMessage as critical buttons {"Don't Continue", "Continue"} default button "Continue" cancel button "Don't Continue"
+
+--&gt; Result: {button returned:"Continue"}
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 22-10
+JavaScript: Displaying an alert with a message
+
+var app = Application.currentApplication()
+
+app.includeStandardAdditions = true
+
+var alertText = "An error has occurred."
+
+var alertMessage = "The amount of available free space is dangerously low. Would you like to continue?"
+
+app.displayAlert(alertText, {
+
+message: alertMessage,
+
+as: "critical",
+
+buttons: ["Don't Continue", "Continue"],
+
+defaultButton: "Continue",
+
+cancelButton: "Don't Continue"
+
+})
+
+// Result: {"buttonReturned":"OK"}
+
+Note
+
+This chapter covers a portion of the
+display alert
+ command’s capabilities. For complete information about the
+display alert
+ command and its parameters, launch Script Editor, open the Standard Additions scripting addition’s dictionary, and navigate to the command’s definition.

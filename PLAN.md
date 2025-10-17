@@ -2,13 +2,13 @@
 
 ## Snapshot (updated: 2025-10-16)
 - **Current focus**
-  - Finalize dataset exports across the mirrored collections and package them per `docs/dataset-packaging.md`.
-  - Keep monitoring coverage fresh by rerunning `scripts/check_updates.py` with the expanded manifest and capturing the next status report.
-  - Maintain MkDocs parity after the anchor fix and queue the GitHub Pages publish once datasets are staged.
+  - Package the freshly exported datasets per `docs/dataset-packaging.md` and prep release artifacts.
+  - Keep monitoring coverage fresh by logging `scripts/check_updates.py` results and tracking follow-ups.
+  - Maintain MkDocs parity after the anchor fix and queue the GitHub Pages publish alongside the dataset release.
 - **Next actions**
-  1. Run `python3 scripts/export_dataset.py` (all collections) and follow the packaging checklist.
-  2. Execute `python3 scripts/check_updates.py --manifest monitor/manifest.json --save --report reports/update-status-YYYYMMDD.md`, then triage any `changed` or `error` entries.
-  3. Mark Issue #2 (MkDocs polish) as done and draft the release notes covering the clean validation sweep.
+  1. Package `dataset/` outputs (archive, checksum, README) following `docs/dataset-packaging.md`.
+  2. Draft the combined site + dataset release notes, including validation + monitoring results.
+  3. Publish the refreshed GitHub Pages build once release artifacts are staged.
 - **Blockers / decisions pending**
   - Determine how to handle large WWDC video assets (link-out vs. local copy).
   - Decide on the storage/export format for man-page captures (plain text vs. Markdown).
@@ -53,6 +53,7 @@
 - 2025-10-16: Documented outstanding manual follow-ups in `docs/manual-followups.md` (assets, publishing, QA checks).
 - 2025-10-16: Restored `<a name>` anchors during conversion, regenerated the AppleScript Language Guide, reran MkDocs + site link + per-collection validation, and moved Issue #2 (MkDocs polish) toward done ahead of dataset export.
 - 2025-10-17: Hardened HTML→Markdown conversion (anchors, `sup` exponents, multi-line `<pre>`, definition lists) and expanded the validator/test harness so all mirrored collections compare cleanly as part of the pre-release sweep.
+- 2025-10-17: Exported all collections via `scripts/export_dataset.py`, wrote `dataset/manifest.json`, and recorded monitoring baseline `reports/update-status-20251017.md` (no upstream changes).
 
 ## Task Board
 

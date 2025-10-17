@@ -1,0 +1,11 @@
+{
+  "collection": "script-editor-user-guide",
+  "path": "automate-script-editor-tasks-scpedt1125/2.11/mac/26.md",
+  "title": "Automate Script Editor tasks in Script Editor on Mac",
+  "body": "# Automate Script Editor tasks in Script Editor on Mac\n\nScript Editor is a scriptable app. It responds to commands from AppleScript and JavaScript for Automation. You can write time-saving scripts to help you in your scripting.\n\n[Open Script Editor for me](https://support.apple.com/guide/script-editor/automate-script-editor-tasks-scpedt1125/2.11/mac/x-help-action:/openApp?bundleId=com.apple.ScriptEditor2)\n\n1. In the Script Editor app ![](https://help.apple.com/assets/67DB7E842551EA97CB00BED5/67DB7E8502C5F38AAF0D7DC6/en_US/2d1774dafc25e40f6f806216d54cdf01.png) on your Mac, choose Window &gt; Library.\n2. Double-click Script Editor in the Library window.\n\n   The Script Editor dictionary opens, showing the commands and objects that are available to script in Script Editor.\n\n**See also**[View an app’s scripting dictionary in Script Editor on Mac](https://support.apple.com/guide/script-editor/view-an-apps-scripting-dictionary-scpedt1126/2.11/mac/26)\n",
+  "binary": false,
+  "source_url": "https://support.apple.com/guide/script-editor/automate-script-editor-tasks-scpedt1125/2.11/mac/26",
+  "sha256": "6a07cec6719f8369c21d64422bbea3ebc382f25f02586ebba22381715680dec7",
+  "etag": null,
+  "last_modified": null
+}

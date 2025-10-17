@@ -1,0 +1,131 @@
+Calling Command-Line Tools
+
+In AppleScript, the
+do shell script
+ command is used to execute command-line tools. This command is implemented by the Standard Additions scripting addition included with OS X.
+
+Note
+
+The Terminal app in
+/Applications/Utilities/
+ is scriptable and provides another way to execute command-line tools from scripts.
+
+Executing Commands
+
+The direct parameter of the
+do shell script
+ command is a string containing the shell code you want to execute, as demonstrated in Listing 39-1, which simply lists a directory.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 39-1
+AppleScript: Executing a simple shell command that lists the contents of a directory
+
+do shell script "ls /Applications/"
+
+(*
+
+--&gt; Result:
+
+"App Store.app
+
+Automator.app
+
+Calculator.app
+
+Calendar.app
+
+..."
+
+*)
+
+Since the direct parameter of
+do shell script
+ is a string, you can concatenate it with other strings at run time. Listing 39-2, for example, concatenates a shell command to a previously defined parameter value.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 39-2
+AppleScript: Concatenating a command with a value
+
+set theHostName to "www.apple.com"
+
+do shell script "ping -c1 " & theHostName
+
+Quoting Strings
+
+The shell uses space characters to separate parameters and gives special meaning to certain punctuation marks, such as
+$
+,
+(
+,
+)
+, and
+*
+. To ensure that strings are treated as expected—for example, spaces aren’t seen as delimiters—it’s best to wrap strings in quotes. This process is known as
+quoting
+. If your string contains quotes, they must also be
+escaped
+ (preceded by a
+/
+ character) so they are interpreted as part of the string. Listing 39-3 shows an example of an error occurring as a result of a parameter that contains a space.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 39-3
+AppleScript: An error resulting from a string containing a space
+
+set thePath to "/Library/Application Support/"
+
+do shell script "ls " & thePath
+
+--&gt; Result: error "ls: /Library/Application: No such file or directory\\rls: Support: No such file or directory" number 1
+
+The easiest way to quote a string is to use the
+quoted form
+ property of the text class, as demonstrated in Listing 39-4. This property returns the string in a form that’s safe from further interpretation by the shell, regardless of its contents.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 39-4
+AppleScript: Quoting a string to prevent errors
+
+set thePath to quoted form of "/Library/Application Support/"
+
+--&gt; Result: "'/Library/Application Support/'"
+
+do shell script "ls " & thePath
+
+(*
+
+--&gt; Result:
+
+"App Store
+
+Apple
+
+...
+
+"
+
+*)
+
+More Information
+
+For more information about the
+do shell script
+ command, see
+Commands Reference
+ in
+AppleScript Language Guide
+ and
+Technical Note TN2065
+.

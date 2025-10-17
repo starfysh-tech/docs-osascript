@@ -1,0 +1,26 @@
+Introduction to JavaScript for Automation Release Notes
+
+Important:
+ This document is no longer being updated. For the latest information about Apple SDKs, visit the
+documentation website
+.
+
+JavaScript for Automation provides the ability to use JavaScript for interapplication communication between apps in OS X.
+
+This document describes significant changes to JavaScript for Automation (JXA) and related tools in OS X.
+
+At a Glance
+
+This document includes the following articles:
+
+OS X 10.11 Release Notes
+ describes the JavaScript for Automation changes that were introduced in OS X v10.11.
+
+OS X 10.10 Release Notes
+ describes the JavaScript for Automation changes that were introduced in OS X v10.10.
+
+Copyright © 2015 Apple Inc. All Rights Reserved.
+Terms of Use
+ |
+Privacy Policy
+ | Updated: 2015-09-16

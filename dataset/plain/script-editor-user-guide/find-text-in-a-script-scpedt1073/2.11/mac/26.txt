@@ -1,0 +1,40 @@
+Find text in a script using Script Editor on Mac
+
+You can use the Find command to find and replace a word, statement, or any set of characters in an AppleScript script, regardless of how many times it occurs in the script.
+
+You can search for text in the whole script or in a selected area.
+
+Open Script Editor for me
+
+In the Script Editor app
+ on your Mac, choose Edit > Find > Find.
+
+Enter the text to search for, then press the Return key to locate the string. You can refine your search by doing any of the following:
+
+Click the forward arrow to move to the next string that matches the search.
+
+Click Replace to replace the found text, then enter the replacement text.
+
+To filter your searches, click the Search pop-up menu
+, then choose an option:
+
+Ignore Case:
+ Find text independent of whether letters are capitalized or lowercase.
+
+Wrap Around:
+ When you reach the end of the document, continue searching from the top.
+
+Contains:
+ Find text contained inside words. For example, if you type “most,” Script Editor also finds “almost.”
+
+Starts With:
+ Find letters at the beginning of words.
+
+Full Word:
+ Search only for the complete word you typed in the Find field.
+
+Insert Pattern:
+ Add special characters, wildcards, or patterns into your search.
+
+See also
+Skip forward to an element using the navigation bar in Script Editor on Mac

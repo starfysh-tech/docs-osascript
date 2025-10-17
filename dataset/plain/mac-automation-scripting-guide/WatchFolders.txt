@@ -1,0 +1,331 @@
+Watching Folders
+
+The ability to watch folders and take action on incoming items is a powerful automation technique that enables the creation of fully unattended workflows. A watched folder might be used, for example, to watermark incoming photos, convert them to PDF, and email them to clients for review. Many companies set up script servers—dedicated robot machines that watch folders and process detected items, allowing employees to offload tedious and repetitious work in order to focus on other important tasks.
+
+In OS X, there are two primary ways to set up scripting-based watched folders: folder actions and stay open script apps.
+
+Using Folder Actions to Watch Folders
+
+Folder actions is a feature in OS X that lets you connect scripts to folders on your Mac. A folder action script includes one or more event handlers that run in response to certain events, such as opening, closing, or adding items to the connected folder. With folder actions, you can create automated workflows that:
+
+Notify you when new files and folders arrive in a folder
+
+Notify you when existing files and folders are removed from a folder
+
+Perform processing of newly detected files and folders
+
+Initiate any automated task when a new file or folder is detected
+
+Adjust or reset the view properties of a folder’s window when it’s opened, closed, or resized
+
+Write a Folder Action Script
+
+The event handlers supported by folder actions are defined in the Standard Additions scripting addition that comes with OS X. They are:
+
+Folder event
+
+Event handler
+
+Parameters
+
+Items—files or folders—are added to the folder
+
+adding folder items to
+
+Direct parameter—The connected folder.
+after receiving
+—A list of items added to the folder.
+
+Items are removed from the folder
+
+removing folder items from
+
+Direct parameter—The connected folder.
+after losing
+—A list of items removed from the folder. For items that were deleted, names of the removed items are provided.
+
+The folder is opened in a new Finder window
+
+opening folder
+
+Direct parameter—The connected folder.
+
+The window of a folder is closed
+
+closing folder window for
+
+Direct parameter—The connected folder.
+
+The window of a folder is moved
+
+moving folder window for
+
+Direct parameter—The connected folder.
+from
+—The coordinates of the folder’s window before it was moved.
+
+To create a folder action script
+
+Create a Script Editor document.
+
+Add one or more folder action event handlers to the document.
+
+Save the document as a compiled script to one of the following folders:
+
+/Library/Scripts/Folder Action Scripts/
+—The script can be used by any user.
+
+~/Library/Scripts/Folder Action Scripts/
+—The script can be used by the current user only.
+
+The following examples demonstrate how to use different folder action event handlers.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 18-1
+AppleScript: Example of the
+opening folder
+ event handler
+
+on opening folder theAttachedFolder
+
+-- Get the name of the attached folder
+
+tell application "Finder"
+
+set theName to name of theAttachedFolder
+
+-- Display an alert indicating that the folder was opened
+
+activate
+
+display alert "Attention!" message "The folder " & (quoted form of theName) & " was opened."
+
+end tell
+
+end opening folder
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 18-2
+AppleScript: Example of the
+closing folder window for
+ event handler
+
+on closing folder window for theAttachedFolder
+
+-- Get the name of the attached folder
+
+tell application "Finder"
+
+set theName to name of theAttachedFolder
+
+-- Display an alert indicating that the folder was closed
+
+activate
+
+display alert "Attention!" message "The folder " & (quoted form of theName) & " was closed."
+
+end tell
+
+end closing folder window for
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 18-3
+AppleScript: Example of the
+adding folder items to
+ event handler
+
+on adding folder items to theAttachedFolder after receiving theNewItems
+
+-- Get the name of the attached folder
+
+tell application "Finder"
+
+set theName to name of theAttachedFolder
+
+-- Count the new items
+
+set theCount to length of theNewItems
+
+-- Display an alert indicating that the new items were received
+
+activate
+
+display alert "Attention!" message (theCount & " new items were detected in folder " & (quoted form of theName) & "." as string)
+
+-- Loop through the newly detected items
+
+repeat with anItem in theNewItems
+
+-- Process the current item
+
+-- Move the current item to another folder so it's not processed again in the future
+
+end repeat
+
+end tell
+
+end adding folder items to
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 18-4
+AppleScript: Example of the
+removing folder items from
+ event handler
+
+on removing folder items from theAttachedFolder after losing theRemovedItems
+
+-- Get the name of the attached folder
+
+tell application "Finder"
+
+set theName to name of theAttachedFolder
+
+-- Count the removed items
+
+set theCount to length of theRemovedItems
+
+-- Display an alert indicating that items were removed
+
+activate
+
+display alert "Attention!" message (theCount & " items were removed from folder " & (quoted form of theName) & "." as string)
+
+-- Loop through the removed items, performing any additional tasks
+
+repeat with anItem in theRemovedItems
+
+-- Process the current item
+
+end repeat
+
+end tell
+
+end removing folder items from
+
+Attaching a Folder Action Script to a Folder
+
+A folder action script must be connected to a folder in order to use it. This is done with Folder Actions Setup, an app that’s launched from the Finder’s contextual menu.
+
+To attach a folder action script to a folder
+
+Control-click the folder in Finder.
+
+Choose Folder Actions Setup from the contextual menu.
+
+The Folder Actions Setup app launches, the folder is automatically added to the Folders with Actions list, and you’re prompted to select a script.
+3. Choose a script to connect to the folder and click Attach.
+
+4. Make sure the Enable Folder Actions checkbox is selected, as well as the On checkboxes next to the folder.
+
+Once the script and folder are connected, the folder action event handlers in the script should run when the corresponding actions occur.
+
+Note
+
+Folder Actions Setup can also be used to disable or remove folder action scripts and watched folders.
+
+The Folder Actions Setup app itself resides in
+/System/Library/CoreServices/
+.
+
+Watching Folders Using an Idle Loop and a Stay Open Script App
+
+Although folder actions provide efficient folder watching capabilities, some scripters prefer to implement customized folder watching workflows that provide more control over the folder watching process. This is typically done by creating a stay-open script with an
+idle
+ handler that checks a folder at regular intervals for new items to process. Listing 18-5 demonstrates an
+idle
+ handler-based script that watches an Input folder on the Desktop.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 18-5
+AppleScript: Watch a folder for files using an idle loop
+
+on idle
+
+-- Locate the folder to watch
+
+set theFolder to locateAndCreateFolder(path to desktop folder, "Input")
+
+-- Watch the folder
+
+watchFolder(theFolder)
+
+-- Delay 2 minutes before checking the folder again
+
+return 120
+
+end idle
+
+on watchFolder(theFolder)
+
+-- Check for files in the folder
+
+tell application "Finder"
+
+set theFilesToProcess to every file of theFolder
+
+end tell
+
+-- Stop if there are no files to process
+
+if theFilesToProcess = {} then return
+
+-- Locate an output folder
+
+set theOutputFolder to locateAndCreateFolder(path to desktop folder, "Output")
+
+repeat with aFile in theFilesToProcess
+
+-- Process the current file
+
+-- Move the current file to the output folder so it doesn't get processed again
+
+tell application "Finder"
+
+move aFile to theOutputFolder
+
+end tell
+
+end repeat
+
+end watchFolder
+
+-- Locate a folder, creating it if it doesn't exist
+
+on locateAndCreateFolder(theParentFolder, theFolderName)
+
+tell application "Finder"
+
+if ((folder theFolderName of theParentFolder) exists) = false then make new folder at theParentFolder with properties {name:theFolderName}
+
+return (folder theFolderName of theParentFolder) as alias
+
+end tell
+
+end locateAndCreateFolder
+
+Folder Watching Best Practices
+
+Regardless of what method you use for folder watching, follow these best practices to produce an efficient and reliable workflow:
+
+Wait for items to finish writing to disk before processing them.
+
+Move processed items to an output folder so the same items aren’t detected and processed a second time.
+
+Handle errors gracefully, such as by moving problematic items to an error folder so other processing can proceed.
+
+Bring dialogs and alerts to the front so they’re visible and can be addressed.

@@ -1,0 +1,60 @@
+Types of Scripts
+
+There are many different types of scripts on the Mac.
+
+Applets
+—A script that’s been saved as an app. It behaves like other apps. Double-click it to launch and run it. When an applet is launched, any code in its
+run
+ handler executes. If a script doesn’t contain an explicit
+run
+ handler, then the top level of the script is treated as an implicit
+run
+ handler and any code there executes.
+
+Droplets
+—A script applet that has been configured to accept dropped files and folders. Double-click it to launch and run it—execute its
+run
+ handler. Or, drag and drop files and folders onto it to process them. In a droplet, dropped files and folders are passed directly to an AppleScript
+open
+ handler or JavaScript
+openDocuments
+ function for processing.
+
+Scripts
+—A script document file. Double-click it to open it for editing. Some apps and processes can load and run scripts. For example, Mail rules can execute scripts to process messages matching specific criteria. Scripts are sometimes referred to as
+compiled scripts
+.
+
+Script bundles
+—A script document that’s been saved in
+bundle
+ format. A bundle is a directory with a standardized, hierarchical structure that holds executable code and the resources used by that code.
+
+Stay-open scripts
+—By default, applets and droplets run and quit after launch. When configured as stay-open, however, they remain open until explicitly ordered to quit. Often, stay-open scripts include an
+idle
+ handler, which initiates periodic actions.
+
+For detailed information about
+run
+,
+open
+, and
+idle
+ handlers in AppleScript, see
+Handlers in Script Applications
+ in
+AppleScript Language Guide
+. For information about
+run
+,
+openDocuments
+, and
+idle
+ functions in JavaScript, see
+Applets
+ in
+JavaScript for Automation Release Notes
+. For information about bundles, see
+Bundle Programming Guide
+.

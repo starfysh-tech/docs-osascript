@@ -1,0 +1,63 @@
+Add commands using the shortcut menu in Script Editor on Mac
+
+Script Editor lets you insert prewritten routines into your script using the shortcut menu (also known as a
+contextual menu
+). This can reduce the amount of time you spend typing and fixing errors when writing a script.
+
+Open Script Editor for me
+
+In the Script Editor app
+ on your Mac,
+Control-click
+ the script window, then choose a routine from the pop-up menu.
+
+The routine is inserted at the cursor location in the script. If text is selected in the script, the routine is wrapped around the selected text.
+
+Here are some of the routines you can insert into your script.
+
+Routine
+
+Description
+
+Error handlers
+
+Error routines provide information related to any errors encountered when you run the script.
+
+Image manipulation
+
+Image manipulation routines do graphics processing of image files.
+
+Tell blocks
+
+“Tell” blocks direct a series of commands to a particular app or component.
+
+Conditionals
+
+Conditional statements run a series of commands if the correct conditions exist.
+
+Iterate items
+
+Iteration routines process multiple files.
+
+Repeat routines
+
+Repeat routines cause a series of commands to repeat until a condition changes.
+
+String comparison
+
+Lets you consider or ignore specific types of characters when comparing strings.
+
+Action clauses
+
+Action clauses apply special conditions to the execution of a group of statements.
+
+Folder action handlers
+
+Folder actions occur when a change happens to a folder. Use the folder action to automatically run a script.
+
+Dialogs
+
+Dialog routines let you ask the user questions when you run the script.
+
+See also
+Access scripts using the Script menu in Script Editor on Mac

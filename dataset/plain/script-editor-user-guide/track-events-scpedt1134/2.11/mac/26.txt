@@ -1,0 +1,29 @@
+Track events in Script Editor on Mac
+
+Use the Log History to examine script results, and to debug and fine-tune your scripts.
+
+Open Script Editor for me
+
+In the Script Editor app
+ on your Mac, open a script.
+
+Choose Window > Log History.
+
+Arrange the windows so you can see both the script and the Log History.
+
+Click the Run button
+ in the script’s toolbar.
+
+If an item in the list contains other events, click the disclosure triangle next to it to show them.
+
+You can filter the information in the right side of the log by clicking the tabs along the top.
+
+To open the script in a separate window, double-click an item in the Events list or click Show Script in the toolbar.
+
+As the script runs, the events performed by the script are shown in a hierarchy in the Log History. The Events list on the left shows the events and the time they executed when the script ran. Events may be contained within handlers or larger events. The right side of the log history contains information logged while the script ran.
+
+You can modify the settings for the Log History in the History pane of Script Editor settings.
+
+See also
+Set up the Log History in Script Editor on Mac
+View script results in Script Editor on Mac

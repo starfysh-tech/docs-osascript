@@ -1,0 +1,11 @@
+{
+  "collection": "script-editor-user-guide",
+  "path": "view-an-apps-scripting-dictionary-scpedt1126/2.11/mac/26.md",
+  "title": "View an app’s scripting dictionary in Script Editor on Mac",
+  "body": "# View an app’s scripting dictionary in Script Editor on Mac\n\nAn app’s scripting dictionary displays the scripting vocabulary understood by an app or a scripting addition.\n\nTo find out what commands and objects you can use to control an app, use Script Editor to look at that app’s dictionary. The scripting dictionary of an app is organized into different suites. Most scriptable apps contain at least the standard suite. Other apps may have a variety of different suites of objects and commands available. An app’s dictionary may contain multiple languages—for example an app’s dictionary may include both AppleScript and JavaScript for Automation.\n\n[Open Script Editor for me](https://support.apple.com/guide/script-editor/view-an-apps-scripting-dictionary-scpedt1126/2.11/mac/x-help-action:/openApp?bundleId=com.apple.ScriptEditor2)\n\n1. In the Script Editor app ![](https://help.apple.com/assets/67DB7E842551EA97CB00BED5/67DB7E8502C5F38AAF0D7DC6/en_US/2d1774dafc25e40f6f806216d54cdf01.png) on your Mac, choose Window &gt; Library.\n2. Double-click the name of the app in the Library window.\n3. Click the Language pop-up menu, then choose a scripting language.\n4. Select a suite.\n\nIf a scriptable app doesn’t appear in the library, see [Add or remove apps from the scripting dictionary](https://support.apple.com/guide/script-editor/add-remove-apps-scripting-dictionary-scpedt11560/2.11/mac/26).\n\n**See also**[Automate Script Editor tasks in Script Editor on Mac](https://support.apple.com/guide/script-editor/automate-script-editor-tasks-scpedt1125/2.11/mac/26)[AppleScript Language Guide](https://developer.apple.com/library/mac/documentation/AppleScript/Conceptual/AppleScriptLangGuide/index.html)[JavaScript for Automation](https://developer.apple.com/library/prerelease/mac/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/index.html)\n",
+  "binary": false,
+  "source_url": "https://support.apple.com/guide/script-editor/view-an-apps-scripting-dictionary-scpedt1126/2.11/mac/26",
+  "sha256": "7df21f76215f02bf4132be95a74e59432c7197c342c40f0b715eaf7cafa25369",
+  "etag": null,
+  "last_modified": null
+}

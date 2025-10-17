@@ -1,0 +1,25 @@
+Record actions in Script Editor on Mac
+
+Some apps are both scriptable and recordable. You can use Script Editor to record your actions in these apps as you perform them, and include those actions in a script.
+
+Once you record your script, you can edit it to remove unnecessary steps, adjust the playback speed, or adjust the timing of an action.
+
+Before you begin recording, you should decide where you want to start recording actions, then set up that environment on your computer. For example, if you expect that an app would be open when the script is used, then you should open the app before you begin recording.
+
+Open Script Editor for me
+
+In the Script Editor app
+ on your Mac, click the Record button
+ in the toolbar.
+
+Perform the actions you want to record in the recordable app.
+
+To stop recording, click the Stop button
+.
+
+You need to place the recorded script inside a tell statement to direct the script to the app. For more information about tell statements, see the
+AppleScript Language Guide
+.
+
+See also
+Edit scripts with Script Editor on Mac

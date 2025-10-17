@@ -1,0 +1,11 @@
+{
+  "collection": "script-editor-user-guide",
+  "path": "track-events-scpedt1134/2.11/mac/26.md",
+  "title": "Track events in Script Editor on Mac",
+  "body": "# Track events in Script Editor on Mac\n\nUse the Log History to examine script results, and to debug and fine-tune your scripts.\n\n[Open Script Editor for me](https://support.apple.com/guide/script-editor/track-events-scpedt1134/2.11/mac/x-help-action:/openApp?bundleId=com.apple.ScriptEditor2)\n\n1. In the Script Editor app ![](https://help.apple.com/assets/67DB7E842551EA97CB00BED5/67DB7E8502C5F38AAF0D7DC6/en_US/2d1774dafc25e40f6f806216d54cdf01.png) on your Mac, open a script.\n2. Choose Window &gt; Log History.\n3. Arrange the windows so you can see both the script and the Log History.\n4. Click the Run button ![](https://help.apple.com/assets/67DB7E842551EA97CB00BED5/67DB7E8502C5F38AAF0D7DC6/en_US/e9ffcb4f537ce302ed135ada1e688f6e.png) in the script’s toolbar.\n\n   * If an item in the list contains other events, click the disclosure triangle next to it to show them.\n   * You can filter the information in the right side of the log by clicking the tabs along the top.\n   * To open the script in a separate window, double-click an item in the Events list or click Show Script in the toolbar.\n\n   As the script runs, the events performed by the script are shown in a hierarchy in the Log History. The Events list on the left shows the events and the time they executed when the script ran. Events may be contained within handlers or larger events. The right side of the log history contains information logged while the script ran.\n\nYou can modify the settings for the Log History in the History pane of Script Editor settings.\n\n**See also**[Set up the Log History in Script Editor on Mac](https://support.apple.com/guide/script-editor/set-up-the-log-history-scpedt1137/2.11/mac/26)[View script results in Script Editor on Mac](https://support.apple.com/guide/script-editor/view-script-results-scpedt1123/2.11/mac/26)\n",
+  "binary": false,
+  "source_url": "https://support.apple.com/guide/script-editor/track-events-scpedt1134/2.11/mac/26",
+  "sha256": "7576dc90c0959d4c280e85c0f5fa2d22ad8bf10c17761b952cea79c2d79e0514",
+  "etag": null,
+  "last_modified": null
+}

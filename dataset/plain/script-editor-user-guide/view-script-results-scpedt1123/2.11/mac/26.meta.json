@@ -1,0 +1,11 @@
+{
+  "collection": "script-editor-user-guide",
+  "path": "view-script-results-scpedt1123/2.11/mac/26.md",
+  "title": "View script results in Script Editor on Mac",
+  "body": "# View script results in Script Editor on Mac\n\nAfter you compile your script, you can track the values it returns in the Log History. This is useful when analyzing or debugging, allowing you to observe what changes are occurring to the values used by the script.\n\n[Open Script Editor for me](https://support.apple.com/guide/script-editor/view-script-results-scpedt1123/2.11/mac/x-help-action:/openApp?bundleId=com.apple.ScriptEditor2)\n\n* In the Script Editor app ![](https://help.apple.com/assets/67DB7E842551EA97CB00BED5/67DB7E8502C5F38AAF0D7DC6/en_US/2d1774dafc25e40f6f806216d54cdf01.png) on your Mac, choose Window &gt; Log History, then click Result.\n\nWhen you run a script in Script Editor, and a value is loaded into a variable, the value appears in the log.\n\n**See also**[Set up the Log History in Script Editor on Mac](https://support.apple.com/guide/script-editor/set-up-the-log-history-scpedt1137/2.11/mac/26)\n",
+  "binary": false,
+  "source_url": "https://support.apple.com/guide/script-editor/view-script-results-scpedt1123/2.11/mac/26",
+  "sha256": "1cbe5695388a6cb98e65c843b2989838d91bdb1bc7b293ac8731bff2f38b6b4d",
+  "etag": null,
+  "last_modified": null
+}

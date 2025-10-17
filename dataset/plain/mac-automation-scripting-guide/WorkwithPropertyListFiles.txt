@@ -1,0 +1,163 @@
+Working with Property List Files
+
+Many apps store settings in property list files (also called plists). Scripts can also store and retrieve data in plists. The terminology for interacting with plists is found in the Property List Suite of the System Events scripting dictionary (see Figure 35-1).
+
+Figure 35-1
+Property list terminology in the System Events scripting dictionary
+
+Creating a New Property List File
+
+Listing 35-1 demonstrates how to create a new property list file. First, an empty plist file (class
+property list file
+) is created. Next, individual property list items (class
+property list item
+) of varying type (Boolean, date, list, number, record, string) are added to the file.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 35-1
+AppleScript: Creating a property list file
+
+tell application "System Events"
+
+-- Create an empty property list dictionary item
+
+set theParentDictionary to make new property list item with properties {kind:record}
+
+-- Create a new property list file using the empty dictionary list item as contents
+
+set thePropertyListFilePath to "~/Desktop/Example.plist"
+
+set thePropertyListFile to make new property list file with properties {contents:theParentDictionary, name:thePropertyListFilePath}
+
+-- Add a Boolean key
+
+tell property list items of thePropertyListFile
+
+make new property list item at end with properties {kind:boolean, name:"booleanKey", value:true}
+
+-- Add a date key
+
+make new property list item at end with properties {kind:date, name:"dateKey", value:current date}
+
+-- Add a list key
+
+make new property list item at end with properties {kind:list, name:"listKey"}
+
+-- Add a number key
+
+make new property list item at end with properties {kind:number, name:"numberKey", value:5}
+
+-- Add a record/dictionary key
+
+make new property list item at end with properties {kind:record, name:"recordKey"}
+
+-- Add a string key
+
+make new property list item at end with properties {kind:string, name:"stringKey", value:"string value"}
+
+end tell
+
+end tell
+
+Listing 35-2 shows the contents of a property list file created by the script in Listing 35-1.
+
+Listing 35-2
+Example XML for a property list file created by a script
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+
+&lt;plist version="1.0"&gt;
+
+&lt;dict&gt;
+
+&lt;key&gt;booleanKey&lt;/key&gt;
+
+&lt;true/&gt;
+
+&lt;key&gt;dateKey&lt;/key&gt;
+
+&lt;date&gt;2016-01-28T19:34:13Z&lt;/date&gt;
+
+&lt;key&gt;listKey&lt;/key&gt;
+
+&lt;array/&gt;
+
+&lt;key&gt;numberKey&lt;/key&gt;
+
+&lt;integer&gt;5&lt;/integer&gt;
+
+&lt;key&gt;recordKey&lt;/key&gt;
+
+&lt;dict/&gt;
+
+&lt;key&gt;stringKey&lt;/key&gt;
+
+&lt;string&gt;string value&lt;/string&gt;
+
+&lt;/dict&gt;
+
+&lt;/plist&gt;
+
+Reading a Property List Key Value
+
+Listing 35-3 shows how to read a value of a key in a property list file.
+
+Open in Script Editor
+
+Listing 35-3
+AppleScript: Reading a key value in a property list file
+
+tell application "System Events"
+
+tell property list file thePropertyListFilePath
+
+return value of property list item "stringKey"
+
+end tell
+
+end tell
+
+--&gt; Result: "string value"
+
+Changing a Property List Key Value
+
+Listing 35-4 shows how to change the value of a key in a property list file.
+
+Open in Script Editor
+
+Listing 35-4
+AppleScript: Changing the value of a key in a property list file
+
+tell application "System Events"
+
+tell property list file thePropertyListFilePath
+
+set value of property list item "stringKey" to "new string value"
+
+end tell
+
+end tell
+
+Adding a New Property List Item
+
+Listing 35-3 shows how to add a new key and value to a property list file.
+
+Open in Script Editor
+
+Listing 35-5
+AppleScript: Adding a new key and value to a property list file
+
+tell application "System Events"
+
+tell property list items of property list file thePropertyListFilePath
+
+make new property list item at end with properties {kind:string, name:"newStringKey", value:"new string value"}
+
+end tell
+
+end tell

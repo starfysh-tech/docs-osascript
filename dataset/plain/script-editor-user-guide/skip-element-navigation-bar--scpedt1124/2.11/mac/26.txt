@@ -1,0 +1,15 @@
+Skip forward to an element using the navigation bar in Script Editor on Mac
+
+Use the navigation bar at the top of the Script Editor window to find useful elements in a script, such as routines, properties, and global variables.
+
+The Script Navigation pop-up menu contains a list of the script elements in the script.
+
+Open Script Editor for me
+
+In the Script Editor app
+ on your Mac, choose View > Show Navigation Bar if the navigation bar is not visible.
+
+Click the Script Navigation pop-up menu, then choose an element.
+
+See also
+Find text in a script using Script Editor on Mac

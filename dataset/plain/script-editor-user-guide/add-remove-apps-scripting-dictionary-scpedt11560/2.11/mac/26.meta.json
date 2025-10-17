@@ -1,0 +1,11 @@
+{
+  "collection": "script-editor-user-guide",
+  "path": "add-remove-apps-scripting-dictionary-scpedt11560/2.11/mac/26.md",
+  "title": "Add or remove apps from the scripting dictionary in Script Editor on Mac",
+  "body": "# Add or remove apps from the scripting dictionary in Script Editor on Mac\n\nOpen an app’s AppleScript dictionary by choosing the app from the Script Editor library.\n\n[Open Script Editor for me](https://support.apple.com/guide/script-editor/add-remove-apps-scripting-dictionary-scpedt11560/2.11/mac/x-help-action:/openApp?bundleId=com.apple.ScriptEditor2)\n\n1. In the Script Editor app ![](https://help.apple.com/assets/67DB7E842551EA97CB00BED5/67DB7E8502C5F38AAF0D7DC6/en_US/2d1774dafc25e40f6f806216d54cdf01.png) on your Mac, choose Window &gt; Library.\n2. Do any of the following:\n\n   * *Add an app to the library:* Click the Add button ![](https://help.apple.com/assets/67DB7E842551EA97CB00BED5/67DB7E8502C5F38AAF0D7DC6/en_US/a2ef32e34a5573d192b10d340a4f46b1.png) in the toolbar, choose the app, then click Open.\n   * *Delete an app from the library:*  Select the app, then click the Remove button ![](https://help.apple.com/assets/67DB7E842551EA97CB00BED5/67DB7E8502C5F38AAF0D7DC6/en_US/e9a8ab65e535ed110ae953650c55ee0c.png) in the toolbar.\n\n**See also**[View an app’s scripting dictionary in Script Editor on Mac](https://support.apple.com/guide/script-editor/view-an-apps-scripting-dictionary-scpedt1126/2.11/mac/26)\n",
+  "binary": false,
+  "source_url": "https://support.apple.com/guide/script-editor/add-remove-apps-scripting-dictionary-scpedt11560/2.11/mac/26",
+  "sha256": "466b46d8673364d4c5d99688fa9213595359c7f02751cf5ab2f927e981027778",
+  "etag": null,
+  "last_modified": null
+}

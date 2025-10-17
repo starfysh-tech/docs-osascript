@@ -1,0 +1,23 @@
+Change Script Editor settings on Mac
+
+Script Editor uses fonts and colors in the text to indicate different language components and hierarchy.
+
+Use the Formatting pane of Script Editor settings to change the font, color, and typeface of scripts in Script Editor and in the Xcode development environment.
+
+Open Script Editor for me
+
+In the Script Editor app
+ on your Mac, choose Script Editor > Settings, then click Formatting.
+
+Click the Language pop-up menu, then choose a scripting language.
+
+To change the font of a category item, double-click the font name in the Font column, then select the collection, typeface, style, and size in the Fonts window.
+
+To change the color of a font category item, double-click a color swatch in the Color column, then select the color you want.
+
+Click Apply.
+
+If scripts are open in Script Editor when you change the settings, the new formatting appears after the scripts are recompiled.
+
+See also
+Choose a script language in Script Editor on Mac

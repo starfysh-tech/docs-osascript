@@ -1,0 +1,11 @@
+{
+  "collection": "mac-automation-scripting-guide",
+  "path": "RevisionHistory.md",
+  "title": "Document Revision History",
+  "body": "<a id=\"//apple_ref/doc/uid/TP40016239-CH99\"></a><a id=\"//apple_ref/doc/uid/TP40016239-CH99-SW1\"></a>\n\n## Document Revision History\n\nThis table describes the changes to *Mac Automation Scripting Guide*.\n\n| Date | Notes |\n| --- | --- |\n| 2018-06-07 | New document that provides an introduction to using AppleScript and JavaScript to streamline workflows and increase productivity in OS X. |\n",
+  "binary": false,
+  "source_url": "https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/RevisionHistory.html",
+  "sha256": "cd6be19114cd32fd4552d9642f4195328666672a0fbd5f003da3107f00079f11",
+  "etag": null,
+  "last_modified": null
+}

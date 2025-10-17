@@ -1,0 +1,201 @@
+Prompting for a File Name
+
+Use the Standard Additions scripting addition’s
+choose file name
+ command to display a save dialog that lets the user enter a file name and choose an output folder, such as the one produced by Listing 27-1 and Listing 27-2, shown in Figure 27-1.
+
+Figure 27-1
+Prompting for a file name
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 27-1
+AppleScript: Prompting for a file name
+
+set theNewFilePath to choose file name with prompt "Save the document as:"
+
+--&gt; Result: file "Macintosh HD:Users:yourUserName:Desktop:ImportantDocument"
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 27-2
+JavaScript: Prompting for a file name
+
+var app = Application.currentApplication()
+
+app.includeStandardAdditions = true
+
+var newFilePath = app.chooseFileName({
+
+withPrompt: "Save the document as:"
+
+})
+
+newFilePath
+
+// Result: Path("/Users/yourUserName/Desktop/ImportantDocument")
+
+If the specified file name already exists in the output folder when the user clicks the Save button, the user is prompted to replace it, as shown in Figure 27-2.
+
+Figure 27-2
+Prompting to replace an existing file
+
+The result of the
+choose file name
+ command is a path to a potential file. This file may or may not already exist. However, if it does exist, you can assume the user wants to replace it. Your script can now safely write or save a file to the path.
+
+Listing 27-3 and Listing 27-4 ask the user to type some text as a note and choose an file name and output folder, and then save the note in the specified file.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 27-3
+AppleScript: Saving content in a specified file
+
+set theResponse to display dialog "Enter a note:" default answer ""
+
+set theNote to text returned of theResponse
+
+set theNewFilePath to choose file name with prompt "Save the document as:"
+
+writeTextToFile(theNote, theNewFilePath, true)
+
+on writeTextToFile(theText, theFile, overwriteExistingContent)
+
+try
+
+-- Convert file to a string
+
+set theFile to theFile as string
+
+-- Open file for writing
+
+set theOpenedFile to open for access file theFile with write permission
+
+-- Clear file if content should be overwritten
+
+if overwriteExistingContent is true then set eof of theOpenedFile to 0
+
+-- Write new content to file
+
+write theText to theOpenedFile starting at eof
+
+-- Close file
+
+close access theOpenedFile
+
+-- Return a boolean indicating that writing was successful
+
+return true
+
+-- Handle a write error
+
+on error
+
+-- Close file
+
+try
+
+close access file theFile
+
+end try
+
+-- Return a boolean indicating that writing failed
+
+return false
+
+end try
+
+end writeTextToFile
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 27-4
+JavaScript: Saving content in a specified file
+
+var app = Application.currentApplication()
+
+app.includeStandardAdditions = true
+
+var response = app.displayDialog("Enter a note:", {
+
+defaultAnswer: ""
+
+})
+
+var note = response.textReturned
+
+var newFilePath = app.chooseFileName({
+
+withPrompt: "Save document as:"
+
+})
+
+writeTextToFile(note, newFilePath, true)
+
+function writeTextToFile(text, file, overwriteExistingContent) {
+
+try {
+
+// Convert file to a string
+
+var fileString = file.toString()
+
+// Open file for writing
+
+var openedFile = app.openForAccess(Path(fileString), { writePermission: true })
+
+// Clear file if content should be overwritten
+
+if (overwriteExistingContent) {
+
+app.setEof(openedFile, { to: 0 })
+
+}
+
+// Write new content to file
+
+app.write(text, { to: openedFile, startingAt: app.getEof(openedFile) })
+
+// Close file
+
+app.closeAccess(openedFile)
+
+// Return a boolean indicating that writing was successful
+
+return true
+
+}
+
+catch (error) {
+
+try {
+
+// Close file
+
+app.closeAccess(file)
+
+}
+
+catch(error) {
+
+// Report error is closing failed
+
+console.log(`Couldn't close file: ${error}`)
+
+}
+
+// Return a boolean indicating that writing was successful
+
+return false
+
+}
+
+}

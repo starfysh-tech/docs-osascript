@@ -1,0 +1,1544 @@
+Manipulating Lists of Items
+
+In scripting, a list—typically referred to as an array in JavaScript—is a an ordered collection of values that’s stored in a single object. A script can loop through the items of a list in order to process the items individually. There are many other tasks scripts commonly performed with lists, such as joining and sorting, which usually require custom scripting.
+
+Note
+
+For general information about working with lists in AppleScript, see the
+list
+ class reference documentation in
+AppleScript Language Guide
+.
+
+In JavaScript, the
+Array
+ object provides a range of processing functions. Information about this object can be found
+here
+.
+
+Looping through a List
+
+Listing 21-1 and Listing 21-2 show how to incrementally loop through a list. In these examples, a variable—
+a
+ in AppleScript and
+i
+ in JavaScript—represents an integer value from
+1
+ through the number of items in the list. Each loop causes this variable value to increase, and you can use the increment variable to target a specific list item.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-1
+AppleScript: Incrementally looping through items in a list
+
+set theList to {"Sal", "Ben", "David", "Chris"}
+
+repeat with a from 1 to length of theList
+
+set theCurrentListItem to item a of theList
+
+-- Process the current list item
+
+display dialog theCurrentListItem & " is item " & a & " in the list."
+
+end repeat
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-2
+JavaScript: Incrementally looping through items in an array
+
+var app = Application.currentApplication()
+
+app.includeStandardAdditions = true
+
+var array = ["Sal", "Ben", "David", "Chris"]
+
+var arrayLength = array.length
+
+for (var i = 0; i &lt; arrayLength; i++) {
+
+var currentArrayItem = array[i]
+
+// Process the current array item
+
+app.displayDialog(`${currentArrayItem} is item ${i + 1} in the array.`)
+
+}
+
+A script can also loop through a list of items more directly by dynamically assigning a list item to a variable. In Listing 21-3 and Listing 21-4, a variable—
+theCurrentListItem
+ in AppleScript and
+currentArrayItem
+ in JavaScript—represents the item matching the current loop.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-3
+AppleScript: Directly looping through items in a list
+
+set theList to {"Sal", "Ben", "David", "Chris"}
+
+repeat with theCurrentListItem in theList
+
+-- Process the current list item
+
+display dialog theCurrentListItem & " is an item in the list."
+
+end repeat
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-4
+JavaScript: Directly looping through items in an array
+
+var app = Application.currentApplication()
+
+app.includeStandardAdditions = true
+
+var array = ["Sal", "Ben", "David", "Chris"]
+
+var arrayLength = array.length
+
+for (var currentArrayItem of array) {
+
+// Process the current array item
+
+app.displayDialog(`${currentArrayItem} is an item in the array.`)
+
+}
+
+Note
+
+For more information about looping through list items in AppleScript, see
+Control Statements Reference
+ in
+AppleScript Language Guide
+.
+
+Converting a List to a String
+
+The handler in Listing 21-5 joins a list of strings together in AppleScript, separating them by a specific delimiter.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-5
+AppleScript: Handler that converts a list of strings into a single string
+
+on convertListToString(theList, theDelimiter)
+
+set AppleScript's text item delimiters to theDelimiter
+
+set theString to theList as string
+
+set AppleScript's text item delimiters to ""
+
+return theString
+
+end convertListToString
+
+Listing 21-6 shows how to call the handler in Listing 21-5.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-6
+AppleScript: Calling a handler to convert a list of strings into a single string
+
+set theList to {"The", "quick", "brown", "fox", "jumps", "over", "a", "lazy", "dog."}
+
+convertListToString(theList, space)
+
+--&gt; Result: "The quick brown fox jumps over a lazy dog."
+
+In JavaScript, custom scripting isn’t required to perform this operation. The
+Array
+ object has a
+join()
+ method, which can be called to merge a list of items together, as shown in Listing 21-7.
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-7
+JavaScript: Calling a function to convert an array of strings into a single string
+
+var array = ["The", "quick", "brown", "fox", "jumps", "over", "a", "lazy", "dog."]
+
+var array.join(" ")
+
+// Result: "The quick brown fox jumps over a lazy dog."
+
+Note
+
+See
+Splitting Text
+ to learn how to break text apart, based on a specific delimiter.
+
+When you use AppleScriptObjC or JavaScriptObjC, you can use methods of the
+NSArray
+ class to convert a list of strings into a single string. The handlers in Listing 21-8 and Listing 21-9 demonstrate how to do this.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-8
+AppleScriptObjC: Handler that converts a list of strings into a single string
+
+on convertListToString(theList, theDelimiter)
+
+set theArray to arrayWithArray_(theList) of NSArray of current application
+
+set theString to componentsJoinedByString_(theDelimiter) of theArray
+
+return (theString as string)
+
+end convertListToString
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-9
+JavaScriptObjC: Function that converts an array of strings into a single string
+
+function convertArrayToString(array, delimiter) {
+
+array = $(array)
+
+array = array.componentsJoinedByString(delimiter)
+
+return array.js
+
+}
+
+Counting the Items in a List
+
+Listing 21-10 and Listing 21-11 show how to get the number of items in a list.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-10
+AppleScript: Get the count of the items in a list
+
+set theList to {"Apple Watch", "iMac", "iPhone", "MacBook Pro"}
+
+length of theList
+
+--&gt; Result: 4
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-11
+JavaScript: Get the count of the items in an array
+
+var array = ["Apple Watch", "iMac", "iPhone", "MacBook Pro"]
+
+array.length
+
+// Result: 4
+
+Counting the Occurrences of an Item in a List
+
+The handlers in Listing 21-12 and Listing 21-13 count how many times an item appears in a list.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-12
+AppleScript: Handler that counts the number of times an item appears in a list
+
+on countInstancesOfItemInList(theList, theItem)
+
+set theCount to 0
+
+repeat with a from 1 to count of theList
+
+if item a of theList is theItem then
+
+set theCount to theCount + 1
+
+end if
+
+end repeat
+
+return theCount
+
+end countInstancesOfItemInList
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-13
+JavaScript: Function that counts the number of times an item appears in an array
+
+function countInstancesOfItemInArray(array, item) {
+
+var count = 0
+
+for (var element of array) {
+
+if (element === item) {
+
+count++
+
+}
+
+}
+
+return count
+
+}
+
+Listing 21-14 and Listing 21-15 show how to call the handlers in Listing 21-12 and Listing 21-13.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-14
+AppleScript: Calling a handler to count the number of times an item appears in a list
+
+set theList to {"Sal", "Jen", "Ben", "David", "Chris", "Jen"}
+
+countInstancesOfItemInList(theList, "Jen")
+
+--&gt; Result: 2
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-15
+JavaScript: Calling a function to count the number of times an item appears in an array
+
+var array = ["Sal", "Jen", "Ben", "David", "Chris", "Jen"]
+
+countInstancesOfItemInArray(array, "Jen")
+
+// Result: 2
+
+Determining if a List Contains a Specific Item
+
+Listing 21-16 and Listing 21-17 return a
+true
+ or
+false
+ value, indicating the presence of an item in a list.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-16
+AppleScript: Check for the existence of an item in a list
+
+set theList to {"Sal", "Ben", "David", "Chris"}
+
+theList contains "Lizzie"
+
+--&gt; false
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-17
+JavaScript: Check for the existence of an item in an array
+
+var array = ["Sal", "Ben", "David", "Chris"]
+
+array.includes("Lizzie")
+
+// Result: false
+
+Listing 21-18 and Listing 21-19 demonstrate how to add an item to a list only if the list doesn’t already contain the item.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-18
+AppleScript: Add an item to a list only if the list doesn’t contain the item
+
+set theList to {"Sal", "Ben", "David", "Chris"}
+
+if theList does not contain "Jen" then
+
+set end of theList to "Jen"
+
+end if
+
+return theList
+
+--&gt; Result: {"Sal", "Ben", "David", "Chris", "Jen"}
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-19
+JavaScript: Add an item to an array only if the array doesn’t contain the item
+
+var array = ["Sal", "Ben", "David", "Chris"]
+
+if (!array.includes("Jen")) {
+
+array.push("Jen")
+
+}
+
+array
+
+// Result: ["Sal", "Ben", "David", "Chris", "Jen"]
+
+Determining the Position of an Item in a List
+
+The handler in Listing 21-20 determines the position of an item the first time it appears in a list.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-20
+AppleScript: Handler that determines the position of an item in a list
+
+on getPositionOfItemInList(theItem, theList)
+
+repeat with a from 1 to count of theList
+
+if item a of theList is theItem then return a
+
+end repeat
+
+return 0
+
+end getPositionOfItemInList
+
+Listing 21-21 shows how to call the handler in Listing 21-20. In AppleScript, list item positions start at
+1
+—the first item in a list has a position of
+1
+.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-21
+AppleScript: Calling a handler to determine the position of an item in a list
+
+set theList to {"Sal", "Ben", "David", "Chris", "Jen", "Lizzie", "Maddie", "Lillie"}
+
+getPositionOfItemInList("Maddie", theList)
+
+--&gt; Result: 7
+
+In JavaScript, the
+indexOf()
+ method of the
+Array
+ object can be called to determine the position of an item in an array, as shown in Listing 21-22. In JavaScript, array item positions start at
+0
+—the first item in an array has an index of
+0
+.
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-22
+JavaScript: Determine the position of an item in an array
+
+var array = ["Sal", "Ben", "David", "Chris", "Jen", "Lizzie", "Maddie", "Lillie]
+
+array.indexOf("Maddie")
+
+// Result: 6
+
+The
+getPositionOfItemInList()
+ AppleScript handler and
+indexOf()
+ JavaScript method can be used to cross-reference data between corresponding lists. In Listing 21-23 and Listing 21-24, a person is located in a list by name. Next, the person’s phone extension is located in a corresponding list.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-23
+AppleScript: Using cross-referencing to locate an item in a list based on the position of an item in another list
+
+set theNames to {"Sal", "Ben", "David", "Chris", "Jen", "Lizzie", "Maddie", "Lillie"}
+
+set theExtensions to {"x1111", "x2222", "x3333", "x4444", "x5555", "x6666", "x7777", "x8888"}}
+
+set thePerson to choose from list theNames with prompt "Choose a person:"
+
+if thePerson is false then error number -128
+
+set theExtension to item (getPositionOfItemInList((thePerson as string), theNames)) of theExtensions
+
+display dialog "The phone extension for " & thePerson & " is " & theExtension & "."
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-24
+JavaScript: Using cross-referencing to locate an item in an array based on the position of an item in another array
+
+var app = Application.currentApplication()
+
+app.includeStandardAdditions = true
+
+var names = ["Sal", "Ben", "David", "Chris", "Jen", "Lizzie", "Maddie", "Lillie"]
+
+var extensions = ["x1111", "x2222", "x3333", "x4444", "x5555", "x6666", "x7777", "x8888"]
+
+var people = app.chooseFromList(names, {withPrompt: "Choose a person:"})
+
+if (!people) {
+
+throw new Error(-128)
+
+}
+
+var person = people[0]
+
+var index = names.indexOf(person)
+
+console.log(index)
+
+var extension = extensions[index]
+
+app.displayDialog(`The phone extension for ${person} is ${extension}.`)
+
+Determining Multiple Positions of an Item in a List
+
+The handlers in Listing 21-25 and Listing 21-26 determine every position of an item in a list.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-25
+AppleScript: Handler that determines every position of an item in a list
+
+on getPositionsOfItemInList(theItem, theList, listFirstPositionOnly)
+
+set thePositions to {}
+
+repeat with a from 1 to length of theList
+
+if item a of theList is theItem then
+
+if listFirstPositionOnly = true then return a
+
+set end of thePositions to a
+
+end if
+
+end repeat
+
+if listFirstPositionOnly is true and thePositions = {} then return 0
+
+return thePositions
+
+end getPositionsOfItemInList
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-26
+JavaScript: Function that determines every position of an item in an array
+
+function getPositionsOfItemInArray(item, array, firstPositionOnly) {
+
+if (firstPositionOnly) {
+
+return array.indexOf(item)
+
+}
+
+var indexes = []
+
+for (var index = 0; index &lt; array.length; index++) {
+
+var element = array[index]
+
+if (element === item) {
+
+indexes.push(index)
+
+}
+
+}
+
+return indexes
+
+}
+
+Listing 21-27 and Listing 21-28 show how to call the handlers in Listing 21-25 and Listing 21-26.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-27
+AppleScript: Calling a handler to determine every position of an item in a list
+
+set theList to {"Sal", "Ben", "Jen", "David", "Chris", "Lizzie", "Maddie", "Jen", "Lillie"}
+
+getPositionsOfItemInList("Jen", theList, false)
+
+--&gt; Result: {3, 8}
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-28
+JavaScript: Calling a function to determine every position of an item in an array
+
+var array = ["Sal", "Ben", "Jen", "David", "Chris", "Lizzie", "Maddie", "Jen", "Lillie"]
+
+getPositionsOfItemInArray("Jen", array, false)
+
+// Result: [2, 7]
+
+Finding the Highest Numeric Value in a List
+
+The handlers in Listing 21-29 and Listing 21-30 determine the highest numeric value in a list of items. The passed list can contain non-numeric data as well as lists within lists.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-29
+AppleScript: Handler that determines the highest numeric value in a list of items
+
+on getHighestNumberInList(theList)
+
+set theHighestNumber to false
+
+repeat with a from 1 to count of theList
+
+set theCurrentItem to item a of theList
+
+set theClass to class of theCurrentItem
+
+if theClass is in {integer, real} then
+
+if theHighestNumber is "" then
+
+set theHighestNumber to theCurrentItem
+
+else if theCurrentItem is greater than theHighestNumber then
+
+set theHighestNumber to item a of theList
+
+end if
+
+else if theClass is list then
+
+set theHighValue to getHighestNumberInList(theCurrentItem)
+
+if theHighValue is greater than theHighestNumber then
+
+set theHighestNumber to theHighValue
+
+end if
+
+end if
+
+end repeat
+
+return theHighestNumber
+
+end getHighestNumberInList
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-30
+JavaScript: Function that determines the highest numeric value in a list of items
+
+function getHighestNumberInList(list) {
+
+var highestNumber = undefined
+
+for (var item of list) {
+
+var number = undefined
+
+if (item.constructor === Number) {
+
+number = item
+
+}
+
+else if (item.constructor === Array) {
+
+number = getHighestNumberInList(item)
+
+}
+
+if (number != undefined && (highestNumber === undefined || number &gt; highestNumber)) {
+
+highestNumber = number
+
+}
+
+}
+
+return highestNumber
+
+}
+
+Listing 21-31 and Listing 21-32 show how to call the handlers in Listing 21-29 and Listing 21-30 for a list containing a mixture of numbers and strings.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-31
+AppleScript: Calling a handler to determine the highest numeric value in a list of numbers and strings
+
+getHighestNumberInList({-3.25, 23, 2345, "sid", 3, 67})
+
+--&gt; Result: 2345
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-32
+JavaScript: Calling a function to determine the highest numeric value in a list of numbers and strings
+
+getHighestNumberInList([-3.25, 23, 2345, "sid", 3, 67])
+
+// Result: 2345
+
+Listing 21-33 and Listing 21-34 show how to call the handlers in Listing 21-29 and Listing 21-30 for a list containing a mixture of numbers, strings, booleans, and lists.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-33
+AppleScript: Calling a handler to determine the highest numeric value in a list of different value types
+
+getHighestNumberInList({-3.25, 23, {23, 78695, "bob"}, 2345, true, "sid", 3, 67})
+
+--&gt; Result: 78695
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-34
+JavaScript: Calling a function to determine the highest numeric value in a list of different value types
+
+getHighestNumberInList([-3.25, 23, [23, 78695, "bob"], 2345, true, "sid", 3, 67])
+
+// Result: 78695
+
+Listing 21-35 and Listing 21-36 show how to call the handlers in Listing 21-29 and Listing 21-30 for a list containing only strings.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-35
+AppleScript: Calling a handler to determine the highest numeric value in a list of strings
+
+getHighestNumberInList({"this", "list", "contains", "only", "text"})
+
+--&gt; Result: false
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-36
+JavaScript: Calling a function to determine the highest numeric value in a list of strings
+
+getHighestNumberInList(["this", "list", "contains", "only", "text"])
+
+// Result: undefined
+
+Finding the Lowest Numeric Value in a List
+
+The handlers in Listing 21-37 and Listing 21-38 determines the lowest numeric value in a list of items. The passed list can contain non-numeric data as well as lists within lists.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-37
+AppleScript: Handler that determines the lowest numeric value in a list of items
+
+on getLowestNumberInList(theList)
+
+set theLowestNumber to false
+
+repeat with a from 1 to count of theList
+
+set theCurrentItem to item a of theList
+
+set theClass to class of theCurrentItem
+
+if theClass is in {integer, real} then
+
+if theLowestNumber is "" then
+
+set theLowestNumber to theCurrentItem
+
+else if theCurrentItem is less than theLowestNumber then
+
+set theLowestNumber to item a of theList
+
+end if
+
+else if theClass is list then
+
+set theLowValue to getLowestNumberInList(theCurrentItem)
+
+if theLowValue is less than theLowestNumber then
+
+set theLowestNumber to theLowValue
+
+end if
+
+end if
+
+end repeat
+
+return theLowestNumber
+
+end getLowestNumberInList
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-38
+JavaScript: Function that determines the lowest numeric value in a list of items
+
+function getLowestNumberInList(list) {
+
+var lowestNumber = undefined
+
+for (var item of list) {
+
+var number = undefined
+
+if (item.constructor === Number) {
+
+number = item
+
+}
+
+else if (item.constructor === Array) {
+
+number = getLowestNumberInList(item)
+
+}
+
+if (number != undefined && (lowestNumber === undefined || number &lt; lowestNumber)) {
+
+lowestNumber = number
+
+}
+
+}
+
+return lowestNumber
+
+}
+
+Listing 21-39 and Listing 21-40 show how to call the handlers in Listing 21-37 and Listing 21-38 for a list containing a mixture of numbers and strings.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-39
+AppleScript: Calling a handler to determine the lowest numeric value in a list of numbers and strings
+
+getLowestNumberInList({-3.25, 23, 2345, "sid", 3, 67})
+
+--&gt; Result: -3.25
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-40
+JavaScript: Calling a function to determine the lowest numeric value in a list of strings
+
+getLowestNumberInList([-3.25, 23, 2345, "sid", 3, 67])
+
+// Result: -3.25
+
+Listing 21-41 and Listing 21-42 show how to call the handlers in Listing 21-37 and Listing 21-38 for a list containing a mixture of numbers, strings, booleans, and lists.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-41
+AppleScript: Calling a handler to determine the lowest numeric value in a list of different value types
+
+getLowestNumberInList({-3.25, 23, {-22, 78695, "Sal"}, 2345, true, "sid", 3, 67})
+
+--&gt; Result: -22
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-42
+JavaScript: Calling a function to determine the lowest numeric value in a list of different value types
+
+getLowestNumberInList([-3.25, 23, [-22, 78695, "bob"], 2345, true, "sid", 3, 67])
+
+// Result: -22
+
+Listing 21-43 and Listing 21-44 show how to call the handlers in Listing 21-37 and Listing 21-38 for a list containing only strings.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-43
+AppleScript: Calling a handler to determine the lowest numeric value in a list of strings
+
+getLowestNumberInList({"this", "list", "contains", "only", "text"})
+
+--&gt; Result: false
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-44
+JavaScript: Calling a function to determine the lowest numeric value in a list of strings
+
+getLowestNumberInList(["this", "list", "contains", "only", "text"])
+
+// Result: undefined
+
+Inserting Items into a List
+
+The handlers in Listing 21-45 and Listing 21-46 insert an item into a list. Provide the item to insert, the list, and the position where the item should be inserted. Note that position can be specified in relation to the end of the list by using a negative number.
+
+Note
+
+In JavaScript, the
+Array
+ class has built-in methods—
+unshift
+ (inserts at the beginning),
+splice
+ (inserts at a specific position), and
+push
+ (inserts at the end)—for inserting items into a list, requiring less custom scripting than is necessary in AppleScript.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-45
+AppleScript: Handler that inserts an item into a list
+
+on insertItemInList(theItem, theList, thePosition)
+
+set theListCount to length of theList
+
+if thePosition is 0 then
+
+return false
+
+else if thePosition is less than 0 then
+
+if (thePosition * -1) is greater than theListCount + 1 then return false
+
+else
+
+if thePosition is greater than theListCount + 1 then return false
+
+end if
+
+if thePosition is less than 0 then
+
+if (thePosition * -1) is theListCount + 1 then
+
+set beginning of theList to theItem
+
+else
+
+set theList to reverse of theList
+
+set thePosition to (thePosition * -1)
+
+if thePosition is 1 then
+
+set beginning of theList to theItem
+
+else if thePosition is (theListCount + 1) then
+
+set end of theList to theItem
+
+else
+
+set theList to (items 1 thru (thePosition - 1) of theList) & theItem & (items thePosition thru -1 of theList)
+
+end if
+
+set theList to reverse of theList
+
+end if
+
+else
+
+if thePosition is 1 then
+
+set beginning of theList to theItem
+
+else if thePosition is (theListCount + 1) then
+
+set end of theList to theItem
+
+else
+
+set theList to (items 1 thru (thePosition - 1) of theList) & theItem & (items thePosition thru -1 of theList)
+
+end if
+
+end if
+
+return theList
+
+end insertItemInList
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-46
+JavaScript: Function that inserts an item into an array
+
+function insertItemInArray(item, array, position) {
+
+var arrayCount = array.length
+
+if (Math.abs(position) &gt; arrayCount) {
+
+return false
+
+}
+
+else if (position === 0) {
+
+array.unshift(item)
+
+}
+
+else if (position &lt; arrayCount) {
+
+array.splice(position, 0, item)
+
+}
+
+else {
+
+array.push(item)
+
+}
+
+return array
+
+}
+
+Listing 21-47 and Listing 21-48 show how to call the handlers in Listing 21-45 and Listing 21-46 to insert a single item into a list at a specific position.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-47
+AppleScript: Calling a handler to insert a single item at a specific position in a list
+
+set theList to {"Sal", "Ben", "David", "Chris"}
+
+insertItemInList("Jen", theList, 3)
+
+--&gt; Result: {"Sal", "Ben", "Jen", "David", "Chris"}
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-48
+JavaScript: Calling a function to insert a single item at a specific position in an array
+
+var array = ["Sal", "Ben", "David", "Chris"]
+
+array = insertItemInArray("Jen", array, 2)
+
+// Result = ["Sal", "Ben", "Jen", "David", "Chris"]
+
+Listing 21-49 and Listing 21-50 show how to call the handlers in Listing 21-45 and Listing 21-46 to insert multiple items into a list at a specific position.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-49
+AppleScript: Calling a handler to insert multiple items at a specific position in a list
+
+set theList to {"Sal", "Ben", "David", "Chris"}
+
+insertItemInList({"Lizzie", "Maddie", "Lillie"}, theList, 3)
+
+--&gt; Result: {"Sal", "Ben", "Lizzie", "Maddie", "Lillie", "David", "Chris"}
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-50
+JavaScript: Calling a function to insert multiple items at a specific position in an array
+
+var array = ["Sal", "Ben", "David", "Chris"]
+
+var items = ["Lizzie", "Maddie", "Lillie"]
+
+for (var item of items) {
+
+array = insertItemInArray(item, array, 2)
+
+}
+
+// Result = ["Sal", "Ben", "Lillie", "Maddie", "Lizzie", "David", "Chris"]
+
+Listing 21-51 and Listing 21-52 show how to call the handlers in Listing 21-45 and Listing 21-46 to insert a list into a list at a specific position.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-51
+AppleScript: Calling a handler to insert a list at a specific position in a list
+
+set theList to {"Sal", "Ben", "David", "Chris"}
+
+insertItemInList({{"Lizzie", "Maddie", "Lillie"}}, theList, 3)
+
+--&gt; Result: {"Sal", "Ben", {"Lizzie", "Maddie", "Lillie"}, "David", "Chris"}
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-52
+JavaScript: Calling a function to insert a list at a specific position in an array
+
+var array = ["Sal", "Ben", "David", "Chris"]
+
+array = insertItemInArray(["Lizzie", "Maddie", "Lillie"], array, 2)
+
+// Result = ["Sal", "Ben", ["Lizzie", "Maddie", "Lillie"], "David", "Chris"]
+
+Listing 21-53 and Listing 21-54 show how to call the handlers in Listing 21-45 and Listing 21-46 to insert a single item at the end of a list.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-53
+AppleScript: Calling a handler to insert a single item at the end of a list
+
+set theList to {"Sal", "Ben", "David", "Chris"}
+
+insertItemInList("Jen", theList, -1)
+
+--&gt; {"Sal", "Ben", "David", "Chris", "Jen"}
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-54
+JavaScript: Calling a function to insert a single item at the end of an array
+
+var array = ["Sal", "Ben", "David", "Chris"]
+
+array = insertItemInArray("Jen", array, array.length)
+
+// Result = ["Sal", "Ben", "David", "Chris", "Jen"]
+
+Listing 21-55 and Listing 21-56 show how to call the handlers in Listing 21-45 and Listing 21-46 to insert a single item at the second-to-last position in a list.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-55
+AppleScript: Calling a handler to insert a single item at the second-to-last position in a list
+
+set theList to {"Sal", "Ben", "David", "Chris"}
+
+insertItemInList("Wanda", theList, -2)
+
+--&gt; {"Sal", "Sue", "Bob", "Wanda", "Carl"}
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-56
+JavaScript: Calling a function to insert a single item at the second-to-last position of an array
+
+var array = ["Sal", "Ben", "David", "Chris"]
+
+array = insertItemInArray("Jen", array, -1)
+
+// Result = ["Sal", "Ben", "David", "Jen", "Chris"]
+
+Listing 21-57 and Listing 21-58 show how to call the handlers in Listing 21-45 and Listing 21-46 to insert a single item at a nonexistent position in a list.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-57
+AppleScript: Calling a handler to insert a single item at a position that doesn’t exist in a list
+
+set theList to {"Sal", "Ben", "David", "Chris"}
+
+insertItemInList("Jen", theList, 15)
+
+--&gt; Result: false
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-58
+JavaScript: Calling a function to insert a single item at a position that doesn’t exist in an array
+
+var array = ["Sal", "Ben", "David", "Chris"]
+
+array = insertItemInArray("Jen", array, 14)
+
+// Result = false
+
+Replacing Items in a List
+
+You can replace an item in a list using the syntax shown in Listing 21-59 and Listing 21-60 if you know the position of the item you want to replace.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-59
+AppleScript: Replacing a specific item in a list based on position
+
+set theList to {"Sal", "Ben", "David", "Chris"}
+
+set item 3 of theList to "Wanda"
+
+return theList
+
+--&gt; Result: {"Sal", "Sue", "Wanda", "Carl"}
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-60
+JavaScript: Replacing a specific item in an array based on position
+
+var array = ["Sal", "Ben", "David", "Chris"]
+
+array[2] = "Wanda"
+
+array
+
+// Result: ["Sal", "Ben", "Wanda", "Chris"]
+
+The handlers in Listing 21-61 and Listing 21-62 can be used to replace an item in a list when you don’t know its position. Provide the item you want to replace, the list, the replacement item, and specify whether to replace all instances of the item, or just the first one.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-61
+AppleScript: Handler that replaces items in a list
+
+on replaceItemInList(theItem, theList, theReplacementItem, replaceAll)
+
+repeat with a from 1 to the count of theList
+
+set theCurrentItem to item a of theList
+
+if theCurrentItem is theItem then
+
+set item a of theList to theReplacementItem
+
+if replaceAll is false then return theList
+
+end if
+
+end repeat
+
+return theList
+
+end replaceItemInList
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-62
+JavaScript: Function that replaces items in an array
+
+function replaceItemInArray(item, array, replacementItem, replaceAll) {
+
+var arrayLength = array.length
+
+for (var i = 0; i &lt; arrayLength; i++) {
+
+var currentArrayItem = array[i]
+
+if (currentArrayItem === item) {
+
+array.splice(i, 1, replacementItem)
+
+if (!replaceAll) {
+
+break
+
+}
+
+}
+
+}
+
+return array
+
+}
+
+Listing 21-63 and Listing 21-64 show how to call the handlers in Listing 21-61 and Listing 21-62.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-63
+AppleScript: Calling a handler to replace items in a list
+
+set theList to {"Sal", "Jen", "Ben", "David", "Chris", "Jen"}
+
+replaceItemInList("Jen", theList, "Lizzie", true)
+
+--&gt; {"Sal", "Lizzie", "Ben", "David", "Chris", "Lizzie"}
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-64
+JavaScript: Calling a function to replace items in an array
+
+var array = ["Sal", "Jen", "Ben", "David", "Chris", "Jen"]
+
+replaceItemInArray("Jen", array, "Lizzie", true)
+
+// Result: ["Sal", "Lizzie", "Ben", "David", "Chris", "Lizzie"]
+
+Sorting a List
+
+The handler in Listing 21-65 sorts a list of strings or numbers in AppleScript.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-65
+AppleScript: Handler that sorts a list of strings
+
+on sortList(theList)
+
+set theIndexList to {}
+
+set theSortedList to {}
+
+repeat (length of theList) times
+
+set theLowItem to ""
+
+repeat with a from 1 to (length of theList)
+
+if a is not in theIndexList then
+
+set theCurrentItem to item a of theList as text
+
+if theLowItem is "" then
+
+set theLowItem to theCurrentItem
+
+set theLowItemIndex to a
+
+else if theCurrentItem comes before theLowItem then
+
+set theLowItem to theCurrentItem
+
+set theLowItemIndex to a
+
+end if
+
+end if
+
+end repeat
+
+set end of theSortedList to theLowItem
+
+set end of theIndexList to theLowItemIndex
+
+end repeat
+
+return theSortedList
+
+end sortList
+
+Listing 21-66 shows how to call the handler in Listing 21-65.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-66
+AppleScript: Calling a handler to sort a list of strings
+
+set theList to {"Sal", "Ben", "David", "Chris"}
+
+sortList(theList)
+
+--&gt; Result: {"Ben", "Chris", "David", "Sal"}
+
+To perform a reverse (descending) sort, use the reverse command, as shown in Listing 21-67.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-67
+AppleScript: Calling a handler to sort a list of strings in reverse order
+
+set theList to {"Sal", "Ben", "David", "Chris"}
+
+reverse of sortList(theList)
+
+--&gt; Result: {"Sal", "David", "Chris", "Ben"}
+
+In JavaScript, the
+Array
+ object has a
+sort
+ method, which sorts the array’s items. See Listing 21-68.
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-68
+JavaScript: Sorting an array of strings
+
+var array = ["Sal", "Ben", "David", "Chris"]
+
+array.sort()
+
+// Result: ["Ben", "Chris", "David", "Sal"]
+
+As in AppleScript, a sorted JavaScript array can be reversed, as shown in Listing 21-69.
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-69
+JavaScript: Sorting an array of strings in reverse order
+
+var array = ["Sal", "Ben", "David", "Chris"]
+
+array.sort()
+
+array.reverse()
+
+// Result: ["Sal", "David", "Chris", "Ben"]
+
+Note
+
+When you use AppleScriptObjC or JavaScriptObjC, you can use methods of the
+NSArray
+ class to convert a list of strings into a single string. The handlers in Listing 21-70 and Listing 21-71 demonstrate how to do this.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 21-70
+AppleScriptObjC: Handler that sorts a list of strings
+
+on sortList(theList)
+
+set theArray to arrayWithArray_(theList) of NSArray of current application
+
+set theSortedList to sortedArrayUsingSelector_("localizedStandardCompare:") of theArray
+
+return (theSortedList as list)
+
+end sortList
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 21-71
+JavaScriptObjC: Function that sorts an array of strings
+
+function sortArray(array) {
+
+array = $(array)
+
+var sortedArray = array.sortedArrayUsingSelector("localizedStandardCompare:")
+
+return ObjC.deepUnwrap(sortedArray)
+
+}

@@ -1,0 +1,16 @@
+Identify script file types in the Finder on Mac
+
+AppleScript filenames have either the .scpt or .scptd extension. Extensions may be hidden so that only the filename is shown in the Finder, but you can show the extension.
+
+Open Script Editor for me
+
+In the Finder
+ on your Mac, select the file.
+
+Choose File > Get Info.
+
+Click the Name & Extension disclosure triangle to see the extension.
+
+See also
+Save a script as an app in Script Editor on Mac
+Save a compiled script in Script Editor on Mac

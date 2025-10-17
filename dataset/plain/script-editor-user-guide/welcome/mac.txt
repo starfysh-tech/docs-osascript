@@ -1,0 +1,7 @@
+View an app’s scripting commands and objects
+
+Find out what commands and objects are available for an app as you’re creating your script. Just browse the app’s scripting dictionary.
+
+How to view an app’s scripting dictionary
+
+To explore the Script Editor User Guide, click Table of Contents at the top of the page, or enter a word or phrase in the search field.

@@ -1,0 +1,236 @@
+Parsing HTML
+
+The process of reading an HTML file is no different than the process of reading a standard text file—see
+Reading a File
+ to learn how to do it. However, it’s often necessary to extract specific bits of information from HTML files, such as links, images, and table data, for further processing.
+
+Parsing an HTML File
+
+The handler in Listing 33-1 extracts specific tags and their content from HTML text. Provide an HTML file to read, a closing and ending tag, and indicate whether to return only content between the tags, or the tags with their enclosed content. If no closing tag is provided, the handler extracts the opening tag data only. This feature could be used to extract image tags from HTML content, for example, which don’t have a separate closing tag.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 33-1
+AppleScript: Handler that parses an HTML file for specific tagged content
+
+on parseHTMLFile(theFile, theOpeningTag, theClosingTag, returnContentsOnly)
+
+try
+
+set theFile to theFile as string
+
+set theFile to open for access file theFile
+
+set theCombinedResults to ""
+
+set theCurrentOpeningTag to ""
+
+repeat
+
+read theFile before "&lt;"
+
+set theCurrentTag to read theFile until "&gt;"
+
+if theCurrentTag does not start with "&lt;" then set theCurrentTag to ("&lt;" & theCurrentTag) as string
+
+if theCurrentTag begins with theOpeningTag then
+
+set theCurrentOpeningTag to theCurrentTag
+
+if theClosingTag is "" then
+
+if theCombinedResults is "" then
+
+set theCombinedResults to theCombinedResults & theCurrentOpeningTag
+
+else
+
+set theCombinedResults to theCombinedResults & return & theCurrentOpeningTag
+
+end if
+
+else
+
+set theTextBuffer to ""
+
+repeat
+
+set theTextBuffer to theTextBuffer & (read theFile before "&lt;")
+
+set theTagBuffer to read theFile until "&gt;"
+
+if theTagBuffer does not start with "&lt;" then set theTagBuffer to ("&lt;" & theTagBuffer)
+
+if theTagBuffer is theClosingTag then
+
+if returnContentsOnly is false then
+
+set theTextBuffer to theCurrentOpeningTag & theTextBuffer & theTagBuffer
+
+end if
+
+if theCombinedResults is "" then
+
+set theCombinedResults to theCombinedResults & theTextBuffer
+
+else
+
+set theCombinedResults to theCombinedResults & return & theTextBuffer
+
+end if
+
+exit repeat
+
+else
+
+set theTextBuffer to theTextBuffer & theTagBuffer
+
+end if
+
+end repeat
+
+end if
+
+end if
+
+end repeat
+
+close access theFile
+
+on error theErrorMessage number theErrorNumber
+
+try
+
+close access theFile
+
+end try
+
+if theErrorNumber is not -39 then return false
+
+end try
+
+return theCombinedResults
+
+end parseHTMLFile
+
+Listing 33-2 shows how to call the handler in Listing 33-1 to extract all hyperlinks within a chosen HTML file.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 33-2
+AppleScript: Calling a handler to parse an HTML file for URLs
+
+set theFile to choose file with prompt "Select an HTML file:"
+
+parseHTMLFile(theFile, "&lt;A HREF=", "&lt;/A&gt;", false)
+
+--&gt; Example of Result: "&lt;A HREF="http://www.apple.com/fileA.html"&gt;Click here to view fileA.&lt;/A&gt;
+
+&lt;A HREF="http://www.apple.com/fileB.html"&gt;Click here to view fileB.&lt;/A&gt;"
+
+Listing 33-3 shows how to call the handler in Listing 33-1 to extract the destinations of all hyperlinks within a chosen HTML file.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 33-3
+AppleScript: Calling a handler to parse an HTML file for URLs
+
+set theFile to choose file with prompt "Select an HTML file:"
+
+parseHTMLFile(theFile, "&lt;A HREF=", "&lt;/A&gt;", true)
+
+--&gt; Example of Result: "Click here to view fileA.
+
+Click here to view fileB."
+
+Listing 33-4 shows how to call the handler in Listing 33-1 to extract all images within a chosen HTML file.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 33-4
+AppleScript: Calling a handler to parse an HTML file for images
+
+set theFile to choose file with prompt "Select an HTML file:"
+
+parseHTMLFile(theFile, "&lt;IMG ", "", false)
+
+--&gt; Example of Result: "&lt;IMG SRC="gfx/clipboard.gif" BORDER="0"&gt;
+
+&lt;IMG SRC="printer_stopped.gif" ALIGN=TOP WIDTH="32" HEIGHT="32" BORDER="0"&gt;
+
+&lt;IMG SRC="printer_on.gif" ALIGN=TOP WIDTH="32" HEIGHT="32" BORDER="0"&gt;"
+
+Listing 33-5 shows how to call the handler in Listing 33-1 to extract any tables within a file.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 33-5
+AppleScript: Calling a handler to parse an HTML file for tables
+
+set theFile to choose file with prompt "Select an HTML file:"
+
+parseHTMLFile(theFile, "&lt;TABLE", "&lt;/TABLE&gt;", false)
+
+--&gt; Example of Result:"&lt;TABLE WIDTH="440"&gt;
+
+&lt;TR&gt;
+
+&lt;TD ALIGN="CENTER" VALIGN="TOP"&gt;
+
+&lt;IMG SRC="gfx/clipboard.gif" BORDER="0"&gt;
+
+&lt;/TD&gt;
+
+&lt;/TR&gt;
+
+&lt;/TABLE&gt;"
+
+Parsing an HTML Tag
+
+The handler in Listing 33-6 extracts the contents—first instance of text contained within quotes—of an HTML tag.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 33-6
+AppleScript: Handler that parses an HTML tag for content
+
+on parseHTMLTag(theHTMLTag)
+
+set AppleScript's text item delimiters to "\\""
+
+set theHTMLTagElements to text items of theHTMLTag
+
+set AppleScript's text item delimiters to ""
+
+if length of theHTMLTagElements is greater than 1 then return item 2 of theHTMLTagElements
+
+return ""
+
+end parseHTMLTag
+
+Listing 33-7 shows how to call the handler in Listing 33-6 to extract the destination of a hyperlink tag.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 33-7
+AppleScript: Calling a handler to parse an HTML tag for content
+
+set theHTMLTag to "&lt;A HREF=\\"http://www.apple.com/fileA.html\\"&gt;Click here to view fileA.&lt;/A&gt;"
+
+parseHTMLTag(theHTMLTag)
+
+--&gt; Result: "http://www.apple.com/fileA.html"

@@ -1,0 +1,30 @@
+Save a script as an app in Script Editor on Mac
+
+In Script Editor, you can save your script as an app. To run the script, just open it in the Finder, just like any other app.
+
+Open Script Editor for me
+
+With a script open in the Script Editor app
+ on your Mac, choose File > Export.
+
+Enter a name for the app.
+
+To save your app in a different location than shown, click the disclosure triangle, then select a folder.
+
+Click the File Format pop-up menu, then choose Application.
+
+Select any combination of options:
+
+Show startup screen:
+ Displays a dialog with the text from the script’s Description field when the script is run. The dialog also contains Run and Quit buttons that allow you to stop or continue the script execution.
+
+Stay open after run handler:
+ Causes the app to remain active until you quit it. Choose this option if the script contains an idle handler.
+
+Run-only:
+ Saves only the compiled version of the app. Choose this option if you don’t want the script source included in the app bundle.
+
+Click Save.
+
+See also
+Save a compiled script in Script Editor on Mac

@@ -1,0 +1,11 @@
+{
+  "collection": "jxa-release-notes",
+  "path": "Articles/RevisionHistory.md",
+  "title": "Document Revision History",
+  "body": "<a id=\"//apple_ref/doc/uid/TP40014508-CH112-SW1\"></a>\n\n# Document Revision History\n\nThis table describes the changes to *JavaScript for Automation Release Notes*.\n\n| **Date** | **Notes** |\n| 2015-09-16 | Updated to include new JavaScript for Automation features in OS X 10.11. |\n| 2014-10-17 | New feature in OS X v10.10. |\n\n  \n  \n\n---\n\nCopyright © 2015 Apple Inc. All Rights Reserved. [Terms of Use](http://www.apple.com/legal/internet-services/terms/site.html) | [Privacy Policy](http://www.apple.com/privacy/) | Updated: 2015-09-16\n",
+  "binary": false,
+  "source_url": "https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/RevisionHistory.html",
+  "sha256": "b01cd49092e50f98fc093434b7baf00ee9c7261ff475ac0f642b59a688c5b91d",
+  "etag": null,
+  "last_modified": null
+}

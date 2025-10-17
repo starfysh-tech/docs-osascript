@@ -1,0 +1,58 @@
+Prompting for a Choice from a List
+
+Use the Standard Additions scripting addition’s
+choose from list
+ command to prompt the user to select from a list of strings. Listing 28-1 and Listing 28-2 ask the user to select a favorite fruit, as seen in Figure 28-1.
+
+Figure 28-1
+Prompting the user to choose from a list of items
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 28-1
+AppleScript: Prompting the user to choose from a list of items
+
+set theFruitChoices to {"Apple", "Banana", "Orange"}
+
+set theFavoriteFruit to choose from list theFruitChoices with prompt "Select your favorite fruit:" default items {"Apple"}
+
+theFavoriteFruit
+
+--&gt; Result: {"Apple"}
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 28-2
+JavaScript: Prompting the user to choose from a list of items
+
+var app = Application.currentApplication()
+
+app.includeStandardAdditions = true
+
+var fruitChoices = ["Apple", "Banana", "Orange"]
+
+var favoriteFruit = app.chooseFromList(fruitChoices, {
+
+withPrompt: "Select your favorite fruit:",
+
+defaultItems: ["Apple"]
+
+})
+
+favoriteFruit
+
+// Result: ["Apple"]
+
+The
+choose from list
+ command can optionally let the user choose multiple items by setting the
+multiple selections allowed
+ parameter to
+true
+. For this reason, the result of the command is always a list of selected strings. This list may be empty if the
+empty selection allowed
+ parameter has been specified and the user dismissed the dialog without making a selection.

@@ -1,0 +1,59 @@
+Displaying Notifications
+
+Notification Center offers another opportunity for providing feedback during script execution. Use the Standard Additions scripting addition’s
+display notification
+ command to show notifications, such as status updates as files are processed. Notifications are shown as alerts or banners, depending on the user’s settings in System Preferences > Notifications. See Figure 24-1 and Figure 24-2.
+
+Figure 24-1
+A banner notification
+
+Figure 24-2
+An alert notification
+
+To show a notification, provide the
+display notification
+ command with a string to display. Optionally, provide values for the
+with title
+,
+subtitle
+, and
+sound name
+ parameters to provide additional information and an audible alert when the notification appears, as shown in Listing 24-1 and Listing 24-2.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 24-1
+AppleScript: Displaying a notification
+
+display notification "All graphics have been converted." with title "My Graphic Processing Script" subtitle "Processing is complete." sound name "Frog"
+
+JAVASCRIPT
+
+Open in Script Editor
+
+Listing 24-2
+JavaScript: Displaying a notification
+
+var app = Application.currentApplication()
+
+app.includeStandardAdditions = true
+
+app.displayNotification("All graphics have been converted.", {
+
+withTitle: "My Graphic Processing Script",
+
+subtitle: "Processing is complete.",
+
+soundName: "Frog"
+
+})
+
+Note
+
+After using a script to display a notification, the script or Script Editor (if the script is run from within Script Editor) is added to the list of notifying apps in System Preferences > Notifications. There, you can configure options, such as whether to display notifications as alerts or banners.
+
+Clicking the Show button in an alert-style notification opens the app that displayed the notification. For a script app, the action of opening the app again triggers the
+run
+ handler of the script, potentially causing the script to begin processing a second time. Keep this in mind, and add code to your script to handle this scenario, if appropriate.

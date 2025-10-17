@@ -1,0 +1,93 @@
+Working with XML
+
+The XML Suite of the System Events scripting dictionary defines several classes that make it quick and easy to read and parse XML data. The
+XML file
+ class represents any text file containing structured XML like the example data shown in Listing 36-1.
+
+Listing 36-1
+XML: Example XML data
+
+&lt;books&gt;
+
+&lt;book country="US"&gt;
+
+&lt;name&gt;The Secret Lives of Cats&lt;/name&gt;
+
+&lt;publisher&gt;Feline Press&lt;/publisher&gt;
+
+&lt;/book&gt;
+
+&lt;/books&gt;
+
+At the top level, an XML file contains an
+XML data
+ object that’s comprised of nested
+XML element
+ objects. Each
+XML element
+ object has a
+name
+ and a
+value
+ property, and may also contain
+XML attribute
+ objects that define additional metadata. The example code in Listing 36-2 demonstrates how to access these classes to read and parse the contents of an XML file on the Desktop that contains the XML data from Listing 36-1.
+
+APPLESCRIPT
+
+Open in Script Editor
+
+Listing 36-2
+AppleScript: Using System Events to parse an XML file
+
+tell application "System Events"
+
+tell XML file "~/Desktop/Book Data.xml"
+
+tell XML element "books"
+
+set theBookElements to every XML element whose name = "book"
+
+--&gt; {XML element 1 of XML element 1 of contents of XML file "Macintosh HD:Users:YourUserName:Desktop:Book Data.xml" of application "System Events"}
+
+repeat with a from 1 to length of theBookElements
+
+set theCurrentBookElement to item a of theBookElements
+
+--&gt; XML element 1 of XML element 1 of contents of XML file "Macintosh HD:Users:YourUserName:Desktop:Book Data.xml" of application "System Events"
+
+tell theCurrentBookElement
+
+name of theCurrentBookElement
+
+--&gt; "book"
+
+name of every XML element
+
+--&gt; {"name", "publisher"}
+
+name of every XML attribute
+
+--&gt; {"country"}
+
+value of every XML attribute
+
+--&gt; {"US"}
+
+set theBookName to value of XML element "name"
+
+--&gt; "The Secret Lives of Cats"
+
+set thePublisher to value of XML element "publisher"
+
+--&gt; "Feline Press"
+
+end tell
+
+end repeat
+
+end tell
+
+end tell
+
+end tell

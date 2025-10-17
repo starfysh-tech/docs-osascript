@@ -1,0 +1,11 @@
+{
+  "collection": "applescript-language-guide",
+  "path": "reference/ASLR_unsupported_terms.md",
+  "title": "Unsupported Terms",
+  "body": "<a id=\"//apple_ref/doc/uid/TP40000983-CH224-SW1\"></a>\n\n# Unsupported Terms\n\n<a id=\"//apple_ref/doc/uid/TP40000983-CH224-DontLinkElementID_1131\"></a><a id=\"//apple_ref/doc/uid/TP40000983-CH224-DontLinkElementID_1132\"></a>This appendix lists scripting terms that are not supported by AppleScript. Though you may see these terms in a dictionary, script, or scripting addition, you should not count on their behavior.\n\n<a id=\"//apple_ref/doc/uid/TP40000983-CH224-SW2\"></a>\n\n## List of Unsupported Terms\n\n`handle CGI request`\n:   <a id=\"//apple_ref/doc/uid/TP40000983-CH224-DontLinkElementID_1133\"></a>This command is not supported.\n\n`internet address`\n:   <a id=\"//apple_ref/doc/uid/TP40000983-CH224-DontLinkElementID_1134\"></a>An Internet or intranet address for the TCP/IP protocol. Only used for compatibility with WebSTAR AppleScript CGI scripts, this term is not supported by AppleScript itself.\n\n`web page`\n:   <a id=\"//apple_ref/doc/uid/TP40000983-CH224-DontLinkElementID_1135\"></a>An HTML page. This class is not supported.\n\n  \n\n---\n\nCopyright © 2016 Apple Inc. All Rights Reserved. [Terms of Use](http://www.apple.com/legal/internet-services/terms/site.html) | [Privacy Policy](http://www.apple.com/privacy/) | Updated: 2016-01-25\n",
+  "binary": false,
+  "source_url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_unsupported_terms.html",
+  "sha256": "b773c14784a9c32568f1990276f741204786331663df08b4c786ba1e35f33cf0",
+  "etag": null,
+  "last_modified": null
+}

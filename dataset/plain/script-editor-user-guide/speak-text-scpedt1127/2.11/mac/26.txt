@@ -1,0 +1,17 @@
+Speak text in Script Editor on Mac
+
+Script Editor can speak all the text or selected text in a script or dictionary.
+
+Open Script Editor for me
+
+In the Script Editor app
+ on your Mac, do any of the following:
+
+Speak all the text in a document:
+ Open the document, then choose Edit > Speech > Start Speaking.
+
+Speak a portion of the text in a document:
+ Select the text, then choose Edit > Speech > Start speaking.
+
+See also
+View an app’s scripting dictionary in Script Editor on Mac

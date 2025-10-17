@@ -1,0 +1,11 @@
+{
+  "collection": "script-editor-user-guide",
+  "path": "speak-text-scpedt1127/2.11/mac/26.md",
+  "title": "Speak text in Script Editor on Mac",
+  "body": "# Speak text in Script Editor on Mac\n\nScript Editor can speak all the text or selected text in a script or dictionary.\n\n[Open Script Editor for me](https://support.apple.com/guide/script-editor/speak-text-scpedt1127/2.11/mac/x-help-action:/openApp?bundleId=com.apple.ScriptEditor2)\n\nIn the Script Editor app ![](https://help.apple.com/assets/67DB7E842551EA97CB00BED5/67DB7E8502C5F38AAF0D7DC6/en_US/2d1774dafc25e40f6f806216d54cdf01.png) on your Mac, do any of the following:\n\n* *Speak all the text in a document:* Open the document, then choose Edit &gt; Speech &gt; Start Speaking.\n* *Speak a portion of the text in a document:* Select the text, then choose Edit &gt; Speech &gt; Start speaking.\n\n**See also**[View an app’s scripting dictionary in Script Editor on Mac](https://support.apple.com/guide/script-editor/view-an-apps-scripting-dictionary-scpedt1126/2.11/mac/26)\n",
+  "binary": false,
+  "source_url": "https://support.apple.com/guide/script-editor/speak-text-scpedt1127/2.11/mac/26",
+  "sha256": "f901f956ada3671de808ec72531b603edaa8b4a0e1162d2e36139f1ec9cfeebc",
+  "etag": null,
+  "last_modified": null
+}
